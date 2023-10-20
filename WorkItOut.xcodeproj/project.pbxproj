@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACC7C56A2AE301B2000259B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACC7C5692AE301B2000259B0 /* GoogleService-Info.plist */; };
+		ACFED3882AE2B6100018CD03 /* persistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* persistentStorage.xcdatamodeld */; };
+		ACFED38B2AE2EB430018CD03 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ACFED38A2AE2EB430018CD03 /* FirebaseAnalytics */; };
+		ACFED38D2AE2EB430018CD03 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = ACFED38C2AE2EB430018CD03 /* FirebaseAnalyticsOnDeviceConversion */; };
+		ACFED38F2AE2EB430018CD03 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACFED38E2AE2EB430018CD03 /* FirebaseAnalyticsSwift */; };
+		ACFED3912AE2EB430018CD03 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = ACFED3902AE2EB430018CD03 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		ACFED3932AE2EB430018CD03 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = ACFED3922AE2EB430018CD03 /* FirebaseAppCheck */; };
 		D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */; };
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
 		D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */; };
@@ -14,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ACC7C5692AE301B2000259B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ACFED3872AE2B6100018CD03 /* persistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = persistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D862DB632AE28E5A0014F2FC /* WorkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutApp.swift; sourceTree = "<group>"; };
 		D862DB682AE28E5A0014F2FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,12 +35,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFED38F2AE2EB430018CD03 /* FirebaseAnalyticsSwift in Frameworks */,
+				ACFED38B2AE2EB430018CD03 /* FirebaseAnalytics in Frameworks */,
+				ACFED38D2AE2EB430018CD03 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				ACFED3932AE2EB430018CD03 /* FirebaseAppCheck in Frameworks */,
+				ACFED3912AE2EB430018CD03 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACFED3812AE2B5B60018CD03 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ACFED3852AE2B5F10018CD03 /* Services */,
+				ACFED3832AE2B5CD0018CD03 /* Config */,
+				ACFED3822AE2B5C20018CD03 /* Resources */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ACFED3822AE2B5C20018CD03 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACC7C5692AE301B2000259B0 /* GoogleService-Info.plist */,
+				D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */,
+				ACFED3862AE2B6100018CD03 /* persistentStorage.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACFED3832AE2B5CD0018CD03 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		ACFED3852AE2B5F10018CD03 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D862DB5A2AE28E5A0014F2FC = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +100,8 @@
 		D862DB652AE28E5A0014F2FC /* WorkItOut */ = {
 			isa = PBXGroup;
 			children = (
-				D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */,
+				ACFED3812AE2B5B60018CD03 /* Core */,
 				D862DB682AE28E5A0014F2FC /* ContentView.swift */,
-				D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */,
 				D862DB6C2AE28E5C0014F2FC /* Preview Content */,
 			);
 			path = WorkItOut;
@@ -83,6 +131,13 @@
 			dependencies = (
 			);
 			name = WorkItOut;
+			packageProductDependencies = (
+				ACFED38A2AE2EB430018CD03 /* FirebaseAnalytics */,
+				ACFED38C2AE2EB430018CD03 /* FirebaseAnalyticsOnDeviceConversion */,
+				ACFED38E2AE2EB430018CD03 /* FirebaseAnalyticsSwift */,
+				ACFED3902AE2EB430018CD03 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				ACFED3922AE2EB430018CD03 /* FirebaseAppCheck */,
+			);
 			productName = WorkItOut;
 			productReference = D862DB632AE28E5A0014F2FC /* WorkItOut.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +166,9 @@
 				Base,
 			);
 			mainGroup = D862DB5A2AE28E5A0014F2FC;
+			packageReferences = (
+				ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D862DB642AE28E5A0014F2FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +185,7 @@
 			files = (
 				D862DB6E2AE28E5C0014F2FC /* Preview Assets.xcassets in Resources */,
 				D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */,
+				ACC7C56A2AE301B2000259B0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +198,7 @@
 			files = (
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
+				ACFED3882AE2B6100018CD03 /* persistentStorage.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +404,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACFED38A2AE2EB430018CD03 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		ACFED38C2AE2EB430018CD03 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		ACFED38E2AE2EB430018CD03 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		ACFED3902AE2EB430018CD03 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		ACFED3922AE2EB430018CD03 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		ACFED3862AE2B6100018CD03 /* persistentStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ACFED3872AE2B6100018CD03 /* persistentStorage.xcdatamodel */,
+			);
+			currentVersion = ACFED3872AE2B6100018CD03 /* persistentStorage.xcdatamodel */;
+			path = persistentStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D862DB5B2AE28E5A0014F2FC /* Project object */;
 }
