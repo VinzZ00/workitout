@@ -15,12 +15,16 @@ struct FireStoreManager {
     let db = Firestore.firestore()
     
     
-    func getCollection(collectionName : String, completion : @escaping () -> Void) {
-        
-        var documents : [QueryDocumentSnapshot]?
-        
-        db.collection(collectionName).getDocuments() { (querySnapshot, err) in
-            completion()
+    func getCollection(collectionName : String, completion : @escaping (_ : QuerySnapshot) -> Void) { db.collection(collectionName).getDocuments() { (querySnapshot, err) in
+            if err != nil {
+                fatalError("error : \(String(describing: err?.localizedDescription))")
+            }
+            
+            guard let qss = querySnapshot else {
+                fatalError("No data found in querry SnapShot")
+            }
+            
+            completion(qss);
         }
     }
     

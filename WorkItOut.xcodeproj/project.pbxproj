@@ -14,6 +14,7 @@
 		AC5A9A662AE41138003B0C1F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A622AE41138003B0C1F /* Workout.swift */; };
 		AC5A9A672AE41138003B0C1F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A632AE41138003B0C1F /* Exercise.swift */; };
 		AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */; };
+		AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */; };
 		ACFED3882AE2B6100018CD03 /* persistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* persistentStorage.xcdatamodeld */; };
 		D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */; };
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 		AC5A9A622AE41138003B0C1F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		AC5A9A632AE41138003B0C1F /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConstant.swift; sourceTree = "<group>"; };
+		AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListWorkout.swift; sourceTree = "<group>"; };
 		ACFED3872AE2B6100018CD03 /* persistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = persistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D862DB632AE28E5A0014F2FC /* WorkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutApp.swift; sourceTree = "<group>"; };
@@ -63,18 +65,10 @@
 			path = FireStore;
 			sourceTree = "<group>";
 		};
-		AC5A9A572AE3C07C003B0C1F /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				AC5A9A6F2AE415C5003B0C1F /* Repositories */,
-				AC5A9A6E2AE415BA003B0C1F /* Datasources */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		AC5A9A582AE3C09B003B0C1F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -99,8 +93,6 @@
 		AC5A9A692AE4154D003B0C1F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				AC5A9A6D2AE4159F003B0C1F /* Datasources */,
-				AC5A9A6C2AE41597003B0C1F /* Repositories */,
 				AC5A9A582AE3C09B003B0C1F /* UseCases */,
 			);
 			path = Data;
@@ -109,38 +101,26 @@
 		AC5A9A6A2AE41557003B0C1F /* WorkItOut */ = {
 			isa = PBXGroup;
 			children = (
+				AC5A9A762AE42D24003B0C1F /* Presentation */,
 				AC5A9A692AE4154D003B0C1F /* Data */,
-				AC5A9A572AE3C07C003B0C1F /* Domain */,
 			);
 			path = WorkItOut;
 			sourceTree = "<group>";
 		};
-		AC5A9A6C2AE41597003B0C1F /* Repositories */ = {
+		AC5A9A762AE42D24003B0C1F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				AC5A9A772AE42D30003B0C1F /* Views */,
 			);
-			path = Repositories;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		AC5A9A6D2AE4159F003B0C1F /* Datasources */ = {
+		AC5A9A772AE42D30003B0C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D862DB682AE28E5A0014F2FC /* ContentView.swift */,
 			);
-			path = Datasources;
-			sourceTree = "<group>";
-		};
-		AC5A9A6E2AE415BA003B0C1F /* Datasources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Datasources;
-			sourceTree = "<group>";
-		};
-		AC5A9A6F2AE415C5003B0C1F /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repositories;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ACFED3812AE2B5B60018CD03 /* Core */ = {
@@ -203,7 +183,6 @@
 			children = (
 				ACFED3812AE2B5B60018CD03 /* Core */,
 				AC5A9A6A2AE41557003B0C1F /* WorkItOut */,
-				D862DB682AE28E5A0014F2FC /* ContentView.swift */,
 				D862DB6C2AE28E5C0014F2FC /* Preview Content */,
 			);
 			path = WorkItOut;
@@ -301,6 +280,7 @@
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Workout.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
+				AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */,
 				AC5A9A672AE41138003B0C1F /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
