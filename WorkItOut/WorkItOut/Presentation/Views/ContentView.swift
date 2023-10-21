@@ -7,13 +7,15 @@
 
 import SwiftUI
 
+//FirestoreDummy
+
 struct ContentView: View {
+    @State var testFireStore : String = ""
+    var db = FireStoreManager.shared
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
         }
         .padding()
     }
