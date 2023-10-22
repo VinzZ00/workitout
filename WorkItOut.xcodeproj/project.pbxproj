@@ -15,7 +15,8 @@
 		AC5A9A672AE41138003B0C1F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A632AE41138003B0C1F /* Exercise.swift */; };
 		AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */; };
 		AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */; };
-		ACFED3882AE2B6100018CD03 /* persistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* persistentStorage.xcdatamodeld */; };
+		AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */; };
+		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */; };
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
 		D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */; };
@@ -29,7 +30,8 @@
 		AC5A9A632AE41138003B0C1F /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConstant.swift; sourceTree = "<group>"; };
 		AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListWorkout.swift; sourceTree = "<group>"; };
-		ACFED3872AE2B6100018CD03 /* persistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = persistentStorage.xcdatamodel; sourceTree = "<group>"; };
+		AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D862DB632AE28E5A0014F2FC /* WorkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutApp.swift; sourceTree = "<group>"; };
 		D862DB682AE28E5A0014F2FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AC5A9A782AE52D93003B0C1F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		ACFED3812AE2B5B60018CD03 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +150,7 @@
 			children = (
 				AC5A9A5E2AE3F23C003B0C1F /* GoogleService-Info.plist */,
 				D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */,
-				ACFED3862AE2B6100018CD03 /* persistentStorage.xcdatamodeld */,
+				ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -156,6 +166,7 @@
 		ACFED3852AE2B5F10018CD03 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AC5A9A782AE52D93003B0C1F /* CoreData */,
 				AC5A9A512AE3BC9D003B0C1F /* FireStore */,
 			);
 			path = Services;
@@ -276,10 +287,11 @@
 			files = (
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
-				ACFED3882AE2B6100018CD03 /* persistentStorage.xcdatamodeld in Sources */,
+				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Workout.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
+				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */,
 				AC5A9A672AE41138003B0C1F /* Exercise.swift in Sources */,
 			);
@@ -513,13 +525,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		ACFED3862AE2B6100018CD03 /* persistentStorage.xcdatamodeld */ = {
+		ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				ACFED3872AE2B6100018CD03 /* persistentStorage.xcdatamodel */,
+				ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */,
 			);
-			currentVersion = ACFED3872AE2B6100018CD03 /* persistentStorage.xcdatamodel */;
-			path = persistentStorage.xcdatamodeld;
+			currentVersion = ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */;
+			path = PersistentStorage.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
