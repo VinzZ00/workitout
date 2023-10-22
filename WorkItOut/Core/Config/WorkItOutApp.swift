@@ -18,12 +18,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct WorkItOutApp: App {
-    
+    @StateObject var coreDataManager = CoreDataManager()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, coreDataManager.container.viewContext)
         }
     }
 }

@@ -12,11 +12,11 @@ struct GetWorkoutList {
     let db = FireStoreManager();
     
     
-    func call() -> [String] {
+    func call() async -> [String] {
         
         var exercisesName : [String] = []
         
-        db.getCollection(collectionName: FirebaseConstant.ExerciseCollectionConstants.collectionName) { querrySnapShot in
+        await db.getCollection(collectionName: FirebaseConstant.ExerciseCollectionConstants.collectionName) { querrySnapShot in
             querrySnapShot.documents.forEach { doc in
                 
                 var exerciseName = doc.data()[FirebaseConstant.ExerciseCollectionConstants.name] as! String
