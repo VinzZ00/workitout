@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C8D5CFC2AE660B200A2986D /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5CFB2AE660B200A2986D /* WorkoutPlan.swift */; };
 		AC5A9A502AE3AC5E003B0C1F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A4F2AE3AC5E003B0C1F /* FirebaseFirestore */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A5B2AE3E614003B0C1F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A5A2AE3E614003B0C1F /* FirebaseFirestoreSwift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C8D5CFB2AE660B200A2986D /* WorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlan.swift; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		AC5A9A5E2AE3F23C003B0C1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC5A9A622AE41138003B0C1F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				AC5A9A622AE41138003B0C1F /* Workout.swift */,
 				AC5A9A632AE41138003B0C1F /* Exercise.swift */,
 				ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */,
+				6C8D5CFB2AE660B200A2986D /* WorkoutPlan.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
+				6C8D5CFC2AE660B200A2986D /* WorkoutPlan.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Workout.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
