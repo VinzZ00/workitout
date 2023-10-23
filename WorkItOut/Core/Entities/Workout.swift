@@ -13,6 +13,11 @@ enum WorkoutState {
 }
 
 struct Workout {
-  var exercises : [Exercise]
-  var workoutState : WorkoutState
+    var exercises : [Exercise]
+    var workoutState : WorkoutState
+    var date : Date
+    
+    func getDesiredDate(desired : Set<Calendar.Component>) -> DateComponents {
+        return Calendar.current.dateComponents(desired, from: self.date)
+    }
 }

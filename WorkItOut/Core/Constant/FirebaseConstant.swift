@@ -12,13 +12,13 @@ struct FirebaseConstant {
 }
 
 extension FirebaseConstant {
-    struct WorkoutCollectionConstants {
-        static let collectionName = "Workout"
-        static let exercise = "exercise"
-        static let workoutState = "workoutState"
-        
-        private init() {}
-    }
+//    struct WorkoutCollectionConstants {
+//        static let collectionName = "Workout"
+//        static let exercise = "exercise"
+//        static let workoutState = "workoutState"
+//        
+//        private init() {}
+//    }
     
     struct ExerciseCollectionConstants {
         static let collectionName = "Exercise"
@@ -26,9 +26,6 @@ extension FirebaseConstant {
         static let muscleGroup = "muscleGroup"
         static let equipment = "equipment"
         static let weight = "weight"
-        static let repetition = "repetition"
-        static let workoutSet = "workoutSet"
-        static let date = "date"
         
         private init() {}
     }

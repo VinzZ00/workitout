@@ -27,11 +27,7 @@ struct Exercise {
     var weight : Double? = 0
     var repetition : Int
     var workoutSet: Int
-    var date : Date
     
-    func getDesiredDate(desired : Set<Calendar.Component>) -> DateComponents {
-        return Calendar.current.dateComponents(desired, from: self.date)
-    }
 }
 
 

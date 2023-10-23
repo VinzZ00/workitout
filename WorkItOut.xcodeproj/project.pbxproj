@@ -16,6 +16,8 @@
 		AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */; };
 		AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */; };
 		AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */; };
+		ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */; };
+		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */; };
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
@@ -31,6 +33,8 @@
 		AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConstant.swift; sourceTree = "<group>"; };
 		AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListWorkout.swift; sourceTree = "<group>"; };
 		AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExercise.swift; sourceTree = "<group>"; };
+		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D862DB632AE28E5A0014F2FC /* WorkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutApp.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			children = (
 				AC5A9A622AE41138003B0C1F /* Workout.swift */,
 				AC5A9A632AE41138003B0C1F /* Exercise.swift */,
+				ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 		AC5A9A692AE4154D003B0C1F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				ACB8642C2AE65282005DF0D1 /* Datasource */,
 				AC5A9A582AE3C09B003B0C1F /* UseCases */,
 			);
 			path = Data;
@@ -131,6 +137,14 @@
 				AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		ACB8642C2AE65282005DF0D1 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */,
+			);
+			path = Datasource;
 			sourceTree = "<group>";
 		};
 		ACFED3812AE2B5B60018CD03 /* Core */ = {
@@ -288,6 +302,8 @@
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
+				ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */,
+				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Workout.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
