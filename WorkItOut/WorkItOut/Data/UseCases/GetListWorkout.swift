@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GetWorkoutList {
+struct GetWorkoutListUseCase {
     let db = FireStoreManager();
     
     
