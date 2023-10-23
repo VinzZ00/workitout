@@ -19,6 +19,11 @@
 		AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */; };
 		ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */; };
 		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
+		ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */; };
+		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
+		ACBFBD9F2AE6775A00109D94 /* FetchWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9E2AE6775A00109D94 /* FetchWorkout.swift */; };
+		ACBFBDA22AE67B7A00109D94 /* AddWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA12AE67B7A00109D94 /* AddWorkout.swift */; };
+		ACBFBDA42AE67CEE00109D94 /* UpdateWorkoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA32AE67CEE00109D94 /* UpdateWorkoutUseCase.swift */; };
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */; };
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
@@ -37,6 +42,11 @@
 		AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExercise.swift; sourceTree = "<group>"; };
 		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
+		ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSourceDelegate.swift; sourceTree = "<group>"; };
+		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
+		ACBFBD9E2AE6775A00109D94 /* FetchWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkout.swift; sourceTree = "<group>"; };
+		ACBFBDA12AE67B7A00109D94 /* AddWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkout.swift; sourceTree = "<group>"; };
+		ACBFBDA32AE67CEE00109D94 /* UpdateWorkoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateWorkoutUseCase.swift; sourceTree = "<group>"; };
 		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D862DB632AE28E5A0014F2FC /* WorkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutApp.swift; sourceTree = "<group>"; };
@@ -77,6 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */,
+				ACBFBD9E2AE6775A00109D94 /* FetchWorkout.swift */,
+				ACBFBDA12AE67B7A00109D94 /* AddWorkout.swift */,
+				ACBFBDA32AE67CEE00109D94 /* UpdateWorkoutUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -103,6 +116,7 @@
 		AC5A9A692AE4154D003B0C1F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				ACBFBD9B2AE676BF00109D94 /* Repository */,
 				ACB8642C2AE65282005DF0D1 /* Datasource */,
 				AC5A9A582AE3C09B003B0C1F /* UseCases */,
 			);
@@ -112,8 +126,9 @@
 		AC5A9A6A2AE41557003B0C1F /* WorkItOut */ = {
 			isa = PBXGroup;
 			children = (
-				AC5A9A762AE42D24003B0C1F /* Presentation */,
+				ACBFBD972AE66DC900109D94 /* Domain */,
 				AC5A9A692AE4154D003B0C1F /* Data */,
+				AC5A9A762AE42D24003B0C1F /* Presentation */,
 			);
 			path = WorkItOut;
 			sourceTree = "<group>";
@@ -148,6 +163,30 @@
 				ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */,
 			);
 			path = Datasource;
+			sourceTree = "<group>";
+		};
+		ACBFBD972AE66DC900109D94 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				ACBFBD9A2AE6760C00109D94 /* Datasource */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		ACBFBD9A2AE6760C00109D94 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		ACBFBD9B2AE676BF00109D94 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		ACFED3812AE2B5B60018CD03 /* Core */ = {
@@ -306,11 +345,16 @@
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */,
+				ACBFBD9F2AE6775A00109D94 /* FetchWorkout.swift in Sources */,
+				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,
+				ACBFBDA22AE67B7A00109D94 /* AddWorkout.swift in Sources */,
+				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
 				6C8D5CFC2AE660B200A2986D /* WorkoutPlan.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Workout.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
+				ACBFBDA42AE67CEE00109D94 /* UpdateWorkoutUseCase.swift in Sources */,
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */,
 				AC5A9A672AE41138003B0C1F /* Exercise.swift in Sources */,

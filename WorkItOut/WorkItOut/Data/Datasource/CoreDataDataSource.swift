@@ -9,13 +9,6 @@ import Foundation
 import SwiftUI
 import CoreData
 
-
-protocol coreDataDataSourceDelegate {
-    func saveToCoreData(workout : Workout, context : NSManagedObjectContext) async throws
-    func updateToCoreData(workout : Workout, context : NSManagedObjectContext) async throws
-    func fetchFromCoreData(context : NSManagedObjectContext, entity : NSManagedObject.Type) async throws -> Result<[NSFetchRequestResult], Error>
-}
-
 struct CoreDataDataSource : coreDataDataSourceDelegate {
     
     func fetchFromCoreData(context: NSManagedObjectContext, entity : NSManagedObject.Type) async throws -> Result<[NSFetchRequestResult], Error> {
@@ -55,5 +48,5 @@ struct CoreDataDataSource : coreDataDataSourceDelegate {
     }
     
     
-//    func fetchWorkoutData() -> workout
+
 }
