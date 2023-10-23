@@ -28,5 +28,6 @@ struct FetchWorkoutUseCase {
         } catch {
             fatalError("Error getting the workout")
         }
+        return workouts
     }
 }
