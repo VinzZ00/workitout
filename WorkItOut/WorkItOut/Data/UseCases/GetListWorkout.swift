@@ -8,24 +8,26 @@
 import Foundation
 
 struct GetWorkoutList {
-    private init() {}
     let db = FireStoreManager();
     
     
-    func call() async -> [String] {
+    func call() async -> [RequestExercise] {
         
-        var exercisesName : [String] = []
+        var exercisesReq : [RequestExercise] = []
         
         await db.getCollection(collectionName: FirebaseConstant.ExerciseCollectionConstants.collectionName) { querrySnapShot in
             querrySnapShot.documents.forEach { doc in
                 
-                var exerciseName = doc.data()[FirebaseConstant.ExerciseCollectionConstants.name] as! String
+                let exerciseName = doc.data()[FirebaseConstant.ExerciseCollectionConstants.name] as! String
+                let exerciseMuscleGroup = (doc.data()[FirebaseConstant.ExerciseCollectionConstants.muscleGroup] as! String).split(separator: ", ") as! [String]
+                let exerciseEquipment = (doc.data()[FirebaseConstant.ExerciseCollectionConstants.equipment] as! String).split(separator: ", ") as! [String]
+                let weight = (doc.data()[FirebaseConstant.ExerciseCollectionConstants.weight] as? Double ?? 0.0)
                 
-                exercisesName.append(exerciseName)
+                exercisesReq.append(RequestExercise(name: exerciseName, muscleGroup: exerciseMuscleGroup, equipment: exerciseEquipment))
 
             }
         }
         
-        return exercisesName;
+        return exercisesReq;
     }
 }
