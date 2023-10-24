@@ -6,12 +6,34 @@
 //
 
 import Foundation
+import SwiftUI
 import CoreData
 
-struct CoreDataDataSource {
-    func saveToCoreData(workout : Workout, context : NSManagedObjectContext) async throws {
-        let workoutRec = WorkoutNSObject(context: context);
-        workoutRec.workoutState = false
+struct CoreDataDataSource : CoreDataDataSourceDelegate {
+    
+    func fetchFromCoreData(context: NSManagedObjectContext, entity : NSManagedObject.Type) async throws -> Result<[NSFetchRequestResult], Error> {
+        let fetchRequest = entity.fetchRequest()
+        
+        do {
+            return try .success(context.fetch(fetchRequest))
+        } catch let err {
+            return .failure(err)
+        }
+        
+    }
+    
+    func saveToCoreData<T : NSManagedObject>(entity : T, context : NSManagedObjectContext) async throws {
+        
+        do {
+            try context.save()
+        } catch let err {
+            throw err;
+        }
+    }
+    
+    func updateToCoreData(workout : Workout, context : NSManagedObjectContext) async throws {
+        let workoutRec = WorkoutNSObject(context: context)
+        workoutRec.workoutState = workout.workoutState == .finished ? true : false
         workoutRec.exercises = NSSet(array: workout.exercises)
         
         do {
@@ -21,10 +43,6 @@ struct CoreDataDataSource {
         }
     }
     
-//    func updateToCoreData(workout : Workout, context : NSManagedObjectContext) {
-//        let workoutRec = WorkoutNSObject(context: context)
-//        workoutRec.workoutState = workout
-//    }
-//    
-//    func fetchWorkoutData() -> workout
+    
+
 }
