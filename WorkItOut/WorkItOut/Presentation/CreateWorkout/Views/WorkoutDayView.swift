@@ -14,10 +14,11 @@ struct WorkoutDayView: View {
     var body: some View {
         List(vm.workoutWeekday[day]!.exercises, id: \.self) { exercise in
             NavigationLink(exercise.name) {
-                EditExerciseView(day: day, exercise: exercise)
+                EditExerciseView(evm: EditExerciseViewModel(day: day, exercise: exercise))
                     .environmentObject(vm)
             }
         }
+        .navigationTitle("Exercise List")
     }
 }
 

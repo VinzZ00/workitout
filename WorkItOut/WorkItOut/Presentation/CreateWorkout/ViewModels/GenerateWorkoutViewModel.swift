@@ -40,7 +40,7 @@ class GenerateWorkoutViewModel: ObservableObject {
     func generateWeeklyWorkout() {
         for day in Day.allCases {
             for workout in workoutPlan.workouts {
-                if Calendar.current.isDate(getWeekday(day: day), equalTo: workout.date, toGranularity: .day){
+                if Calendar.current.isDate(day.getWeekday(), equalTo: workout.date, toGranularity: .day){
                     print("match")
                     self.workoutWeekday.updateValue(workout, forKey: day)
                 }
@@ -48,30 +48,6 @@ class GenerateWorkoutViewModel: ObservableObject {
            
         }
     }
-    
-    func getWeekday(day: Day) -> Date {
-        let today = Date()
-        let calendar = Calendar.current
-        let dayOfWeek = calendar.component(.weekday, from: today)
-        
-        let adjustedDayOfWeek = (dayOfWeek - calendar.firstWeekday + day.rawValue) % 7
-        
-        let adjustedDate = calendar.date(byAdding: .day, value: adjustedDayOfWeek, to: today)
-        
-        return adjustedDate ?? Date.now
-    }
 }
 
-extension Array {
-    mutating func modifyForEach(_ body: (_ index: Index, _ element: inout Element) -> ()) {
-        for index in indices {
-            modifyElement(atIndex: index) { body(index, &$0) }
-        }
-    }
 
-    mutating func modifyElement(atIndex index: Index, _ modifyElement: (_ element: inout Element) -> ()) {
-        var element = self[index]
-        modifyElement(&element)
-        self[index] = element
-    }
-}

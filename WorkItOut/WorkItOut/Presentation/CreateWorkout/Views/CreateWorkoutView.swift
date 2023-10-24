@@ -21,75 +21,55 @@ struct CreateWorkoutView: View {
                     Text("Placeholder Form")
                         .font(.title)
                         .fontWeight(.semibold)
-                    VStack() {
-                        HStack {
-                            Text("Height")
-                            Spacer()
-                        }
-                        Slider(
-                            value: $vm.height,
-                            in: 100...200
-                        )
-                        Text("\(Int(vm.height)) cm")
-                    }
-                    VStack {
-                        HStack {
-                            Text("Weight")
-                            Spacer()
-                        }
-                        Slider(
-                            value: $vm.weight,
-                            in: 100...200
-                        )
-                        Text("\(Int(vm.weight)) kg")
-                    }
+                    SliderComponent(title: "Height", value: $vm.height, measurementUnit: "cm", minRange: 100, maxRange: 200)
+                    SliderComponent(title: "Weight", value: $vm.weight, measurementUnit: "kg", minRange: 100, maxRange: 200)
                     ScrollView(.horizontal) {
-                        HStack {
+                        VStack(alignment: .leading) {
                             Text("Available Days")
-                            Spacer()
-                        }
-                        HStack {
-                            ForEach(Day.allCases, id: \.self) { day in
-                                Button {
-                                    if vm.checkDay(day: day) {
-                                        vm.removeDay(day: day)
+                            HStack {
+                                ForEach(Day.allCases, id: \.self) { day in
+                                    Button {
+                                        if vm.checkDay(day: day) {
+                                            vm.removeDay(day: day)
+                                        }
+                                        else {
+                                            vm.addDay(day: day)
+                                        }
+                                    } label: {
+                                        Text("\(day.getDay())")
+                                            .foregroundStyle(vm.checkDay(day: day) ? .purple : .white)
                                     }
-                                    else {
-                                        vm.addDay(day: day)
-                                    }
-                                } label: {
-                                    Text("\(day.rawValue)")
-                                        .foregroundStyle(vm.checkDay(day: day) ? .purple : .white)
-                                }
-                                .buttonStyle(.bordered)
+                                    .buttonStyle(.bordered)
 
+                                }
                             }
                         }
+                        
                         
                     }
                     
                     ScrollView(.horizontal) {
-                        HStack {
+                        VStack(alignment: .leading) {
                             Text("Muscle Group")
-                            Spacer()
-                        }
-                        HStack {
-                            ForEach(MuscleGroup.allCases, id: \.self) { muscle in
-                                Button {
-                                    if vm.checkMuscleGroup(muscleGroup: muscle) {
-                                        vm.removeMuscleGroup(muscleGroup: muscle)
+                            HStack {
+                                ForEach(MuscleGroup.allCases, id: \.self) { muscle in
+                                    Button {
+                                        if vm.checkMuscleGroup(muscleGroup: muscle) {
+                                            vm.removeMuscleGroup(muscleGroup: muscle)
+                                        }
+                                        else {
+                                            vm.addMuscleGroup(muscleGroup: muscle)
+                                        }
+                                    } label: {
+                                        Text("\(muscle.getMuscle())")
+                                            .foregroundStyle(vm.checkMuscleGroup(muscleGroup: muscle) ? .purple : .white)
                                     }
-                                    else {
-                                        vm.addMuscleGroup(muscleGroup: muscle)
-                                    }
-                                } label: {
-                                    Text("\(muscle.rawValue)")
-                                        .foregroundStyle(vm.checkMuscleGroup(muscleGroup: muscle) ? .purple : .white)
-                                }
-                                .buttonStyle(.bordered)
+                                    .buttonStyle(.bordered)
 
+                                }
                             }
                         }
+                        
                     }
                     
                     VStack(alignment: .leading) {
@@ -117,18 +97,11 @@ struct CreateWorkoutView: View {
                 }
                 .padding(4)
                 
-                Button {
+                ButtonComponent(title: "Submit") {
                     vm.createWorkout()
                     
-//                    vm.objectWillChange.send()
                     self.presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Text("Submit")
-                        .padding(.vertical, 4)
-                        .frame(maxWidth: .infinity)
                 }
-                .padding(.vertical)
-                .buttonStyle(.borderedProminent)
             }
             
             

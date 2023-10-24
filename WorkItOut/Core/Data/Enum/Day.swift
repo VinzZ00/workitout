@@ -34,6 +34,18 @@ enum Day: Int, CaseIterable {
                 return "Sunday"
         }
     }
+    
+    func getWeekday() -> Date {
+        let today = Date()
+        let calendar = Calendar.current
+        let dayOfWeek = calendar.component(.weekday, from: today)
+        
+        let adjustedDayOfWeek = (dayOfWeek - calendar.firstWeekday + self.rawValue) % 7
+        
+        let adjustedDate = calendar.date(byAdding: .day, value: adjustedDayOfWeek, to: today)
+        
+        return adjustedDate ?? Date.now
+    }
 }
 
 //var d = Date()
