@@ -58,7 +58,7 @@ struct CreateWorkoutView: View {
                                         vm.addDay(day: day)
                                     }
                                 } label: {
-                                    Text(day.rawValue)
+                                    Text("\(day.rawValue)")
                                         .foregroundStyle(vm.checkDay(day: day) ? .purple : .white)
                                 }
                                 .buttonStyle(.bordered)
@@ -83,7 +83,7 @@ struct CreateWorkoutView: View {
                                         vm.addMuscleGroup(muscleGroup: muscle)
                                     }
                                 } label: {
-                                    Text(muscle.rawValue)
+                                    Text("\(muscle.rawValue)")
                                         .foregroundStyle(vm.checkMuscleGroup(muscleGroup: muscle) ? .purple : .white)
                                 }
                                 .buttonStyle(.bordered)

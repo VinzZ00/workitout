@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum WorkoutState {
-  case onProgress
-  case finished
+enum WorkoutState : Int {
+  case onProgress = 0
+  case finished = 1
 }

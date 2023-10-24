@@ -50,16 +50,57 @@ class CreateWorkoutViewModel: ObservableObject {
     }
     
     func createWorkout() {
-        let workout = Workout()
+        var workoutPlan = WorkoutPlan()
         for day in days {
+            var workout = Workout()
             for muscle in muscleGroups {
                 workout.exercises.append(
                     MockData.mockExercises.filter({ $0.muscleGroup.contains(muscle)}).randomElement()!
                 )
-                workout.exercises[workout.exercises.endIndex-1].day = day
+//                workout.date = Workout.getDesiredDate(desired: )
+//                workout.exercises[workout.exercises.endIndex-1] = day
             }
+            workout.date = getWeekday(day: day)
+            
+            workoutPlan.workouts.append(workout)
         }
-        
-        MockData.mockWorkout = workout
+        MockData.mockWorkoutPlan = workoutPlan
+//        MockData.mockWorkout = workout
     }
+    
+    func getWeekday(day: Day) -> Date {
+        let today = Date()
+        let calendar = Calendar.current
+        let dayOfWeek = calendar.component(.weekday, from: today)
+        
+//         Adjust the day to make Sunday the first day of the week (if needed)
+//        let adjustedDayOfWeek = (dayOfWeek - calendar.firstWeekday + 7) % 7
+        let adjustedDayOfWeek = (dayOfWeek - calendar.firstWeekday + day.rawValue) % 7
+
+        
+        let adjustedDate = calendar.date(byAdding: .day, value: adjustedDayOfWeek, to: today)
+        
+        print(adjustedDate!, "Test")
+        return adjustedDate ?? Date.now
+        
+//        return (adjustedDayOfWeek + day.rawValue)
+    }
+    
+//    func getWeekday(day: Day) -> Date {
+//        let currentDate = Date()
+//                
+//        // Create a Calendar instance
+//        let calendar = Calendar.current
+//        
+//        // Get the current weekday (1 = Sunday, 2 = Monday, ..., 7 = Saturday)
+//        let currentWeekday = calendar.component(.weekday, from: currentDate)
+//        
+//        // Calculate the number of days to add to reach Tuesday (assuming Sunday is the first day)
+//        let daysToAdd = 2 - currentWeekday + 7
+//        
+//        // Calculate the date for the next Tuesday
+//        let nextTuesday = calendar.date(byAdding: .day, value: daysToAdd, to: currentDate)
+//        
+//        return nextTuesday!
+//    }
 }

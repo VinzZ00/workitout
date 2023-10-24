@@ -8,7 +8,8 @@
 import Foundation
 
 struct MockData {
-    static var mockWorkout: Workout = Workout()
+    static var mockWorkoutPlan: WorkoutPlan = WorkoutPlan()
+    static var mockWorkout: Workout = Workout(exercises: [], workoutState: .onProgress, date: Date.now)
     
     static var mockExercises: [Exercise] = [
         Exercise(

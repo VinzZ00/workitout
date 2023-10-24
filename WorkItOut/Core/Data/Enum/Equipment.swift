@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum Equipment {
-  case dumbbell
+enum Equipment : Int {
+  case dumbbell = 0
   case pullupbar
   case dipbar
   case noEquipment

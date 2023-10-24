@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C6F34C92AE789130059E74D /* EditExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34C82AE789130059E74D /* EditExerciseView.swift */; };
 		6C8D5CFC2AE660B200A2986D /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5CFB2AE660B200A2986D /* WorkoutPlan.swift */; };
 		6C8D5D032AE6614C00A2986D /* WorkoutDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D002AE6614C00A2986D /* WorkoutDayView.swift */; };
 		6C8D5D042AE6614C00A2986D /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D012AE6614C00A2986D /* CreateWorkoutView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C6F34C82AE789130059E74D /* EditExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExerciseView.swift; sourceTree = "<group>"; };
 		6C8D5CFB2AE660B200A2986D /* WorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlan.swift; sourceTree = "<group>"; };
 		6C8D5D002AE6614C00A2986D /* WorkoutDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDayView.swift; sourceTree = "<group>"; };
 		6C8D5D012AE6614C00A2986D /* CreateWorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWorkoutView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				6C8D5D012AE6614C00A2986D /* CreateWorkoutView.swift */,
 				6C8D5D022AE6614C00A2986D /* GenerateWorkoutView.swift */,
 				6C8D5D002AE6614C00A2986D /* WorkoutDayView.swift */,
+				6C6F34C82AE789130059E74D /* EditExerciseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				6C8D5D052AE6614C00A2986D /* GenerateWorkoutView.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
+				6C6F34C92AE789130059E74D /* EditExerciseView.swift in Sources */,
 				6C8D5D132AE6618E00A2986D /* MuscleGroup.swift in Sources */,
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */,

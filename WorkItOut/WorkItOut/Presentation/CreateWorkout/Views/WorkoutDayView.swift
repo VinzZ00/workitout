@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct WorkoutDayView: View {
+    @EnvironmentObject var vm: GenerateWorkoutViewModel
     @State var day: Day = .friday
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(vm.workoutWeekday[day]!.exercises, id: \.self) { exercise in
+            NavigationLink(exercise.name) {
+                EditExerciseView(day: day, exercise: exercise)
+                    .environmentObject(vm)
+            }
+        }
     }
 }
 

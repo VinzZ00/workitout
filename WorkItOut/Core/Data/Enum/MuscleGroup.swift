@@ -7,10 +7,11 @@
 
 import Foundation
 
-enum MuscleGroup: String, CaseIterable {
-  case arm = "Arm"
-  case leg = "Leg"
-  case chest = "Chest"
-  case abs = "Abs"
-  case back = "Back"
+enum MuscleGroup: Int, CaseIterable {
+  case arm = 0
+  case leg = 1
+  case chest = 2
+  case abs = 3
+  case back = 4
 }
+

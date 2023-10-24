@@ -13,14 +13,19 @@ struct GenerateWorkoutView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                if !vm.workout.exercises.isEmpty {
+                if !vm.workoutPlan.workouts.isEmpty {
                     List(Day.allCases, id: \.self) { day in
-                        NavigationLink(day.rawValue, value: day)
-                            .foregroundStyle(
-                                vm.workout.exercises.contains(where: {$0.day == day}) ? .purple : .white
-                            )
+                        if vm.workoutWeekday.keys.contains(where: {$0 == day}) {
+                            NavigationLink("\(day.getDay())") {
+                                WorkoutDayView(day: day)
+                                    .environmentObject(vm)
+                            }
+                        }
+                        else {
+                            Text("\(day.getDay())")
+                        }
+                        
                     }
-                    .navigationDestination(for: Day.self, destination: WorkoutDayView.init)
                     .navigationTitle("Workout Plan")
                 }
                 else {
@@ -42,7 +47,7 @@ struct GenerateWorkoutView: View {
                 }
             }
             .onAppear(perform: {
-                vm.refreshWorkout()
+                vm.refreshWorkoutPlan()
             })
         }
         
