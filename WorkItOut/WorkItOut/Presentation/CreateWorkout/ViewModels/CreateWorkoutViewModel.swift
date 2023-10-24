@@ -13,7 +13,7 @@ class CreateWorkoutViewModel: ObservableObject {
     @Published var height: Double = 0
     @Published var weight: Double = 0
     @Published var days: [Day] = [.tuesday, .friday]
-    @Published var muscleGroups: [MuscleGroup] = [.abs, .back]
+    @Published var muscleGroups: [MuscleGroup] = [.chest, .back]
     @Published var hasEquipment: Bool = false
     @Published var needReminder: Bool = false
     

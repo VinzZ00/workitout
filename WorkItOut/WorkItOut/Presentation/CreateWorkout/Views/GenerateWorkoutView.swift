@@ -16,13 +16,13 @@ struct GenerateWorkoutView: View {
                 if !vm.workoutPlan.workouts.isEmpty {
                     List(Day.allCases, id: \.self) { day in
                         if vm.workoutWeekday.keys.contains(where: {$0 == day}) {
-                            NavigationLink("\(day.getDay())") {
+                            NavigationLink("\(day.rawValue)") {
                                 WorkoutDayView(day: day)
                                     .environmentObject(vm)
                             }
                         }
                         else {
-                            Text("\(day.getDay())")
+                            Text("\(day.rawValue)")
                         }
                         
                     }
