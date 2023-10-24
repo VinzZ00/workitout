@@ -24,7 +24,38 @@
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
 		D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */; };
 		D862DB6E2AE28E5C0014F2FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6D2AE28E5C0014F2FC /* Preview Assets.xcassets */; };
+		D8BC2BC92AE7BD9900E61487 /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BC82AE7BD9900E61487 /* HeartRateManager.swift */; };
+		D8BC2BD42AE7D0B400E61487 /* WorkItOut_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BD32AE7D0B400E61487 /* WorkItOut_WatchApp.swift */; };
+		D8BC2BD62AE7D0B400E61487 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BD52AE7D0B400E61487 /* ContentView.swift */; };
+		D8BC2BD82AE7D0B500E61487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BC2BD72AE7D0B500E61487 /* Assets.xcassets */; };
+		D8BC2BDB2AE7D0B500E61487 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BC2BDA2AE7D0B500E61487 /* Preview Assets.xcassets */; };
+		D8BC2BDE2AE7D0B500E61487 /* WorkItOut.Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D8BC2BD12AE7D0B400E61487 /* WorkItOut.Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D8BC2BE32AE7D0F900E61487 /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BC82AE7BD9900E61487 /* HeartRateManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8BC2BDC2AE7D0B500E61487 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D862DB5B2AE28E5A0014F2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8BC2BD02AE7D0B400E61487;
+			remoteInfo = "WorkItOut.Watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D8BC2BE22AE7D0B500E61487 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D8BC2BDE2AE7D0B500E61487 /* WorkItOut.Watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6C8D5CFB2AE660B200A2986D /* WorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlan.swift; sourceTree = "<group>"; };
@@ -43,6 +74,14 @@
 		D862DB682AE28E5A0014F2FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D862DB6D2AE28E5C0014F2FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8BC2BC82AE7BD9900E61487 /* HeartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
+		D8BC2BCC2AE7BF2800E61487 /* WorkItOut.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkItOut.entitlements; sourceTree = "<group>"; };
+		D8BC2BD12AE7D0B400E61487 /* WorkItOut.Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorkItOut.Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8BC2BD32AE7D0B400E61487 /* WorkItOut_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOut_WatchApp.swift; sourceTree = "<group>"; };
+		D8BC2BD52AE7D0B400E61487 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8BC2BD72AE7D0B500E61487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8BC2BDA2AE7D0B500E61487 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8BC2BE42AE7F8A100E61487 /* WorkItOut.Watch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WorkItOut.Watch Watch App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +91,13 @@
 			files = (
 				AC5A9A502AE3AC5E003B0C1F /* FirebaseFirestore in Frameworks */,
 				AC5A9A5B2AE3E614003B0C1F /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8BC2BCE2AE7D0B400E61487 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				D862DB652AE28E5A0014F2FC /* WorkItOut */,
+				D8BC2BD22AE7D0B400E61487 /* WorkItOut.Watch Watch App */,
 				D862DB642AE28E5A0014F2FC /* Products */,
 				AC5A9A4E2AE3AC5E003B0C1F /* Frameworks */,
 			);
@@ -202,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				D862DB632AE28E5A0014F2FC /* WorkItOut.app */,
+				D8BC2BD12AE7D0B400E61487 /* WorkItOut.Watch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,6 +257,7 @@
 		D862DB652AE28E5A0014F2FC /* WorkItOut */ = {
 			isa = PBXGroup;
 			children = (
+				D8BC2BCC2AE7BF2800E61487 /* WorkItOut.entitlements */,
 				ACFED3812AE2B5B60018CD03 /* Core */,
 				AC5A9A6A2AE41557003B0C1F /* WorkItOut */,
 				D862DB6C2AE28E5C0014F2FC /* Preview Content */,
@@ -224,6 +273,35 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D8BC2BC72AE7BD8F00E61487 /* HeartRate */ = {
+			isa = PBXGroup;
+			children = (
+				D8BC2BC82AE7BD9900E61487 /* HeartRateManager.swift */,
+			);
+			path = HeartRate;
+			sourceTree = "<group>";
+		};
+		D8BC2BD22AE7D0B400E61487 /* WorkItOut.Watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				D8BC2BE42AE7F8A100E61487 /* WorkItOut.Watch Watch App.entitlements */,
+				D8BC2BC72AE7BD8F00E61487 /* HeartRate */,
+				D8BC2BD32AE7D0B400E61487 /* WorkItOut_WatchApp.swift */,
+				D8BC2BD52AE7D0B400E61487 /* ContentView.swift */,
+				D8BC2BD72AE7D0B500E61487 /* Assets.xcassets */,
+				D8BC2BD92AE7D0B500E61487 /* Preview Content */,
+			);
+			path = "WorkItOut.Watch Watch App";
+			sourceTree = "<group>";
+		};
+		D8BC2BD92AE7D0B500E61487 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D8BC2BDA2AE7D0B500E61487 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,10 +312,12 @@
 				D862DB5F2AE28E5A0014F2FC /* Sources */,
 				D862DB602AE28E5A0014F2FC /* Frameworks */,
 				D862DB612AE28E5A0014F2FC /* Resources */,
+				D8BC2BE22AE7D0B500E61487 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D8BC2BDD2AE7D0B500E61487 /* PBXTargetDependency */,
 			);
 			name = WorkItOut;
 			packageProductDependencies = (
@@ -246,6 +326,23 @@
 			);
 			productName = WorkItOut;
 			productReference = D862DB632AE28E5A0014F2FC /* WorkItOut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8BC2BD02AE7D0B400E61487 /* WorkItOut.Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8BC2BDF2AE7D0B500E61487 /* Build configuration list for PBXNativeTarget "WorkItOut.Watch Watch App" */;
+			buildPhases = (
+				D8BC2BCD2AE7D0B400E61487 /* Sources */,
+				D8BC2BCE2AE7D0B400E61487 /* Frameworks */,
+				D8BC2BCF2AE7D0B400E61487 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WorkItOut.Watch Watch App";
+			productName = "WorkItOut.Watch Watch App";
+			productReference = D8BC2BD12AE7D0B400E61487 /* WorkItOut.Watch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -259,6 +356,9 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					D862DB622AE28E5A0014F2FC = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					D8BC2BD02AE7D0B400E61487 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
@@ -280,6 +380,7 @@
 			projectRoot = "";
 			targets = (
 				D862DB622AE28E5A0014F2FC /* WorkItOut */,
+				D8BC2BD02AE7D0B400E61487 /* WorkItOut.Watch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +396,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8BC2BCF2AE7D0B400E61487 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8BC2BDB2AE7D0B500E61487 /* Preview Assets.xcassets in Resources */,
+				D8BC2BD82AE7D0B500E61487 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -306,6 +416,7 @@
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */,
+				D8BC2BC92AE7BD9900E61487 /* HeartRateManager.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
 				6C8D5CFC2AE660B200A2986D /* WorkoutPlan.swift in Sources */,
@@ -317,7 +428,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8BC2BCD2AE7D0B400E61487 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8BC2BD62AE7D0B400E61487 /* ContentView.swift in Sources */,
+				D8BC2BE32AE7D0F900E61487 /* HeartRateManager.swift in Sources */,
+				D8BC2BD42AE7D0B400E61487 /* WorkItOut_WatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8BC2BDD2AE7D0B500E61487 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8BC2BD02AE7D0B400E61487 /* WorkItOut.Watch Watch App */;
+			targetProxy = D8BC2BDC2AE7D0B500E61487 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D862DB6F2AE28E5C0014F2FC /* Debug */ = {
@@ -442,14 +571,20 @@
 		D862DB722AE28E5C0014F2FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WorkItOut/WorkItOut.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 382VG5FRJK;
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Record Usage Description";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share Usage Description";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Update Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,8 +595,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.Dallian.Kevin.WorkItOut;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,14 +607,20 @@
 		D862DB732AE28E5C0014F2FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WorkItOut/WorkItOut.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 382VG5FRJK;
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Record Usage Description";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share Usage Description";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Update Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -489,11 +631,82 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.Dallian.Kevin.WorkItOut;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D8BC2BE02AE7D0B500E61487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WorkItOut.Watch Watch App/WorkItOut.Watch Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut.Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WorkItOut.Watch;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Records Usage Description";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share Usage Description";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Update Usage Description";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "me.Dallian.Kevin.WorkItOut-";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		D8BC2BE12AE7D0B500E61487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WorkItOut.Watch Watch App/WorkItOut.Watch Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut.Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WorkItOut.Watch;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Records Usage Description";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share Usage Description";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Update Usage Description";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "me.Dallian.Kevin.WorkItOut-";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -514,6 +727,15 @@
 			buildConfigurations = (
 				D862DB722AE28E5C0014F2FC /* Debug */,
 				D862DB732AE28E5C0014F2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8BC2BDF2AE7D0B500E61487 /* Build configuration list for PBXNativeTarget "WorkItOut.Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8BC2BE02AE7D0B500E61487 /* Debug */,
+				D8BC2BE12AE7D0B500E61487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
