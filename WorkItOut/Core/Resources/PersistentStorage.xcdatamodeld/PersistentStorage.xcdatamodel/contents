@@ -14,5 +14,9 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="workoutState" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseNSObject" inverseName="usedBy" inverseEntity="ExerciseNSObject"/>
+        <relationship name="planOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkoutPlanNSObject"/>
+    </entity>
+    <entity name="WorkoutPlanNSObject" representedClassName="WorkoutPlanNSObject" syncable="YES" codeGenerationType="class">
+        <relationship name="workouts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WorkoutNSObject"/>
     </entity>
 </model>

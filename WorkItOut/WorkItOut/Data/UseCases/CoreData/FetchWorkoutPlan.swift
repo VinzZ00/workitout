@@ -8,13 +8,13 @@
 import Foundation
 import CoreData
 
-struct FetchWorkoutUseCase {
+struct FetchWorkoutPlanUseCase {
     
     let repository = Repository()
     
     func call(context : NSManagedObjectContext) async -> [WorkoutNSObject]{
         
-        var workouts : [WorkoutNSObject] = []
+        var workoutPlans : [WorkoutNSObject] = []
         
         do {
             switch try await repository.coreData.fetchFromCoreData(context: context, entity: WorkoutNSObject.self) {

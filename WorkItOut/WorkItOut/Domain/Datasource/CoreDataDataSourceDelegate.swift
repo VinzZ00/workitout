@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import CoreData
 
-protocol coreDataDataSourceDelegate {
-    func saveToCoreData(workout : Workout, context : NSManagedObjectContext) async throws
+protocol CoreDataDataSourceDelegate {
+    func saveToCoreData<T : NSManagedObject>(entity : T, context : NSManagedObjectContext) async throws
     func updateToCoreData(workout : Workout, context : NSManagedObjectContext) async throws
     func fetchFromCoreData(context : NSManagedObjectContext, entity : NSManagedObject.Type) async throws -> Result<[NSFetchRequestResult], Error>
 }
