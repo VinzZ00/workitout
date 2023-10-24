@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 import CoreData
 
-struct CoreDataDataSource : coreDataDataSourceDelegate {
+struct CoreDataDataSource : CoreDataDataSourceDelegate {
     
     func fetchFromCoreData(context: NSManagedObjectContext, entity : NSManagedObject.Type) async throws -> Result<[NSFetchRequestResult], Error> {
-        var fetchRequest = entity.fetchRequest()
+        let fetchRequest = entity.fetchRequest()
         
         do {
             return try .success(context.fetch(fetchRequest))
@@ -22,11 +22,7 @@ struct CoreDataDataSource : coreDataDataSourceDelegate {
         
     }
     
-    func saveToCoreData(workout : Workout, context : NSManagedObjectContext) async throws {
-        
-        let workoutRec = WorkoutNSObject(context: context);
-        workoutRec.workoutState = workout.workoutState == .finished ? true : false
-        workoutRec.exercises = NSSet(array: workout.exercises)
+    func saveToCoreData<T : NSManagedObject>(entity : T, context : NSManagedObjectContext) async throws {
         
         do {
             try context.save()
