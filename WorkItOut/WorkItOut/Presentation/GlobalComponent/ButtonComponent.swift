@@ -19,7 +19,6 @@ struct ButtonComponent: View {
         self.color = color
         self.action = action
     }
-    
     var body: some View {
         Button(role: role, action: action) {
             Text(title)
@@ -30,7 +29,6 @@ struct ButtonComponent: View {
         .padding(.vertical)
         .tint(self.color)
         .buttonStyle(.borderedProminent)
-        
     }
 }
 
