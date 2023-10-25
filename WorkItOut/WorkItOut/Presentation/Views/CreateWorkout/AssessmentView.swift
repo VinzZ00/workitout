@@ -24,7 +24,7 @@ struct AssessmentView: View {
                 case .chooseMuscleGroup:
                     AssessmentDetailMultipleChoiceView(title: "Which muscle groups are you interested in training?", selectedItems: $avm.muscleGroup, selections: MuscleGroup.allCases.map({$0.rawValue}))
                 case .complete:
-                    Text("Complete liau")
+                    CompleteView()
                 }
             }
             .padding(.horizontal, 15)
@@ -50,20 +50,17 @@ struct AssessmentView: View {
             }
             if avm.buttonDisable {
                 Button("Next"){
-                    withAnimation {
-                        avm.nextState()
-                    }
+                    
                 }
                 .buttonStyle(BorderedDisabledButton())
-            }else{
+            }else {
                 Button("Next"){
                     withAnimation {
                         avm.nextState()
                     }
+                    
                 }
                 .buttonStyle(BorderedButton())
-                .padding(.horizontal, 15)
-                
             }
             
         }

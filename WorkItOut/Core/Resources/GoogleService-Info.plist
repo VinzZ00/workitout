@@ -9,21 +9,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>me.Dallian.Kevin.WorkItOut</string>
+	<string>me.Dallian.Kevin.WorkItOut-</string>
 	<key>PROJECT_ID</key>
 	<string>workitout-a3bd4</string>
 	<key>STORAGE_BUCKET</key>
 	<string>workitout-a3bd4.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:1062638900831:ios:4aae2cc5524b434d67edea</string>
 </dict>
