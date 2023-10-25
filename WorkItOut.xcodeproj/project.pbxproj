@@ -26,6 +26,7 @@
 		AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */; };
 		ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCACC2AE907E4007159F2 /* workoutListCard.swift */; };
 		ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */; };
+		ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */; };
 		ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */; };
 		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
 		ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */; };
@@ -71,6 +72,7 @@
 		AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		ACABCACC2AE907E4007159F2 /* workoutListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutListCard.swift; sourceTree = "<group>"; };
 		ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAssessmentResult.swift; sourceTree = "<group>"; };
+		ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentResultView.swift; sourceTree = "<group>"; };
 		ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExercise.swift; sourceTree = "<group>"; };
 		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSourceDelegate.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				ACABCAC92AE9075B007159F2 /* Components */,
+				ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */,
 			);
 			path = AssessmentResult;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				6C6F34D32AE7C0E00059E74D /* Array.swift in Sources */,
+				ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */,
 				6C8D5D102AE6618E00A2986D /* Equipment.swift in Sources */,
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,

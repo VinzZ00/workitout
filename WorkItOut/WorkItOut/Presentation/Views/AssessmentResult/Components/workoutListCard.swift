@@ -30,8 +30,8 @@ struct workoutListCard: View {
             HStack {
                 Image(imageAssetName)
                     .resizable()
-                    .frame(width: 64, height: 64)
-                    .scaledToFill()
+                    .frame(width: 76, height: 76)
+                    .scaledToFit()
                     .cornerRadius(6)
                     .padding(.vertical, 12)
                     .padding(.leading, 12)
