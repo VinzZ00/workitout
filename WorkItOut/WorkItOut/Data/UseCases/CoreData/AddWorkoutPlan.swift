@@ -13,7 +13,7 @@ struct AddWorkoutUseCase {
     
     func call(workoutPlan : WorkoutPlan, context : NSManagedObjectContext) async {
         
-        var nsWorkoutPlan = WorkoutPlanNSObject(context: context)
+        let nsWorkoutPlan = WorkoutPlanNSObject(context: context)
         nsWorkoutPlan.workouts = NSSet(array: workoutPlan.workouts)
         
         

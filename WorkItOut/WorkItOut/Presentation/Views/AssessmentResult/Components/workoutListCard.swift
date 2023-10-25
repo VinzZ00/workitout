@@ -40,8 +40,9 @@ struct workoutListCard: View {
                         .font(.title3)
                         .fontWeight(.semibold)
                     Text("\(muscle)")
-                        .foregroundColor(.black)
+                        .foregroundColor(.neutral3)
                         .font(.body)
+                        
                         
                 }
                 .padding(.vertical, 11)
@@ -51,7 +52,9 @@ struct workoutListCard: View {
                 
                 VStack(alignment: .trailing) {
                     Text("\(manySet) Set")
+                        .foregroundColor(.neutral3)
                     Text("\(manyReps) Reps")
+                        .foregroundColor(.neutral3)
                 }
                 .padding(.trailing, 12)
                 .padding(.vertical, 12)
@@ -59,7 +62,8 @@ struct workoutListCard: View {
             .frame(width: 358, height: 88)
             .padding(.all, 12)
             .overlay(RoundedRectangle(cornerRadius: 10)
-                            .stroke(.black, lineWidth: 2)
+                            .stroke(.neutral6, lineWidth: 2)
+            .padding(.horizontal, 12)
             )
         }
     }
