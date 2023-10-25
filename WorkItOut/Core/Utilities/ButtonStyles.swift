@@ -18,6 +18,7 @@ struct BorderedButton : ButtonStyle {
             .foregroundStyle(.white)
             .clipShape(RoundedRectangle(cornerRadius: 5))
             .animation(.easeOut(duration: 0.15), value: configuration.isPressed)
+            .padding(.horizontal)
     }
 }
 
@@ -27,12 +28,23 @@ struct BorderedDisabledButton : ButtonStyle {
             .bold()
             .padding(.vertical, 10)
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-            .background(.white)
+            .background(.orangePrimary.opacity(0.5))
             .foregroundStyle(.white)
             .clipShape(RoundedRectangle(cornerRadius: 5))
+            .padding(.horizontal)
     }
 }
 
 #Preview {
-    AssessmentView()
+    VStack{
+        Button("I'm a Button"){
+            print("Im a button")
+        }
+        .buttonStyle(BorderedButton())
+        
+        Button("I'm a Disabled Button"){
+            print("Im a Disabled button")
+        }
+        .buttonStyle(BorderedDisabledButton())
+    }
 }
