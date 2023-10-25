@@ -20,7 +20,7 @@ struct FetchWorkoutPlanUseCase {
             switch try await repository.coreData.fetchFromCoreData(context: context, entity: WorkoutNSObject.self) {
             case .success(let data) :
                 for x in data as? [WorkoutNSObject] ?? [] {
-                    workouts.append(x);
+                    workoutPlans.append(x);
                 }
             case .failure(let err) :
                 fatalError("Error getting workout : \(err.localizedDescription)")
@@ -28,5 +28,6 @@ struct FetchWorkoutPlanUseCase {
         } catch {
             fatalError("Error getting the workout")
         }
+        return workoutPlans
     }
 }
