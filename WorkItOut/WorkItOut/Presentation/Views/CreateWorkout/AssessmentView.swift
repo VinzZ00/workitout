@@ -11,12 +11,10 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     var body: some View {
         NavigationStack{
-            Spacer()
             VStack{
                 switch avm.state {
                 case .chooseDay:
                     AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", selectedItems: $avm.day, selections: Day.allCases.map({$0.rawValue}))
-                        
                 case .chooseTime:
                     AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeClock.allCases.map({$0.rawValue}))
                 case .chooseDuration:
@@ -29,21 +27,45 @@ struct AssessmentView: View {
                     Text("Complete liau")
                 }
             }
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 15)
             Spacer()
-            Button("Next"){
-                avm.nextState()
-            }
+            .onChange(of: avm.day.isEmpty || avm.muscleGroup.isEmpty, { oldValue, newValue in
+                avm.buttonDisable = newValue
+            })
             .toolbar{
-                if avm.state != .chooseDay{
+                if avm.state != .chooseDay {
                     ToolbarItem(placement: .topBarLeading) {
-                        Button(action: {avm.previousState()}, label: {
+                        Button {
+                            withAnimation {
+                                avm.previousState()
+                            }
+                        } label: {
                             Image(systemName: "chevron.left")
-                        })
+                        }
                     }
                 }
+                ToolbarItem(placement: .principal) {
+                    StateIndicator(state: $avm.state)
+                }
+            }
+            if avm.buttonDisable {
+                Button("Next"){
+                    withAnimation {
+                        avm.nextState()
+                    }
+                }
+                .buttonStyle(BorderedDisabledButton())
+            }else{
+                Button("Next"){
+                    withAnimation {
+                        avm.nextState()
+                    }
+                }
+                .buttonStyle(BorderedButton())
+                .padding(.horizontal, 15)
                 
             }
+            
         }
         
         

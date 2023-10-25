@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum AssessmentState {
-    case chooseDay
-    case chooseTime
-    case chooseDuration
-    case chooseMonth
-    case chooseMuscleGroup
-    case complete
+enum AssessmentState: Int {
+    case chooseDay = 0
+    case chooseTime = 1
+    case chooseDuration = 2
+    case chooseMonth = 3
+    case chooseMuscleGroup = 4
+    case complete = 5
 }

@@ -13,7 +13,7 @@ struct AssessmentDetailView: View {
     @State var selections : [String]
     
     var body: some View {
-        VStack{
+        VStack(alignment: .leading){
             Text(title)
                 .font(.title).bold()
             ForEach(selections, id: \.self){ selection in

@@ -14,6 +14,7 @@ class AssessmentViewModel : ObservableObject {
     @Published var timeSpan : String = "1 Month"
     @Published var muscleGroup : [String] = ["Chest"]
     @Published var state : AssessmentState = .chooseDay
+    @Published var buttonDisable = false
     
     public func nextState(){
         switch state {
@@ -42,6 +43,8 @@ class AssessmentViewModel : ObservableObject {
             state = .chooseDuration
         case .chooseMuscleGroup:
             state = .chooseMonth
+        case .complete:
+            state = .chooseMuscleGroup
         default:
             return
         }
