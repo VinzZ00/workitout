@@ -9,5 +9,4 @@ import Foundation
 
 struct WorkoutPlan {
     var workouts: [Workout] = []
-//    var date: Date = Date.now
 }

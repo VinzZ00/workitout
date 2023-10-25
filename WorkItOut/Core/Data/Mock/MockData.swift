@@ -63,21 +63,21 @@ struct MockData {
         ),
         Exercise(
             name: "Plank",
-            muscleGroup: [.abs],
+            muscleGroup: [.chest],
             equipment: [.noEquipment],
             repetition: 15,
             workoutSet: 3
         ),
         Exercise(
             name: "Situps",
-            muscleGroup: [.abs],
+            muscleGroup: [.chest],
             equipment: [.noEquipment],
             repetition: 20,
             workoutSet: 3
         ),
         Exercise(
             name: "Crunchs",
-            muscleGroup: [.abs],
+            muscleGroup: [.chest],
             equipment: [.noEquipment],
             repetition: 20,
             workoutSet: 4
