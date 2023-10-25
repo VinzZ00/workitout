@@ -26,7 +26,7 @@ struct AssessmentDetailView: View {
                         Spacer()
                     }
                     .tint(.primary)
-                    .background(selection == self.selection ? .orangeBackground : .clear)
+                    .background(selection == self.selection ? .orangePrimary : .clear)
                     .overlay(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(selection == self.selection ? .orangePrimary : .grayBorder, lineWidth: 2)

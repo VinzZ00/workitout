@@ -38,7 +38,7 @@ struct AssessmentDetailMultipleChoiceView: View {
                         Spacer()
                     }
                     .tint(.primary)
-                    .background(self.selectedItems.contains(selection) ? .orangeBackground : .clear)
+                    .background(self.selectedItems.contains(selection) ? .orangePrimary : .clear)
                     .overlay(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(self.selectedItems.contains(selection) ? .orangePrimary : .grayBorder, lineWidth: 2)
