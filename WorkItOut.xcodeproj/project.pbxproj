@@ -31,6 +31,7 @@
 		D8BC2BDB2AE7D0B500E61487 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BC2BDA2AE7D0B500E61487 /* Preview Assets.xcassets */; };
 		D8BC2BDE2AE7D0B500E61487 /* WorkItOut.Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D8BC2BD12AE7D0B400E61487 /* WorkItOut.Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D8BC2BE32AE7D0F900E61487 /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BC82AE7BD9900E61487 /* HeartRateManager.swift */; };
+		D8FBED602AEA6CFE0062CC00 /* WatchConnectivityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FBED5F2AEA6CFE0062CC00 /* WatchConnectivityHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		D8BC2BD72AE7D0B500E61487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8BC2BDA2AE7D0B500E61487 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8BC2BE42AE7F8A100E61487 /* WorkItOut.Watch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WorkItOut.Watch Watch App.entitlements"; sourceTree = "<group>"; };
+		D8FBED5F2AEA6CFE0062CC00 /* WatchConnectivityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		ACFED3812AE2B5B60018CD03 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D8FBED5E2AEA6CE70062CC00 /* Helper */,
 				AC5A9A642AE41138003B0C1F /* Constant */,
 				AC5A9A612AE41138003B0C1F /* Entities */,
 				ACFED3852AE2B5F10018CD03 /* Services */,
@@ -300,6 +303,14 @@
 				D8BC2BDA2AE7D0B500E61487 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8FBED5E2AEA6CE70062CC00 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D8FBED5F2AEA6CFE0062CC00 /* WatchConnectivityHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FBED602AEA6CFE0062CC00 /* WatchConnectivityHelper.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
