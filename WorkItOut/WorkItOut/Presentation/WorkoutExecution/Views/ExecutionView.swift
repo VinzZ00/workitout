@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ExecutionView: View {
-    @EnvironmentObject var vm1: GenerateWorkoutViewModel
-    @StateObject var vm: ExecutionViewModel = ExecutionViewModel()
+//    @EnvironmentObject var vm1: GenerateWorkoutViewModel
+//    @StateObject var vm: ExecutionViewModel = ExecutionViewModel()
     var idx = 0
     
     var body: some View {
