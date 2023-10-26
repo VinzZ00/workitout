@@ -23,8 +23,7 @@ struct WorkItOutApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TimerView(vm: TimerViewModel())
-//            LoadingCircle()
+            LoadingCircle()
 //                .environment(\.managedObjectContext, coreDataManager.container.viewContext)
         }
     }
