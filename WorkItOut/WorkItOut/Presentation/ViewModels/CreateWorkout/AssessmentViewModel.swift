@@ -11,7 +11,7 @@ class AssessmentViewModel : ObservableObject {
     @Published var day : [String] = ["Monday"]
     @Published var timeClock : String = "Morning"
     @Published var durationExercise : String = "15-30 minutes"
-    @Published var timeSpan : String = "1 Month"
+    @Published var timeSpan : String = "One Month"
     @Published var muscleGroup : [String] = ["Chest"]
     @Published var state : AssessmentState = .chooseDay
     @Published var buttonDisable = false
