@@ -24,6 +24,12 @@
 		AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */; };
 		AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */; };
 		AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */; };
+		AC71EEB22AEA556B00C8ED8A /* CameraDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEB12AEA556B00C8ED8A /* CameraDeviceManager.swift */; };
+		AC71EEB72AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEB62AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift */; };
+		AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEB92AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift */; };
+		AC71EEBD2AEA5D4E00C8ED8A /* VisionRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEBC2AEA5D4E00C8ED8A /* VisionRequestManager.swift */; };
+		AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC02AEA62E200C8ED8A /* CameraView.swift */; };
+		AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */; };
 		ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCACC2AE907E4007159F2 /* workoutListCard.swift */; };
 		ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */; };
 		ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */; };
@@ -70,6 +76,12 @@
 		AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConstant.swift; sourceTree = "<group>"; };
 		AC5A9A702AE41FB8003B0C1F /* GetListWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListWorkout.swift; sourceTree = "<group>"; };
 		AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		AC71EEB12AEA556B00C8ED8A /* CameraDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDeviceManager.swift; sourceTree = "<group>"; };
+		AC71EEB62AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBufferOutputDelegate.swift; sourceTree = "<group>"; };
+		AC71EEB92AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewUIKit.swift; sourceTree = "<group>"; };
+		AC71EEBC2AEA5D4E00C8ED8A /* VisionRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRequestManager.swift; sourceTree = "<group>"; };
+		AC71EEC02AEA62E200C8ED8A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPoint.swift; sourceTree = "<group>"; };
 		ACABCACC2AE907E4007159F2 /* workoutListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutListCard.swift; sourceTree = "<group>"; };
 		ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAssessmentResult.swift; sourceTree = "<group>"; };
 		ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentResultView.swift; sourceTree = "<group>"; };
@@ -235,6 +247,7 @@
 		AC5A9A772AE42D30003B0C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC71EEBE2AEA62B200C8ED8A /* CameraView */,
 				ACAE03BE2AE91C3D00878741 /* AssessmentResult */,
 				D8BC2BE52AE8002200E61487 /* CreateWorkout */,
 				D862DB682AE28E5A0014F2FC /* ContentView.swift */,
@@ -248,6 +261,49 @@
 				AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AC71EEB02AEA555500C8ED8A /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				AC71EEB12AEA556B00C8ED8A /* CameraDeviceManager.swift */,
+				AC71EEB62AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		AC71EEB82AEA5B2300C8ED8A /* UIKitRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				AC71EEB92AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift */,
+			);
+			path = UIKitRepresentable;
+			sourceTree = "<group>";
+		};
+		AC71EEBB2AEA5D3A00C8ED8A /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+				AC71EEBC2AEA5D4E00C8ED8A /* VisionRequestManager.swift */,
+			);
+			path = Vision;
+			sourceTree = "<group>";
+		};
+		AC71EEBE2AEA62B200C8ED8A /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				AC71EEBF2AEA62D100C8ED8A /* Components */,
+				AC71EEC02AEA62E200C8ED8A /* CameraView.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		AC71EEBF2AEA62D100C8ED8A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AC71EEB82AEA5B2300C8ED8A /* UIKitRepresentable */,
+				AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		AC7391AE2AE7BF150012BC1B /* Firebase */ = {
@@ -352,6 +408,8 @@
 		ACFED3852AE2B5F10018CD03 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AC71EEBB2AEA5D3A00C8ED8A /* Vision */,
+				AC71EEB02AEA555500C8ED8A /* AVFoundation */,
 				AC5A9A782AE52D93003B0C1F /* CoreData */,
 				AC5A9A512AE3BC9D003B0C1F /* FireStore */,
 			);
@@ -535,10 +593,13 @@
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
+				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
 				D8BC2BF22AE816F000E61487 /* TimeClock.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */,
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
+				AC71EEB22AEA556B00C8ED8A /* CameraDeviceManager.swift in Sources */,
+				AC71EEB72AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift in Sources */,
 				6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */,
 				ACBFBD9F2AE6775A00109D94 /* FetchWorkoutPlan.swift in Sources */,
 				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,
@@ -550,11 +611,13 @@
 				ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */,
 				6C8D5D102AE6618E00A2986D /* Equipment.swift in Sources */,
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
+				AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
 				6C8D5CFC2AE660B200A2986D /* WorkoutPlan.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Workout.swift in Sources */,
 				D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */,
 				D8BC2BFA2AE81EA200E61487 /* Months.swift in Sources */,
+				AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */,
 				D8FBED562AE918200062CC00 /* CompleteView.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				D8BC2BEE2AE80F1800E61487 /* AssessmentViewModel.swift in Sources */,
@@ -564,6 +627,7 @@
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
 				D8BC2BF82AE81E0400E61487 /* Duration.swift in Sources */,
+				AC71EEBD2AEA5D4E00C8ED8A /* VisionRequestManager.swift in Sources */,
 				6C8D5D132AE6618E00A2986D /* MuscleGroup.swift in Sources */,
 				ACBFBDA42AE67CEE00109D94 /* UpdateWorkoutPlan.swift in Sources */,
 				D8BC2BF42AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift in Sources */,

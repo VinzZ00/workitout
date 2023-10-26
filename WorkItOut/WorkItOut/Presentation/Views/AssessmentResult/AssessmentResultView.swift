@@ -14,7 +14,7 @@ struct AssessmentResultView: View {
     {
         self._workoutPlan = workoutPlan;
         let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
+//        appearance.configureWithTransparentBackground()
         //        appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
         appearance.backgroundColor = .orangePrimary
         appearance.titleTextAttributes = [
