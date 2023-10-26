@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		56D1BC912AE8B87C002DBDA0 /* ExecutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC902AE8B87C002DBDA0 /* ExecutionViewModel.swift */; };
+		56D1BC932AE8F16F002DBDA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56D1BC922AE8F16F002DBDA0 /* GoogleService-Info.plist */; };
+		56D1BC982AE8F299002DBDA0 /* ExecutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC972AE8F299002DBDA0 /* ExecutionView.swift */; };
 		6C6F34C92AE789130059E74D /* EditExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34C82AE789130059E74D /* EditExerciseView.swift */; };
 		6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */; };
 		6C6F34CE2AE7BADE0059E74D /* EditExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CD2AE7BADE0059E74D /* EditExerciseViewModel.swift */; };
@@ -24,7 +26,6 @@
 		6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */; };
 		6C8D5D132AE6618E00A2986D /* MuscleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0F2AE6618E00A2986D /* MuscleGroup.swift */; };
 		6C8D5D162AE6619700A2986D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D152AE6619700A2986D /* MockData.swift */; };
-		AC4246EC2AE8347D00B0166D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC4246EB2AE8347D00B0166D /* GoogleService-Info.plist */; };
 		AC5A9A502AE3AC5E003B0C1F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A4F2AE3AC5E003B0C1F /* FirebaseFirestore */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A5B2AE3E614003B0C1F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A5A2AE3E614003B0C1F /* FirebaseFirestoreSwift */; };
@@ -49,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		56D1BC902AE8B87C002DBDA0 /* ExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionViewModel.swift; sourceTree = "<group>"; };
+		56D1BC922AE8F16F002DBDA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56D1BC972AE8F299002DBDA0 /* ExecutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionView.swift; sourceTree = "<group>"; };
 		6C6F34C82AE789130059E74D /* EditExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExerciseView.swift; sourceTree = "<group>"; };
 		6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		6C6F34CD2AE7BADE0059E74D /* EditExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExerciseViewModel.swift; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutState.swift; sourceTree = "<group>"; };
 		6C8D5D0F2AE6618E00A2986D /* MuscleGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuscleGroup.swift; sourceTree = "<group>"; };
 		6C8D5D152AE6619700A2986D /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		AC4246EB2AE8347D00B0166D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		AC5A9A622AE41138003B0C1F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		AC5A9A632AE41138003B0C1F /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				56D1BC8F2AE8B860002DBDA0 /* ViewModels */,
+				56D1BC942AE8F273002DBDA0 /* Views */,
 			);
 			path = WorkoutExecution;
 			sourceTree = "<group>";
@@ -114,6 +117,14 @@
 				56D1BC902AE8B87C002DBDA0 /* ExecutionViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		56D1BC942AE8F273002DBDA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				56D1BC972AE8F299002DBDA0 /* ExecutionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6C6F34CA2AE7B9390059E74D /* GlobalComponent */ = {
@@ -348,7 +359,7 @@
 		ACFED3822AE2B5C20018CD03 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AC4246EB2AE8347D00B0166D /* GoogleService-Info.plist */,
+				56D1BC922AE8F16F002DBDA0 /* GoogleService-Info.plist */,
 				D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */,
 				ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */,
 			);
@@ -473,8 +484,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D862DB6E2AE28E5C0014F2FC /* Preview Assets.xcassets in Resources */,
+				56D1BC932AE8F16F002DBDA0 /* GoogleService-Info.plist in Resources */,
 				D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */,
-				AC4246EC2AE8347D00B0166D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +517,7 @@
 				6C8D5D032AE6614C00A2986D /* WorkoutDayView.swift in Sources */,
 				6C8D5CFC2AE660B200A2986D /* WorkoutPlan.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Workout.swift in Sources */,
+				56D1BC982AE8F299002DBDA0 /* ExecutionView.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				6C8D5D052AE6614C00A2986D /* GenerateWorkoutView.swift in Sources */,
 				6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */,

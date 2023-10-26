@@ -8,21 +8,42 @@
 import Foundation
 
 class ExecutionViewModel: ObservableObject {
-    var workoutPlan: WorkoutPlan = MockData.mockWorkoutPlan
-    @Published var workoutToday: [Workout] = []
+    @Published var workoutPlan: WorkoutPlan = MockData.mockWorkoutPlan
+    @Published var workoutWeekday: [Day : Workout] = [:]
+    @Published var workoutToday = Workout()
     @Published var index = -1
+    @Published var exercise = ""
+//    @Published var day
 //    var exercise: Exercise
     
-//    func callWorkout() -> {
-//        index += 1
-//        return workoutToday.exercise[index]
+//    init() {
+//        getWorkout()
 //    }
+//    
+    func callWorkout(var idx: Int)  {
+        var exercises = workoutToday.exercises[idx]
+//        for i in 0...workoutToday.exercises.count {
+//            exercise = workoutToday.exercises[i].name
+//        }
+    }
     
-    func getWorkout(){
+    func getWorkout(workoutWeekday: [Day : Workout]){
+        var day = Date()
         for workout in workoutPlan.workouts {
-            if Calendar.current.isDate(Date(), equalTo: workout.date, toGranularity: .weekday) {
-                self.workoutToday.append(workout)
+            if Calendar.current.isDate(day, equalTo: workout.date, toGranularity: .day){
+                self.workoutToday = workout
+                break
             }
         }
+        
+//        for day in Day.allCases {
+//            for workout in workoutPlan.workouts {
+//                if Calendar.current.isDate(day.getWeekday(), equalTo: workout.date, toGranularity: .day){
+//                    print("match")
+//                    self.workoutWeekday.updateValue(workout, forKey: day)
+//                }
+//            }
+//           
+//        }
     }
 }
