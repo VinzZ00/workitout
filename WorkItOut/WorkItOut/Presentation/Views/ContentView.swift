@@ -14,10 +14,7 @@ struct ContentView: View {
     var db = FireStoreManager.shared
     
     var body: some View {
-        VStack {
-            GenerateWorkoutView()
-        }
-        .padding()
+        AssessmentView()
     }
 }
 

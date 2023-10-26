@@ -23,8 +23,8 @@ struct WorkItOutApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoadingCircle()
-//                .environment(\.managedObjectContext, coreDataManager.container.viewContext)
+            AssessmentView()
+                .environment(\.managedObjectContext, coreDataManager.container.viewContext)
         }
     }
 }

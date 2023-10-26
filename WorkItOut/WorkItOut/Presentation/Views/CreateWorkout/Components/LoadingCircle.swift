@@ -26,13 +26,11 @@ struct LoadingCircle: View {
                     .foregroundStyle(.orangePrimary)
                     .frame(width: 200)
                     .rotationEffect(buttonPressed ? .degrees(-25) : .degrees(-385))
-                    .animation(self.buttonPressed ? foreverAnimation : .default)
-                    
+                    .animation(buttonPressed ? foreverAnimation : .default)
             }
-            Button("Start Animation"){
-                buttonPressed.toggle()
-            }
-            .padding(.top, 10)
+        }
+        .onAppear{
+            buttonPressed = true
         }
     }
 }
