@@ -15,7 +15,7 @@ class CameraDeviceManager {
     var input : AVCaptureDeviceInput!
     var output : AVCaptureVideoDataOutput!
     
-    func setup(outputBufferDelegate : sampleBufferOutputDelegate) {
+    func setup(outputBufferDelegate : SampleBufferOutputDelegate) {
         guard let device = AVCaptureDevice.default(.builtInWideAngleCamera,
                                                    for : .video,
                                                    position: .front) else {
@@ -33,16 +33,6 @@ class CameraDeviceManager {
         IOSetup()
         
         
-    }
-    
-    func startRunning() {
-        Task.detached {
-            self.session.startRunning()
-        }
-    }
-    
-    func stopRunning() {
-        self.session.stopRunning()
     }
     
     func IOSetup() {

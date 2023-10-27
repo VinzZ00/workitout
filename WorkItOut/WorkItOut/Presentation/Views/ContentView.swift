@@ -10,11 +10,11 @@ import SwiftUI
 //FirestoreDummy
 
 struct ContentView: View {
-    @State var testFireStore : String = ""
-    var db = FireStoreManager.shared
+//    @State var testFireStore : String = ""
+//    var db = FireStoreManager.shared
     
     var body: some View {
-        AssessmentView()
+        CameraView();
     }
 }
 

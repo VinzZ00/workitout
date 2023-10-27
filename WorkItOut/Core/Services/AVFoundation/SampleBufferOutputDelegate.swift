@@ -12,16 +12,10 @@ import CoreImage
 
 
 
-class sampleBufferOutputDelegate : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
+class SampleBufferOutputDelegate : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate{
     
-    var visionRequest : VNRequest;
-    var videoOrientation : AVCaptureVideoOrientation = .portrait
-    
-    init(visionRequest : VNRequest) {
-        self.visionRequest = visionRequest
-    }
-    
-    
+    var visionRequest : VNDetectHumanBodyPoseRequest!
+
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
@@ -29,7 +23,7 @@ class sampleBufferOutputDelegate : NSObject, AVCaptureVideoDataOutputSampleBuffe
         }
         
         let outputConnection = output.connection(with: .video)
-        outputConnection?.videoOrientation = videoOrientation
+        outputConnection?.videoOrientation = .portrait
         
         print("Output Connection: \(String(describing: outputConnection?.videoOrientation))")
         
@@ -40,7 +34,7 @@ class sampleBufferOutputDelegate : NSObject, AVCaptureVideoDataOutputSampleBuffe
         do {
             try requestHandler.perform([self.visionRequest]);
         } catch {
-            fatalError("Error di bagian capture output funciton dari vision request")
+            fatalError("Error di bagian capture output functon dari vision request")
         }
         
     }

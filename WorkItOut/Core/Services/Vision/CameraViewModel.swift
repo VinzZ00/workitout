@@ -7,12 +7,16 @@
 
 import Foundation
 import Vision
+import Combine
 import UIKit
 
-class VisionRequestManager : ObservableObject {
+class CameraViewModel : ObservableObject {
     
-    @Published var points : [VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)] = [:]
-    
+    var points : CurrentValueSubject<[VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)], Never> = CurrentValueSubject<[VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)], Never>([ : ])
+    var bag : [AnyCancellable] = [];
+//    @Published var points : [VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)] = [:]
+    @Published var visionRequest : VNDetectHumanBodyPoseRequest!
+
     var keyPoints : [VNHumanBodyPoseObservation.JointName] =
     [
             .leftAnkle,
@@ -30,8 +34,8 @@ class VisionRequestManager : ObservableObject {
             
     ]
     
-    func humanBodyRequest(previewSize : CGSize) -> VNRequest {
-        let humanBodyRequest : VNDetectHumanBodyPoseRequest = VNDetectHumanBodyPoseRequest { req, err in
+    @MainActor func humanBodyRequest(previewSize : CGSize) {
+        self.visionRequest = VNDetectHumanBodyPoseRequest { req, err in
             if err != nil {
                 fatalError(" Error Dibagian completion Hander VNRequestNya, Error : \(err!.localizedDescription)")
             }
@@ -57,7 +61,7 @@ class VisionRequestManager : ObservableObject {
                             if realPoint.y != 0 && realPoint.x != 0 {
 //                                print("Normalized Keypoint : \(realPoint)")
                                 points[kp] = (realPoint, CGFloat(recPoint.confidence))
-                                self.points = points
+                                self.points.send(points) 
                             }
                         }
                     }
@@ -66,7 +70,7 @@ class VisionRequestManager : ObservableObject {
                 }
             }
         }
-        return humanBodyRequest
+//        return humanBodyRequest
     }
     
     func normalizePoint(recognizedPoint : VNRecognizedPoint, previewSize : CGSize) -> CGPoint {

@@ -6,30 +6,39 @@
 //
 
 import SwiftUI
+import Vision
+import Combine
 
 struct CameraView: View {
     
-    @StateObject var visionRequestManager = VisionRequestManager()
-    var cameraDeviceManager : CameraDeviceManager = CameraDeviceManager()
+    @StateObject var viewModel = CameraViewModel()
+    @State var points : [VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)] = [:]
     
+    
+    
+    var cameraDeviceManager : CameraDeviceManager = CameraDeviceManager()
+    var outputDelegate = SampleBufferOutputDelegate()
     
     var body: some View {
         ZStack{
             GeometryReader { prox in
                 CameraPreviewUIKit(cameraManager: self.cameraDeviceManager, size: prox.size)
                     .onAppear {
-                        let vnreq = visionRequestManager.humanBodyRequest(previewSize: prox.size)
-                        
-                        var cameraDele = sampleBufferOutputDelegate(visionRequest: vnreq)
-                        
-                        self.cameraDeviceManager.setup(outputBufferDelegate: cameraDele)
+                        self.viewModel.humanBodyRequest(previewSize: prox.size)
+                        self.outputDelegate.visionRequest = viewModel.visionRequest
+                        cameraDeviceManager.setup(outputBufferDelegate: outputDelegate)
                     }
+                
+            }.ignoresSafeArea()
+            
+            if points.count > 1 {
+                BodyPointCircle(points: points.values.map { $0.0 })
             }
             
-            if visionRequestManager.points.count > 1 {
-                BodyPointCircle(points: visionRequestManager.points.values.map { $0.0 })
-            }
-            
+        }.onAppear{
+            viewModel.points.sink { pts in
+                self.points = pts
+            }.store(in: &viewModel.bag)
         }
     }
 }
