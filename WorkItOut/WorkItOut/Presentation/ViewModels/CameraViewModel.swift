@@ -12,6 +12,9 @@ import UIKit
 
 class CameraViewModel : ObservableObject {
     
+    var lLong : CurrentValueSubject<CGFloat, Never> = CurrentValueSubject<CGFloat, Never>(0);
+    var rLong : CurrentValueSubject<CGFloat, Never> = CurrentValueSubject<CGFloat, Never>(0);
+    
     var points : CurrentValueSubject<[VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)], Never> = CurrentValueSubject<[VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)], Never>([ : ])
     var bag : [AnyCancellable] = [];
 //    @Published var points : [VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)] = [:]
@@ -19,18 +22,13 @@ class CameraViewModel : ObservableObject {
 
     var keyPoints : [VNHumanBodyPoseObservation.JointName] =
     [
-            .leftAnkle,
-            .leftKnee,
-            .leftHip,
-            .leftShoulder,
-            .leftElbow,
-            .leftWrist,
-            .rightAnkle,
-            .rightKnee,
-            .rightHip,
-            .rightShoulder,
-            .rightElbow,
-            .rightWrist
+            
+        .rightAnkle,
+        .rightKnee,
+        .rightHip,
+        .leftHip,
+        .leftKnee,
+        .leftAnkle
             
     ]
     
@@ -46,6 +44,7 @@ class CameraViewModel : ObservableObject {
             
             var points : [VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)] = [:]
             
+            var jointPoint : [VNHumanBodyPoseObservation.JointName : CGPoint] = [:]
             
             self.keyPoints.forEach {  kp in
                 do {
@@ -62,6 +61,24 @@ class CameraViewModel : ObservableObject {
 //                                print("Normalized Keypoint : \(realPoint)")
                                 points[kp] = (realPoint, CGFloat(recPoint.confidence))
                                 self.points.send(points) 
+                                
+                                guard let rHip = points[.rightHip]?.0.y,
+                                      let rKnee = points[.rightKnee]?.0.y,
+                                      let rAnkle = points[.rightAnkle]?.0.y else {
+                                    print("right side is not complete")
+                                    return
+                                }
+                                
+                                self.rLong.send((rAnkle - rKnee) + (rKnee - rHip))
+                                
+                                guard let lHip = points[.leftHip]?.0.y,
+                                      let lKnee = points[.leftKnee]?.0.y,
+                                      let lAnkle = points[.leftAnkle]?.0.y else {
+                                    print("left side is not complete")
+                                    return
+                                }
+                                
+                                self.lLong.send((lAnkle - lKnee) + (lKnee - lHip))
                             }
                         }
                     }

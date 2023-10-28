@@ -13,7 +13,8 @@ struct CameraView: View {
     
     @StateObject var viewModel = CameraViewModel()
     @State var points : [VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)] = [:]
-    
+    @State var lLong : CGFloat = 0
+    @State var rLong : CGFloat = 0
     
     
     var cameraDeviceManager : CameraDeviceManager = CameraDeviceManager()
@@ -38,6 +39,14 @@ struct CameraView: View {
         }.onAppear{
             viewModel.points.sink { pts in
                 self.points = pts
+            }.store(in: &viewModel.bag)
+            
+            viewModel.lLong.sink { pts in
+                self.lLong = pts
+            }.store(in: &viewModel.bag)
+            
+            viewModel.rLong.sink { pts in
+                self.rLong = pts
             }.store(in: &viewModel.bag)
         }
     }

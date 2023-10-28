@@ -306,14 +306,6 @@
 			path = UIKitRepresentable;
 			sourceTree = "<group>";
 		};
-		AC71EEBB2AEA5D3A00C8ED8A /* Vision */ = {
-			isa = PBXGroup;
-			children = (
-				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
-			);
-			path = Vision;
-			sourceTree = "<group>";
-		};
 		AC71EEBE2AEA62B200C8ED8A /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,7 +435,6 @@
 		ACFED3852AE2B5F10018CD03 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AC71EEBB2AEA5D3A00C8ED8A /* Vision */,
 				AC71EEB02AEA555500C8ED8A /* AVFoundation */,
 				AC5A9A782AE52D93003B0C1F /* CoreData */,
 				AC5A9A512AE3BC9D003B0C1F /* FireStore */,
@@ -511,6 +502,7 @@
 		D8BC2BEC2AE80F0E00E61487 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
 				56D1BC9E2AEA5653002DBDA0 /* Execution */,
 				D8BC2BEF2AE80F1B00E61487 /* CreateWorkout */,
 			);
@@ -645,7 +637,6 @@
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */,
-				6C6F34D32AE7C0E00059E74D /* Array.swift in Sources */,
 				ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */,
 				6C8D5D102AE6618E00A2986D /* Equipment.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
