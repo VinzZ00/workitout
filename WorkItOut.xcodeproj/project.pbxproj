@@ -10,6 +10,8 @@
 		56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */; };
 		56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */; };
 		56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */; };
+		56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */; };
+		56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */; };
 		6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */; };
 		6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */; };
 		6C8D5CFC2AE660B200A2986D /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5CFB2AE660B200A2986D /* WorkoutPlan.swift */; };
@@ -69,6 +71,8 @@
 		56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		56D1BCA42AEA5BAF002DBDA0 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderComponent.swift; sourceTree = "<group>"; };
 		6C8D5CFB2AE660B200A2986D /* WorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlan.swift; sourceTree = "<group>"; };
@@ -158,6 +162,22 @@
 				56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */,
 			);
 			path = Execution;
+			sourceTree = "<group>";
+		};
+		56D1BCAF2AEE81DC002DBDA0 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		56D1BCB02AEE81F4002DBDA0 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		6C6F34CA2AE7B9390059E74D /* GlobalComponent */ = {
@@ -272,6 +292,7 @@
 		AC5A9A772AE42D30003B0C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56D1BCAF2AEE81DC002DBDA0 /* Notification */,
 				56D1BCA82AEA6BD1002DBDA0 /* Execution */,
 				AC71EEBE2AEA62B200C8ED8A /* CameraView */,
 				ACAE03BE2AE91C3D00878741 /* AssessmentResult */,
@@ -502,6 +523,7 @@
 		D8BC2BEC2AE80F0E00E61487 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				56D1BCB02AEE81F4002DBDA0 /* Notification */,
 				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
 				56D1BC9E2AEA5653002DBDA0 /* Execution */,
 				D8BC2BEF2AE80F1B00E61487 /* CreateWorkout */,
@@ -633,6 +655,7 @@
 				ACBFBD9F2AE6775A00109D94 /* FetchWorkoutPlan.swift in Sources */,
 				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,
 				ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */,
+				56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */,
 				ACBFBDA22AE67B7A00109D94 /* AddWorkoutPlan.swift in Sources */,
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
@@ -658,6 +681,7 @@
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
 				D8BC2BF82AE81E0400E61487 /* Duration.swift in Sources */,
+				56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */,
 				AC71EEBD2AEA5D4E00C8ED8A /* CameraViewModel.swift in Sources */,
 				6C8D5D132AE6618E00A2986D /* MuscleGroup.swift in Sources */,
 				56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */,
@@ -801,7 +825,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 382VG5FRJK;
+				DEVELOPMENT_TEAM = 7ZC94KFN26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -830,7 +854,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 382VG5FRJK;
+				DEVELOPMENT_TEAM = 7ZC94KFN26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
