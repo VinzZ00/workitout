@@ -31,7 +31,11 @@
 		D8BC2BDB2AE7D0B500E61487 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BC2BDA2AE7D0B500E61487 /* Preview Assets.xcassets */; };
 		D8BC2BDE2AE7D0B500E61487 /* WorkItOut.Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D8BC2BD12AE7D0B400E61487 /* WorkItOut.Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D8BC2BE32AE7D0F900E61487 /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BC82AE7BD9900E61487 /* HeartRateManager.swift */; };
-		D8FBED602AEA6CFE0062CC00 /* WatchConnectivityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FBED5F2AEA6CFE0062CC00 /* WatchConnectivityHelper.swift */; };
+		D8C01E962AEB703A001777CE /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C01E952AEB703A001777CE /* HeartRateView.swift */; };
+		D8C01E9A2AEB705A001777CE /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C01E992AEB705A001777CE /* WatchViewModel.swift */; };
+		D8C01E9D2AEB7543001777CE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C01E9C2AEB7543001777CE /* ViewModel.swift */; };
+		D8C01EA12AEBC162001777CE /* WatchConnectivityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C01EA02AEBC162001777CE /* WatchConnectivityConstants.swift */; };
+		D8C01EA22AEBC162001777CE /* WatchConnectivityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C01EA02AEBC162001777CE /* WatchConnectivityConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +87,10 @@
 		D8BC2BD72AE7D0B500E61487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8BC2BDA2AE7D0B500E61487 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8BC2BE42AE7F8A100E61487 /* WorkItOut.Watch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WorkItOut.Watch Watch App.entitlements"; sourceTree = "<group>"; };
-		D8FBED5F2AEA6CFE0062CC00 /* WatchConnectivityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityHelper.swift; sourceTree = "<group>"; };
+		D8C01E952AEB703A001777CE /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		D8C01E992AEB705A001777CE /* WatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewModel.swift; sourceTree = "<group>"; };
+		D8C01E9C2AEB7543001777CE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D8C01EA02AEBC162001777CE /* WatchConnectivityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +176,7 @@
 		AC5A9A762AE42D24003B0C1F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D8C01E972AEB704B001777CE /* ViewModels */,
 				AC5A9A772AE42D30003B0C1F /* Views */,
 			);
 			path = Presentation;
@@ -177,6 +185,7 @@
 		AC5A9A772AE42D30003B0C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D8C01E942AEB7026001777CE /* Watch */,
 				D862DB682AE28E5A0014F2FC /* ContentView.swift */,
 			);
 			path = Views;
@@ -241,6 +250,7 @@
 		D862DB5A2AE28E5A0014F2FC = {
 			isa = PBXGroup;
 			children = (
+				D8C01E9E2AEBC150001777CE /* Shared */,
 				D862DB652AE28E5A0014F2FC /* WorkItOut */,
 				D8BC2BD22AE7D0B400E61487 /* WorkItOut.Watch Watch App */,
 				D862DB642AE28E5A0014F2FC /* Products */,
@@ -291,6 +301,7 @@
 				D8BC2BC72AE7BD8F00E61487 /* HeartRate */,
 				D8BC2BD32AE7D0B400E61487 /* WorkItOut_WatchApp.swift */,
 				D8BC2BD52AE7D0B400E61487 /* ContentView.swift */,
+				D8C01E9C2AEB7543001777CE /* ViewModel.swift */,
 				D8BC2BD72AE7D0B500E61487 /* Assets.xcassets */,
 				D8BC2BD92AE7D0B500E61487 /* Preview Content */,
 			);
@@ -305,10 +316,49 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D8C01E942AEB7026001777CE /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				D8C01E952AEB703A001777CE /* HeartRateView.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		D8C01E972AEB704B001777CE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D8C01E982AEB7051001777CE /* Watch */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D8C01E982AEB7051001777CE /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				D8C01E992AEB705A001777CE /* WatchViewModel.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		D8C01E9E2AEBC150001777CE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D8C01E9F2AEBC157001777CE /* Constants */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D8C01E9F2AEBC157001777CE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D8C01EA02AEBC162001777CE /* WatchConnectivityConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		D8FBED5E2AEA6CE70062CC00 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				D8FBED5F2AEA6CFE0062CC00 /* WatchConnectivityHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -423,11 +473,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8FBED602AEA6CFE0062CC00 /* WatchConnectivityHelper.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
+				D8C01E9A2AEB705A001777CE /* WatchViewModel.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */,
+				D8C01EA12AEBC162001777CE /* WatchConnectivityConstants.swift in Sources */,
+				D8C01E962AEB703A001777CE /* HeartRateView.swift in Sources */,
 				D8BC2BC92AE7BD9900E61487 /* HeartRateManager.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
@@ -444,6 +496,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C01EA22AEBC162001777CE /* WatchConnectivityConstants.swift in Sources */,
+				D8C01E9D2AEB7543001777CE /* ViewModel.swift in Sources */,
 				D8BC2BD62AE7D0B400E61487 /* ContentView.swift in Sources */,
 				D8BC2BE32AE7D0F900E61487 /* HeartRateManager.swift in Sources */,
 				D8BC2BD42AE7D0B400E61487 /* WorkItOut_WatchApp.swift in Sources */,

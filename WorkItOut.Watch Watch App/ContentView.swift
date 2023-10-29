@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var heartRateManager = HeartRateManager()
+    @StateObject var vm = ViewModel()
     var body: some View {
         VStack{
-            Text("\(heartRateManager.heartRate)")
+            Text("\(vm.heartRateManager.heartRate)")
+            HStack{
+                Button {
+                    vm.tappedPauseButton()
+                } label: {
+                    Image(systemName: vm.pause ? "play.fill" : "pause.fill")
+                }
+                Button{
+                    vm.skipButton()
+                } label: {
+                    Image(systemName: "chevron.right.to.line")
+                }
+            }
         }
+        .onChange(of: vm.heartRateManager.heartRate, { _, newValue in
+            vm.sendDataToPhone(key: WatchConnectivityConstants.heartRate, message: String(newValue))
+        })
         .onAppear {
-            heartRateManager.authorization()
+            vm.heartRateManager.authorization()
         }
     }
 }
