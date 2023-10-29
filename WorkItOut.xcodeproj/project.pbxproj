@@ -152,7 +152,6 @@
 			children = (
 				56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */,
 				56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */,
-				56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */,
 			);
 			path = Execution;
 			sourceTree = "<group>";
@@ -161,9 +160,24 @@
 			isa = PBXGroup;
 			children = (
 				56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */,
-				56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */,
 			);
 			path = Execution;
+			sourceTree = "<group>";
+		};
+		56D1BCAF2AEE81DC002DBDA0 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		56D1BCB02AEE81F4002DBDA0 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		6C6F34CA2AE7B9390059E74D /* GlobalComponent */ = {
@@ -278,6 +292,7 @@
 		AC5A9A772AE42D30003B0C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56D1BCAF2AEE81DC002DBDA0 /* Notification */,
 				56D1BCA82AEA6BD1002DBDA0 /* Execution */,
 				AC71EEBE2AEA62B200C8ED8A /* CameraView */,
 				ACAE03BE2AE91C3D00878741 /* AssessmentResult */,
@@ -508,6 +523,7 @@
 		D8BC2BEC2AE80F0E00E61487 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				56D1BCB02AEE81F4002DBDA0 /* Notification */,
 				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
 				56D1BC9E2AEA5653002DBDA0 /* Execution */,
 				D8BC2BEF2AE80F1B00E61487 /* CreateWorkout */,
