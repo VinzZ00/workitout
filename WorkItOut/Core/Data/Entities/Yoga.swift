@@ -12,17 +12,18 @@ import Foundation
 //    case finished
 //}
 
-struct Workout: Identifiable, Hashable {
-    var id: UUID = UUID()
-    var exercises : [Exercise] = []
-    var workoutState : WorkoutState = .onProgress
-    var date : Date = Date.now
+struct Yoga: Identifiable, Hashable {
+    let id: UUID = UUID()
+    var poses : [Pose]
+    var date : Date
+    var estimationDuration : DateInterval
+    var yogaState : YogaState
     
     func getDesiredDate(desired : Set<Calendar.Component>) -> DateComponents {
         return Calendar.current.dateComponents(desired, from: self.date)
     }
     
-    static func == (lhs: Workout, rhs: Workout) -> Bool {
+    static func == (lhs: Yoga, rhs: Yoga) -> Bool {
         return lhs.id == rhs.id
     }
     

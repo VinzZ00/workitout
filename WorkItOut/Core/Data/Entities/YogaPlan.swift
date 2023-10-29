@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct WorkoutPlan : Identifiable {
-    var id: UUID = UUID()
-    var workouts: [Workout] = []
+struct YogaPlan : Identifiable {
+    let id: UUID = UUID()
+    var name: String
+    var yogas: [Yoga] = []
 }

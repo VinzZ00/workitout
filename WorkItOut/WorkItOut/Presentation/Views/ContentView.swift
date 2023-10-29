@@ -14,7 +14,8 @@ struct ContentView: View {
 //    var db = FireStoreManager.shared
     
     var body: some View {
-        CameraView();
+//        CameraView();
+        AssessmentView()
     }
 }
 

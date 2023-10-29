@@ -31,10 +31,10 @@ struct CoreDataDataSource : CoreDataDataSourceDelegate {
         }
     }
     
-    func updateToCoreData(workout : Workout, context : NSManagedObjectContext) async throws {
+    func updateToCoreData(workout : Yoga, context : NSManagedObjectContext) async throws {
         let workoutRec = WorkoutNSObject(context: context)
-        workoutRec.workoutState = workout.workoutState == .finished ? true : false
-        workoutRec.exercises = NSSet(array: workout.exercises)
+        workoutRec.workoutState = workout.yogaState == .completed ? true : false
+        workoutRec.exercises = NSSet(array: workout.poses)
         
         do {
             try context.save()

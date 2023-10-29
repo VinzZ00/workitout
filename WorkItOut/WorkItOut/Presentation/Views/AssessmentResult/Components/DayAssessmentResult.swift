@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DayAssessment: View {
     
-    var exercises : [Exercise]
+    var exercises : [Pose]
     var day : Int
     var bodyPart : String
     var weekday : String
@@ -18,7 +18,6 @@ struct DayAssessment: View {
     
     var body: some View {
         VStack (){
-            
             HStack {
                 VStack(alignment: .leading) {
                     Text("Day \(day) - \(bodyPart)")
@@ -38,18 +37,18 @@ struct DayAssessment: View {
             }.padding(.horizontal, 17)
             
             ForEach(exercises) { exercise in
-                workoutListCard(imageAssetName: exercise.name, workoutName: exercise.name, muscle: (exercise.muscleGroup.map{ return $0.rawValue}), manySet: exercise.workoutSet, manyReps: exercise.repetition)
+                workoutListCard(imageAssetName: "Asset Name", workoutName: "Name", muscle: ["Something"], manySet: 0, manyReps: 0)
             }
         }
     }
 }
 
-#Preview {
-    DayAssessment(exercises: [
-        Exercise(name: "PushUP", muscleGroup: [.arm, MuscleGroup.back, .core], equipment: [.dipbar], repetition: 12, workoutSet: 4),
-        Exercise(name: "PushUP", muscleGroup: [.arm, MuscleGroup.back, .core], equipment: [.dipbar], repetition: 12, workoutSet: 4),
-        Exercise(name: "PushUP", muscleGroup: [.arm, MuscleGroup.back, .core], equipment: [.dipbar], repetition: 12, workoutSet: 4),
-    ],day: 1, bodyPart: "Upper Body", weekday: "Monday", timeOfDay: "Noon") {
-        print("clicked")
-    }
-}
+//#Preview {
+//    DayAssessment(exercises: [
+//        Pose(name: "PushUP", muscleGroup: [.arm, MuscleGroup.back, .core], equipment: [.dipbar], repetition: 12, workoutSet: 4),
+//        Pose(name: "PushUP", muscleGroup: [.arm, MuscleGroup.back, .core], equipment: [.dipbar], repetition: 12, workoutSet: 4),
+//        Pose(name: "PushUP", muscleGroup: [.arm, MuscleGroup.back, .core], equipment: [.dipbar], repetition: 12, workoutSet: 4),
+//    ],day: 1, bodyPart: "Upper Body", weekday: "Monday", timeOfDay: "Noon") {
+//        print("clicked")
+//    }
+//}

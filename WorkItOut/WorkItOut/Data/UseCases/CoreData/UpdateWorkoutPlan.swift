@@ -11,7 +11,7 @@ import CoreData
 struct UpdateWorkoutUseCase {
     var repository = Repository()
     
-    func call(workout : Workout, context : NSManagedObjectContext) async {
+    func call(workout : Yoga, context : NSManagedObjectContext) async {
         do {
            try await repository.coreData.updateToCoreData(workout: workout, context: context)
         } catch let err {

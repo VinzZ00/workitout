@@ -11,10 +11,10 @@ import CoreData
 struct AddWorkoutUseCase {
     var repository : Repository = Repository()
     
-    func call(workoutPlan : WorkoutPlan, context : NSManagedObjectContext) async {
+    func call(yogaPlan : YogaPlan, context : NSManagedObjectContext) async {
         
         let nsWorkoutPlan = WorkoutPlanNSObject(context: context)
-        nsWorkoutPlan.workouts = NSSet(array: workoutPlan.workouts)
+        nsWorkoutPlan.workouts = NSSet(array: yogaPlan.yogas)
         
         
         do {

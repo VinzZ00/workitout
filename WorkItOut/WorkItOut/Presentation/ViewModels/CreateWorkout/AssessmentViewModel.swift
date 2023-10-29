@@ -12,9 +12,14 @@ class AssessmentViewModel : ObservableObject {
     @Published var timeClock : String = "Morning"
     @Published var durationExercise : String = "15-30 minutes"
     @Published var timeSpan : String = "One Month"
-    @Published var muscleGroup : [String] = ["Chest"]
+    @Published var experience: String = "None at all"
+    @Published var trimester: String = "First Trimester"
+    @Published var relieve: [String] = ["Back Pain"]
+    
     @Published var state : AssessmentState = .chooseDay
     @Published var buttonDisable = false
+    
+//    @Published var muscleGroup : [String] = ["Chest"]
     
     public func nextState(){
         switch state {
@@ -25,8 +30,12 @@ class AssessmentViewModel : ObservableObject {
         case .chooseDuration:
             state = .chooseMonth
         case .chooseMonth:
-            state = .chooseMuscleGroup
-        case .chooseMuscleGroup:
+            state = .chooseExperience
+        case .chooseExperience:
+            state = .chooseTrimester
+        case .chooseTrimester:
+            state = .chooseRelieve
+        case .chooseRelieve:
             state = .complete
         default:
             return
@@ -41,10 +50,14 @@ class AssessmentViewModel : ObservableObject {
             state = .chooseTime
         case .chooseMonth:
             state = .chooseDuration
-        case .chooseMuscleGroup:
+        case .chooseExperience:
             state = .chooseMonth
+        case .chooseTrimester:
+            state = .chooseExperience
+        case .chooseRelieve:
+            state = .chooseTrimester
         case .complete:
-            state = .chooseMuscleGroup
+            state = .chooseRelieve
         default:
             return
         }

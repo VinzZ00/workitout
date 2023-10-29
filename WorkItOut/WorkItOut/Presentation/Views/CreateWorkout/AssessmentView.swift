@@ -21,15 +21,19 @@ struct AssessmentView: View {
                     AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $avm.durationExercise, selections: Duration.allCases.map({$0.rawValue}))
                 case .chooseMonth:
                     AssessmentDetailView(title: "How long do you plan to follow your exercise routine?", selection: $avm.timeSpan, selections: Months.allCases.map({$0.rawValue}))
-                case .chooseMuscleGroup:
-                    AssessmentDetailMultipleChoiceView(title: "Which muscle groups are you interested in training?", selectedItems: $avm.muscleGroup, selections: MuscleGroup.allCases.map({$0.rawValue}))
+                case .chooseExperience:
+                    AssessmentDetailView(title: "Have you ever done yoga before?", selection: $avm.experience, selections: Difficulty.allCases.map({$0.rawValue}))
+                case .chooseTrimester:
+                    AssessmentDetailView(title: "What trimester are you in?", selection: $avm.trimester, selections: Trimester.allCases.map({$0.rawValue}))
+                case .chooseRelieve:
+                    AssessmentDetailMultipleChoiceView(title: "s there a problem you are experiencing lately?", selectedItems: $avm.relieve, selections: Relieve.allCases.map({$0.rawValue}))
                 case .complete:
                     CompleteView()
                 }
             }
             .padding(.horizontal, 15)
             Spacer()
-            .onChange(of: avm.day.isEmpty || avm.muscleGroup.isEmpty, { oldValue, newValue in
+            .onChange(of: avm.day.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
                 avm.buttonDisable = newValue
             })
             .toolbar{
