@@ -49,13 +49,13 @@
 		ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCACC2AE907E4007159F2 /* workoutListCard.swift */; };
 		ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */; };
 		ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */; };
-		ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */; };
 		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
 		ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */; };
 		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
-		ACBFBD9F2AE6775A00109D94 /* FetchWorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9E2AE6775A00109D94 /* FetchWorkoutPlan.swift */; };
-		ACBFBDA22AE67B7A00109D94 /* AddWorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA12AE67B7A00109D94 /* AddWorkoutPlan.swift */; };
+		ACBFBD9F2AE6775A00109D94 /* FetchYogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9E2AE6775A00109D94 /* FetchYogaPlan.swift */; };
 		ACBFBDA42AE67CEE00109D94 /* UpdateWorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA32AE67CEE00109D94 /* UpdateWorkoutPlan.swift */; };
+		ACD49E812AEFA47000793872 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E802AEFA47000793872 /* Helper.swift */; };
+		ACD49E842AEFA62600793872 /* AddYogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E822AEFA62600793872 /* AddYogaPlan.swift */; };
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */; };
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
@@ -118,13 +118,13 @@
 		ACABCACC2AE907E4007159F2 /* workoutListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutListCard.swift; sourceTree = "<group>"; };
 		ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAssessmentResult.swift; sourceTree = "<group>"; };
 		ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentResultView.swift; sourceTree = "<group>"; };
-		ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExercise.swift; sourceTree = "<group>"; };
 		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSourceDelegate.swift; sourceTree = "<group>"; };
 		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
-		ACBFBD9E2AE6775A00109D94 /* FetchWorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkoutPlan.swift; sourceTree = "<group>"; };
-		ACBFBDA12AE67B7A00109D94 /* AddWorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutPlan.swift; sourceTree = "<group>"; };
+		ACBFBD9E2AE6775A00109D94 /* FetchYogaPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchYogaPlan.swift; sourceTree = "<group>"; };
 		ACBFBDA32AE67CEE00109D94 /* UpdateWorkoutPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateWorkoutPlan.swift; sourceTree = "<group>"; };
+		ACD49E802AEFA47000793872 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		ACD49E822AEFA62600793872 /* AddYogaPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddYogaPlan.swift; sourceTree = "<group>"; };
 		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D862DB632AE28E5A0014F2FC /* WorkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutApp.swift; sourceTree = "<group>"; };
@@ -298,10 +298,10 @@
 			children = (
 				AC5A9A622AE41138003B0C1F /* Yoga.swift */,
 				AC5A9A632AE41138003B0C1F /* Pose.swift */,
-				ACB8642A2AE65005005DF0D1 /* RequestExercise.swift */,
 				6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */,
 				6C3FD7752AEF558700C84D2A /* Profile.swift */,
 				6C3FD7772AEF560A00C84D2A /* History.swift */,
+				ACD49E802AEFA47000793872 /* Helper.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -421,8 +421,8 @@
 		AC7391AF2AE7BF1F0012BC1B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				ACBFBD9E2AE6775A00109D94 /* FetchWorkoutPlan.swift */,
-				ACBFBDA12AE67B7A00109D94 /* AddWorkoutPlan.swift */,
+				ACD49E822AEFA62600793872 /* AddYogaPlan.swift */,
+				ACBFBD9E2AE6775A00109D94 /* FetchYogaPlan.swift */,
 				ACBFBDA32AE67CEE00109D94 /* UpdateWorkoutPlan.swift */,
 			);
 			path = CoreData;
@@ -709,19 +709,18 @@
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
-				ACB8642B2AE65005005DF0D1 /* RequestExercise.swift in Sources */,
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
+				ACD49E812AEFA47000793872 /* Helper.swift in Sources */,
 				6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */,
 				AC71EEB22AEA556B00C8ED8A /* CameraDeviceManager.swift in Sources */,
 				AC71EEB72AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift in Sources */,
 				6C3FD7652AEE405C00C84D2A /* Relieve.swift in Sources */,
 				6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */,
-				ACBFBD9F2AE6775A00109D94 /* FetchWorkoutPlan.swift in Sources */,
+				ACBFBD9F2AE6775A00109D94 /* FetchYogaPlan.swift in Sources */,
 				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,
 				6C7B2C4B2AEF6FAF00E0DADF /* YogaCardView.swift in Sources */,
 				ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */,
 				56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */,
-				ACBFBDA22AE67B7A00109D94 /* AddWorkoutPlan.swift in Sources */,
 				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
@@ -757,6 +756,7 @@
 				ACBFBDA42AE67CEE00109D94 /* UpdateWorkoutPlan.swift in Sources */,
 				D8BC2BF42AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift in Sources */,
 				6C3FD7742AEEB26800C84D2A /* TimeOfDay.swift in Sources */,
+				ACD49E842AEFA62600793872 /* AddYogaPlan.swift in Sources */,
 				ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */,
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,

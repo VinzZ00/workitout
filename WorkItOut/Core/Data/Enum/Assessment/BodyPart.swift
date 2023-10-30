@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BodyPart {
+enum BodyPart : String {
     //middle
     case core
     case back
