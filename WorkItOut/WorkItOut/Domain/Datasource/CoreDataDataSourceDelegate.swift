@@ -10,6 +10,6 @@ import CoreData
 
 protocol CoreDataDataSourceDelegate {
     func saveToCoreData<T : NSManagedObject>(entity : T, context : NSManagedObjectContext) async throws
-    func updateToCoreData(workout : Yoga, context : NSManagedObjectContext) async throws
+    func updateToCoreData(yoga : Yoga, context : NSManagedObjectContext) async throws
     func fetchFromCoreData(context : NSManagedObjectContext, entity : NSManagedObject.Type) async throws -> Result<[NSFetchRequestResult], Error>
 }
