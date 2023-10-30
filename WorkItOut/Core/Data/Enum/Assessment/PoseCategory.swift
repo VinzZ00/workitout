@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PoseCategory {
+enum PoseCategory : String, CaseIterable {
   case stand
   case seated
   case supine

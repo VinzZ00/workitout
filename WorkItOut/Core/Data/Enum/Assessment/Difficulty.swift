@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum Difficulty: String, UserPreference {
+enum Difficulty: String, CaseIterable {
     func getString() -> String {
         return self.rawValue
     }
     
-  case beginner = "None at all"
-  case intermediate = "A little bit"
-  case advanced = "I do yoga often"
+    case beginner = "None at all"
+    case intermediate = "A little bit"
+    case advanced = "I do yoga often"
 }
