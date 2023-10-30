@@ -13,7 +13,6 @@
         <attribute name="state" attributeType="String"/>
         <attribute name="video" optional="YES" attributeType="String"/>
         <relationship name="ofYoga" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Yoga" inverseName="poses" inverseEntity="Yoga"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify"/>
     </entity>
     <entity name="Yoga" representedClassName="Yoga" syncable="YES" codeGenerationType="class">
         <attribute name="day" attributeType="String"/>
