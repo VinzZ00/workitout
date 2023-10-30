@@ -77,22 +77,6 @@ struct AssessmentResultView: View {
     }
 }
 
-//#Preview {
-//    AssessmentResultView(workoutPlan: .constant(YogaPlan(workouts: [
-//        Yoga(id: UUID(), exercises: [
-//            Pose(name: "exercise 1", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-//            Pose(name: "exercise 2", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-//            Pose(name: "exercise 3", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4)
-//        ], workoutState: .onProgress, date: .now),
-//        Yoga(id: UUID(), exercises: [
-//            Pose(name: "exercise 1", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-//            Pose(name: "exercise 2", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-//            Pose(name: "exercise 3", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4)
-//        ], workoutState: .onProgress, date: .now),
-//        Yoga(id: UUID(), exercises: [
-//            Pose(name: "exercise 1", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-//            Pose(name: "exercise 2", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-//            Pose(name: "exercise 3", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4)
-//        ], workoutState: .onProgress, date: .now)
-//    ])))
-//}
+#Preview {
+    AssessmentResultView(yogaPlan: .constant(YogaPlan()))
+}

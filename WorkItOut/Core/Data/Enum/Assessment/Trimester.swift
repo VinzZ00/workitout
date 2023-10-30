@@ -7,7 +7,11 @@
 
 import Foundation
 
-enum Trimester: String, CaseIterable {
+enum Trimester: String, UserPreference {
+    func getString() -> String {
+        return self.rawValue
+    }
+    
   case first = "First Trimester"
   case second = "Second Trimester"
   case third = "Third Trimester"

@@ -8,18 +8,16 @@
 import Foundation
 
 class AssessmentViewModel : ObservableObject {
-    @Published var day : [String] = ["Monday"]
-    @Published var timeClock : String = "Morning"
-    @Published var durationExercise : String = "15-30 minutes"
-    @Published var timeSpan : String = "One Month"
-    @Published var experience: String = "None at all"
-    @Published var trimester: String = "First Trimester"
-    @Published var relieve: [String] = ["Back Pain"]
+    @Published var day : [Day] = [.monday]
+    @Published var timeClock : TimeOfDay = .morning
+    @Published var durationExercise : Duration = .fiveteenMinutes
+    @Published var timeSpan : Months = .oneMonth
+    @Published var experience: Difficulty = .beginner
+    @Published var trimester: Trimester = .first
+    @Published var relieve: [Relieve] = [.backpain]
     
     @Published var state : AssessmentState = .chooseDay
     @Published var buttonDisable = false
-    
-//    @Published var muscleGroup : [String] = ["Chest"]
     
     public func nextState(){
         switch state {

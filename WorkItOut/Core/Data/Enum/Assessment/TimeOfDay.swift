@@ -7,7 +7,11 @@
 
 import Foundation
 
-enum TimeOfDay: String, CaseIterable {
+enum TimeOfDay: String, UserPreference {
+    func getString() -> String {
+        return self.rawValue
+    }
+    
     case morning = "Morning"
     case afternoon = "Afternoon"
     case evening = "Evening"

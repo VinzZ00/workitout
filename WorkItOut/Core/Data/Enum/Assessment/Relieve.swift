@@ -7,7 +7,11 @@
 
 import Foundation
 
-enum Relieve: String, CaseIterable {
+enum Relieve: String, UserPreference {
+    func getString() -> String {
+        return self.rawValue
+    }
+    
     case backpain = "Back Pain"
     case hippain = "Hip Pain"
     case pelvicflexibility = "Pelvic Flexibility"

@@ -7,7 +7,11 @@
 
 import Foundation
 
-enum Day: String, CaseIterable {
+enum Day: String, UserPreference {
+    func getString() -> String {
+        return self.rawValue
+    }
+    
     case monday = "Monday"
     case tuesday = "Tuesday"
     case wednesday = "Wednesday"
