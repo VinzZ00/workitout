@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct UpdateWorkoutUseCase {
+struct UpdateYogaPlanUsecase {
     var repository = Repository()
     
     func call(yogaPlan : YogaPlan, context : NSManagedObjectContext) async {
