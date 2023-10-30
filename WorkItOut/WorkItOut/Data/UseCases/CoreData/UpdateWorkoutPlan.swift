@@ -1,21 +1,21 @@
-////
-////  UpdateWorkoutUseCase.swift
-////  WorkItOut
-////
-////  Created by Elvin Sestomi on 23/10/23.
-////
 //
-//import Foundation
-//import CoreData
+//  UpdateWorkoutUseCase.swift
+//  WorkItOut
 //
-//struct UpdateWorkoutUseCase {
-//    var repository = Repository()
-//    
-//    func call(workout : Yoga, context : NSManagedObjectContext) async {
-//        do {
-//           try await repository.coreData.updateToCoreData(workout: workout, context: context)
-//        } catch let err {
-//            fatalError("Error update workout: \(err.localizedDescription)")
-//        }
-//    }
-//}
+//  Created by Elvin Sestomi on 23/10/23.
+//
+
+import Foundation
+import CoreData
+
+struct UpdateWorkoutUseCase {
+    var repository = Repository()
+    
+    func call(yogaPlan : YogaPlan, context : NSManagedObjectContext) async {
+        do {
+            try await repository.coreData.updateToCoreData(entity: yogaPlan, context: context)
+        } catch let err {
+            fatalError("Error update workout: \(err.localizedDescription)")
+        }
+    }
+}

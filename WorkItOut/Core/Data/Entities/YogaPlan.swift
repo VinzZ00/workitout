@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct YogaPlan : Identifiable {
+struct YogaPlan : Identifiable, Entity {
     var id: UUID = UUID()
     var name: String = ""
     var yogas: [Yoga] = []
