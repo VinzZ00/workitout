@@ -9,6 +9,7 @@ import Foundation
 
 struct YogaPlan : Identifiable {
     let id: UUID = UUID()
-    var name: String
+    var name: String = ""
     var yogas: [Yoga] = []
+    var trimester: Trimester = .all
 }

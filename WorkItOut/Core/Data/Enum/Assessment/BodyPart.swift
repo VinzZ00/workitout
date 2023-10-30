@@ -8,11 +8,16 @@
 import Foundation
 
 enum BodyPart {
-  case core
-  case arms
-  case legs
-  case glutes
-  case back
-  case neck
-  case shoulders
+    //middle
+    case core
+    case back
+    
+    //upper
+    case arms
+    case neck
+    case shoulders
+    
+    //lower
+    case legs
+    case glutes
 }

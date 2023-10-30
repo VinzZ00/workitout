@@ -14,14 +14,13 @@ import Foundation
 
 struct Yoga: Identifiable, Hashable {
     let id: UUID = UUID()
-    var poses : [Pose]
-    var date : Date
-    var estimationDuration : DateInterval
-    var yogaState : YogaState
-    
-    func getDesiredDate(desired : Set<Calendar.Component>) -> DateComponents {
-        return Calendar.current.dateComponents(desired, from: self.date)
+    var poses : [Pose] = []
+    var date : Day = .monday
+    var estimationDuration : DateInterval {
+        return DateInterval()
     }
+    var yogaState : YogaState = .notCompleted
+    var image: String?
     
     static func == (lhs: Yoga, rhs: Yoga) -> Bool {
         return lhs.id == rhs.id
