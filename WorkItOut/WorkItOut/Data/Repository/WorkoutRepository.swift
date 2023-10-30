@@ -1,13 +1,13 @@
+////
+////  WorkoutRepository.swift
+////  WorkItOut
+////
+////  Created by Elvin Sestomi on 23/10/23.
+////
 //
-//  WorkoutRepository.swift
-//  WorkItOut
+//import Foundation
 //
-//  Created by Elvin Sestomi on 23/10/23.
+//struct Repository {
+//    let coreData : CoreDataDataSource = CoreDataDataSource()
+//}
 //
-
-import Foundation
-
-struct Repository {
-    let coreData : CoreDataDataSource = CoreDataDataSource()
-}
-

@@ -11,6 +11,9 @@ struct FirebaseConstant {
     private init() {}
 }
 
+
+// TODO : FIreBase constant harus di ganti ke yang yoga
+
 extension FirebaseConstant {
 //    struct WorkoutCollectionConstants {
 //        static let collectionName = "Workout"

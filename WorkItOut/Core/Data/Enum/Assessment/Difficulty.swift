@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Difficulty: String, CaseIterable {
+enum Difficulty: String, UserPreference {
     func getString() -> String {
         return self.rawValue
     }
