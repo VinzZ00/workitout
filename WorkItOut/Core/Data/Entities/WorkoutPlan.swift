@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WorkoutPlan {
+struct WorkoutPlan : Identifiable {
+    var id: UUID = UUID()
     var workouts: [Workout] = []
-//    var date: Date = Date.now
 }
