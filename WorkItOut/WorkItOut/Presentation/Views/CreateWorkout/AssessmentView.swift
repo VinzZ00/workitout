@@ -9,27 +9,32 @@ import SwiftUI
 
 struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
+    
     var body: some View {
         NavigationStack{
             VStack{
                 switch avm.state {
                 case .chooseDay:
-                    AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", selectedItems: $avm.day, selections: Day.allCases.map({$0.rawValue}))
+                    AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", selectedItems: $avm.day, selections: Day.allCases)
                 case .chooseTime:
-                    AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeClock.allCases.map({$0.rawValue}))
+                    AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeOfDay.allCases)
                 case .chooseDuration:
-                    AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $avm.durationExercise, selections: Duration.allCases.map({$0.rawValue}))
+                    AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $avm.durationExercise, selections: Duration.allCases)
                 case .chooseMonth:
-                    AssessmentDetailView(title: "How long do you plan to follow your exercise routine?", selection: $avm.timeSpan, selections: Months.allCases.map({$0.rawValue}))
-                case .chooseMuscleGroup:
-                    AssessmentDetailMultipleChoiceView(title: "Which muscle groups are you interested in training?", selectedItems: $avm.muscleGroup, selections: MuscleGroup.allCases.map({$0.rawValue}))
+                    AssessmentDetailView(title: "How long do you plan to follow your exercise routine?", selection: $avm.timeSpan, selections: Months.allCases)
+                case .chooseExperience:
+                    AssessmentDetailView(title: "Have you ever done yoga before?", selection: $avm.experience, selections: Difficulty.allCases)
+                case .chooseTrimester:
+                    AssessmentDetailView(title: "What trimester are you in?", selection: $avm.trimester, selections: Trimester.allCases)
+                case .chooseRelieve:
+                    AssessmentDetailMultipleChoiceView(title: "Is there a problem you are experiencing lately?", selectedItems: $avm.relieve, selections: Relieve.allCases)
                 case .complete:
                     CompleteView()
                 }
             }
             .padding(.horizontal, 15)
             Spacer()
-            .onChange(of: avm.day.isEmpty || avm.muscleGroup.isEmpty, { oldValue, newValue in
+            .onChange(of: avm.day.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
                 avm.buttonDisable = newValue
             })
             .toolbar{

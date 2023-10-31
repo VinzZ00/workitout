@@ -7,7 +7,11 @@
 
 import Foundation
 
-enum Duration : String, CaseIterable{
+enum Duration : String, UserPreference {
+    func getString() -> String {
+        return self.rawValue
+    }
+    
     case fiveteenMinutes = "15-30 minutes"
     case thirtyMinutes = "30-45 minutes"
     case fourtyFiveMinutes = "45-60 minutes"

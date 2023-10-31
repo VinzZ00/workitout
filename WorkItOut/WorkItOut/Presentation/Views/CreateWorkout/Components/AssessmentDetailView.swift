@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AssessmentDetailView: View {
+struct AssessmentDetailView<E: UserPreference>: View {
     var title : String
-    @Binding var selection : String
-    @State var selections : [String]
+    @Binding var selection : E
+    @State var selections : [E]
     
     var body: some View {
         VStack(alignment: .leading){
@@ -19,7 +19,7 @@ struct AssessmentDetailView: View {
             ForEach(selections, id: \.self){ selection in
                 Button(action: {self.selection = selection}, label: {
                     HStack{
-                        Text(selection)
+                        Text(selection.getString())
                             .font(.body.bold())
                             .padding(.leading, 10)
                             .padding(.vertical, 15)
@@ -38,6 +38,6 @@ struct AssessmentDetailView: View {
     }
 }
 
-#Preview {
-    AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: .constant("Morning"), selections: TimeClock.allCases.map({$0.rawValue}))
-}
+//#Preview {
+//    AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: .constant("Morning"), selections: TimeClock.allCases.map({$0.rawValue}))
+//}

@@ -10,7 +10,6 @@ import SwiftUI
 
 
 struct workoutListCard: View {
-    
     var imageAssetName : String
     var workoutName : String
     var muscle : String

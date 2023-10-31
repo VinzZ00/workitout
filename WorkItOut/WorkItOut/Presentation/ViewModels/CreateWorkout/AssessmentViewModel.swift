@@ -8,11 +8,14 @@
 import Foundation
 
 class AssessmentViewModel : ObservableObject {
-    @Published var day : [String] = ["Monday"]
-    @Published var timeClock : String = "Morning"
-    @Published var durationExercise : String = "15-30 minutes"
-    @Published var timeSpan : String = "One Month"
-    @Published var muscleGroup : [String] = ["Chest"]
+    @Published var day : [Day] = [.monday]
+    @Published var timeClock : TimeOfDay = .morning
+    @Published var durationExercise : Duration = .fiveteenMinutes
+    @Published var timeSpan : Months = .oneMonth
+    @Published var experience: Difficulty = .beginner
+    @Published var trimester: Trimester = .first
+    @Published var relieve: [Relieve] = [.backpain]
+    
     @Published var state : AssessmentState = .chooseDay
     @Published var buttonDisable = false
     
@@ -25,8 +28,12 @@ class AssessmentViewModel : ObservableObject {
         case .chooseDuration:
             state = .chooseMonth
         case .chooseMonth:
-            state = .chooseMuscleGroup
-        case .chooseMuscleGroup:
+            state = .chooseExperience
+        case .chooseExperience:
+            state = .chooseTrimester
+        case .chooseTrimester:
+            state = .chooseRelieve
+        case .chooseRelieve:
             state = .complete
         default:
             return
@@ -41,10 +48,14 @@ class AssessmentViewModel : ObservableObject {
             state = .chooseTime
         case .chooseMonth:
             state = .chooseDuration
-        case .chooseMuscleGroup:
+        case .chooseExperience:
             state = .chooseMonth
+        case .chooseTrimester:
+            state = .chooseExperience
+        case .chooseRelieve:
+            state = .chooseTrimester
         case .complete:
-            state = .chooseMuscleGroup
+            state = .chooseRelieve
         default:
             return
         }

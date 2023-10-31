@@ -10,12 +10,10 @@ import SwiftUI
 struct AssessmentResultView: View {
     
     init(
-        workoutPlan : Binding<WorkoutPlan>)
+        yogaPlan : Binding<YogaPlan>)
     {
-        self._workoutPlan = workoutPlan;
+        self._yogaPlan = yogaPlan;
         let appearance = UINavigationBarAppearance()
-//        appearance.configureWithTransparentBackground()
-        //        appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
         appearance.backgroundColor = .orangePrimary
         appearance.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white
@@ -37,14 +35,14 @@ struct AssessmentResultView: View {
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
-    @Binding var workoutPlan : WorkoutPlan;
+    @Binding var yogaPlan : YogaPlan;
     
     var body: some View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    ForEach(workoutPlan.workouts) { workout in
-                        DayAssessment(exercises: workout.exercises, day: workout.getDesiredDate(desired: [.day]).day!, bodyPart: "Upper Body", weekday: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][workout.getDesiredDate(desired: [.weekday]).weekday!], timeOfDay: "Belom tau") {
+                    ForEach(yogaPlan.yogas) { yoga in
+                        DayAssessment(exercises: yoga.poses, day: 0, bodyPart: "Upper Body", weekday: "Text", timeOfDay: "Belom tau") {
                             print("Button Next telah ditekan dari closure")
                         }
                         .padding(.top, 16)
@@ -78,21 +76,5 @@ struct AssessmentResultView: View {
 }
 
 #Preview {
-    AssessmentResultView(workoutPlan: .constant(WorkoutPlan(workouts: [
-        Workout(id: UUID(), exercises: [
-            Exercise(name: "exercise 1", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-            Exercise(name: "exercise 2", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-            Exercise(name: "exercise 3", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4)
-        ], workoutState: .onProgress, date: .now),
-        Workout(id: UUID(), exercises: [
-            Exercise(name: "exercise 1", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-            Exercise(name: "exercise 2", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-            Exercise(name: "exercise 3", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4)
-        ], workoutState: .onProgress, date: .now),
-        Workout(id: UUID(), exercises: [
-            Exercise(name: "exercise 1", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-            Exercise(name: "exercise 2", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4),
-            Exercise(name: "exercise 3", muscleGroup: [.arm, .chest], equipment: [.dumbbell], repetition: 12, workoutSet: 4)
-        ], workoutState: .onProgress, date: .now)
-    ])))
+    AssessmentResultView(yogaPlan: .constant(YogaPlan()))
 }

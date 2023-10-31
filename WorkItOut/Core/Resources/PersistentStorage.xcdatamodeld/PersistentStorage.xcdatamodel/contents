@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="ExerciseNSObject" representedClassName="ExerciseNSObject" syncable="YES" codeGenerationType="class">
-        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="equipment" attributeType="String"/>
-        <attribute name="muscleGroup" attributeType="String"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B74" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="PoseNSObject" representedClassName="PoseNSObject" syncable="YES" codeGenerationType="class">
+        <attribute name="bodyPartTrained" attributeType="String"/>
+        <attribute name="category" attributeType="String"/>
+        <attribute name="difficulty" attributeType="String"/>
+        <attribute name="exception" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
-        <attribute name="repetition" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="workoutSet" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="usedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkoutNSObject" inverseName="exercises" inverseEntity="WorkoutNSObject"/>
+        <attribute name="poseDescription" attributeType="String"/>
+        <attribute name="recommendedTrimester" attributeType="String"/>
+        <attribute name="relieve" attributeType="String"/>
+        <attribute name="seconds" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="state" attributeType="String"/>
+        <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="video" optional="YES" attributeType="String"/>
+        <relationship name="ofYoga" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogaNSObject" inverseName="poses" inverseEntity="YogaNSObject"/>
     </entity>
-    <entity name="WorkoutNSObject" representedClassName="WorkoutNSObject" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="workoutState" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseNSObject" inverseName="usedBy" inverseEntity="ExerciseNSObject"/>
-        <relationship name="planOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkoutPlanNSObject"/>
+    <entity name="YogaNSObject" representedClassName="YogaNSObject" syncable="YES" codeGenerationType="class">
+        <attribute name="day" attributeType="String"/>
+        <attribute name="estimationDuration" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="yogaState" attributeType="String"/>
+        <relationship name="ofYogaPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogaPlanNSObject" inverseName="yogas" inverseEntity="YogaPlanNSObject"/>
+        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PoseNSObject" inverseName="ofYoga" inverseEntity="PoseNSObject"/>
     </entity>
-    <entity name="WorkoutPlanNSObject" representedClassName="WorkoutPlanNSObject" syncable="YES" codeGenerationType="class">
-        <relationship name="workouts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WorkoutNSObject"/>
+    <entity name="YogaPlanNSObject" representedClassName="YogaPlanNSObject" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="trimester" optional="YES" attributeType="String"/>
+        <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="yogas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogaNSObject" inverseName="ofYogaPlan" inverseEntity="YogaNSObject"/>
     </entity>
 </model>
