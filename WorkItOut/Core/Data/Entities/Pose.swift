@@ -31,7 +31,8 @@ struct Pose: Identifiable, Hashable, Entity {
     var recommendedTrimester : Trimester
     var bodyPartTrained : [BodyPart]
     var relieve: [Relieve]
-    var exception : [Exception]
+    var exception: [Exception] = []
+
     var difficulty : Difficulty
     
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
