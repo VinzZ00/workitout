@@ -13,7 +13,7 @@
 		56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */; };
 		56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */; };
 		6C3FD7652AEE405C00C84D2A /* Relieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7642AEE405C00C84D2A /* Relieve.swift */; };
-		6C3FD7672AEE409700C84D2A /* PoseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7662AEE409700C84D2A /* PoseCategory.swift */; };
+		6C3FD7672AEE409700C84D2A /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7662AEE409700C84D2A /* Position.swift */; };
 		6C3FD76C2AEE40BD00C84D2A /* Trimester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76B2AEE40BD00C84D2A /* Trimester.swift */; };
 		6C3FD76E2AEE40C900C84D2A /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */; };
 		6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76F2AEE40D800C84D2A /* YogaState.swift */; };
@@ -60,6 +60,7 @@
 		D8207AE62AF0B29D005DBD3C /* TestFetchFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */; };
 		D8207AE82AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AE72AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift */; };
 		D8207AEC2AF0B61D005DBD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */; };
+		D8207AEE2AF0C50A005DBD3C /* SpineMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AED2AF0C50A005DBD3C /* SpineMovement.swift */; };
 		D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */; };
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
 		D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */; };
@@ -86,7 +87,7 @@
 		56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6C3FD7642AEE405C00C84D2A /* Relieve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relieve.swift; sourceTree = "<group>"; };
-		6C3FD7662AEE409700C84D2A /* PoseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCategory.swift; sourceTree = "<group>"; };
+		6C3FD7662AEE409700C84D2A /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		6C3FD76B2AEE40BD00C84D2A /* Trimester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trimester.swift; sourceTree = "<group>"; };
 		6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		6C3FD76F2AEE40D800C84D2A /* YogaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaState.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 		D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchFirebase.swift; sourceTree = "<group>"; };
 		D8207AE72AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchFirebaseViewModel.swift; sourceTree = "<group>"; };
 		D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8207AED2AF0C50A005DBD3C /* SpineMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineMovement.swift; sourceTree = "<group>"; };
 		D862DB632AE28E5A0014F2FC /* WorkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutApp.swift; sourceTree = "<group>"; };
 		D862DB682AE28E5A0014F2FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -610,13 +612,14 @@
 				D8BC2BF72AE81E0400E61487 /* Duration.swift */,
 				D8BC2BF92AE81EA200E61487 /* Months.swift */,
 				6C3FD7642AEE405C00C84D2A /* Relieve.swift */,
-				6C3FD7662AEE409700C84D2A /* PoseCategory.swift */,
+				6C3FD7662AEE409700C84D2A /* Position.swift */,
 				6C3FD76B2AEE40BD00C84D2A /* Trimester.swift */,
 				6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */,
 				6C3FD76F2AEE40D800C84D2A /* YogaState.swift */,
 				6C3FD7712AEE40E600C84D2A /* BodyPart.swift */,
 				6C3FD7732AEEB26800C84D2A /* TimeOfDay.swift */,
 				6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */,
+				D8207AED2AF0C50A005DBD3C /* SpineMovement.swift */,
 			);
 			path = Assessment;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
+				D8207AEE2AF0C50A005DBD3C /* SpineMovement.swift in Sources */,
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
 				ACD49E812AEFA47000793872 /* Helper.swift in Sources */,
 				6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */,
@@ -769,7 +773,7 @@
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetListWorkout.swift in Sources */,
-				6C3FD7672AEE409700C84D2A /* PoseCategory.swift in Sources */,
+				6C3FD7672AEE409700C84D2A /* Position.swift in Sources */,
 				D8BC2BE72AE8003000E61487 /* AssessmentView.swift in Sources */,
 				AC5A9A672AE41138003B0C1F /* Pose.swift in Sources */,
 			);

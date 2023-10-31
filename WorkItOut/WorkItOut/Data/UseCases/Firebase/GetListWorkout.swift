@@ -5,7 +5,7 @@
 ////  Created by Elvin Sestomi on 21/10/23.
 ////
 //
-//import Foundation
+import Foundation
 //
 //struct GetWorkoutListUseCase {
 //    let db = FireStoreManager();
@@ -32,11 +32,10 @@
 //}
 
 struct GetYogaPosesUseCase {
-    let db = FireStoreManager()
+    let db = FireStoreManager.shared
     
-    func call() async -> [RequestYogaPose] {
+    func call() -> [RequestYogaPose] {
         var requests : [RequestYogaPose] = []
-        
         db.getCollection(collectionName: FirebaseConstant.YogaPoseConstants.collectionName) { querySnapShot in
             querySnapShot.documents.forEach { doc in
                 let poseName = doc.data()[FirebaseConstant.YogaPoseConstants.name] as! String
@@ -54,7 +53,10 @@ struct GetYogaPosesUseCase {
                 let exceptionRequests = doc.data()[FirebaseConstant.YogaPoseConstants.exceptions] as! String
                 let exceptions = exceptionRequests.components(separatedBy: ",")
                 
-                let position = doc.data()[FirebaseConstant.YogaPoseConstants.position] as! String
+                let positionRequest = doc.data()[FirebaseConstant.YogaPoseConstants.position] as! String
+                guard let position = Position(rawValue: positionRequest) else{
+                    return
+                }
                 
                 let recommendedTrimesterRequest = doc.data()[FirebaseConstant.YogaPoseConstants.recommendedTrimester] as! String
                 guard let trimester = Trimester(rawValue: recommendedTrimesterRequest) else {
@@ -65,16 +67,15 @@ struct GetYogaPosesUseCase {
                 let relieves = relieveRequests.components(separatedBy: ",")
                 
                 let spineMovementRequests = doc.data()[FirebaseConstant.YogaPoseConstants.spineMovement] as! String
-                guard let spineMovement = PoseCategory(rawValue: spineMovementRequests) else{
+                guard let spineMovement = SpineMovement(rawValue: spineMovementRequests) else{
                     return
                 }
                 
-                let requestYogaPose = RequestYogaPose(name: poseName, altName: altName, difficulty: difficulty, position: position, recommendedTrimester: trimester, spineMovement: spineMovement, bodyPartTrained: bodyPartsEnum, exception: exceptions)
+                let requestYogaPose = RequestYogaPose(name: poseName, altName: altName, difficulty: difficulty, position: position, recommendedTrimester: trimester, spineMovement: spineMovement, bodyPartTrained: bodyPartsEnum, exception: exceptions, relieve: relieves)
                 
                 requests.append(requestYogaPose)
             }
         }
-        
         return requests
     }
 }
@@ -83,9 +84,10 @@ struct RequestYogaPose {
     var name : String
     var altName : String
     var difficulty : Difficulty
-    var position : String
+    var position : Position
     var recommendedTrimester : Trimester
-    var spineMovement : PoseCategory
+    var spineMovement : SpineMovement
     var bodyPartTrained : [BodyPart]
     var exception : [String]
+    var relieve : [String]
 }

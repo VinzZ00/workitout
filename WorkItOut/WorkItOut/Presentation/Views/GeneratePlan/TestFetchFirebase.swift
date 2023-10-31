@@ -11,12 +11,15 @@ struct TestFetchFirebase: View {
     @StateObject var vm = TestFetchFirebaseViewModel()
     var body: some View {
         List{
-            Text("\(vm.poses.count)")
             ForEach(vm.poses, id: \.name){ pose in
-                Text("\(pose.name)")
-                Text("\(pose.altName)")
+                Section(pose.name) {
+                    Text("\(pose.altName)")
+                    Text("Difficulty : \(pose.difficulty.rawValue)")
+                    Text("Position : \(pose.position.rawValue)")
+                    Text("Recommended Trimester : \(pose.recommendedTrimester.rawValue)")
+                }
             }
-            .padding(.vertical, 20)
+            
         }
         .onAppear{
             Task{
