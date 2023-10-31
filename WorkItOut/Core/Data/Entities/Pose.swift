@@ -20,6 +20,7 @@ struct Pose: Identifiable, Hashable {
     var recommendedTrimester : Trimester
     var bodyPartTrained : [BodyPart]
     var relieve: [Relieve]
+    var exception: [Exception] = []
 
     var difficulty : Difficulty
 }

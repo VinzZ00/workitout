@@ -27,10 +27,15 @@
 		6C7B2C4B2AEF6FAF00E0DADF /* YogaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C4A2AEF6FAF00E0DADF /* YogaCardView.swift */; };
 		6C7B2C4D2AEF726A00E0DADF /* GeneratePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C4C2AEF726A00E0DADF /* GeneratePlanView.swift */; };
 		6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C502AEF74D500E0DADF /* HomeView.swift */; };
+		6C7B2C532AEFABC600E0DADF /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C522AEFABC600E0DADF /* Exception.swift */; };
 		6C8D5CFC2AE660B200A2986D /* YogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */; };
 		6C8D5D112AE6618E00A2986D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0D2AE6618E00A2986D /* Day.swift */; };
 		6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */; };
 		6C8D5D162AE6619700A2986D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D152AE6619700A2986D /* MockData.swift */; };
+		6CE854852AEFCCAA00C2F6A3 /* DayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE854842AEFCCAA00C2F6A3 /* DayButtonView.swift */; };
+		6CE854872AF0B6C500C2F6A3 /* NavigationLinkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE854862AF0B6C500C2F6A3 /* NavigationLinkComponent.swift */; };
+		6CE8548A2AF0C43C00C2F6A3 /* YogaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE854892AF0C43C00C2F6A3 /* YogaDetailView.swift */; };
+		6CE8548C2AF0CAFF00C2F6A3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE8548B2AF0CAFF00C2F6A3 /* HomeViewModel.swift */; };
 		AC5A9A502AE3AC5E003B0C1F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A4F2AE3AC5E003B0C1F /* FirebaseFirestore */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A5B2AE3E614003B0C1F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A5A2AE3E614003B0C1F /* FirebaseFirestoreSwift */; };
@@ -98,10 +103,15 @@
 		6C7B2C4A2AEF6FAF00E0DADF /* YogaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaCardView.swift; sourceTree = "<group>"; };
 		6C7B2C4C2AEF726A00E0DADF /* GeneratePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanView.swift; sourceTree = "<group>"; };
 		6C7B2C502AEF74D500E0DADF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6C7B2C522AEFABC600E0DADF /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPlan.swift; sourceTree = "<group>"; };
 		6C8D5D0D2AE6618E00A2986D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutState.swift; sourceTree = "<group>"; };
 		6C8D5D152AE6619700A2986D /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		6CE854842AEFCCAA00C2F6A3 /* DayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayButtonView.swift; sourceTree = "<group>"; };
+		6CE854862AF0B6C500C2F6A3 /* NavigationLinkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkComponent.swift; sourceTree = "<group>"; };
+		6CE854892AF0C43C00C2F6A3 /* YogaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaDetailView.swift; sourceTree = "<group>"; };
+		6CE8548B2AF0CAFF00C2F6A3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		AC5A9A622AE41138003B0C1F /* Yoga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
 		AC5A9A632AE41138003B0C1F /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
@@ -205,6 +215,7 @@
 			children = (
 				6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */,
 				6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */,
+				6CE854862AF0B6C500C2F6A3 /* NavigationLinkComponent.swift */,
 			);
 			path = GlobalComponent;
 			sourceTree = "<group>";
@@ -238,6 +249,7 @@
 		6C7B2C4F2AEF74C700E0DADF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6CE854842AEFCCAA00C2F6A3 /* DayButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -267,6 +279,14 @@
 				6C8D5D152AE6619700A2986D /* MockData.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		6CE854882AF0C43300C2F6A3 /* YogaDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6CE854892AF0C43C00C2F6A3 /* YogaDetailView.swift */,
+			);
+			path = YogaDetail;
 			sourceTree = "<group>";
 		};
 		AC5A9A4E2AE3AC5E003B0C1F /* Frameworks */ = {
@@ -347,6 +367,7 @@
 		AC5A9A772AE42D30003B0C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6CE854882AF0C43300C2F6A3 /* YogaDetail */,
 				6C7B2C4E2AEF74C200E0DADF /* Home */,
 				6C7B2C482AEF6F6C00E0DADF /* GeneratePlan */,
 				56D1BCAF2AEE81DC002DBDA0 /* Notification */,
@@ -584,6 +605,7 @@
 				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
 				56D1BC9E2AEA5653002DBDA0 /* Execution */,
 				D8BC2BEF2AE80F1B00E61487 /* CreateWorkout */,
+				6CE8548B2AF0CAFF00C2F6A3 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -611,6 +633,7 @@
 				6C3FD7712AEE40E600C84D2A /* BodyPart.swift */,
 				6C3FD7732AEEB26800C84D2A /* TimeOfDay.swift */,
 				6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */,
+				6C7B2C522AEFABC600E0DADF /* Exception.swift */,
 			);
 			path = Assessment;
 			sourceTree = "<group>";
@@ -706,6 +729,7 @@
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
+				6CE8548A2AF0C43C00C2F6A3 /* YogaDetailView.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
@@ -726,6 +750,7 @@
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */,
+				6C7B2C532AEFABC600E0DADF /* Exception.swift in Sources */,
 				6C3FD7782AEF560A00C84D2A /* History.swift in Sources */,
 				ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
@@ -742,12 +767,15 @@
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				D8BC2BEE2AE80F1800E61487 /* AssessmentViewModel.swift in Sources */,
 				6C7B2C4D2AEF726A00E0DADF /* GeneratePlanView.swift in Sources */,
+				6CE854852AEFCCAA00C2F6A3 /* DayButtonView.swift in Sources */,
+				6CE854872AF0B6C500C2F6A3 /* NavigationLinkComponent.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				6C3FD76E2AEE40C900C84D2A /* Difficulty.swift in Sources */,
 				D8FBED5A2AE91A880062CC00 /* LoadingCircle.swift in Sources */,
 				6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
+				6CE8548C2AF0CAFF00C2F6A3 /* HomeViewModel.swift in Sources */,
 				D8BC2BF82AE81E0400E61487 /* Duration.swift in Sources */,
 				6C3FD7722AEE40E600C84D2A /* BodyPart.swift in Sources */,
 				56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */,
@@ -898,7 +926,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 382VG5FRJK;
+				DEVELOPMENT_TEAM = 5V99WU443D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -931,7 +959,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 382VG5FRJK;
+				DEVELOPMENT_TEAM = 5V99WU443D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

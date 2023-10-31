@@ -8,48 +8,103 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var sheetToggle: Bool = false
+    @StateObject var vm: HomeViewModel = HomeViewModel()
+   
     
     var body: some View {
         VStack {
-            HStack {
-                Button(action: {}, label: {
-                    Label("Week 12", systemImage: "chevron.down")
-                })
-                Spacer()
-                Image(systemName: "gearshape")
-                Image(systemName: "chart.bar")
-            }
-            HStack {
-                ForEach(0...7, id: \.self) { _ in
+            VStack {
+                HStack {
+                    Button(action: {}, label: {
+                        Image(systemName: "person")
+                            .padding(12)
+                            .background(.neutral3.opacity(0.02))
+                            .clipShape(.circle)
+                    })
+                    .buttonStyle(.plain)
+                    
+                    
+                    Spacer()
+                    Button(action: {}, label: {
+                        Image(systemName: "chevron.left")
+                    })
                     VStack {
-                        Text("Sun")
-                        Text("4")
+                        Text("Week 12 - August")
+                            .font(.title3)
+                            .bold()
+                        Text("(Trimester II)")
+                    }
+                    Button(action: {}, label: {
+                        Image(systemName: "chevron.right")
+                    })
+                    Spacer()
+                    
+                    Button(action: {}, label: {
+                        Image(systemName: "clock.arrow.circlepath")
+                            .padding(12)
+                            .background(.neutral3.opacity(0.02))
+                            .clipShape(.circle)
+                    })
+                    .buttonStyle(.plain)
+                }
+                .padding(.vertical)
+                
+                HStack {
+                    ForEach(vm.days, id: \.self) { _ in
+                        DayButtonView()
                     }
                 }
             }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(.white)
+            
+            
             ScrollView {
                 VStack(alignment: .leading) {
                     Spacer()
-                    Text("Today, 26 October")
-                    Text("Balancing and Grounding")
-                    Text("5 Exercise (60 Min)")
-                    ButtonComponent(title: "Start Exercise") {
-                        sheetToggle.toggle()
+                    VStack(alignment: .leading) {
+                        Text("Today, 26 October")
+                            .font(.title3)
+                            .bold()
+                        Text("Balancing and Grounding")
+                            .font(.largeTitle)
+                            .bold()
+                        Text("5 Exercise (60 Min)")
+                            .font(.body)
+                        ButtonComponent(title: "Start Exercise") {
+                            vm.sheetToggle.toggle()
+                        }
                     }
+                    .foregroundStyle(.white)
+                    .padding()
+                    .background(.black.opacity(0.5))
+                    .clipShape(.rect(cornerRadius: 12))
                 }
                 .padding()
                 .frame(width: 360, height: 480)
                 .background(.purple)
                 .clipShape(.rect(cornerRadius: 12))
+                .padding(.vertical)
                 
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Exercise that might help you")
+                        .font(.title)
+                        .bold()
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(0...7, id: \.self) { _ in
-                                Button(action: {}, label: {
-                                    Text("Popular")
+                            ForEach(vm.relieves, id: \.self) { relieve in
+                                Button(action: {
+                                    vm.selectedRelieve = relieve
+                                }, label: {
+                                    Text(relieve.getString())
+                                        .foregroundStyle(relieve == vm.selectedRelieve ? .purple : .black)
+                                        .padding(12)
+                                        .clipShape(.rect(cornerRadius: 12))
+                                        .background(RoundedRectangle(cornerRadius: 12)
+                                            .fill(relieve == vm.selectedRelieve ? .main.opacity(0.25) : .white)
+                                            .stroke(relieve == vm.selectedRelieve ? .orangePrimary : .grayBorder, lineWidth: 1)
+                                        )
                                 })
                             }
                         }
@@ -58,31 +113,30 @@ struct HomeView: View {
                         HStack {
                             Rectangle()
                                 .frame(width: 100, height: 100)
-                                .background(.purple)
+                                .foregroundStyle(.purple)
                                 .clipShape(.rect(cornerRadius: 12))
                             VStack(alignment: .leading) {
                                 Text("Exercise Plan Name (One time exercise only)")
+                                    .font(.title3)
+                                    .bold()
                                 Spacer()
                                 Text("6 Exercise (60 Min)")
                             }
+                            Spacer()
                         }
+                        .padding(8)
+                        .background(.white)
+                        .clipShape(.rect(cornerRadius: 12))
+
                     }
                 }
+                .padding()
             }
-            
         }
-        .sheet(isPresented: $sheetToggle, content: {
-            VStack(alignment: .leading) {
-                Image(systemName: "xmark")
-                Text("Balancing and Grounding")
-                Text("5 Exercise (50 Min)")
-                ForEach(0...5, id: \.self) { _ in
-                    YogaCardView()
-                }
-                ButtonComponent(title: "Start Now") {
-                    //
-                }
-            }
+        .ignoresSafeArea(.keyboard)
+        .background(Color("Background"))
+        .sheet(isPresented: $vm.sheetToggle, content: {
+            YogaDetailView()
         })
     }
 }
