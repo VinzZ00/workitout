@@ -15,7 +15,7 @@ import CoreData
 struct Yoga: Identifiable, Hashable, Entity {
     var id = UUID()
     var name : String
-    var poses : [Pose]
+    var poses : [PoseNSObject]
     var day : Day
     var estimationDuration : Int
     var yogaState : YogaState = .notCompleted
@@ -29,12 +29,13 @@ struct Yoga: Identifiable, Hashable, Entity {
         hasher.combine(id)
     }
     
+    
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject{
         let yoga = YogaNSObject(context: context)
         yoga.uuid = UUID()
         yoga.name = self.name
         yoga.day = self.day.rawValue
-        yoga.poses = NSSet(array: self.poses)
+        yoga.poses?.addingObjects(from: self.poses)
         yoga.estimationDuration = Int32(self.estimationDuration)
         yoga.yogaState = self.yogaState.rawValue
         yoga.image = self.image

@@ -23,12 +23,7 @@ struct FetchYogaPlanUsecase{
                     
                     var yogaPlan = YogaPlan()
                     
-                    yogaPlan.yogas = x.yogas?.allObjects as? [Yoga]
-                    ?? []
-                    
-                    yogaPlan.id = x.uuid!
-                    yogaPlan.name = x.name!
-                    yogaPlan.trimester = Trimester(rawValue: x.trimester!) ?? .all
+                    yogaPlan.yogas = x.yogas?.allObjects as? [YogaNSObject] ?? []
                     
                     workoutPlans.append(yogaPlan);
                 }

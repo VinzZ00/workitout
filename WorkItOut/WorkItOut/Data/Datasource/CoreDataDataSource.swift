@@ -22,8 +22,7 @@ struct CoreDataDataSource : CoreDataDataSourceDelegate {
         
     }
     
-    func saveToCoreData<T : NSManagedObject>(entity : T, context : NSManagedObjectContext) async throws {
-        
+    func saveToCoreData(context : NSManagedObjectContext) async throws {
         do {
             try context.save()
         } catch let err {
