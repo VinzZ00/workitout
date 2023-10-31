@@ -2,15 +2,16 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B74" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="PoseNSObject" representedClassName="PoseNSObject" syncable="YES" codeGenerationType="class">
         <attribute name="bodyPartTrained" attributeType="String"/>
-        <attribute name="category" attributeType="String"/>
         <attribute name="difficulty" attributeType="String"/>
         <attribute name="exception" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="poseDescription" attributeType="String"/>
+        <attribute name="position" attributeType="String"/>
         <attribute name="recommendedTrimester" attributeType="String"/>
         <attribute name="relieve" attributeType="String"/>
         <attribute name="seconds" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="spineMovement" optional="YES" attributeType="String"/>
         <attribute name="state" attributeType="String"/>
         <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="video" optional="YES" attributeType="String"/>

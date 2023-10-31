@@ -8,7 +8,7 @@ import CoreData
 import XCTest
 @testable import WorkItOut
 
-final class WorkitOutTests: XCTestCase {
+final class WorkitOutTest: XCTestCase {
 
     var moc : NSManagedObjectContext?
     var addUsecase : AddYogaPlanUseCase?
