@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum YogaState {
+enum YogaState : String {
   case notCompleted
   case skipped
   case completed

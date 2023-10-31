@@ -8,11 +8,24 @@
 import Foundation
 
 enum Difficulty: String, UserPreference {
+    case beginner = "Beginner"
+    case intermediate = "Intermediate"
+    case advanced = "Advanced"
+    
+    func getDescription() -> String {
+        var desc = ""
+        switch self {
+        case .beginner:
+            desc = "None at all"
+        case .intermediate:
+            desc = "A little bit"
+        case .advanced:
+            desc = "I do yoga often"
+        }
+        return desc
+    }
+    
     func getString() -> String {
         return self.rawValue
     }
-    
-    case beginner = "None at all"
-    case intermediate = "A little bit"
-    case advanced = "I do yoga often"
 }

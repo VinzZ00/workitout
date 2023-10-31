@@ -14,8 +14,6 @@ struct AssessmentResultView: View {
     {
         self._yogaPlan = yogaPlan;
         let appearance = UINavigationBarAppearance()
-//        appearance.configureWithTransparentBackground()
-        //        appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
         appearance.backgroundColor = .orangePrimary
         appearance.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white

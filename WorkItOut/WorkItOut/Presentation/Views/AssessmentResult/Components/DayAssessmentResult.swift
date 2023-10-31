@@ -43,12 +43,12 @@ struct DayAssessment: View {
     }
 }
 
-#Preview {
-    DayAssessment(exercises: [
-        Pose(name: "Example Name", description: "Example Description", seconds: DateInterval(), state: .completed, category: .armBalance, recommendedTrimester: .first, bodyPartTrained: [.arms, .back], relieve: [.backpain, .breathing], difficulty: .beginner),
-        Pose(name: "Example Name", description: "Example Description", seconds: DateInterval(), state: .completed, category: .armBalance, recommendedTrimester: .first, bodyPartTrained: [.arms, .back], relieve: [.backpain, .breathing], difficulty: .beginner),
-        Pose(name: "Example Name", description: "Example Description", seconds: DateInterval(), state: .completed, category: .armBalance, recommendedTrimester: .first, bodyPartTrained: [.arms, .back], relieve: [.backpain, .breathing], difficulty: .beginner),
-    ],day: 1, bodyPart: "Upper Body", weekday: "Monday", timeOfDay: "Noon") {
-        print("clicked")
-    }
-}
+//#Preview {
+//    DayAssessment(exercises: [
+//        Pose(name: "Example Name", description: "Example Description", seconds: DateInterval(), state: .completed, category: .armBalance, recommendedTrimester: .first, bodyPartTrained: [.arms, .back], relieve: [.backpain, .breathing], difficulty: .beginner),
+//        Pose(name: "Example Name", description: "Example Description", seconds: DateInterval(), state: .completed, category: .armBalance, recommendedTrimester: .first, bodyPartTrained: [.arms, .back], relieve: [.backpain, .breathing], difficulty: .beginner),
+//        Pose(name: "Example Name", description: "Example Description", seconds: DateInterval(), state: .completed, category: .armBalance, recommendedTrimester: .first, bodyPartTrained: [.arms, .back], relieve: [.backpain, .breathing], difficulty: .beginner),
+//    ],day: 1, bodyPart: "Upper Body", weekday: "Monday", timeOfDay: "Noon") {
+//        print("clicked")
+//    }
+//}

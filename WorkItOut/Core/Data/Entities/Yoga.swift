@@ -6,21 +6,20 @@
 //
 
 import Foundation
-
+import CoreData
 //enum WorkoutState {
 //    case onProgress
 //    case finished
 //}
 
-struct Yoga: Identifiable, Hashable {
-    let id: UUID = UUID()
-    var poses : [Pose] = []
-    var date : Day = .monday
-    var estimationDuration : DateInterval {
-        return DateInterval()
-    }
+struct Yoga: Identifiable, Hashable, Entity {
+    var id = UUID()
+    var name : String
+    var poses : [Pose]
+    var day : Day
+    var estimationDuration : Int
     var yogaState : YogaState = .notCompleted
-    var image: String?
+    var image: String
     
     static func == (lhs: Yoga, rhs: Yoga) -> Bool {
         return lhs.id == rhs.id
@@ -29,7 +28,19 @@ struct Yoga: Identifiable, Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
+    
+    func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject{
+        let yoga = YogaNSObject(context: context)
+        yoga.uuid = UUID()
+        yoga.name = self.name
+        yoga.day = self.day.rawValue
+        yoga.poses = NSSet(array: self.poses)
+        yoga.estimationDuration = Int32(self.estimationDuration)
+        yoga.yogaState = self.yogaState.rawValue
+        yoga.image = self.image
+        return yoga;
+    }
 
 }
 
-//Workout().getDesiredDate(desired: [.])
+

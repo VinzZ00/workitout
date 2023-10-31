@@ -7,17 +7,18 @@
 
 import Foundation
 
-enum BodyPart {
+enum BodyPart : String {
     //middle
-    case core
-    case back
+    case core = "Core"
+    case back = "Back"
     
     //upper
-    case arms
-    case neck
-    case shoulders
+    case arms = "Arms"
+    case chest = "Chest"
+    case neck = "Neck"
+    case shoulders = "Shoulders"
     
     //lower
-    case legs
-    case glutes
+    case legs = "Legs"
+    case glutes = "Glutes"
 }
