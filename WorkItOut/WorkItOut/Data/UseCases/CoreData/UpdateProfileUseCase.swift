@@ -13,7 +13,7 @@ struct UpdateProfileUseCase {
     
     func call(profile : Profile, context : NSManagedObjectContext) async {
         do {
-            try await repository.coreData.updateToCoreData(entity: profile, context: context)
+            try await repository.coreData.updateToCoreData(entity: profile.intoNSObject(context: context), context: context)
         } catch let err {
             fatalError("Error update workout: \(err.localizedDescription)")
         }

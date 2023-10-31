@@ -17,11 +17,10 @@ struct Profile : Entity {
         profilens.currentRelieveNeeded = self.currentRelieveNeeded.map{$0.rawValue}.joined(separator: ", ")
         profilens.daysAvailable = self.daysAvailable.map{$0.rawValue}.joined(separator: ", ")
         profilens.fitnessLevel = self.fitnessLevel.rawValue
-        profilens.plan?.addingObjects(from: self.plan.map{$0.ofProfile = profilens})
+        profilens.plan?.addingObjects(from: self.plan.map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)})
         profilens.timeOfDay = self.timeOfDay.rawValue
-        
-        //TODO: MASUKIN HISTORY
-        
+        profilens.histories?.addingObjects(from: self.histories.map{
+            $0.intoNSObject(context: context, parentProfileNS: profilens)})
         profilens.preferredDuration = self.preferredDuration.rawValue
         
         return profilens
@@ -34,12 +33,12 @@ struct Profile : Entity {
     var daysAvailable: [Day]
     var timeOfDay: TimeOfDay
     var preferredDuration: Duration
-    var plan : [YogaPlanNSObject] // Pasti 3
-    var histories : [HistoryNSObject]
+    var plan : [YogaPlan] // Pasti 3
+    var histories : [History]
     
-    func getCurrentYogaPlan() -> YogaPlan {
-        return YogaPlan()
-    }
+//    func getCurrentYogaPlan() -> YogaPlan {
+//        return self.plan
+//    }
     
     func getCurrentYogaDay() {
         
