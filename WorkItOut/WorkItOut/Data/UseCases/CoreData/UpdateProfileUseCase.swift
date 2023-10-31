@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct UpdateYogaPlanUsecase {
+struct UpdateProfileUseCase {
     var repository = Repository()
     
     func call(profile : Profile, context : NSManagedObjectContext) async {

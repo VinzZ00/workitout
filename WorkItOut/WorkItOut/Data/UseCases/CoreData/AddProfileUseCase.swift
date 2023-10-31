@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct AddProfile {
+struct AddProfileUseCase {
     var repository : Repository = Repository()
     
     func call(profile : Profile, context : NSManagedObjectContext) async {

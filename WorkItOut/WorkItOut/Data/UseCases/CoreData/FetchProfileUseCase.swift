@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct FetchYogaPlanUsecase{
+struct FetchProfileUseCase{
     
     let repository = Repository()
     
@@ -21,17 +21,17 @@ struct FetchYogaPlanUsecase{
             case .success(let data) :
                 for x in data as? [ProfileNSObject] ?? [] {
                     
-                    var profile = Profile(
-                        name: x.name ?? "No Name",
-                        currentPregnancyWeek: Int(x.currentPregnancyWeek),
-                        currentRelieveNeeded: x.currentRelieveNeeded?.split(separator: ", ").map{Relieve(rawValue: String($0))!} ?? [],
-                        fitnessLevel: Difficulty(rawValue: x.fitnessLevel!)!,
-                        daysAvailable: x.daysAvailable!.split(separator: ", ").map{Day(rawValue: String($0))!},
-                        timeOfDay: TimeOfDay(rawValue: x.timeOfDay!)!,
-                        preferredDuration: Duration(rawValue: x.preferredDuration!)!,
-                        plan: x.plan?.allObjects as? [YogaPlanNSObject] ?? [],
-                        histories: x.histories?.allObjects as? [HistoryNSObject] ?? []
-                    )
+//                    var profile = Profile(
+//                        name: x.name ?? "No Name",
+//                        currentPregnancyWeek: Int(x.currentPregnancyWeek),
+//                        currentRelieveNeeded: x.currentRelieveNeeded?.split(separator: ", ").map{Relieve(rawValue: String($0))!} ?? [],
+//                        fitnessLevel: Difficulty(rawValue: x.fitnessLevel!)!,
+//                        daysAvailable: x.daysAvailable!.split(separator: ", ").map{Day(rawValue: String($0))!},
+//                        timeOfDay: TimeOfDay(rawValue: x.timeOfDay!)!,
+//                        preferredDuration: Duration(rawValue: x.preferredDuration!)!,
+//                        plan: x.plan?.allObjects as? [YogaPlanNSObject] ?? [],
+//                        histories: x.histories?.allObjects as? [HistoryNSObject] ?? []
+//                    )
                     
 //                    profile.yogas = x.yogas?.allObjects as? [YogaNSObject] ?? []
 //                    
@@ -39,7 +39,7 @@ struct FetchYogaPlanUsecase{
 //                    profile.name = x.name!
                     
                     
-                    workoutPlans.append(profile);
+                    workoutPlans.append(x.intoObject());
                 }
             case .failure(let err) :
                 fatalError("Error getting workout : \(err.localizedDescription)")
