@@ -9,7 +9,6 @@ import Foundation
 
 @MainActor
 class TestFetchFirebaseViewModel : ObservableObject {
-//    var useCase = GetYogaPosesUseCase()
     var firestore = FireStoreManager.shared
     @Published var poses : [RequestYogaPose] = []
     
