@@ -30,3 +30,62 @@
 //        return exercisesReq;
 //    }
 //}
+
+struct GetYogaPosesUseCase {
+    let db = FireStoreManager()
+    
+    func call() async -> [RequestYogaPose] {
+        var requests : [RequestYogaPose] = []
+        
+        db.getCollection(collectionName: FirebaseConstant.YogaPoseConstants.collectionName) { querySnapShot in
+            querySnapShot.documents.forEach { doc in
+                let poseName = doc.data()[FirebaseConstant.YogaPoseConstants.name] as! String
+                let altName = doc.data()[FirebaseConstant.YogaPoseConstants.altName] as! String
+                
+                let bodyPartRequests = doc.data()[FirebaseConstant.YogaPoseConstants.bodyPartTrained] as! String
+                let bodyParts = bodyPartRequests.components(separatedBy: ",")
+                let bodyPartsEnum = bodyParts.map({BodyPart(rawValue: $0) ?? .arms})
+                
+                let difficultyString = doc.data()[FirebaseConstant.YogaPoseConstants.difficulty] as! String
+                guard let difficulty = Difficulty(rawValue: difficultyString) else{
+                    return
+                }
+                
+                let exceptionRequests = doc.data()[FirebaseConstant.YogaPoseConstants.exceptions] as! String
+                let exceptions = exceptionRequests.components(separatedBy: ",")
+                
+                let position = doc.data()[FirebaseConstant.YogaPoseConstants.position] as! String
+                
+                let recommendedTrimesterRequest = doc.data()[FirebaseConstant.YogaPoseConstants.recommendedTrimester] as! String
+                guard let trimester = Trimester(rawValue: recommendedTrimesterRequest) else {
+                    return
+                }
+                
+                let relieveRequests = doc.data()[FirebaseConstant.YogaPoseConstants.relieves] as! String
+                let relieves = relieveRequests.components(separatedBy: ",")
+                
+                let spineMovementRequests = doc.data()[FirebaseConstant.YogaPoseConstants.spineMovement] as! String
+                guard let spineMovement = PoseCategory(rawValue: spineMovementRequests) else{
+                    return
+                }
+                
+                let requestYogaPose = RequestYogaPose(name: poseName, altName: altName, difficulty: difficulty, position: position, recommendedTrimester: trimester, spineMovement: spineMovement, bodyPartTrained: bodyPartsEnum, exception: exceptions)
+                
+                requests.append(requestYogaPose)
+            }
+        }
+        
+        return requests
+    }
+}
+
+struct RequestYogaPose {
+    var name : String
+    var altName : String
+    var difficulty : Difficulty
+    var position : String
+    var recommendedTrimester : Trimester
+    var spineMovement : PoseCategory
+    var bodyPartTrained : [BodyPart]
+    var exception : [String]
+}

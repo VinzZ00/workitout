@@ -32,5 +32,18 @@ extension FirebaseConstant {
         
         private init() {}
     }
+    
+    struct YogaPoseConstants {
+        static let collectionName = "Yoga"
+        static let name = "yogaPose"
+        static let altName = "altName"
+        static let bodyPartTrained = "bodyPartTrained"
+        static let difficulty = "difficulty"
+        static let exceptions = "exceptions"
+        static let position = "position"
+        static let recommendedTrimester = "recommendedTrimester"
+        static let relieves = "relieves"
+        static let spineMovement = "spineMovement"
+    }
 }
 
