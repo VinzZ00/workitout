@@ -9,7 +9,6 @@ import Foundation
 import FirebaseFirestore
 
 struct FireStoreManager {
-    
     static let shared = FireStoreManager();
     private init(){
         

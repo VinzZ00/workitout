@@ -8,7 +8,7 @@
 import Foundation
 
 class AssessmentViewModel : ObservableObject {
-    @Published var day : [Day] = [.monday]
+    @Published var days : [Day] = [.monday]
     @Published var timeClock : TimeOfDay = .morning
     @Published var durationExercise : Duration = .fiveteenMinutes
     @Published var timeSpan : Months = .oneMonth
@@ -18,6 +18,25 @@ class AssessmentViewModel : ObservableObject {
     
     @Published var state : AssessmentState = .chooseDay
     @Published var buttonDisable = false
+    @Published var finishCreateYogaPlan: Bool = false   
+    
+    let pm: PoseManager = PoseManager()
+    
+    
+    
+    public func createYogas() -> [Yoga] {
+        var yogas: [Yoga] = []
+        for day in days {
+            yogas.append(Yoga(name: "Test Yoga Name", poses: [pm.poses.randomElement()!, pm.poses.randomElement()!, pm.poses.randomElement()!], day: day, estimationDuration: 3, image: "ExampleImage.png"))
+        }
+        return yogas
+    }
+    
+    public func createYogaPlan() -> YogaPlan {
+        var yogaPlan: YogaPlan = YogaPlan(name: "Yoga Plan Name", yogas: self.createYogas(), trimester: .second)
+        
+        return yogaPlan
+    }
     
     public func nextState(){
         switch state {

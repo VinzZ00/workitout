@@ -15,7 +15,7 @@ struct AssessmentView: View {
             VStack{
                 switch avm.state {
                     case .chooseDay:
-                        AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $avm.day, selections: Day.allCases, limit: 3)
+                        AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $avm.days, selections: Day.allCases, limit: 3)
                     case .chooseTime:
                         AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeOfDay.allCases)
                     case .chooseDuration:
@@ -32,9 +32,12 @@ struct AssessmentView: View {
                         CompleteView()
                 }
             }
+            .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
+                GeneratePlanView()
+            }
             .padding(.horizontal, 15)
             Spacer()
-            .onChange(of: avm.day.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
+            .onChange(of: avm.days.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
                 avm.buttonDisable = newValue
             })
             .toolbar{
@@ -60,12 +63,18 @@ struct AssessmentView: View {
                 .buttonStyle(BorderedDisabledButton())
             }
             else if avm.state == .complete {
-                NavigationLink {
-                    GeneratePlanView()
-                } label: {
-                    Text("Next")
+                Button("Next"){
+                    withAnimation {
+                        avm.finishCreateYogaPlan.toggle()
+                    }
                 }
-                .buttonStyle(BorderedDisabledButton())
+                .buttonStyle(BorderedButton())
+//                NavigationLink {
+//                    GeneratePlanView()
+//                } label: {
+//                    Text("Next")
+//                }
+//                .buttonStyle(BorderedDisabledButton())
 
             }
             else {
