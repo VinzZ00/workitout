@@ -26,7 +26,8 @@ struct Pose: Identifiable, Hashable, Entity {
     var seconds : Int
     var state : YogaState
 
-    var category : PoseCategory
+    var position : Position
+    var spineMovement : SpineMovement
     var recommendedTrimester : Trimester
     var bodyPartTrained : [BodyPart]
     var relieve: [Relieve]
@@ -43,7 +44,8 @@ struct Pose: Identifiable, Hashable, Entity {
         pose.poseDescription = self.description
         pose.seconds = Int32(self.seconds)
         pose.state = self.state.rawValue
-        pose.category = self.category.rawValue
+        pose.position = self.position.rawValue
+        pose.spineMovement = self.spineMovement.rawValue
         pose.recommendedTrimester = self.recommendedTrimester.rawValue
         pose.relieve = self.relieve.map{$0.rawValue}.joined(separator: ", ")
         pose.bodyPartTrained = self.bodyPartTrained.map{$0.rawValue}.joined(separator: ", ")

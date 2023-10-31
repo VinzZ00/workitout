@@ -46,7 +46,6 @@
 		AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC02AEA62E200C8ED8A /* CameraView.swift */; };
 		AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */; };
 		AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC72AEA751500C8ED8A /* Array.swift */; };
-		AC8E62582AF0E8CD00776538 /* WorkitOutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E62572AF0E8CD00776538 /* WorkitOutTest.swift */; };
 		ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCACC2AE907E4007159F2 /* workoutListCard.swift */; };
 		ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */; };
 		ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */; };
@@ -131,7 +130,6 @@
 		AC71EEC02AEA62E200C8ED8A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPoint.swift; sourceTree = "<group>"; };
 		AC71EEC72AEA751500C8ED8A /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		AC8E62572AF0E8CD00776538 /* WorkitOutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkitOutTest.swift; sourceTree = "<group>"; };
 		ACABCACC2AE907E4007159F2 /* workoutListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutListCard.swift; sourceTree = "<group>"; };
 		ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAssessmentResult.swift; sourceTree = "<group>"; };
 		ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentResultView.swift; sourceTree = "<group>"; };
@@ -514,7 +512,6 @@
 			isa = PBXGroup;
 			children = (
 				ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */,
-				AC8E62572AF0E8CD00776538 /* WorkitOutTest.swift */,
 			);
 			path = WorkItOutTests;
 			sourceTree = "<group>";
@@ -776,7 +773,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC8E62582AF0E8CD00776538 /* WorkitOutTest.swift in Sources */,
 				ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1030,7 +1026,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -1063,7 +1059,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

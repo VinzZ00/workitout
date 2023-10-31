@@ -34,7 +34,7 @@ final class WorkitOutTest: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testExample() throws {
+    func testExample() async throws {
         if let moc = self.moc {
             
             testRecord = YogaPlan()
@@ -43,12 +43,12 @@ final class WorkitOutTest: XCTestCase {
             testRecord?.trimester = .all
             testRecord?.yogas = [
                 Yoga(name: "Testing yoga1", poses: [
-                    Pose(name: "test pose 1", description: "Descriptiontesting pose", seconds: 10, state: .notCompleted, category: .stand, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.vertigo], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject,
-                    Pose(name: "test pose 2", description: "Description2testing pose", seconds: 10, state: .notCompleted, category: .stand, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.none], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject
+                    Pose(name: "test pose 1", description: "Descriptiontesting pose", seconds: 10, state: .notCompleted, position: .stand, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.vertigo], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject,
+                    Pose(name: "test pose 2", description: "Description2testing pose", seconds: 10, state: .notCompleted, position: .stand, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.none], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject
                 ], day: .monday, estimationDuration: 29, image: "testingImage1").intoNSObject(context: moc) as! YogaNSObject,
                 Yoga(name: "Testing yoga2", poses: [
-                    Pose(name: "test pose 1", description: "Descriptiontesting pose", seconds: 10, state: .notCompleted, category: .stand, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.vertigo], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject,
-                    Pose(name: "test pose 2", description: "Description2testing pose", seconds: 10, state: .notCompleted, category: .stand, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.none], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject
+                    Pose(name: "test pose 1", description: "Descriptiontesting pose", seconds: 10, state: .notCompleted, position: .stand, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.vertigo], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject,
+                    Pose(name: "test pose 2", description: "Description2testing pose", seconds: 10, state: .notCompleted, position: .stand, spineMovement: .backBend,  recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.none], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject
                 ], day: .monday, estimationDuration: 29, image: "testingImage2").intoNSObject(context: moc) as! YogaNSObject
             ]
             
