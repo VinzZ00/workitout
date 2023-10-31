@@ -26,14 +26,14 @@ class DataManager: ObservableObject {
         var yogas: [Yoga] = []
         
         for day in days {
-            yogas.append(Yoga(name: "Test Yoga Name", poses: [pm.poses.randomElement()!, pm.poses.randomElement()!, pm.poses.randomElement()!], day: day, estimationDuration: 3, image: "ExampleImage.png"))
+            yogas.append(Yoga(name: "Test Yoga Name", poses: [], day: day, estimationDuration: 3, image: "ExampleImage.png"))
         }
         
         return yogas
     }
     
     public func createYogaPlan() -> YogaPlan {
-        let yogaPlan: YogaPlan = YogaPlan(name: "Yoga Plan Name", yogas: self.createYogas(days: profile.daysAvailable), trimester: .second)
+        let yogaPlan: YogaPlan = YogaPlan(name: "Yoga Plan Name", yogas: [], trimester: .second)
         
         return yogaPlan
     }
