@@ -8,15 +8,15 @@
 import Foundation
 import CoreData
 
-struct AddYogaPlanUsecase {
+struct AddYogaPlanUseCase {
     var repository : Repository = Repository()
     
     func call(yogaPlan : YogaPlan, context : NSManagedObjectContext) async {
         
-        var yogaPlanNS = yogaPlan.intoNSObject(context: context);
+        let nsWorkoutPlan = yogaPlan
         
         do {
-            try await repository.coreData.saveToCoreData(context: context)
+            try await repository.coreData.saveToCoreData(entity: yogaPlan.intoNSObject(context: context), context: context)
         } catch let err{
             fatalError("Failed to save to coredata: \(err.localizedDescription)")
         }

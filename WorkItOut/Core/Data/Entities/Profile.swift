@@ -21,9 +21,9 @@ struct Profile {
     func getCurrentYogaPlan() -> YogaPlan {
         return YogaPlan()
     }
-    func getCurrentYogaDay() -> Yoga {
-        return Yoga(name: "", poses: [], day: .friday, estimationDuration: 2, image: "")
-    }
+//    func getCurrentYogaDay() -> Yoga {
+//        return Yoga()
+//    }
     func appendHistory() {
         
     }

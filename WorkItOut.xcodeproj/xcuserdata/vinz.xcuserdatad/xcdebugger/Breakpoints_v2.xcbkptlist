@@ -223,6 +223,38 @@
             endingLineNumber = "28"
             landmarkName = "intoNSObject(context:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2E618943-315D-4124-BE22-12AAEB18582B - 904921550d9a4155"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.YogaPlan.intoNSObject(context: __C.NSManagedObjectContext) -&gt; __C.NSManagedObject"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/Core/Data/Entities/YogaPlan.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "2E618943-315D-4124-BE22-12AAEB18582B - b2bc07a8a57ead85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (WorkItOut.YogaNSObject) -&gt; Any in WorkItOut.YogaPlan.intoNSObject(context: __C.NSManagedObjectContext) -&gt; __C.NSManagedObject"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/Core/Data/Entities/YogaPlan.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -377,6 +409,21 @@
                   startingLineNumber = "70"
                   endingLineNumber = "70"
                   offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "34612F92-96EC-4BCC-9CB3-EE68C18BB914 - 6e413ef679c2786a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOutTests.WorkItOutTests.testPerformanceExample() throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -701,6 +748,66 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for WorkItOut.AddYogaPlanUsecase.call(yogaPlan: WorkItOut.YogaPlan, context: __C.NSManagedObjectContext) async -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/AddYogaPlan.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "3405860B-0235-4CDE-B156-5383B0736BCA - e659ca2978550101"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOut.AddYogaPlanUseCase.call(yogaPlan: WorkItOut.YogaPlan, context: __C.NSManagedObjectContext) async -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/AddYogaPlan.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "3405860B-0235-4CDE-B156-5383B0736BCA - ad7584236b1c5b16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for WorkItOut.AddYogaPlanUseCase.call(yogaPlan: WorkItOut.YogaPlan, context: __C.NSManagedObjectContext) async -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/AddYogaPlan.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "3405860B-0235-4CDE-B156-5383B0736BCA - 32052fc81c6fbd07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.AddYogaPlanUseCase.call(yogaPlan: WorkItOut.YogaPlan, context: __C.NSManagedObjectContext) async -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/AddYogaPlan.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "3405860B-0235-4CDE-B156-5383B0736BCA - 17d49e78621b1b04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for WorkItOut.AddYogaPlanUseCase.call(yogaPlan: WorkItOut.YogaPlan, context: __C.NSManagedObjectContext) async -&gt; ()"
                   moduleName = "WorkItOut"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/AddYogaPlan.swift"

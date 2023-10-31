@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 struct YogaPlan : Identifiable, Entity {
-    var id : UUID = UUID()
+    var id: UUID = UUID()
     var name: String = ""
     var yogas: [YogaNSObject] = []
     var trimester: Trimester = .all
@@ -25,9 +25,7 @@ struct YogaPlan : Identifiable, Entity {
         let yogaPlan = YogaPlanNSObject(context: context)
         yogaPlan.uuid = UUID()
         yogaPlan.name = self.name
-        yogaPlan.yogas?.addingObjects(from: self.yogas.map{
-            $0.ofYogaPlan = yogaPlan
-        })
+        yogaPlan.yogas?.addingObjects(from: self.yogas.map{$0.ofYogaPlan = yogaPlan})
         yogaPlan.trimester = self.trimester.rawValue
         
         return yogaPlan

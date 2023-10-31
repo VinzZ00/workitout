@@ -29,13 +29,12 @@ struct Yoga: Identifiable, Hashable, Entity {
         hasher.combine(id)
     }
     
-    
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject{
         let yoga = YogaNSObject(context: context)
         yoga.uuid = UUID()
         yoga.name = self.name
         yoga.day = self.day.rawValue
-        yoga.poses?.addingObjects(from: self.poses)
+        yoga.poses?.addingObjects(from: poses.map{$0.ofYoga =  yoga})
         yoga.estimationDuration = Int32(self.estimationDuration)
         yoga.yogaState = self.yogaState.rawValue
         yoga.image = self.image
