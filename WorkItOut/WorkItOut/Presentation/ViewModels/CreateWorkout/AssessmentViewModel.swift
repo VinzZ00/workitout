@@ -20,22 +20,11 @@ class AssessmentViewModel : ObservableObject {
     @Published var buttonDisable = false
     @Published var finishCreateYogaPlan: Bool = false   
     
-    let pm: PoseManager = PoseManager()
+    let dm: DataManager = DataManager()
     
-    
-    
-    public func createYogas() -> [Yoga] {
-        var yogas: [Yoga] = []
-        for day in days {
-            yogas.append(Yoga(name: "Test Yoga Name", poses: [pm.poses.randomElement()!, pm.poses.randomElement()!, pm.poses.randomElement()!], day: day, estimationDuration: 3, image: "ExampleImage.png"))
-        }
-        return yogas
-    }
-    
-    public func createYogaPlan() -> YogaPlan {
-        var yogaPlan: YogaPlan = YogaPlan(name: "Yoga Plan Name", yogas: self.createYogas(), trimester: .second)
+    public func createYogaPlan() {
+        dm.createProfile(name: "User Name", currentWeek: Date.now, currentRelieveNeeded: relieve, fitnessLevel: experience, daysAvailable: days, timeOfDay: timeClock, preferredDuration: durationExercise, plan: [], histories: [])
         
-        return yogaPlan
     }
     
     public func nextState(){

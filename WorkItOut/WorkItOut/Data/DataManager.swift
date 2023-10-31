@@ -9,11 +9,15 @@ import Foundation
 
 class DataManager: ObservableObject {
     let pm: PoseManager = PoseManager()
-    static var profile: Profile?
+    var profile: Profile
+    
+    init() {
+        profile = Profile(name: "", currentWeek: Date.now, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [], timeOfDay: .morning, preferredDuration: .fiveteenMinutes, plan: [], histories: [])
+    }
     
     public func createProfile(name: String, currentWeek: Date, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {
         
-        var profile: Profile = Profile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
+        let profile: Profile = Profile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
         
         return profile
     }
