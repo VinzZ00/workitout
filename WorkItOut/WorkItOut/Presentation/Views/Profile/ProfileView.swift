@@ -8,11 +8,40 @@
 import SwiftUI
 
 struct ProfileView: View {
+    var viewModel = ProfileViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            VStack{
+                VStack(alignment: .leading){
+                    Text("Pregnancy & Health Condition")
+                        .foregroundStyle(.gray)
+                        .bold()
+                        .padding(.top, 14)
+                    ProfileCard(assessmentState: .chooseMonth, value: viewModel.profile.currentWeek.formatted(date: .abbreviated, time: .omitted))
+                    ProfileCard(assessmentState: .chooseRelieve, value: "None")
+                }
+                .padding(.bottom, 24)
+                VStack(alignment: .leading){
+                    Text("Yoga Plan")
+                        .foregroundStyle(.gray)
+                        .bold()
+                    ProfileCard(assessmentState: .chooseDay, value: viewModel.convertToString(days: viewModel.profile.daysAvailable))
+                    ProfileCard(assessmentState: .chooseDuration, value: viewModel.profile.preferredDuration.rawValue)
+                    ProfileCard(assessmentState: .chooseTime, value: viewModel.profile.timeOfDay.rawValue)
+                    ProfileCard(assessmentState: .chooseExperience, value: viewModel.profile.fitnessLevel.rawValue)
+                }
+                .padding(.bottom, 24)
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 20)
+            .navigationTitle("Profile")
+        }
     }
 }
 
 #Preview {
-    ProfileView()
+    NavigationStack{
+        ProfileView()
+    }
+    
 }
