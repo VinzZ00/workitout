@@ -40,6 +40,10 @@ struct Yoga: Identifiable, Hashable, Entity {
         yoga.image = self.image
         return yoga;
     }
+    
+    func intoYoga(yogaNS : YogaNSObject) -> Yoga {
+        return .init(name: <#T##String#>, poses: yogaNS.poses.map{$0.intoPose()}, day: <#T##Day#>, estimationDuration: <#T##Int#>, image: <#T##String#>)
+    }
 
 }
 

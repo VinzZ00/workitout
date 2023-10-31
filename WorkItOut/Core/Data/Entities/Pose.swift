@@ -54,6 +54,10 @@ struct Pose: Identifiable, Hashable, Entity {
         
         return pose;
     }
+    
+    func intoPose() -> Pose? {
+        return nil
+    }
 }
 
 

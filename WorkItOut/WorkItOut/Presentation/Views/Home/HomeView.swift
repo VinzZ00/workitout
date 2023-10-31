@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
-   
+//    @Environment(\.managedObjectContext) var moc 
     
     var body: some View {
         VStack {
