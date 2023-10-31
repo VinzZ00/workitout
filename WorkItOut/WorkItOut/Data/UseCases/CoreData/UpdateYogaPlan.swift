@@ -11,9 +11,9 @@ import CoreData
 struct UpdateYogaPlanUsecase {
     var repository = Repository()
     
-    func call(yogaPlan : YogaPlan, context : NSManagedObjectContext) async {
+    func call(profile : Profile, context : NSManagedObjectContext) async {
         do {
-            try await repository.coreData.updateToCoreData(entity: yogaPlan, context: context)
+            try await repository.coreData.updateToCoreData(entity: profile, context: context)
         } catch let err {
             fatalError("Error update workout: \(err.localizedDescription)")
         }

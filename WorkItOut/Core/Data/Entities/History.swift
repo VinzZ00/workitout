@@ -6,9 +6,25 @@
 //
 
 import Foundation
+import CoreData
 
-struct History {
-  var yogaDone : Yoga
-  var executionDate : Date
-  var duration : TimeInterval
+struct History : Entity {
+    func intoNSObject(context: NSManagedObjectContext) -> NSManagedObject {
+        let historyNS = HistoryNSObject(context: context)
+        historyNS.id = UUID();
+        historyNS.executionDate = self.executionDate
+        historyNS.rating = Int16(self.rating)
+        historyNS.duration = Int32(self.duration)
+        historyNS.yogaDone?.addingObjects(from: self.yogaDone.map{$0.ofHistory = historyNS})
+        
+        return historyNS;
+    }
+    
+    
+    var yogaDone : [YogaNSObject]
+    var executionDate : Date
+    var duration : Int
+    var rating : Int
+    
+    
 }

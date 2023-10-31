@@ -12,24 +12,34 @@ struct FetchYogaPlanUsecase{
     
     let repository = Repository()
     
-    func call(context : NSManagedObjectContext) async -> [YogaPlan]{
+    func call(context : NSManagedObjectContext) async -> [Profile]{
         
-        var workoutPlans : [YogaPlan] = []
+        var workoutPlans : [Profile] = []
         
         do {
-            switch try await repository.coreData.fetchFromCoreData(context: context, entity: YogaPlanNSObject.self) {
+            switch try await repository.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
             case .success(let data) :
-                for x in data as? [YogaPlanNSObject] ?? [] {
+                for x in data as? [ProfileNSObject] ?? [] {
                     
-                    var yogaPlan = YogaPlan()
+                    var profile = Profile(
+                        name: x.name ?? "No Name",
+                        currentPregnancyWeek: Int(x.currentPregnancyWeek),
+                        currentRelieveNeeded: x.currentRelieveNeeded?.split(separator: ", ").map{Relieve(rawValue: String($0))!} ?? [],
+                        fitnessLevel: Difficulty(rawValue: x.fitnessLevel!)!,
+                        daysAvailable: x.daysAvailable!.split(separator: ", ").map{Day(rawValue: String($0))!},
+                        timeOfDay: TimeOfDay(rawValue: x.timeOfDay!)!,
+                        preferredDuration: Duration(rawValue: x.preferredDuration!)!,
+                        plan: x.plan?.allObjects as? [YogaPlanNSObject] ?? [],
+                        histories: x.histories?.allObjects as? [HistoryNSObject] ?? []
+                    )
                     
-                    yogaPlan.yogas = x.yogas?.allObjects as? [YogaNSObject] ?? []
+//                    profile.yogas = x.yogas?.allObjects as? [YogaNSObject] ?? []
+//                    
+//                    profile.id = x.uuid!
+//                    profile.name = x.name!
                     
-                    yogaPlan.id = x.uuid!
-                    yogaPlan.name = x.name!
-                    yogaPlan.trimester = Trimester(rawValue: x.trimester!) ?? .all
                     
-                    workoutPlans.append(yogaPlan);
+                    workoutPlans.append(profile);
                 }
             case .failure(let err) :
                 fatalError("Error getting workout : \(err.localizedDescription)")
