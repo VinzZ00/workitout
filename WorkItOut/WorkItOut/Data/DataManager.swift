@@ -9,32 +9,33 @@ import Foundation
 
 class DataManager: ObservableObject {
     let pm: PoseManager = PoseManager()
-    var profile: Profile
+    @Published var profile: Profile = Profile()
     
-    init() {
-        profile = Profile(name: "", currentWeek: Date.now, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [], timeOfDay: .morning, preferredDuration: .fiveteenMinutes, plan: [], histories: [])
+    public func setUpProfile(name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) {
+        self.profile = createProfile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
+        
+        for trimester in Trimester.allCases {
+            profile.plan.append(createYogaPlan(trimester: trimester))
+        }
     }
     
-    public func createProfile(name: String, currentWeek: Date, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {
-        
-        let profile: Profile = Profile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
-        
-        return profile
+    public func createProfile(name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {
+        return Profile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
     }
     
-    public func createYogas(days: [Day]) -> [Yoga] {
+    public func createYogas() -> [Yoga] {
         var yogas: [Yoga] = []
+        var days = profile.daysAvailable
         
         for day in days {
-            yogas.append(Yoga(name: "Test Yoga Name", poses: [], day: day, estimationDuration: 3, image: "ExampleImage.png"))
+            yogas.append(Yoga(name: "Yoga Name", poses: [], day: day, estimationDuration: 20, image: "ExampleImage.png"))
         }
         
         return yogas
     }
     
-    public func createYogaPlan() -> YogaPlan {
-        let yogaPlan: YogaPlan = YogaPlan(name: "Yoga Plan Name", yogas: [], trimester: .second)
-        
+    public func createYogaPlan(trimester: Trimester) -> YogaPlan {
+        var yogaPlan: YogaPlan = YogaPlan(name: "Yoga Plan Name", yogas: createYogas(), trimester: trimester)
         return yogaPlan
     }
 }

@@ -20,11 +20,10 @@ class AssessmentViewModel : ObservableObject {
     @Published var buttonDisable = false
     @Published var finishCreateYogaPlan: Bool = false   
     
-    let dm: DataManager = DataManager()
+    @Published var dm: DataManager = DataManager()
     
-    public func createYogaPlan() {
-        dm.createProfile(name: "User Name", currentWeek: Date.now, currentRelieveNeeded: relieve, fitnessLevel: experience, daysAvailable: days, timeOfDay: timeClock, preferredDuration: durationExercise, plan: [], histories: [])
-        
+    public func setUpProfile() {
+        dm.setUpProfile(name: "user name", currentWeek: 10, currentRelieveNeeded: self.relieve, fitnessLevel: self.experience, daysAvailable: self.days, timeOfDay: self.timeClock, preferredDuration: self.durationExercise, plan: [], histories: [])
     }
     
     public func nextState(){

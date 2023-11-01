@@ -8,15 +8,15 @@
 import Foundation
 
 struct Profile {
-    var name: String
-    var currentWeek: Date
-    var currentRelieveNeeded: [Relieve]
-    var fitnessLevel: Difficulty
-    var daysAvailable: [Day]
-    var timeOfDay: TimeOfDay
-    var preferredDuration: Duration
-      var plan : [YogaPlan] // Pasti 3
-      var histories : [History]
+    var name: String = "Test Name"
+    var currentWeek: Int = 10
+    var currentRelieveNeeded: [Relieve] = []
+    var fitnessLevel: Difficulty = .beginner
+    var daysAvailable: [Day] = []
+    var timeOfDay: TimeOfDay = .morning
+    var preferredDuration: Duration = .fiveteenMinutes
+    var plan : [YogaPlan] = [] // Pasti 3 =
+    var histories : [History] = []
   
     func getCurrentYogaPlan() -> YogaPlan {
         return YogaPlan()

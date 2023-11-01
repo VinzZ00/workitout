@@ -12,10 +12,10 @@ import CoreData
 //    case finished
 //}
 
-struct Yoga: Identifiable, Hashable, Entity {
+struct Yoga: Identifiable, Hashable/*, Entity*/ {
     var id = UUID()
     var name : String
-    var poses : [PoseNSObject]
+    var poses : [Pose]
     var day : Day
     var estimationDuration : Int
     var yogaState : YogaState = .notCompleted
@@ -29,17 +29,17 @@ struct Yoga: Identifiable, Hashable, Entity {
         hasher.combine(id)
     }
     
-    func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject{
-        let yoga = YogaNSObject(context: context)
-        yoga.uuid = UUID()
-        yoga.name = self.name
-        yoga.day = self.day.rawValue
-        yoga.poses?.addingObjects(from: poses.map{$0.ofYoga =  yoga})
-        yoga.estimationDuration = Int32(self.estimationDuration)
-        yoga.yogaState = self.yogaState.rawValue
-        yoga.image = self.image
-        return yoga;
-    }
+//    func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject{
+//        let yoga = YogaNSObject(context: context)
+//        yoga.uuid = UUID()
+//        yoga.name = self.name
+//        yoga.day = self.day.rawValue
+//        yoga.poses?.addingObjects(from: poses.map{$0.ofYoga =  yoga})
+//        yoga.estimationDuration = Int32(self.estimationDuration)
+//        yoga.yogaState = self.yogaState.rawValue
+//        yoga.image = self.image
+//        return yoga;
+//    }
 
 }
 

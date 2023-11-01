@@ -19,7 +19,7 @@ class PoseManager: ObservableObject {
     func getPoses() {
         var firebasePoses = getFirebasePoses()
         for pose in firebasePoses {
-            poses.append(Pose(name: pose.name, description: "Test Description", seconds: 5, state: .notCompleted, position: pose.position, recommendedTrimester: pose.recommendedTrimester, spineMovement: pose.spineMovement, bodyPartTrained: pose.bodyPartTrained, relieve: [], difficulty: pose.difficulty))
+            poses.append(Pose(name: pose.name, description: "Test Description", seconds: 5, state: .notCompleted, position: pose.position, spineMovement: pose.spineMovement, recommendedTrimester: pose.recommendedTrimester, bodyPartTrained: pose.bodyPartTrained, relieve: [], difficulty: pose.difficulty))
         }
     }
     
