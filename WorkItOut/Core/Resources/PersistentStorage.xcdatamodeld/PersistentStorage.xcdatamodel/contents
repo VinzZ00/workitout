@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B74" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="HistoryNSObject" representedClassName="HistoryNSObject" syncable="YES" codeGenerationType="class">
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="executionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="ofProfile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProfileNSObject" inverseName="histories" inverseEntity="ProfileNSObject"/>
+        <relationship name="yogaDone" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogaNSObject" inverseName="ofHistory" inverseEntity="YogaNSObject"/>
+    </entity>
     <entity name="PoseNSObject" representedClassName="PoseNSObject" syncable="YES" codeGenerationType="class">
         <attribute name="bodyPartTrained" attributeType="String"/>
-        <attribute name="category" attributeType="String"/>
         <attribute name="difficulty" attributeType="String"/>
         <attribute name="exception" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="poseDescription" attributeType="String"/>
+        <attribute name="position" attributeType="String"/>
         <attribute name="recommendedTrimester" attributeType="String"/>
         <attribute name="relieve" attributeType="String"/>
         <attribute name="seconds" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="spineMovement" optional="YES" attributeType="String"/>
         <attribute name="state" attributeType="String"/>
         <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="video" optional="YES" attributeType="String"/>
         <relationship name="ofYoga" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogaNSObject" inverseName="poses" inverseEntity="YogaNSObject"/>
+    </entity>
+    <entity name="ProfileNSObject" representedClassName="ProfileNSObject" syncable="YES" codeGenerationType="class">
+        <attribute name="currentPregnancyWeek" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="currentRelieveNeeded" optional="YES" attributeType="String"/>
+        <attribute name="daysAvailable" optional="YES" attributeType="String"/>
+        <attribute name="fitnessLevel" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="preferredDuration" optional="YES" attributeType="String"/>
+        <attribute name="timeOfDay" optional="YES" attributeType="String"/>
+        <relationship name="histories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HistoryNSObject" inverseName="ofProfile" inverseEntity="HistoryNSObject"/>
+        <relationship name="plan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogaPlanNSObject" inverseName="ofProfile" inverseEntity="YogaPlanNSObject"/>
     </entity>
     <entity name="YogaNSObject" representedClassName="YogaNSObject" syncable="YES" codeGenerationType="class">
         <attribute name="day" attributeType="String"/>
@@ -23,6 +43,7 @@
         <attribute name="name" attributeType="String"/>
         <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="yogaState" attributeType="String"/>
+        <relationship name="ofHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HistoryNSObject" inverseName="yogaDone" inverseEntity="HistoryNSObject"/>
         <relationship name="ofYogaPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogaPlanNSObject" inverseName="yogas" inverseEntity="YogaPlanNSObject"/>
         <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PoseNSObject" inverseName="ofYoga" inverseEntity="PoseNSObject"/>
     </entity>
@@ -30,6 +51,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="trimester" optional="YES" attributeType="String"/>
         <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="ofProfile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProfileNSObject" inverseName="plan" inverseEntity="ProfileNSObject"/>
         <relationship name="yogas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogaNSObject" inverseName="ofYogaPlan" inverseEntity="YogaNSObject"/>
     </entity>
 </model>

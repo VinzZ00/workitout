@@ -42,39 +42,39 @@ struct AssessmentResultView: View {
             VStack {
                 ScrollView {
                     ForEach(yogaPlan.yogas) { yoga in
-                        DayAssessment(exercises: yoga.poses, day: 0, bodyPart: "Upper Body", weekday: "Text", timeOfDay: "Belom tau") {
-                            print("Button Next telah ditekan dari closure")
-                        }
-                        .padding(.top, 16)
-                        
-                        Divider()
+                        //                        DayAssessment(exercises: yoga.poses, day: 0, bodyPart: "Upper Body", weekday: "Text", timeOfDay: "Belom tau") {
+                        //                            print("Button Next telah ditekan dari closure")
                     }
+                    .padding(.top, 16)
+                    
+                    Divider()
                 }
-                
-                .navigationTitle("Workout Plan for Beginner")
-                .toolbar(content: {
-                    Text("Save")
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                })
-                .navigationBarTitleDisplayMode(.large)
-                
-                Spacer()
-                
-                //Bottom Bar
-                
-                VStack {
-                    Spacer()
-                    Button("Next") {
-                        
-                    }.buttonStyle(BorderedButton())
-                    Spacer()
-                }.frame(height: 72)
             }
+            
+            .navigationTitle("Workout Plan for Beginner")
+            .toolbar(content: {
+                Text("Save")
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+            })
+            .navigationBarTitleDisplayMode(.large)
+            
+            Spacer()
+            
+            //Bottom Bar
+            
+            VStack {
+                Spacer()
+                Button("Next") {
+                    
+                }.buttonStyle(BorderedButton())
+                Spacer()
+            }.frame(height: 72)
         }
     }
 }
 
-#Preview {
-    AssessmentResultView(yogaPlan: .constant(YogaPlan()))
-}
+
+//#Preview {
+//    AssessmentResultView(yogaPlan: .constant(YogaPlan()))
+//}
