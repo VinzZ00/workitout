@@ -12,7 +12,7 @@ struct YogaView: View {
     @State var nextExercise: String
     @State var time: Double
     @State var image: String
-    var a = 1
+//    @State private var textSwitch = false
     
     var body: some View {
         VStack {
@@ -54,14 +54,18 @@ struct YogaView: View {
             Text("Next: \(nextExercise)")
                 .foregroundStyle(Color.gray)
                 .font(.system(size: 14))
-            if a == 1 {
-                Text("Get Started")
-                    .font(.system(size: 48))
-                    .bold()
-                    .padding(50)
-            }else {
+//            Text("Get Started")
+//                .font(.system(size: 48))
+//                .bold()
+//                .padding(50)
+//                .onAppear {
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+//                        self.textSwitch.toggle()
+//                    }
+//                }
+//            if textSwitch == true {
                 TimerView(vm: TimerViewModel(), time: time)
-            }
+//            }
             
             Rectangle()
                 .frame(width: 355, height: 12)

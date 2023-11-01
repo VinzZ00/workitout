@@ -6,18 +6,30 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct YogaDetailView: View {
+    
+    @State var isPresentedExecution = false
+    @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            Image(systemName: "xmark")
-            Text("Balancing and Grounding")
-            Text("5 Exercise (50 Min)")
-            ForEach(0...5, id: \.self) { _ in
-                YogaCardView()
-            }
-            ButtonComponent(title: "Start Now") {
-                //
+        NavigationStack{
+            VStack(alignment: .leading) {
+                Image(systemName: "xmark")
+                Text("Balancing and Grounding")
+                Text("5 Exercise (50 Min)")
+                ForEach(0...5, id: \.self) { _ in
+                    YogaCardView()
+                }
+                ButtonComponent(title: "Start Now") {
+                    self.isPresentedExecution = true
+                }
+                    .navigationDestination(isPresented: $isPresentedExecution) {
+                            ExecutionView()
+                            .navigationBarBackButtonHidden(true)
+                    }
+
             }
         }
     }

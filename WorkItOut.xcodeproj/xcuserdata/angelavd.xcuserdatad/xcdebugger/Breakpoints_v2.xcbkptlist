@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E9FF8ACD-9C90-49A5-BE26-E8536BD5A187"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A73EEA61-5FFE-4B12-91D3-303B90AFEC6A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/YogaDetail/YogaDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A73EEA61-5FFE-4B12-91D3-303B90AFEC6A - e59b5704c7d0ea23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; WorkItOut.YogaCardView in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, WorkItOut.YogaCardView&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, WorkItOut.YogaCardView&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;)&gt;&gt; in WorkItOut.YogaDetailView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOut/WorkItOut/Presentation/Views/YogaDetail/YogaDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "A73EEA61-5FFE-4B12-91D3-303B90AFEC6A - ebfc8d6368fbe3bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; WorkItOut.YogaCardView in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, WorkItOut.YogaCardView&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, WorkItOut.YogaCardView&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt;&gt; in WorkItOut.YogaDetailView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOut/WorkItOut/Presentation/Views/YogaDetail/YogaDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78A067F6-9BA8-49A5-947B-7DEDEF424425"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/YogaDetail/YogaDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "78A067F6-9BA8-49A5-947B-7DEDEF424425 - d1aa9b3695bddb06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, WorkItOut.YogaCardView&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, WorkItOut.YogaCardView&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;)&gt;&gt; in WorkItOut.YogaDetailView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOut/WorkItOut/Presentation/Views/YogaDetail/YogaDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "888">
+               </Location>
+               <Location
+                  uuid = "78A067F6-9BA8-49A5-947B-7DEDEF424425 - e59b5704c7d0ea02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; WorkItOut.YogaCardView in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, WorkItOut.YogaCardView&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text, SwiftUI.Text, SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, WorkItOut.YogaCardView&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;)&gt;&gt; in WorkItOut.YogaDetailView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOut/WorkItOut/Presentation/Views/YogaDetail/YogaDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F937F8BC-6CDB-46F0-98B7-94432740C801"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39AFD8EA-7445-4F67-89C7-E04E77F7D9FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "39AFD8EA-7445-4F67-89C7-E04E77F7D9FF - c2e4dde8d57e1ee0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "2464">
+               </Location>
+               <Location
+                  uuid = "39AFD8EA-7445-4F67-89C7-E04E77F7D9FF - 76ce0e2b129db66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  uuid = "39AFD8EA-7445-4F67-89C7-E04E77F7D9FF - 4df4ebe48dc387e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "39AFD8EA-7445-4F67-89C7-E04E77F7D9FF - c2e4dde8d57e1ee0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1836">
+               </Location>
+               <Location
+                  uuid = "39AFD8EA-7445-4F67-89C7-E04E77F7D9FF - 76ce0e2b129db66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/angelavd/Documents/epel/Macro/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D83F811D-6A7B-4E64-867E-20F86D8C4275"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/FetchProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "call(context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEBD1E0C-5C35-49C6-B488-BD6FF1D97745"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/FetchProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "call(context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

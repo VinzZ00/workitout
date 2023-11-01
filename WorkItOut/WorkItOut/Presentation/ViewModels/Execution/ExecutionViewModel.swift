@@ -10,13 +10,21 @@ import CoreData
 
 class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
-    var trimester: Int = 0
-    var profile: [Profile] = []
-    var yogaPlan: [YogaPlan] = []
-    var yogas: [Yoga] = []
+    @Published var trimester: Int = 0
+    @Published var profile: [Profile] = []
+    @Published var yogaPlan: [YogaPlan] = []
+    @Published var yogas: [Yoga] = []
     @Published var pose: [Pose] = []
     @Published var index = 0
-    var end = false
+    @Published var end = false
+    @Published var start = true
+    
+//    init(moc : NSManagedObjectContext) {
+//        Task {
+//            await addProfile(context: moc)
+//            call()
+//        }
+//    }
     
     func addProfile(context: NSManagedObjectContext) async {
         profile = await fetch.call(context: context)
@@ -62,13 +70,26 @@ class ExecutionViewModel: ObservableObject {
         }
     }
     
-    func poses() -> Pose{
-        return pose[index]
+    func call(){
+        
+        getTrimester()
+        getYogaPlan()
+        getYoga()
+        getPose()
     }
     
     func nextPose(){
         if index < pose.count-1 {
             index += 1
+            self.objectWillChange.send()
+        }else{
+            end = true
+        }
+    }
+    
+    func previousPose(){
+        if index > 0 {
+            index -= 1
             self.objectWillChange.send()
         }else{
             end = true

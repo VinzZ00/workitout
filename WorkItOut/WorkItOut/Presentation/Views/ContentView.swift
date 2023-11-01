@@ -17,6 +17,7 @@ struct ContentView: View {
 //        CameraView();
         AssessmentView()
 //        EmptyView()
+//        YogaView(exercise: "Plank", nextExercise: "Push Up", time: 60, image: "Plank")
     }
 }
 
