@@ -27,8 +27,8 @@ struct AssessmentDetailView<E: UserPreference>: View {
                     }
                     .tint(.primary)
                     .background(RoundedRectangle(cornerRadius: 12)
-                        .fill(selection == self.selection ? .main : .clear)
-                        .stroke(selection == self.selection ? .main : .grayBorder, lineWidth: 1)
+                        .fill(selection == self.selection ? .orangePrimary.opacity(0.25) : .clear)
+                        .stroke(selection == self.selection ? .orangePrimary : .grayBorder, lineWidth: 1)
                     )
                 })
                 .padding(.vertical, 3)

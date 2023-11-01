@@ -76,6 +76,8 @@
 		D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862DB682AE28E5A0014F2FC /* ContentView.swift */; };
 		D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */; };
 		D862DB6E2AE28E5C0014F2FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6D2AE28E5C0014F2FC /* Preview Assets.xcassets */; };
+		D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */; };
+		D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E322AF21E070050D9E1 /* ProfileTests.swift */; };
 		D8BC2BE72AE8003000E61487 /* AssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BE62AE8003000E61487 /* AssessmentView.swift */; };
 		D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BEA2AE802D100E61487 /* AssessmentDetailView.swift */; };
 		D8BC2BEE2AE80F1800E61487 /* AssessmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BED2AE80F1800E61487 /* AssessmentViewModel.swift */; };
@@ -171,6 +173,8 @@
 		D862DB682AE28E5A0014F2FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D862DB6D2AE28E5C0014F2FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentWrapperView.swift; sourceTree = "<group>"; };
+		D88A3E322AF21E070050D9E1 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		D8BC2BE62AE8003000E61487 /* AssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentView.swift; sourceTree = "<group>"; };
 		D8BC2BEA2AE802D100E61487 /* AssessmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentDetailView.swift; sourceTree = "<group>"; };
 		D8BC2BED2AE80F1800E61487 /* AssessmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewModel.swift; sourceTree = "<group>"; };
@@ -544,6 +548,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */,
+				D88A3E322AF21E070050D9E1 /* ProfileTests.swift */,
 			);
 			path = WorkItOutTests;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 			children = (
 				D8065A2D2AF0F32400333CB6 /* Components */,
 				D8065A282AF0EFD100333CB6 /* ProfileView.swift */,
+				D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -833,6 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */,
+				D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +879,7 @@
 				ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */,
 				6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
+				D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */,
 				AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */,
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
 				D8207AE82AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift in Sources */,
@@ -906,7 +914,7 @@
 				ACBFBDA42AE67CEE00109D94 /* UpdateProfileUseCase.swift in Sources */,
 				D8BC2BF42AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift in Sources */,
 				6C3FD7742AEEB26800C84D2A /* TimeOfDay.swift in Sources */,
-				ACD49E842AEFA62600793872 /* AddYogaPlan.swift in Sources */,
+				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
 				D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */,
 				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
 				ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */,
