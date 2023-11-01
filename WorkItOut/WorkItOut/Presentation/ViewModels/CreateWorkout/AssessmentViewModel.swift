@@ -23,7 +23,7 @@ class AssessmentViewModel : ObservableObject {
     let dm: DataManager = DataManager()
     
     public func createYogaPlan() {
-        dm.createProfile(name: "User Name", currentWeek: Date.now, currentRelieveNeeded: relieve, fitnessLevel: experience, daysAvailable: days, timeOfDay: timeClock, preferredDuration: durationExercise, plan: [], histories: [])
+        dm.createProfile(name: "User Name", currentWeek: 3, currentRelieveNeeded: relieve, fitnessLevel: experience, daysAvailable: days, timeOfDay: timeClock, preferredDuration: durationExercise, plan: [], histories: [])
         
     }
     

@@ -3,7 +3,7 @@
     {
       "color" : {
         "platform" : "universal",
-        "reference" : "tertiaryLabelColor"
+        "reference" : "labelColor"
       },
       "idiom" : "universal"
     }
