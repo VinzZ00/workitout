@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560938812AF0E35D00C77989 /* ExecutionView.swift */; };
+		560938842AF1001100C77989 /* YogaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560938832AF1001100C77989 /* YogaView.swift */; };
 		56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */; };
 		56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */; };
 		56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */; };
@@ -80,6 +82,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		560938812AF0E35D00C77989 /* ExecutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionView.swift; sourceTree = "<group>"; };
+		560938832AF1001100C77989 /* YogaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaView.swift; sourceTree = "<group>"; };
 		56D1BC902AE8B87C002DBDA0 /* ExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionViewModel.swift; sourceTree = "<group>"; };
 		56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionViewModel.swift; sourceTree = "<group>"; };
 		56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -166,6 +170,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560938852AF1061400C77989 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				560938832AF1001100C77989 /* YogaView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		56D1BC9B2AEA51BE002DBDA0 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +199,9 @@
 		56D1BCA82AEA6BD1002DBDA0 /* Execution */ = {
 			isa = PBXGroup;
 			children = (
+				560938852AF1061400C77989 /* Components */,
 				56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */,
+				560938812AF0E35D00C77989 /* ExecutionView.swift */,
 			);
 			path = Execution;
 			sourceTree = "<group>";
@@ -714,6 +728,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8BC2BF62AE81D0600E61487 /* AssessmentState.swift in Sources */,
+				560938842AF1001100C77989 /* YogaView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
@@ -734,6 +749,7 @@
 				6C7B2C4B2AEF6FAF00E0DADF /* YogaCardView.swift in Sources */,
 				ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */,
 				56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */,
+				560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */,
 				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,

@@ -13,18 +13,15 @@ class TimerViewModel: ObservableObject {
     @Published var timeToggle = false
     @Published var timeSet = 0
     
-    init(seconds : Double = 60) {
-        self.timeRemaining = seconds
-    }
-    
     func currentTime() -> String {
         return timeString(time: timeRemaining)
     }
     
-    func startTimer() {
+    func startTimer(time: Double) {
         timeToggle = true
         timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
-        timeSet = Int(timeRemaining/60)
+        timeSet = Int(time/60)
+        timeRemaining = time
     }
     
     func updateCurrentTime() {
