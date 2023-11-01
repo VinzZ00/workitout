@@ -11,17 +11,17 @@ import XCTest
 final class WorkitOutTests: XCTestCase {
 
     var moc : NSManagedObjectContext?
-    var addUsecase : AddYogaPlanUseCase?
-    var fetchUsecase : FetchYogaPlanUsecase?
-    var testRecord : YogaPlan?
+    var addUsecase : AddProfileUseCase?
+    var fetchUsecase : FetchProfileUseCase?
+    var testRecord : Profile?
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try super.setUpWithError()
         
         moc = CoreDataManager().container.viewContext
-        addUsecase = AddYogaPlanUseCase()
-        fetchUsecase = FetchYogaPlanUsecase()
+        addUsecase = AddProfileUseCase()
+        fetchUsecase = FetchProfileUseCase()
         
     }
 
@@ -37,28 +37,30 @@ final class WorkitOutTests: XCTestCase {
     func testExample() async throws {
         if let moc = self.moc {
             
-            testRecord = YogaPlan()
-            testRecord?.id = UUID()
-            testRecord?.name = "Testing Plan"
-            testRecord?.trimester = .all
-            testRecord?.yogas = [
-                Yoga(name: "Testing yoga1", poses: [
-                    Pose(name: "test pose 1", description: "Descriptiontesting pose", seconds: 10, state: .notCompleted, position: .stand, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.vertigo], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject,
-                    Pose(name: "test pose 2", description: "Description2testing pose", seconds: 10, state: .notCompleted, position: .stand, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.none], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject
-                ], day: .monday, estimationDuration: 29, image: "testingImage1").intoNSObject(context: moc) as! YogaNSObject,
-                Yoga(name: "Testing yoga2", poses: [
-                    Pose(name: "test pose 1", description: "Descriptiontesting pose", seconds: 10, state: .notCompleted, position: .stand, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.vertigo], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject,
-                    Pose(name: "test pose 2", description: "Description2testing pose", seconds: 10, state: .notCompleted, position: .stand, spineMovement: .backBend,  recommendedTrimester: .all, bodyPartTrained: [.core, .glutes], relieve: [.hippain, .breathing], exception: [.none], difficulty: .beginner).intoNSObject(context: moc) as! PoseNSObject
-                ], day: .monday, estimationDuration: 29, image: "testingImage2").intoNSObject(context: moc) as! YogaNSObject
-            ]
             
-            var moc2 = CoreDataManager().container.viewContext
+            testRecord = Profile(
+                name: "Testing add and fetch",
+                currentPregnancyWeek: 2,
+                currentRelieveNeeded: [.backpain, .breathing],
+                fitnessLevel: .beginner,
+                daysAvailable: [.monday, .wednesday, .friday],
+                timeOfDay: .evening,
+                preferredDuration: .fiveteenMinutes,
+                plan: [
+                    YogaPlan(id: UUID(), name: "Plan 1", yogas: [
+                        Yoga(id: UUID(), name: "Yoga 1", poses: [
+                            Pose(id: UUID(), name: "Pose1", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo, .all], difficulty: .beginner)
+                        ], day: .monday, estimationDuration: 12, image: "Image 1")
+                    ], trimester: .all)
+                ],
+                histories: [])
+
             
             if let testRecord = testRecord {
-                await addUsecase?.call(yogaPlan: testRecord, context: moc)
+                await addUsecase?.call(profile: testRecord, context: moc)
             }
             
-            let fetchRes = await fetchUsecase?.call(context: moc2);
+            let fetchRes = await fetchUsecase?.call(context: moc);
             
             XCTAssertEqual(fetchRes?.first?.name, testRecord!.name, "Done the test")
         }

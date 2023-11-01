@@ -8,26 +8,19 @@
 import Foundation
 import CoreData
 
-struct YogaPlan : Identifiable/*, Entity*/ {
-    var id: UUID = UUID()
-    var name: String = ""
-    var yogas: [Yoga] = []
-    var trimester: Trimester = .all
-//    
-//    init(id: UUID, name: String, yogas: [Yoga], trimester: Trimester) {
-//        self.id = id
-//        self.name = name
-//        self.yogas = yogas
-//        self.trimester = trimester
-//    }
+struct YogaPlan : Identifiable, Entity {
+    var id: UUID
+    var name: String
+    var yogas: [Yoga]
+    var trimester: Trimester
     
-//    func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject{
-//        let yogaPlan = YogaPlanNSObject(context: context)
-//        yogaPlan.uuid = UUID()
-//        yogaPlan.name = self.name
-//        yogaPlan.yogas?.addingObjects(from: self.yogas.map{$0.ofYogaPlan = yogaPlan})
-//        yogaPlan.trimester = self.trimester.rawValue
-//        
-//        return yogaPlan
-//    }
+    func intoNSObject(context : NSManagedObjectContext, parentProfileNSObject : ProfileNSObject) -> NSManagedObject{
+        let yogaPlan = YogaPlanNSObject(context: context)
+        yogaPlan.uuid = self.id
+        yogaPlan.name = self.name
+        yogaPlan.yogas?.addingObjects(from: self.yogas.map{ $0.intoNSObject(context: context, parentYogaPlanNS: yogaPlan)})
+        yogaPlan.trimester = self.trimester.rawValue
+        yogaPlan.ofProfile = parentProfileNSObject
+        return yogaPlan
+    }
 }

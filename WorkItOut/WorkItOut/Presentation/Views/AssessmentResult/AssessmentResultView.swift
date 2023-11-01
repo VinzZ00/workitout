@@ -75,6 +75,6 @@ struct AssessmentResultView: View {
 }
 
 
-#Preview {
-    AssessmentResultView(yogaPlan: .constant(YogaPlan()))
-}
+//#Preview {
+//    AssessmentResultView(yogaPlan: .constant(YogaPlan()))
+//}

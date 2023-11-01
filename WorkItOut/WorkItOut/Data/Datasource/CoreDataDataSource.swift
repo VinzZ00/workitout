@@ -31,9 +31,7 @@ struct CoreDataDataSource : CoreDataDataSourceDelegate {
         }
     }
     
-    func updateToCoreData<T : Entity>(entity : T, context : NSManagedObjectContext) async throws {
-
-        var entity = entity.intoNSObject(context: context)
+    func updateToCoreData<T : NSManagedObject>(entity : T, context : NSManagedObjectContext) async throws {
         
         do {
             try context.save()
