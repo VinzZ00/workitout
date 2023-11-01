@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct GeneratePlanView: View {
+    @Environment(\.managedObjectContext) var moc
+    var dm: DataManager = DataManager()
+    
     var body: some View {
         VStack(alignment: .leading) {
             ScrollView {
@@ -36,37 +39,45 @@ struct GeneratePlanView: View {
                         .frame(maxWidth: .infinity)
                 )
                 
-                VStack(alignment: .leading) {
-                    ForEach(0...3, id: \.self) { _ in
-                        VStack {
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text("Day 1 - Upper Body")
-                                        .font(.title3)
-                                        .bold()
-                                    Text("Mon, Morning")
-                                        .foregroundStyle(.neutral3)
-                                        .font(.body)
-                                }
-                                Spacer()
-                                Button(action: {
-                                    
-                                }, label: {
-                                    Image(systemName: "pencil")
-                                })
-                            }
-                            ForEach(0...4, id: \.self) { _ in
-                                YogaCardView()
-                            }
-                        }
-                        .padding()
-                        .background(.white)
-                    }
+                if dm.profile.plan.isEmpty {
+                    Text("No Plan yet")
                 }
-                .background(.neutral6)
+                else {
+                    VStack(alignment: .leading) {
+                        ForEach(dm.profile.plan[0].yogas, id: \.id) { yoga in
+                            VStack {
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text("Day 1 - Upper Body")
+                                            .font(.title3)
+                                            .bold()
+                                        Text("\(yoga.day.getString()), Morning")
+                                            .foregroundStyle(.neutral3)
+                                            .font(.body)
+                                    }
+                                    Spacer()
+                                    Button(action: {
+                                        
+                                    }, label: {
+                                        Image(systemName: "pencil")
+                                    })
+                                }
+                                ForEach(0...yoga.poses.count, id: \.self) { _ in
+                                    YogaCardView()
+                                }
+                            }
+                            .padding()
+                            .background(.white)
+                        }
+                    }
+                    .background(.neutral6)
+                    .ignoresSafeArea()
+                    
+                }
                 
             }
-            .ignoresSafeArea()
+                
+                
             
             VStack {
                 NavigationLinkComponent(destination: AnyView(HomeView()))
@@ -74,11 +85,15 @@ struct GeneratePlanView: View {
             .padding(.horizontal)
             .ignoresSafeArea()
         }
-        
+        .onAppear {
+            Task {
+                await dm.loadProfile(moc: moc)
+            }
+        }
         
     }
 }
 
-#Preview {
-    GeneratePlanView()
-}
+//#Preview {
+//    GeneratePlanView()
+//}

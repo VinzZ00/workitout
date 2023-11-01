@@ -10,6 +10,9 @@ import SwiftUI
 struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     
+    @Environment(\.managedObjectContext) var moc
+    
+    
     var body: some View {
         NavigationStack{
             VStack{
@@ -65,6 +68,23 @@ struct AssessmentView: View {
             else if avm.state == .complete {
                 Button("Next"){
                     withAnimation {
+                        Task {
+                            var dm: DataManager = DataManager()
+                            
+                            await dm.setUpProfile(
+                                moc: moc,
+                                name: "User Name",
+                                currentWeek: 10,
+                                currentRelieveNeeded: avm.relieve,
+                                fitnessLevel: avm.experience,
+                                daysAvailable: avm.days,
+                                timeOfDay: avm.timeClock,
+                                preferredDuration: avm.durationExercise,
+                                plan: [],
+                                histories: []
+                            )
+                        }
+                        
                         avm.finishCreateYogaPlan.toggle()
                     }
                 }

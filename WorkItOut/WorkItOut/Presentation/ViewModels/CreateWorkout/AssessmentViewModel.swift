@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 class AssessmentViewModel : ObservableObject {
     @Published var days : [Day] = [.monday]
@@ -20,11 +21,9 @@ class AssessmentViewModel : ObservableObject {
     @Published var buttonDisable = false
     @Published var finishCreateYogaPlan: Bool = false   
     
-    @Published var dm: DataManager = DataManager()
-    
-    public func setUpProfile() {
-        dm.setUpProfile(name: "user name", currentWeek: 10, currentRelieveNeeded: self.relieve, fitnessLevel: self.experience, daysAvailable: self.days, timeOfDay: self.timeClock, preferredDuration: self.durationExercise, plan: [], histories: [])
-    }
+//    public func setUpProfile() async {
+//        await dm.setUpProfile(name: "user names", currentWeek: 10, currentRelieveNeeded: self.relieve, fitnessLevel: self.experience, daysAvailable: self.days, timeOfDay: self.timeClock, preferredDuration: self.durationExercise, plan: [], histories: [])
+//    }
     
     public func nextState(){
         switch state {

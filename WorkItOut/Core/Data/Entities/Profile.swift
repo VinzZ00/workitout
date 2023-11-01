@@ -26,15 +26,15 @@ struct Profile : Entity {
         return profilens
     }
     
-    var name: String
-    var currentPregnancyWeek: Int
-    var currentRelieveNeeded: [Relieve]
-    var fitnessLevel: Difficulty
-    var daysAvailable: [Day]
-    var timeOfDay: TimeOfDay
-    var preferredDuration: Duration
-    var plan : [YogaPlan] // Pasti 3
-    var histories : [History]
+    var name: String = ""
+    var currentPregnancyWeek: Int = 0
+    var currentRelieveNeeded: [Relieve] = []
+    var fitnessLevel: Difficulty = .beginner
+    var daysAvailable: [Day] = []
+    var timeOfDay: TimeOfDay = .morning
+    var preferredDuration: Duration = .fiveteenMinutes
+    var plan : [YogaPlan] = [] // Pasti 3
+    var histories : [History] = []
     
 //    func getCurrentYogaPlan() -> YogaPlan {
 //        return self.plan

@@ -7,16 +7,6 @@
 import CoreData
 import Foundation
 
-enum Exception : String, UserPreference {
-    func getString() -> String {
-        self.rawValue
-    }
-    
-    case vertigo = "Vertigo"
-    case all = "All"
-    case none = "None"
-}
-
 struct Pose: Identifiable, Hashable, Entity {
     let id: UUID
     var name : String
