@@ -205,6 +205,7 @@
 		560938852AF1061400C77989 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */,
 				560938832AF1001100C77989 /* YogaView.swift */,
 			);
 			path = Components;
@@ -232,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				560938852AF1061400C77989 /* Components */,
-				56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */,
 				560938812AF0E35D00C77989 /* ExecutionView.swift */,
 			);
 			path = Execution;
