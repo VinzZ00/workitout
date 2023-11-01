@@ -17,7 +17,7 @@ struct ProfileView: View {
                         .foregroundStyle(.gray)
                         .bold()
                         .padding(.top, 14)
-                    ProfileCard(assessmentState: .chooseMonth, value: viewModel.profile.currentWeek.formatted(date: .abbreviated, time: .omitted))
+                    ProfileCard(assessmentState: .chooseMonth, value: String(viewModel.profile.currentPregnancyWeek))
                     ProfileCard(assessmentState: .chooseRelieve, value: "None")
                 }
                 .padding(.bottom, 24)

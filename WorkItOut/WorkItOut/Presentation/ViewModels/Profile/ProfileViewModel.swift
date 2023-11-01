@@ -8,10 +8,10 @@
 import Foundation
 
 class ProfileViewModel : ObservableObject {
-    @Published var profile = Profile(name: "Mamam", currentWeek: Date.now, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [YogaPlan()], histories: [])
+    @Published var profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
     
     func convertToString(days : [Day]) -> String{
-        var strings = days.map { day in
+        let strings = days.map { day in
             switch day {
             case .monday:
                 return "Mon"
