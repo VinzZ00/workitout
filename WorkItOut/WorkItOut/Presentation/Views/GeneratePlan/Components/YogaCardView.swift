@@ -19,11 +19,13 @@ struct YogaCardView: View {
                     .font(.title3)
                     .bold()
                 Text("Category Item")
+                    .foregroundStyle(.neutral3)
                     .font(.body)
             }
+            Spacer()
             Text("10 min")
                 .padding(8)
-                .background(.gray)
+                .background(.neutral6)
                 .clipShape(.rect(cornerRadius: 12))
         }
     }

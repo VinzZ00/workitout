@@ -9,14 +9,17 @@ import SwiftUI
 
 struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
     var title : String
+    var explanation: String = "(Check all that apply)"
     @Binding var selectedItems : [E]
     @State var selections : [E]
+    
+    var limit: Int = 0
     
     var body: some View {
         VStack(alignment: .leading){
             Text(title)
                 .font(.title).bold()
-            Text("(Check all that apply)")
+            Text(explanation)
                 .font(.headline)
                 .foregroundStyle(.gray)
             ForEach($selections, id: \.self){ selection in
@@ -27,7 +30,13 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
                         }
                         selectedItems.remove(at: selectedIndex)
                     }else{
-                        selectedItems.append(selection.wrappedValue)
+                        if limit == 0 {
+                            selectedItems.append(selection.wrappedValue)
+                        }
+                        else if !(selectedItems.count >= limit) {
+                            selectedItems.append(selection.wrappedValue)
+                        }
+                        
                     }
                 }, label: {
                     HStack{
@@ -37,13 +46,13 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
                             .padding(.vertical, 15)
                         Spacer()
                     }
-                    .tint(.primary)
-                    .background(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary : .clear)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary : .grayBorder, lineWidth: 2)
-                    )
+                    
                 })
+                .tint(.primary)
+                .background(RoundedRectangle(cornerRadius: 12)
+                    .fill(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary.opacity(0.25) : .clear)
+                    .stroke(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary : .grayBorder, lineWidth: 1)
+                )
                 .padding(.vertical, 3)
             }
         }

@@ -26,10 +26,9 @@ struct AssessmentDetailView<E: UserPreference>: View {
                         Spacer()
                     }
                     .tint(.primary)
-                    .background(selection == self.selection ? .orangePrimary : .clear)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(selection == self.selection ? .orangePrimary : .grayBorder, lineWidth: 2)
+                    .background(RoundedRectangle(cornerRadius: 12)
+                        .fill(selection == self.selection ? .main : .clear)
+                        .stroke(selection == self.selection ? .main : .grayBorder, lineWidth: 1)
                     )
                 })
                 .padding(.vertical, 3)

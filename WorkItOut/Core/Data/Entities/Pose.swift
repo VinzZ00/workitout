@@ -18,7 +18,7 @@ enum Exception : String, UserPreference {
 }
 
 struct Pose: Identifiable, Hashable, Entity {
-    let id: UUID = UUID()
+    let id: UUID
     var name : String
     var image : String?
     var video : String?
@@ -31,13 +31,14 @@ struct Pose: Identifiable, Hashable, Entity {
     var recommendedTrimester : Trimester
     var bodyPartTrained : [BodyPart]
     var relieve: [Relieve]
-    var exception : [Exception]
+    var exception: [Exception] = []
+
     var difficulty : Difficulty
     
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
         var pose = PoseNSObject(context: context)
         
-        pose.uuid = UUID()
+        pose.uuid = self.id
         pose.name = self.name
         pose.image = self.image
         pose.video = self.video
@@ -54,6 +55,8 @@ struct Pose: Identifiable, Hashable, Entity {
         return pose;
     }
 }
+
+
 
 
 

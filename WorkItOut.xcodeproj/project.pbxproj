@@ -24,6 +24,9 @@
 		6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */; };
 		6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */; };
 		6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */; };
+		6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */; };
+		6C732A3F2AF109AA00E17FDB /* YogaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C732A3E2AF109AA00E17FDB /* YogaDetailView.swift */; };
+		6C732A412AF109E500E17FDB /* NavigationLinkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C732A402AF109E500E17FDB /* NavigationLinkComponent.swift */; };
 		6C7B2C4B2AEF6FAF00E0DADF /* YogaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C4A2AEF6FAF00E0DADF /* YogaCardView.swift */; };
 		6C7B2C4D2AEF726A00E0DADF /* GeneratePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C4C2AEF726A00E0DADF /* GeneratePlanView.swift */; };
 		6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C502AEF74D500E0DADF /* HomeView.swift */; };
@@ -31,6 +34,9 @@
 		6C8D5D112AE6618E00A2986D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0D2AE6618E00A2986D /* Day.swift */; };
 		6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */; };
 		6C8D5D162AE6619700A2986D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D152AE6619700A2986D /* MockData.swift */; };
+		6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99C1F32AF105C200CEA7D3 /* DataManager.swift */; };
+		6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */; };
+		AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseManager.swift */; };
 		AC5A9A502AE3AC5E003B0C1F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A4F2AE3AC5E003B0C1F /* FirebaseFirestore */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A5B2AE3E614003B0C1F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A5A2AE3E614003B0C1F /* FirebaseFirestoreSwift */; };
@@ -52,10 +58,10 @@
 		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
 		ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */; };
 		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
-		ACBFBD9F2AE6775A00109D94 /* FetchYogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9E2AE6775A00109D94 /* FetchYogaPlan.swift */; };
-		ACBFBDA42AE67CEE00109D94 /* UpdateYogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA32AE67CEE00109D94 /* UpdateYogaPlan.swift */; };
+		ACBFBD9F2AE6775A00109D94 /* FetchProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */; };
+		ACBFBDA42AE67CEE00109D94 /* UpdateProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */; };
 		ACD49E812AEFA47000793872 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E802AEFA47000793872 /* Helper.swift */; };
-		ACD49E842AEFA62600793872 /* AddYogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E822AEFA62600793872 /* AddYogaPlan.swift */; };
+		ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */; };
 		ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */; };
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A282AF0EFD100333CB6 /* ProfileView.swift */; };
@@ -113,6 +119,9 @@
 		6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderComponent.swift; sourceTree = "<group>"; };
+		6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayButtonView.swift; sourceTree = "<group>"; };
+		6C732A3E2AF109AA00E17FDB /* YogaDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaDetailView.swift; sourceTree = "<group>"; };
+		6C732A402AF109E500E17FDB /* NavigationLinkComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkComponent.swift; sourceTree = "<group>"; };
 		6C7B2C4A2AEF6FAF00E0DADF /* YogaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaCardView.swift; sourceTree = "<group>"; };
 		6C7B2C4C2AEF726A00E0DADF /* GeneratePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanView.swift; sourceTree = "<group>"; };
 		6C7B2C502AEF74D500E0DADF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -120,6 +129,9 @@
 		6C8D5D0D2AE6618E00A2986D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutState.swift; sourceTree = "<group>"; };
 		6C8D5D152AE6619700A2986D /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		6C99C1F32AF105C200CEA7D3 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AC437B2B2AF148D20055C0AD /* PoseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseManager.swift; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		AC5A9A622AE41138003B0C1F /* Yoga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
 		AC5A9A632AE41138003B0C1F /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
@@ -139,10 +151,10 @@
 		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSourceDelegate.swift; sourceTree = "<group>"; };
 		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
-		ACBFBD9E2AE6775A00109D94 /* FetchYogaPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchYogaPlan.swift; sourceTree = "<group>"; };
-		ACBFBDA32AE67CEE00109D94 /* UpdateYogaPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateYogaPlan.swift; sourceTree = "<group>"; };
+		ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProfileUseCase.swift; sourceTree = "<group>"; };
+		ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileUseCase.swift; sourceTree = "<group>"; };
 		ACD49E802AEFA47000793872 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		ACD49E822AEFA62600793872 /* AddYogaPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddYogaPlan.swift; sourceTree = "<group>"; };
+		ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfileUseCase.swift; sourceTree = "<group>"; };
 		ACD49E8A2AF0069900793872 /* WorkItOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkItOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutTests.swift; sourceTree = "<group>"; };
 		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
@@ -237,10 +249,19 @@
 		6C6F34CA2AE7B9390059E74D /* GlobalComponent */ = {
 			isa = PBXGroup;
 			children = (
+				6C732A402AF109E500E17FDB /* NavigationLinkComponent.swift */,
 				6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */,
 				6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */,
 			);
 			path = GlobalComponent;
+			sourceTree = "<group>";
+		};
+		6C732A3D2AF109AA00E17FDB /* YogaDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6C732A3E2AF109AA00E17FDB /* YogaDetailView.swift */,
+			);
+			path = YogaDetail;
 			sourceTree = "<group>";
 		};
 		6C7B2C482AEF6F6C00E0DADF /* GeneratePlan */ = {
@@ -273,6 +294,7 @@
 		6C7B2C4F2AEF74C700E0DADF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -314,6 +336,7 @@
 		AC5A9A512AE3BC9D003B0C1F /* FireStore */ = {
 			isa = PBXGroup;
 			children = (
+				AC437B2B2AF148D20055C0AD /* PoseManager.swift */,
 				AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */,
 			);
 			path = FireStore;
@@ -353,6 +376,7 @@
 		AC5A9A692AE4154D003B0C1F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6C99C1F32AF105C200CEA7D3 /* DataManager.swift */,
 				ACBFBD9B2AE676BF00109D94 /* Repository */,
 				ACB8642C2AE65282005DF0D1 /* Datasource */,
 				AC5A9A582AE3C09B003B0C1F /* UseCases */,
@@ -384,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				D8065A272AF0EF8800333CB6 /* Profile */,
+				6C732A3D2AF109AA00E17FDB /* YogaDetail */,
 				6C7B2C4E2AEF74C200E0DADF /* Home */,
 				6C7B2C482AEF6F6C00E0DADF /* GeneratePlan */,
 				56D1BCAF2AEE81DC002DBDA0 /* Notification */,
@@ -458,9 +483,9 @@
 		AC7391AF2AE7BF1F0012BC1B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				ACD49E822AEFA62600793872 /* AddYogaPlan.swift */,
-				ACBFBD9E2AE6775A00109D94 /* FetchYogaPlan.swift */,
-				ACBFBDA32AE67CEE00109D94 /* UpdateYogaPlan.swift */,
+				ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */,
+				ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */,
+				ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -653,6 +678,7 @@
 			isa = PBXGroup;
 			children = (
 				D8065A2A2AF0EFDD00333CB6 /* Profile */,
+				6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */,
 				56D1BCB02AEE81F4002DBDA0 /* Notification */,
 				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
 				56D1BC9E2AEA5653002DBDA0 /* Execution */,
@@ -823,6 +849,7 @@
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				D8207AEE2AF0C50A005DBD3C /* SpineMovement.swift in Sources */,
+				6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */,
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
 				ACD49E812AEFA47000793872 /* Helper.swift in Sources */,
 				6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */,
@@ -831,7 +858,7 @@
 				6C3FD7652AEE405C00C84D2A /* Relieve.swift in Sources */,
 				D8065A2C2AF0EFE700333CB6 /* ProfileViewModel.swift in Sources */,
 				6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */,
-				ACBFBD9F2AE6775A00109D94 /* FetchYogaPlan.swift in Sources */,
+				ACBFBD9F2AE6775A00109D94 /* FetchProfileUseCase.swift in Sources */,
 				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,
 				6C7B2C4B2AEF6FAF00E0DADF /* YogaCardView.swift in Sources */,
 				ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */,
@@ -839,10 +866,13 @@
 				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
+				6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */,
 				56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */,
 				6C3FD7782AEF560A00C84D2A /* History.swift in Sources */,
 				ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */,
+				6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
+				AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */,
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
 				D8207AE82AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift in Sources */,
 				56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */,
@@ -867,21 +897,24 @@
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
 				D8BC2BF82AE81E0400E61487 /* Duration.swift in Sources */,
+				6C732A412AF109E500E17FDB /* NavigationLinkComponent.swift in Sources */,
 				6C3FD7722AEE40E600C84D2A /* BodyPart.swift in Sources */,
 				56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */,
 				AC71EEBD2AEA5D4E00C8ED8A /* CameraViewModel.swift in Sources */,
 				6C3FD76C2AEE40BD00C84D2A /* Trimester.swift in Sources */,
 				56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */,
-				ACBFBDA42AE67CEE00109D94 /* UpdateYogaPlan.swift in Sources */,
+				ACBFBDA42AE67CEE00109D94 /* UpdateProfileUseCase.swift in Sources */,
 				D8BC2BF42AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift in Sources */,
 				6C3FD7742AEEB26800C84D2A /* TimeOfDay.swift in Sources */,
 				ACD49E842AEFA62600793872 /* AddYogaPlan.swift in Sources */,
 				D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */,
+				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
 				ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */,
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */,
 				6C3FD7672AEE409700C84D2A /* Position.swift in Sources */,
+				6C732A3F2AF109AA00E17FDB /* YogaDetailView.swift in Sources */,
 				D8BC2BE72AE8003000E61487 /* AssessmentView.swift in Sources */,
 				AC5A9A672AE41138003B0C1F /* Pose.swift in Sources */,
 			);
@@ -1077,7 +1110,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1110,7 +1143,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
