@@ -9,48 +9,14 @@ import SwiftUI
 
 struct GeneratePlanView: View {
     @Environment(\.managedObjectContext) var moc
-    @StateObject var dm: DataManager
+    @EnvironmentObject var dm: DataManager
     
     @State var finish: Bool = false
     
     var body: some View {
-<<<<<<< HEAD
-        VStack(alignment: .leading) {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Button(action: {
-                            //
-                        }, label: {
-                            Image(systemName: "xmark")
-                                .foregroundStyle(.white)
-                                .bold()
-                        })
-                        .padding(.bottom)
-                        Spacer()
-                    }
-                    Text("Workout Plan for Beginner")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .bold()
-                }
-                .padding(.top, 72)
-                .padding()
-                .background(
-                    Image(.assesmentResultHeader)
-                        .resizable()
-                        .frame(maxWidth: .infinity)
-                )
-                DayPickerView()
-                if dm.profile.plan.isEmpty {
-                    Text("No Plan yet")
-                }
-                else {
-=======
         NavigationStack {
             VStack(alignment: .leading) {
                 ScrollView {
->>>>>>> createyogaplan
                     VStack(alignment: .leading) {
                         HStack {
                             Button(action: {
@@ -108,7 +74,6 @@ struct GeneratePlanView: View {
                             }
                         }
                         .background(.neutral6)
-                        .ignoresSafeArea()
                     }
                     
                 }
@@ -117,54 +82,35 @@ struct GeneratePlanView: View {
                     
                     ButtonComponent(title: "Finish") {
                         Task {
-                            var addProfile: AddProfileUseCase = AddProfileUseCase()
-                            
-                            await addProfile.call(profile: dm.profile, context: moc)
-                            
-                            var fetchProfile = FetchProfileUseCase()
-                    
-                            let fetchRes = await fetchProfile.call(context: moc)
-                    
-                            dm.profile = fetchRes.first!
-                            
-                            print(fetchRes.first?.name)
+//                            var addProfile: AddProfileUseCase = AddProfileUseCase()
+//                            
+//                            await addProfile.call(profile: dm.profile, context: moc)
+//                            
+//                            var fetchProfile = FetchProfileUseCase()
+//                            
+//                            let fetchRes = await fetchProfile.call(context: moc)
+//                            
+//                            dm.profile = fetchRes.first!
+//                            
+//                            print(fetchRes.first?.name)
                             
                             finish.toggle()
                         }
                         
                     }
-    //                NavigationLinkComponent(destination: AnyView(HomeView()))
+                    //                NavigationLinkComponent(destination: AnyView(HomeView()))
                 }
                 .padding(.horizontal)
-                .ignoresSafeArea()
-            }.navigationDestination(isPresented: $finish, destination: {
+            }
+            .navigationDestination(isPresented: $finish, destination: {
                 HomeView()
-                    .environmentObject(dm)
+//                    .environmentObject(dm)
             })
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea(.container)
-        .navigationDestination(isPresented: $finish, destination: {
-            HomeView()
-        })
-=======
-                .padding(.horizontal)
-                .ignoresSafeArea()
-            }.navigationDestination(isPresented: $finish, destination: {
-                HomeView()
-                    .environmentObject(dm)
-            })
-        }
-        
->>>>>>> createyogaplan
-//        .onAppear {
-//            Task {
-//                await dm.loadProfile(moc: moc)
-//            }
-//        }
-        
     }
 }
 
-#Preview {
-    GeneratePlanView(dm: DataManager())
-}
+//#Preview {
+//    GeneratePlanView(dm: DataManager())
+//}

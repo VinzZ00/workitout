@@ -19,6 +19,10 @@ class DataManager: ObservableObject {
 //        await addProfile.call(profile: profile, context: moc)
 //    }
     
+    func test() {
+        print("Test")
+    }
+    
     public func loadProfile(moc : NSManagedObjectContext) async {
         let fetchProfile = FetchProfileUseCase()
         
@@ -32,21 +36,25 @@ class DataManager: ObservableObject {
     public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) async {
         self.profile = createProfile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
         
-//        pm.addPosetoPoses()
-        
         for trimester in Trimester.allCases {
             profile.plan.append(createYogaPlan(trimester: trimester))
         }
         
-        await addProfile.call(profile: profile, context: moc) 
-        
-        var fetchProfile = FetchProfileUseCase()
-        
-        let fetchRes = await fetchProfile.call(context: moc)
-        
-        self.profile = fetchRes.first!
-        
-        print(fetchRes.first?.name)
+//        if profile.plan.contains(where: { ygp in
+//            !ygp.yogas.isEmpty
+//        }) {
+//            await addProfile.call(profile: profile, context: moc)
+//        }
+//        
+//        
+//        
+//        let fetchProfile = FetchProfileUseCase()
+//        
+//        let fetchRes = await fetchProfile.call(context: moc)
+//        
+//        self.profile = fetchRes.first!
+//        
+//        print(fetchRes.first?.name)
     }
     
     public func createProfile(name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {

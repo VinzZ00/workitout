@@ -10,7 +10,7 @@ import SwiftUI
 struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
-    @StateObject var dm : DataManager = DataManager()
+    @EnvironmentObject var dm: DataManager
     
     var body: some View {
         NavigationStack {
@@ -77,7 +77,7 @@ struct AssessmentView: View {
             }
             .padding(.horizontal, 15)
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView(dm: dm)
+                GeneratePlanView()
             }
             .onChange(of: avm.days.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
                 avm.buttonDisable = newValue
