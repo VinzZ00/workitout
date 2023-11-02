@@ -135,11 +135,12 @@ struct GeneratePlanView: View {
                     }
     //                NavigationLinkComponent(destination: AnyView(HomeView()))
                 }
-<<<<<<< HEAD
-//                NavigationLinkComponent(destination: AnyView(HomeView()))
-            }
-            .padding(.horizontal)
-//            .ignoresSafeArea()
+                .padding(.horizontal)
+                .ignoresSafeArea()
+            }.navigationDestination(isPresented: $finish, destination: {
+                HomeView()
+                    .environmentObject(dm)
+            })
         }
         .ignoresSafeArea(.container)
         .navigationDestination(isPresented: $finish, destination: {
