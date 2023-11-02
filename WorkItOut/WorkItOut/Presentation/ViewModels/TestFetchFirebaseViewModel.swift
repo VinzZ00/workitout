@@ -7,7 +7,7 @@
 
 import Foundation
 
-@MainActor
+//@MainActor
 class TestFetchFirebaseViewModel : ObservableObject {
     var firestore = FireStoreManager.shared
     @Published var poses : [RequestYogaPose] = []

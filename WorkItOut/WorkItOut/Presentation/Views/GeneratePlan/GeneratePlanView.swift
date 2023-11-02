@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct GeneratePlanView: View {
+    @Environment(\.managedObjectContext) var moc
+    @StateObject var dm: DataManager
+    
+    @State var finish: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             ScrollView {
@@ -36,49 +41,80 @@ struct GeneratePlanView: View {
                         .frame(maxWidth: .infinity)
                 )
                 
-                VStack(alignment: .leading) {
-                    ForEach(0...3, id: \.self) { _ in
-                        VStack {
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text("Day 1 - Upper Body")
-                                        .font(.title3)
-                                        .bold()
-                                    Text("Mon, Morning")
-                                        .foregroundStyle(.neutral3)
-                                        .font(.body)
-                                }
-                                Spacer()
-                                Button(action: {
-                                    
-                                }, label: {
-                                    Image(systemName: "pencil")
-                                })
-                            }
-                            ForEach(0...4, id: \.self) { _ in
-                                YogaCardView()
-                            }
-                        }
-                        .padding()
-                        .background(.white)
-                    }
+                if dm.profile.plan.isEmpty {
+                    Text("No Plan yet")
                 }
-                .background(.neutral6)
+                else {
+                    VStack(alignment: .leading) {
+                        ForEach(Array(dm.profile.plan[0].yogas.enumerated()), id: \.element) { index, yoga in
+                            VStack {
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text("Day \(index + 1) - Upper Body")
+                                            .font(.title3)
+                                            .bold()
+                                        Text("\(yoga.day.getString()), \(dm.profile.timeOfDay.getString())")
+                                            .foregroundStyle(.neutral3)
+                                            .font(.body)
+                                    }
+                                    Spacer()
+                                    Button(action: {
+                                        
+                                    }, label: {
+                                        Image(systemName: "pencil")
+                                    })
+                                }
+                                ForEach(yoga.poses, id: \.self) { pose in
+                                    YogaCardView(name: pose.name)
+                                }
+                            }
+                            .padding()
+                            .background(.white)
+                        }
+                    }
+                    .background(.neutral6)
+                    .ignoresSafeArea()
+                }
                 
             }
-            .ignoresSafeArea()
             
             VStack {
-                NavigationLinkComponent(destination: AnyView(HomeView()))
+                
+                ButtonComponent(title: "Finish") {
+                    Task {
+                        var addProfile: AddProfileUseCase = AddProfileUseCase()
+                        
+                        await addProfile.call(profile: dm.profile, context: moc)
+                        
+                        var fetchProfile = FetchProfileUseCase()
+                
+                        let fetchRes = await fetchProfile.call(context: moc)
+                
+                        dm.profile = fetchRes.first!
+                        
+                        print(fetchRes.first?.name)
+                        
+                        finish.toggle()
+                    }
+                    
+                }
+//                NavigationLinkComponent(destination: AnyView(HomeView()))
             }
             .padding(.horizontal)
             .ignoresSafeArea()
         }
-        
+        .navigationDestination(isPresented: $finish, destination: {
+            HomeView()
+        })
+//        .onAppear {
+//            Task {
+//                await dm.loadProfile(moc: moc)
+//            }
+//        }
         
     }
 }
 
-#Preview {
-    GeneratePlanView()
-}
+//#Preview {
+//    GeneratePlanView()
+//}

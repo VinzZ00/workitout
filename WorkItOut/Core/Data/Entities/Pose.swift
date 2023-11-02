@@ -7,18 +7,8 @@
 import CoreData
 import Foundation
 
-enum Exception : String, UserPreference {
-    func getString() -> String {
-        self.rawValue
-    }
-    
-    case vertigo = "Vertigo"
-    case all = "All"
-    case none = "None"
-}
-
 struct Pose: Identifiable, Hashable, Entity {
-    let id: UUID = UUID()
+    let id: UUID
     var name : String
     var image : String?
     var video : String?
@@ -38,7 +28,7 @@ struct Pose: Identifiable, Hashable, Entity {
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
         var pose = PoseNSObject(context: context)
         
-        pose.uuid = UUID()
+        pose.uuid = self.id
         pose.name = self.name
         pose.image = self.image
         pose.video = self.video
@@ -59,6 +49,8 @@ struct Pose: Identifiable, Hashable, Entity {
         return nil
     }
 }
+
+
 
 
 

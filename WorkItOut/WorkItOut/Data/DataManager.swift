@@ -7,44 +7,67 @@
 
 import Foundation
 import CoreData
-
+//import CoreData
+@MainActor
 class DataManager: ObservableObject {
-    let pm: PoseManager = PoseManager()
-    var profile: Profile
     
-    init() {
-        profile = Profile(name: "", currentWeek: Date.now, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [], timeOfDay: .morning, preferredDuration: .fiveteenMinutes, plan: [], histories: [])
+    @Published var pm: PoseManager = PoseManager()
+    @Published var profile: Profile = Profile()
+    var addProfile: AddProfileUseCase = AddProfileUseCase()
+    
+//    public func async saveProfile(Profile: profile) {
+//        await addProfile.call(profile: profile, context: moc)
+//    }
+    
+    public func loadProfile(moc : NSManagedObjectContext) async {
+        let fetchProfile = FetchProfileUseCase()
+        
+        let fetchRes = await fetchProfile.call(context: moc)
+        DispatchQueue.main.async {
+            self.profile = fetchRes.first!
+        }
+        
     }
     
-    public func createProfile(name: String, currentWeek: Date, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {
+    public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) async {
+        self.profile = createProfile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
         
-        let profile: Profile = Profile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
+//        pm.addPosetoPoses()
         
-        self.profile = profile
+        for trimester in Trimester.allCases {
+            profile.plan.append(createYogaPlan(trimester: trimester))
+        }
         
-        return profile
+//        await addProfile.call(profile: profile, context: moc)
+//        
+//        var fetchProfile = FetchProfileUseCase()
+//        
+//        let fetchRes = await fetchProfile.call(context: moc)
+//        
+//        self.profile = fetchRes.first!
+        
+//        print(fetchRes.first?.name)
     }
     
-    public func createYogas(days: [Day]) -> [Yoga] {
+    public func createProfile(name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {
+        return Profile(name: name, currentPregnancyWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
+    }
+    
+    public func createYogas() -> [Yoga] {
         var yogas: [Yoga] = []
+        let days = profile.daysAvailable
+        
+        var testPose = Pose(id: UUID(), name: "Test Name", description: "Test Description", seconds: 10, state: .notCompleted, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .first, bodyPartTrained: [], relieve: [], difficulty: .beginner)
         
         for day in days {
-            yogas.append(Yoga(name: "Test Yoga Name", poses: [], day: day, estimationDuration: 3, image: "ExampleImage.png"))
+            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: [pm.poses.randomElement() ?? testPose ,pm.poses.randomElement() ?? testPose,pm.poses.randomElement() ?? testPose], day: day, estimationDuration: 20, image: "ExampleImage.png"))
         }
         
         return yogas
     }
     
-    public func createYogaPlan(context: NSManagedObjectContext) -> YogaPlan {
-        let yogaPlan: YogaPlan = YogaPlan(name: "Yoga Plan Name", yogas: createYogas(days: [.friday]), trimester: .second)
-//        var yogas : [Yoga] = []
-        yogaPlan.yogas = [
-            var yoga = YogaNSObject(context: context)
-                yoga.
-        ]
-//        yogaPlan.yogas.map { yogaNS in
-//            yoga = Yoga(name: yogaNS.name!, poses: (yogaNS.poses?.allObjects as [PoseNSObject]).map{$0.intoPose()}, day: <#T##Day#>, estimationDuration: <#T##Int#>, image: <#T##String#>)
-//        }
+    public func createYogaPlan(trimester: Trimester) -> YogaPlan {
+        var yogaPlan: YogaPlan = YogaPlan(id: UUID(), name: "Yoga Plan Name", yogas: createYogas(), trimester: trimester)
         return yogaPlan
     }
 }
