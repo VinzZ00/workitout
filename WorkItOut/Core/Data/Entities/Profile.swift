@@ -18,6 +18,7 @@ struct Profile : Entity {
         profilens.daysAvailable = self.daysAvailable.map{$0.rawValue}.joined(separator: ", ")
         profilens.fitnessLevel = self.fitnessLevel.rawValue
         profilens.plan?.addingObjects(from: self.plan.map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)})
+        (profilens.plan?.allObjects as! [YogaPlanNSObject]).first?.name
         profilens.timeOfDay = self.timeOfDay.rawValue
         profilens.histories?.addingObjects(from: self.histories.map{
             $0.intoNSObject(context: context, parentProfileNS: profilens)})

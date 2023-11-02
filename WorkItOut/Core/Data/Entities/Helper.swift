@@ -52,7 +52,7 @@ extension YogaPlanNSObject {
         let yogaPlan = YogaPlan(
             id: self.uuid!,
             name: self.name!,
-            yogas: (self.yogas as? [YogaNSObject] ?? []).map{$0.intoObject()},
+            yogas: (self.yogas!.allObjects as? [YogaNSObject] ?? []).map{$0.intoObject()},
             trimester: Trimester(rawValue: self.trimester!)!
         ) // YogaPlan
         

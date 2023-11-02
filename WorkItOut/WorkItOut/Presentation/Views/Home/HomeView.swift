@@ -11,7 +11,7 @@ struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
     
     @Environment(\.managedObjectContext) var moc
-    @StateObject var dm : DataManager = DataManager()
+    @EnvironmentObject var dm : DataManager
     
     var body: some View {
         VStack {
