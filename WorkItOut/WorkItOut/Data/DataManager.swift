@@ -38,15 +38,15 @@ class DataManager: ObservableObject {
             profile.plan.append(createYogaPlan(trimester: trimester))
         }
         
-//        await addProfile.call(profile: profile, context: moc)
-//        
-//        var fetchProfile = FetchProfileUseCase()
-//        
-//        let fetchRes = await fetchProfile.call(context: moc)
-//        
-//        self.profile = fetchRes.first!
+        await addProfile.call(profile: profile, context: moc) 
         
-//        print(fetchRes.first?.name)
+        var fetchProfile = FetchProfileUseCase()
+        
+        let fetchRes = await fetchProfile.call(context: moc)
+        
+        self.profile = fetchRes.first!
+        
+        print(fetchRes.first?.name)
     }
     
     public func createProfile(name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {
