@@ -20,7 +20,6 @@ struct GeneratePlanView: View {
                     VStack(alignment: .leading) {
                         HStack {
                             Button(action: {
-                                //
                             }, label: {
                                 Image(systemName: "xmark")
                                     .foregroundStyle(.white)
@@ -98,7 +97,6 @@ struct GeneratePlanView: View {
                         }
                         
                     }
-                    //                NavigationLinkComponent(destination: AnyView(HomeView()))
                 }
                 .padding(.horizontal)
             }

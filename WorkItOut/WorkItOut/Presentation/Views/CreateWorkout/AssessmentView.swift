@@ -60,8 +60,9 @@ struct AssessmentView: View {
                                     histories: []
                                 )
                             }
-                            
-                            avm.finishCreateYogaPlan.toggle()
+                            if !dm.pm.poses.isEmpty {
+                                avm.finishCreateYogaPlan.toggle()
+                            }
                         }
                     }
                     .buttonStyle(BorderedButton())
