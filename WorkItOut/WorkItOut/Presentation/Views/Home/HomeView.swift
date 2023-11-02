@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
-   
+    
+    @Environment(\.managedObjectContext) var moc
+    @StateObject var dm : DataManager = DataManager()
     
     var body: some View {
         VStack {
@@ -29,6 +31,13 @@ struct HomeView: View {
                         Image(systemName: "chevron.left")
                     })
                     VStack {
+                        if dm.profile.name.isEmpty {
+                            Text("No Name")
+                        }
+                        else {
+                            Text("\(dm.profile.name)")
+                        }
+                        
                         Text("Week 12 - August")
                             .font(.title3)
                             .bold()
@@ -138,6 +147,14 @@ struct HomeView: View {
         .sheet(isPresented: $vm.sheetToggle, content: {
             YogaDetailView()
         })
+//        .task({
+//            await dm.loadProfile(moc: moc)
+//        })
+//        .onAppear {
+//            Task {
+//                await dm.loadProfile(moc: moc)
+//            }
+//        }
     }
 }
 

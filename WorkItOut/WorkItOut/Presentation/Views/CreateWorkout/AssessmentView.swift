@@ -9,13 +9,12 @@ import SwiftUI
 
 struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
-    
     @Environment(\.managedObjectContext) var moc
-    
+    @StateObject var dm : DataManager = DataManager()
     
     var body: some View {
-        NavigationStack{
-            VStack{
+        NavigationStack {
+            VStack {
                 switch avm.state {
                     case .chooseDay:
                         AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $avm.days, selections: Day.allCases, limit: 3)
@@ -34,12 +33,52 @@ struct AssessmentView: View {
                     case .complete:
                         CompleteView()
                 }
-            }
-            .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView()
+                Spacer()
+                
+                if avm.buttonDisable {
+                    Button("Next"){
+                        
+                    }
+                    .buttonStyle(BorderedDisabledButton())
+                }
+                else if avm.state == .complete {
+                    Button("Next"){
+                        withAnimation {
+                            Task {
+                                dm.pm.addPosetoPoses()
+                                await dm.setUpProfile(
+                                    moc: moc,
+                                    name: "User Name",
+                                    currentWeek: 10,
+                                    currentRelieveNeeded: avm.relieve,
+                                    fitnessLevel: avm.experience,
+                                    daysAvailable: avm.days,
+                                    timeOfDay: avm.timeClock,
+                                    preferredDuration: avm.durationExercise,
+                                    plan: [],
+                                    histories: []
+                                )
+                            }
+                            
+                            avm.finishCreateYogaPlan.toggle()
+                        }
+                    }
+                    .buttonStyle(BorderedButton())
+
+                }
+                else {
+                    Button("Next"){
+                        withAnimation {
+                            avm.nextState()
+                        }
+                    }
+                    .buttonStyle(BorderedButton())
+                }
             }
             .padding(.horizontal, 15)
-            Spacer()
+            .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
+                GeneratePlanView(dm: dm)
+            }
             .onChange(of: avm.days.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
                 avm.buttonDisable = newValue
             })
@@ -59,53 +98,6 @@ struct AssessmentView: View {
                     StateIndicator(state: $avm.state)
                 }
             }
-            if avm.buttonDisable {
-                Button("Next"){
-                    
-                }
-                .buttonStyle(BorderedDisabledButton())
-            }
-            else if avm.state == .complete {
-                Button("Next"){
-                    withAnimation {
-                        Task {
-                            var dm: DataManager = DataManager()
-                            
-                            await dm.setUpProfile(
-                                moc: moc,
-                                name: "User Name",
-                                currentWeek: 10,
-                                currentRelieveNeeded: avm.relieve,
-                                fitnessLevel: avm.experience,
-                                daysAvailable: avm.days,
-                                timeOfDay: avm.timeClock,
-                                preferredDuration: avm.durationExercise,
-                                plan: [],
-                                histories: []
-                            )
-                        }
-                        
-                        avm.finishCreateYogaPlan.toggle()
-                    }
-                }
-                .buttonStyle(BorderedButton())
-//                NavigationLink {
-//                    GeneratePlanView()
-//                } label: {
-//                    Text("Next")
-//                }
-//                .buttonStyle(BorderedDisabledButton())
-
-            }
-            else {
-                Button("Next"){
-                    withAnimation {
-                        avm.nextState()
-                    }
-                }
-                .buttonStyle(BorderedButton())
-            }
-            
         }
         
         

@@ -7,30 +7,26 @@
 
 import Foundation
 
-//@MainActor
+@MainActor
 class PoseManager: ObservableObject {
     var firestore = FireStoreManager.shared
     @Published var firebasePoses: [RequestYogaPose] = []
     @Published var poses : [Pose] = []
     
     init() {
-        self.getPoses()
-//        self.objectWillChange.send()
+        self.getFirebasePoses()
     }
     
-    func getPoses() {
-        self.getFirebasePoses()
-//        print("Firebase Pose: ", firebasePoses.count)
+    func addPosetoPoses(){
         for pose in firebasePoses {
             self.poses.append(Pose(id: UUID(), name: pose.name, description: "Test Description", seconds: 5, state: .notCompleted, position: pose.position, spineMovement: pose.spineMovement, recommendedTrimester: pose.recommendedTrimester, bodyPartTrained: pose.bodyPartTrained, relieve: [], difficulty: pose.difficulty))
-            print(pose.bodyPartTrained)
+//            print(pose.bodyPartTrained)
         }
-        print("Poses: ", poses.count)
         
         self.objectWillChange.send()
     }
     
-    func getFirebasePoses() /*-> [RequestYogaPose]*/ {
+    func getFirebasePoses(){
       firestore.getCollection(collectionName: FirebaseConstant.YogaPoseConstants.collectionName) { querySnapshot in
             querySnapshot.documents.forEach { doc in
                 let poseName = doc.data()[FirebaseConstant.YogaPoseConstants.name] as! String
@@ -68,13 +64,10 @@ class PoseManager: ObservableObject {
                 
                 let requestYogaPose = RequestYogaPose(name: poseName, altName: altName, difficulty: difficulty, position: position, recommendedTrimester: trimester, spineMovement: spineMovement, bodyPartTrained: bodyPartsEnum, exception: exceptions, relieve: relieves)
                 
+                
                 self.firebasePoses.append(requestYogaPose)
-//                print("Firebase Pose: ", self.firebasePoses)
+                self.objectWillChange.send()
             }
-//          print("Firebase Pose: ", self.firebasePoses)
         }
-//        print("Firebase Pose: ", firebasePoses)
-//        self.objectWillChange.send()
-//        print("Firebase Pose: ", firebasePoses)
     }
 }

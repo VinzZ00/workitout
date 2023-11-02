@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct YogaCardView: View {
+    var name: String = "Mountain Pose (Tadasana)"
+    
     var body: some View {
         HStack {
             Rectangle()
@@ -15,7 +17,7 @@ struct YogaCardView: View {
                 .frame(width: 70, height: 70)
                 .clipShape(.rect(cornerRadius: 12))
             VStack(alignment: .leading) {
-                Text("Mountain Pose (Tadasana)")
+                Text(name)
                     .font(.title3)
                     .bold()
                 Text("Category Item")

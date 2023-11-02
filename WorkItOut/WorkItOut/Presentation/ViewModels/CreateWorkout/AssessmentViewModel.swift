@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 class AssessmentViewModel : ObservableObject {
-    @Published var days : [Day] = [.monday]
+    @Published var days : [Day] = [.monday, .wednesday, .sunday]
     @Published var timeClock : TimeOfDay = .morning
     @Published var durationExercise : Duration = .fiveteenMinutes
     @Published var timeSpan : Months = .oneMonth

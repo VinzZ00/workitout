@@ -9,7 +9,9 @@ import SwiftUI
 
 struct GeneratePlanView: View {
     @Environment(\.managedObjectContext) var moc
-    var dm: DataManager = DataManager()
+    @StateObject var dm: DataManager
+    
+    @State var finish: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -44,14 +46,14 @@ struct GeneratePlanView: View {
                 }
                 else {
                     VStack(alignment: .leading) {
-                        ForEach(dm.profile.plan[0].yogas, id: \.id) { yoga in
+                        ForEach(Array(dm.profile.plan[0].yogas.enumerated()), id: \.element) { index, yoga in
                             VStack {
                                 HStack {
                                     VStack(alignment: .leading) {
-                                        Text("Day 1 - Upper Body")
+                                        Text("Day \(index + 1) - Upper Body")
                                             .font(.title3)
                                             .bold()
-                                        Text("\(yoga.day.getString()), Morning")
+                                        Text("\(yoga.day.getString()), \(dm.profile.timeOfDay.getString())")
                                             .foregroundStyle(.neutral3)
                                             .font(.body)
                                     }
@@ -62,8 +64,8 @@ struct GeneratePlanView: View {
                                         Image(systemName: "pencil")
                                     })
                                 }
-                                ForEach(0...yoga.poses.count, id: \.self) { _ in
-                                    YogaCardView()
+                                ForEach(yoga.poses, id: \.self) { pose in
+                                    YogaCardView(name: pose.name)
                                 }
                             }
                             .padding()
@@ -72,24 +74,43 @@ struct GeneratePlanView: View {
                     }
                     .background(.neutral6)
                     .ignoresSafeArea()
-                    
                 }
                 
             }
-                
-                
             
             VStack {
-                NavigationLinkComponent(destination: AnyView(HomeView()))
+                
+                ButtonComponent(title: "Finish") {
+                    Task {
+                        var addProfile: AddProfileUseCase = AddProfileUseCase()
+                        
+                        await addProfile.call(profile: dm.profile, context: moc)
+                        
+                        var fetchProfile = FetchProfileUseCase()
+                
+                        let fetchRes = await fetchProfile.call(context: moc)
+                
+                        dm.profile = fetchRes.first!
+                        
+                        print(fetchRes.first?.name)
+                        
+                        finish.toggle()
+                    }
+                    
+                }
+//                NavigationLinkComponent(destination: AnyView(HomeView()))
             }
             .padding(.horizontal)
             .ignoresSafeArea()
         }
-        .onAppear {
-            Task {
-                await dm.loadProfile(moc: moc)
-            }
-        }
+        .navigationDestination(isPresented: $finish, destination: {
+            HomeView()
+        })
+//        .onAppear {
+//            Task {
+//                await dm.loadProfile(moc: moc)
+//            }
+//        }
         
     }
 }
