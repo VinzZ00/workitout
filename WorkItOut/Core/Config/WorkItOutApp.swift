@@ -21,14 +21,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct WorkItOutApp: App {
     @StateObject var coreDataManager = CoreDataManager()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var dm = DataManager()
     
     var body: some Scene {
         WindowGroup {
 //            TestFetchFirebase()
             ContentView()
                 .environment(\.managedObjectContext, coreDataManager.container.viewContext)
-                .environmentObject(dm)
         }
     }
 }

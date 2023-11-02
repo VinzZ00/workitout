@@ -82,17 +82,17 @@ struct GeneratePlanView: View {
                     
                     ButtonComponent(title: "Finish") {
                         Task {
-//                            var addProfile: AddProfileUseCase = AddProfileUseCase()
-//                            
-//                            await addProfile.call(profile: dm.profile, context: moc)
-//                            
-//                            var fetchProfile = FetchProfileUseCase()
-//                            
-//                            let fetchRes = await fetchProfile.call(context: moc)
-//                            
-//                            dm.profile = fetchRes.first!
-//                            
-//                            print(fetchRes.first?.name)
+                            var addProfile: AddProfileUseCase = AddProfileUseCase()
+                            
+                            await addProfile.call(profile: dm.profile, context: moc)
+                            
+                            var fetchProfile = FetchProfileUseCase()
+                            
+                            let fetchRes = await fetchProfile.call(context: moc)
+                            
+                            dm.profile = fetchRes.first!
+                            
+                            print(fetchRes.first?.name)
                             
                             finish.toggle()
                         }
@@ -104,7 +104,7 @@ struct GeneratePlanView: View {
             }
             .navigationDestination(isPresented: $finish, destination: {
                 HomeView()
-//                    .environmentObject(dm)
+                    .environmentObject(dm)
             })
             .ignoresSafeArea()
         }
