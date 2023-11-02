@@ -757,210 +757,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9964974D-99FD-4B91-A57E-13B2262E98F5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "9964974D-99FD-4B91-A57E-13B2262E98F5 - d3ca667005dd5759"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "9964974D-99FD-4B91-A57E-13B2262E98F5 - d3ca667005dd57b8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "82FF74BF-D7BF-4C6C-86AE-DCFA0D077F5E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "82FF74BF-D7BF-4C6C-86AE-DCFA0D077F5E - d3ca667005dd5759"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "82FF74BF-D7BF-4C6C-86AE-DCFA0D077F5E - d3ca667005dd5759"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "82FF74BF-D7BF-4C6C-86AE-DCFA0D077F5E - 399c4ec7a48b094c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "82FF74BF-D7BF-4C6C-86AE-DCFA0D077F5E - f2ba17c0f7e78b5b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1D3B421B-C306-4526-8705-9B6EB12DFB52"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "1D3B421B-C306-4526-8705-9B6EB12DFB52 - f2ba17c0f7e78b19"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "184">
-               </Location>
-               <Location
-                  uuid = "1D3B421B-C306-4526-8705-9B6EB12DFB52 - d3ca667005dd571b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "1D3B421B-C306-4526-8705-9B6EB12DFB52 - 399c4ec7a48b090e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "1D3B421B-C306-4526-8705-9B6EB12DFB52 - f2ba17c0f7e78b19"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2F1EEC06-84CE-4868-9706-B6558C923FB5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -978,7 +774,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9944291A-355C-4B07-993C-E2FA9A366AFE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
@@ -1026,7 +822,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3BDF7B2E-2FD4-4D92-B5FA-220A85DCF9C3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
@@ -1068,22 +864,6 @@
                   offsetFromSymbolStart = "612">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6D09C375-39B5-4060-BE8E-E04610EE274F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "body"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1186,7 +966,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "48F5E0F5-07FA-4C92-8BDF-B43F3859AA4A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
@@ -1234,7 +1014,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0853F46F-D40C-4E61-860F-C3C37B3EA7FF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
@@ -1407,17 +1187,428 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7180F266-E9A8-4CE0-87B9-8C9348DB4765"
+            uuid = "1D1581EB-2723-4CF1-9E32-285037963BBC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1D1581EB-2723-4CF1-9E32-285037963BBC - 3904c9bb8f70ca41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.GeneratePlanView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "968">
+               </Location>
+               <Location
+                  uuid = "1D1581EB-2723-4CF1-9E32-285037963BBC - 3904c9bb8f70c98f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.GeneratePlanView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "708">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CDC42038-FE13-41C1-BD11-950916461E9D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setUpProfile(moc:name:currentWeek:currentRelieveNeeded:fitnessLevel:daysAvailable:timeOfDay:preferredDuration:plan:histories:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA3AA287-E4AD-4701-8082-C8D3AC56EFA1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "HomeView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "FA3AA287-E4AD-4701-8082-C8D3AC56EFA1 - d6f091dde0f5ddbf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of WorkItOut.HomeView.vm : WorkItOut.HomeViewModel"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "FA3AA287-E4AD-4701-8082-C8D3AC56EFA1 - 545e0e8e7ce4295"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.HomeView.vm.getter : WorkItOut.HomeViewModel"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "FA3AA287-E4AD-4701-8082-C8D3AC56EFA1 - 3d37367c91182fdd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.HomeView.$vm.getter : SwiftUI.ObservedObject&lt;WorkItOut.HomeViewModel&gt;.Wrapper"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "FA3AA287-E4AD-4701-8082-C8D3AC56EFA1 - e03ae6b337776b48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of WorkItOut.HomeView.init(vm: @autoclosure () -&gt; WorkItOut.HomeViewModel, moc: SwiftUI.Environment&lt;__C.NSManagedObjectContext&gt;, dm: @autoclosure () -&gt; WorkItOut.DataManager) -&gt; WorkItOut.HomeView"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAA647F3-FA45-42A8-AA4F-BFC116C92A34"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "HomeView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "AAA647F3-FA45-42A8-AA4F-BFC116C92A34 - 70b354fed3f751d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.HomeView.moc.getter : __C.NSManagedObjectContext"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "AAA647F3-FA45-42A8-AA4F-BFC116C92A34 - 53960743ba4959f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.HomeView.init() -&gt; WorkItOut.HomeView"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "AAA647F3-FA45-42A8-AA4F-BFC116C92A34 - cccb81f7d5a69124"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 1 of WorkItOut.HomeView.init(vm: @autoclosure () -&gt; WorkItOut.HomeViewModel, moc: SwiftUI.Environment&lt;__C.NSManagedObjectContext&gt;, dm: @autoclosure () -&gt; WorkItOut.DataManager) -&gt; WorkItOut.HomeView"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "074D25D7-6A3E-4D6D-8356-1A175A351F3F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "HomeView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "074D25D7-6A3E-4D6D-8356-1A175A351F3F - 83628fd41aaa978b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of WorkItOut.HomeView.dm : WorkItOut.DataManager"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "074D25D7-6A3E-4D6D-8356-1A175A351F3F - 6d1c99c083d384e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.HomeView.dm.getter : WorkItOut.DataManager"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "074D25D7-6A3E-4D6D-8356-1A175A351F3F - 407d72e44b0028fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.HomeView.$dm.getter : SwiftUI.ObservedObject&lt;WorkItOut.DataManager&gt;.Wrapper"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "074D25D7-6A3E-4D6D-8356-1A175A351F3F - 607995c7a708cf4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 2 of WorkItOut.HomeView.init(vm: @autoclosure () -&gt; WorkItOut.HomeViewModel, moc: SwiftUI.Environment&lt;__C.NSManagedObjectContext&gt;, dm: @autoclosure () -&gt; WorkItOut.DataManager) -&gt; WorkItOut.HomeView"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E79B0FA8-9131-4AC2-AD50-C6C5EB0130F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "E79B0FA8-9131-4AC2-AD50-C6C5EB0130F7 - 5922238f6831e08f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.HomeView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "E79B0FA8-9131-4AC2-AD50-C6C5EB0130F7 - ccd93b62c0670df3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in WorkItOut.HomeView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "584">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80E2DF5C-270A-4DD8-887E-9E652DD2EFA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "80E2DF5C-270A-4DD8-887E-9E652DD2EFA8 - ccd93b62c0670d92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in WorkItOut.HomeView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "596">
+               </Location>
+               <Location
+                  uuid = "80E2DF5C-270A-4DD8-887E-9E652DD2EFA8 - b1a32d125c6dbe0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;WorkItOut.Day&gt;, WorkItOut.Day, WorkItOut.DayButtonView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in WorkItOut.HomeView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "472">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC4CDDAD-6503-45EB-990D-6F94092C47A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BC4CDDAD-6503-45EB-990D-6F94092C47A1 - b1a32d125c6dbe2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;WorkItOut.Day&gt;, WorkItOut.Day, WorkItOut.DayButtonView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in WorkItOut.HomeView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "BC4CDDAD-6503-45EB-990D-6F94092C47A1 - bc41ab4c908e74ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Image&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI.Text&gt;, SwiftUI.Text, SwiftUI.Text)&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Image&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;WorkItOut.Day&gt;, WorkItOut.Day, WorkItOut.DayButtonView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in WorkItOut.HomeView.body.getter : some"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "728">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
