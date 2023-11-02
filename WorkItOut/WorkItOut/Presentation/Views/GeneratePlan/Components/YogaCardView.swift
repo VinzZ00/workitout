@@ -9,6 +9,8 @@ import SwiftUI
 
 struct YogaCardView: View {
     var name: String = "Mountain Pose (Tadasana)"
+    var category: String = "Category Item"
+    var min: Int = 10
     
     var body: some View {
         HStack {
@@ -20,12 +22,12 @@ struct YogaCardView: View {
                 Text(name)
                     .font(.title3)
                     .bold()
-                Text("Category Item")
+                Text(category)
                     .foregroundStyle(.neutral3)
                     .font(.body)
             }
             Spacer()
-            Text("10 min")
+            Text("\(min) min")
                 .padding(8)
                 .background(.neutral6)
                 .clipShape(.rect(cornerRadius: 12))

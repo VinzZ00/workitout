@@ -53,14 +53,20 @@ class DataManager: ObservableObject {
         return Profile(name: name, currentPregnancyWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
     }
     
+    public func createPose() -> Pose {
+        let testPose = Pose(id: UUID(), name: "Test Name", description: "Test Description", seconds: 10, state: .notCompleted, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .first, bodyPartTrained: [], relieve: [], difficulty: .beginner)
+        
+        return pm.poses.randomElement() ?? testPose
+    }
+    
     public func createYogas() -> [Yoga] {
         var yogas: [Yoga] = []
         let days = profile.daysAvailable
         
-        var testPose = Pose(id: UUID(), name: "Test Name", description: "Test Description", seconds: 10, state: .notCompleted, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .first, bodyPartTrained: [], relieve: [], difficulty: .beginner)
+//        var testPose = Pose(id: UUID(), name: "Test Name", description: "Test Description", seconds: 10, state: .notCompleted, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .first, bodyPartTrained: [], relieve: [], difficulty: .beginner)
         
         for day in days {
-            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: [pm.poses.randomElement() ?? testPose ,pm.poses.randomElement() ?? testPose,pm.poses.randomElement() ?? testPose], day: day, estimationDuration: 20, image: "ExampleImage.png"))
+            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: [createPose(), createPose(), createPose()], day: day, estimationDuration: 20, image: "ExampleImage.png"))
         }
         
         return yogas

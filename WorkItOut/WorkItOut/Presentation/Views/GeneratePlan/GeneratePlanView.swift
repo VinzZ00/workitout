@@ -40,7 +40,7 @@ struct GeneratePlanView: View {
                         .resizable()
                         .frame(maxWidth: .infinity)
                 )
-                
+                DayPickerView()
                 if dm.profile.plan.isEmpty {
                     Text("No Plan yet")
                 }
@@ -101,8 +101,9 @@ struct GeneratePlanView: View {
 //                NavigationLinkComponent(destination: AnyView(HomeView()))
             }
             .padding(.horizontal)
-            .ignoresSafeArea()
+//            .ignoresSafeArea()
         }
+        .ignoresSafeArea(.container)
         .navigationDestination(isPresented: $finish, destination: {
             HomeView()
         })
@@ -115,6 +116,6 @@ struct GeneratePlanView: View {
     }
 }
 
-//#Preview {
-//    GeneratePlanView()
-//}
+#Preview {
+    GeneratePlanView(dm: DataManager())
+}
