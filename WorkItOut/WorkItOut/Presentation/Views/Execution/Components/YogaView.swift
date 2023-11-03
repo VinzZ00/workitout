@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct YogaView: View {
-    @State var exercise: String
-    @State var nextExercise: String
-    @State var time: Double
-    @State var image: String
-//    @State private var textSwitch = false
+    var exercise: String
+    var nextExercise: String
+    var time: Double
+    var image: String
+    var indexExercise: Int
+    var allExercise: Int
+    @State var textSwitch = false
+    @State var previousDisabled = false
+    @State var nextDisabled = false
     
     var body: some View {
         VStack {
@@ -25,7 +29,7 @@ struct YogaView: View {
                 }
                 Spacer()
                 HStack (spacing: 20){
-                    Text("Exercise 1/5")
+                    Text("Exercise \(indexExercise + 1)/\(allExercise)")
                         .font(.system(size: 14))
                     Button{
                         
@@ -51,21 +55,32 @@ struct YogaView: View {
             Text("\(exercise)")
                 .font(.title)
                 .bold()
-            Text("Next: \(nextExercise)")
-                .foregroundStyle(Color.gray)
-                .font(.system(size: 14))
-//            Text("Get Started")
-//                .font(.system(size: 48))
-//                .bold()
-//                .padding(50)
-//                .onAppear {
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-//                        self.textSwitch.toggle()
-//                    }
-//                }
-//            if textSwitch == true {
+            
+            if indexExercise + 1 == allExercise {
+                Text("Next: \(nextExercise)")
+                    .foregroundStyle(Color.gray)
+                    .font(.system(size: 14)).hidden()
+            }else{
+                Text("Next: \(nextExercise)")
+                    .foregroundStyle(Color.gray)
+                    .font(.system(size: 14))
+            }
+            
+            
+            if textSwitch == false {
+                Text("Get Started")
+                    .font(.system(size: 48))
+                    .bold()
+                    .padding(50)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                            self.textSwitch.toggle()
+                        }
+                    }
+            }else {
                 TimerView(vm: TimerViewModel(), time: time)
-//            }
+                    .padding(40)
+            }
             
             Rectangle()
                 .frame(width: 355, height: 12)
@@ -77,6 +92,13 @@ struct YogaView: View {
                     Image(systemName: "backward.end.circle")
                         .font(.system(size: 44))
                 }
+                .onAppear(perform: {
+                    if indexExercise == 0 {
+                        previousDisabled = true
+                    }
+                })
+                .disabled(previousDisabled)
+                
                 Button{
                     
                 }label: {
@@ -91,6 +113,12 @@ struct YogaView: View {
                     Image(systemName: "forward.end.circle")
                         .font(.system(size: 44))
                 }
+                .onAppear(perform: {
+                    if indexExercise + 1 == allExercise {
+                        nextDisabled = true
+                    }
+                })
+                .disabled(nextDisabled)
             }
             .padding(.top, 40)
         }
@@ -98,5 +126,5 @@ struct YogaView: View {
 }
 
 #Preview {
-    YogaView(exercise: "Plank", nextExercise: "Push Up", time: 60, image: "Plank")
+    YogaView(exercise: "Plank", nextExercise: "Push Up", time: 60, image: "Plank", indexExercise: 4, allExercise: 5)
 }

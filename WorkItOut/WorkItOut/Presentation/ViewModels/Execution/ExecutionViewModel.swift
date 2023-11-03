@@ -26,8 +26,21 @@ class ExecutionViewModel: ObservableObject {
 //        }
 //    }
     
-    func addProfile(context: NSManagedObjectContext) async {
-        profile = await fetch.call(context: context)
+//    func addProfile(context: NSManagedObjectContext) async {
+//        profile = await fetch.call(context: context)
+//    }
+    
+    
+    init() {
+        addprofile()
+        getTrimester()
+        getYogaPlan()
+        getYoga()
+        getPose()
+    }
+    
+    func addprofile(){
+        profile.append(MockData.mockProfile)
     }
     
     func getTrimester(){
@@ -53,9 +66,12 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func getYoga() {
+        let date = Calendar.current.component(.weekday, from: Date()) - 1
+        
         for plan in yogaPlan{
             for yoga in plan.yogas {
-                if (yoga.day.getWeekday() == Date()) {
+                print("\(yoga.day.getInt()) date \(date)")
+                if (yoga.day.getInt() == date) {
                     yogas.append(yoga)
                 }
             }
@@ -71,7 +87,6 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func call(){
-        
         getTrimester()
         getYogaPlan()
         getYoga()

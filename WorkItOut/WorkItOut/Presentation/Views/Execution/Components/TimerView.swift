@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TimerView: View {
     @ObservedObject var vm: TimerViewModel
-    @State var count = 0
     @State var time: Double
     
     var body: some View {

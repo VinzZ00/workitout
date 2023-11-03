@@ -10,6 +10,7 @@ import Foundation
 class TimerViewModel: ObservableObject {
     @Published var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @Published var timeRemaining: Double = 0
+    @Published var isTimerPaused = false
     @Published var timeToggle = false
     @Published var timeSet = 0
     
@@ -33,6 +34,17 @@ class TimerViewModel: ObservableObject {
             timer.upstream.connect().cancel()
             timeToggle.toggle()
         }
+    }
+    
+    func pauseTimer() {
+        isTimerPaused = true
+        timer.upstream.connect().cancel()
+    }
+    
+    func continueTimer() {
+        isTimerPaused = false
+        timeToggle = true
+        timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     }
     
     func timeString(time: Double) -> String {
