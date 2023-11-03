@@ -32,12 +32,12 @@ final class ProfileTests: XCTestCase {
         }
     }
     
-    func testConvertRelievestoStrings(){
-        let relieves : [Relieve] = [.backpain, .breathing, .hippain]
+    func testConvertExceptionstoStrings(){
+        let exceptions : [Exception] = [.abdominalSurgery, .diastasisRecti]
         if let pvm = profileViewModel {
-            let strings = pvm.convertToStrings(relieves: relieves)
+            let strings = pvm.convertToStrings(exceptions: exceptions)
             
-            XCTAssertEqual(strings, "Back Pain, Breathing, Hip Pain")
+            XCTAssertEqual(strings, "Abdominal Surgery, Diastatis Recti")
         }
         
     }

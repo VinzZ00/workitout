@@ -11,8 +11,7 @@ struct ProfileCard: View {
     var detail : (String, String)
     var value : String
     init(assessmentState: AssessmentState, value: String) {
-//        detail = assessmentState.getDescription()
-        detail = ("Test Detail", "Test Detail")
+        self.detail = assessmentState.getDescription()
         self.value = value
     }
     var body: some View {

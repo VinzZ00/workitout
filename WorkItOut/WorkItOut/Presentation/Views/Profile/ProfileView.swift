@@ -22,7 +22,7 @@ struct ProfileView: View {
                         ProfileCard(assessmentState: .chooseWeek, value: viewModel.convertToStrings(currentPregnancyWeek: viewModel.profile.currentPregnancyWeek))
                     }
                     NavigationLink(value: AssessmentState.chooseExceptions) {
-                        ProfileCard(assessmentState: .chooseExceptions, value: viewModel.relieve.isEmpty ? "None" : viewModel.convertToStrings(relieves: viewModel.relieve))
+                        ProfileCard(assessmentState: .chooseExceptions, value: viewModel.relieve.isEmpty ? "None" : viewModel.convertToStrings(exceptions: viewModel.exceptions))
                     }
                 }
                 .padding(.bottom, 24)
