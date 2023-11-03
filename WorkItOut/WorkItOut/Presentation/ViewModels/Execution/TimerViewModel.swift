@@ -36,6 +36,12 @@ class TimerViewModel: ObservableObject {
         }
     }
     
+    func resetTimer(time: Double) {
+        timeToggle = false
+        timer.upstream.connect().cancel()
+        timeRemaining = time
+    }
+    
     func pauseTimer() {
         isTimerPaused = true
         timer.upstream.connect().cancel()
