@@ -9,17 +9,41 @@ import SwiftUI
 
 struct TimerView: View {
     @ObservedObject var vm: TimerViewModel
-    @State var count = 0
     @State var time: Double
     
     var body: some View {
-        ZStack {
+        VStack {
             Text("\(vm.currentTime())")
                 .font(.system(size: 60))
                 .bold()
                 .onReceive(vm.timer){ _ in
                     vm.updateCurrentTime()
                 }
+            HStack{
+                Button{
+                   
+                        vm.startTimer(time: time)
+                    
+                }label: {
+                    Image(systemName: "backward.end.circle")
+                        .font(.system(size: 44))
+                }
+                
+                Button{
+                    vm.pauseTimer()
+                }label: {
+                    Image(systemName: "pause.circle")
+                        .font(.system(size: 68))
+                }
+                .padding(.horizontal, 50)
+                
+                Button{
+                        vm.startTimer(time: time)
+                }label: {
+                    Image(systemName: "forward.end.circle")
+                        .font(.system(size: 44))
+                }
+            }
         }
         .onAppear(perform: {
             vm.startTimer(time: time)

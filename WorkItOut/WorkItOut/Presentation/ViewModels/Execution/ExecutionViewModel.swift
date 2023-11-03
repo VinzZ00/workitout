@@ -10,16 +10,37 @@ import CoreData
 
 class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
-    var trimester: Int = 0
-    var profile: [Profile] = []
-    var yogaPlan: [YogaPlan] = []
-    var yogas: [Yoga] = []
+    @Published var trimester: Int = 0
+    @Published var profile: [Profile] = []
+    @Published var yogaPlan: [YogaPlan] = []
+    @Published var yogas: [Yoga] = []
     @Published var pose: [Pose] = []
     @Published var index = 0
-    var end = false
+    @Published var end = false
+    @Published var start = true
     
-    func addProfile(context: NSManagedObjectContext) async {
-        profile = await fetch.call(context: context)
+//    init(moc : NSManagedObjectContext) {
+//        Task {
+//            await addProfile(context: moc)
+//            call()
+//        }
+//    }
+    
+//    func addProfile(context: NSManagedObjectContext) async {
+//        profile = await fetch.call(context: context)
+//    }
+    
+    
+    init() {
+        addprofile()
+        getTrimester()
+        getYogaPlan()
+        getYoga()
+        getPose()
+    }
+    
+    func addprofile(){
+        profile.append(MockData.mockProfile)
     }
     
     func getTrimester(){
@@ -45,9 +66,12 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func getYoga() {
+        let date = Calendar.current.component(.weekday, from: Date()) - 1
+        
         for plan in yogaPlan{
             for yoga in plan.yogas {
-                if (yoga.day.getWeekday() == Date()) {
+//                print("\(yoga.day.getInt()) date \(date)")
+                if (yoga.day.getInt() == date) {
                     yogas.append(yoga)
                 }
             }
@@ -62,13 +86,18 @@ class ExecutionViewModel: ObservableObject {
         }
     }
     
-    func poses() -> Pose{
-        return pose[index]
-    }
-    
     func nextPose(){
         if index < pose.count-1 {
             index += 1
+            self.objectWillChange.send()
+        }else{
+            end = true
+        }
+    }
+    
+    func previousPose(){
+        if index > 0 {
+            index -= 1
             self.objectWillChange.send()
         }else{
             end = true
