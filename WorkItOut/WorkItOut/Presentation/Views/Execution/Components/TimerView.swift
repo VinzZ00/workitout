@@ -10,25 +10,23 @@ import SwiftUI
 struct TimerView: View {
     @ObservedObject var vm: TimerViewModel
     @State var count = 0
+    @State var time: Double
     
     var body: some View {
         ZStack {
             Text("\(vm.currentTime())")
-                .font(.title2.bold())
-                .foregroundColor(.green)
+                .font(.system(size: 60))
+                .bold()
                 .onReceive(vm.timer){ _ in
                     vm.updateCurrentTime()
                 }
-                .frame(width: 120, height: 80)
-                .background(.black)
-                .cornerRadius(12)
         }
         .onAppear(perform: {
-            vm.startTimer()
+            vm.startTimer(time: time)
         })
     }
 }
 
 #Preview {
-    TimerView(vm: TimerViewModel())
+    TimerView(vm: TimerViewModel(), time: 60)
 }
