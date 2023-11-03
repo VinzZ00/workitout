@@ -10,7 +10,6 @@ import CoreData
 //import CoreData
 @MainActor
 class DataManager: ObservableObject {
-    
     @Published var pm: PoseManager = PoseManager()
     @Published var profile: Profile = Profile()
     var addProfile: AddProfileUseCase = AddProfileUseCase()

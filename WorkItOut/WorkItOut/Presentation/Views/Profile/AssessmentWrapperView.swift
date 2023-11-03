@@ -18,19 +18,18 @@ struct AssessmentWrapperView: View {
                     case .chooseDay:
                         AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $vm.days, selections: Day.allCases, limit: 3)
                     case .chooseTime:
-                        AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $vm.timeClock, selections: TimeOfDay.allCases)
+                        AssessmentDetailView(title: "When do you want to be reminded to do yoga?", selection: $vm.timeClock, selections: TimeOfDay.allCases)
                     case .chooseDuration:
                         AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $vm.durationExercise, selections: Duration.allCases)
-                    case .chooseMonth:
-                        AssessmentDetailView(title: "How long do you plan to follow your exercise routine?", selection: $vm.timeSpan, selections: Months.allCases)
+                    case .chooseWeek:
+                        // Ganti ke picker pregnancy week
+                        AssessmentDetailView(title: "What weeks of pregnancy are you in?", selection: $vm.timeSpan, selections: Months.allCases)
                     case .chooseExperience:
                         AssessmentDetailView(title: "Have you ever done yoga before?", selection: $vm.experience, selections: Difficulty.allCases)
-                    case .chooseTrimester:
-                        AssessmentDetailView(title: "What trimester are you in?", selection: $vm.trimester, selections: Trimester.allCases)
-                    case .chooseRelieve:
-                        AssessmentDetailMultipleChoiceView(title: "Is there a problem you are experiencing lately?", selectedItems: $vm.relieve, selections: Relieve.allCases)
-                    case .complete:
-                        CompleteView()
+                    case .chooseExceptions:
+                        AssessmentDetailMultipleChoiceView(title: "Do you have any health conditions?", selectedItems: $vm.exceptions, selections: Exception.allCases)
+                default:
+                    EmptyView()
                 }
                 Spacer()
             }
@@ -58,7 +57,7 @@ struct AssessmentWrapperView: View {
 
 #Preview {
     NavigationStack{
-        AssessmentWrapperView(stateValue: .chooseDay)
+        AssessmentWrapperView(stateValue: .chooseExceptions)
             .environmentObject(ProfileViewModel())
     }
 }

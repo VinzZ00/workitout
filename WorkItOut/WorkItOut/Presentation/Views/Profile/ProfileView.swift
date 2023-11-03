@@ -18,11 +18,11 @@ struct ProfileView: View {
                         .foregroundStyle(.gray)
                         .bold()
                         .padding(.top, 14)
-                    NavigationLink(value: AssessmentState.chooseMonth) {
-                        ProfileCard(assessmentState: .chooseMonth, value: viewModel.convertToStrings(currentPregnancyWeek: viewModel.profile.currentPregnancyWeek))
+                    NavigationLink(value: AssessmentState.chooseWeek) {
+                        ProfileCard(assessmentState: .chooseWeek, value: viewModel.convertToStrings(currentPregnancyWeek: viewModel.profile.currentPregnancyWeek))
                     }
-                    NavigationLink(value: AssessmentState.chooseRelieve) {
-                        ProfileCard(assessmentState: .chooseRelieve, value: viewModel.relieve.isEmpty ? "None" : viewModel.convertToStrings(relieves: viewModel.relieve))
+                    NavigationLink(value: AssessmentState.chooseExceptions) {
+                        ProfileCard(assessmentState: .chooseExceptions, value: viewModel.relieve.isEmpty ? "None" : viewModel.convertToStrings(exceptions: viewModel.exceptions))
                     }
                 }
                 .padding(.bottom, 24)

@@ -9,6 +9,8 @@ import Foundation
 
 class ProfileViewModel : ObservableObject {
     @Published var profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
+    @Published var currentWeek: Int = 10
+    @Published var exceptions: [Exception] = [.vertigo, .abdominalSurgery, .diastasisRecti]
     @Published var days : [Day] = [.monday]
     @Published var timeClock : TimeOfDay = .morning
     @Published var durationExercise : Duration = .fiveteenMinutes
@@ -16,6 +18,7 @@ class ProfileViewModel : ObservableObject {
     @Published var experience: Difficulty = .beginner
     @Published var trimester: Trimester = .first
     @Published var relieve: [Relieve] = [.backpain]
+    @Published var exceptions: [Exception] = [.highBloodPressure]
     
     init(){
         // MARK: change to load profile from coredata
@@ -27,6 +30,7 @@ class ProfileViewModel : ObservableObject {
         self.experience = self.profile.fitnessLevel
         // trimester ganti dengan function getTrimesterFromCurrentWeek
         self.relieve = self.profile.currentRelieveNeeded
+        
     }
     
     func convertToString(days : [Day]) -> String{
@@ -53,6 +57,11 @@ class ProfileViewModel : ObservableObject {
     
     func convertToStrings(relieves: [Relieve]) -> String {
         let strings = relieves.map { $0.getString() }
+        return strings.joined(separator: ", ")
+    }
+    
+    func convertToStrings(exceptions : [Exception]) -> String {
+        let strings = exceptions.map { $0.getString() }
         return strings.joined(separator: ", ")
     }
     

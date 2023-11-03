@@ -25,6 +25,6 @@ struct NavigationLinkComponent: View {
     }
 }
 
-#Preview {
-    NavigationLinkComponent(destination: AnyView(HomeView()))
-}
+//#Preview {
+//    NavigationLinkComponent(destination: AnyView(HomeView()))
+//}

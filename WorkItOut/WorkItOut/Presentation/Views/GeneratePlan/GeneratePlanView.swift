@@ -101,7 +101,7 @@ struct GeneratePlanView: View {
                 .padding(.horizontal)
             }
             .navigationDestination(isPresented: $finish, destination: {
-                HomeView()
+                HomeView(vm: HomeViewModel(profile: dm.profile))
                     .environmentObject(dm)
             })
             .ignoresSafeArea()
