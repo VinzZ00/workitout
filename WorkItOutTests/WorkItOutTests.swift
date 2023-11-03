@@ -62,7 +62,24 @@ final class WorkitOutTests: XCTestCase {
             
             let fetchRes = await fetchUsecase?.call(context: moc);
             
-            XCTAssertEqual(fetchRes?.first?.name, testRecord!.name, "Done the test")
+            XCTAssertEqual(fetchRes?.last?.name, testRecord!.name, "Done the test")
+            
+        }
+    }
+    
+    func testUpdate() async throws {
+        if let moc = self.moc {
+            var fetchRes = await fetchUsecase?.call(context: moc)
+            if fetchRes?.last != nil {
+                var p = fetchRes!.last!
+                p.name = "Elvin Sestomi"
+                
+                await UpdateProfileUseCase().call(profile: p, context: moc)
+                
+                var newFetchRequest = await fetchUsecase?.call(context: moc)
+                
+                XCTAssertEqual(newFetchRequest!.last!.name, "Elvin Sestomi")
+            }
         }
     }
 
