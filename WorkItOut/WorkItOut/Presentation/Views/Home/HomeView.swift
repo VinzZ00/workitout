@@ -61,15 +61,14 @@ struct HomeView: View {
                 .padding(.vertical)
                 
                 HStack {
-                    ForEach(vm.days, id: \.self) { _ in
-                        DayButtonView()
+                    ForEach(Day.allCases, id: \.self) { day in
+                        DayButtonView(selectedDay: $vm.day, days: vm.days, day: day)
                     }
                 }
             }
             .padding()
             .frame(maxWidth: .infinity)
             .background(.white)
-            
             
             ScrollView {
                 VStack(alignment: .leading) {
@@ -78,10 +77,10 @@ struct HomeView: View {
                         Text("Today, 26 October")
                             .font(.title3)
                             .bold()
-                        Text("Balancing and Grounding")
+                        Text(vm.yogaPlan.name)
                             .font(.largeTitle)
                             .bold()
-                        Text("5 Exercise (60 Min)")
+                        Text("\(vm.yogaPlan.yogas.count) Exercise (\(vm.yogaPlan.totalDurationMinute()) Min)")
                             .font(.body)
                         ButtonComponent(title: "Start Exercise") {
                             vm.sheetToggle.toggle()
@@ -147,7 +146,7 @@ struct HomeView: View {
         .ignoresSafeArea(.keyboard)
         .background(Color("Background"))
         .sheet(isPresented: $vm.sheetToggle, content: {
-            YogaDetailView()
+            YogaDetailView(yoga: Yoga())
         })
 //        .task({
 //            await dm.loadProfile(moc: moc)

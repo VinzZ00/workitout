@@ -54,7 +54,7 @@ struct GeneratePlanView: View {
                                                 .font(.title3)
                                                 .bold()
                                             Text("\(yoga.day.getString()), \(dm.profile.timeOfDay.getString())")
-                                                .foregroundStyle(.neutral3)
+                                                .foregroundStyle(Color.neutral3)
                                                 .font(.body)
                                         }
                                         Spacer()
@@ -72,7 +72,7 @@ struct GeneratePlanView: View {
                                 .background(.white)
                             }
                         }
-                        .background(.neutral6)
+                        .background(Color.neutral6)
                     }
                     
                 }

@@ -40,21 +40,21 @@ class DataManager: ObservableObject {
         }
         
         
-//        if profile.plan.contains(where: { ygp in
-//            !ygp.yogas.isEmpty
-//        }) {
-//            await addProfile.call(profile: profile, context: moc)
-//        }
-//        
-//        
-//        
-//        let fetchProfile = FetchProfileUseCase()
-//        
-//        let fetchRes = await fetchProfile.call(context: moc)
-//        
-//        self.profile = fetchRes.first!
-//        
-//        print(fetchRes.first?.name)
+        if profile.plan.contains(where: { ygp in
+            !ygp.yogas.isEmpty
+        }) {
+            await addProfile.call(profile: profile, context: moc)
+        }
+        
+        
+        
+        let fetchProfile = FetchProfileUseCase()
+        
+        let fetchRes = await fetchProfile.call(context: moc)
+        
+        self.profile = fetchRes.first!
+        
+        print(fetchRes.first?.name)
     }
     
     public func createProfile(name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {

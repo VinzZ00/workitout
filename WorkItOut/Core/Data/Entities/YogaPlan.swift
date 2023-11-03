@@ -23,4 +23,14 @@ struct YogaPlan : Identifiable, Entity {
         yogaPlan.ofProfile = parentProfileNSObject
         return yogaPlan
     }
+    
+    func totalDurationMinute() -> Int {
+        var seconds = 0
+        
+        for yoga in yogas {
+            seconds += yoga.estimationDuration
+        }
+        
+        return (seconds/60)
+    }
 }

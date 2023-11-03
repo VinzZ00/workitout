@@ -9,7 +9,8 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     @Published var week: Int = 20
-    @Published var yogaPlan: YogaPlan = YogaPlan()
+    var yogaPlans: [YogaPlan] = []
+    @Published var day: Day = .monday
     
     @Published var days: [Day] = Day.allCases
     @Published var relieves: [Relieve] = [
@@ -44,8 +45,18 @@ class HomeViewModel: ObservableObject {
         return ""
     }
     
+    var yogaPlan: YogaPlan {
+        return yogaPlans.first(where: {$0.trimester == trimester}) ?? YogaPlan()
+    }
+    
+    var yoga: Yoga {
+        return yogaPlan.yogas.first(where: {$0.day == day}) ?? Yoga()
+    }
+    
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
+        self.days = profile.daysAvailable
+        self.yogaPlans = profile.plan
     }
     
     func previousWeek() {
