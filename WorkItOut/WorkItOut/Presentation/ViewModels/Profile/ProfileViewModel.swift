@@ -9,6 +9,8 @@ import Foundation
 
 class ProfileViewModel : ObservableObject {
     @Published var profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
+    @Published var currentWeek: Int = 10
+    @Published var exceptions: [Exception] = [.vertigo, .abdominalSurgery, .diastasisRecti]
     @Published var days : [Day] = [.monday]
     @Published var timeClock : TimeOfDay = .morning
     @Published var durationExercise : Duration = .fiveteenMinutes

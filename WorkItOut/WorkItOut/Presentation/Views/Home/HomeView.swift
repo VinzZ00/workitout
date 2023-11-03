@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
-    
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
     
@@ -20,14 +19,16 @@ struct HomeView: View {
                     Button(action: {}, label: {
                         Image(systemName: "person")
                             .padding(12)
-                            .background(.neutral3.opacity(0.02))
+                            .background(Color.transparent20)
                             .clipShape(.circle)
                     })
                     .buttonStyle(.plain)
                     
                     
                     Spacer()
-                    Button(action: {}, label: {
+                    Button(action: {
+                        vm.previousWeek()
+                    }, label: {
                         Image(systemName: "chevron.left")
                     })
                     VStack {
@@ -37,13 +38,14 @@ struct HomeView: View {
                         else {
                             Text("\(dm.profile.name)")
                         }
-                        
-                        Text("Week 12 - August")
+                        Text("Week \(vm.week) - \(vm.month)")
                             .font(.title3)
                             .bold()
-                        Text("(Trimester II)")
+                        Text("(\(vm.trimester.getString())) Trimester")
                     }
-                    Button(action: {}, label: {
+                    Button(action: {
+                        vm.nextWeek()
+                    }, label: {
                         Image(systemName: "chevron.right")
                     })
                     Spacer()
@@ -51,7 +53,7 @@ struct HomeView: View {
                     Button(action: {}, label: {
                         Image(systemName: "clock.arrow.circlepath")
                             .padding(12)
-                            .background(.neutral3.opacity(0.02))
+                            .background(Color.transparent20)
                             .clipShape(.circle)
                     })
                     .buttonStyle(.plain)
@@ -158,6 +160,6 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView()
-}
+//#Preview {
+//    HomeView()
+//}

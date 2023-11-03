@@ -25,7 +25,9 @@ struct WorkItOutApp: App {
     var body: some Scene {
         WindowGroup {
 //            TestFetchFirebase()
-            HistoryView()
+//            HistoryView()
+//            ProfileView()
+            ContentView()
                 .environment(\.managedObjectContext, coreDataManager.container.viewContext)
         }
     }

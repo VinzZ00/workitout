@@ -11,7 +11,8 @@ struct ProfileCard: View {
     var detail : (String, String)
     var value : String
     init(assessmentState: AssessmentState, value: String) {
-        detail = assessmentState.getDescription()
+//        detail = assessmentState.getDescription()
+        detail = ("Test Detail", "Test Detail")
         self.value = value
     }
     var body: some View {
@@ -43,5 +44,5 @@ struct ProfileCard: View {
 }
 
 #Preview {
-    ProfileCard(assessmentState: .chooseRelieve, value: "Weeks 12(Trimester 1)")
+    ProfileCard(assessmentState: .chooseDay, value: "Weeks 12(Trimester 1)")
 }

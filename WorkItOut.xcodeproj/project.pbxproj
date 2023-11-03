@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560938812AF0E35D00C77989 /* ExecutionView.swift */; };
-		560938842AF1001100C77989 /* YogaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560938832AF1001100C77989 /* YogaView.swift */; };
 		56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */; };
 		56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */; };
 		56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */; };
@@ -38,6 +37,7 @@
 		6C8D5D162AE6619700A2986D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D152AE6619700A2986D /* MockData.swift */; };
 		6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99C1F32AF105C200CEA7D3 /* DataManager.swift */; };
 		6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */; };
+		6CB5F8062AF4DB210019539C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8052AF4DB210019539C /* ProfileViewModel.swift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
@@ -72,7 +72,6 @@
 		ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */; };
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A282AF0EFD100333CB6 /* ProfileView.swift */; };
-		D8065A2C2AF0EFE700333CB6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A2B2AF0EFE700333CB6 /* ProfileViewModel.swift */; };
 		D8065A2F2AF0F33800333CB6 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */; };
 		D8207AE62AF0B29D005DBD3C /* TestFetchFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */; };
 		D8207AE82AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AE72AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift */; };
@@ -149,6 +148,7 @@
 		6C8D5D152AE6619700A2986D /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		6C99C1F32AF105C200CEA7D3 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6CB5F8052AF4DB210019539C /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67A2AF383F80020D00F /* DayPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6CEFB67C2AF384C80020D00F /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
@@ -182,7 +182,6 @@
 		ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutTests.swift; sourceTree = "<group>"; };
 		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D8065A282AF0EFD100333CB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		D8065A2B2AF0EFE700333CB6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
 		D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchFirebase.swift; sourceTree = "<group>"; };
 		D8207AE72AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchFirebaseViewModel.swift; sourceTree = "<group>"; };
@@ -651,7 +650,7 @@
 		D8065A2A2AF0EFDD00333CB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D8065A2B2AF0EFE700333CB6 /* ProfileViewModel.swift */,
+				6CB5F8052AF4DB210019539C /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1006,6 +1005,7 @@
 				D8FD5D652AF35371005F8D4E /* HistoryViewModel.swift in Sources */,
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,
+				6CB5F8062AF4DB210019539C /* ProfileViewModel.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */,
 				6C3FD7672AEE409700C84D2A /* Position.swift in Sources */,
 				6C732A3F2AF109AA00E17FDB /* YogaDetailView.swift in Sources */,
