@@ -8,14 +8,18 @@
 import Foundation
 
 enum AssessmentState: Int, CaseIterable {
-    case chooseDay = 0
-    case chooseTime = 1
-    case chooseDuration = 2
-    case chooseMonth = 3
-    case chooseExperience = 4
-    case chooseTrimester = 5
-    case chooseRelieve = 6
+    case chooseWeek = 0
+    case chooseExceptions
+    case chooseDay
+    case chooseDuration
+    case chooseExperience
+    case chooseTime
     
-//    case chooseMuscleGroup = 4
-    case complete = 7
+//    case chooseMonth
+//    case chooseTrimester
+//    case chooseRelieve
+    
+    case complete
+    
+    
 }

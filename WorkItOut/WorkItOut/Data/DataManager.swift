@@ -40,6 +40,7 @@ class DataManager: ObservableObject {
             profile.plan.append(createYogaPlan(trimester: trimester))
         }
         
+        
 //        if profile.plan.contains(where: { ygp in
 //            !ygp.yogas.isEmpty
 //        }) {
@@ -61,17 +62,15 @@ class DataManager: ObservableObject {
         return Profile(name: name, currentPregnancyWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
     }
     
+    //Pose creation logic will go here
     public func createPose() -> Pose {
-        let testPose = Pose(id: UUID(), name: "Test Name", description: "Test Description", seconds: 10, state: .notCompleted, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .first, bodyPartTrained: [], relieve: [], difficulty: .beginner)
         
-        return pm.poses.randomElement() ?? testPose
+        return pm.poses.randomElement() ?? Pose(id: UUID())
     }
     
     public func createYogas() -> [Yoga] {
         var yogas: [Yoga] = []
         let days = profile.daysAvailable
-        
-//        var testPose = Pose(id: UUID(), name: "Test Name", description: "Test Description", seconds: 10, state: .notCompleted, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .first, bodyPartTrained: [], relieve: [], difficulty: .beginner)
         
         for day in days {
             yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: [createPose(), createPose(), createPose()], day: day, estimationDuration: 20, image: "ExampleImage.png"))
@@ -81,13 +80,15 @@ class DataManager: ObservableObject {
     }
     
     public func createYogaPlan(trimester: Trimester) -> YogaPlan {
-        var yogaPlan: YogaPlan = YogaPlan(id: UUID(), name: "Yoga Plan Name", yogas: createYogas(), trimester: trimester)
+        var yogaPlan = YogaPlan(trimester: trimester)
+        yogaPlan.yogas = createYogas()
+        
         return yogaPlan
     }
 }
 
 extension PoseNSObject {
-    func intoPose() -> Pose {
-        return Pose(name: self.name!, description: <#T##String#>, seconds: <#T##Int#>, state: <#T##YogaState#>, position: <#T##Position#>, spineMovement: <#T##SpineMovement#>, recommendedTrimester: <#T##Trimester#>, bodyPartTrained: <#T##[BodyPart]#>, relieve: <#T##[Relieve]#>, difficulty: <#T##Difficulty#>)
-    }
+//    func intoPose() -> Pose {
+//        return Pose(name: self.name!, description: <#T##String#>, seconds: <#T##Int#>, state: <#T##YogaState#>, position: <#T##Position#>, spineMovement: <#T##SpineMovement#>, recommendedTrimester: <#T##Trimester#>, bodyPartTrained: <#T##[BodyPart]#>, relieve: <#T##[Relieve]#>, difficulty: <#T##Difficulty#>)
+//    }
 }

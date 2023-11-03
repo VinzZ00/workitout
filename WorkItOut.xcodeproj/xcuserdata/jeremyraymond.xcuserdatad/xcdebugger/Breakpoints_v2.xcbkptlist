@@ -196,69 +196,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C883A4CF-0A05-49C4-BFAA-900706AD3B1A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "setUpProfile(moc:name:currentWeek:currentRelieveNeeded:fitnessLevel:daysAvailable:timeOfDay:preferredDuration:plan:histories:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C883A4CF-0A05-49C4-BFAA-900706AD3B1A - b46c81f04efacd7d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for WorkItOut.DataManager.setUpProfile(moc: __C.NSManagedObjectContext, name: Swift.String, currentWeek: Swift.Int, currentRelieveNeeded: Swift.Array&lt;WorkItOut.Relieve&gt;, fitnessLevel: WorkItOut.Difficulty, daysAvailable: Swift.Array&lt;WorkItOut.Day&gt;, timeOfDay: WorkItOut.TimeOfDay, preferredDuration: WorkItOut.Duration, plan: Swift.Array&lt;WorkItOut.YogaPlan&gt;, histories: Swift.Array&lt;WorkItOut.History&gt;) async -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "640">
-               </Location>
-               <Location
-                  uuid = "C883A4CF-0A05-49C4-BFAA-900706AD3B1A - b46c81f04efacd3f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for WorkItOut.DataManager.setUpProfile(moc: __C.NSManagedObjectContext, name: Swift.String, currentWeek: Swift.Int, currentRelieveNeeded: Swift.Array&lt;WorkItOut.Relieve&gt;, fitnessLevel: WorkItOut.Difficulty, daysAvailable: Swift.Array&lt;WorkItOut.Day&gt;, timeOfDay: WorkItOut.TimeOfDay, preferredDuration: WorkItOut.Duration, plan: Swift.Array&lt;WorkItOut.YogaPlan&gt;, histories: Swift.Array&lt;WorkItOut.History&gt;) async -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "640">
-               </Location>
-               <Location
-                  uuid = "C883A4CF-0A05-49C4-BFAA-900706AD3B1A - b46c81f04efacde1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for WorkItOut.DataManager.setUpProfile(moc: __C.NSManagedObjectContext, name: Swift.String, currentWeek: Swift.Int, currentRelieveNeeded: Swift.Array&lt;WorkItOut.Relieve&gt;, fitnessLevel: WorkItOut.Difficulty, daysAvailable: Swift.Array&lt;WorkItOut.Day&gt;, timeOfDay: WorkItOut.TimeOfDay, preferredDuration: WorkItOut.Duration, plan: Swift.Array&lt;WorkItOut.YogaPlan&gt;, histories: Swift.Array&lt;WorkItOut.History&gt;) async -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "640">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B113A328-F6F5-4B7F-8910-B56221B640AD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -270,53 +207,6 @@
             endingLineNumber = "87"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "B113A328-F6F5-4B7F-8910-B56221B640AD - 781198c18688b4ea"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "B113A328-F6F5-4B7F-8910-B56221B640AD - 8ff5d160f90175f1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "B113A328-F6F5-4B7F-8910-B56221B640AD - 176459c4697770e8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -396,53 +286,6 @@
             endingLineNumber = "91"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "53F2F99E-683C-4A43-B3A8-E854530A41D0 - 176459c46977716c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "53F2F99E-683C-4A43-B3A8-E854530A41D0 - 868903c623383073"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "53F2F99E-683C-4A43-B3A8-E854530A41D0 - a3a8193b33de2d6a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; WorkItOut.ButtonComponent in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ScrollView&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in WorkItOut.GeneratePlanView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -711,8 +554,8 @@
             filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "setUpProfile(moc:name:currentWeek:currentRelieveNeeded:fitnessLevel:daysAvailable:timeOfDay:preferredDuration:plan:histories:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1877,6 +1720,22 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "149"
             endingLineNumber = "149"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96E071BE-ED06-4808-9216-E542A192393E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GeneratePlanView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>

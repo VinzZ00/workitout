@@ -22,38 +22,41 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
             Text(explanation)
                 .font(.headline)
                 .foregroundStyle(.gray)
-            ForEach($selections, id: \.self){ selection in
-                Button(action: {
-                    if selectedItems.contains(selection.wrappedValue){
-                        guard let selectedIndex = selectedItems.firstIndex(of: selection.wrappedValue) else {
-                            return
+            ScrollView {
+                ForEach($selections, id: \.self){ selection in
+                    Button(action: {
+                        if selectedItems.contains(selection.wrappedValue){
+                            guard let selectedIndex = selectedItems.firstIndex(of: selection.wrappedValue) else {
+                                return
+                            }
+                            selectedItems.remove(at: selectedIndex)
+                        }else{
+                            if limit == 0 {
+                                selectedItems.append(selection.wrappedValue)
+                            }
+                            else if !(selectedItems.count >= limit) {
+                                selectedItems.append(selection.wrappedValue)
+                            }
+                            
                         }
-                        selectedItems.remove(at: selectedIndex)
-                    }else{
-                        if limit == 0 {
-                            selectedItems.append(selection.wrappedValue)
-                        }
-                        else if !(selectedItems.count >= limit) {
-                            selectedItems.append(selection.wrappedValue)
+                    }, label: {
+                        HStack{
+                            Text(selection.wrappedValue.getString())
+                                .font(.body.bold())
+                                .padding(.leading, 10)
+                                .padding(.vertical, 15)
+                            Spacer()
                         }
                         
-                    }
-                }, label: {
-                    HStack{
-                        Text(selection.wrappedValue.getString())
-                            .font(.body.bold())
-                            .padding(.leading, 10)
-                            .padding(.vertical, 15)
-                        Spacer()
-                    }
-                    
-                })
-                .tint(.primary)
-                .background(RoundedRectangle(cornerRadius: 12)
-                    .fill(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary.opacity(0.25) : .clear)
-                    .stroke(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary : .grayBorder, lineWidth: 1)
-                )
-                .padding(.vertical, 3)
+                    })
+                    .tint(.primary)
+                    .background(RoundedRectangle(cornerRadius: 12)
+                        .fill(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary.opacity(0.25) : .clear)
+                        .stroke(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary : .grayBorder, lineWidth: 1)
+                    )
+                    .padding(.vertical, 3)
+                }
+
             }
         }
     }

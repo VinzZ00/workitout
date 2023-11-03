@@ -41,7 +41,7 @@ struct GeneratePlanView: View {
                             .resizable()
                             .frame(maxWidth: .infinity)
                     )
-                    
+                    DayPickerView()
                     if dm.profile.plan.isEmpty {
                         Text("No Plan yet")
                     }

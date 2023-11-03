@@ -13,6 +13,10 @@ enum Exception : String, UserPreference {
     }
     
     case vertigo = "Vertigo"
-    case all = "All"
-    case none = "None"
+    case highBloodPressure = "High Blood Pressure"
+    case diastasisRecti = "Diastatis Recti"
+    case preTermLabor = "PreTerm Labor"
+    case abdominalSurgery = "Abdominal Surgery"
+    case lowBloodPressure = "Low Blood Pressure"
+    case orthopedicIssues = "Orthopedic Issues"
 }
