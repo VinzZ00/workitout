@@ -10,7 +10,8 @@ import SwiftUI
 struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
-    @EnvironmentObject var dm: DataManager
+    @StateObject var dm: DataManager = DataManager()
+    
     
     var body: some View {
         NavigationStack {
@@ -42,8 +43,8 @@ struct AssessmentView: View {
                 else if avm.state == .complete {
                     Button("Next"){
                         withAnimation {
+                            dm.pm.addPosetoPoses()
                             Task {
-                                dm.pm.addPosetoPoses()
                                 await dm.setUpProfile(
                                     moc: moc,
                                     name: "User Name",
@@ -58,7 +59,7 @@ struct AssessmentView: View {
                                 )
                             }
                             
-                            avm.finishCreateYogaPlan.toggle()
+                            
                         }
                     }
                     .buttonStyle(BorderedButton())
@@ -73,9 +74,18 @@ struct AssessmentView: View {
                     .buttonStyle(BorderedButton())
                 }
             }
+            // MARK: listen ketika sudah ada pose baru ketriger.
+            .onChange(of: dm.pm.poses) { val in
+                if !dm.pm.poses.isEmpty {
+                    avm.finishCreateYogaPlan.toggle()
+                }
+            }
             .padding(.horizontal, 15)
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
                 GeneratePlanView()
+                // TODO: dikomen setelah deployment
+//                    .navigationBarBackButtonHidden(true)
+                    .environmentObject(dm)
             }
 //            .onChange(of: avm.days.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
 //                avm.buttonDisable = newValue

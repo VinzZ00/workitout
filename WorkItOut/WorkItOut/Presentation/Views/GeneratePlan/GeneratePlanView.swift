@@ -20,7 +20,6 @@ struct GeneratePlanView: View {
                     VStack(alignment: .leading) {
                         HStack {
                             Button(action: {
-                                //
                             }, label: {
                                 Image(systemName: "xmark")
                                     .foregroundStyle(.white)
@@ -82,29 +81,28 @@ struct GeneratePlanView: View {
                     
                     ButtonComponent(title: "Finish") {
                         Task {
-//                            var addProfile: AddProfileUseCase = AddProfileUseCase()
-//                            
-//                            await addProfile.call(profile: dm.profile, context: moc)
-//                            
-//                            var fetchProfile = FetchProfileUseCase()
-//                            
-//                            let fetchRes = await fetchProfile.call(context: moc)
-//                            
-//                            dm.profile = fetchRes.first!
-//                            
-//                            print(fetchRes.first?.name)
+                            var addProfile: AddProfileUseCase = AddProfileUseCase()
+                            
+                            await addProfile.call(profile: dm.profile, context: moc)
+                            
+                            var fetchProfile = FetchProfileUseCase()
+                            
+                            let fetchRes = await fetchProfile.call(context: moc)
+                            
+                            dm.profile = fetchRes.first!
+                            
+                            print(fetchRes.first?.name)
                             
                             finish.toggle()
                         }
                         
                     }
-                    //                NavigationLinkComponent(destination: AnyView(HomeView()))
                 }
                 .padding(.horizontal)
             }
             .navigationDestination(isPresented: $finish, destination: {
                 HomeView()
-//                    .environmentObject(dm)
+                    .environmentObject(dm)
             })
             .ignoresSafeArea()
         }
