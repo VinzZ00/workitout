@@ -22,8 +22,6 @@ struct WorkItOutApp: App {
     @StateObject var coreDataManager = CoreDataManager()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    
-    
     var body: some Scene {
         WindowGroup {
 //            TestFetchFirebase()

@@ -12,6 +12,19 @@ enum Duration : String, UserPreference {
         return self.rawValue
     }
     
+    func getDurationInSeconds() -> Int {
+        switch self {
+            case .fiveteenMinutes:
+                return 15
+            case .thirtyMinutes:
+                return 30
+            case .fourtyFiveMinutes:
+                return 45
+            case .sixtyMinutes:
+                return 60
+        }
+    }
+    
     case fiveteenMinutes = "15-30 minutes"
     case thirtyMinutes = "30-45 minutes"
     case fourtyFiveMinutes = "45-60 minutes"

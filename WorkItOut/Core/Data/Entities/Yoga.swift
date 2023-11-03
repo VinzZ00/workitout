@@ -13,13 +13,13 @@ import CoreData
 //}
 
 struct Yoga: Identifiable, Hashable, Entity {
-    var id : UUID
-    var name : String
-    var poses : [Pose]
-    var day : Day
-    var estimationDuration : Int
+    var id : UUID = UUID()
+    var name : String = "Yoga Name"
+    var poses : [Pose] = []
+    var day : Day = .monday
+    var estimationDuration : Int = Duration.fiveteenMinutes.getDurationInSeconds()
     var yogaState : YogaState = .notCompleted
-    var image: String
+    var image: String = "yogaImage.png"
     
     static func == (lhs: Yoga, rhs: Yoga) -> Bool {
         return lhs.id == rhs.id
@@ -92,6 +92,7 @@ struct Yoga: Identifiable, Hashable, Entity {
     }
     
     
+//    dm: <#T##DataManager#>, 
 
 }
 

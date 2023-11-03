@@ -7,33 +7,23 @@
 import CoreData
 import Foundation
 
-enum Exception : String, UserPreference {
-    func getString() -> String {
-        self.rawValue
-    }
-    
-    case vertigo = "Vertigo"
-    case all = "All"
-    case none = "None"
-}
-
 struct Pose: Identifiable, Hashable, Entity {
     let id: UUID
-    var name : String
-    var image : String?
-    var video : String?
-    var description : String
-    var seconds : Int
-    var state : YogaState
+    var name : String = "Pose Name"
+    var image : String? = "poseImage.png"
+    var video : String? = "poseVideo.mp4"
+    var description : String = "Pose Description"
+    var seconds : Int = 60
+    var state : YogaState = .notCompleted
 
-    var position : Position
-    var spineMovement : SpineMovement
-    var recommendedTrimester : Trimester
-    var bodyPartTrained : [BodyPart]
-    var relieve: [Relieve]
-    var exception: [Exception] = []
+    var position : Position = .stand
+    var spineMovement : SpineMovement = .balance
+    var recommendedTrimester : Trimester = .second
+    var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
+    var relieve: [Relieve] = [.backpain, .breathing, .hippain]
+    var exception: [Exception] = [.abdominalSurgery, .diastasisRecti, .highBloodPressure]
 
-    var difficulty : Difficulty
+    var difficulty : Difficulty = .beginner
     
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
         var pose = PoseNSObject(context: context)
@@ -53,6 +43,10 @@ struct Pose: Identifiable, Hashable, Entity {
         pose.difficulty = self.difficulty.rawValue
         
         return pose;
+    }
+    
+    func intoPose() -> Pose? {
+        return nil
     }
 }
 

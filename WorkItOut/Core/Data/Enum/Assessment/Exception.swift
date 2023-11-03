@@ -2,17 +2,21 @@
 //  Exception.swift
 //  WorkItOut
 //
-//  Created by Jeremy Raymond on 30/10/23.
+//  Created by Jeremy Raymond on 01/11/23.
 //
 
 import Foundation
 
-enum Exception: String, UserPreference {
+enum Exception : String, UserPreference {
     func getString() -> String {
-        return self.rawValue
+        self.rawValue
     }
     
     case vertigo = "Vertigo"
-    case none = "None"
-    case all = "All"
+    case highBloodPressure = "High Blood Pressure"
+    case diastasisRecti = "Diastatis Recti"
+    case preTermLabor = "PreTerm Labor"
+    case abdominalSurgery = "Abdominal Surgery"
+    case lowBloodPressure = "Low Blood Pressure"
+    case orthopedicIssues = "Orthopedic Issues"
 }

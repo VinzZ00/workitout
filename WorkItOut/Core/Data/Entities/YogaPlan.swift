@@ -9,10 +9,10 @@ import Foundation
 import CoreData
 
 struct YogaPlan : Identifiable, Entity {
-    var id: UUID
-    var name: String
-    var yogas: [Yoga]
-    var trimester: Trimester
+    var id: UUID = UUID()
+    var name: String = "Yoga Plan Name"
+    var yogas: [Yoga] = []
+    var trimester: Trimester = .second
     
     func intoNSObject(context : NSManagedObjectContext, parentProfileNSObject : ProfileNSObject) -> NSManagedObject{
         let yogaPlan = YogaPlanNSObject(context: context)
