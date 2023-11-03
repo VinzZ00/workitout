@@ -16,7 +16,7 @@ struct HistoryView: View {
             Image("historyBackground")
                 .ignoresSafeArea()
             ScrollView{
-                LazyVStack{
+                LazyVStack(spacing: 20){
                     if !vm.historiesWithDate.isEmpty{
                         ForEach(vm.historiesWithDate.keys.sorted(by: {$0 > $1}), id: \.self){ date in
                             HistorySection(date: vm.historiesWithDate[date]!.first?.executionDate ?? Date.distantFuture, histories: vm.historiesWithDate[date]!, showSheet: $showSheet, currentHistory: $vm.currentHistory)
@@ -26,6 +26,7 @@ struct HistoryView: View {
                         Text("No History to show")
                     }
                 }
+                .padding(.vertical, 20)
                 .toolbar{
                     ToolbarItem(placement: .topBarLeading) {
                         Button { self.presentationMode.wrappedValue.dismiss() }
@@ -46,7 +47,6 @@ struct HistoryView: View {
                         HistorySheet(history: history)
                             .presentationDragIndicator(.visible)
                     }
-                        
                 }
                 
             }
