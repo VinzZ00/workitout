@@ -40,7 +40,7 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func addprofile(){
-//        profile.append(MockData.mockProfile)
+        profile.append(MockData.mockProfile)
     }
     
     func getTrimester(){
@@ -70,7 +70,7 @@ class ExecutionViewModel: ObservableObject {
         
         for plan in yogaPlan{
             for yoga in plan.yogas {
-                print("\(yoga.day.getInt()) date \(date)")
+//                print("\(yoga.day.getInt()) date \(date)")
                 if (yoga.day.getInt() == date) {
                     yogas.append(yoga)
                 }
@@ -84,13 +84,6 @@ class ExecutionViewModel: ObservableObject {
                 pose.append(p)
             }
         }
-    }
-    
-    func call(){
-        getTrimester()
-        getYogaPlan()
-        getYoga()
-        getPose()
     }
     
     func nextPose(){

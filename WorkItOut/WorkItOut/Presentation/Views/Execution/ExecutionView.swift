@@ -11,8 +11,9 @@ import CoreData
 struct ExecutionView: View {
     @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
     @StateObject var vm = ExecutionViewModel()
+    @ObservedObject var timerVm = TimerViewModel()
     @State var textSwitch = false
-    @State var previousDisabled = false
+    @State var previousDisabled = true
     @State var nextDisabled = false
     
     var body: some View {
@@ -48,21 +49,20 @@ struct ExecutionView: View {
             .frame(width: 358, height: 316)
             .cornerRadius(12)
             .padding([.horizontal, .top], 16)
-        
-        Text("\(vm.pose[vm.index].name)")
-            .font(.title)
-            .bold()
-        
-        if vm.index + 1 == vm.pose.count {
-            Text("Next: \(vm.pose[vm.index+1].name)")
-                .foregroundStyle(Color.gray)
-                .font(.system(size: 14)).hidden()
-        }else{
-            Text("Next: \(vm.pose[vm.index+1].name)")
-                .foregroundStyle(Color.gray)
-                .font(.system(size: 14))
+        VStack{
+            Text("\(vm.pose[vm.index].name)")
+                .font(.title)
+                .bold()
+            
+            if !(vm.index + 1 == vm.pose.count) {
+                Text("Next: \(vm.pose[vm.index+1].name)")
+                    .foregroundStyle(Color.gray)
+                    .font(.system(size: 14))
+            }
         }
+        .padding()
         
+//        Spacer()
         
         if textSwitch == false {
             Text("Get Started")
@@ -74,9 +74,20 @@ struct ExecutionView: View {
                         self.textSwitch.toggle()
                     }
                 }
+            
         }else {
-            TimerView(vm: TimerViewModel(), time: Double(vm.pose[vm.index].seconds), isReset: false)
-                .padding(40)
+            VStack {
+                Text("\(timerVm.currentTime())")
+                    .font(.system(size: 60))
+                    .bold()
+                    .onReceive(timerVm.timer){ _ in
+                        timerVm.updateCurrentTime()
+                    }
+            }
+            .onAppear(perform: {
+                timerVm.startTimer(time: Double(vm.pose[vm.index].seconds))
+            })
+                .padding(42)
         }
         
         Rectangle()
@@ -85,49 +96,64 @@ struct ExecutionView: View {
         HStack{
             Button{
                 vm.previousPose()
+                if !(vm.index == 0){
+                    timerVm.resetTimer(time: Double(vm.pose[vm.index-1].seconds))
+                }
+                
             }label: {
                 Image(systemName: "backward.end.circle")
                     .font(.system(size: 44))
             }
-            .onAppear(perform: {
-                if vm.index == 0 {
-                    previousDisabled = true
-                }
-            })
             .disabled(previousDisabled)
             
             Button{
+                if timerVm.isTimerPaused == false{
+                    timerVm.pauseTimer()
+                }else {
+                    timerVm.continueTimer()
+                }
                 
             }label: {
-                Image(systemName: "pause.circle")
-                    .font(.system(size: 68))
+                if timerVm.isTimerPaused == false{
+                    Image(systemName: "pause.circle")
+                        .font(.system(size: 68))
+                }else {
+                    Image(systemName: "play.circle")
+                        .font(.system(size: 68))
+                }
+                
             }
             .padding(.horizontal, 50)
             
             Button{
                 vm.nextPose()
+                if !(vm.index + 1 == vm.pose.count) {
+                    timerVm.resetTimer(time: Double(vm.pose[vm.index+1].seconds))
+                }
             }label: {
                 Image(systemName: "forward.end.circle")
                     .font(.system(size: 44))
             }
-            .onAppear(perform: {
-                if vm.index + 1 == vm.pose.count {
-                    nextDisabled = true
-                }
-            })
             .disabled(nextDisabled)
         }
         .padding(.top, 40)
     }
     .onChange(of: vm.index) { _, _ in
-        vm.call()
-        nextDisabled = false
-        previousDisabled = false
+        if vm.index + 1 == vm.pose.count {
+            nextDisabled = true
+        }else {
+            nextDisabled = false
+        }
+        
+        if vm.index == 0 {
+            previousDisabled = true
+        }else{
+            previousDisabled = false
+        }
+        
+        timerVm.isTimerPaused = false
+        textSwitch = false
     }
-//            if !(vm.pose.isEmpty) {
-//                YogaView(exercise: vm.pose[vm.index].name, nextExercise: vm.pose[vm.index+1].name, time: Double(vm.pose[vm.index].seconds), image: vm.pose[vm.index].image ?? "", indexExercise: vm.index, allExercise: vm.pose.count)
-//            }
-           
 //        .onAppear{
 //            vm.call()
 ////            Task {

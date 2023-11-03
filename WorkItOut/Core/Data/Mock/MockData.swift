@@ -23,10 +23,10 @@ struct MockData {
         plan: [
             YogaPlan(id: UUID(), name: "Plan 1", yogas: [
                 Yoga(id: UUID(), name: "Yoga 1", poses: [
-                    Pose(id: UUID(), name: "Pose1", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo, .all], difficulty: .beginner),
-                    Pose(id: UUID(), name: "Pose2", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo, .all], difficulty: .beginner),
-                    Pose(id: UUID(), name: "Pose3", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo, .all], difficulty: .beginner)
-                ], day: .thursday, estimationDuration: 12, image: "Image 1")
+                    Pose(id: UUID(), name: "Pose1", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo], difficulty: .beginner),
+                    Pose(id: UUID(), name: "Pose2", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo], difficulty: .beginner),
+                    Pose(id: UUID(), name: "Pose3", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo], difficulty: .beginner)
+                ], day: .friday, estimationDuration: 12, image: "Image 1")
             ], trimester: .first)
         ],
         histories: [])

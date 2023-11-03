@@ -10,7 +10,6 @@ import SwiftUI
 struct TimerView: View {
     @ObservedObject var vm: TimerViewModel
     @State var time: Double
-    @State var isReset: Bool
     
     var body: some View {
         VStack {
@@ -20,25 +19,26 @@ struct TimerView: View {
                 .onReceive(vm.timer){ _ in
                     vm.updateCurrentTime()
                 }
-            
-            HStack {
+            HStack{
                 Button{
-                    vm.startTimer(time: 60)
+                   
+                        vm.startTimer(time: time)
+                    
                 }label: {
                     Image(systemName: "backward.end.circle")
                         .font(.system(size: 44))
                 }
-            
-            
+                
                 Button{
                     vm.pauseTimer()
                 }label: {
                     Image(systemName: "pause.circle")
                         .font(.system(size: 68))
                 }
+                .padding(.horizontal, 50)
                 
                 Button{
-                    vm.startTimer(time: 60)
+                        vm.startTimer(time: time)
                 }label: {
                     Image(systemName: "forward.end.circle")
                         .font(.system(size: 44))
@@ -52,5 +52,5 @@ struct TimerView: View {
 }
 
 #Preview {
-    TimerView(vm: TimerViewModel(), time: 60, isReset: false)
+    TimerView(vm: TimerViewModel(), time: 60)
 }
