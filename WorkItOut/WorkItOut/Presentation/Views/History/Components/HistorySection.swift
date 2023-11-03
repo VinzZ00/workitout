@@ -10,13 +10,20 @@ import SwiftUI
 struct HistorySection: View {
     var date : Date
     var histories : [History]
+    @Binding var showSheet : Bool
+    @Binding var currentHistory : History?
     var body: some View {
         VStack(alignment: .leading){
             Text(date.formatted(date: .complete, time: .omitted))
                 .bold()
                 .foregroundStyle(.gray)
             ForEach(histories, id: \.id){ history in
-                HistoryCard(history: history)
+                Button(action: {
+                    currentHistory = history
+                    showSheet.toggle()
+                }, label: {
+                    HistoryCard(history: history)
+                })
             }
             
         }
@@ -25,5 +32,5 @@ struct HistorySection: View {
 }
 
 #Preview {
-    HistorySection(date: Date.now, histories: [])
+    HistorySection(date: Date.now, histories: [], showSheet: .constant(false), currentHistory: .constant(nil))
 }
