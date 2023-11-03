@@ -18,7 +18,6 @@ class ProfileViewModel : ObservableObject {
     @Published var experience: Difficulty = .beginner
     @Published var trimester: Trimester = .first
     @Published var relieve: [Relieve] = [.backpain]
-    @Published var exceptions: [Exception] = [.highBloodPressure]
     
     init(){
         // MARK: change to load profile from coredata
