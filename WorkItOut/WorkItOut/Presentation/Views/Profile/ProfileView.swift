@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel = ProfileViewModel()
     var body: some View {
         VStack{
@@ -44,6 +45,22 @@ struct ProfileView: View {
                 }
                 .padding(.bottom, 24)
             }
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        self.presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        ZStack{
+                            Circle()
+                                .tint(.grayBorder.opacity(0.15))
+                                .frame(width: 40)
+                            Image(systemName: "arrow.left")
+                                .font(.system(size: 10))
+                                .bold()
+                        }
+                    }
+                }
+            }
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
             .navigationTitle("Profile")
@@ -51,6 +68,7 @@ struct ProfileView: View {
                 AssessmentWrapperView(stateValue: state)
                     .environmentObject(viewModel)
             })
+            .navigationBarBackButtonHidden()
         }
     }
 }
@@ -59,5 +77,4 @@ struct ProfileView: View {
     NavigationStack{
         ProfileView()
     }
-    
 }
