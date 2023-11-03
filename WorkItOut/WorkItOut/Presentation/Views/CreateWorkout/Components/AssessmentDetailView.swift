@@ -25,7 +25,6 @@ struct AssessmentDetailView<E: UserPreference>: View {
                             .padding(.vertical, 15)
                         Spacer()
                     }
-                    .tint(.primary)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(selection == self.selection ? .orangePrimary.opacity(0.25) : .clear)
                         .stroke(selection == self.selection ? .orangePrimary : .grayBorder, lineWidth: 1)

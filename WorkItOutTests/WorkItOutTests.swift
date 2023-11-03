@@ -49,7 +49,7 @@ final class WorkitOutTests: XCTestCase {
                 plan: [
                     YogaPlan(id: UUID(), name: "Plan 1", yogas: [
                         Yoga(id: UUID(), name: "Yoga 1", poses: [
-                            Pose(id: UUID(), name: "Pose1", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo, .all], difficulty: .beginner)
+                            Pose(id: UUID(), name: "Pose1", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo], difficulty: .beginner)
                         ], day: .monday, estimationDuration: 12, image: "Image 1")
                     ], trimester: .all)
                 ],

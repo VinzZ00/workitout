@@ -16,6 +16,7 @@ class ProfileViewModel : ObservableObject {
     @Published var experience: Difficulty = .beginner
     @Published var trimester: Trimester = .first
     @Published var relieve: [Relieve] = [.backpain]
+    @Published var exceptions: [Exception] = [.highBloodPressure]
     
     init(){
         // MARK: change to load profile from coredata
@@ -27,6 +28,7 @@ class ProfileViewModel : ObservableObject {
         self.experience = self.profile.fitnessLevel
         // trimester ganti dengan function getTrimesterFromCurrentWeek
         self.relieve = self.profile.currentRelieveNeeded
+        
     }
     
     func convertToString(days : [Day]) -> String{
@@ -53,6 +55,11 @@ class ProfileViewModel : ObservableObject {
     
     func convertToStrings(relieves: [Relieve]) -> String {
         let strings = relieves.map { $0.getString() }
+        return strings.joined(separator: ", ")
+    }
+    
+    func convertToStrings(exceptions : [Exception]) -> String {
+        let strings = exceptions.map { $0.getString() }
         return strings.joined(separator: ", ")
     }
     
