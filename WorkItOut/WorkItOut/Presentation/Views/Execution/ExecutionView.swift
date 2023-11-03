@@ -75,7 +75,7 @@ struct ExecutionView: View {
                     }
                 }
         }else {
-            TimerView(vm: TimerViewModel(), time: Double(vm.pose[vm.index].seconds))
+            TimerView(vm: TimerViewModel(), time: Double(vm.pose[vm.index].seconds), isReset: false)
                 .padding(40)
         }
         

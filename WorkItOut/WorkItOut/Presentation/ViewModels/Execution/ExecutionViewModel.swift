@@ -40,7 +40,7 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func addprofile(){
-        profile.append(MockData.mockProfile)
+//        profile.append(MockData.mockProfile)
     }
     
     func getTrimester(){
