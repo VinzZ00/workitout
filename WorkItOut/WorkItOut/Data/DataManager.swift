@@ -32,8 +32,8 @@ class DataManager: ObservableObject {
         
     }
     
-    public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) async {
-        self.profile = createProfile(name: name, currentWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
+    public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, exceptions: [Exception]) async {
+        self.profile = Profile(name: name, currentPregnancyWeek: currentWeek, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, exceptions: exceptions)
         
         for trimester in Trimester.allCases {
             profile.plan.append(createYogaPlan(trimester: trimester))
@@ -57,14 +57,40 @@ class DataManager: ObservableObject {
 //        print(fetchRes.first?.name)
     }
     
-    public func createProfile(name: String, currentWeek: Int, currentRelieveNeeded: [Relieve], fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, plan: [YogaPlan], histories: [History]) -> Profile {
-        return Profile(name: name, currentPregnancyWeek: currentWeek, currentRelieveNeeded: currentRelieveNeeded, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, plan: plan, histories: histories)
-    }
-    
     //Pose creation logic will go here
     public func createPose() -> Pose {
         
         return pm.poses.randomElement() ?? Pose(id: UUID())
+    }
+    
+    public func filterPoses() -> [Pose] {
+        let poses = pm.poses
+        var filteredPoses: [Pose] = []
+        
+        for pose in poses {
+            if !pose.exception.contains(profile.exceptions) {
+                filteredPoses.append(pose)
+            }
+        }
+        
+        return filteredPoses
+    }
+    
+    public func poseByCategory(poses: [Pose], category: Category) -> Pose {
+        return poses.filter({$0.category == category}).randomElement() ?? Pose(id: UUID())
+    }
+    
+    public func createPoses() -> [Pose] {
+        var poses = filterPoses()
+        var newPoses: [Pose] = []
+        
+        newPoses.append(poseByCategory(poses: poses, category: .warmUp))
+        for _ in 0..<profile.preferredDuration.getDurationInMinutes()/2 {
+            newPoses.append(poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose))
+        }
+        newPoses.append(poseByCategory(poses: poses, category: .coolingDown))
+        
+        return newPoses
     }
     
     public func createYogas() -> [Yoga] {
@@ -72,7 +98,7 @@ class DataManager: ObservableObject {
         let days = profile.daysAvailable
         
         for day in days {
-            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: [createPose(), createPose(), createPose()], day: day, estimationDuration: 20, image: "ExampleImage.png"))
+            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: createPoses(), day: day, estimationDuration: profile.preferredDuration.getDurationInMinutes(), image: "ExampleImage.png"))
         }
         
         return yogas

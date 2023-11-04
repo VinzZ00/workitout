@@ -42,13 +42,13 @@ struct PoseCard: View {
     }
 }
 
-#Preview {
-    VStack(spacing: 20){
-        Text("Completed State")
-            .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner))
-        Text("Skipped State")
-            .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", description: "Banana", seconds: 60, state: .skipped, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner))
-    }
-}
+//#Preview {
+//    VStack(spacing: 20){
+//        Text("Completed State")
+//            .bold()
+//        PoseCard(pose : Pose(id: UUID(), name: "Banana", description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner))
+//        Text("Skipped State")
+//            .bold()
+//        PoseCard(pose : Pose(id: UUID(), name: "Banana", description: "Banana", seconds: 60, state: .skipped, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner))
+//    }
+//}

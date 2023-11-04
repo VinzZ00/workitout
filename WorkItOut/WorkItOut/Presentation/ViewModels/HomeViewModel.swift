@@ -14,9 +14,9 @@ class HomeViewModel: ObservableObject {
     
     @Published var days: [Day] = Day.allCases
     @Published var relieves: [Relieve] = [
-        .backpain, .breathing, .hippain, .laborprep, .neckcramp, .pelvicflexibility
+        .ankle, .back, .hip
     ]
-    @Published var selectedRelieve: Relieve = .backpain
+    @Published var selectedRelieve: Relieve = .back
     @Published var sheetToggle: Bool = false
     
     var trimester: Trimester {

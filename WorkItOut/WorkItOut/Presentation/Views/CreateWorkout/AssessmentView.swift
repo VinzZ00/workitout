@@ -48,14 +48,12 @@ struct AssessmentView: View {
                                 await dm.setUpProfile(
                                     moc: moc,
                                     name: "User Name",
-                                    currentWeek: 10,
-                                    currentRelieveNeeded: avm.relieve,
+                                    currentWeek: avm.currentWeek,
                                     fitnessLevel: avm.experience,
                                     daysAvailable: avm.days,
                                     timeOfDay: avm.timeClock,
                                     preferredDuration: avm.durationExercise,
-                                    plan: [],
-                                    histories: []
+                                    exceptions: avm.exceptions
                                 )
                             }
                             

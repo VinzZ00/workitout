@@ -17,7 +17,7 @@ struct Yoga: Identifiable, Hashable, Entity {
     var name : String = "Yoga Name"
     var poses : [Pose] = []
     var day : Day = .monday
-    var estimationDuration : Int = Duration.fiveteenMinutes.getDurationInSeconds()
+    var estimationDuration : Int = Duration.tenMinutes.getDurationInSeconds()
     var yogaState : YogaState = .notCompleted
     var image: String = "yogaImage.png"
     

@@ -28,5 +28,5 @@ struct HomeYogaCategoryView: View {
 }
 
 #Preview {
-    HomeYogaCategoryView(relieve: .backpain)
+    HomeYogaCategoryView(relieve: .back)
 }

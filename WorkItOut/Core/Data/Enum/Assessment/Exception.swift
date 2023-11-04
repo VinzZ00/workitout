@@ -12,11 +12,18 @@ enum Exception : String, UserPreference {
         self.rawValue
     }
     
-    case vertigo = "Vertigo"
     case highBloodPressure = "High Blood Pressure"
-    case diastasisRecti = "Diastatis Recti"
-    case preTermLabor = "PreTerm Labor"
-    case abdominalSurgery = "Abdominal Surgery"
     case lowBloodPressure = "Low Blood Pressure"
+    case diastasisRecti = "Diastatis Recti"
+    case preTermLabor = "Preterm Labor"
+    case knee = "Knee"
+    case ankle = "Ankle"
+    case hernia = "Hernia"
+    case multiples = "Multiples"
     case orthopedicIssues = "Orthopedic Issues"
+    
+    case abdominalSurgery = "Abdominal Surgery"
+    case vertigo = "Vertigo"
+    case glucoma = "Glucoma"
+    case lackOfFlexibility = "Lack of flexibility"
 }
