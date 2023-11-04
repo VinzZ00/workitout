@@ -31,6 +31,19 @@ class HomeViewModel: ObservableObject {
         }
     }
     
+    func getTrimesterRoman() -> String {
+        switch trimester {
+        case .first:
+            return "Trimester I"
+        case .second:
+            return "Trimester II"
+        case .third:
+            return "Trimester III"
+        case .all:
+            return "Trimester"
+        }
+    }
+    
     var month: String {
         let calendar = Calendar.current
         let currentDate = Date()
@@ -70,4 +83,6 @@ class HomeViewModel: ObservableObject {
             self.week += 1
         }
     }
+    
+    
 }

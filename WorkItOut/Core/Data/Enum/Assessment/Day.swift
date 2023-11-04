@@ -20,6 +20,10 @@ enum Day: String, UserPreference {
     case saturday = "Saturday"
     case sunday = "Sunday"
     
+    func getShortenedDay() -> String {
+        return String(self.getString().prefix(3))
+    }
+    
     func getInt()-> Int {
         switch self {
         case .monday:
@@ -38,6 +42,15 @@ enum Day: String, UserPreference {
             return 7
         }
     }
+    
+    func getWeekdayInInt() -> Int {
+        let today = Date()
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: self.getWeekday())
+        
+        return day
+    }
+    
     func getWeekday() -> Date {
         let today = Date()
         let calendar = Calendar.current

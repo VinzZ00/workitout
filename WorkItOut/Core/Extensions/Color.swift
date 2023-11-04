@@ -12,7 +12,7 @@ extension Color {
     
     //Main
     static let background = colorDirectory.Main.background
-    static let primary = colorDirectory.Main.background
+    static let primary = colorDirectory.Main.primary
     
     //Neutral
     static let neutral1 = colorDirectory.Neutral._1

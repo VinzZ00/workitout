@@ -17,10 +17,11 @@ struct DayButtonView: View {
             selectedDay = day
         }, label: {
             VStack {
-                Text("Sun")
-                    .foregroundStyle(Color.primary)
+                Text(day.getShortenedDay())
+                    .foregroundStyle(Color.neutral3.opacity(0.75))
                 VStack {
-                    Text("4")
+                    Text("\(day.getWeekdayInInt())")
+                        .foregroundStyle(day == selectedDay ? Color.primary : .black)
                     Circle()
                         .foregroundStyle(Color.primary)
                         .frame(width: 4)
@@ -30,7 +31,7 @@ struct DayButtonView: View {
                 .padding(.horizontal)
                 .background(RoundedRectangle(cornerRadius: 12)
                     .fill(day == selectedDay ? Color.primary.opacity(0.25) : .clear)
-                    .stroke(day == selectedDay ? Color.primary : Color.neutral3, lineWidth: 1)
+                    .stroke(day == selectedDay ? Color.primary : .clear, lineWidth: 1)
                 )
             }
         })
