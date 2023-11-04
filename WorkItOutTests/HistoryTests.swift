@@ -97,16 +97,18 @@ final class HistoryTests: XCTestCase {
         histories.append(History(id: UUID(), yogaDone: yoga2, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
         histories.append(History(id: UUID(), yogaDone: yoga3, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
         
-        if let add = addUsecase {
-            var profile = Profile(name: "", currentPregnancyWeek: 4, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .sixtyMinutes, plan: [], histories: [])
-            await add.call(profile: profile, context: moc!)
+        if let fetch = fetchUsecase {
             
-            profile.histories.append(contentsOf: histories)
+            // Dapetin profile dlu
+            // MARK: GANTI DARI YANG ADD JADI FETCH ELVIN 4 NOV 17.15
+            var profile = await fetch.call(context: self.moc!).last
+            
+            profile!.histories.append(contentsOf: histories)
             if let update = updateUseCase {
-                await update.call(profile: profile, context: moc!)
+                await update.call(profile: profile!, context: moc!)
                 if let fetch = fetchUsecase {
-                    var fetchedProfile = await fetch.call(context: moc!).first!
-                    XCTAssertEqual(fetchedProfile.histories.count, profile.histories.count, "Done")
+                    var fetchedProfile = await fetch.call(context: moc!).last!
+                    XCTAssertEqual(fetchedProfile.histories.count, profile!.histories.count, "Done")
                 }
             }
         }
