@@ -10,8 +10,8 @@ import Foundation
 
 class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
+    var update: UpdateProfileUseCase = UpdateProfileUseCase()
     @Published var trimester: Int = 0
-    
     @Published var profile: Profile = MockData.mockProfile
     @Published var yogaPlan: YogaPlan = YogaPlan()
     @Published var yoga: Yoga = Yoga()
@@ -30,6 +30,7 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func addprofile(){
+        // ganti ke load core data
         profile = MockData.mockProfile
     }
     
@@ -99,7 +100,7 @@ class ExecutionViewModel: ObservableObject {
         }
     }
     
-    func savePoses(){
+    func savePoses(context: NSManagedObjectContext) async{
         guard let yogaPlanIndex = profile.plan.firstIndex(where: {$0.id == yogaPlan.id}) else {
             return
         }
@@ -109,5 +110,8 @@ class ExecutionViewModel: ObservableObject {
         
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
         let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
+        profile.histories.append(history)
+        // update profile di core data
+//        await self.update.call(profile: profile, context: context)
     }
 }

@@ -45,9 +45,5 @@ struct Profile : Entity {
         
     }
     
-    func appendHistory() {
-        
-    }
-    
     
 }

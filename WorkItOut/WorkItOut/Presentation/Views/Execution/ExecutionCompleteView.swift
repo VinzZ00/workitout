@@ -5,9 +5,11 @@
 //  Created by Kevin Dallian on 03/11/23.
 //
 
+import CoreData
 import SwiftUI
 
 struct ExecutionCompleteView: View {
+    @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
     @ObservedObject var vm : ExecutionViewModel
     var body: some View {
         VStack(spacing: 60){
@@ -29,7 +31,9 @@ struct ExecutionCompleteView: View {
             }
             Spacer()
             Button("Back to Home"){
-                vm.savePoses()
+                Task{
+                    await vm.savePoses(context: moc)
+                }
             }.buttonStyle(BorderedButton())
         }
         .navigationBarBackButtonHidden()
