@@ -14,9 +14,10 @@ struct HistorySheet: View {
         LazyVStack(alignment: .leading, spacing: 10){
             Text("\(history.executionDate.formatted(date: .long, time: .omitted))")
             LazyVStack(alignment: .leading, spacing: 5){
-                Text("\(history.yogaDone.first?.name ?? "Unknown Yoga")")
+                // MARK: menghapus first supaya tidak error.
+                Text("\(history.yogaDone.name ?? "Unknown Yoga")")
                     .font(.largeTitle.bold())
-                Text("\(history.yogaDone.first?.poses.count ?? -1) Exercise (\(history.duration) Min)")
+                Text("\(history.yogaDone.poses.count ?? -1) Exercise (\(history.duration) Min)")
                     .padding(.horizontal, 5)
                     .background(.ultraThinMaterial)
                     .cornerRadius(8)
@@ -26,13 +27,13 @@ struct HistorySheet: View {
             .padding(.bottom, 10)
             ScrollView{
                 LazyVStack{
-                    if let poses = history.yogaDone.first?.poses {
-                        ForEach(poses, id: \.id){ pose in
+//                    if let poses = history.yogaDone.first?.poses {
+                    ForEach(history.yogaDone.poses, id: \.id){ pose in
                             PoseCard(pose: pose)
                         }
-                    }else {
-                        Text("No Poses to Show")
-                    }
+//                    }else {
+//                        Text("No Poses to Show")
+//                    }
                     
                 }
                 Spacer(minLength: 100)
@@ -71,9 +72,9 @@ struct HistorySheet: View {
     
     ]
     return 
-    NavigationStack{ HistorySheet(history: History(id: UUID(), yogaDone: [
-        Yoga(id: UUID(), name: "Day 1 Upper Body", poses: poses, day: .monday, estimationDuration: 30, image: "")
-    ], executionDate: Date.now, duration: 30, rating: 5), showSheet: .constant(true))
+    NavigationStack{ HistorySheet(history: History(id: UUID(),
+                                                   yogaDone: Yoga(id: UUID(), name: "Day 1 Upper Body", poses: poses, day: .monday, estimationDuration: 30, image: "")
+    , executionDate: Date.now, duration: 30, rating: 5), showSheet: .constant(true))
     }
         
 }

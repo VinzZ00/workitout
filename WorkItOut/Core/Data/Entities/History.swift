@@ -15,8 +15,9 @@ struct History : Entity, Identifiable {
         historyNS.executionDate = self.executionDate
         historyNS.rating = Int16(self.rating)
         historyNS.duration = Int32(self.duration)
-        historyNS.yogaDone?.addingObjects(from: self.yogaDone.map{$0.intoNSObject(context: context, parentHistoryNS: historyNS)})
         historyNS.ofProfile = parentProfileNS
+        // MARK: YANG DITAMBAHKAN UNTUK MENGANTIKAN VERSI SEBELUMNYA YANG ARRAY
+        historyNS.yogaDone = self.yogaDone.intoNSObject(context: context, parentHistoryNS: historyNS) as? YogaNSObject
         return historyNS;
     }
     

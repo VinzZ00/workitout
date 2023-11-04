@@ -25,10 +25,13 @@ class HistoryViewModel : ObservableObject {
         let yoga1 = Yoga(id: UUID(), name: "Day 2 - Lower Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
         let yoga2 = Yoga(id: UUID(), name: "Day 3 - Core Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
         let yoga3 = Yoga(id: UUID(), name: "Day 4 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
-        self.histories.append(History(id: UUID(), yogaDone: [yoga], executionDate: Date.now, duration: 10, rating: 5))
-        self.histories.append(History(id: UUID(), yogaDone: [yoga1], executionDate: Date.now, duration: 10, rating: 5))
-        self.histories.append(History(id: UUID(), yogaDone: [yoga2], executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
-        self.histories.append(History(id: UUID(), yogaDone: [yoga3], executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
+        
+        // MARK: Menghapus [] pada yoga sampai yoga 3 by Elvin 4 Nov
+        
+        self.histories.append(History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 10, rating: 5))
+        self.histories.append(History(id: UUID(), yogaDone: yoga1, executionDate: Date.now, duration: 10, rating: 5))
+        self.histories.append(History(id: UUID(), yogaDone: yoga2, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
+        self.histories.append(History(id: UUID(), yogaDone: yoga3, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
         self.historiesWithDate = categorizeHistoryByDate(histories)
     }
     

@@ -61,10 +61,17 @@ extension YogaPlanNSObject {
 }
 
 extension HistoryNSObject {
+    
+    // MARK: Update Elvin 4 Nov
+    func addingYogaHist(yogaNS : YogaNSObject) {
+        self.yogaDone = yogaNS
+    }
+    
     func intoObject() -> History {
         let history = History(
             id: self.uuid!,
-            yogaDone: (self.yogaDone!.allObjects as? [YogaNSObject] ?? []).map{ $0.intoObject() },
+            // MARK: Change by Elvin 4 Nov, untuk meganti History menjadi HistoryNSObject
+            yogaDone: (self.yogaDone?.intoObject())!,
             executionDate: self.executionDate!,
             duration: Int(self.duration),
             rating: Int(self.rating)
