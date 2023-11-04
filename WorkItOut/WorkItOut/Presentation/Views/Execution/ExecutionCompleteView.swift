@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ExecutionCompleteView: View {
+    @ObservedObject var vm : ExecutionViewModel
     var body: some View {
         VStack(spacing: 60){
             Spacer()
@@ -28,12 +29,13 @@ struct ExecutionCompleteView: View {
             }
             Spacer()
             Button("Back to Home"){
-                print("Back to home")
+                vm.savePoses()
             }.buttonStyle(BorderedButton())
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
 #Preview {
-    ExecutionCompleteView()
+    ExecutionCompleteView(vm: ExecutionViewModel())
 }

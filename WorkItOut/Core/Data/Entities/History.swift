@@ -21,7 +21,7 @@ struct History : Entity, Identifiable {
     }
     
     var id : UUID
-    var yogaDone : [Yoga]
+    var yogaDone : Yoga
     var executionDate : Date
     var duration : Int
     var rating : Int

@@ -10,8 +10,8 @@ import Foundation
 struct Pose: Identifiable, Hashable, Entity {
     let id: UUID
     var name : String = "Pose Name"
-    var image : String? = "poseImage.png"
-    var video : String? = "poseVideo.mp4"
+    var image : String?
+    var video : String?
     var description : String = "Pose Description"
     var seconds : Int = 60
     var state : YogaState = .notCompleted

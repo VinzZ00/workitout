@@ -27,8 +27,10 @@ struct WorkItOutApp: App {
 //            TestFetchFirebase()
 //            HistoryView()
 //            ProfileView()
-            ContentView()
-                .environment(\.managedObjectContext, coreDataManager.container.viewContext)
+            NavigationStack {
+                ExecutionView()
+                    .environment(\.managedObjectContext, coreDataManager.container.viewContext)
+            }
         }
     }
 }
