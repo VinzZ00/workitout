@@ -21,11 +21,10 @@ struct DayButtonView: View {
                     .foregroundStyle(Color.primary)
                 VStack {
                     Text("4")
-                    if days.contains(where: {$0 == day}) {
-                        Circle()
-                            .foregroundStyle(Color.primary)
-                            .frame(width: 4)
-                    }
+                    Circle()
+                        .foregroundStyle(Color.primary)
+                        .frame(width: 4)
+                        .opacity(days.contains(where: {$0 == day}) ? 1 : 0)
                 }
                 .padding(.vertical, 8)
                 .padding(.horizontal)

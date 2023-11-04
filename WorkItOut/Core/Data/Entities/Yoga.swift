@@ -21,6 +21,16 @@ struct Yoga: Identifiable, Hashable, Entity {
     var yogaState : YogaState = .notCompleted
     var image: String = "yogaImage.png"
     
+    func totalDurationMinute() -> Int {
+        var seconds = 0
+        
+        for pose in poses {
+            seconds += pose.seconds
+        }
+        
+        return (seconds/60)
+    }
+    
     static func == (lhs: Yoga, rhs: Yoga) -> Bool {
         return lhs.id == rhs.id
     }

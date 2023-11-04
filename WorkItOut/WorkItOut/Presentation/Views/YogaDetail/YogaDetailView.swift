@@ -16,7 +16,7 @@ struct YogaDetailView: View {
             Text("Balancing and Grounding")
             Text("5 Exercise (50 Min)")
             ForEach(yoga.poses) { pose in
-                
+                YogaCardView(name: pose.name, category: pose.position.rawValue, min: pose.seconds)
             }
             ButtonComponent(title: "Start Now") {
                 //

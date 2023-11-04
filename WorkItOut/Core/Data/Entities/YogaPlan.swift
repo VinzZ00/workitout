@@ -24,13 +24,5 @@ struct YogaPlan : Identifiable, Entity {
         return yogaPlan
     }
     
-    func totalDurationMinute() -> Int {
-        var seconds = 0
-        
-        for yoga in yogas {
-            seconds += yoga.estimationDuration
-        }
-        
-        return (seconds/60)
-    }
+    
 }

@@ -24,7 +24,6 @@ struct HomeView: View {
                     })
                     .buttonStyle(.plain)
                     
-                    
                     Spacer()
                     Button(action: {
                         vm.previousWeek()
@@ -48,6 +47,7 @@ struct HomeView: View {
                     }, label: {
                         Image(systemName: "chevron.right")
                     })
+                    
                     Spacer()
                     
                     Button(action: {}, label: {
@@ -77,10 +77,10 @@ struct HomeView: View {
                         Text("Today, 26 October")
                             .font(.title3)
                             .bold()
-                        Text(vm.yogaPlan.name)
+                        Text(vm.yoga.name)
                             .font(.largeTitle)
                             .bold()
-                        Text("\(vm.yogaPlan.yogas.count) Exercise (\(vm.yogaPlan.totalDurationMinute()) Min)")
+                        Text("\(vm.yoga.poses.count) Exercise (\(vm.yoga.totalDurationMinute()) Min)")
                             .font(.body)
                         ButtonComponent(title: "Start Exercise") {
                             vm.sheetToggle.toggle()
@@ -146,7 +146,7 @@ struct HomeView: View {
         .ignoresSafeArea(.keyboard)
         .background(Color("Background"))
         .sheet(isPresented: $vm.sheetToggle, content: {
-            YogaDetailView(yoga: Yoga())
+            YogaDetailView(yoga: vm.yoga)
         })
 //        .task({
 //            await dm.loadProfile(moc: moc)
