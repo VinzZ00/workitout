@@ -23,7 +23,7 @@ struct HomeCurrentYogaView: View {
                 Text("\(vm.yoga.poses.count) Exercise (\(vm.yoga.totalDurationMinute()) Min)")
                     .font(.body)
                 ButtonComponent(title: "Start Exercise") {
-                    vm.sheetToggle.toggle()
+                    vm.toggleSheet(yoga: vm.yoga)
                 }
             }
             .foregroundStyle(.white)

@@ -19,6 +19,11 @@ class HomeViewModel: ObservableObject {
     @Published var selectedRelieve: Relieve = .back
     @Published var sheetToggle: Bool = false
     
+    func toggleSheet(yoga: Yoga) {
+        self.currentYoga = yoga
+        self.sheetToggle.toggle()
+    }
+    
     var trimester: Trimester {
         if week <= 12 {
             return .first
@@ -66,6 +71,8 @@ class HomeViewModel: ObservableObject {
         return yogaPlan.yogas.first(where: {$0.day == day}) ?? Yoga()
     }
     
+    var currentYoga: Yoga = Yoga()
+    
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
         self.days = profile.daysAvailable
@@ -84,5 +91,10 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    
+    func checkCategory(poses: [Pose], category: Category) -> Bool {
+        if (poses.first(where: {$0.category == category}) != nil) {
+            return true
+        }
+        return false
+    }
 }
