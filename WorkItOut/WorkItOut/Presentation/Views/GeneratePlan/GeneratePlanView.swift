@@ -10,6 +10,7 @@ import SwiftUI
 struct GeneratePlanView: View {
     @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var dm: DataManager
     
     @State var finish: Bool = false
@@ -21,6 +22,7 @@ struct GeneratePlanView: View {
                     VStack(alignment: .leading) {
                         HStack {
                             Button(action: {
+                                self.presentationMode.wrappedValue.dismiss()
                             }, label: {
                                 Image(systemName: "xmark")
                                     .foregroundStyle(.white)
@@ -130,6 +132,7 @@ struct GeneratePlanView: View {
                 HomeView(vm: HomeViewModel(profile: dm.profile))
             })
             .ignoresSafeArea()
+            .navigationBarBackButtonHidden()
         }
     }
 }

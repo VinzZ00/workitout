@@ -76,6 +76,7 @@ struct AssessmentView: View {
             // MARK: listen ketika sudah ada pose baru ketriger.
             .onChange(of: dm.pm.poses) { val in
                 if !dm.pm.poses.isEmpty {
+                    print("selesai load pose dari firebase")
                     avm.finishCreateYogaPlan = true
                 }
             }

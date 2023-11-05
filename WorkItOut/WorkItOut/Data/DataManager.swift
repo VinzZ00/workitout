@@ -7,7 +7,7 @@
 
 import Foundation
 import CoreData
-//import CoreData
+
 @MainActor
 class DataManager: ObservableObject {
     @Published var pm: PoseManager = PoseManager()
@@ -34,23 +34,6 @@ class DataManager: ObservableObject {
         for trimester in Trimester.allCases {
             profile.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration, exceptions: exceptions))
         }
-        
-        
-//        if profile.plan.contains(where: { ygp in
-//            !ygp.yogas.isEmpty
-//        }) {
-//            await addProfile.call(profile: profile, context: moc)
-//        }
-//        
-//        
-//        
-//        let fetchProfile = FetchProfileUseCase()
-//        
-//        let fetchRes = await fetchProfile.call(context: moc)
-//        
-//        self.profile = fetchRes.first!
-//        
-//        print(fetchRes.first?.name)
     }
     
     public func createPose() -> Pose {
@@ -82,11 +65,11 @@ class DataManager: ObservableObject {
         newPoses.append(poseByCategory(poses: poses, category: .warmUp))
         for _ in 0 ..< duration.getDurationInMinutes() {
             var newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
-            
-            while newPoses.contains(where: {$0.name == newPose.name}) {
-                newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
+            if !poses.isEmpty {
+                while newPoses.contains(where: {$0.name == newPose.name}) {
+                    newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
+                }
             }
-            
             newPoses.append(newPose)
         }
         newPoses.append(poseByCategory(poses: poses, category: .coolingDown))

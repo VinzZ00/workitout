@@ -64,7 +64,7 @@ struct HomeView: View {
             }
             .background(Color.background)
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(yoga: vm.yoga)
+                YogaDetailView()
             })
         }
         .navigationBarBackButtonHidden()
