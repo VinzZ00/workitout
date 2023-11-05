@@ -8,10 +8,10 @@
 import Foundation
 
 @MainActor
-struct HandmadeYogaPlans {
-    static var dm: DataManager = DataManager()
+class HandmadeYogaPlans {
+//    static var dm: DataManager = DataManager()
     static var yogaPlans: [YogaPlan] = loadYogaPlan()
-    static var pm: FirebasePoseManager = FirebasePoseManager()
+    static var pm = PoseManager()
     
     static func loadYogaPlan() -> [YogaPlan] {
         var yogaPlans: [YogaPlan] = []

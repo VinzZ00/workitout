@@ -14,10 +14,6 @@ class DataManager: ObservableObject {
     @Published var profile: Profile = Profile()
     var addProfile: AddProfileUseCase = AddProfileUseCase()
     
-//    public func async saveProfile(Profile: profile) {
-//        await addProfile.call(profile: profile, context: moc)
-//    }
-    
     func test() {
         print("Test")
     }

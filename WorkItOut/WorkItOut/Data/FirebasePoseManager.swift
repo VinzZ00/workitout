@@ -8,9 +8,9 @@
 import Foundation
 
 @MainActor
-class FirebasePoseManager {
+class FirebasePoseManager: ObservableObject {
     var firestore = FireStoreManager.shared
-    var firebasePoses: [RequestYogaPose] = []
+    @Published var firebasePoses: [RequestYogaPose] = []
     var poses : [Pose] = []
     
     init() {
@@ -79,5 +79,6 @@ class FirebasePoseManager {
           }
           print("Firebase called")
         }
+        print("Firebase function ended")
     }
 }
