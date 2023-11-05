@@ -85,10 +85,18 @@ class DataManager: ObservableObject {
         var newPoses: [Pose] = []
         
         newPoses.append(poseByCategory(poses: poses, category: .warmUp))
-        for _ in 0..<profile.preferredDuration.getDurationInMinutes()/2 {
-            newPoses.append(poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose))
+        for _ in 0 ..< profile.preferredDuration.getDurationInMinutes() {
+            var newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
+            
+            while newPoses.contains(where: {$0.name == newPose.name}) {
+                newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
+            }
+            
+            newPoses.append(newPose)
         }
         newPoses.append(poseByCategory(poses: poses, category: .coolingDown))
+        
+        newPoses.sort(by: {$0.category.getOrder() > $1.category.getOrder()})
         
         return newPoses
     }

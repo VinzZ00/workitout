@@ -45,6 +45,7 @@
 		6CB5F8122AF612DD0019539C /* HomeOtherPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8112AF612DD0019539C /* HomeOtherPlansView.swift */; };
 		6CB5F8142AF618D70019539C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8132AF618D70019539C /* Status.swift */; };
 		6CB5F8162AF61A210019539C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8152AF61A210019539C /* Category.swift */; };
+		6CB5F8182AF64F740019539C /* GeneratePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
@@ -164,6 +165,7 @@
 		6CB5F8112AF612DD0019539C /* HomeOtherPlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOtherPlansView.swift; sourceTree = "<group>"; };
 		6CB5F8132AF618D70019539C /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		6CB5F8152AF61A210019539C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanViewModel.swift; sourceTree = "<group>"; };
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67A2AF383F80020D00F /* DayPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6CEFB67C2AF384C80020D00F /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
@@ -756,6 +758,7 @@
 				56D1BC9E2AEA5653002DBDA0 /* Execution */,
 				D8BC2BEF2AE80F1B00E61487 /* CreateWorkout */,
 				D8207AE72AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift */,
+				6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -945,6 +948,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB5F8182AF64F740019539C /* GeneratePlanViewModel.swift in Sources */,
 				D8BC2BF62AE81D0600E61487 /* AssessmentState.swift in Sources */,
 				6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,

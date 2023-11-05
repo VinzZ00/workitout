@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GeneratePlanView: View {
+    @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
     
@@ -40,7 +41,7 @@ struct GeneratePlanView: View {
                             .resizable()
                             .frame(maxWidth: .infinity)
                     )
-                    DayPickerView()
+                    DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
                     if dm.profile.plan.isEmpty {
                         Text("No Plan yet")
                     }
@@ -64,9 +65,30 @@ struct GeneratePlanView: View {
                                             Image(systemName: "pencil")
                                         })
                                     }
-                                    ForEach(yoga.poses, id: \.self) { pose in
-                                        YogaCardView(name: pose.name)
+                                    ForEach(Category.allCases, id: \.self) { category in
+                                        if vm.checkCategory(poses: yoga.poses, category: category) {
+                                            HStack {
+                                                Text(category.rawValue)
+                                                    .font(.subheadline)
+                                                    .foregroundStyle(Color.neutral3)
+                                                    .bold()
+                                                Rectangle()
+                                                    .frame(height: 0.5)
+                                                    .foregroundStyle(Color.neutral6)
+                                            }
+                                            
+                                
+                                        }
+                                        
+                                        ForEach(yoga.poses, id: \.self) { pose in
+                                            if pose.category == category {
+                                                YogaCardView(name: pose.name)
+                                            }
+                                        }
                                     }
+//                                    ForEach(yoga.poses, id: \.self) { pose in
+//                                        YogaCardView(name: pose.name)
+//                                    }
                                 }
                                 .padding()
                                 .background(.white)
