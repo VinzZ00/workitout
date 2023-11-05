@@ -42,6 +42,9 @@ struct GeneratePlanView: View {
                             .frame(maxWidth: .infinity)
                     )
                     DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
+//                    Rectangle()
+//                        .frame(height: 12)
+//                        .foregroundStyle(Color.background)
                     if dm.profile.plan.isEmpty {
                         Text("No Plan yet")
                     }
@@ -92,9 +95,10 @@ struct GeneratePlanView: View {
                                 }
                                 .padding()
                                 .background(.white)
+                                .padding(.bottom)
                             }
                         }
-                        .background(Color.neutral6)
+                        .background(Color.background)
                     }
                     
                 }

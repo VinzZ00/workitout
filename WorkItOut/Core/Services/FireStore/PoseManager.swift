@@ -15,6 +15,7 @@ class PoseManager: ObservableObject {
     
     init() {
         self.getFirebasePoses()
+        self.addPosetoPoses()
     }
     
     func addPosetoPoses(){

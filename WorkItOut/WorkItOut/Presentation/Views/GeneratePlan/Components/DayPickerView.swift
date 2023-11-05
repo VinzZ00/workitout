@@ -17,6 +17,7 @@ struct DayPickerView: View {
                 DayPickView(selected: $selection, day: day)
             }
         }
+        .padding(0)
     }
 }
 

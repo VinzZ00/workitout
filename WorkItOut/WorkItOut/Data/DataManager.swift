@@ -36,7 +36,7 @@ class DataManager: ObservableObject {
         self.profile = Profile(name: name, currentPregnancyWeek: currentWeek, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, exceptions: exceptions)
         
         for trimester in Trimester.allCases {
-            profile.plan.append(createYogaPlan(trimester: trimester))
+            profile.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration))
         }
         
         
@@ -80,12 +80,12 @@ class DataManager: ObservableObject {
         return poses.filter({$0.category == category}).randomElement() ?? Pose(id: UUID())
     }
     
-    public func createPoses() -> [Pose] {
+    public func createPoses(duration: Duration) -> [Pose] {
         var poses = filterPoses()
         var newPoses: [Pose] = []
         
         newPoses.append(poseByCategory(poses: poses, category: .warmUp))
-        for _ in 0 ..< profile.preferredDuration.getDurationInMinutes() {
+        for _ in 0 ..< duration.getDurationInMinutes() {
             var newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
             
             while newPoses.contains(where: {$0.name == newPose.name}) {
@@ -101,20 +101,19 @@ class DataManager: ObservableObject {
         return newPoses
     }
     
-    public func createYogas() -> [Yoga] {
+    public func createYogas(days: [Day], duration: Duration) -> [Yoga] {
         var yogas: [Yoga] = []
-        let days = profile.daysAvailable
         
         for day in days {
-            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: createPoses(), day: day, estimationDuration: profile.preferredDuration.getDurationInMinutes(), image: "ExampleImage.png"))
+            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: createPoses(duration: duration), day: day, estimationDuration: duration.getDurationInMinutes(), image: "ExampleImage.png"))
         }
         
         return yogas
     }
     
-    public func createYogaPlan(trimester: Trimester) -> YogaPlan {
+    public func createYogaPlan(trimester: Trimester, days: [Day], duration: Duration) -> YogaPlan {
         var yogaPlan = YogaPlan(trimester: trimester)
-        yogaPlan.yogas = createYogas()
+        yogaPlan.yogas = createYogas(days: days, duration: duration)
         
         return yogaPlan
     }

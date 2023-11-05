@@ -84,7 +84,6 @@ struct AssessmentView: View {
                     timeRemaining -= 1
                 }
                 else if dm.profile.plan.isEmpty {
-                    dm.pm.addPosetoPoses()
                     Task {
                         await dm.setUpProfile(
                             moc: moc,
