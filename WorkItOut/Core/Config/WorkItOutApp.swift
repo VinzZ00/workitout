@@ -20,6 +20,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WorkItOutApp: App {
     @StateObject var coreDataManager = CoreDataManager()
+    @StateObject var dm: DataManager = DataManager()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
@@ -29,6 +30,7 @@ struct WorkItOutApp: App {
 //            ProfileView()
             ContentView()
                 .environment(\.managedObjectContext, coreDataManager.container.viewContext)
+                .environmentObject(dm)
         }
     }
 }

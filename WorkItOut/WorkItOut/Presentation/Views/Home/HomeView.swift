@@ -46,12 +46,15 @@ struct HomeView: View {
                             .bold()
                         ScrollView(.horizontal) {
                             HStack {
-                                ForEach(vm.relieves, id: \.self) { relieve in
+                                ForEach(Relieve.allCases, id: \.self) { relieve in
                                     HomeYogaCategoryView(relieve: relieve)
                                         .environmentObject(vm)
                                 }
                             }
                         }
+//                        ForEach(HandmadeYogaPlans.yogaPlans, id: \.id) { yogaPlan in
+//                            HomeOtherPlansView()
+//                        }
                         ForEach(0...4, id: \.self) { _ in
                             HomeOtherPlansView()
                         }

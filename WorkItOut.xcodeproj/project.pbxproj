@@ -47,6 +47,8 @@
 		6CB5F8162AF61A210019539C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8152AF61A210019539C /* Category.swift */; };
 		6CB5F8182AF64F740019539C /* GeneratePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */; };
 		6CB5F81A2AF757550019539C /* HandmadeYogaPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8192AF757550019539C /* HandmadeYogaPlans.swift */; };
+		6CB5F81C2AF766BD0019539C /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F81B2AF766BD0019539C /* PlanManager.swift */; };
+		6CB5F81E2AF76C4E0019539C /* FirebasePoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F81D2AF76C4E0019539C /* FirebasePoseManager.swift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
@@ -168,6 +170,8 @@
 		6CB5F8152AF61A210019539C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanViewModel.swift; sourceTree = "<group>"; };
 		6CB5F8192AF757550019539C /* HandmadeYogaPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandmadeYogaPlans.swift; sourceTree = "<group>"; };
+		6CB5F81B2AF766BD0019539C /* PlanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanManager.swift; sourceTree = "<group>"; };
+		6CB5F81D2AF76C4E0019539C /* FirebasePoseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePoseManager.swift; sourceTree = "<group>"; };
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67A2AF383F80020D00F /* DayPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6CEFB67C2AF384C80020D00F /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
@@ -449,6 +453,8 @@
 				ACBFBD9B2AE676BF00109D94 /* Repository */,
 				ACB8642C2AE65282005DF0D1 /* Datasource */,
 				AC5A9A582AE3C09B003B0C1F /* UseCases */,
+				6CB5F81B2AF766BD0019539C /* PlanManager.swift */,
+				6CB5F81D2AF76C4E0019539C /* FirebasePoseManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1012,11 +1018,13 @@
 				AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */,
 				D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */,
 				D8BC2BFA2AE81EA200E61487 /* Months.swift in Sources */,
+				6CB5F81E2AF76C4E0019539C /* FirebasePoseManager.swift in Sources */,
 				AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */,
 				D8FBED562AE918200062CC00 /* CompleteView.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				D8BC2BEE2AE80F1800E61487 /* AssessmentViewModel.swift in Sources */,
 				6C7B2C4D2AEF726A00E0DADF /* GeneratePlanView.swift in Sources */,
+				6CB5F81C2AF766BD0019539C /* PlanManager.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				6C3FD76E2AEE40C900C84D2A /* Difficulty.swift in Sources */,
 				D8FBED5A2AE91A880062CC00 /* LoadingCircle.swift in Sources */,
