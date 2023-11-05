@@ -1,65 +1,27 @@
 //
-//  DataManager.swift
+//  PlanManager.swift
 //  WorkItOut
 //
-//  Created by Jeremy Raymond on 31/10/23.
+//  Created by Jeremy Raymond on 05/11/23.
 //
 
 import Foundation
-import CoreData
-//import CoreData
-@MainActor
-class DataManager: ObservableObject {
-    @Published var pm: PoseManager = PoseManager()
-    @Published var profile: Profile = Profile()
-    var addProfile: AddProfileUseCase = AddProfileUseCase()
+
+struct PlanManager {
+    var poses: [Pose]
     
-    func test() {
-        print("Test")
+    init(poses: [Pose]) {
+        self.poses = poses
     }
     
-    public func loadProfile(moc : NSManagedObjectContext) async {
-        let fetchProfile = FetchProfileUseCase()
-        
-        let fetchRes = await fetchProfile.call(context: moc)
-        DispatchQueue.main.async {
-            self.profile = fetchRes.first!
-        }
-        
-    }
-    
-    public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, exceptions: [Exception]) async {
-        self.profile = Profile(name: name, currentPregnancyWeek: currentWeek, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, exceptions: exceptions)
-        
-        for trimester in Trimester.allCases {
-            profile.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration, exceptions: exceptions))
-        }
-        
-        
-//        if profile.plan.contains(where: { ygp in
-//            !ygp.yogas.isEmpty
-//        }) {
-//            await addProfile.call(profile: profile, context: moc)
-//        }
-//        
-//        
-//        
-//        let fetchProfile = FetchProfileUseCase()
-//        
-//        let fetchRes = await fetchProfile.call(context: moc)
-//        
-//        self.profile = fetchRes.first!
-//        
-//        print(fetchRes.first?.name)
-    }
-    
+    //Pose creation logic will go here
     public func createPose() -> Pose {
         
-        return pm.poses.randomElement() ?? Pose(id: UUID())
+        return poses.randomElement() ?? Pose(id: UUID())
     }
     
     public func filterPoses(exceptions: [Exception]) -> [Pose] {
-        let poses = pm.poses
+        let poses = poses
         var filteredPoses: [Pose] = []
         
         for pose in poses {
@@ -113,9 +75,3 @@ class DataManager: ObservableObject {
         return yogaPlan
     }
 }
-
-//extension PoseNSObject {
-//    func intoPose() -> Pose {
-//        return Pose(name: self.name!, description: <#T##String#>, seconds: <#T##Int#>, state: <#T##YogaState#>, position: <#T##Position#>, spineMovement: <#T##SpineMovement#>, recommendedTrimester: <#T##Trimester#>, bodyPartTrained: <#T##[BodyPart]#>, relieve: <#T##[Relieve]#>, difficulty: <#T##Difficulty#>)
-//    }
-//}

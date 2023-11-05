@@ -17,16 +17,16 @@ extension PoseNSObject {
         let pose = Pose(
             id : self.uuid!,
             name: self.name!,
+            difficulty: Difficulty(rawValue: self.difficulty!)!, 
+            exception: self.exception!.split(separator: ", ").map{Exception(rawValue: String($0))!}, 
+            recommendedTrimester: Trimester(rawValue: self.recommendedTrimester!)!, 
+            relieve: self.relieve!.split(separator: ", ").map{Relieve(rawValue: String($0))!}, 
             description: self.poseDescription!,
             seconds: Int(self.seconds),
             state: YogaState(rawValue: self.state!)!,
             position: Position(rawValue: self.position!)!,
             spineMovement: SpineMovement(rawValue: self.spineMovement!)!,
-            recommendedTrimester: Trimester(rawValue: self.recommendedTrimester!)!,
-            bodyPartTrained: self.bodyPartTrained!.split(separator: ", ").map{BodyPart(rawValue: String($0))!},
-            relieve: self.relieve!.split(separator: ", ").map{Relieve(rawValue: String($0))!},
-            exception: self.exception!.split(separator: ", ").map{Exception(rawValue: String($0))!},
-            difficulty: Difficulty(rawValue: self.difficulty!)!
+            bodyPartTrained: self.bodyPartTrained!.split(separator: ", ").map{BodyPart(rawValue: String($0))!}
         ) //Pose
         return pose
     }

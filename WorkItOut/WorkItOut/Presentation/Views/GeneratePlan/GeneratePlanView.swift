@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GeneratePlanView: View {
+    @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
     
@@ -40,7 +41,10 @@ struct GeneratePlanView: View {
                             .resizable()
                             .frame(maxWidth: .infinity)
                     )
-                    DayPickerView()
+                    DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
+//                    Rectangle()
+//                        .frame(height: 12)
+//                        .foregroundStyle(Color.background)
                     if dm.profile.plan.isEmpty {
                         Text("No Plan yet")
                     }
@@ -54,7 +58,7 @@ struct GeneratePlanView: View {
                                                 .font(.title3)
                                                 .bold()
                                             Text("\(yoga.day.getString()), \(dm.profile.timeOfDay.getString())")
-                                                .foregroundStyle(.neutral3)
+                                                .foregroundStyle(Color.neutral3)
                                                 .font(.body)
                                         }
                                         Spacer()
@@ -64,15 +68,37 @@ struct GeneratePlanView: View {
                                             Image(systemName: "pencil")
                                         })
                                     }
-                                    ForEach(yoga.poses, id: \.self) { pose in
-                                        YogaCardView(name: pose.name)
+                                    ForEach(Category.allCases, id: \.self) { category in
+                                        if vm.checkCategory(poses: yoga.poses, category: category) {
+                                            HStack {
+                                                Text(category.rawValue)
+                                                    .font(.subheadline)
+                                                    .foregroundStyle(Color.neutral3)
+                                                    .bold()
+                                                Rectangle()
+                                                    .frame(height: 0.5)
+                                                    .foregroundStyle(Color.neutral6)
+                                            }
+                                            
+                                
+                                        }
+                                        
+                                        ForEach(yoga.poses, id: \.self) { pose in
+                                            if pose.category == category {
+                                                YogaCardView(name: pose.name)
+                                            }
+                                        }
                                     }
+//                                    ForEach(yoga.poses, id: \.self) { pose in
+//                                        YogaCardView(name: pose.name)
+//                                    }
                                 }
                                 .padding()
                                 .background(.white)
+                                .padding(.bottom)
                             }
                         }
-                        .background(.neutral6)
+                        .background(Color.background)
                     }
                     
                 }
@@ -81,17 +107,17 @@ struct GeneratePlanView: View {
                     
                     ButtonComponent(title: "Finish") {
                         Task {
-                            var addProfile: AddProfileUseCase = AddProfileUseCase()
-                            
-                            await addProfile.call(profile: dm.profile, context: moc)
-                            
-                            var fetchProfile = FetchProfileUseCase()
-                            
-                            let fetchRes = await fetchProfile.call(context: moc)
-                            
-                            dm.profile = fetchRes.first!
-                            
-                            print(fetchRes.first?.name)
+//                            var addProfile: AddProfileUseCase = AddProfileUseCase()
+//                            
+//                            await addProfile.call(profile: dm.profile, context: moc)
+//                            
+//                            var fetchProfile = FetchProfileUseCase()
+//                            
+//                            let fetchRes = await fetchProfile.call(context: moc)
+//                            
+//                            dm.profile = fetchRes.first!
+//                            
+//                            print(fetchRes.first?.name)
                             
                             finish.toggle()
                         }
@@ -102,7 +128,6 @@ struct GeneratePlanView: View {
             }
             .navigationDestination(isPresented: $finish, destination: {
                 HomeView(vm: HomeViewModel(profile: dm.profile))
-                    .environmentObject(dm)
             })
             .ignoresSafeArea()
         }

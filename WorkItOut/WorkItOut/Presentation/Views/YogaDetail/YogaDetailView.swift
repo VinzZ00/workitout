@@ -29,7 +29,6 @@ struct YogaDetailView: View {
                             ExecutionView()
                             .navigationBarBackButtonHidden(true)
                     }
-
             }
             .padding()
         }

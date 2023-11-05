@@ -23,13 +23,13 @@ struct YogaCardView: View {
                     .font(.title3)
                     .bold()
                 Text(category)
-                    .foregroundStyle(.neutral3)
+                    .foregroundStyle(Color.neutral3)
                     .font(.body)
             }
             Spacer()
             Text("\(min) min")
                 .padding(8)
-                .background(.neutral6)
+                .background(Color.neutral6)
                 .clipShape(.rect(cornerRadius: 12))
         }
     }

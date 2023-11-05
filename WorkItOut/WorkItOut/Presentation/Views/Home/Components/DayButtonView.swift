@@ -7,38 +7,39 @@
 
 import SwiftUI
 
-enum DayButtonEnum {
-    case none
-    case filled
-    case current
-}
-
 struct DayButtonView: View {
-    @State var state: DayButtonEnum = .current
+    @Binding var selectedDay: Day
+    var days: [Day] = [.monday, .tuesday, .thursday]
+    var day: Day = .monday
     
     var body: some View {
-        VStack {
-            Text("Sun")
-                .foregroundStyle(.orangePrimary)
+        Button(action: {
+            selectedDay = day
+        }, label: {
             VStack {
-                Text("4")
-                if state == .filled || state == .current {
+                Text(day.getShortenedDay())
+                    .foregroundStyle(Color.neutral3.opacity(0.75))
+                VStack {
+                    Text("\(day.getWeekdayInInt())")
+                        .foregroundStyle(day == selectedDay ? Color.primary : .black)
                     Circle()
-                        .foregroundStyle(.orangePrimary)
+                        .foregroundStyle(Color.primary)
                         .frame(width: 4)
+                        .opacity(days.contains(where: {$0 == day}) ? 1 : 0)
                 }
+                .padding(.vertical, 8)
+                .padding(.horizontal)
+                .background(RoundedRectangle(cornerRadius: 12)
+                    .fill(day == selectedDay ? Color.primary.opacity(0.25) : .clear)
+                    .stroke(day == selectedDay ? Color.primary : .clear, lineWidth: 1)
+                )
             }
-            .padding(.vertical, 8)
-            .padding(.horizontal)
-            .background(RoundedRectangle(cornerRadius: 12)
-                .fill(state == .current ? .orangePrimary.opacity(0.25) : .clear)
-                .stroke(state == .current ? .orangePrimary : .grayBorder, lineWidth: 1)
-            )
-        }
+        })
+        
         
     }
 }
 
-#Preview {
-    DayButtonView()
-}
+//#Preview {
+//    DayButtonView()
+//}

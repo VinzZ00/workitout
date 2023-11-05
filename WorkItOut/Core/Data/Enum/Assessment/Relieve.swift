@@ -12,10 +12,13 @@ enum Relieve: String, UserPreference {
         return self.rawValue
     }
     
-    case backpain = "Back Pain"
-    case hippain = "Hip Pain"
-    case pelvicflexibility = "Pelvic Flexibility"
-    case laborprep = "Labor Prep"
-    case neckcramp = "Neck Cramp"
-    case breathing = "Breathing"
+    case back = "Back"
+    case hip = "Hip"
+    case neck = "Neck"
+    case leg = "Leg"
+    case pelvic = "Pelvic"
+    case sciatic = "Sciatic"
+    case ankle = "Ankle"
+    case foot = "Foot"
+    case knee = "Knee"
 }
