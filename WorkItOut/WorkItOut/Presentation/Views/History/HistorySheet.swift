@@ -65,16 +65,13 @@ struct HistorySheet: View {
 
 #Preview {
     let poses = [
-        Pose(id: UUID(), name: "Banana", image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner),
-        Pose(id: UUID(), name: "Bound Angle", image: nil, description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, recommendedTrimester: .second, bodyPartTrained: [.shoulders, .legs], relieve: [.hippain, .backpain, .pelvicflexibility], difficulty: .beginner),
-        Pose(id: UUID(), name: "Gracious Pose", image: nil, description: "Gracious Pose", seconds: 60, state: .notCompleted, position: .seated, spineMovement: .neutral, recommendedTrimester: .all, bodyPartTrained: [.shoulders, .legs], relieve: [.hippain, .backpain], difficulty: .beginner),
-        Pose(id: UUID(), name: "Cat", image: nil, description: "Cat", seconds: 60, state: .skipped, position: .armLegSupport, spineMovement: .forwardBend, recommendedTrimester: .first, bodyPartTrained: [.back, .neck], relieve: [.backpain, .pelvicflexibility], difficulty: .beginner)
+        Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]),
+        Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back, .pelvic], image: nil, description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, bodyPartTrained: [.shoulders, .legs]),
+        Pose(id: UUID(), name: "Cat", difficulty: .beginner, recommendedTrimester: .first, relieve: [.back, .pelvic], image: nil, description: "Cat", seconds: 60, state: .skipped, position: .armLegSupport, spineMovement: .forwardBend, bodyPartTrained: [.back, .neck])
     
     ]
-    return 
-    NavigationStack{ HistorySheet(history: History(id: UUID(),
-                                                   yogaDone: Yoga(id: UUID(), name: "Day 1 Upper Body", poses: poses, day: .monday, estimationDuration: 30, image: "")
-    , executionDate: Date.now, duration: 30, rating: 5), showSheet: .constant(true))
+    return NavigationStack{ 
+        HistorySheet(history: History(id: UUID(), yogaDone: Yoga(id: UUID(), name: "Day 1 Upper Body", poses: poses, day: .monday, estimationDuration: 30, image: ""), executionDate: Date.now, duration: 30, rating: 5), showSheet: .constant(true))
     }
         
 }
