@@ -15,10 +15,10 @@ class HistoryViewModel : ObservableObject {
     init(){
         // Ganti dengan load history dari coredata
         let poses = [
-            Pose(id: UUID(), name: "Banana", description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner),
-            Pose(id: UUID(), name: "Bound Angle", description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, recommendedTrimester: .second, bodyPartTrained: [.shoulders, .legs], relieve: [.hippain, .backpain, .pelvicflexibility], difficulty: .beginner),
-            Pose(id: UUID(), name: "Gracious Pose", description: "Gracious Pose", seconds: 60, state: .notCompleted, position: .seated, spineMovement: .neutral, recommendedTrimester: .all, bodyPartTrained: [.shoulders, .legs], relieve: [.hippain, .backpain], difficulty: .beginner),
-            Pose(id: UUID(), name: "Cat", description: "Cat", seconds: 60, state: .skipped, position: .armLegSupport, spineMovement: .forwardBend, recommendedTrimester: .first, bodyPartTrained: [.back, .neck], relieve: [.backpain, .pelvicflexibility], difficulty: .beginner)
+            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.ankle, .back, .hip], description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]),
+            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.ankle, .back, .hip], description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, bodyPartTrained: [.shoulders, .legs]),
+            Pose(id: UUID(), name: "Gracious Pose", difficulty: .beginner, recommendedTrimester: .all, relieve: [.ankle, .back, .hip], description: "Gracious Pose", seconds: 60, state: .notCompleted, position: .seated, spineMovement: .neutral, bodyPartTrained: [.shoulders, .legs]),
+            Pose(id: UUID(), name: "Cat", difficulty: .beginner, recommendedTrimester: .first, relieve: [.ankle, .back, .hip], description: "Cat", seconds: 60, state: .skipped, position: .armLegSupport, spineMovement: .forwardBend, bodyPartTrained: [.back, .neck])
         
         ]
         let yoga = Yoga(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")

@@ -23,4 +23,6 @@ struct YogaPlan : Identifiable, Entity {
         yogaPlan.ofProfile = parentProfileNSObject
         return yogaPlan
     }
+    
+    
 }

@@ -8,13 +8,12 @@
 import Foundation
 
 struct RequestYogaPose {
-    var name : String
+    var yogaPose : String
     var altName : String
+    var category: Category
     var difficulty : Difficulty
-    var position : Position
+    var exceptions : [Exception]
     var recommendedTrimester : Trimester
-    var spineMovement : SpineMovement
-    var bodyPartTrained : [BodyPart]
-    var exception : [String]
-    var relieve : [String]
+    var relieves : [Relieve]
+    var status : Status
 }

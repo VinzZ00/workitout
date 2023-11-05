@@ -33,9 +33,11 @@ struct Profile : Entity {
     var fitnessLevel: Difficulty = .beginner
     var daysAvailable: [Day] = []
     var timeOfDay: TimeOfDay = .morning
-    var preferredDuration: Duration = .fiveteenMinutes
+    var preferredDuration: Duration = .tenMinutes
     var plan : [YogaPlan] = [] // Pasti 3
     var histories : [History] = []
+    
+    var exceptions: [Exception] = []
     
 //    func getCurrentYogaPlan() -> YogaPlan {
 //        return self.plan

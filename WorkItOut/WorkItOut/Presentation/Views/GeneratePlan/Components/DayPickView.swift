@@ -17,7 +17,7 @@ struct DayPickView: View {
                 selected = day
             }, label: {
                 VStack {
-                    Text("Day 1")
+                    Text(day.getString())
                     Rectangle()
                         .frame(height: 4)
                         .padding(0)

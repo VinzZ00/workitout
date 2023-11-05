@@ -1511,7 +1511,335 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "68CE71E1-3F53-4C02-8138-947D2FA65575"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "testUpdate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68CE71E1-3F53-4C02-8138-947D2FA65575 - 6283264ad8bf7cae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  uuid = "68CE71E1-3F53-4C02-8138-947D2FA65575 - 9d2ba6d977b938ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "68CE71E1-3F53-4C02-8138-947D2FA65575 - 6283264ad8bf7c8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "464">
+               </Location>
+               <Location
+                  uuid = "68CE71E1-3F53-4C02-8138-947D2FA65575 - 9d2ba6d977b938cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "68CE71E1-3F53-4C02-8138-947D2FA65575 - 6283264ad8bf7cae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "464">
+               </Location>
+               <Location
+                  uuid = "68CE71E1-3F53-4C02-8138-947D2FA65575 - 9d2ba6d977b938ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A21B7EE-CA51-4063-826D-1BF740A7D0DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "testUpdate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2A21B7EE-CA51-4063-826D-1BF740A7D0DC - 17018b59aa2fbc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "2A21B7EE-CA51-4063-826D-1BF740A7D0DC - 301899c439bcbf83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "2A21B7EE-CA51-4063-826D-1BF740A7D0DC - 17018b59aa2fbc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "340">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F807D03-782F-46B2-871C-6D5D07269DE2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "testUpdate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F807D03-782F-46B2-871C-6D5D07269DE2 - 17018b59aa2fb22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1064">
+               </Location>
+               <Location
+                  uuid = "7F807D03-782F-46B2-871C-6D5D07269DE2 - 301899c439bcbf60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "772">
+               </Location>
+               <Location
+                  uuid = "7F807D03-782F-46B2-871C-6D5D07269DE2 - 6283264ad8bf73a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "7F807D03-782F-46B2-871C-6D5D07269DE2 - 17018b59aa2fb22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "7F807D03-782F-46B2-871C-6D5D07269DE2 - 30ab47edb4406b8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "7F807D03-782F-46B2-871C-6D5D07269DE2 - 301899c439bcbf60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B506BC4-FB56-4304-8D40-89A0856B1DFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B506BC4-FB56-4304-8D40-89A0856B1DFF - 582518084a5b5461"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1336">
+               </Location>
+               <Location
+                  uuid = "4B506BC4-FB56-4304-8D40-89A0856B1DFF - 582518084a5b5461"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "7E7C4F55-CF59-42D4-B37F-53AF826D0734"
+            uuid = "6395BE92-CC69-476F-AA36-3166B1AA6AA1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -1524,6 +1852,67 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "6395BE92-CC69-476F-AA36-3166B1AA6AA1 - 582518084a5b5199"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "2564">
+               </Location>
+               <Location
+                  uuid = "6395BE92-CC69-476F-AA36-3166B1AA6AA1 - 9dad25022e0c941f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "6395BE92-CC69-476F-AA36-3166B1AA6AA1 - d7352e0412e6c89d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "6395BE92-CC69-476F-AA36-3166B1AA6AA1 - 582518084a5b5199"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "2472">
+               </Location>
+               <Location
+                  uuid = "6395BE92-CC69-476F-AA36-3166B1AA6AA1 - 9dad25022e0c941f"
                   uuid = "7E7C4F55-CF59-42D4-B37F-53AF826D0734 - 582518084a5b5199"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -1555,6 +1944,7 @@
                </Location>
                <Location
                   uuid = "7E7C4F55-CF59-42D4-B37F-53AF826D0734 - d7352e0412e6c89d"
+                  uuid = "6395BE92-CC69-476F-AA36-3166B1AA6AA1 - d7352e0412e6c89d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1929,6 +2319,186 @@
                   offsetFromSymbolStart = "116">
                </Location>
             </Locations>
+            uuid = "600ABD15-949D-4E31-98FE-4ABBF1913155"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "testUpdate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - 582518084a5b51df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "2708">
+               </Location>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - 9dad25022e0c9459"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - d7352e0412e6c8db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - 45309d67756b6048"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) await resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - 8bd2b7df6d80b45"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - 2f4129f2e8a72d04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - 582518084a5b51df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "2572">
+               </Location>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - 9dad25022e0c9459"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  uuid = "4E260A47-32AB-4341-B785-A700F0BDD23E - d7352e0412e6c8db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testExample() async throws -&gt; ()"
+                  moduleName = "WorkItOutTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD6C2777-1959-400B-B875-CEEC80339D18"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOutTests/WorkItOutTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "testExample()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
