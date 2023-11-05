@@ -4,15 +4,15 @@
 //
 //  Created by Angela Valentine Darmawan on 26/10/23.
 //
-
 import Foundation
 
 class TimerViewModel: ObservableObject {
     @Published var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @Published var timeRemaining: Double = 0
     @Published var isTimerPaused = false
-    @Published var timeToggle = false
+    @Published var timeToggle : Bool = false
     @Published var timeSet = 0
+    @Published var timesUp = false
     
     func currentTime() -> String {
         return timeString(time: timeRemaining)
@@ -33,6 +33,7 @@ class TimerViewModel: ObservableObject {
         }else{
             timer.upstream.connect().cancel()
             timeToggle.toggle()
+            timesUp = true
         }
     }
     

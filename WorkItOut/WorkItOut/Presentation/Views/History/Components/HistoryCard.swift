@@ -12,9 +12,10 @@ struct HistoryCard: View {
     var body: some View {
         HStack{
             VStack(alignment: .leading, spacing: 8){
-                Text("\(history.yogaDone.first?.name ?? "Unknown Yoga")")
+                // MARK: Menghapus first karena udh bukan array. supaya tidak error.
+                Text("\(history.yogaDone.name )")
                     .bold()
-                Text("\(history.yogaDone.first?.poses.count ?? -1) Exercise (\(history.duration) Min)")
+                Text("\(history.yogaDone.poses.count ) Exercise (\(history.duration) Min)")
                     .padding(.vertical, 2)
                     .padding(.horizontal, 5)
                     .background(.ultraThinMaterial)
@@ -34,6 +35,6 @@ struct HistoryCard: View {
     }
 }
 
-#Preview {
-    HistoryCard(history: History(id: UUID(), yogaDone: [], executionDate: Date.now, duration: 60, rating: 5))
-}
+//#Preview {
+//    HistoryCard(history: History(id: UUID(), yogaDone: [], executionDate: Date.now, duration: 60, rating: 5))
+//}

@@ -6,7 +6,7 @@
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="ofProfile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProfileNSObject" inverseName="histories" inverseEntity="ProfileNSObject"/>
-        <relationship name="yogaDone" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YogaNSObject" inverseName="ofHistory" inverseEntity="YogaNSObject"/>
+        <relationship name="yogaDone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogaNSObject" inverseName="ofHistory" inverseEntity="YogaNSObject"/>
     </entity>
     <entity name="PoseNSObject" representedClassName="PoseNSObject" syncable="YES" codeGenerationType="class">
         <attribute name="bodyPartTrained" attributeType="String"/>
