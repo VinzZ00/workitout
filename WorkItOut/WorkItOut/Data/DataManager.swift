@@ -25,6 +25,16 @@ class DataManager: ObservableObject {
         }
     }
     
+    public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async {
+        self.profile = profile
+        
+        for trimester in Trimester.allCases {
+            self.profile.plan.append(createYogaPlan(trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: []))
+        }
+        
+        self.handMadeYogaPlan = self.handMadeYogaPlanPlaceholder()
+    }
+    
     public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, exceptions: [Exception]) async {
         self.profile = Profile(name: name, currentPregnancyWeek: currentWeek, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, exceptions: exceptions)
         
@@ -34,17 +44,6 @@ class DataManager: ObservableObject {
         
         self.handMadeYogaPlan = self.handMadeYogaPlanPlaceholder()
     }
-    
-//    func getHandMadeYogaPlan(relieve: Relieve) -> [YogaPlan] {
-//        var yogaPlans: [YogaPlan] = []
-//        for yogaPlan in handMadeYogaPlan {
-//            if yogaPlan.yogas[0].poses[0].relieve.contains(relieve) {
-//                yogaPlans.append(yogaPlan)
-//            }
-//        }
-//        
-//        return yogaPlans
-//    }
     
     func handMadeYogaPlanPlaceholder() -> [Relieve : [YogaPlan]] {
         var handMadeYogaPlans: [Relieve : [YogaPlan]] = [:]

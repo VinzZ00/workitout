@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GeneratePlanView: View {
     @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
+    @EnvironmentObject var avm: AssessmentViewModel
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var dm: DataManager
@@ -22,6 +23,8 @@ struct GeneratePlanView: View {
                     VStack(alignment: .leading) {
                         HStack {
                             Button(action: {
+                                avm.resetTimer()
+                                avm.state = .chooseWeek
                                 self.presentationMode.wrappedValue.dismiss()
                             }, label: {
                                 Image(systemName: "xmark")

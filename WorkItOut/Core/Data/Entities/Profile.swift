@@ -8,7 +8,16 @@
 import Foundation
 import CoreData
 
-struct Profile : Entity {
+struct Profile : Entity, Equatable {
+    static func == (lhs: Profile, rhs: Profile) -> Bool {
+        return lhs.daysAvailable == rhs.daysAvailable &&
+        lhs.fitnessLevel == rhs.fitnessLevel &&
+        lhs.timeOfDay == rhs.timeOfDay &&
+        lhs.currentPregnancyWeek == rhs.currentPregnancyWeek &&
+        lhs.preferredDuration == rhs.preferredDuration &&
+        lhs.exceptions == rhs.exceptions
+    }
+    
     func intoNSObject(context: NSManagedObjectContext) -> NSManagedObject {
         var profilens = ProfileNSObject(context: context);
         

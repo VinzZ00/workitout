@@ -21,14 +21,12 @@ class PoseManager: ObservableObject {
     func addPosetoPoses(){
         for pose in firebasePoses {
             self.poses.append(Pose(id: UUID(), name: pose.yogaPose, altName: pose.altName, category: pose.category, difficulty: pose.difficulty, exception: pose.exceptions, recommendedTrimester: pose.recommendedTrimester, relieve: pose.relieves, status: pose.status))
-//            print(pose.bodyPartTrained)
         }
         
         self.objectWillChange.send()
     }
     
     func getFirebasePoses(){
-        print("Firebase function ran")
       firestore.getCollection(collectionName: FirebaseConstant.YogaPoseConstants.collectionName) { querySnapshot in
             querySnapshot.documents.forEach { doc in
                 let poseName = doc.data()[FirebaseConstant.YogaPoseConstants.name] as! String
@@ -52,22 +50,6 @@ class PoseManager: ObservableObject {
                         exceptions.append(value)
                     }
                 }
-//                print("Exception Request: ", exceptionRequests)
-//                print("Exception Array: ", exceptionsArray)
-//                print("Exceptions: ", exceptions, "\n")
-                
-//                let bodyPartRequests = doc.data()[FirebaseConstant.YogaPoseConstants.bodyPartTrained] as! String
-//                let bodyParts = bodyPartRequests.components(separatedBy: ", ")
-//                let bodyPartsEnum = bodyParts.map({BodyPart(rawValue: $0) ?? .arms})
-                
-                
-                
-                
-                
-//                let positionRequest = doc.data()[FirebaseConstant.YogaPoseConstants.position] as! String
-//                guard let position = Position(rawValue: positionRequest) else{
-//                    return
-//                }
                 
                 let recommendedTrimesterRequest = doc.data()[FirebaseConstant.YogaPoseConstants.recommendedTrimester] as! String
                 guard let trimester = Trimester(rawValue: recommendedTrimesterRequest) else {
@@ -88,20 +70,11 @@ class PoseManager: ObservableObject {
                     return
                 }
                 
-//                let spineMovementRequests = doc.data()[FirebaseConstant.YogaPoseConstants.spineMovement] as! String
-//                guard let spineMovement = SpineMovement(rawValue: spineMovementRequests) else{
-//                    return
-//                }
-                
                 let requestYogaPose = RequestYogaPose(yogaPose: poseName, altName: altName, category: category, difficulty: difficulty, exceptions: exceptions, recommendedTrimester: trimester, relieves: relieves, status: status)
                 
-//                let requestYogaPose = RequestYogaPose(name: poseName, altName: altName, difficulty: difficulty, position: position, recommendedTrimester: trimester, spineMovement: spineMovement, bodyPartTrained: bodyPartsEnum, exception: exceptions, relieve: relieves)
-                
-                print("Inside firebase")
                 self.firebasePoses.append(requestYogaPose)
                 self.objectWillChange.send()
             }
         }
-        print("Firebase function ended")
     }
 }
