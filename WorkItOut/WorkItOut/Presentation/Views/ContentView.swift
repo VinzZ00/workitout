@@ -12,11 +12,16 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var dm: DataManager
     @Environment(\.managedObjectContext) var moc
-    @State var hasNoProfile = true
+    @State private var hasNoProfile = false
+    @State private var isLoading = true
     var body: some View {
         ZStack{
-            if !hasNoProfile{
-                HomeView()
+            if isLoading {
+                EmptyView()
+            }else{
+                if !hasNoProfile{
+                    HomeView()
+                }
             }
         }
         .fullScreenCover(isPresented: $hasNoProfile) {
@@ -29,7 +34,8 @@ struct ContentView: View {
         })
         .onAppear {
             Task{
-                await dm.loadProfile(moc: moc)
+                hasNoProfile = await !dm.loadProfile(moc: moc)
+                isLoading = false
             }
         }
     }
