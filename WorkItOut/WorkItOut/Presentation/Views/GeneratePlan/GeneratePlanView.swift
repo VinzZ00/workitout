@@ -18,65 +18,28 @@ struct GeneratePlanView: View {
     @Binding var hasNoProfile : Bool
     
     var body: some View {
-        VStack(alignment: .leading) {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Button(action: {
-                            self.presentationMode.wrappedValue.dismiss()
-                        }, label: {
-                            Image(systemName: "xmark")
-                                .foregroundStyle(.white)
-                                .bold()
-                        })
-                        .padding(.bottom)
-                        Spacer()
-                    }
-                    Text("Workout Plan for Beginner")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .bold()
-                }
-                .padding(.top, 72)
-                .padding()
-                .background(
-                    Image(.assesmentResultHeader)
-                        .resizable()
-                        .frame(maxWidth: .infinity)
-                )
-                if let profile = dm.profile {
-                    DayPickerView(days: profile.daysAvailable, selection: profile.daysAvailable[0])
-                    if profile.plan.isEmpty {
-                        Text("No Plan yet")
-                    }
-                    else {
-                        VStack(alignment: .leading) {
-                            ForEach(Array(profile.plan[0].yogas.enumerated()), id: \.element) { index, yoga in
-                                VStack {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text("Day \(index + 1) - Upper Body")
-                                                .font(.title3)
-                                                .bold()
-                                            Text("\(yoga.day.getString()), \(profile.timeOfDay.getString())")
-                                                .foregroundStyle(Color.neutral3)
-                                                .font(.body)
-                                        }
-                                        Spacer()
-                                        Button(action: {
-                                            
-                                        }, label: {
-                                            Image(systemName: "pencil")
-                                        })
-                                    }
-                                    ForEach(Category.allCases, id: \.self) { category in
-                                        if vm.checkCategory(poses: yoga.poses, category: category) {
+        NavigationStack {
+            VStack(alignment: .leading) {
+                Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
+                    .padding(.horizontal)
+                DayPickerView(days: dm.profile!.daysAvailable, selection: dm.profile!.daysAvailable[0])
+                    .environmentObject(vm)
+                ScrollViewReader(content: { (proxy: ScrollViewProxy) in
+                    ScrollView {
+                        VStack {
+                            if dm.profile!.plan.isEmpty {
+                                Text("No Plan yet")
+                            }
+                            else {
+                                VStack(alignment: .leading) {
+                                    ForEach(Array(dm.profile!.yogaPlan.yogas.enumerated()), id: \.element) { index, yoga in
+                                        VStack {
                                             HStack {
                                                 VStack(alignment: .leading) {
                                                     Text("Day \(index+1) - Upper Body")
                                                         .font(.title3)
                                                         .bold()
-                                                    Text("\(yoga.day.getString()), \(dm.profile.timeOfDay.getString())")
+                                                    Text("\(yoga.day.getString()), \(dm.profile!.timeOfDay.getString())")
                                                         .foregroundStyle(Color.neutral3)
                                                         .font(.body)
                                                 }
@@ -87,12 +50,19 @@ struct GeneratePlanView: View {
                                                 }, label: {
                                                     Image(systemName: "pencil")
                                                 })
-                                            }                                    
-                                        }
-
-                                        
+                                            }
+                                            ForEach(Category.allCases, id: \.self) { category in
+                                                if vm.checkCategory(poses: yoga.poses, category: category) {
+                                                    HStack {
+                                                        Text(category.rawValue)
+                                                            .font(.subheadline)
+                                                            .foregroundStyle(Color.neutral3)
+                                                            .bold()
+                                                        Rectangle()
+                                                            .frame(height: 0.5)
+                                                            .foregroundStyle(Color.neutral6)
+                                                    }
                                                 }
-                                                
                                                 ForEach(yoga.poses, id: \.self) { pose in
                                                     if pose.category == category {
                                                         YogaCardView(name: pose.name)
@@ -109,58 +79,57 @@ struct GeneratePlanView: View {
                             }
                         }
                     }
-                    VStack {
-                        ButtonComponent(title: "Finish") {
-                            Task{
-                                await vm.addProfileToCoreData(profile: profile, moc: moc)
-                            }
-                            finish.toggle()
-                            hasNoProfile.toggle()
-                        }
                     .onChange(of: vm.scrollTarget) { target in
                         print("Changed")
                         if let target = target {
                             vm.scrollTarget = nil
-
+                            
                             withAnimation {
                                 print("called")
                                 proxy.scrollTo(target, anchor: .center)
                             }
                         }
                     }
-
+                    
                 })
+                VStack {
+                    ButtonComponent(title: "Finish") {
+                        Task{
+                            if let prof = dm.profile {
+                                await vm.addProfileToCoreData(profile: prof, moc: moc) // TODO: buang seru
+                            }
+                        }
+                        finish.toggle()
+                        hasNoProfile.toggle()
                     }
                     .padding(.horizontal)
                 }
-                
-                
-            }
-            .navigationTitle("Workout Plan for Beginner")
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button(action: {
-                        avm.resetTimer()
-                        avm.state = .chooseWeek
-                        self.presentationMode.wrappedValue.dismiss()
-                    }, label: {
-                        Image(systemName: "xmark")
-                            .font(.body)
-                            .padding(8)
-                            .background(Color.background.opacity(0.5))
-                            .clipShape(.circle)
-                    })
+                .navigationTitle("Workout Plan for Beginner")
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: {
+                            avm.resetTimer()
+                            avm.state = .chooseWeek
+                            self.presentationMode.wrappedValue.dismiss()
+                        }, label: {
+                            Image(systemName: "xmark")
+                                .font(.body)
+                                .padding(8)
+                                .background(Color.background.opacity(0.5))
+                                .clipShape(.circle)
+                        })
+                    }
                 }
+                .navigationDestination(isPresented: $finish, destination: {
+                    if let prof = dm.profile {
+                        HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
+                    }
+                })
+                .navigationBarBackButtonHidden()
             }
-            .navigationDestination(isPresented: $finish, destination: {
-                HomeView(vm: HomeViewModel(profile: dm.profile))
-            })
-            .navigationBarBackButtonHidden()
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
-        .navigationBarBackButtonHidden()
     }
-    
 }
 
 //#Preview {

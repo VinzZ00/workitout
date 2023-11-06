@@ -28,7 +28,7 @@ struct Pose: Identifiable, Hashable, Entity {
     var spineMovement : SpineMovement = .balance
     
     var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
-
+    
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
     }

@@ -90,7 +90,9 @@ class HomeViewModel: ObservableObject {
     var yoga: Yoga {
         return yogaPlan.yogas.first(where: {$0.day == day}) ?? Yoga()
     }
-  
+    
+    var currentYoga: Yoga = Yoga()
+    
     func previousWeek() {
         if self.week > 0 {
             self.week -= 1
