@@ -37,44 +37,25 @@ struct GeneratePlanView: View {
                             }
                             else {
                                 VStack(alignment: .leading) {
-                                    ForEach(Array(dm.profile.yogaPlan.yogas.enumerated()), id: \.element) { index, yoga in
-                                        VStack {
-                                            HStack {
-                                                VStack(alignment: .leading) {
-                                                    Text("Day \(index+1) - Upper Body")
-                                                        .font(.title3)
-                                                        .bold()
-                                                    Text("\(yoga.day.getString()), \(dm.profile.timeOfDay.getString())")
-                                                        .foregroundStyle(Color.neutral3)
-                                                        .font(.body)
-                                                }
+                                    ForEach(dm.profile.yogaPlan.yogas) { yoga in
+                                        VStack(alignment: .leading) {
+                                            Text("Day \(yoga.day.getString()) - Upper Body")
+                                                .font(.title3)
+                                                .bold()
                                                 .id(yoga.day.getInt())
-                                                Spacer()
-                                                Button(action: {
-                                                    
-                                                }, label: {
-                                                    Image(systemName: "pencil")
-                                                })
-                                            }
-                                            ForEach(Category.allCases, id: \.self) { category in
-                                                if vm.checkCategory(poses: yoga.poses, category: category) {
-                                                    HStack {
-                                                        Text(category.rawValue)
-                                                            .font(.subheadline)
-                                                            .foregroundStyle(Color.neutral3)
-                                                            .bold()
-                                                        Rectangle()
-                                                            .frame(height: 0.5)
-                                                            .foregroundStyle(Color.neutral6)
-                                                    }
-                                                    
-                                        
+                                            ForEach(vm.existingCategories(poses: yoga.poses), id: \.self) { category in
+                                                HStack {
+                                                    Text(category.rawValue)
+                                                        .font(.subheadline)
+                                                        .foregroundStyle(Color.neutral3)
+                                                        .bold()
+                                                    Rectangle()
+                                                        .frame(height: 0.5)
+                                                        .foregroundStyle(Color.neutral6)
                                                 }
                                                 
-                                                ForEach(yoga.poses, id: \.self) { pose in
-                                                    if pose.category == category {
-                                                        YogaCardView(name: pose.name)
-                                                    }
+                                                ForEach(vm.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
+                                                    YogaCardView(name: pose.name)
                                                 }
                                             }
                                         }
@@ -97,9 +78,6 @@ struct GeneratePlanView: View {
                             }
                             else {
                                 self.showHeader = true
-                            }
-                            if $0 < 1000 {
-                                vm.scrollTarget = dm.profile.daysAvailable[0].getInt()
                             }
                         }
                     }
