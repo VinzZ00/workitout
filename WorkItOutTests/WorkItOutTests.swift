@@ -34,7 +34,7 @@ final class WorkitOutTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testExample() async throws {
+    func testAddAndFetchCoreData() async throws {
         if let moc = self.moc {
             
             
@@ -53,7 +53,9 @@ final class WorkitOutTests: XCTestCase {
                         ], day: .monday, estimationDuration: 12, image: "Image 1")
                     ], trimester: .all)
                 ],
-                histories: [])
+                histories: [],
+                exceptions: []
+            );
 
             
             if let testRecord = testRecord {
@@ -64,6 +66,20 @@ final class WorkitOutTests: XCTestCase {
             
             XCTAssertEqual(fetchRes?.first?.name, testRecord!.name, "Done the test")
         }
+    }
+    
+    func testUpdateAddingException() async throws {
+        var fetchRes = await fetchUsecase?.call(context: moc!)
+        
+        var newProfile = fetchRes![fetchRes!.count - 1]
+        newProfile.exceptions.append(Exception.vertigo)
+        
+        await UpdateProfileUseCase().call(profile: newProfile, context: moc!)
+        
+        var afterUpdate = await fetchUsecase?.call(context: moc!)
+        
+        XCTAssertEqual(afterUpdate!.last!.exceptions.map{$0.rawValue}.joined(separator: ", "), newProfile.exceptions.map{$0.rawValue}.joined(separator: ", "), "Done the update test")
+        
     }
 
 }
