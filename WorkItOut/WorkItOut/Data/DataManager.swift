@@ -24,7 +24,7 @@ class DataManager: ObservableObject {
         
         let fetchRes = await fetchProfile.call(context: moc)
         self.profile = fetchRes.first
-        if let profile = self.profile {
+        if let _ = self.profile {
             savedToCoreData = true
         }
     }
@@ -33,7 +33,7 @@ class DataManager: ObservableObject {
         self.profile = profile
         
         for trimester in Trimester.allCases {
-            self.profile.plan.append(createYogaPlan(trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: []))
+            self.profile!.plan.append(createYogaPlan(trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: []))
         }
         
         self.handMadeYogaPlan = self.handMadeYogaPlanPlaceholder()
@@ -44,7 +44,7 @@ class DataManager: ObservableObject {
         self.profile = Profile(name: name, currentPregnancyWeek: currentWeek, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, exceptions: exceptions)
         
         for trimester in Trimester.allCases {
-            profile.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration, exceptions: exceptions, relieves: []))
+            profile!.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration, exceptions: exceptions, relieves: []))
         }
         
         self.handMadeYogaPlan = self.handMadeYogaPlanPlaceholder()
@@ -57,7 +57,7 @@ class DataManager: ObservableObject {
             var yogaPlans: [YogaPlan] = []
             for trimester in Trimester.allCases {
                 var name = relieve.getString() + " " + trimester.getString()
-                yogaPlans.append(createYogaPlan(name: name,trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: [relieve]))
+                yogaPlans.append(createYogaPlan(name: name,trimester: trimester, days: profile!.daysAvailable, duration: profile!.preferredDuration, exceptions: profile!.exceptions, relieves: [relieve]))
             }
             handMadeYogaPlans.updateValue(yogaPlans, forKey: relieve)
         }
@@ -88,20 +88,6 @@ class DataManager: ObservableObject {
         if exceptions.isEmpty {
             return poses
         }
-            self.profile?.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration, exceptions: exceptions))
-        }
-        self.objectWillChange.send()
-    }
-    
-    public func createPose() -> Pose {
-        
-        return pm.poses.randomElement() ?? Pose(id: UUID())
-    }
-    
-    public func filterPoses(exceptions: [Exception]) -> [Pose] {
-        let poses = pm.poses
-        var filteredPoses: [Pose] = []
-        
         for pose in poses {
             if !pose.exception.contains(exceptions) {
                 filteredPoses.append(pose)

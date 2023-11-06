@@ -93,12 +93,6 @@ class HomeViewModel: ObservableObject {
     
     var currentYoga: Yoga = Yoga()
     
-    init(profile: Profile = Profile()) {
-        self.week = profile.currentPregnancyWeek
-        self.days = profile.daysAvailable
-        self.yogaPlans = profile.plan
-    }
-    
     func previousWeek() {
         if self.week > 0 {
             self.week -= 1

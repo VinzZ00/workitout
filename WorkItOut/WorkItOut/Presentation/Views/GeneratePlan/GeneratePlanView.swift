@@ -22,25 +22,24 @@ struct GeneratePlanView: View {
             VStack(alignment: .leading) {
                 Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
                     .padding(.horizontal)
-                DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
+                DayPickerView(days: dm.profile!.daysAvailable, selection: dm.profile!.daysAvailable[0])
                     .environmentObject(vm)
                 ScrollViewReader(content: { (proxy: ScrollViewProxy) in
                     ScrollView {
                         VStack {
-                            
-                            if dm.profile.plan.isEmpty {
+                            if dm.profile!.plan.isEmpty {
                                 Text("No Plan yet")
                             }
                             else {
                                 VStack(alignment: .leading) {
-                                    ForEach(Array(dm.profile.yogaPlan.yogas.enumerated()), id: \.element) { index, yoga in
+                                    ForEach(Array(dm.profile!.yogaPlan.yogas.enumerated()), id: \.element) { index, yoga in
                                         VStack {
                                             HStack {
                                                 VStack(alignment: .leading) {
                                                     Text("Day \(index+1) - Upper Body")
                                                         .font(.title3)
                                                         .bold()
-                                                    Text("\(yoga.day.getString()), \(dm.profile.timeOfDay.getString())")
+                                                    Text("\(yoga.day.getString()), \(dm.profile!.timeOfDay.getString())")
                                                         .foregroundStyle(Color.neutral3)
                                                         .font(.body)
                                                 }
@@ -63,10 +62,7 @@ struct GeneratePlanView: View {
                                                             .frame(height: 0.5)
                                                             .foregroundStyle(Color.neutral6)
                                                     }
-                                                    
-                                        
                                                 }
-                                                
                                                 ForEach(yoga.poses, id: \.self) { pose in
                                                     if pose.category == category {
                                                         YogaCardView(name: pose.name)
@@ -87,53 +83,53 @@ struct GeneratePlanView: View {
                         print("Changed")
                         if let target = target {
                             vm.scrollTarget = nil
-
+                            
                             withAnimation {
                                 print("called")
                                 proxy.scrollTo(target, anchor: .center)
                             }
                         }
                     }
-
+                    
                 })
                 VStack {
                     ButtonComponent(title: "Finish") {
                         Task{
-                            await vm.addProfileToCoreData(profile: profile, moc: moc)
+                            if let prof = dm.profile {
+                                await vm.addProfileToCoreData(profile: prof, moc: moc) // TODO: buang seru
+                            }
                         }
                         finish.toggle()
                         hasNoProfile.toggle()
                     }
                     .padding(.horizontal)
                 }
-            .navigationTitle("Workout Plan for Beginner")
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button(action: {
-                        avm.resetTimer()
-                        avm.state = .chooseWeek
-                        self.presentationMode.wrappedValue.dismiss()
-                    }, label: {
-                        Image(systemName: "xmark")
-                            .font(.body)
-                            .padding(8)
-                            .background(Color.background.opacity(0.5))
-                            .clipShape(.circle)
-                    })
+                .navigationTitle("Workout Plan for Beginner")
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: {
+                            avm.resetTimer()
+                            avm.state = .chooseWeek
+                            self.presentationMode.wrappedValue.dismiss()
+                        }, label: {
+                            Image(systemName: "xmark")
+                                .font(.body)
+                                .padding(8)
+                                .background(Color.background.opacity(0.5))
+                                .clipShape(.circle)
+                        })
+                    }
                 }
+                .navigationDestination(isPresented: $finish, destination: {
+                    if let prof = dm.profile {
+                        HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
+                    }
+                })
+                .navigationBarBackButtonHidden()
             }
-            .navigationDestination(isPresented: $finish, destination: {
-                HomeView(vm: HomeViewModel(profile: dm.profile))
-            })
-            .navigationBarBackButtonHidden()
-                HomeView(vm: HomeViewModel(profile: dm.profile))
-            })
-            .navigationBarBackButtonHidden()
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
-        .navigationBarBackButtonHidden()
     }
-    
 }
 
 //#Preview {
