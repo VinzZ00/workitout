@@ -44,25 +44,7 @@ struct Yoga: Identifiable, Hashable, Entity {
         yoga.uuid = self.id
         yoga.name = self.name
         yoga.day = self.day.rawValue
-        yoga.poses?.addingObjects(from: poses.map{ p in
-            let nspose = PoseNSObject(context: context)
-            nspose.uuid = p.id
-            nspose.name = p.name
-            nspose.bodyPartTrained = p.bodyPartTrained.map{$0.rawValue}.joined(separator: ", ")
-            nspose.image = p.image
-            nspose.video = p.video
-            nspose.poseDescription = p.description
-            nspose.seconds = Int32(p.seconds)
-            nspose.state = p.state.rawValue
-            nspose.position = p.position.rawValue
-            nspose.spineMovement = p.spineMovement.rawValue
-            nspose.recommendedTrimester = p.recommendedTrimester.rawValue
-            nspose.relieve = p.relieve.map{$0.rawValue}.joined(separator: ", ")
-            nspose.exception  = p.exception.map{$0.rawValue}.joined(separator: ", ")
-            nspose.difficulty = p.difficulty.rawValue;
-            nspose.ofYoga = yoga
-            return nspose;
-        })
+        yoga.poses?.addingObjects(from: poses.map{ $0.intoNSObject(context: context, ofYoga: yoga) })
         yoga.estimationDuration = Int32(self.estimationDuration)
         yoga.yogaState = self.yogaState.rawValue
         yoga.image = self.image
@@ -75,25 +57,7 @@ struct Yoga: Identifiable, Hashable, Entity {
         yoga.uuid = self.id
         yoga.name = self.name
         yoga.day = self.day.rawValue
-        yoga.poses?.addingObjects(from: poses.map{ p in
-            let nspose = PoseNSObject(context: context)
-            nspose.uuid = p.id
-            nspose.name = p.name
-            nspose.bodyPartTrained = p.bodyPartTrained.map{$0.rawValue}.joined(separator: ", ")
-            nspose.image = p.image
-            nspose.video = p.video
-            nspose.poseDescription = p.description
-            nspose.seconds = Int32(p.seconds)
-            nspose.state = p.state.rawValue
-            nspose.position = p.position.rawValue
-            nspose.spineMovement = p.spineMovement.rawValue
-            nspose.recommendedTrimester = p.recommendedTrimester.rawValue
-            nspose.relieve = p.relieve.map{$0.rawValue}.joined(separator: ", ")
-            nspose.exception  = p.exception.map{$0.rawValue}.joined(separator: ", ")
-            nspose.difficulty = p.difficulty.rawValue;
-            nspose.ofYoga = yoga
-            return nspose;
-        })
+        yoga.poses?.addingObjects(from: poses.map{$0.intoNSObject(context: context, ofYoga: yoga)})
         yoga.estimationDuration = Int32(self.estimationDuration)
         yoga.yogaState = self.yogaState.rawValue
         yoga.image = self.image
