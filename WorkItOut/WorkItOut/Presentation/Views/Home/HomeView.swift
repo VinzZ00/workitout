@@ -12,7 +12,6 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
     
-    
     var body: some View {
         NavigationStack{
             VStack {
