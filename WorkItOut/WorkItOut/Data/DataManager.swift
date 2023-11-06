@@ -11,8 +11,11 @@ import CoreData
 @MainActor
 class DataManager: ObservableObject {
     @Published var pm: PoseManager = PoseManager()
-    @Published var profile: Profile = Profile()
+    @Published var profile: Profile?
     var addProfile: AddProfileUseCase = AddProfileUseCase()
+    var fetchProfile : FetchProfileUseCase = FetchProfileUseCase()
+    @Published var hasNoProfile : Bool = false
+    @Published var savedToCoreData : Bool = false
     
     var handMadeYogaPlan: [Relieve : [YogaPlan]] = [:]
     
@@ -20,8 +23,9 @@ class DataManager: ObservableObject {
         let fetchProfile = FetchProfileUseCase()
         
         let fetchRes = await fetchProfile.call(context: moc)
-        DispatchQueue.main.async {
-            self.profile = fetchRes.first!
+        self.profile = fetchRes.first
+        if let profile = self.profile {
+            savedToCoreData = true
         }
     }
     
@@ -34,16 +38,6 @@ class DataManager: ObservableObject {
         
         self.handMadeYogaPlan = self.handMadeYogaPlanPlaceholder()
         print("Set up profile work")
-    }
-    
-    public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, exceptions: [Exception]) async {
-        self.profile = Profile(name: name, currentPregnancyWeek: currentWeek, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, exceptions: exceptions)
-        
-        for trimester in Trimester.allCases {
-            profile.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration, exceptions: exceptions, relieves: []))
-        }
-        
-        self.handMadeYogaPlan = self.handMadeYogaPlanPlaceholder()
     }
     
     func handMadeYogaPlanPlaceholder() -> [Relieve : [YogaPlan]] {

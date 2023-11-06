@@ -11,13 +11,10 @@ struct HomeButtonView: View {
     var icon: String = "person"
     
     var body: some View {
-        Button(action: {}, label: {
-            Image(systemName: icon)
-                .padding(12)
-                .background(Color.background.opacity(0.5))
-                .clipShape(.circle)
-        })
-        .buttonStyle(.plain)
+        Image(systemName: icon)
+            .padding(12)
+            .background(Color.background.opacity(0.5))
+            .clipShape(.circle)
     }
 }
 

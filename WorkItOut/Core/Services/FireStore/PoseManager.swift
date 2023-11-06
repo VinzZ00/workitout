@@ -73,7 +73,7 @@ class PoseManager: ObservableObject {
                 }
                 
                 let requestYogaPose = RequestYogaPose(yogaPose: poseName, altName: altName, category: category, difficulty: difficulty, exceptions: exceptions, recommendedTrimester: trimester, relieves: relieves, status: status)
-                
+         
                 self.firebasePoses.append(requestYogaPose)
                 self.objectWillChange.send()
             }

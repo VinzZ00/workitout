@@ -28,13 +28,13 @@ struct Pose: Identifiable, Hashable, Entity {
     var spineMovement : SpineMovement = .balance
     
     var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
     }
-    
+  
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
-        var pose = PoseNSObject(context: context)
+        let pose = PoseNSObject(context: context)
         
         pose.uuid = self.id
         pose.name = self.name
