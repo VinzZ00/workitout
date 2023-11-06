@@ -28,7 +28,11 @@ struct ContentView: View {
                     hasNoProfile = false
                 }
             }
-            
+        })
+        .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
+            if valueIsTrue {
+                hasNoProfile = false
+            }
         })
         .onAppear {
             Task{

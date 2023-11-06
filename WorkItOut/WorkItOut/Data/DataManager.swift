@@ -25,9 +25,7 @@ class DataManager: ObservableObject {
         let fetchProfile = FetchProfileUseCase()
         
         let fetchRes = await fetchProfile.call(context: moc)
-        DispatchQueue.main.async {
-            self.profile = fetchRes.first
-        }
+        self.profile = fetchRes.first
         if let profile = self.profile {
             savedToCoreData = true
         }

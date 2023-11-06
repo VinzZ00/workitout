@@ -11,7 +11,7 @@ struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
-    @State var fetch = FetchProfileUseCase()
+    
     
     var body: some View {
         NavigationStack{
@@ -78,8 +78,7 @@ struct HomeView: View {
             .navigationBarBackButtonHidden()
             .onAppear{
                 Task{
-                    let profile = await fetch.call(context: moc)
-                    print(profile)
+                    await vm.loadProfile(moc: moc)
                 }
             }
         }
