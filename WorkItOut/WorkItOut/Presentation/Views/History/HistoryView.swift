@@ -24,6 +24,8 @@ struct HistoryView: View {
                     }
                     else{
                         Text("No History to show")
+                            .font(.title2.bold())
+                            .padding(.top, 50)
                     }
                 }
                 .padding(.vertical, 20)
@@ -53,6 +55,7 @@ struct HistoryView: View {
             }
         }
         .navigationTitle("History")
+        .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()
     }
 }

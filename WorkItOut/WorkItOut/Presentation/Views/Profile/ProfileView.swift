@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var moc
     @StateObject var viewModel : ProfileViewModel
     var body: some View {
         VStack{
@@ -67,7 +68,10 @@ struct ProfileView: View {
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        Task{
+                            await viewModel.saveToCoreData(moc: moc)
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
                     } label: {
                         ZStack{
                             Circle()
@@ -83,6 +87,7 @@ struct ProfileView: View {
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
             .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.large)
             .navigationBarBackButtonHidden()
         }
     }

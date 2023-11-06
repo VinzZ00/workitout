@@ -24,6 +24,7 @@ struct UpdateProfileUseCase {
                 profilens.setValue(profile.daysAvailable.map{$0.rawValue}.joined(separator: ", "), forKey: "daysAvailable")
                 profilens.setValue(profile.fitnessLevel.rawValue, forKey: "fitnessLevel")
                 profilens.setValue(profile.preferredDuration.rawValue, forKey: "preferredDuration")
+                profilens.setValue(profile.exceptions.map{$0.rawValue}.joined(separator: ", "), forKey: "exceptions")
                 profilens.setValue(profile.timeOfDay.rawValue, forKey: "timeOfDay")
                 
                 try await repository.coreData.updateToCoreData(entity: profilens, context: context)
