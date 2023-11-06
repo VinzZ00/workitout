@@ -29,6 +29,7 @@
         <attribute name="currentPregnancyWeek" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="currentRelieveNeeded" optional="YES" attributeType="String"/>
         <attribute name="daysAvailable" optional="YES" attributeType="String"/>
+        <attribute name="exceptions" optional="YES" attributeType="String"/>
         <attribute name="fitnessLevel" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="preferredDuration" optional="YES" attributeType="String"/>

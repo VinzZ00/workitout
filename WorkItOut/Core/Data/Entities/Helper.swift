@@ -82,7 +82,7 @@ extension HistoryNSObject {
 
 extension ProfileNSObject {
     func intoObject() -> Profile {
-        let profile = Profile(name: self.name!,
+        var profile = Profile(name: self.name!,
                               currentPregnancyWeek: Int(self.currentPregnancyWeek),
                               currentRelieveNeeded: self.currentRelieveNeeded!.split(separator: ", ").map{Relieve(rawValue: String($0))!},
                               fitnessLevel: Difficulty(rawValue: self.fitnessLevel!)!,
@@ -90,8 +90,19 @@ extension ProfileNSObject {
                               timeOfDay: TimeOfDay(rawValue: self.timeOfDay!)!,
                               preferredDuration: Duration(rawValue: self.preferredDuration!)!,
                               plan: (self.plan!.allObjects as? [YogaPlanNSObject] ?? []).map{$0.intoObject()},
-                              histories: (self.histories!.allObjects as? [HistoryNSObject] ?? []).map{$0.intoObject()}
+                              histories: (self.histories!.allObjects as? [HistoryNSObject] ?? []).map{$0.intoObject()},
+                              exceptions: []
         ) // Profile
+        
+        if let exc = self.exceptions {
+            exc.split(separator: ", ").forEach { rawVal in
+                let e = Exception(rawValue: String(rawVal))
+                if let ex = e {
+                    profile.exceptions.append(ex)
+                }
+            }
+        }
+        
         return profile
     }
 }
