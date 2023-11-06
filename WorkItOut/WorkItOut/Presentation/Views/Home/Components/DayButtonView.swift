@@ -11,25 +11,32 @@ struct DayButtonView: View {
     @Binding var selectedDay: Day
     var workoutDay: [Day]
     var day: Day
-    var currentDate : Date
+    var displayDate : Date
     var calendar : Calendar!
-    init(selectedDay: Binding<Day>, workoutDay: [Day], day: Day, startOfPregWeek : Int) {
+    init(selectedDay: Binding<Day>, workoutDay: [Day], day: Day, weekXpreg : Int, checkedWeek : Int) {
         self.calendar = Calendar.current
         self._selectedDay = selectedDay
         self.workoutDay = workoutDay
         self.day = day
         
+        var DisplayWeek = checkedWeek - weekXpreg;
+        
         // MARK: TO GET THE CURRENT WEEK OF THE YEAR
         let currentDate = Date()
-        let pregDate = self.calendar.date(byAdding: .weekOfYear, value: -startOfPregWeek, to: currentDate)
+        let pregDate = self.calendar.date(byAdding: .weekOfYear, value: -weekXpreg, to: currentDate)
         let weekOfPreg = self.calendar.dateComponents([.weekOfYear], from: pregDate!)
-        let weekOfYear = startOfPregWeek + weekOfPreg.weekOfYear!
+        let woy = weekXpreg + weekOfPreg.weekOfYear! + DisplayWeek
         
         // MARK: TO GET CURRENT YEAR
         let year = self.calendar.dateComponents([.year], from: currentDate).year!
         
         // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
-        self.currentDate = day.dateForWeekday(week: weekOfYear, year: year);
+        self.displayDate = day.dateForWeekday(week: woy, year: year);
+        
+    
+        
+        
+        
     }
     
     var body: some View {
@@ -40,7 +47,7 @@ struct DayButtonView: View {
                 Text(day.getShortenedDay())
                     .foregroundStyle(Color.neutral3.opacity(0.75))
                 VStack {
-                    Text("\(self.calendar.dateComponents([.day], from: currentDate).day!)")
+                    Text("\(self.calendar.dateComponents([.day], from: displayDate).day!)")
                         .foregroundStyle(day == selectedDay ? Color.primary : .black)
                     Circle()
                         .foregroundStyle(Color.primary)
