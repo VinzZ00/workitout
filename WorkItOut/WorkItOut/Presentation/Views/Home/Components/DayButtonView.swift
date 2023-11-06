@@ -9,8 +9,28 @@ import SwiftUI
 
 struct DayButtonView: View {
     @Binding var selectedDay: Day
-    var days: [Day] = [.monday, .tuesday, .thursday]
-    var day: Day = .monday
+    var workoutDay: [Day]
+    var day: Day
+    var currentDate : Date
+    var calendar : Calendar!
+    init(selectedDay: Binding<Day>, workoutDay: [Day], day: Day, startOfPregWeek : Int) {
+        self.calendar = Calendar.current
+        self._selectedDay = selectedDay
+        self.workoutDay = workoutDay
+        self.day = day
+        
+        // MARK: TO GET THE CURRENT WEEK OF THE YEAR
+        let currentDate = Date()
+        let pregDate = self.calendar.date(byAdding: .weekOfYear, value: -startOfPregWeek, to: currentDate)
+        let weekOfPreg = self.calendar.dateComponents([.weekOfYear], from: pregDate!)
+        let weekOfYear = startOfPregWeek + weekOfPreg.weekOfYear!
+        
+        // MARK: TO GET CURRENT YEAR
+        let year = self.calendar.dateComponents([.year], from: currentDate).year!
+        
+        // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
+        self.currentDate = day.dateForWeekday(week: weekOfYear, year: year);
+    }
     
     var body: some View {
         Button(action: {
@@ -20,12 +40,12 @@ struct DayButtonView: View {
                 Text(day.getShortenedDay())
                     .foregroundStyle(Color.neutral3.opacity(0.75))
                 VStack {
-                    Text("\(day.getWeekdayInInt())")
+                    Text("\(self.calendar.dateComponents([.day], from: currentDate).day!)")
                         .foregroundStyle(day == selectedDay ? Color.primary : .black)
                     Circle()
                         .foregroundStyle(Color.primary)
                         .frame(width: 4)
-                        .opacity(days.contains(where: {$0 == day}) ? 1 : 0)
+                        .opacity(workoutDay.contains(where: {$0 == day}) ? 1 : 0)
                 }
                 .padding(.vertical, 8)
                 .padding(.horizontal)

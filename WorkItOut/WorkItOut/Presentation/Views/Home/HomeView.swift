@@ -36,7 +36,7 @@ struct HomeView: View {
                     
                     HStack {
                         ForEach(Day.allCases, id: \.self) { day in
-                            DayButtonView(selectedDay: $vm.day, days: vm.days, day: day)
+                            DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, startOfPregWeek: vm.week)
                         }
                     }
                 }
