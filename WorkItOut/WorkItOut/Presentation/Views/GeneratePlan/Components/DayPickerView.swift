@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DayPickerView: View {
+    @EnvironmentObject var vm: GeneratePlanViewModel
     var days: [Day] = [.monday, .wednesday, .friday]
     @State var selection: Day = .monday
     

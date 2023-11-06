@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct DayPickView: View {
+    @EnvironmentObject var vm: GeneratePlanViewModel
     @Binding var selected: Day
     var day: Day = .monday
     
     var body: some View {
         VStack {
             Button(action: {
+                print(day)
+                vm.scrollTarget = day.getInt()
                 selected = day
             }, label: {
                 VStack {

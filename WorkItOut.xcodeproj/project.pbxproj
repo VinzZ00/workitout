@@ -24,6 +24,8 @@
 		6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7752AEF558700C84D2A /* Profile.swift */; };
 		6C3FD7782AEF560A00C84D2A /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7772AEF560A00C84D2A /* History.swift */; };
 		6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */; };
+		6C6842D52AF89A840015E8CD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6842D42AF89A840015E8CD /* FirebaseFirestore */; };
+		6C6842D72AF89A840015E8CD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6842D62AF89A840015E8CD /* FirebaseFirestoreSwift */; };
 		6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */; };
 		6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */; };
 		6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */; };
@@ -47,18 +49,13 @@
 		6CB5F8142AF618D70019539C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8132AF618D70019539C /* Status.swift */; };
 		6CB5F8162AF61A210019539C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8152AF61A210019539C /* Category.swift */; };
 		6CB5F8182AF64F740019539C /* GeneratePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */; };
-		6CB5F81A2AF757550019539C /* HandmadeYogaPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8192AF757550019539C /* HandmadeYogaPlans.swift */; };
-		6CB5F81C2AF766BD0019539C /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F81B2AF766BD0019539C /* PlanManager.swift */; };
-		6CB5F81E2AF76C4E0019539C /* FirebasePoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F81D2AF76C4E0019539C /* FirebasePoseManager.swift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
 		6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */; };
 		6CEFB6812AF4C5330020D00F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6802AF4C5330020D00F /* Color.swift */; };
 		AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseManager.swift */; };
-		AC5A9A502AE3AC5E003B0C1F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A4F2AE3AC5E003B0C1F /* FirebaseFirestore */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
-		AC5A9A5B2AE3E614003B0C1F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AC5A9A5A2AE3E614003B0C1F /* FirebaseFirestoreSwift */; };
 		AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A622AE41138003B0C1F /* Yoga.swift */; };
 		AC5A9A672AE41138003B0C1F /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A632AE41138003B0C1F /* Pose.swift */; };
 		AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */; };
@@ -172,9 +169,6 @@
 		6CB5F8132AF618D70019539C /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		6CB5F8152AF61A210019539C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanViewModel.swift; sourceTree = "<group>"; };
-		6CB5F8192AF757550019539C /* HandmadeYogaPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandmadeYogaPlans.swift; sourceTree = "<group>"; };
-		6CB5F81B2AF766BD0019539C /* PlanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanManager.swift; sourceTree = "<group>"; };
-		6CB5F81D2AF76C4E0019539C /* FirebasePoseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePoseManager.swift; sourceTree = "<group>"; };
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67A2AF383F80020D00F /* DayPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6CEFB67C2AF384C80020D00F /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
@@ -255,8 +249,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC5A9A502AE3AC5E003B0C1F /* FirebaseFirestore in Frameworks */,
-				AC5A9A5B2AE3E614003B0C1F /* FirebaseFirestoreSwift in Frameworks */,
+				6C6842D52AF89A840015E8CD /* FirebaseFirestore in Frameworks */,
+				6C6842D72AF89A840015E8CD /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				6C8D5D152AE6619700A2986D /* MockData.swift */,
-				6CB5F8192AF757550019539C /* HandmadeYogaPlans.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -459,8 +452,6 @@
 				ACBFBD9B2AE676BF00109D94 /* Repository */,
 				ACB8642C2AE65282005DF0D1 /* Datasource */,
 				AC5A9A582AE3C09B003B0C1F /* UseCases */,
-				6CB5F81B2AF766BD0019539C /* PlanManager.swift */,
-				6CB5F81D2AF76C4E0019539C /* FirebasePoseManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -880,8 +871,8 @@
 			);
 			name = WorkItOut;
 			packageProductDependencies = (
-				AC5A9A4F2AE3AC5E003B0C1F /* FirebaseFirestore */,
-				AC5A9A5A2AE3E614003B0C1F /* FirebaseFirestoreSwift */,
+				6C6842D42AF89A840015E8CD /* FirebaseFirestore */,
+				6C6842D62AF89A840015E8CD /* FirebaseFirestoreSwift */,
 			);
 			productName = WorkItOut;
 			productReference = D862DB632AE28E5A0014F2FC /* WorkItOut.app */;
@@ -969,7 +960,6 @@
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
-				6CB5F81A2AF757550019539C /* HandmadeYogaPlans.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
@@ -1025,13 +1015,11 @@
 				AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */,
 				D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */,
 				D8BC2BFA2AE81EA200E61487 /* Months.swift in Sources */,
-				6CB5F81E2AF76C4E0019539C /* FirebasePoseManager.swift in Sources */,
 				AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */,
 				D8FBED562AE918200062CC00 /* CompleteView.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				D8BC2BEE2AE80F1800E61487 /* AssessmentViewModel.swift in Sources */,
 				6C7B2C4D2AEF726A00E0DADF /* GeneratePlanView.swift in Sources */,
-				6CB5F81C2AF766BD0019539C /* PlanManager.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				6C3FD76E2AEE40C900C84D2A /* Difficulty.swift in Sources */,
 				D8FBED5A2AE91A880062CC00 /* LoadingCircle.swift in Sources */,
@@ -1346,14 +1334,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AC5A9A4F2AE3AC5E003B0C1F /* FirebaseFirestore */ = {
+		6C6842D42AF89A840015E8CD /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		AC5A9A5A2AE3E614003B0C1F /* FirebaseFirestoreSwift */ = {
+		6C6842D62AF89A840015E8CD /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ACFED3892AE2EB430018CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

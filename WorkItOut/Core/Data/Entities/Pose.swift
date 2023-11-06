@@ -29,11 +29,9 @@ struct Pose: Identifiable, Hashable, Entity {
     
     var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
     
-    
-
-    
-    
-    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
     
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
         var pose = PoseNSObject(context: context)

@@ -11,7 +11,6 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
-    @State var timeRemaining = 2
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -45,20 +44,10 @@ struct AssessmentView: View {
                     Button("Next"){
                         withAnimation {
                             dm.pm.addPosetoPoses()
-//                            print("something")
                             Task {
-                                await dm.setUpProfile(
-                                    moc: moc,
-                                    name: "User Name",
-                                    currentWeek: avm.currentWeek,
-                                    fitnessLevel: avm.experience,
-                                    daysAvailable: avm.days,
-                                    timeOfDay: avm.timeClock,
-                                    preferredDuration: avm.durationExercise,
-                                    exceptions: avm.exceptions
-                                )
+                                await dm.setUpProfile(moc: moc, profile: avm.createProfile())
                             }
-                            
+                            avm.finishCreateYogaPlan = true
                         }
                     }
                     .buttonStyle(BorderedButton())
@@ -76,38 +65,28 @@ struct AssessmentView: View {
             // MARK: listen ketika sudah ada pose baru ketriger.
             .onChange(of: dm.pm.poses) { val in
                 if !dm.pm.poses.isEmpty {
-                    print("selesai load pose dari firebase")
-                    avm.finishCreateYogaPlan = true
+                    avm.finishCreateYogaPlan.toggle()
                 }
             }
             .onReceive(timer, perform: { _ in
-//                if timeRemaining > 0 {
-//                    timeRemaining -= 1
-//                }
-//                else if dm.profile.plan.isEmpty {
-//                    Task {
-//                        await dm.setUpProfile(
-//                            moc: moc,
-//                            name: "User Name",
-//                            currentWeek: avm.currentWeek,
-//                            fitnessLevel: avm.experience,
-//                            daysAvailable: avm.days,
-//                            timeOfDay: avm.timeClock,
-//                            preferredDuration: avm.durationExercise,
-//                            exceptions: avm.exceptions
-//                        )
-//                    }
-//                }
+                if avm.state == .complete && avm.finishCreateYogaPlan == false {
+                    if avm.timeRemaining > 0 {
+                        avm.timeRemaining -= 1
+                    }
+                    else {
+                        dm.pm.addPosetoPoses()
+                        Task {
+                            await dm.setUpProfile(moc: moc, profile: avm.createProfile())
+                        }
+                        avm.finishCreateYogaPlan = true
+                    }
+                }
             })
             .padding(.horizontal, 15)
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
                 GeneratePlanView()
-                // TODO: dikomen setelah deployment
-//                    .navigationBarBackButtonHidden(true)
+                    .environmentObject(avm)
             }
-//            .onChange(of: avm.days.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
-//                avm.buttonDisable = newValue
-//            })
             .toolbar {
                 if avm.state.rawValue != 0 {
                     ToolbarItem(placement: .topBarLeading) {
