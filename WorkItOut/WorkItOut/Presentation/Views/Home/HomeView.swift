@@ -15,25 +15,28 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                VStack {
-                    HStack {
-                        HomeButtonView(icon: "person")
-                        Spacer()
-                        HomeWeekIndicatorView()
-                            .environmentObject(vm)
-                        Spacer()
-                        HomeButtonView(icon: "clock.arrow.circlepath")
-                    }
-                    .padding(.vertical)
-                    
-                    HStack {
-                        ForEach(Day.allCases, id: \.self) { day in
-                            DayButtonView(selectedDay: $vm.day, days: vm.days, day: day)
+                ZStack {
+                    Image("AssesmentResultHeaderBackground")
+                        .ignoresSafeArea()
+                    VStack {
+                        HStack {
+                            HomeButtonView(icon: "person")
+                            Spacer()
+                            HomeWeekIndicatorView()
+                                .environmentObject(vm)
+                            Spacer()
+                            HomeButtonView(icon: "clock.arrow.circlepath")
+                        }
+                        .padding(.bottom)
+                        HStack {
+                            ForEach(Day.allCases, id: \.self) { day in
+                                DayButtonView(selectedDay: $vm.day, days: vm.days, day: day)
+                            }
                         }
                     }
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity)
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
                 .background(.white)
                 
                 ScrollView {

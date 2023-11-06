@@ -40,26 +40,13 @@ struct AssessmentView: View {
                     }
                     .buttonStyle(BorderedDisabledButton())
                 }
-                else if avm.state == .complete {
-                    Button("Next"){
-                        withAnimation {
-                            dm.pm.addPosetoPoses()
-                            Task {
-                                await dm.setUpProfile(moc: moc, profile: avm.createProfile())
+                else if avm.state != .complete {
+                        Button("Next"){
+                            withAnimation {
+                                avm.nextState()
                             }
-                            avm.finishCreateYogaPlan = true
                         }
-                    }
-                    .buttonStyle(BorderedButton())
-
-                }
-                else {
-                    Button("Next"){
-                        withAnimation {
-                            avm.nextState()
-                        }
-                    }
-                    .buttonStyle(BorderedButton())
+                        .buttonStyle(BorderedButton())
                 }
             }
             // MARK: listen ketika sudah ada pose baru ketriger.
@@ -88,20 +75,23 @@ struct AssessmentView: View {
                     .environmentObject(avm)
             }
             .toolbar {
-                if avm.state.rawValue != 0 {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button {
-                            withAnimation {
-                                avm.previousState()
+                if avm.state != .complete {
+                    if avm.state.rawValue != 0 {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
+                                withAnimation {
+                                    avm.previousState()
+                                }
+                            } label: {
+                                Image(systemName: "chevron.left")
                             }
-                        } label: {
-                            Image(systemName: "chevron.left")
                         }
                     }
+                    ToolbarItem(placement: .principal) {
+                        StateIndicator(state: $avm.state)
+                    }
                 }
-                ToolbarItem(placement: .principal) {
-                    StateIndicator(state: $avm.state)
-                }
+                
             }
         }
         
