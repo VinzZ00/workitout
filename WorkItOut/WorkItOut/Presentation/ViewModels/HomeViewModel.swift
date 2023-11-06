@@ -105,6 +105,51 @@ class HomeViewModel: ObservableObject {
         }
     }
     
+    func dateForWeekday(weekday: Day, week: Int, year: Int) -> Int {
+        let calendar = Calendar.current
+
+        var weekDayInt: Int {
+            switch weekday {
+            case .monday:
+                return 1
+            case .tuesday:
+                return 2
+            case .wednesday:
+                return 3
+            case .thursday:
+                return 4
+            case .friday:
+                return 5
+            case .saturday:
+                return 6
+            case .sunday:
+                return 0
+            }
+        }
+        
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.weekOfYear = week
+        dateComponents.weekday = weekDayInt
+
+        guard let date = calendar.date(from: dateComponents) else {
+            fatalError("date didn't valid, from dateForWeekDay(weekday: Day, week: Int, year: Int) -> Int")
+        }
+        
+        var day = calendar.dateComponents([.day], from: date)
+        
+        guard let day = day.day else {
+            fatalError("Day didn't found, from dateForWeekDay(weekday: Day, week: Int, year: Int) -> Int")
+        }
+
+        return day;
+        
+    }
+
+    
+
+    
+    
     func checkCategory(poses: [Pose], category: Category) -> Bool {
         if (poses.first(where: {$0.category == category}) != nil) {
             return true
