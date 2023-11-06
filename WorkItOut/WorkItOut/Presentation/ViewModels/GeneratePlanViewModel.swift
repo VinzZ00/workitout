@@ -5,8 +5,10 @@
 //  Created by Jeremy Raymond on 04/11/23.
 //
 
+import CoreData
 import Foundation
 
+@MainActor
 class GeneratePlanViewModel: ObservableObject {
     @Published var scrollTarget: Int?
     
@@ -15,5 +17,13 @@ class GeneratePlanViewModel: ObservableObject {
             return true
         }
         return false
+    }
+    func addProfileToCoreData(profile: Profile, moc: NSManagedObjectContext) async {
+        var addProfile: AddProfileUseCase = AddProfileUseCase()
+        await addProfile.call(profile: profile, context: moc)
+
+        var fetchProfile = FetchProfileUseCase()
+
+        let fetchRes = await fetchProfile.call(context: moc)
     }
 }

@@ -5,12 +5,15 @@
 //  Created by Jeremy Raymond on 31/10/23.
 //
 
+import CoreData
 import Foundation
 
+@MainActor
 class HomeViewModel: ObservableObject {
     @Published var week: Int = 20
     var yogaPlans: [YogaPlan] = []
     @Published var day: Day = .monday
+    @Published var profile : Profile = Profile()
     
     @Published var days: [Day] = Day.allCases
     @Published var relieves: [Relieve] = [
@@ -18,6 +21,23 @@ class HomeViewModel: ObservableObject {
     ]
     @Published var selectedRelieve: Relieve = .back
     @Published var sheetToggle: Bool = false
+    @Published var fetch = FetchProfileUseCase()
+    
+    init(profile: Profile = Profile()) {
+        self.week = profile.currentPregnancyWeek
+        self.days = profile.daysAvailable
+        self.yogaPlans = profile.plan
+        self.profile = profile
+    }
+    
+    func loadProfile(moc: NSManagedObjectContext) async {
+        let fetchedProfile = await fetch.call(context: moc)
+        self.profile = fetchedProfile.first!
+        self.week = self.profile.currentPregnancyWeek
+        self.days = self.profile.daysAvailable
+        self.yogaPlans = self.profile.plan
+        self.objectWillChange.send()
+    }
     
     func toggleSheet(yoga: Yoga) {
         self.currentYoga = yoga
@@ -72,12 +92,6 @@ class HomeViewModel: ObservableObject {
     }
     
     var currentYoga: Yoga = Yoga()
-    
-    init(profile: Profile = Profile()) {
-        self.week = profile.currentPregnancyWeek
-        self.days = profile.daysAvailable
-        self.yogaPlans = profile.plan
-    }
     
     func previousWeek() {
         if self.week > 0 {

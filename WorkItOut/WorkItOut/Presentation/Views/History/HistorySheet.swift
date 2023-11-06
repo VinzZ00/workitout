@@ -15,9 +15,9 @@ struct HistorySheet: View {
             Text("\(history.executionDate.formatted(date: .long, time: .omitted))")
             LazyVStack(alignment: .leading, spacing: 5){
                 // MARK: menghapus first supaya tidak error.
-                Text("\(history.yogaDone.name ?? "Unknown Yoga")")
+                Text("\(history.yogaDone.name)")
                     .font(.largeTitle.bold())
-                Text("\(history.yogaDone.poses.count ?? -1) Exercise (\(history.duration) Min)")
+                Text("\(history.yogaDone.poses.count) Exercise (\(history.duration) Min)")
                     .padding(.horizontal, 5)
                     .background(.ultraThinMaterial)
                     .cornerRadius(8)
@@ -27,14 +27,9 @@ struct HistorySheet: View {
             .padding(.bottom, 10)
             ScrollView{
                 LazyVStack{
-//                    if let poses = history.yogaDone.first?.poses {
                     ForEach(history.yogaDone.poses, id: \.id){ pose in
-                            PoseCard(pose: pose)
-                        }
-//                    }else {
-//                        Text("No Poses to Show")
-//                    }
-                    
+                        PoseCard(pose: pose)
+                    }
                 }
                 Spacer(minLength: 100)
             }

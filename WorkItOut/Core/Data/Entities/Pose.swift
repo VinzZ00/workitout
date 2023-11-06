@@ -32,9 +32,9 @@ struct Pose: Identifiable, Hashable, Entity {
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
     }
-    
+  
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
-        var pose = PoseNSObject(context: context)
+        let pose = PoseNSObject(context: context)
         
         pose.uuid = self.id
         pose.name = self.name

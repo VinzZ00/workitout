@@ -11,6 +11,8 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
+    @State var timeRemaining = 2
+    @Binding var hasNoProfile : Bool
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -65,7 +67,7 @@ struct AssessmentView: View {
             // MARK: listen ketika sudah ada pose baru ketriger.
             .onChange(of: dm.pm.poses) { val in
                 if !dm.pm.poses.isEmpty {
-                    avm.finishCreateYogaPlan.toggle()
+                    avm.finishCreateYogaPlan = true
                 }
             }
             .onReceive(timer, perform: { _ in
@@ -84,7 +86,7 @@ struct AssessmentView: View {
             })
             .padding(.horizontal, 15)
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView()
+                GeneratePlanView(hasNoProfile: $hasNoProfile)
                     .environmentObject(avm)
             }
             .toolbar {
@@ -111,5 +113,5 @@ struct AssessmentView: View {
 }
 
 #Preview {
-    AssessmentView()
+    AssessmentView(hasNoProfile: .constant(false))
 }
