@@ -23,8 +23,13 @@ struct GeneratePlanView: View {
         NavigationStack {
             VStack(alignment: .leading) {
                 if showHeader {
-                    Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
-                        .padding(.horizontal)
+                    VStack(alignment: .leading) {
+                        Text("Workout Plan for Beginner - New Beginnings")
+                            .font(.largeTitle)
+                            .bold()
+                        Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
+                    }
+                    .padding(.horizontal)
                         
                 }
                 DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
@@ -104,7 +109,9 @@ struct GeneratePlanView: View {
                 .padding(.horizontal)
             }
             .animation(.default, value: showHeader)
-            .navigationTitle("Workout Plan for Beginner")
+            .navigationBarBackButtonHidden()
+            .navigationTitle(showHeader ? "" : "Workout Plan for Beginner")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {
@@ -123,7 +130,7 @@ struct GeneratePlanView: View {
             .navigationDestination(isPresented: $finish, destination: {
                 HomeView(vm: HomeViewModel(profile: dm.profile))
             })
-            .navigationBarBackButtonHidden()
+            
         }
     }
     
