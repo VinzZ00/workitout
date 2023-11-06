@@ -8,6 +8,7 @@
 import CoreData
 import Foundation
 
+@MainActor
 class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
     var update: UpdateProfileUseCase = UpdateProfileUseCase()
@@ -31,7 +32,7 @@ class ExecutionViewModel: ObservableObject {
     
     func addprofile(){
         // ganti ke load core data
-        profile = MockData.mockProfile
+        
     }
     
     func getTrimester(){
@@ -111,7 +112,6 @@ class ExecutionViewModel: ObservableObject {
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
         let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
         profile.histories.append(history)
-        // update profile di core data
-//        await self.update.call(profile: profile, context: context)
+        await self.update.call(profile: profile, context: context)
     }
 }

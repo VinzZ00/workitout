@@ -69,13 +69,17 @@ struct HomeView: View {
             
             .background(Color.background)
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(yoga: vm.currentYoga)
+                YogaDetailView(sheetToggle: $vm.sheetToggle, nextView: $vm.nextView, yoga: vm.currentYoga)
             })
             .navigationBarBackButtonHidden()
             .onAppear{
                 Task{
                     await vm.loadProfile(moc: moc)
                 }
+            }
+            .navigationDestination(isPresented: $vm.nextView) {
+                ExecutionView()
+                    .navigationBarBackButtonHidden()
             }
         }
         .environmentObject(vm)
