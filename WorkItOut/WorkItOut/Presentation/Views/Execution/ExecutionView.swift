@@ -16,6 +16,7 @@ struct ExecutionView: View {
     @State var textSwitch = false
     @State var previousDisabled = true
     @State var nextDisabled = false
+    @State var progress: CGFloat = 0.0
     
     var body: some View {
         VStack {
@@ -74,14 +75,30 @@ struct ExecutionView: View {
                             .onReceive(timerVm.timer){ _ in
                                 timerVm.updateCurrentTime()
                             }
+                        ZStack(alignment: .leading) {
+                          Rectangle()
+                            .frame(width: 300, height: 20)
+                            .opacity(0.3)
+                            .foregroundColor(.gray)
+
+                          Rectangle()
+                            .frame(width: progress * 300, height: 20)
+                            .foregroundColor(.primary)
+                            .animation(.easeInOut, value: progress)
+                        }
+                        .cornerRadius(15)
+                        .onReceive(timerVm.timer) { _ in
+                          if progress < 1.0 {
+                              progress += 0.01/Double(vm.poses[vm.index].seconds-1)
+                          }
+                        }
                     }
                     .onAppear(perform: {
                         timerVm.startTimer(time: Double(vm.poses[vm.index].seconds))
                     })
-                    .padding(42)
+                    .padding(14)
                 }
-                Rectangle()
-                    .frame(width: 355, height: 12)
+                
                 HStack{
                     Button{
                         vm.previousPose()
@@ -140,6 +157,7 @@ struct ExecutionView: View {
                     
                     timerVm.isTimerPaused = false
                     textSwitch = false
+                    progress = 0.0
                 }
                 .onChange(of: timerVm.timesUp) { _, valueIsTrue in
                     if valueIsTrue {
