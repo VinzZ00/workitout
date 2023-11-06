@@ -27,11 +27,11 @@ struct Profile : Entity, Equatable {
         profilens.daysAvailable = self.daysAvailable.map{$0.rawValue}.joined(separator: ", ")
         profilens.fitnessLevel = self.fitnessLevel.rawValue
         profilens.plan?.addingObjects(from: self.plan.map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)})
-        (profilens.plan?.allObjects as! [YogaPlanNSObject]).first?.name
         profilens.timeOfDay = self.timeOfDay.rawValue
         profilens.histories?.addingObjects(from: self.histories.map{
             $0.intoNSObject(context: context, parentProfileNS: profilens)})
         profilens.preferredDuration = self.preferredDuration.rawValue
+        profilens.exceptions = self.exceptions.map{$0.rawValue}.joined(separator: ", ");
         
         return profilens
     }
@@ -45,8 +45,7 @@ struct Profile : Entity, Equatable {
     var preferredDuration: Duration = .tenMinutes
     var plan : [YogaPlan] = [] // Pasti 3
     var histories : [History] = []
-    
-    var exceptions: [Exception] = []
+    var exceptions : [Exception] = []
     
     var trimester: Trimester {
         if currentPregnancyWeek < 12 {

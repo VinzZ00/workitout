@@ -12,23 +12,21 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var dm: DataManager
     @Environment(\.managedObjectContext) var moc
-    @State var hasNoProfile = true
+    @State private var hasNoProfile = false
+    @State private var isLoading = true
     var body: some View {
         ZStack{
-            if !hasNoProfile{
-                HomeView()
+            if isLoading {
+                EmptyView()
+            }else{
+                if !hasNoProfile{
+                    HomeView()
+                }
             }
         }
         .fullScreenCover(isPresented: $hasNoProfile) {
             AssessmentView(hasNoProfile: $hasNoProfile)
         }
-        .onReceive(dm.$profile, perform: { output in
-            if dm.savedToCoreData {
-                if let _ = output {
-                    hasNoProfile = false
-                }
-            }
-        })
         .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
             if valueIsTrue {
                 hasNoProfile = false
@@ -36,7 +34,8 @@ struct ContentView: View {
         })
         .onAppear {
             Task{
-                await dm.loadProfile(moc: moc)
+                hasNoProfile = await !dm.loadProfile(moc: moc)
+                isLoading = false
             }
         }
     }
