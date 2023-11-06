@@ -23,10 +23,11 @@ class DataManager: ObservableObject {
         let fetchProfile = FetchProfileUseCase()
         
         let fetchRes = await fetchProfile.call(context: moc)
-        self.profile = fetchRes.first
-        if let _ = self.profile {
-            savedToCoreData = true
+        if fetchRes.isEmpty{
+            return
         }
+        self.profile = fetchRes.first
+        savedToCoreData = true
     }
     
     public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async {

@@ -22,13 +22,6 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $hasNoProfile) {
             AssessmentView(hasNoProfile: $hasNoProfile)
         }
-        .onReceive(dm.$profile, perform: { output in
-            if dm.savedToCoreData {
-                if let _ = output {
-                    hasNoProfile = false
-                }
-            }
-        })
         .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
             if valueIsTrue {
                 hasNoProfile = false

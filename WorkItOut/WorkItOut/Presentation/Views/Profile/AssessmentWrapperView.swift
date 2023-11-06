@@ -22,8 +22,7 @@ struct AssessmentWrapperView: View {
                     case .chooseDuration:
                         AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $vm.durationExercise, selections: Duration.allCases)
                     case .chooseWeek:
-                        // Ganti ke picker pregnancy week
-                        AssessmentDetailView(title: "What weeks of pregnancy are you in?", selection: $vm.timeSpan, selections: Months.allCases)
+                        AssesmentWeekView(week: $vm.currentWeek)
                     case .chooseExperience:
                         AssessmentDetailView(title: "Have you ever done yoga before?", selection: $vm.experience, selections: Difficulty.allCases)
                     case .chooseExceptions:
