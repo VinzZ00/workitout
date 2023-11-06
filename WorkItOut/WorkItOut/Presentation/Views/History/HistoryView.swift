@@ -44,8 +44,9 @@ struct HistoryView: View {
                 }
                 .sheet(isPresented: $showSheet){
                     if let history = vm.currentHistory{
-                        HistorySheet(history: history)
-                            .presentationDragIndicator(.visible)
+                        NavigationStack{
+                            HistorySheet(history: history, showSheet: $showSheet)
+                        }
                     }
                 }
                 

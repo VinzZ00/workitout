@@ -21,14 +21,11 @@ struct TimerView: View {
                 }
             HStack{
                 Button{
-                   
-                        vm.startTimer(time: time)
-                    
+                    vm.startTimer(time: time)
                 }label: {
                     Image(systemName: "backward.end.circle")
                         .font(.system(size: 44))
                 }
-                
                 Button{
                     vm.pauseTimer()
                 }label: {

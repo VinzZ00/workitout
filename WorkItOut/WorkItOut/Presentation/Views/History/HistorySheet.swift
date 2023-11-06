@@ -9,13 +9,15 @@ import SwiftUI
 
 struct HistorySheet: View {
     var history : History
+    @Binding var showSheet : Bool
     var body: some View {
         LazyVStack(alignment: .leading, spacing: 10){
             Text("\(history.executionDate.formatted(date: .long, time: .omitted))")
             LazyVStack(alignment: .leading, spacing: 5){
-                Text("\(history.yogaDone.first?.name ?? "Unknown Yoga")")
+                // MARK: menghapus first supaya tidak error.
+                Text("\(history.yogaDone.name ?? "Unknown Yoga")")
                     .font(.largeTitle.bold())
-                Text("\(history.yogaDone.first?.poses.count ?? -1) Exercise (\(history.duration) Min)")
+                Text("\(history.yogaDone.poses.count ?? -1) Exercise (\(history.duration) Min)")
                     .padding(.horizontal, 5)
                     .background(.ultraThinMaterial)
                     .cornerRadius(8)
@@ -25,14 +27,13 @@ struct HistorySheet: View {
             .padding(.bottom, 10)
             ScrollView{
                 LazyVStack{
-                    if let poses = history.yogaDone.first?.poses {
-                        ForEach(poses, id: \.id){ pose in
+//                    if let poses = history.yogaDone.first?.poses {
+                    ForEach(history.yogaDone.poses, id: \.id){ pose in
                             PoseCard(pose: pose)
                         }
-                        
-                    }else {
-                        Text("No Poses to Show")
-                    }
+//                    }else {
+//                        Text("No Poses to Show")
+//                    }
                     
                 }
                 Spacer(minLength: 100)
@@ -40,18 +41,37 @@ struct HistorySheet: View {
             
         }
         .padding(.horizontal, 14)
+        .toolbar{
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    showSheet = false
+                } label: {
+                    ZStack{
+                        Circle()
+                            .foregroundStyle(.grayBorder.opacity(0.25))
+                            .frame(width: 24, height: 24)
+                        Image(systemName: "multiply")
+                            .foregroundStyle(.black.opacity(0.6))
+                            .bold()
+                            .font(.system(size: 10))
+                    }
+                }
+
+                
+            }
+        }
     }
 }
 
-//#Preview {
-//    let poses = [
-//        Pose(id: UUID(), name: "Banana", description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner),
-//        Pose(id: UUID(), name: "Bound Angle", description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, recommendedTrimester: .second, bodyPartTrained: [.shoulders, .legs], relieve: [.hippain, .backpain, .pelvicflexibility], difficulty: .beginner),
-//        Pose(id: UUID(), name: "Gracious Pose", description: "Gracious Pose", seconds: 60, state: .notCompleted, position: .seated, spineMovement: .neutral, recommendedTrimester: .all, bodyPartTrained: [.shoulders, .legs], relieve: [.hippain, .backpain], difficulty: .beginner),
-//        Pose(id: UUID(), name: "Cat", description: "Cat", seconds: 60, state: .skipped, position: .armLegSupport, spineMovement: .forwardBend, recommendedTrimester: .first, bodyPartTrained: [.back, .neck], relieve: [.backpain, .pelvicflexibility], difficulty: .beginner)
-//    
-//    ]
-//    return HistorySheet(history: History(id: UUID(), yogaDone: [
-//        Yoga(id: UUID(), name: "Day 1 Upper Body", poses: poses, day: .monday, estimationDuration: 30, image: "")
-//    ], executionDate: Date.now, duration: 30, rating: 5))
-//}
+#Preview {
+    let poses = [
+        Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]),
+        Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back, .pelvic], image: nil, description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, bodyPartTrained: [.shoulders, .legs]),
+        Pose(id: UUID(), name: "Cat", difficulty: .beginner, recommendedTrimester: .first, relieve: [.back, .pelvic], image: nil, description: "Cat", seconds: 60, state: .skipped, position: .armLegSupport, spineMovement: .forwardBend, bodyPartTrained: [.back, .neck])
+    
+    ]
+    return NavigationStack{ 
+        HistorySheet(history: History(id: UUID(), yogaDone: Yoga(id: UUID(), name: "Day 1 Upper Body", poses: poses, day: .monday, estimationDuration: 30, image: ""), executionDate: Date.now, duration: 30, rating: 5), showSheet: .constant(true))
+    }
+        
+}

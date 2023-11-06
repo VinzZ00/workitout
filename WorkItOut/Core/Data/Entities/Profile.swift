@@ -72,9 +72,5 @@ struct Profile : Entity, Equatable {
         
     }
     
-    func appendHistory() {
-        
-    }
-    
     
 }
