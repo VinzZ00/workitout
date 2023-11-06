@@ -15,7 +15,6 @@ struct DayPickView: View {
     var body: some View {
         VStack {
             Button(action: {
-                print(day)
                 vm.scrollTarget = day.getInt()
                 selected = day
             }, label: {
@@ -24,7 +23,7 @@ struct DayPickView: View {
                     Rectangle()
                         .frame(height: 4)
                         .padding(0)
-                        .foregroundStyle(selected == day ? .orangePrimary : .neutral6)
+                        .foregroundStyle(selected == day ? Color.primary : .neutral6)
                 }
             })
             .buttonStyle(.plain)

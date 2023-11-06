@@ -11,7 +11,7 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     
     var body: some View {
         NavigationStack {
@@ -30,7 +30,7 @@ struct AssessmentView: View {
                     case .chooseTime:
                         AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeOfDay.allCases)
                     case .complete:
-                        CompleteView()
+                    CompleteView(counter: avm.timeRemaining)
                 }
                 Spacer()
                 
@@ -71,7 +71,7 @@ struct AssessmentView: View {
             .onReceive(timer, perform: { _ in
                 if avm.state == .complete && avm.finishCreateYogaPlan == false {
                     if avm.timeRemaining > 0 {
-                        avm.timeRemaining -= 1
+                        avm.timeRemaining -= 0.5
                     }
                     else {
                         dm.pm.addPosetoPoses()

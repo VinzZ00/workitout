@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+// MARK: Elvin minta tolon bikin calendar
 struct HomeWeekIndicatorView: View {
     @EnvironmentObject var vm: HomeViewModel
     @EnvironmentObject var dm : DataManager
@@ -22,6 +24,7 @@ struct HomeWeekIndicatorView: View {
             Text("Week \(vm.week) - \(vm.month)")
                 .font(.title3)
                 .bold()
+
             Text(vm.getTrimesterRoman())
         }
         Button(action: {

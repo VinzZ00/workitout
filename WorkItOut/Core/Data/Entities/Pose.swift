@@ -25,7 +25,7 @@ struct Pose: Identifiable, Hashable, Entity {
     var state : YogaState = .notCompleted
 
     var position : Position = .stand
-    var spineMovement : SpineMovement = .balance
+    var spineMovement : SpineMovement = .forwardBend
     
     var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
     

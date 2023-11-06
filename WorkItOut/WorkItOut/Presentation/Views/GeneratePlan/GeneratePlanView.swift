@@ -15,18 +15,23 @@ struct GeneratePlanView: View {
     @EnvironmentObject var dm: DataManager
     
     @State var finish: Bool = false
+    @State var showHeader: Bool = true
+    
+//    @State private var offset = CGFloat.zero
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
-                    .padding(.horizontal)
+                if showHeader {
+                    Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
+                        .padding(.horizontal)
+                        
+                }
                 DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
                     .environmentObject(vm)
-                ScrollViewReader(content: { (proxy: ScrollViewProxy) in
+                ScrollViewReader( content: { (proxy: ScrollViewProxy) in
                     ScrollView {
                         VStack {
-                            
                             if dm.profile.plan.isEmpty {
                                 Text("No Plan yet")
                             }
@@ -81,6 +86,22 @@ struct GeneratePlanView: View {
                                 .background(Color.background)
                             }
                         }
+                        .background(GeometryReader {
+                            Color.clear.preference(key: ViewOffsetKey.self,
+                                value: -$0.frame(in: .named("scroll")).origin.y)
+                        })
+                        .onPreferenceChange(ViewOffsetKey.self) { 
+                            print("offset >> \($0)")
+                            if $0 > 100 {
+                                self.showHeader = false
+                            }
+                            else {
+                                self.showHeader = true
+                            }
+                            if $0 < 1000 {
+                                vm.scrollTarget = dm.profile.daysAvailable[0].getInt()
+                            }
+                        }
                     }
                     .onChange(of: vm.scrollTarget) { target in
                         print("Changed")
@@ -88,11 +109,12 @@ struct GeneratePlanView: View {
                             vm.scrollTarget = nil
 
                             withAnimation {
-                                print("called")
                                 proxy.scrollTo(target, anchor: .center)
                             }
                         }
                     }
+                    .coordinateSpace(name: "scroll")
+                    
 
                 })
                 VStack {
@@ -103,6 +125,7 @@ struct GeneratePlanView: View {
                 }
                 .padding(.horizontal)
             }
+            .animation(.default, value: showHeader)
             .navigationTitle("Workout Plan for Beginner")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -123,6 +146,14 @@ struct GeneratePlanView: View {
                 HomeView(vm: HomeViewModel(profile: dm.profile))
             })
             .navigationBarBackButtonHidden()
+        }
+    }
+    
+    struct ViewOffsetKey: PreferenceKey {
+        typealias Value = CGFloat
+        static var defaultValue = CGFloat.zero
+        static func reduce(value: inout Value, nextValue: () -> Value) {
+            value += nextValue()
         }
     }
 }
