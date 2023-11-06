@@ -11,10 +11,10 @@ struct StateIndicator: View {
     @Binding var state : AssessmentState
     var body: some View {
         HStack{
-            ForEach(0..<5){ idx in
+            ForEach(0..<AssessmentState.allCases.count-1){ idx in
                 RoundedRectangle(cornerRadius: 12)
                     .foregroundStyle(idx < state.rawValue ? .orangePrimary : .gray)
-                    .frame(width: 40, height: 4)
+                    .frame(width: 36, height: 4)
             }
         }
     }

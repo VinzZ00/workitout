@@ -7,7 +7,11 @@
 
 import Foundation
 
-enum Months : String, CaseIterable {
+enum Months : String, UserPreference {
+    func getString() -> String {
+        return self.rawValue
+    }
+    
     case oneMonth = "One Month"
     case twoMonth = "Two Months"
     case threeMonth = "Three Months"

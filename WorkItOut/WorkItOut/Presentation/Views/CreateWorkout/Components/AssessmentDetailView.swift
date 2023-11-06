@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AssessmentDetailView: View {
+struct AssessmentDetailView<E: UserPreference>: View {
     var title : String
-    @Binding var selection : String
-    @State var selections : [String]
+    @Binding var selection : E
+    @State var selections : [E]
     
     var body: some View {
         VStack(alignment: .leading){
@@ -19,17 +19,15 @@ struct AssessmentDetailView: View {
             ForEach(selections, id: \.self){ selection in
                 Button(action: {self.selection = selection}, label: {
                     HStack{
-                        Text(selection)
+                        Text(selection.getString())
                             .font(.body.bold())
                             .padding(.leading, 10)
                             .padding(.vertical, 15)
                         Spacer()
                     }
-                    .tint(.primary)
-                    .background(selection == self.selection ? .orangePrimary : .clear)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(selection == self.selection ? .orangePrimary : .grayBorder, lineWidth: 2)
+                    .background(RoundedRectangle(cornerRadius: 12)
+                        .fill(selection == self.selection ? .orangePrimary.opacity(0.25) : .clear)
+                        .stroke(selection == self.selection ? .orangePrimary : .grayBorder, lineWidth: 1)
                     )
                 })
                 .padding(.vertical, 3)
@@ -38,6 +36,6 @@ struct AssessmentDetailView: View {
     }
 }
 
-#Preview {
-    AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: .constant("Morning"), selections: TimeClock.allCases.map({$0.rawValue}))
-}
+//#Preview {
+//    AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: .constant("Morning"), selections: TimeClock.allCases.map({$0.rawValue}))
+//}

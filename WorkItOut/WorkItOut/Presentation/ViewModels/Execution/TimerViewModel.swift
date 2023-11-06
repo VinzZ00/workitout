@@ -4,27 +4,25 @@
 //
 //  Created by Angela Valentine Darmawan on 26/10/23.
 //
-
 import Foundation
 
 class TimerViewModel: ObservableObject {
     @Published var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @Published var timeRemaining: Double = 0
-    @Published var timeToggle = false
+    @Published var isTimerPaused = false
+    @Published var timeToggle : Bool = false
     @Published var timeSet = 0
-    
-    init(seconds : Double = 60) {
-        self.timeRemaining = seconds
-    }
+    @Published var timesUp = false
     
     func currentTime() -> String {
         return timeString(time: timeRemaining)
     }
     
-    func startTimer() {
+    func startTimer(time: Double) {
         timeToggle = true
         timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
-        timeSet = Int(timeRemaining/60)
+        timeSet = Int(time/60)
+        timeRemaining = time
     }
     
     func updateCurrentTime() {
@@ -35,14 +33,32 @@ class TimerViewModel: ObservableObject {
         }else{
             timer.upstream.connect().cancel()
             timeToggle.toggle()
+            timesUp = true
         }
+    }
+    
+    func resetTimer(time: Double) {
+        timeToggle = false
+        timer.upstream.connect().cancel()
+        timeRemaining = time
+    }
+    
+    func pauseTimer() {
+        isTimerPaused = true
+        timer.upstream.connect().cancel()
+    }
+    
+    func continueTimer() {
+        isTimerPaused = false
+        timeToggle = true
+        timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     }
     
     func timeString(time: Double) -> String {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         
-        return String(format: "%02i.%02i", minutes, seconds)
+        return String(format: "%02i:%02i", minutes, seconds)
     }
     
 }

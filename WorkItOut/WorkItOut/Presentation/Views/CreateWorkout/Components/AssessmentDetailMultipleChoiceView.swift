@@ -7,49 +7,60 @@
 
 import SwiftUI
 
-struct AssessmentDetailMultipleChoiceView: View {
+struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
     var title : String
-    @Binding var selectedItems : [String]
-    @State var selections : [String]
+    var explanation: String = "(Check all that apply)"
+    @Binding var selectedItems : [E]
+    @State var selections : [E]
+    
+    var limit: Int = 0
     
     var body: some View {
         VStack(alignment: .leading){
             Text(title)
                 .font(.title).bold()
-            Text("(Check all that apply)")
+            Text(explanation)
                 .font(.headline)
                 .foregroundStyle(.gray)
-            ForEach(selections, id: \.self){ selection in
-                Button(action: {
-                    if selectedItems.contains(selection){
-                        guard let selectedIndex = selectedItems.firstIndex(of: selection) else {
-                            return
+            ScrollView {
+                ForEach($selections, id: \.self){ selection in
+                    Button(action: {
+                        if selectedItems.contains(selection.wrappedValue){
+                            guard let selectedIndex = selectedItems.firstIndex(of: selection.wrappedValue) else {
+                                return
+                            }
+                            selectedItems.remove(at: selectedIndex)
+                        }else{
+                            if limit == 0 {
+                                selectedItems.append(selection.wrappedValue)
+                            }
+                            else if !(selectedItems.count >= limit) {
+                                selectedItems.append(selection.wrappedValue)
+                            }
+                            
                         }
-                        selectedItems.remove(at: selectedIndex)
-                    }else{
-                        selectedItems.append(selection)
-                    }
-                }, label: {
-                    HStack{
-                        Text(selection)
-                            .font(.body.bold())
-                            .padding(.leading, 10)
-                            .padding(.vertical, 15)
-                        Spacer()
-                    }
-                    .tint(.primary)
-                    .background(self.selectedItems.contains(selection) ? .orangePrimary : .clear)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(self.selectedItems.contains(selection) ? .orangePrimary : .grayBorder, lineWidth: 2)
+                    }, label: {
+                        HStack{
+                            Text(selection.wrappedValue.getString())
+                                .font(.body.bold())
+                                .padding(.leading, 10)
+                                .padding(.vertical, 15)
+                            Spacer()
+                        }
+                        
+                    })
+                    .background(RoundedRectangle(cornerRadius: 12)
+                        .fill(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary.opacity(0.25) : .clear)
+                        .stroke(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary : .grayBorder, lineWidth: 1)
                     )
-                })
-                .padding(.vertical, 3)
+                    .padding(.vertical, 3)
+                }
+
             }
         }
     }
 }
 
-#Preview {
-    AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", selectedItems: .constant(["Monday", "Wednesday", "Friday"]), selections: Day.allCases.map({$0.rawValue}))
-}
+//#Preview {
+//    AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", selectedItems: .constant(["Monday", "Wednesday", "Friday"]), selections: Day.allCases.map({$0.rawValue}))
+//}

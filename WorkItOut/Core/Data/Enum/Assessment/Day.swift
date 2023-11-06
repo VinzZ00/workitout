@@ -7,7 +7,11 @@
 
 import Foundation
 
-enum Day: String, CaseIterable {
+enum Day: String, UserPreference {
+    func getString() -> String {
+        return self.rawValue
+    }
+    
     case monday = "Monday"
     case tuesday = "Tuesday"
     case wednesday = "Wednesday"
@@ -15,6 +19,10 @@ enum Day: String, CaseIterable {
     case friday = "Friday"
     case saturday = "Saturday"
     case sunday = "Sunday"
+    
+    func getShortenedDay() -> String {
+        return String(self.getString().prefix(3))
+    }
     
     func getInt()-> Int {
         switch self {
@@ -34,6 +42,15 @@ enum Day: String, CaseIterable {
             return 7
         }
     }
+    
+    func getWeekdayInInt() -> Int {
+        let today = Date()
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: self.getWeekday())
+        
+        return day
+    }
+    
     func getWeekday() -> Date {
         let today = Date()
         let calendar = Calendar.current

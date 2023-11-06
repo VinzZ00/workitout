@@ -9,31 +9,88 @@ import SwiftUI
 
 struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
+    @Environment(\.managedObjectContext) var moc
+    @EnvironmentObject var dm: DataManager
+    @State var timeRemaining = 2
+    @Binding var hasNoProfile : Bool
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
-        NavigationStack{
-            VStack{
+        NavigationStack {
+            VStack {
                 switch avm.state {
-                case .chooseDay:
-                    AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", selectedItems: $avm.day, selections: Day.allCases.map({$0.rawValue}))
-                case .chooseTime:
-                    AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeClock.allCases.map({$0.rawValue}))
-                case .chooseDuration:
-                    AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $avm.durationExercise, selections: Duration.allCases.map({$0.rawValue}))
-                case .chooseMonth:
-                    AssessmentDetailView(title: "How long do you plan to follow your exercise routine?", selection: $avm.timeSpan, selections: Months.allCases.map({$0.rawValue}))
-                case .chooseMuscleGroup:
-                    AssessmentDetailMultipleChoiceView(title: "Which muscle groups are you interested in training?", selectedItems: $avm.muscleGroup, selections: MuscleGroup.allCases.map({$0.rawValue}))
-                case .complete:
-                    CompleteView()
+                    case .chooseWeek:
+                        AssesmentWeekView(week: $avm.currentWeek)
+                    case .chooseExceptions:
+                        AssessmentDetailMultipleChoiceView(title: "Do you have any health conditions?", selectedItems: $avm.exceptions, selections: Exception.allCases)
+                    case .chooseDay:
+                        AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $avm.days, selections: Day.allCases, limit: 3)
+                    case .chooseDuration:
+                        AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $avm.durationExercise, selections: Duration.allCases)
+                    case .chooseExperience:
+                        AssessmentDetailView(title: "Have you ever done yoga before?", selection: $avm.experience, selections: Difficulty.allCases)
+                    case .chooseTime:
+                        AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeOfDay.allCases)
+                    case .complete:
+                        CompleteView()
+                }
+                Spacer()
+                
+                if avm.buttonDisable {
+                    Button("Next"){
+                        
+                    }
+                    .buttonStyle(BorderedDisabledButton())
+                }
+                else if avm.state == .complete {
+                    Button("Next"){
+                        withAnimation {
+                            dm.pm.addPosetoPoses()
+                            Task {
+                                await dm.setUpProfile(moc: moc, profile: avm.createProfile())
+                            }
+                            avm.finishCreateYogaPlan = true
+                        }
+                    }
+                    .buttonStyle(BorderedButton())
+
+                }
+                else {
+                    Button("Next"){
+                        withAnimation {
+                            avm.nextState()
+                        }
+                    }
+                    .buttonStyle(BorderedButton())
                 }
             }
-            .padding(.horizontal, 15)
-            Spacer()
-            .onChange(of: avm.day.isEmpty || avm.muscleGroup.isEmpty, { oldValue, newValue in
-                avm.buttonDisable = newValue
+            // MARK: listen ketika sudah ada pose baru ketriger.
+            .onChange(of: dm.pm.poses) { val in
+                if !dm.pm.poses.isEmpty {
+                    avm.finishCreateYogaPlan = true
+                }
+            }
+            .onReceive(timer, perform: { _ in
+                if avm.state == .complete && avm.finishCreateYogaPlan == false {
+                    if avm.timeRemaining > 0 {
+                        avm.timeRemaining -= 1
+                    }
+                    else {
+                        dm.pm.addPosetoPoses()
+                        Task {
+                            await dm.setUpProfile(moc: moc, profile: avm.createProfile())
+                        }
+                        avm.finishCreateYogaPlan = true
+                    }
+                }
             })
-            .toolbar{
-                if avm.state != .chooseDay {
+            .padding(.horizontal, 15)
+            .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
+                GeneratePlanView(hasNoProfile: $hasNoProfile)
+                    .environmentObject(avm)
+            }
+            .toolbar {
+                if avm.state.rawValue != 0 {
                     ToolbarItem(placement: .topBarLeading) {
                         Button {
                             withAnimation {
@@ -48,21 +105,6 @@ struct AssessmentView: View {
                     StateIndicator(state: $avm.state)
                 }
             }
-            if avm.buttonDisable {
-                Button("Next"){
-                    
-                }
-                .buttonStyle(BorderedDisabledButton())
-            }else {
-                Button("Next"){
-                    withAnimation {
-                        avm.nextState()
-                    }
-                    
-                }
-                .buttonStyle(BorderedButton())
-            }
-            
         }
         
         
@@ -71,5 +113,5 @@ struct AssessmentView: View {
 }
 
 #Preview {
-    AssessmentView()
+    AssessmentView(hasNoProfile: .constant(false))
 }

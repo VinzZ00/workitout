@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import CoreData
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -19,13 +20,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WorkItOutApp: App {
     @StateObject var coreDataManager = CoreDataManager()
+    @StateObject var dm: DataManager = DataManager()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
+//            TestFetchFirebase()
+//            HistoryView()
+//            ProfileView()
             ContentView()
-//            AssessmentView()
-//                .environment(\.managedObjectContext, coreDataManager.container.viewContext)
+                .environment(\.managedObjectContext, coreDataManager.container.viewContext)
+                .environmentObject(dm)
         }
     }
 }

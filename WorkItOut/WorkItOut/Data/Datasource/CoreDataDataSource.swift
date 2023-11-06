@@ -31,10 +31,7 @@ struct CoreDataDataSource : CoreDataDataSourceDelegate {
         }
     }
     
-    func updateToCoreData(workout : Workout, context : NSManagedObjectContext) async throws {
-        let workoutRec = WorkoutNSObject(context: context)
-        workoutRec.workoutState = workout.workoutState == .finished ? true : false
-        workoutRec.exercises = NSSet(array: workout.exercises)
+    func updateToCoreData<T : NSManagedObject>(entity : T, context : NSManagedObjectContext) async throws {
         
         do {
             try context.save()
@@ -42,7 +39,16 @@ struct CoreDataDataSource : CoreDataDataSourceDelegate {
             throw err;
         }
     }
-    
-    
-
 }
+
+//var ygpl = YogaPlan()
+//
+//@Environment(\.managedObjectContext) var moc : NSManagedObjectContext
+//
+//ygpl.yogas.first?.poses.first?.name = "yoga pose 1";
+//
+//UpdateYogaPlanUsecase().call(yogaPlan: ygpl, context: moc)
+
+
+
+

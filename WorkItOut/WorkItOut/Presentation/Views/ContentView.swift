@@ -10,11 +10,35 @@ import SwiftUI
 //FirestoreDummy
 
 struct ContentView: View {
-//    @State var testFireStore : String = ""
-//    var db = FireStoreManager.shared
-    
+    @EnvironmentObject var dm: DataManager
+    @Environment(\.managedObjectContext) var moc
+    @State var hasNoProfile = true
     var body: some View {
-        CameraView();
+        ZStack{
+            if !hasNoProfile{
+                HomeView()
+            }
+        }
+        .fullScreenCover(isPresented: $hasNoProfile) {
+            AssessmentView(hasNoProfile: $hasNoProfile)
+        }
+        .onReceive(dm.$profile, perform: { output in
+            if dm.savedToCoreData {
+                if let _ = output {
+                    hasNoProfile = false
+                }
+            }
+        })
+        .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
+            if valueIsTrue {
+                hasNoProfile = false
+            }
+        })
+        .onAppear {
+            Task{
+                await dm.loadProfile(moc: moc)
+            }
+        }
     }
 }
 

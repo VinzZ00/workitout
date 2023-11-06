@@ -10,7 +10,6 @@ import SwiftUI
 
 
 struct workoutListCard: View {
-    
     var imageAssetName : String
     var workoutName : String
     var muscle : String
@@ -62,7 +61,7 @@ struct workoutListCard: View {
             .frame(width: 358, height: 88)
             .padding(.all, 12)
             .overlay(RoundedRectangle(cornerRadius: 10)
-                            .stroke(.neutral6, lineWidth: 2)
+                            .stroke(Color.neutral6, lineWidth: 2)
             .padding(.horizontal, 12)
             )
         }
