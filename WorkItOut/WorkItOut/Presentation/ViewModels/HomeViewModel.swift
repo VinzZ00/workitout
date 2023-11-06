@@ -9,13 +9,14 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     @Published var week: Int = 20
-    @Published var yogaPlan: YogaPlan = YogaPlan()
+    var yogaPlans: [YogaPlan] = []
+    @Published var day: Day = .monday
     
     @Published var days: [Day] = Day.allCases
     @Published var relieves: [Relieve] = [
-        .backpain, .breathing, .hippain, .laborprep, .neckcramp, .pelvicflexibility
+        .ankle, .back, .hip
     ]
-    @Published var selectedRelieve: Relieve = .backpain
+    @Published var selectedRelieve: Relieve = .back
     @Published var sheetToggle: Bool = false
     
     var trimester: Trimester {
@@ -27,6 +28,19 @@ class HomeViewModel: ObservableObject {
         }
         else {
             return .second
+        }
+    }
+    
+    func getTrimesterRoman() -> String {
+        switch trimester {
+        case .first:
+            return "Trimester I"
+        case .second:
+            return "Trimester II"
+        case .third:
+            return "Trimester III"
+        case .all:
+            return "Trimester"
         }
     }
     
@@ -44,8 +58,18 @@ class HomeViewModel: ObservableObject {
         return ""
     }
     
+    var yogaPlan: YogaPlan {
+        return yogaPlans.first(where: {$0.trimester == trimester}) ?? YogaPlan()
+    }
+    
+    var yoga: Yoga {
+        return yogaPlan.yogas.first(where: {$0.day == day}) ?? Yoga()
+    }
+    
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
+        self.days = profile.daysAvailable
+        self.yogaPlans = profile.plan
     }
     
     func previousWeek() {
@@ -59,4 +83,6 @@ class HomeViewModel: ObservableObject {
             self.week += 1
         }
     }
+    
+    
 }

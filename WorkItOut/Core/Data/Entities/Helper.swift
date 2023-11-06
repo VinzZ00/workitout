@@ -17,16 +17,16 @@ extension PoseNSObject {
         let pose = Pose(
             id : self.uuid!,
             name: self.name!,
+            difficulty: Difficulty(rawValue: self.difficulty!)!, 
+            exception: self.exception!.split(separator: ", ").map{Exception(rawValue: String($0))!}, 
+            recommendedTrimester: Trimester(rawValue: self.recommendedTrimester!)!, 
+            relieve: self.relieve!.split(separator: ", ").map{Relieve(rawValue: String($0))!}, 
             description: self.poseDescription!,
             seconds: Int(self.seconds),
             state: YogaState(rawValue: self.state!)!,
             position: Position(rawValue: self.position!)!,
             spineMovement: SpineMovement(rawValue: self.spineMovement!)!,
-            recommendedTrimester: Trimester(rawValue: self.recommendedTrimester!)!,
-            bodyPartTrained: self.bodyPartTrained!.split(separator: ", ").map{BodyPart(rawValue: String($0))!},
-            relieve: self.relieve!.split(separator: ", ").map{Relieve(rawValue: String($0))!},
-            exception: self.exception!.split(separator: ", ").map{Exception(rawValue: String($0))!},
-            difficulty: Difficulty(rawValue: self.difficulty!)!
+            bodyPartTrained: self.bodyPartTrained!.split(separator: ", ").map{BodyPart(rawValue: String($0))!}
         ) //Pose
         return pose
     }
@@ -61,10 +61,17 @@ extension YogaPlanNSObject {
 }
 
 extension HistoryNSObject {
+    
+    // MARK: Update Elvin 4 Nov
+    func addingYogaHist(yogaNS : YogaNSObject) {
+        self.yogaDone = yogaNS
+    }
+    
     func intoObject() -> History {
         let history = History(
             id: self.uuid!,
-            yogaDone: (self.yogaDone!.allObjects as? [YogaNSObject] ?? []).map{ $0.intoObject() },
+            // MARK: Change by Elvin 4 Nov, untuk meganti History menjadi HistoryNSObject
+            yogaDone: (self.yogaDone?.intoObject())!,
             executionDate: self.executionDate!,
             duration: Int(self.duration),
             rating: Int(self.rating)

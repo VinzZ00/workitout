@@ -11,13 +11,13 @@ struct PoseCard: View {
     var pose : Pose
     var body: some View {
         HStack{
-            if let image = pose.image {
+            if let image = pose.image{
                 Image(image)
                     .resizable()
                     .frame(width: 70, height: 70)
                     .padding(.trailing, 10)
-            }else {
-                RoundedRectangle(cornerRadius: 8)
+            }else{
+                RoundedRectangle(cornerRadius: 12)
                     .frame(width: 70, height: 70)
                     .padding(.trailing, 10)
             }
@@ -25,7 +25,7 @@ struct PoseCard: View {
                 Text("\(pose.name)")
                     .bold()
                 Text("\(pose.position.rawValue)")
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.grayBorder)
                     .font(.caption)
             }
             Spacer()
@@ -46,9 +46,9 @@ struct PoseCard: View {
     VStack(spacing: 20){
         Text("Completed State")
             .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner))
+        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]))
         Text("Skipped State")
             .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", description: "Banana", seconds: 60, state: .skipped, position: .supine, spineMovement: .lateralBend, recommendedTrimester: .all, bodyPartTrained: [.back, .chest, .core], relieve: [.backpain, .neckcramp, .hippain], difficulty: .beginner))
+        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]))
     }
 }

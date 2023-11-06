@@ -12,15 +12,15 @@ extension Color {
     
     //Main
     static let background = colorDirectory.Main.background
-    static let primary = colorDirectory.Main.background
+    static let primary = colorDirectory.Main.primary
     
     //Neutral
     static let neutral1 = colorDirectory.Neutral._1
     static let neutral2 = colorDirectory.Neutral._2
-    static let netural3 = colorDirectory.Neutral._3
-    static let netural4 = colorDirectory.Neutral._4
-    static let netural5 = colorDirectory.Neutral._5
-    static let netural6 = colorDirectory.Neutral._6
+    static let neutral3 = colorDirectory.Neutral._3
+    static let neutral4 = colorDirectory.Neutral._4
+    static let neutral5 = colorDirectory.Neutral._5
+    static let neutral6 = colorDirectory.Neutral._6
     
     //Transparent
     static let transparent60 = colorDirectory.Transparent._60

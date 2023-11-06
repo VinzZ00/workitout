@@ -13,16 +13,15 @@ class ProfileViewModel : ObservableObject {
     @Published var exceptions: [Exception] = [.vertigo, .abdominalSurgery, .diastasisRecti]
     @Published var days : [Day] = [.monday]
     @Published var timeClock : TimeOfDay = .morning
-    @Published var durationExercise : Duration = .fiveteenMinutes
+    @Published var durationExercise : Duration = .tenMinutes
     @Published var timeSpan : Months = .oneMonth
     @Published var experience: Difficulty = .beginner
     @Published var trimester: Trimester = .first
-    @Published var relieve: [Relieve] = [.backpain]
-//    @Published var exceptions: [Exception] = [.highBloodPressure]
+    @Published var relieve: [Relieve] = [.back]
     
     init(){
         // MARK: change to load profile from coredata
-        self.profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.backpain, .hippain], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
+        self.profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .ankle], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
         
         self.days = self.profile.daysAvailable
         self.timeClock = self.profile.timeOfDay

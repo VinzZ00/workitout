@@ -12,14 +12,14 @@ class AssessmentViewModel : ObservableObject {
     @Published var currentWeek: Int = 10
     @Published var exceptions: [Exception] = [.vertigo, .abdominalSurgery, .diastasisRecti]
     @Published var days : [Day] = [.monday, .wednesday, .sunday]
-    @Published var durationExercise : Duration = .fiveteenMinutes
+    @Published var durationExercise : Duration = .tenMinutes
     @Published var experience: Difficulty = .beginner
     @Published var timeClock : TimeOfDay = .morning
     
     
     @Published var timeSpan : Months = .oneMonth
     @Published var trimester: Trimester = .first
-    @Published var relieve: [Relieve] = [.backpain]
+    @Published var relieve: [Relieve] = [.back]
     
     @Published var state : AssessmentState = .chooseWeek
     @Published var buttonDisable = false

@@ -10,20 +10,30 @@ import Foundation
 struct Pose: Identifiable, Hashable, Entity {
     let id: UUID
     var name : String = "Pose Name"
-    var image : String? = "poseImage.png"
-    var video : String? = "poseVideo.mp4"
+    var altName: String = "Alternate Name"
+    var category: Category = .coolingDown
+    var difficulty : Difficulty = .beginner
+    var exception: [Exception] = [.abdominalSurgery, .diastasisRecti, .highBloodPressure]
+    var recommendedTrimester : Trimester = .second
+    var relieve: [Relieve] = [.ankle, .back, .foot]
+    var status: Status = .necessary
+    
+    var image : String?
+    var video : String?
     var description : String = "Pose Description"
     var seconds : Int = 60
     var state : YogaState = .notCompleted
 
     var position : Position = .stand
     var spineMovement : SpineMovement = .balance
-    var recommendedTrimester : Trimester = .second
+    
     var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
-    var relieve: [Relieve] = [.backpain, .breathing, .hippain]
-    var exception: [Exception] = [.abdominalSurgery, .diastasisRecti, .highBloodPressure]
+    
+    
 
-    var difficulty : Difficulty = .beginner
+    
+    
+    
     
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
         var pose = PoseNSObject(context: context)

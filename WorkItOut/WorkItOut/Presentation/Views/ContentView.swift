@@ -10,6 +10,7 @@ import SwiftUI
 //FirestoreDummy
 
 struct ContentView: View {
+    @EnvironmentObject var dm: DataManager
 //    @State var testFireStore : String = ""
 //    var db = FireStoreManager.shared
     
