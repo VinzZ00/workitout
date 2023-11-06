@@ -121,14 +121,17 @@ struct ExecutionView: View {
                         
                     }label: {
                         if timerVm.isTimerPaused == false{
-                            Image(systemName: "pause.circle")
+                            Image(systemName: "pause.circle.fill")
                                 .font(.system(size: 68))
+                                .foregroundColor(.primary)
                         }else {
-                            Image(systemName: "play.circle")
+                            Image(systemName: "play.circle.fill")
                                 .font(.system(size: 68))
+                                .foregroundColor(.primary)
                         }
                     }
                     .padding(.horizontal, 50)
+                    
                     
                     Button{
                         vm.nextPose(skipped: true)
@@ -140,6 +143,7 @@ struct ExecutionView: View {
                             .font(.system(size: 44))
                     }
                     .disabled(nextDisabled)
+                    
                 }
                 .padding(.top, 40)
                 .onChange(of: vm.index) { _, _ in
