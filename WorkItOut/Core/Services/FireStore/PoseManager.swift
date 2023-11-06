@@ -19,8 +19,10 @@ class PoseManager: ObservableObject {
     }
     
     func addPosetoPoses(){
-        for pose in firebasePoses {
-            self.poses.append(Pose(id: UUID(), name: pose.yogaPose, altName: pose.altName, category: pose.category, difficulty: pose.difficulty, exception: pose.exceptions, recommendedTrimester: pose.recommendedTrimester, relieve: pose.relieves, status: pose.status))
+        if poses.isEmpty {
+            for pose in firebasePoses {
+                self.poses.append(Pose(id: UUID(), name: pose.yogaPose, altName: pose.altName, category: pose.category, difficulty: pose.difficulty, exception: pose.exceptions, recommendedTrimester: pose.recommendedTrimester, relieve: pose.relieves, status: pose.status))
+            }
         }
         
         self.objectWillChange.send()

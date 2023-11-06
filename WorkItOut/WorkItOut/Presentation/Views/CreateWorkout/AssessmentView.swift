@@ -47,7 +47,7 @@ struct AssessmentView: View {
                             Task {
                                 await dm.setUpProfile(moc: moc, profile: avm.createProfile())
                             }
-                            
+                            avm.finishCreateYogaPlan = true
                         }
                     }
                     .buttonStyle(BorderedButton())
@@ -65,15 +65,16 @@ struct AssessmentView: View {
             // MARK: listen ketika sudah ada pose baru ketriger.
             .onChange(of: dm.pm.poses) { val in
                 if !dm.pm.poses.isEmpty {
-                    avm.finishCreateYogaPlan = true
+                    avm.finishCreateYogaPlan.toggle()
                 }
             }
             .onReceive(timer, perform: { _ in
-                if avm.state == .complete {
+                if avm.state == .complete && avm.finishCreateYogaPlan == false {
                     if avm.timeRemaining > 0 {
                         avm.timeRemaining -= 1
                     }
                     else {
+                        dm.pm.addPosetoPoses()
                         Task {
                             await dm.setUpProfile(moc: moc, profile: avm.createProfile())
                         }

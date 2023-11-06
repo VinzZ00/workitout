@@ -33,6 +33,7 @@ class DataManager: ObservableObject {
         }
         
         self.handMadeYogaPlan = self.handMadeYogaPlanPlaceholder()
+        print("Set up profile work")
     }
     
     public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, exceptions: [Exception]) async {
@@ -57,6 +58,7 @@ class DataManager: ObservableObject {
             handMadeYogaPlans.updateValue(yogaPlans, forKey: relieve)
         }
         
+        print("Handmade work")
         return handMadeYogaPlans
     }
     
@@ -110,6 +112,9 @@ class DataManager: ObservableObject {
                     i += 1
                     newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
                     print(i)
+                    if i == 100 {
+                        print("loop")
+                    }
                 }
                 
             }
@@ -119,6 +124,7 @@ class DataManager: ObservableObject {
         
         newPoses.sort(by: {$0.category.getOrder() > $1.category.getOrder()})
         
+        print("Pose work")
         return newPoses
     }
     
@@ -129,6 +135,7 @@ class DataManager: ObservableObject {
             yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: createPoses(duration: duration, exceptions: exceptions, relieves: relieves), day: day, estimationDuration: duration.getDurationInMinutes(), image: "ExampleImage.png"))
         }
         
+        print("yoga work")
         return yogas
     }
     
@@ -136,6 +143,7 @@ class DataManager: ObservableObject {
         var yogaPlan = YogaPlan(name: name, trimester: trimester)
         yogaPlan.yogas = createYogas(days: days, duration: duration, exceptions: exceptions, relieves: relieves)
         
+        print("Yoga plan work")
         return yogaPlan
     }
 }
