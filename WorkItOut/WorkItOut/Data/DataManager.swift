@@ -17,9 +17,7 @@ class DataManager: ObservableObject {
     @Published var hasNoProfile : Bool = false
     @Published var savedToCoreData : Bool = false
     
-    func test() {
-        print("Test")
-    }
+    var handMadeYogaPlan: [Relieve : [YogaPlan]] = [:]
     
     public func loadProfile(moc : NSManagedObjectContext) async {
         let fetchProfile = FetchProfileUseCase()
@@ -31,23 +29,55 @@ class DataManager: ObservableObject {
         }
     }
     
-    public func setUpProfile(moc : NSManagedObjectContext, name: String, currentWeek: Int, fitnessLevel: Difficulty, daysAvailable: [Day], timeOfDay: TimeOfDay, preferredDuration: Duration, exceptions: [Exception]) async {
-        self.profile = Profile(name: name, currentPregnancyWeek: currentWeek, fitnessLevel: fitnessLevel, daysAvailable: daysAvailable, timeOfDay: timeOfDay, preferredDuration: preferredDuration, exceptions: exceptions)
+    public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async {
+        self.profile = profile
         
         for trimester in Trimester.allCases {
-            self.profile?.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration, exceptions: exceptions))
+            self.profile.plan.append(createYogaPlan(trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: []))
         }
-        self.objectWillChange.send()
-    }
-    
-    public func createPose() -> Pose {
         
-        return pm.poses.randomElement() ?? Pose(id: UUID())
+        self.handMadeYogaPlan = self.handMadeYogaPlanPlaceholder()
+        print("Set up profile work")
     }
     
-    public func filterPoses(exceptions: [Exception]) -> [Pose] {
-        let poses = pm.poses
+    func handMadeYogaPlanPlaceholder() -> [Relieve : [YogaPlan]] {
+        var handMadeYogaPlans: [Relieve : [YogaPlan]] = [:]
+        
+        for relieve in Relieve.allCases {
+            var yogaPlans: [YogaPlan] = []
+            for trimester in Trimester.allCases {
+                var name = relieve.getString() + " " + trimester.getString()
+                yogaPlans.append(createYogaPlan(name: name,trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: [relieve]))
+            }
+            handMadeYogaPlans.updateValue(yogaPlans, forKey: relieve)
+        }
+        
+        print("Handmade work")
+        return handMadeYogaPlans
+    }
+    
+    public func filterPosesByRelieves(poses: [Pose], relieves: [Relieve]) -> [Pose] {
         var filteredPoses: [Pose] = []
+        
+        if relieves.isEmpty {
+            return poses
+        }
+        
+        for pose in poses {
+            if pose.relieve.contains(relieves) {
+                filteredPoses.append(pose)
+            }
+        }
+        
+        return filteredPoses
+    }
+    
+    public func filterPosesByExceptions(poses: [Pose], exceptions: [Exception]) -> [Pose] {
+        var filteredPoses: [Pose] = []
+        
+        if exceptions.isEmpty {
+            return poses
+        }
         
         for pose in poses {
             if !pose.exception.contains(exceptions) {
@@ -62,17 +92,25 @@ class DataManager: ObservableObject {
         return poses.filter({$0.category == category}).randomElement() ?? Pose(id: UUID())
     }
     
-    public func createPoses(duration: Duration, exceptions: [Exception]) -> [Pose] {
-        var poses = filterPoses(exceptions: exceptions)
+    public func createPoses(duration: Duration, exceptions: [Exception], relieves: [Relieve]) -> [Pose] {
+        var poses = filterPosesByExceptions(poses: pm.poses, exceptions: exceptions)
+        poses = filterPosesByRelieves(poses: poses, relieves: relieves)
         var newPoses: [Pose] = []
         
         newPoses.append(poseByCategory(poses: poses, category: .warmUp))
         for _ in 0 ..< duration.getDurationInMinutes() {
             var newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
             if !poses.isEmpty {
-                while newPoses.contains(where: {$0.name == newPose.name}) {
+                var i = 0
+                while newPoses.contains(where: {$0.name == newPose.name}) && (poses.count > newPoses.count) {
+                    i += 1
                     newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
+                    print(i)
+                    if i == 100 {
+                        print("loop")
+                    }
                 }
+                
             }
             newPoses.append(newPose)
         }
@@ -80,29 +118,26 @@ class DataManager: ObservableObject {
         
         newPoses.sort(by: {$0.category.getOrder() > $1.category.getOrder()})
         
+        print("Pose work")
         return newPoses
     }
     
-    public func createYogas(days: [Day], duration: Duration, exceptions: [Exception]) -> [Yoga] {
+    public func createYogas(days: [Day], duration: Duration, exceptions: [Exception], relieves: [Relieve]) -> [Yoga] {
         var yogas: [Yoga] = []
         
         for day in days {
-            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: createPoses(duration: duration, exceptions: exceptions), day: day, estimationDuration: duration.getDurationInMinutes(), image: "ExampleImage.png"))
+            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: createPoses(duration: duration, exceptions: exceptions, relieves: relieves), day: day, estimationDuration: duration.getDurationInMinutes(), image: "ExampleImage.png"))
         }
         
+        print("yoga work")
         return yogas
     }
     
-    public func createYogaPlan(trimester: Trimester, days: [Day], duration: Duration, exceptions: [Exception]) -> YogaPlan {
-        var yogaPlan = YogaPlan(trimester: trimester)
-        yogaPlan.yogas = createYogas(days: days, duration: duration, exceptions: exceptions)
+    public func createYogaPlan(name: String = "Yoga Plan Name", trimester: Trimester, days: [Day], duration: Duration, exceptions: [Exception], relieves: [Relieve]) -> YogaPlan {
+        var yogaPlan = YogaPlan(name: name, trimester: trimester)
+        yogaPlan.yogas = createYogas(days: days, duration: duration, exceptions: exceptions, relieves: relieves)
         
+        print("Yoga plan work")
         return yogaPlan
     }
 }
-
-//extension PoseNSObject {
-//    func intoPose() -> Pose {
-//        return Pose(name: self.name!, description: <#T##String#>, seconds: <#T##Int#>, state: <#T##YogaState#>, position: <#T##Position#>, spineMovement: <#T##SpineMovement#>, recommendedTrimester: <#T##Trimester#>, bodyPartTrained: <#T##[BodyPart]#>, relieve: <#T##[Relieve]#>, difficulty: <#T##Difficulty#>)
-//    }
-//}

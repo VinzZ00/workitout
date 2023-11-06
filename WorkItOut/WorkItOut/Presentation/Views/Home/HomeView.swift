@@ -57,23 +57,20 @@ struct HomeView: View {
                             HStack {
                                 ForEach(Relieve.allCases, id: \.self) { relieve in
                                     HomeYogaCategoryView(relieve: relieve)
-                                        .environmentObject(vm)
                                 }
                             }
                         }
-                        //                        ForEach(HandmadeYogaPlans.yogaPlans, id: \.id) { yogaPlan in
-                        //                            HomeOtherPlansView()
-                        //                        }
-                        ForEach(0...4, id: \.self) { _ in
-                            HomeOtherPlansView()
+                        ForEach(dm.handMadeYogaPlan[vm.selectedRelieve] ?? vm.yogaPlans, id: \.id) { yogaPlan in
+                            HomeOtherPlansView(yogaPlan: yogaPlan)
                         }
                     }
                     .padding()
                 }
             }
+            
             .background(Color.background)
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView()
+                YogaDetailView(yoga: vm.currentYoga)
             })
             .navigationBarBackButtonHidden()
             .onAppear{
@@ -82,6 +79,8 @@ struct HomeView: View {
                 }
             }
         }
+        .environmentObject(vm)
+        .navigationBarBackButtonHidden()
     }
     
     

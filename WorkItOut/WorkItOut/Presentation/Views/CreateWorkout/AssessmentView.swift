@@ -46,20 +46,10 @@ struct AssessmentView: View {
                     Button("Next"){
                         withAnimation {
                             dm.pm.addPosetoPoses()
-//                            print("something")
                             Task {
-                                await dm.setUpProfile(
-                                    moc: moc,
-                                    name: "User Name",
-                                    currentWeek: avm.currentWeek,
-                                    fitnessLevel: avm.experience,
-                                    daysAvailable: avm.days,
-                                    timeOfDay: avm.timeClock,
-                                    preferredDuration: avm.durationExercise,
-                                    exceptions: avm.exceptions
-                                )
+                                await dm.setUpProfile(moc: moc, profile: avm.createProfile())
                             }
-                            
+                            avm.finishCreateYogaPlan = true
                         }
                     }
                     .buttonStyle(BorderedButton())
@@ -81,33 +71,24 @@ struct AssessmentView: View {
                 }
             }
             .onReceive(timer, perform: { _ in
-//                if timeRemaining > 0 {
-//                    timeRemaining -= 1
-//                }
-//                else if dm.profile.plan.isEmpty {
-//                    Task {
-//                        await dm.setUpProfile(
-//                            moc: moc,
-//                            name: "User Name",
-//                            currentWeek: avm.currentWeek,
-//                            fitnessLevel: avm.experience,
-//                            daysAvailable: avm.days,
-//                            timeOfDay: avm.timeClock,
-//                            preferredDuration: avm.durationExercise,
-//                            exceptions: avm.exceptions
-//                        )
-//                    }
-//                }
+                if avm.state == .complete && avm.finishCreateYogaPlan == false {
+                    if avm.timeRemaining > 0 {
+                        avm.timeRemaining -= 1
+                    }
+                    else {
+                        dm.pm.addPosetoPoses()
+                        Task {
+                            await dm.setUpProfile(moc: moc, profile: avm.createProfile())
+                        }
+                        avm.finishCreateYogaPlan = true
+                    }
+                }
             })
             .padding(.horizontal, 15)
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
                 GeneratePlanView(hasNoProfile: $hasNoProfile)
-                // TODO: dikomen setelah deployment
-//                    .navigationBarBackButtonHidden(true)
+                    .environmentObject(avm)
             }
-//            .onChange(of: avm.days.isEmpty || avm.relieve.isEmpty, { oldValue, newValue in
-//                avm.buttonDisable = newValue
-//            })
             .toolbar {
                 if avm.state.rawValue != 0 {
                     ToolbarItem(placement: .topBarLeading) {
