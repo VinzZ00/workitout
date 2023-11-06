@@ -20,7 +20,7 @@ struct GeneratePlanView: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
+                Text("You are in week \(dm.profile?.currentPregnancyWeek ?? -1) of pregnancy, so we are giving you the \(dm.profile?.trimester.rawValue ?? "-1") trimester yoga plan!")
                     .padding(.horizontal)
                 DayPickerView(days: dm.profile!.daysAvailable, selection: dm.profile!.daysAvailable[0])
                     .environmentObject(vm)
