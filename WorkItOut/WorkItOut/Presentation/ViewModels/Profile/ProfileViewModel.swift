@@ -8,9 +8,9 @@
 import Foundation
 
 class ProfileViewModel : ObservableObject {
-    @Published var profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
+    @Published var profile = Profile()
     @Published var currentWeek: Int = 10
-    @Published var exceptions: [Exception] = [.vertigo, .abdominalSurgery, .diastasisRecti]
+    @Published var exceptions: [Exception] = []
     @Published var days : [Day] = [.monday]
     @Published var timeClock : TimeOfDay = .morning
     @Published var durationExercise : Duration = .tenMinutes
@@ -19,14 +19,14 @@ class ProfileViewModel : ObservableObject {
     @Published var trimester: Trimester = .first
     @Published var relieve: [Relieve] = [.back]
     
-    init(){
+    init(profile : Profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .ankle], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .tenMinutes, plan: [], histories: [])){
         // MARK: change to load profile from coredata
-        self.profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .ankle], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
-        
+        self.profile = profile
         self.days = self.profile.daysAvailable
         self.timeClock = self.profile.timeOfDay
         self.durationExercise = self.profile.preferredDuration
         self.experience = self.profile.fitnessLevel
+        self.exceptions = self.profile.exceptions
         // trimester ganti dengan function getTrimesterFromCurrentWeek
         self.relieve = self.profile.currentRelieveNeeded
         

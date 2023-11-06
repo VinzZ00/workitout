@@ -34,7 +34,7 @@ struct Pose: Identifiable, Hashable, Entity {
     }
     
     func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
-        var pose = PoseNSObject(context: context)
+        let pose = PoseNSObject(context: context)
         
         pose.uuid = self.id
         pose.name = self.name

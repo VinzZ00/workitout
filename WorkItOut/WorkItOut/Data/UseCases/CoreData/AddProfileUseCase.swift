@@ -21,7 +21,5 @@ struct AddProfileUseCase {
         } catch let err{
             fatalError("Failed to save to coredata: \(err.localizedDescription)")
         }
-        
-        print("Done Adding")
     }
 }

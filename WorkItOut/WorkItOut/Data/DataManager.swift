@@ -11,8 +11,11 @@ import CoreData
 @MainActor
 class DataManager: ObservableObject {
     @Published var pm: PoseManager = PoseManager()
-    @Published var profile: Profile = Profile()
+    @Published var profile: Profile?
     var addProfile: AddProfileUseCase = AddProfileUseCase()
+    var fetchProfile : FetchProfileUseCase = FetchProfileUseCase()
+    @Published var hasNoProfile : Bool = false
+    @Published var savedToCoreData : Bool = false
     
     var handMadeYogaPlan: [Relieve : [YogaPlan]] = [:]
     
@@ -20,8 +23,9 @@ class DataManager: ObservableObject {
         let fetchProfile = FetchProfileUseCase()
         
         let fetchRes = await fetchProfile.call(context: moc)
-        DispatchQueue.main.async {
-            self.profile = fetchRes.first!
+        self.profile = fetchRes.first
+        if let profile = self.profile {
+            savedToCoreData = true
         }
     }
     
@@ -84,6 +88,19 @@ class DataManager: ObservableObject {
         if exceptions.isEmpty {
             return poses
         }
+            self.profile?.plan.append(createYogaPlan(trimester: trimester, days: daysAvailable, duration: preferredDuration, exceptions: exceptions))
+        }
+        self.objectWillChange.send()
+    }
+    
+    public func createPose() -> Pose {
+        
+        return pm.poses.randomElement() ?? Pose(id: UUID())
+    }
+    
+    public func filterPoses(exceptions: [Exception]) -> [Pose] {
+        let poses = pm.poses
+        var filteredPoses: [Pose] = []
         
         for pose in poses {
             if !pose.exception.contains(exceptions) {

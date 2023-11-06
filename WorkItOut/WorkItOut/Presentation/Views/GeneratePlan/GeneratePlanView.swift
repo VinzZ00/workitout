@@ -15,6 +15,7 @@ struct GeneratePlanView: View {
     @EnvironmentObject var dm: DataManager
     
     @State var finish: Bool = false
+    @Binding var hasNoProfile : Bool
     
     var body: some View {
         NavigationStack {
@@ -97,12 +98,14 @@ struct GeneratePlanView: View {
                 })
                 VStack {
                     ButtonComponent(title: "Finish") {
-                        avm.state = .chooseWeek
+                        Task{
+                            await vm.addProfileToCoreData(profile: profile, moc: moc)
+                        }
                         finish.toggle()
+                        hasNoProfile.toggle()
                     }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
-            }
             .navigationTitle("Workout Plan for Beginner")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -123,8 +126,14 @@ struct GeneratePlanView: View {
                 HomeView(vm: HomeViewModel(profile: dm.profile))
             })
             .navigationBarBackButtonHidden()
+                HomeView(vm: HomeViewModel(profile: dm.profile))
+            })
+            .navigationBarBackButtonHidden()
         }
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
     }
+    
 }
 
 //#Preview {

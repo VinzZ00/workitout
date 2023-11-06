@@ -12,17 +12,26 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
     
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack{
             VStack {
                 VStack {
                     HStack {
-                        HomeButtonView(icon: "person")
+                        NavigationLink {
+                            ProfileView(viewModel: ProfileViewModel(profile: vm.profile))
+                        } label: {
+                            HomeButtonView(icon: "person")
+                        }
                         Spacer()
                         HomeWeekIndicatorView()
                             .environmentObject(vm)
                         Spacer()
-                        HomeButtonView(icon: "clock.arrow.circlepath")
+                        NavigationLink{
+                            HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
+                        } label: {
+                            HomeButtonView(icon: "clock.arrow.circlepath")
+                        }
                     }
                     .padding(.vertical)
                     
@@ -63,10 +72,18 @@ struct HomeView: View {
             .sheet(isPresented: $vm.sheetToggle, content: {
                 YogaDetailView(yoga: vm.currentYoga)
             })
+            .navigationBarBackButtonHidden()
+            .onAppear{
+                Task{
+                    await vm.loadProfile(moc: moc)
+                }
+            }
         }
         .environmentObject(vm)
         .navigationBarBackButtonHidden()
     }
+    
+    
 }
 
 //#Preview {
