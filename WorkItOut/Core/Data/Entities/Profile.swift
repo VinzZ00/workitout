@@ -10,7 +10,7 @@ import CoreData
 
 struct Profile : Entity {
     func intoNSObject(context: NSManagedObjectContext) -> NSManagedObject {
-        var profilens = ProfileNSObject(context: context);
+        let profilens = ProfileNSObject(context: context);
         
         profilens.name = self.name
         profilens.currentPregnancyWeek = Int16(self.currentPregnancyWeek)

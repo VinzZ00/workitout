@@ -12,6 +12,7 @@ struct AssessmentView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
     @State var timeRemaining = 2
+    @Binding var hasNoProfile : Bool
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -76,7 +77,6 @@ struct AssessmentView: View {
             // MARK: listen ketika sudah ada pose baru ketriger.
             .onChange(of: dm.pm.poses) { val in
                 if !dm.pm.poses.isEmpty {
-                    print("selesai load pose dari firebase")
                     avm.finishCreateYogaPlan = true
                 }
             }
@@ -101,7 +101,7 @@ struct AssessmentView: View {
             })
             .padding(.horizontal, 15)
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView()
+                GeneratePlanView(hasNoProfile: $hasNoProfile)
                 // TODO: dikomen setelah deployment
 //                    .navigationBarBackButtonHidden(true)
             }
@@ -132,5 +132,5 @@ struct AssessmentView: View {
 }
 
 #Preview {
-    AssessmentView()
+    AssessmentView(hasNoProfile: .constant(false))
 }

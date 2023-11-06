@@ -11,6 +11,7 @@ class HomeViewModel: ObservableObject {
     @Published var week: Int = 20
     var yogaPlans: [YogaPlan] = []
     @Published var day: Day = .monday
+    @Published var profile : Profile = Profile()
     
     @Published var days: [Day] = Day.allCases
     @Published var relieves: [Relieve] = [
@@ -70,6 +71,7 @@ class HomeViewModel: ObservableObject {
         self.week = profile.currentPregnancyWeek
         self.days = profile.daysAvailable
         self.yogaPlans = profile.plan
+        self.profile = profile
     }
     
     func previousWeek() {

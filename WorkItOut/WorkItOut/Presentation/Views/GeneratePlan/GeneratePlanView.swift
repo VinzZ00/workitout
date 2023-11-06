@@ -14,52 +14,50 @@ struct GeneratePlanView: View {
     @EnvironmentObject var dm: DataManager
     
     @State var finish: Bool = false
+    @Binding var hasNoProfile : Bool
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading) {
-                ScrollView {
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Button(action: {
-                                self.presentationMode.wrappedValue.dismiss()
-                            }, label: {
-                                Image(systemName: "xmark")
-                                    .foregroundStyle(.white)
-                                    .bold()
-                            })
-                            .padding(.bottom)
-                            Spacer()
-                        }
-                        Text("Workout Plan for Beginner")
-                            .foregroundStyle(.white)
-                            .font(.largeTitle)
-                            .bold()
+        VStack(alignment: .leading) {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }, label: {
+                            Image(systemName: "xmark")
+                                .foregroundStyle(.white)
+                                .bold()
+                        })
+                        .padding(.bottom)
+                        Spacer()
                     }
-                    .padding(.top, 72)
-                    .padding()
-                    .background(
-                        Image(.assesmentResultHeader)
-                            .resizable()
-                            .frame(maxWidth: .infinity)
-                    )
-                    DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
-//                    Rectangle()
-//                        .frame(height: 12)
-//                        .foregroundStyle(Color.background)
-                    if dm.profile.plan.isEmpty {
+                    Text("Workout Plan for Beginner")
+                        .foregroundStyle(.white)
+                        .font(.largeTitle)
+                        .bold()
+                }
+                .padding(.top, 72)
+                .padding()
+                .background(
+                    Image(.assesmentResultHeader)
+                        .resizable()
+                        .frame(maxWidth: .infinity)
+                )
+                if let profile = dm.profile {
+                    DayPickerView(days: profile.daysAvailable, selection: profile.daysAvailable[0])
+                    if profile.plan.isEmpty {
                         Text("No Plan yet")
                     }
                     else {
                         VStack(alignment: .leading) {
-                            ForEach(Array(dm.profile.plan[0].yogas.enumerated()), id: \.element) { index, yoga in
+                            ForEach(Array(profile.plan[0].yogas.enumerated()), id: \.element) { index, yoga in
                                 VStack {
                                     HStack {
                                         VStack(alignment: .leading) {
                                             Text("Day \(index + 1) - Upper Body")
                                                 .font(.title3)
                                                 .bold()
-                                            Text("\(yoga.day.getString()), \(dm.profile.timeOfDay.getString())")
+                                            Text("\(yoga.day.getString()), \(profile.timeOfDay.getString())")
                                                 .foregroundStyle(Color.neutral3)
                                                 .font(.body)
                                         }
@@ -82,7 +80,7 @@ struct GeneratePlanView: View {
                                                     .foregroundStyle(Color.neutral6)
                                             }
                                             
-                                
+                                            
                                         }
                                         
                                         ForEach(yoga.poses, id: \.self) { pose in
@@ -91,9 +89,6 @@ struct GeneratePlanView: View {
                                             }
                                         }
                                     }
-//                                    ForEach(yoga.poses, id: \.self) { pose in
-//                                        YogaCardView(name: pose.name)
-//                                    }
                                 }
                                 .padding()
                                 .background(.white)
@@ -102,39 +97,26 @@ struct GeneratePlanView: View {
                         }
                         .background(Color.background)
                     }
-                    
+                    VStack {
+                        ButtonComponent(title: "Finish") {
+                            Task{
+                                await vm.addProfileToCoreData(profile: profile, moc: moc)
+                            }
+                            finish.toggle()
+                            hasNoProfile.toggle()
+                        }
+                    }
+                    .padding(.horizontal)
                 }
                 
-                VStack {
-                    
-                    ButtonComponent(title: "Finish") {
-                        Task {
-//                            var addProfile: AddProfileUseCase = AddProfileUseCase()
-//                            
-//                            await addProfile.call(profile: dm.profile, context: moc)
-//                            
-//                            var fetchProfile = FetchProfileUseCase()
-//                            
-//                            let fetchRes = await fetchProfile.call(context: moc)
-//                            
-//                            dm.profile = fetchRes.first!
-//                            
-//                            print(fetchRes.first?.name)
-                            
-                            finish.toggle()
-                        }
-                        
-                    }
-                }
-                .padding(.horizontal)
+                
             }
-            .navigationDestination(isPresented: $finish, destination: {
-                HomeView(vm: HomeViewModel(profile: dm.profile))
-            })
-            .ignoresSafeArea()
-            .navigationBarBackButtonHidden()
+            
         }
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
     }
+    
 }
 
 //#Preview {

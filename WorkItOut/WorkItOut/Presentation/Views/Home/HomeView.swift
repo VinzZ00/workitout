@@ -11,18 +11,27 @@ struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
+    @State var fetch = FetchProfileUseCase()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack{
             VStack {
                 VStack {
                     HStack {
-                        HomeButtonView(icon: "person")
+                        NavigationLink {
+                            ProfileView(viewModel: ProfileViewModel(profile: vm.profile))
+                        } label: {
+                            HomeButtonView(icon: "person")
+                        }
                         Spacer()
                         HomeWeekIndicatorView()
                             .environmentObject(vm)
                         Spacer()
-                        HomeButtonView(icon: "clock.arrow.circlepath")
+                        NavigationLink{
+                            HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
+                        } label: {
+                            HomeButtonView(icon: "clock.arrow.circlepath")
+                        }
                     }
                     .padding(.vertical)
                     
@@ -52,9 +61,9 @@ struct HomeView: View {
                                 }
                             }
                         }
-//                        ForEach(HandmadeYogaPlans.yogaPlans, id: \.id) { yogaPlan in
-//                            HomeOtherPlansView()
-//                        }
+                        //                        ForEach(HandmadeYogaPlans.yogaPlans, id: \.id) { yogaPlan in
+                        //                            HomeOtherPlansView()
+                        //                        }
                         ForEach(0...4, id: \.self) { _ in
                             HomeOtherPlansView()
                         }
@@ -66,9 +75,17 @@ struct HomeView: View {
             .sheet(isPresented: $vm.sheetToggle, content: {
                 YogaDetailView()
             })
+            .navigationBarBackButtonHidden()
+            .onAppear{
+                Task{
+                    let profile = await fetch.call(context: moc)
+                    print(profile)
+                }
+            }
         }
-        .navigationBarBackButtonHidden()
     }
+    
+    
 }
 
 //#Preview {

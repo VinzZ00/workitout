@@ -28,7 +28,6 @@ class PoseManager: ObservableObject {
     }
     
     func getFirebasePoses(){
-        print("Firebase function ran")
       firestore.getCollection(collectionName: FirebaseConstant.YogaPoseConstants.collectionName) { querySnapshot in
             querySnapshot.documents.forEach { doc in
                 let poseName = doc.data()[FirebaseConstant.YogaPoseConstants.name] as! String
@@ -97,11 +96,9 @@ class PoseManager: ObservableObject {
                 
 //                let requestYogaPose = RequestYogaPose(name: poseName, altName: altName, difficulty: difficulty, position: position, recommendedTrimester: trimester, spineMovement: spineMovement, bodyPartTrained: bodyPartsEnum, exception: exceptions, relieve: relieves)
                 
-                print("Inside firebase")
                 self.firebasePoses.append(requestYogaPose)
                 self.objectWillChange.send()
             }
         }
-        print("Firebase function ended")
     }
 }
