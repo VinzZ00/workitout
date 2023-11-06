@@ -127,7 +127,7 @@ struct GeneratePlanView: View {
                 })
                 .navigationBarBackButtonHidden()
             }
-            .ignoresSafeArea()
+//            .ignoresSafeArea()
         }
     }
 }
