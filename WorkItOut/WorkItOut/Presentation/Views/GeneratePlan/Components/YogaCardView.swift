@@ -22,13 +22,14 @@ struct YogaCardView: View {
                 Text(name)
                     .font(.title3)
                     .bold()
-                Text("\(min) min")
-                    .padding(8)
-                    .background(Color.neutral6)
-                    .clipShape(.rect(cornerRadius: 12))
+                Text("\(min) Min")
+                    .font(.subheadline)
+                    .padding(6)
+                    .background(Color.neutral6.opacity(0.5))
+                    .clipShape(.rect(cornerRadius: 10))
                 Text(description)
                     .foregroundStyle(Color.neutral3)
-                    .font(.body)
+                    .font(.subheadline)
             }
         }
     }

@@ -22,18 +22,28 @@ struct GeneratePlanView: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                if showHeader {
-                    VStack(alignment: .leading) {
-                        Text("Workout Plan for Beginner - New Beginnings")
-                            .font(.largeTitle)
-                            .bold()
-                        Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
+                ZStack {
+                    if showHeader {
+                        Image("AssesmentResultHeaderBackground")
+                            .ignoresSafeArea()
                     }
-                    .padding(.horizontal)
-                        
+                    
+                    VStack(alignment: .leading) {
+                        if showHeader {
+                            VStack(alignment: .leading) {
+                                Text("Workout Plan for Beginner - New Beginnings")
+                                    .font(.largeTitle)
+                                    .bold()
+                                Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
+                            }
+                            .padding(.horizontal)
+                                
+                        }
+                        DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
+                            .environmentObject(vm)
+                    }
                 }
-                DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
-                    .environmentObject(vm)
+                
                 ScrollViewReader( content: { (proxy: ScrollViewProxy) in
                     ScrollView {
                         VStack {

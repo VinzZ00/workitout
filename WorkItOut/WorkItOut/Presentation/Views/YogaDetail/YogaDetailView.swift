@@ -18,9 +18,13 @@ struct YogaDetailView: View {
         NavigationStack{
             VStack(alignment: .leading) {
                 Image(systemName: "xmark")
+                    .padding(12)
+                    .background(Color.background.opacity(0.5))
+                    .clipShape(.circle)
                 Text("Balancing and Grounding")
-                    .font(.title)
+                    .font(.largeTitle)
                 Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
+                    .foregroundStyle(Color.neutral3)
                 ScrollView {
                     ForEach(vm.existingCategories(poses: yoga.poses), id: \.self) { category in
                         HStack {
@@ -34,7 +38,7 @@ struct YogaDetailView: View {
                         }
                         VStack(alignment: .leading) {
                             ForEach(vm.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
-                                YogaCardView(name: pose.name, description: (pose.relieve.first ?? .ankle).rawValue, min: pose.seconds)
+                                YogaCardView(name: pose.name, min: pose.seconds)
                             }
                         }
                         
