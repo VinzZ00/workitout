@@ -11,7 +11,7 @@ import AVKit
 
 struct ExecutionView: View {
     @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
-    @StateObject var vm = ExecutionViewModel()
+    @StateObject var vm : ExecutionViewModel
     @StateObject var timerVm : TimerViewModel = TimerViewModel()
     @Environment(\.presentationMode) var presentationMode
     @State var textSwitch = false
@@ -19,6 +19,7 @@ struct ExecutionView: View {
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
     @State var player = AVPlayer()
+    @Binding var path : NavigationPath
     
     var body: some View {
         VStack {
@@ -213,13 +214,22 @@ struct ExecutionView: View {
                         timerVm.timesUp = false
                     }
                 }
+                .onChange(of: vm.end) { _, valueIsTrue in
+                    if valueIsTrue {
+                        path.append(1)
+                    }
+                }
             }
-        }.navigationDestination(isPresented: $vm.end) {
-            ExecutionCompleteView(vm: vm)
         }
+        .navigationDestination(isPresented: $vm.end) {
+            ExecutionCompleteView(path: $path, vm: vm)
+        }
+//        .navigationDestination(for: Int.self) { string in
+//            ExecutionCompleteView(path: $path, vm: vm)
+//        }
     }
 }
 
 #Preview {
-    ExecutionView()
+    ExecutionView(vm: ExecutionViewModel(yoga: Yoga()), path: .constant(NavigationPath()))
 }

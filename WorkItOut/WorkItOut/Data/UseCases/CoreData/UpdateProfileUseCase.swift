@@ -18,15 +18,34 @@ struct UpdateProfileUseCase {
             case .success(let data) :
                 let profilens = data.last! as! ProfileNSObject
                 
-                let newHist = profilens.histories?.addingObjects(from: profile.histories.map{$0.intoNSObject(context: context, parentProfileNS: profilens)})
+                let newHist = profile.histories.filter({ h in
+                    !(profilens.histories!.allObjects as! [HistoryNSObject]).map{$0.uuid}.contains(h.id)
+                }).map{$0.intoNSObject(context: context, parentProfileNS: profilens)}
+                                                                 
                 
-                let newYogaPlan = profilens.plan?.addingObjects(from: profile.plan.map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)})
+                let newYogaPlan = profile.plan.filter({ yp in
+                    !(profilens.plan!.allObjects as! [YogaPlanNSObject]).map{$0.uuid}.contains(yp.id)
+                }).map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)}
                 
                 // MARK: Adding History (Relation)
-                profilens.setValue(newHist, forKey: "histories")
+//                profilens.setValue(newHist, forKey: "histories")
+                newHist.forEach { his in
+                    var hist = his as! HistoryNSObject
+                    
+                    if ((profilens.histories!.contains(hist))) {
+                        profilens.addToHistories(hist)
+                    }
+                }
                 
                 // MARK: Adding yogaPlan (Relation)
-                profilens.setValue(newYogaPlan, forKey: "plan")
+//                profilens.setValue(newYogaPlan, forKey: "plan")
+                newYogaPlan.forEach{ ygp in
+                    var yp = ygp as! YogaPlanNSObject
+                    if !profilens.plan!.contains(yp) {
+                        profilens.addToPlan(yp)
+                    }
+                }
+                
                 
                 // MARK: Adding others self Field (Non Relation)
                 profilens.setValue(profile.name, forKey: "name")
