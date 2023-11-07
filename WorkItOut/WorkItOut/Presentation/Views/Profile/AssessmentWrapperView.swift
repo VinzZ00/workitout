@@ -12,7 +12,16 @@ struct AssessmentWrapperView: View {
     @EnvironmentObject var vm : ProfileViewModel
     @State var stateValue : AssessmentState
     var body: some View {
-        VStack{
+        VStack(alignment: .leading){
+            Button(action: {self.presentationMode.wrappedValue.dismiss()}, label: {
+                ZStack{
+                    Circle()
+                        .frame(width: 24)
+                        .foregroundStyle(.grayBorder.opacity(0.25))
+                    Image(systemName: "multiply")
+                }
+            })
+            .padding([.leading, .top], 20)
             VStack{
                 switch stateValue {
                     case .chooseDay:
@@ -30,25 +39,8 @@ struct AssessmentWrapperView: View {
                 default:
                     EmptyView()
                 }
-                Spacer()
             }
             .padding(.horizontal, 15)
-            Button("Save"){
-                vm.saveProfile()
-                self.presentationMode.wrappedValue.dismiss()
-            }
-            .buttonStyle(BorderedButton())
-            .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        vm.revertProfile()
-                        self.presentationMode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "x.circle.fill")
-                    }
-                    .tint(.grayBorder)
-                }
-            }
             .navigationBarBackButtonHidden()
         }
     }

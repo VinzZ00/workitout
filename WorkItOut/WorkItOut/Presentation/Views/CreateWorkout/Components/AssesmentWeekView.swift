@@ -14,13 +14,15 @@ struct AssesmentWeekView: View {
         VStack {
             Text("What weeks of pregnancy are you in?")
                 .font(.title).bold()
+                .padding(.top, 24)
+            Spacer()
             Picker("Week Picker", selection: $week) {
                 ForEach(0...40, id: \.self) { i in
                     Text("Week \(i)").tag(i)
                 }
             }
             .pickerStyle(.wheel)
-
+            Spacer()
         }
     }
 }

@@ -19,6 +19,7 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
         VStack(alignment: .leading){
             Text(title)
                 .font(.title).bold()
+                .padding(.top, 24)
             Text(explanation)
                 .font(.headline)
                 .foregroundStyle(.gray)

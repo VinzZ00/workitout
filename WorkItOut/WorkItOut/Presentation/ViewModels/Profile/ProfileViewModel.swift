@@ -10,6 +10,7 @@ import Foundation
 
 class ProfileViewModel : ObservableObject {
     @Published var profile = Profile()
+    // Form Identity
     @Published var currentWeek: Int = 10
     @Published var exceptions: [Exception] = []
     @Published var days : [Day] = [.monday]
@@ -19,6 +20,11 @@ class ProfileViewModel : ObservableObject {
     @Published var experience: Difficulty = .beginner
     @Published var trimester: Trimester = .first
     @Published var relieve: [Relieve] = [.back]
+    
+    // View Purpose
+    @Published var currentState : AssessmentState = .chooseDay
+    @Published var showSheet = false
+    @Published var showAlert = true
     var updateCoreData : UpdateProfileUseCase = UpdateProfileUseCase()
     
     init(profile : Profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .ankle], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .tenMinutes, plan: [], histories: [])){
@@ -29,7 +35,7 @@ class ProfileViewModel : ObservableObject {
         self.durationExercise = self.profile.preferredDuration
         self.experience = self.profile.fitnessLevel
         self.exceptions = self.profile.exceptions
-        // trimester ganti dengan function getTrimesterFromCurrentWeek
+        self.currentWeek = self.profile.currentPregnancyWeek
         self.relieve = self.profile.currentRelieveNeeded
     }
     
@@ -92,6 +98,7 @@ class ProfileViewModel : ObservableObject {
         self.profile.timeOfDay = timeClock
         self.profile.exceptions = exceptions
         self.objectWillChange.send()
+        print("Save Profile")
     }
     
     func saveToCoreData(moc: NSManagedObjectContext) async{
@@ -105,6 +112,12 @@ class ProfileViewModel : ObservableObject {
         self.days = self.profile.daysAvailable
         self.experience = self.profile.fitnessLevel
         self.durationExercise = self.profile.preferredDuration
+        self.profile.exceptions = exceptions
         self.timeClock = self.profile.timeOfDay
+    }
+    
+    func showSheetwithState(state : AssessmentState){
+        self.currentState = state
+        self.showSheet = true
     }
 }

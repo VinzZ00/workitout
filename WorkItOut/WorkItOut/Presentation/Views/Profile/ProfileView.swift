@@ -10,91 +10,145 @@ import SwiftUI
 struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
-    @StateObject var viewModel : ProfileViewModel
+    @StateObject var vm : ProfileViewModel
+    
     var body: some View {
-        VStack{
-            ScrollView(showsIndicators: false){
-                VStack(alignment: .leading){
-                    Text("Pregnancy & Health Condition")
-                        .foregroundStyle(.gray)
-                        .bold()
-                        .padding(.top, 14)
-                    NavigationLink {
-                        AssessmentWrapperView(stateValue: .chooseWeek)
-                            .environmentObject(viewModel)
-                    } label: {
-                        ProfileCard(assessmentState: .chooseWeek, value: viewModel.convertToStrings(currentPregnancyWeek: viewModel.profile.currentPregnancyWeek))
-                    }
+        ZStack{
+            VStack{
+                ScrollView(showsIndicators: false){
+                    VStack(alignment: .leading){
+                        Text("Pregnancy & Health Condition")
+                            .foregroundStyle(.gray)
+                            .bold()
+                            .padding(.top, 14)
+                        Button {
+                            vm.showSheetwithState(state: .chooseWeek)
+                        } label: {
+                            ProfileCard(assessmentState: .chooseWeek, value: vm.convertToStrings(currentPregnancyWeek: vm.profile.currentPregnancyWeek))
+                        }
 
-                    NavigationLink{
-                        AssessmentWrapperView(stateValue: .chooseExceptions)
-                            .environmentObject(viewModel)
-                    } label: {
-                        ProfileCard(assessmentState: .chooseExceptions, value: viewModel.exceptions.isEmpty ? "None" : viewModel.convertToStrings(exceptions: viewModel.exceptions))
-                    }
-                }
-                .padding(.bottom, 24)
-                VStack(alignment: .leading){
-                    Text("Yoga Plan")
-                        .foregroundStyle(.gray)
-                        .bold()
-                    NavigationLink{
-                        AssessmentWrapperView(stateValue: .chooseDay)
-                            .environmentObject(viewModel)
-                    } label: {
-                        ProfileCard(assessmentState: .chooseDay, value: viewModel.convertToString(days: viewModel.profile.daysAvailable))
-                    }
-                    NavigationLink{
-                        AssessmentWrapperView(stateValue: .chooseDuration)
-                            .environmentObject(viewModel)
-                    } label: {
-                        ProfileCard(assessmentState: .chooseDuration, value: viewModel.profile.preferredDuration.rawValue)
-                    }
-                    NavigationLink{
-                        AssessmentWrapperView(stateValue: .chooseTime)
-                            .environmentObject(viewModel)
-                    } label: {
-                        ProfileCard(assessmentState: .chooseTime, value: viewModel.profile.timeOfDay.rawValue)
-                    }
-                    NavigationLink{
-                        AssessmentWrapperView(stateValue: .chooseExperience)
-                            .environmentObject(viewModel)
-                    } label: {
-                        ProfileCard(assessmentState: .chooseExperience, value: viewModel.profile.fitnessLevel.rawValue)
-                    }
-                }
-                .padding(.bottom, 24)
-            }
-            .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        Task{
-                            await viewModel.saveToCoreData(moc: moc)
-                            self.presentationMode.wrappedValue.dismiss()
-                        }
-                    } label: {
-                        ZStack{
-                            Circle()
-                                .tint(.grayBorder.opacity(0.15))
-                                .frame(width: 40)
-                            Image(systemName: "arrow.left")
-                                .font(.system(size: 10))
-                                .bold()
+                        Button{
+                            vm.showSheetwithState(state: .chooseExceptions)
+                        } label: {
+                            ProfileCard(assessmentState: .chooseExceptions, value: vm.exceptions.isEmpty ? "None" : vm.convertToStrings(exceptions: vm.exceptions))
                         }
                     }
+                    .padding(.bottom, 24)
+                    VStack(alignment: .leading){
+                        Text("Yoga Plan")
+                            .foregroundStyle(.gray)
+                            .bold()
+                        Button{
+                            vm.showSheetwithState(state: .chooseDay)
+                        } label: {
+                            ProfileCard(assessmentState: .chooseDay, value: vm.convertToString(days: vm.profile.daysAvailable))
+                        }
+                        Button{
+                            vm.showSheetwithState(state: .chooseDuration)
+                        } label: {
+                            ProfileCard(assessmentState: .chooseDuration, value: vm.profile.preferredDuration.rawValue)
+                        }
+                        Button{
+                            vm.showSheetwithState(state: .chooseTime)
+                        } label: {
+                            ProfileCard(assessmentState: .chooseTime, value: vm.profile.timeOfDay.rawValue)
+                        }
+                        Button{
+                            vm.showSheetwithState(state: .chooseExperience)
+                        } label: {
+                            ProfileCard(assessmentState: .chooseExperience, value: vm.profile.fitnessLevel.rawValue)
+                        }
+                    }
+                    .padding(.bottom, 24)
                 }
+                .toolbar{
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button {
+                            Task{
+                                await vm.saveToCoreData(moc: moc)
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
+                        } label: {
+                            ZStack{
+                                Circle()
+                                    .tint(.grayBorder.opacity(0.15))
+                                    .frame(width: 40)
+                                Image(systemName: "arrow.left")
+                                    .font(.system(size: 10))
+                                    .bold()
+                            }
+                        }
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            withAnimation {
+                                vm.showAlert.toggle()
+                            }
+                        } label: {
+                            Text("Save")
+                                .foregroundStyle(Color(.orangePrimary))
+                        }
+                        .padding(.top, 10)
+                    }
+                }
+                .sheet(isPresented: $vm.showSheet, onDismiss: {
+                    vm.saveProfile()
+                }, content: {
+                    AssessmentWrapperView(stateValue: vm.currentState)
+                        .environmentObject(vm)
+                        .presentationDragIndicator(.hidden)
+                })
+                
+                .padding(.horizontal, 20)
+                .padding(.bottom, 20)
+                .navigationTitle("Profile")
+                .navigationBarTitleDisplayMode(.large)
+                .navigationBarBackButtonHidden()
             }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 20)
-            .navigationTitle("Profile")
-            .navigationBarTitleDisplayMode(.large)
-            .navigationBarBackButtonHidden()
+            
+            if vm.showAlert {
+                Color(.accent)
+                    .opacity(0.25)
+                    .ignoresSafeArea()
+                
+                VStack(spacing: 30){
+                    ZStack{
+                        Circle()
+                            .frame(width: 70)
+                            .foregroundStyle(.main.opacity(0.1))
+                        Image(systemName: "exclamationmark.triangle")
+                            .font(.largeTitle)
+                            .foregroundStyle(.main)
+                    }
+                    VStack(spacing: 10){
+                        Text("Save Profile Changes & Update Yoga Plan")
+                            .font(.title2.bold())
+                            .multilineTextAlignment(.center)
+                            .frame(width: 250)
+                        Text("Your current and next yoga plan will be updated with your new data.")
+                            .foregroundStyle(.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 300)
+                        Button("Save"){
+                            
+                        }.buttonStyle(BorderedButton())
+                        Button("Discard Changes"){
+                            print("Discard")
+                        }.buttonStyle(OutlineButton())
+                    }
+                }
+                .padding(.vertical, 20)
+                .background()
+                .cornerRadius(8)
+                .padding(.horizontal, 10)
+                .padding(.bottom, 20)
+            }
         }
     }
 }
 
 #Preview {
     NavigationStack{
-        ProfileView(viewModel: ProfileViewModel())
+        ProfileView(vm: ProfileViewModel())
     }
 }
