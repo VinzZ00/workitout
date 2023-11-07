@@ -23,10 +23,12 @@ struct YogaDetailView: View {
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                Text(state.getTitle())
-                    .font(.largeTitle)
-                    .bold()
-                state.getDescription(yoga: yoga)
+                if showHeader {
+                    Text(state.getTitle())
+                        .font(.largeTitle)
+                        .bold()
+                    state.getDescription(yoga: yoga)
+                }
                 
                 ScrollListenerViewBuilder(showContent: $showHeader) {
                     if state == .relieveChoice {
@@ -48,8 +50,12 @@ struct YogaDetailView: View {
                     
                 }
             }
+            .navigationTitle(showHeader ? "" : state.getTitle())
+            .navigationBarTitleDisplayMode(.inline)
             .padding()
             .animation(.default, value: state)
+            .animation(.default, value: showHeader)
+            .toolbarBackground(.hidden)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     IconButtonComponent(icon: state.getIcon()) {

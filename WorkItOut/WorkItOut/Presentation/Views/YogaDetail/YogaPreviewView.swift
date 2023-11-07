@@ -15,7 +15,7 @@ struct YogaPreviewView: View {
         VStack(alignment: .leading) {
             
             ScrollView {
-                ForEach(vm.existingCategories(poses: yoga.poses), id: \.self) { category in
+                ForEach(PoseManager.existingCategories(poses: yoga.poses), id: \.self) { category in
                     HStack {
                         Text(category.rawValue)
                             .font(.subheadline)
@@ -26,7 +26,7 @@ struct YogaPreviewView: View {
                             .foregroundStyle(Color.neutral6)
                     }
                     VStack(alignment: .leading) {
-                        ForEach(vm.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
+                        ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
                             YogaCardView(name: pose.name, min: pose.seconds)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
