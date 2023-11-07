@@ -8,35 +8,35 @@
 import CoreData
 import Foundation
 
+@MainActor
 class ProfileViewModel : ObservableObject {
     @Published var profile = Profile()
     // Form Identity
-    @Published var currentWeek: Int = 10
+    @Published var currentPregnancyWeek: Int = 10
     @Published var exceptions: [Exception] = []
-    @Published var days : [Day] = [.monday]
-    @Published var timeClock : TimeOfDay = .morning
-    @Published var durationExercise : Duration = .tenMinutes
-    @Published var timeSpan : Months = .oneMonth
-    @Published var experience: Difficulty = .beginner
+    @Published var daysAvailable : [Day] = [.monday]
+    @Published var timeOfDay : TimeOfDay = .morning
+    @Published var preferredDuration : Duration = .tenMinutes
+    @Published var fitnessLevel: Difficulty = .beginner
     @Published var trimester: Trimester = .first
-    @Published var relieve: [Relieve] = [.back]
+    @Published var relieves: [Relieve] = [.back]
     
     // View Purpose
     @Published var currentState : AssessmentState = .chooseDay
     @Published var showSheet = false
-    @Published var showAlert = true
+    @Published var showAlert = false
     var updateCoreData : UpdateProfileUseCase = UpdateProfileUseCase()
     
     init(profile : Profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .ankle], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .tenMinutes, plan: [], histories: [])){
         // MARK: change to load profile from coredata
         self.profile = profile
-        self.days = self.profile.daysAvailable
-        self.timeClock = self.profile.timeOfDay
-        self.durationExercise = self.profile.preferredDuration
-        self.experience = self.profile.fitnessLevel
+        self.daysAvailable = self.profile.daysAvailable
+        self.timeOfDay = self.profile.timeOfDay
+        self.preferredDuration = self.profile.preferredDuration
+        self.fitnessLevel = self.profile.fitnessLevel
         self.exceptions = self.profile.exceptions
-        self.currentWeek = self.profile.currentPregnancyWeek
-        self.relieve = self.profile.currentRelieveNeeded
+        self.currentPregnancyWeek = self.profile.currentPregnancyWeek
+        self.relieves = self.profile.currentRelieveNeeded
     }
     
     func convertToString(days : [Day]) -> String{
@@ -89,35 +89,43 @@ class ProfileViewModel : ObservableObject {
         return trimester
     }
     
-    func saveProfile(){
-        self.profile.currentPregnancyWeek = currentWeek
-        self.profile.currentRelieveNeeded = relieve
-        self.profile.daysAvailable = days
-        self.profile.fitnessLevel = experience
-        self.profile.preferredDuration = durationExercise
-        self.profile.timeOfDay = timeClock
+    func saveProfile(moc: NSManagedObjectContext) async {
+        self.profile.currentPregnancyWeek = currentPregnancyWeek
+        self.profile.currentRelieveNeeded = relieves
+        self.profile.daysAvailable = daysAvailable
+        self.profile.fitnessLevel = fitnessLevel
+        self.profile.preferredDuration = preferredDuration
+        self.profile.timeOfDay = timeOfDay
         self.profile.exceptions = exceptions
         self.objectWillChange.send()
-        print("Save Profile")
+        await saveToCoreData(moc: moc)
     }
     
     func saveToCoreData(moc: NSManagedObjectContext) async{
-        // Logic for saving to core data
         await updateCoreData.call(profile: self.profile, context: moc)
-        print("Update Core Data Success")
     }
     
     func revertProfile(){
-        self.relieve = self.profile.currentRelieveNeeded
-        self.days = self.profile.daysAvailable
-        self.experience = self.profile.fitnessLevel
-        self.durationExercise = self.profile.preferredDuration
+        self.relieves = self.profile.currentRelieveNeeded
+        self.daysAvailable = self.profile.daysAvailable
+        self.fitnessLevel = self.profile.fitnessLevel
+        self.preferredDuration = self.profile.preferredDuration
         self.profile.exceptions = exceptions
-        self.timeClock = self.profile.timeOfDay
+        self.timeOfDay = self.profile.timeOfDay
     }
     
     func showSheetwithState(state : AssessmentState){
         self.currentState = state
         self.showSheet = true
+    }
+    
+    func equalWithProfile() -> Bool {
+        return profile.currentPregnancyWeek == currentPregnancyWeek &&
+        profile.exceptions == exceptions &&
+        profile.daysAvailable == daysAvailable &&
+        profile.timeOfDay == timeOfDay &&
+        profile.preferredDuration == preferredDuration &&
+        profile.fitnessLevel == fitnessLevel &&
+        profile.currentRelieveNeeded == relieves
     }
 }

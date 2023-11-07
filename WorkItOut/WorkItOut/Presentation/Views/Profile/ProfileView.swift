@@ -11,6 +11,7 @@ struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
     @StateObject var vm : ProfileViewModel
+    @State var selection = 0
     
     var body: some View {
         ZStack{
@@ -24,7 +25,7 @@ struct ProfileView: View {
                         Button {
                             vm.showSheetwithState(state: .chooseWeek)
                         } label: {
-                            ProfileCard(assessmentState: .chooseWeek, value: vm.convertToStrings(currentPregnancyWeek: vm.profile.currentPregnancyWeek))
+                            ProfileCard(assessmentState: .chooseWeek, value: vm.convertToStrings(currentPregnancyWeek: vm.currentPregnancyWeek))
                         }
 
                         Button{
@@ -41,22 +42,22 @@ struct ProfileView: View {
                         Button{
                             vm.showSheetwithState(state: .chooseDay)
                         } label: {
-                            ProfileCard(assessmentState: .chooseDay, value: vm.convertToString(days: vm.profile.daysAvailable))
+                            ProfileCard(assessmentState: .chooseDay, value: vm.convertToString(days: vm.daysAvailable))
                         }
                         Button{
                             vm.showSheetwithState(state: .chooseDuration)
                         } label: {
-                            ProfileCard(assessmentState: .chooseDuration, value: vm.profile.preferredDuration.rawValue)
+                            ProfileCard(assessmentState: .chooseDuration, value: vm.preferredDuration.rawValue)
                         }
                         Button{
                             vm.showSheetwithState(state: .chooseTime)
                         } label: {
-                            ProfileCard(assessmentState: .chooseTime, value: vm.profile.timeOfDay.rawValue)
+                            ProfileCard(assessmentState: .chooseTime, value: vm.timeOfDay.rawValue)
                         }
                         Button{
                             vm.showSheetwithState(state: .chooseExperience)
                         } label: {
-                            ProfileCard(assessmentState: .chooseExperience, value: vm.profile.fitnessLevel.rawValue)
+                            ProfileCard(assessmentState: .chooseExperience, value: vm.fitnessLevel.rawValue)
                         }
                     }
                     .padding(.bottom, 24)
@@ -64,9 +65,14 @@ struct ProfileView: View {
                 .toolbar{
                     ToolbarItem(placement: .topBarLeading) {
                         Button {
-                            Task{
-                                await vm.saveToCoreData(moc: moc)
+                            if vm.equalWithProfile() {
                                 self.presentationMode.wrappedValue.dismiss()
+                            }else{
+                                withAnimation(.easeInOut(duration: 0.15)) {
+                                    selection = 1
+                                    vm.showAlert = true
+                                }
+                                
                             }
                         } label: {
                             ZStack{
@@ -81,18 +87,20 @@ struct ProfileView: View {
                     }
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            withAnimation {
+                            withAnimation(.easeInOut(duration: 0.15)) {
+                                selection = 2
                                 vm.showAlert.toggle()
                             }
                         } label: {
                             Text("Save")
-                                .foregroundStyle(Color(.orangePrimary))
+                                .foregroundStyle(vm.equalWithProfile() ? .grayBorder : Color(.orangePrimary))
                         }
                         .padding(.top, 10)
+                        .disabled(vm.equalWithProfile())
                     }
                 }
                 .sheet(isPresented: $vm.showSheet, onDismiss: {
-                    vm.saveProfile()
+                    vm.objectWillChange.send()
                 }, content: {
                     AssessmentWrapperView(stateValue: vm.currentState)
                         .environmentObject(vm)
@@ -121,26 +129,30 @@ struct ProfileView: View {
                             .foregroundStyle(.main)
                     }
                     VStack(spacing: 10){
-                        Text("Save Profile Changes & Update Yoga Plan")
+                        Text(selection == 1 ? "Buat codingan 2 dulu aja" : "Save Profile Changes & Update Yoga Plan")
                             .font(.title2.bold())
                             .multilineTextAlignment(.center)
                             .frame(width: 250)
-                        Text("Your current and next yoga plan will be updated with your new data.")
+                        Text(selection == 1 ? "Besok gw buatin wording lg" : "Your current and next yoga plan will be updated with your new data.")
                             .foregroundStyle(.gray)
                             .multilineTextAlignment(.center)
                             .frame(width: 300)
                         Button("Save"){
-                            
+                            Task{
+                                await vm.saveProfile(moc: moc)
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
                         }.buttonStyle(BorderedButton())
                         Button("Discard Changes"){
-                            print("Discard")
+                            vm.revertProfile()
+                            self.presentationMode.wrappedValue.dismiss()
                         }.buttonStyle(OutlineButton())
                     }
                 }
                 .padding(.vertical, 20)
                 .background()
                 .cornerRadius(8)
-                .padding(.horizontal, 10)
+                .padding(.horizontal, 20)
                 .padding(.bottom, 20)
             }
         }

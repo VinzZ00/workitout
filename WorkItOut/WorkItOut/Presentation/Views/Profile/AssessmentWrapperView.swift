@@ -25,15 +25,15 @@ struct AssessmentWrapperView: View {
             VStack{
                 switch stateValue {
                     case .chooseDay:
-                        AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $vm.days, selections: Day.allCases, limit: 3)
+                        AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $vm.daysAvailable, selections: Day.allCases, limit: 3)
                     case .chooseTime:
-                        AssessmentDetailView(title: "When do you want to be reminded to do yoga?", selection: $vm.timeClock, selections: TimeOfDay.allCases)
+                        AssessmentDetailView(title: "When do you want to be reminded to do yoga?", selection: $vm.timeOfDay, selections: TimeOfDay.allCases)
                     case .chooseDuration:
-                        AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $vm.durationExercise, selections: Duration.allCases)
+                        AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $vm.preferredDuration, selections: Duration.allCases)
                     case .chooseWeek:
-                        AssesmentWeekView(week: $vm.currentWeek)
+                        AssesmentWeekView(week: $vm.currentPregnancyWeek)
                     case .chooseExperience:
-                        AssessmentDetailView(title: "Have you ever done yoga before?", selection: $vm.experience, selections: Difficulty.allCases)
+                        AssessmentDetailView(title: "Have you ever done yoga before?", selection: $vm.fitnessLevel, selections: Difficulty.allCases)
                     case .chooseExceptions:
                         AssessmentDetailMultipleChoiceView(title: "Do you have any health conditions?", selectedItems: $vm.exceptions, selections: Exception.allCases)
                 default:

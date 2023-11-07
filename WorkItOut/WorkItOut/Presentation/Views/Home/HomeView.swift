@@ -28,7 +28,7 @@ struct HomeView: View {
                         VStack {
                             HStack {
                                 NavigationLink {
-                                    ProfileView(viewModel: ProfileViewModel(profile: vm.profile))
+                                    ProfileView(vm: ProfileViewModel(profile: vm.profile))
                                 } label: {
                                     HomeButtonView(icon: "person")
                                 }
@@ -52,8 +52,6 @@ struct HomeView: View {
                                     }
                                 }
                             }
-                            
-                            
                         }
                         .padding(.horizontal)
                     }
