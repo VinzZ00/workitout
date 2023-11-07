@@ -21,6 +21,7 @@ class HomeViewModel: ObservableObject {
     ]
     @Published var selectedRelieve: Relieve = .back
     @Published var sheetToggle: Bool = false
+    @Published var nextView: Bool = false
     @Published var fetch = FetchProfileUseCase()
     
     init(profile: Profile = Profile()) {

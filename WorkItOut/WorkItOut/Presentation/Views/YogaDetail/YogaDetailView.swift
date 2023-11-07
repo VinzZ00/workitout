@@ -12,6 +12,9 @@ struct YogaDetailView: View {
     @State var isPresentedExecution = false
     @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
     @EnvironmentObject var vm: HomeViewModel
+    @Binding var sheetToggle : Bool
+    @Binding var nextView : Bool
+    @Binding var path : NavigationPath
     var yoga: Yoga
     
     var body: some View {
@@ -44,14 +47,9 @@ struct YogaDetailView: View {
                         
                     }
                 }
-                
-                
                 ButtonComponent(title: "Start Now") {
-                    self.isPresentedExecution = true
-                }
-                .navigationDestination(isPresented: $isPresentedExecution) {
-                        ExecutionView()
-                        .navigationBarBackButtonHidden(true)
+                    sheetToggle = false
+                    path.append("String")
                 }
             }
             .padding()
@@ -60,5 +58,5 @@ struct YogaDetailView: View {
 }
 
 #Preview {
-    YogaDetailView(yoga: Yoga())
+    YogaDetailView(sheetToggle: .constant(false), nextView: .constant(false), path: .constant(NavigationPath()), yoga: Yoga())
 }

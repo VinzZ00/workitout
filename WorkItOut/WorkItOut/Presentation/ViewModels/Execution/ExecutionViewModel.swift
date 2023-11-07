@@ -8,10 +8,10 @@
 import CoreData
 import Foundation
 
+@MainActor
 class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
     var update: UpdateProfileUseCase = UpdateProfileUseCase()
-    @Published var trimester: Int = 0
     @Published var profile: Profile = MockData.mockProfile
     @Published var yogaPlan: YogaPlan = YogaPlan()
     @Published var yoga: Yoga = Yoga()
@@ -21,35 +21,27 @@ class ExecutionViewModel: ObservableObject {
     @Published var start = true
     
     
-    init() {
-        addprofile()
-        getTrimester()
-        getYogaPlan()
-        getYoga()
+    init(yoga: Yoga) {
+        self.yoga = yoga
         getPose()
     }
     
-    func addprofile(){
-        // ganti ke load core data
-        profile = MockData.mockProfile
+    func addprofile(moc: NSManagedObjectContext) async {
+        await self.profile = fetch.call(context: moc).last!
     }
     
-    func getTrimester(){
+    func getTrimester() -> Int{
         if  1...13 ~= profile.currentPregnancyWeek {
-            trimester = 1
+            return 1
         }else if 14...27 ~= profile.currentPregnancyWeek {
-            trimester = 2
+            return 2
         }else {
-            trimester = 3
+            return 3
         }
     }
     
-    func getYogaPlan() {
-        for plan in profile.plan{
-            if plan.trimester.getInt() == trimester{
-                yogaPlan = plan
-            }
-        }
+    func getYogaPlanIndex() -> Int {
+        return profile.plan.firstIndex(where: {$0.trimester.getInt() == getTrimester()}) ?? -1
     }
     
     func getYoga() {
@@ -101,17 +93,15 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func savePoses(context: NSManagedObjectContext) async{
-        guard let yogaPlanIndex = profile.plan.firstIndex(where: {$0.id == yogaPlan.id}) else {
-            return
-        }
+        profile = await fetch.call(context: context).last!
+        
+        let yogaPlanIndex = getYogaPlanIndex()
         guard let yogaIndex = profile.plan[yogaPlanIndex].yogas.firstIndex(of: yoga) else {
             return
         }
-        
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
         let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
         profile.histories.append(history)
-        // update profile di core data
-//        await self.update.call(profile: profile, context: context)
+        await self.update.call(profile: profile, context: context)
     }
 }
