@@ -329,9 +329,8 @@
 		6C732A3D2AF109AA00E17FDB /* YogaDetail */ = {
 			isa = PBXGroup;
 			children = (
+				6CC43D1A2AFA467A00FEE93A /* Components */,
 				6C732A3E2AF109AA00E17FDB /* YogaDetailView.swift */,
-				6CC43D082AF9E91F00FEE93A /* RelieveAssesmentView.swift */,
-				6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */,
 			);
 			path = YogaDetail;
 			sourceTree = "<group>";
@@ -405,6 +404,15 @@
 				6C8D5D152AE6619700A2986D /* MockData.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		6CC43D1A2AFA467A00FEE93A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6CC43D082AF9E91F00FEE93A /* RelieveAssesmentView.swift */,
+				6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		AC5A9A4E2AE3AC5E003B0C1F /* Frameworks */ = {

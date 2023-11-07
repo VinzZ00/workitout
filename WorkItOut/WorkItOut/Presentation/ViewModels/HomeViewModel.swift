@@ -11,10 +11,10 @@ import Foundation
 @MainActor
 class HomeViewModel: ObservableObject {
     @Published var week: Int = 20
-    var yogaPlans: [YogaPlan] = []
+    @Published var yogaPlans: [YogaPlan] = []
     @Published var day: Day = .monday
     @Published var profile : Profile = Profile()
-    var currentYoga: Yoga = Yoga()
+    @Published var currentYoga: Yoga = Yoga()
     
     @Published var days: [Day] = Day.allCases
     @Published var relieves: [Relieve] = [
