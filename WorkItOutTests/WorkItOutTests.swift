@@ -41,15 +41,15 @@ final class WorkitOutTests: XCTestCase {
             testRecord = Profile(
                 name: "Testing add and fetch",
                 currentPregnancyWeek: 2,
-                currentRelieveNeeded: [.backpain, .breathing],
+                currentRelieveNeeded: [.back, .pelvic],
                 fitnessLevel: .beginner,
                 daysAvailable: [.monday, .wednesday, .friday],
                 timeOfDay: .evening,
-                preferredDuration: .fiveteenMinutes,
+                preferredDuration: .tenMinutes,
                 plan: [
                     YogaPlan(id: UUID(), name: "Plan 1", yogas: [
                         Yoga(id: UUID(), name: "Yoga 1", poses: [
-                            Pose(id: UUID(), name: "Pose1", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo], difficulty: .beginner)
+                            Pose(id: UUID(), name: "Pose1", altName: "altName", category: .seatedPose, difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed)
                         ], day: .monday, estimationDuration: 12, image: "Image 1")
                     ], trimester: .all)
                 ],
@@ -71,14 +71,14 @@ final class WorkitOutTests: XCTestCase {
     
     func testUpdate() async throws {
         if let moc = self.moc {
-            var fetchRes = await fetchUsecase?.call(context: moc)
+            let fetchRes = await fetchUsecase?.call(context: moc)
             if fetchRes?.last != nil {
                 var p = fetchRes!.last!
                 p.name = "Elvin Sestomi"
                 
                 await UpdateProfileUseCase().call(profile: p, context: moc)
                 
-                var newFetchRequest = await fetchUsecase?.call(context: moc)
+                let newFetchRequest = await fetchUsecase?.call(context: moc)
                 
                 XCTAssertEqual(newFetchRequest!.last!.name, "Elvin Sestomi")
             }
@@ -86,14 +86,14 @@ final class WorkitOutTests: XCTestCase {
     }
     
     func testUpdateAddingException() async throws {
-        var fetchRes = await fetchUsecase?.call(context: moc!)
+        let fetchRes = await fetchUsecase?.call(context: moc!)
         
         var newProfile = fetchRes![fetchRes!.count - 1]
         newProfile.exceptions.append(Exception.vertigo)
         
         await UpdateProfileUseCase().call(profile: newProfile, context: moc!)
         
-        var afterUpdate = await fetchUsecase?.call(context: moc!)
+        let afterUpdate = await fetchUsecase?.call(context: moc!)
         
         XCTAssertEqual(afterUpdate!.last!.exceptions.map{$0.rawValue}.joined(separator: ", "), newProfile.exceptions.map{$0.rawValue}.joined(separator: ", "), "Done the update test")
         

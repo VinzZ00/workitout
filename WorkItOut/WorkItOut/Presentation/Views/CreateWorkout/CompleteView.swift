@@ -8,16 +8,35 @@
 import SwiftUI
 
 struct CompleteView: View {
+    var counter: Double = 0.75
+    var strings: [Double : String] = [
+        1.5 : "Curating best yoga poses for your pregnancy weeks",
+        1 : "Taking into account your health conditions",
+        0.5 :"Predicting best sessions for your schedules",
+    ]
+    
     var body: some View {
-        VStack{
-            LoadingCircle()
-                .padding(.bottom, 20)
-            Text("Creating Exercise Plan")
-                .font(.title.bold())
-            Text("Please wait, we are best exercise plan for you")
-                .frame(width: 200)
-                .multilineTextAlignment(.center)
+        ZStack {
+            VStack {
+                Image("AssesmentBackground")
+                Spacer()
+            }
+            VStack {
+                Text("Creating Exercise Plan")
+                    .font(.title.bold())
+                Text("Please wait, we are crafting the best exercise plan for you")
+                    .frame(width: 240)
+                    .multilineTextAlignment(.center)
+                LoadingCircle()
+                    .padding(96)
+                Text(strings[counter] ?? strings.randomElement()!.value)
+                    .frame(width: 240)
+                    .multilineTextAlignment(.center)
+                
+            }
+            .padding()
         }
+        .ignoresSafeArea()
     }
 }
 

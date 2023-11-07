@@ -47,6 +47,8 @@ struct Profile : Entity, Equatable {
     var histories : [History] = []
     var exceptions : [Exception] = []
     
+    
+    
     var trimester: Trimester {
         if currentPregnancyWeek < 12 {
             return .first
@@ -63,9 +65,9 @@ struct Profile : Entity, Equatable {
         return plan.first(where: {$0.trimester == trimester}) ?? plan[0]
     }
     
-//    func getCurrentYogaPlan() -> YogaPlan {
-//        return self.plan
-//    }
+    var yogas: [Yoga] {
+        return yogaPlan.yogas
+    }
     
     func getCurrentYogaDay() {
         

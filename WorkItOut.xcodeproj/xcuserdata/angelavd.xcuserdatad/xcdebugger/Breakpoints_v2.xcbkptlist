@@ -253,7 +253,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "getYogaPlan()"
+            landmarkName = "getYoga()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -285,7 +285,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "nextPose()"
+            landmarkName = "poseChecker(pose:skipped:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -301,8 +301,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "nextPose()"
-            landmarkType = "7">
+            landmarkName = "ExecutionViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -317,7 +317,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
             endingLineNumber = "92"
-            landmarkName = "nextPose()"
+            landmarkName = "poseChecker(pose:skipped:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -333,7 +333,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "init()"
+            landmarkName = "addprofile()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -349,7 +349,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "init()"
+            landmarkName = "getTrimester()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -365,7 +365,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "nextPose()"
+            landmarkName = "poseChecker(pose:skipped:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -381,7 +381,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "init()"
+            landmarkName = "getTrimester()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -395,8 +395,8 @@
             filePath = "WorkItOut/WorkItOut/Presentation/Views/Execution/ExecutionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>

@@ -5,15 +5,17 @@
 //  Created by Jeremy Raymond on 30/10/23.
 //
 
+import CoreData
 import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
+    @State private var path : NavigationPath = NavigationPath()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
     
     var body: some View {
-        NavigationStack{
+        NavigationStack(path: $path){
             VStack {
                 VStack {
                     HStack {
@@ -35,13 +37,15 @@ struct HomeView: View {
                     .padding(.vertical)
                     
                     HStack {
-                        ForEach(Day.allCases, id: \.self) { day in
-                            DayButtonView(selectedDay: $vm.day, days: vm.days, day: day)
+                        if let profile = dm.profile {
+                            ForEach(Day.allCases, id: \.self) { day in
+                                DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
+                            }
                         }
                     }
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity)
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
                 .background(.white)
                 
                 ScrollView {
@@ -69,13 +73,17 @@ struct HomeView: View {
             
             .background(Color.background)
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(yoga: vm.currentYoga)
+                YogaDetailView(sheetToggle: $vm.sheetToggle, nextView: $vm.nextView, path: $path, yoga: vm.currentYoga)
             })
             .navigationBarBackButtonHidden()
             .onAppear{
                 Task{
                     await vm.loadProfile(moc: moc)
                 }
+            }
+            .navigationDestination(for: String.self) { string in
+                ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
+                    .navigationBarBackButtonHidden()
             }
         }
         .environmentObject(vm)

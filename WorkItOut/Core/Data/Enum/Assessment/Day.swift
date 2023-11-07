@@ -43,25 +43,68 @@ enum Day: String, UserPreference {
         }
     }
     
-    func getWeekdayInInt() -> Int {
-        let today = Date()
+    func dateForWeekday(week: Int, year: Int) -> Date {
         let calendar = Calendar.current
-        let day = calendar.component(.day, from: self.getWeekday())
+
+        var weekDayInt: Int {
+            switch self {
+            case .monday:
+                return 2
+            case .tuesday:
+                return 3
+            case .wednesday:
+                return 4
+            case .thursday:
+                return 5
+            case .friday:
+                return 6
+            case .saturday:
+                return 7
+            case .sunday:
+                return 1
+            }
+        }
         
-        return day
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.weekOfYear = week
+        dateComponents.weekday = weekDayInt
+
+        guard let date = calendar.date(from: dateComponents) else {
+            fatalError("date didn't valid, from dateForWeekDay(weekday: Day, week: Int, year: Int) -> Int")
+        }
+        
+        return date
+        
+//        var day = calendar.dateComponents([.day], from: date)
+//        
+//        guard let day = day.day else {
+//            fatalError("Day didn't found, from dateForWeekDay(weekday: Day, week: Int, year: Int) -> Int")
+//        }
+//
+//        return day;
+        
     }
     
-    func getWeekday() -> Date {
-        let today = Date()
-        let calendar = Calendar.current
-        let dayOfWeek = calendar.component(.weekday, from: today)
-        
-        let adjustedDayOfWeek = (dayOfWeek - calendar.firstWeekday + self.getInt()) % 7
-        
-        let adjustedDate = calendar.date(byAdding: .day, value: adjustedDayOfWeek, to: today)
-        
-        return adjustedDate ?? Date.now
-    }
+//    func getWeekdayInInt() -> Int {
+//        let today = Date()
+//        let calendar = Calendar.current
+//        let day = calendar.component(.day, from: self.getWeekday())
+//        
+//        return day
+//    }
+//    
+//    func getWeekday() -> Date {
+//        let today = Date()
+//        let calendar = Calendar.current
+//        let dayOfWeek = calendar.component(.weekday, from: today)
+//        
+//        let adjustedDayOfWeek = (dayOfWeek - calendar.firstWeekday + self.getInt()) % 7
+//        
+//        let adjustedDate = calendar.date(byAdding: .day, value: adjustedDayOfWeek, to: today)
+//        
+//        return adjustedDate ?? Date.now
+//    }
 }
 
 //var d = Date()
