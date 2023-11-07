@@ -52,6 +52,8 @@
 		6CC43D0B2AF9F93F00FEE93A /* IconButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D0A2AF9F93F00FEE93A /* IconButtonComponent.swift */; };
 		6CC43D0D2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D0C2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift */; };
 		6CC43D0F2AF9FD6000FEE93A /* GeneratePlanYogaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D0E2AF9FD6000FEE93A /* GeneratePlanYogaView.swift */; };
+		6CC43D112AFA236000FEE93A /* YogaPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */; };
+		6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
@@ -171,6 +173,8 @@
 		6CC43D0A2AF9F93F00FEE93A /* IconButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonComponent.swift; sourceTree = "<group>"; };
 		6CC43D0C2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanHeaderView.swift; sourceTree = "<group>"; };
 		6CC43D0E2AF9FD6000FEE93A /* GeneratePlanYogaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanYogaView.swift; sourceTree = "<group>"; };
+		6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPreviewView.swift; sourceTree = "<group>"; };
+		6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollListenerViewBuilder.swift; sourceTree = "<group>"; };
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67A2AF383F80020D00F /* DayPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6CEFB67C2AF384C80020D00F /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 				6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */,
 				6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */,
 				6CC43D0A2AF9F93F00FEE93A /* IconButtonComponent.swift */,
+				6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */,
 			);
 			path = GlobalComponent;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			children = (
 				6C732A3E2AF109AA00E17FDB /* YogaDetailView.swift */,
 				6CC43D082AF9E91F00FEE93A /* RelieveAssesmentView.swift */,
+				6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */,
 			);
 			path = YogaDetail;
 			sourceTree = "<group>";
@@ -943,6 +949,7 @@
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
+				6CC43D112AFA236000FEE93A /* YogaPreviewView.swift in Sources */,
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				D8207AEE2AF0C50A005DBD3C /* SpineMovement.swift in Sources */,
@@ -1005,6 +1012,7 @@
 				D8FBED5A2AE91A880062CC00 /* LoadingCircle.swift in Sources */,
 				6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */,
 				6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */,
+				6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */,
 				6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,

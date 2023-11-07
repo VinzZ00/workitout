@@ -22,36 +22,10 @@ struct GeneratePlanView: View {
             VStack(alignment: .leading) {
                 GeneratePlanHeaderView()
                     .environmentObject(vm)
-                
-                ScrollViewReader( content: { (proxy: ScrollViewProxy) in
-                    ScrollView {
-                        GeneratePlanYogaView()
-                            .environmentObject(vm)
-                            .background(GeometryReader {
-                                Color.clear.preference(key: ViewOffsetKey.self,
-                                    value: -$0.frame(in: .named("scroll")).origin.y)
-                            })
-                            .onPreferenceChange(ViewOffsetKey.self) {
-                                print("offset >> \($0)")
-                                if $0 > 100 {
-                                    vm.showHeader = false
-                                }
-                                else {
-                                    vm.showHeader = true
-                                }
-                            }
-                    }
-                    .onChange(of: vm.scrollTarget) { target in
-                        if let target = target {
-                            vm.scrollTarget = nil
-                            
-                            withAnimation {
-                                proxy.scrollTo(target, anchor: .center)
-                            }
-                        }
-                    }
-                    .coordinateSpace(name: "scroll")
-                })
+                ScrollListenerViewBuilder(showContent: $vm.showHeader) {
+                    GeneratePlanYogaView()
+                        .environmentObject(vm)
+                }
                 VStack {
                     ButtonComponent(title: "Finish") {
                         Task{

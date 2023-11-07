@@ -15,12 +15,6 @@ struct RelieveAssesmentView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("What Are Your Current Conditions?")
-                .font(.largeTitle)
-                .bold()
-            Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. ") 
-            + Text("(You can skip this part)")
-                .foregroundStyle(.purple)
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(Relieve.allCases, id: \.self) { relieve in
@@ -30,12 +24,12 @@ struct RelieveAssesmentView: View {
                             VStack {
                                 RoundedRectangle(cornerRadius: 12)
                                     .frame(width: 98, height: 98)
-                                    .foregroundStyle(Color.neutral6.opacity(0.5))
+                                    .foregroundStyle(Color.primary.opacity(0.5))
                                 Text("\(relieve.getString())")
                                     .bold()
                             }
                             .padding(.vertical)
-                            .padding(.horizontal, 32)
+                            .padding(.horizontal, 24)
                             .background {
                                 RoundedRectangle(cornerRadius: 12)
                                     .stroke(Color.neutral6)
@@ -48,7 +42,6 @@ struct RelieveAssesmentView: View {
             }
             .padding(.vertical)
         }
-        .padding()
     }
 }
 

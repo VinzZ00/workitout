@@ -19,10 +19,12 @@ struct HomeView: View {
             VStack {
                 VStack {
                     ZStack {
-                        Image("AssesmentResultHeaderBackground")
-                            .resizable()
-                            .frame(maxWidth: .infinity, maxHeight: 200)
-                            .ignoresSafeArea()
+                        if vm.showHeader {
+                            Image("AssesmentResultHeaderBackground")
+                                .resizable()
+                                .frame(maxWidth: .infinity, maxHeight: 200)
+                                .ignoresSafeArea()
+                        }
                         VStack {
                             HStack {
                                 NavigationLink {
@@ -41,23 +43,26 @@ struct HomeView: View {
                                 }
                             }
                             .padding(.bottom)
-                            
-                            HStack {
-                                if let profile = dm.profile {
-                                    ForEach(Day.allCases, id: \.self) { day in
-                                        DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
+                            if vm.showHeader {
+                                HStack {
+                                    if let profile = dm.profile {
+                                        ForEach(Day.allCases, id: \.self) { day in
+                                            DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
+                                        }
                                     }
                                 }
                             }
                             
+                            
                         }
                         .padding(.horizontal)
                     }
+                    .animation(.default, value: vm.showHeader)
                 }
                 .frame(maxWidth: .infinity)
                 .background(.white)
                 
-                ScrollView {
+                ScrollListenerViewBuilder(showContent: $vm.showHeader) {
                     HomeCurrentYogaView()
                         .environmentObject(vm)
                     
@@ -83,7 +88,8 @@ struct HomeView: View {
             
             .background(Color.background)
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(sheetToggle: $vm.sheetToggle, nextView: $vm.nextView, path: $path, yoga: vm.currentYoga)
+                YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
+                    .padding(.top)
             })
             .navigationBarBackButtonHidden()
             .onAppear{
