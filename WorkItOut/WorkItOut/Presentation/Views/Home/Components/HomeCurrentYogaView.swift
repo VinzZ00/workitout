@@ -9,12 +9,19 @@ import SwiftUI
 
 struct HomeCurrentYogaView: View {
     @EnvironmentObject var vm: HomeViewModel
+    var df : DateFormatter {
+        var f = DateFormatter();
+        f.dateFormat = "EEEE, dd MMMM"
+        return f
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
             VStack(alignment: .leading) {
-                Text("Today, 26 October")
+
+                
+                Text("\(df.string(from: vm.selectedDate))")
                     .font(.title3)
                     .bold()
                 if vm.yoga.poses.isEmpty {
@@ -40,6 +47,7 @@ struct HomeCurrentYogaView: View {
             .background(.black.opacity(0.5))
             .borderedCorner()
         }
+        
         .animation(.default, value: vm.yoga.poses.isEmpty)
         .padding()
         .frame(width: 360, height: 480)

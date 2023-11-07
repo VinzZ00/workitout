@@ -24,7 +24,7 @@ class HomeViewModel: ObservableObject {
     @Published var sheetToggle: Bool = false
     @Published var nextView: Bool = false
     @Published var fetch = FetchProfileUseCase()
-    
+    @Published var selectedDate = Date()
     @Published var showHeader: Bool = true
     
     init(profile: Profile = Profile()) {
@@ -73,19 +73,34 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    var month: String {
+    
+    func initMonth() {
+        
+        let DisplayWeek = self.week /* checkingWeek */ - self.profile.currentPregnancyWeek /* weekXpreg; */
+        
+        // MARK: TO GET THE CURRENT WEEK OF THE YEAR
         let calendar = Calendar.current
         let currentDate = Date()
+        let pregDate = calendar.date(byAdding: .weekOfYear, value: -self.profile.currentPregnancyWeek, to: currentDate)
+        let weekOfPreg = calendar.dateComponents([.weekOfYear], from: pregDate!)
+        let woy = self.profile.currentPregnancyWeek + weekOfPreg.weekOfYear! + DisplayWeek
         
-        let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: currentDate))
-        let dateComponents = DateComponents(weekOfYear: week)
-        if let weekStartDate = calendar.date(byAdding: dateComponents, to: startOfWeek!) {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MMMM"
-            return dateFormatter.string(from: weekStartDate)
-        }
-        return ""
+        // MARK: TO GET CURRENT YEAR
+        let year = calendar.dateComponents([.year], from: currentDate).year!
+        
+        // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
+        let displayDate = day.dateForWeekday(week: woy, year: year);
+        
+        self.selectedDate = displayDate
+        
+        let df = DateFormatter()
+        df.dateFormat = "MMMM"
+        
+        self.month = df.string(from: displayDate);
     }
+    
+    
+    @Published var month: String = ""
     
     var yogaPlan: YogaPlan {
         return yogaPlans.first(where: {$0.trimester == trimester}) ?? YogaPlan()
