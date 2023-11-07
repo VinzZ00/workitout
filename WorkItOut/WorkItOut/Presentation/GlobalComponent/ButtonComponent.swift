@@ -13,7 +13,7 @@ struct ButtonComponent: View {
     var action: () -> Void
     var color : Color
     
-    init(title: String, role: ButtonRole? = nil, color : Color = .orangePrimary, action: @escaping () -> Void) {
+    init(title: String, role: ButtonRole? = nil, color : Color = Color.primary, action: @escaping () -> Void) {
         self.title = title
         self.role = role
         self.color = color

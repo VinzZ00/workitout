@@ -107,7 +107,7 @@ final class HistoryTests: XCTestCase {
             if let update = updateUseCase {
                 await update.call(profile: profile!, context: moc!)
                 if let fetch = fetchUsecase {
-                    var fetchedProfile = await fetch.call(context: moc!).last!
+                    let fetchedProfile = await fetch.call(context: moc!).last!
                     XCTAssertEqual(fetchedProfile.histories.count, profile!.histories.count, "Done")
                 }
             }

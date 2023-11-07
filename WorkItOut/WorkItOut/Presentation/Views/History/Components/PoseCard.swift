@@ -24,7 +24,7 @@ struct PoseCard: View {
             VStack(alignment: .leading){
                 Text("\(pose.name)")
                     .bold()
-                Text("\(pose.position.rawValue)")
+                Text("\(pose.category.rawValue)")
                     .foregroundStyle(.grayBorder)
                     .font(.caption)
             }
@@ -46,9 +46,9 @@ struct PoseCard: View {
     VStack(spacing: 20){
         Text("Completed State")
             .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]))
+        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed))
         Text("Skipped State")
             .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]))
+        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed))
     }
 }
