@@ -14,6 +14,7 @@ struct YogaDetailView: View {
     @EnvironmentObject var vm: HomeViewModel
     @Binding var sheetToggle : Bool
     @Binding var nextView : Bool
+    @Binding var path : NavigationPath
     var yoga: Yoga
     
     var body: some View {
@@ -34,10 +35,7 @@ struct YogaDetailView: View {
                                     .frame(height: 0.5)
                                     .foregroundStyle(Color.neutral6)
                             }
-                            
-                
                         }
-                        
                         ForEach(yoga.poses, id: \.self) { pose in
                             if pose.category == category {
                                 YogaCardView(name: pose.name, category: (pose.relieve.first ?? .ankle).rawValue, min: pose.seconds)
@@ -45,11 +43,10 @@ struct YogaDetailView: View {
                         }
                     }
                 }
-                
-                
                 ButtonComponent(title: "Start Now") {
                     sheetToggle = false
                     nextView = true
+                    path.append(1)
                 }
             }
             .padding()
@@ -58,5 +55,5 @@ struct YogaDetailView: View {
 }
 
 #Preview {
-    YogaDetailView(sheetToggle: .constant(false), nextView: .constant(false), yoga: Yoga())
+    YogaDetailView(sheetToggle: .constant(false), nextView: .constant(false), path: .constant(NavigationPath()), yoga: Yoga())
 }

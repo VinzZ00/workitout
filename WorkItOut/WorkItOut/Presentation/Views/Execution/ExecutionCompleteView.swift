@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ExecutionCompleteView: View {
     @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var path : NavigationPath
     @ObservedObject var vm : ExecutionViewModel
     var body: some View {
         VStack(spacing: 60){
@@ -41,5 +43,5 @@ struct ExecutionCompleteView: View {
 }
 
 #Preview {
-    ExecutionCompleteView(vm: ExecutionViewModel())
+    ExecutionCompleteView(path: .constant(NavigationPath()), vm: ExecutionViewModel(yoga: Yoga()))
 }

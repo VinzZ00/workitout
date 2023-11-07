@@ -5,15 +5,17 @@
 //  Created by Jeremy Raymond on 30/10/23.
 //
 
+import CoreData
 import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
+    @State private var path : NavigationPath = NavigationPath()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
     
     var body: some View {
-        NavigationStack{
+        NavigationStack(path: $path){
             VStack {
                 VStack {
                     HStack {
@@ -69,7 +71,7 @@ struct HomeView: View {
             
             .background(Color.background)
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(sheetToggle: $vm.sheetToggle, nextView: $vm.nextView, yoga: vm.currentYoga)
+                YogaDetailView(sheetToggle: $vm.sheetToggle, nextView: $vm.nextView, path: $path, yoga: vm.currentYoga)
             })
             .navigationBarBackButtonHidden()
             .onAppear{
@@ -78,7 +80,7 @@ struct HomeView: View {
                 }
             }
             .navigationDestination(isPresented: $vm.nextView) {
-                ExecutionView()
+                ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
                     .navigationBarBackButtonHidden()
             }
         }

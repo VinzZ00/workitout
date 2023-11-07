@@ -10,13 +10,14 @@ import CoreData
 
 struct ExecutionView: View {
     @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
-    @StateObject var vm = ExecutionViewModel()
+    @StateObject var vm : ExecutionViewModel
     @StateObject var timerVm : TimerViewModel = TimerViewModel()
     @Environment(\.presentationMode) var presentationMode
     @State var textSwitch = false
     @State var previousDisabled = true
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
+    @Binding var path : NavigationPath
     
     var body: some View {
         VStack {
@@ -169,13 +170,18 @@ struct ExecutionView: View {
                         timerVm.timesUp = false
                     }
                 }
+                .onChange(of: vm.end) { _, valueIsTrue in
+                    if valueIsTrue {
+                        path.append(2)
+                    }
+                }
             }
         }.navigationDestination(isPresented: $vm.end) {
-            ExecutionCompleteView(vm: vm)
+            ExecutionCompleteView(path: $path, vm: vm)
         }
     }
 }
 
 #Preview {
-    ExecutionView()
+    ExecutionView(vm: ExecutionViewModel(yoga: Yoga()), path: .constant(NavigationPath()))
 }

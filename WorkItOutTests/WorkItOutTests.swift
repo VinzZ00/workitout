@@ -41,15 +41,15 @@ final class WorkitOutTests: XCTestCase {
             testRecord = Profile(
                 name: "Testing add and fetch",
                 currentPregnancyWeek: 2,
-                currentRelieveNeeded: [.backpain, .breathing],
+                currentRelieveNeeded: [.back, .ankle],
                 fitnessLevel: .beginner,
                 daysAvailable: [.monday, .wednesday, .friday],
                 timeOfDay: .evening,
-                preferredDuration: .fiveteenMinutes,
+                preferredDuration: .tenMinutes,
                 plan: [
                     YogaPlan(id: UUID(), name: "Plan 1", yogas: [
                         Yoga(id: UUID(), name: "Yoga 1", poses: [
-                            Pose(id: UUID(), name: "Pose1", description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, recommendedTrimester: .all, bodyPartTrained: [.arms, .back], relieve: [.backpain], exception: [.vertigo], difficulty: .beginner)
+                            Pose(id: UUID(), name: "Pose1", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, bodyPartTrained: [.arms, .back])
                         ], day: .monday, estimationDuration: 12, image: "Image 1")
                     ], trimester: .all)
                 ],
