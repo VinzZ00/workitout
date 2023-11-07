@@ -47,6 +47,8 @@ struct Profile : Entity, Equatable {
     var histories : [History] = []
     var exceptions : [Exception] = []
     
+    
+    
     var trimester: Trimester {
         if currentPregnancyWeek < 12 {
             return .first

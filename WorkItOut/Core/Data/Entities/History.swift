@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct History : Entity, Identifiable {
+struct History : Entity, Identifiable, Equatable {
     func intoNSObject(context: NSManagedObjectContext, parentProfileNS : ProfileNSObject) -> NSManagedObject {
         let historyNS = HistoryNSObject(context: context)
         historyNS.uuid = self.id;
@@ -19,6 +19,10 @@ struct History : Entity, Identifiable {
         // MARK: YANG DITAMBAHKAN UNTUK MENGANTIKAN VERSI SEBELUMNYA YANG ARRAY
         historyNS.yogaDone = self.yogaDone.intoNSObject(context: context, parentHistoryNS: historyNS) as? YogaNSObject
         return historyNS;
+    }
+    
+    static func == (lhs : History, rhs : History) -> Bool {
+        return lhs.id == rhs.id
     }
     
     var id : UUID

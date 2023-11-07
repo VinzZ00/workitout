@@ -8,11 +8,15 @@
 import Foundation
 import CoreData
 
-struct YogaPlan : Identifiable, Entity {
+struct YogaPlan : Identifiable, Entity, Equatable {
     var id: UUID = UUID()
     var name: String = "Yoga Plan Name"
     var yogas: [Yoga] = []
     var trimester: Trimester = .second
+    
+    static func == (lhs : YogaPlan, rhs : YogaPlan ) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     func intoNSObject(context : NSManagedObjectContext, parentProfileNSObject : ProfileNSObject) -> NSManagedObject{
         let yogaPlan = YogaPlanNSObject(context: context)
