@@ -11,9 +11,9 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @State var timeRemaining = 2
     @Binding var hasNoProfile : Bool
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         NavigationStack {
@@ -32,7 +32,7 @@ struct AssessmentView: View {
                     case .chooseTime:
                         AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeOfDay.allCases)
                     case .complete:
-                        CompleteView()
+                    CompleteView(counter: avm.timeRemaining)
                 }
                 Spacer()
                 
@@ -42,38 +42,25 @@ struct AssessmentView: View {
                     }
                     .buttonStyle(BorderedDisabledButton())
                 }
-                else if avm.state == .complete {
-                    Button("Next"){
-                        withAnimation {
-                            dm.pm.addPosetoPoses()
-                            Task {
-                                await dm.setUpProfile(moc: moc, profile: avm.createProfile())
+                else if avm.state != .complete {
+                        Button("Next"){
+                            withAnimation {
+                                avm.nextState()
                             }
-                            avm.finishCreateYogaPlan = true
                         }
-                    }
-                    .buttonStyle(BorderedButton())
-
-                }
-                else {
-                    Button("Next"){
-                        withAnimation {
-                            avm.nextState()
-                        }
-                    }
-                    .buttonStyle(BorderedButton())
+                        .buttonStyle(BorderedButton())
                 }
             }
             // MARK: listen ketika sudah ada pose baru ketriger.
             .onChange(of: dm.pm.poses) { val in
                 if !dm.pm.poses.isEmpty {
-                    avm.finishCreateYogaPlan = true
+                    avm.finishCreateYogaPlan.toggle()
                 }
             }
             .onReceive(timer, perform: { _ in
                 if avm.state == .complete && avm.finishCreateYogaPlan == false {
                     if avm.timeRemaining > 0 {
-                        avm.timeRemaining -= 1
+                        avm.timeRemaining -= 0.5
                     }
                     else {
                         dm.pm.addPosetoPoses()
@@ -90,20 +77,23 @@ struct AssessmentView: View {
                     .environmentObject(avm)
             }
             .toolbar {
-                if avm.state.rawValue != 0 {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button {
-                            withAnimation {
-                                avm.previousState()
+                if avm.state != .complete {
+                    if avm.state.rawValue != 0 {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
+                                withAnimation {
+                                    avm.previousState()
+                                }
+                            } label: {
+                                Image(systemName: "chevron.left")
                             }
-                        } label: {
-                            Image(systemName: "chevron.left")
                         }
                     }
+                    ToolbarItem(placement: .principal) {
+                        StateIndicator(state: $avm.state)
+                    }
                 }
-                ToolbarItem(placement: .principal) {
-                    StateIndicator(state: $avm.state)
-                }
+                
             }
         }
         

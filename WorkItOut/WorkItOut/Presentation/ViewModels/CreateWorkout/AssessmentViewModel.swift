@@ -25,7 +25,7 @@ class AssessmentViewModel : ObservableObject {
     @Published var buttonDisable = false
     @Published var finishCreateYogaPlan: Bool = false
     
-    @Published var timeRemaining = 1
+    @Published var timeRemaining: Double = 2
     
     func createProfile() ->Profile {
         return Profile(name: "User Name", currentPregnancyWeek: currentWeek, currentRelieveNeeded: relieve, fitnessLevel: experience, daysAvailable: days, timeOfDay: timeClock, preferredDuration: durationExercise, plan: [], histories: [], exceptions: exceptions)
@@ -47,6 +47,6 @@ class AssessmentViewModel : ObservableObject {
     }
     
     func resetTimer() {
-        self.timeRemaining = 1
+        self.timeRemaining = 2
     }
 }

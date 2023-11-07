@@ -35,13 +35,15 @@ struct HomeView: View {
                     .padding(.vertical)
                     
                     HStack {
-                        ForEach(Day.allCases, id: \.self) { day in
-                            DayButtonView(selectedDay: $vm.day, days: vm.days, day: day)
+                        if let profile = dm.profile {
+                            ForEach(Day.allCases, id: \.self) { day in
+                                DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
+                            }
                         }
                     }
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity)
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
                 .background(.white)
                 
                 ScrollView {
