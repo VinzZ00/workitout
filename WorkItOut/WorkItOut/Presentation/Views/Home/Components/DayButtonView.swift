@@ -13,6 +13,7 @@ struct DayButtonView: View {
     var day: Day
     var displayDate : Date
     var calendar : Calendar!
+    
     init(selectedDay: Binding<Day>, workoutDay: [Day], day: Day, weekXpreg : Int, checkedWeek : Int) {
         self.calendar = Calendar.current
         self._selectedDay = selectedDay
@@ -32,11 +33,6 @@ struct DayButtonView: View {
         
         // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
         self.displayDate = day.dateForWeekday(week: woy, year: year);
-        
-    
-        
-        
-        
     }
     
     var body: some View {
@@ -49,13 +45,14 @@ struct DayButtonView: View {
                 VStack {
                     Text("\(self.calendar.dateComponents([.day], from: displayDate).day!)")
                         .foregroundStyle(day == selectedDay ? Color.primary : .black)
+                        .frame(maxWidth: 24)
                     Circle()
                         .foregroundStyle(Color.primary)
                         .frame(width: 4)
                         .opacity(workoutDay.contains(where: {$0 == day}) ? 1 : 0)
                 }
                 .padding(.vertical, 8)
-                .padding(.horizontal)
+                .padding(.horizontal, 10)
                 .background(RoundedRectangle(cornerRadius: 12)
                     .fill(day == selectedDay ? Color.primary.opacity(0.25) : .clear)
                     .stroke(day == selectedDay ? Color.primary : .clear, lineWidth: 1)

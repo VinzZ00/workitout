@@ -25,8 +25,14 @@ struct GeneratePlanView: View {
             VStack(alignment: .leading) {
                 ZStack {
                     if showHeader {
-                        Image("AssesmentResultHeaderBackground")
-                            .ignoresSafeArea()
+                        VStack {
+                            Image("AssesmentResultHeaderBackground")
+                                .resizable()
+                                .frame(maxWidth: .infinity)
+                                .ignoresSafeArea()
+                            Spacer()
+                        }
+                        
                     }
                     
                     VStack(alignment: .leading) {

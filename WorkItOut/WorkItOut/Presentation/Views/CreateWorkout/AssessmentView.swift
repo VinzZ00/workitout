@@ -11,8 +11,6 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
-    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
-    @State var timeRemaining = 2
     @Binding var hasNoProfile : Bool
     
     var body: some View {
@@ -32,60 +30,37 @@ struct AssessmentView: View {
                     case .chooseTime:
                         AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeOfDay.allCases)
                     case .complete:
-                    CompleteView(counter: avm.timeRemaining)
+                        CompleteView(counter: avm.timeRemaining)
                 }
                 Spacer()
-                
-                if avm.buttonDisable {
-                    Button("Next"){
-                        
+                if avm.state != .complete {
+                    ButtonComponent(title: "Next") {
+                        avm.nextState()
                     }
-                    .buttonStyle(BorderedDisabledButton())
-                }
-                else if avm.state != .complete {
-                        Button("Next"){
-                            withAnimation {
-                                avm.nextState()
-                            }
-                        }
-                        .buttonStyle(BorderedButton())
+                    .disabled(avm.checkDaysIsEmpty() ? true : false)
                 }
             }
-            // MARK: listen ketika sudah ada pose baru ketriger.
-            .onChange(of: dm.pm.poses) { val in
-                if !dm.pm.poses.isEmpty {
-                    avm.finishCreateYogaPlan.toggle()
-                }
-            }
-            .onReceive(timer, perform: { _ in
-                if avm.state == .complete && avm.finishCreateYogaPlan == false {
-                    if avm.timeRemaining > 0 {
-                        avm.timeRemaining -= 0.5
+            .padding(.horizontal, 15)
+            .animation(.default, value: avm.state)
+            .onReceive(avm.timer, perform: { _ in
+                if avm.checkTimer() {
+                    dm.pm.addPosetoPoses()
+                    Task {
+                        await dm.setUpProfile(moc: moc, profile: avm.createProfile())
                     }
-                    else {
-                        dm.pm.addPosetoPoses()
-                        Task {
-                            await dm.setUpProfile(moc: moc, profile: avm.createProfile())
-                        }
-                        avm.finishCreateYogaPlan = true
-                    }
+                    avm.finishCreateYogaPlan = true
                 }
             })
-            .padding(.horizontal, 15)
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
                 GeneratePlanView(hasNoProfile: $hasNoProfile)
                     .environmentObject(avm)
             }
             .toolbar {
                 if avm.state != .complete {
-                    if avm.state.rawValue != 0 {
+                    if avm.state != .chooseWeek {
                         ToolbarItem(placement: .topBarLeading) {
-                            Button {
-                                withAnimation {
-                                    avm.previousState()
-                                }
-                            } label: {
-                                Image(systemName: "chevron.left")
+                            IconButtonComponent(icon: "chevron.left") {
+                                avm.previousState()
                             }
                         }
                     }

@@ -1,0 +1,57 @@
+//
+//  RelieveAssesmentView.swift
+//  WorkItOut
+//
+//  Created by Jeremy Raymond on 07/11/23.
+//
+
+import SwiftUI
+
+struct RelieveAssesmentView: View {
+    let columns = [
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+        ]
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("What Are Your Current Conditions?")
+                .font(.largeTitle)
+                .bold()
+            Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. ") 
+            + Text("(You can skip this part)")
+                .foregroundStyle(.purple)
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(Relieve.allCases, id: \.self) { relieve in
+                        Button(action: {
+                            print(relieve)
+                        }, label: {
+                            VStack {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .frame(width: 98, height: 98)
+                                    .foregroundStyle(Color.neutral6.opacity(0.5))
+                                Text("\(relieve.getString())")
+                                    .bold()
+                            }
+                            .padding(.vertical)
+                            .padding(.horizontal, 32)
+                            .background {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color.neutral6)
+                            }
+                        })
+                        
+                        
+                    }
+                }
+            }
+            .padding(.vertical)
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    RelieveAssesmentView()
+}

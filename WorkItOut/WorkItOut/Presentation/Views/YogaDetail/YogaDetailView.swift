@@ -23,6 +23,7 @@ struct YogaDetailView: View {
                     .clipShape(.circle)
                 Text("Balancing and Grounding")
                     .font(.largeTitle)
+                    .bold()
                 Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
                     .foregroundStyle(Color.neutral3)
                 ScrollView {
