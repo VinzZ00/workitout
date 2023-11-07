@@ -35,6 +35,7 @@ struct ExecutionCompleteView: View {
             Button("Back to Home"){
                 Task{
                     await vm.savePoses(context: moc)
+                    path.removeLast()
                 }
             }.buttonStyle(BorderedButton())
         }

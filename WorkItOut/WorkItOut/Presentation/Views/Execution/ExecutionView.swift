@@ -172,13 +172,17 @@ struct ExecutionView: View {
                 }
                 .onChange(of: vm.end) { _, valueIsTrue in
                     if valueIsTrue {
-                        path.append(2)
+                        path.append(1)
                     }
                 }
             }
-        }.navigationDestination(isPresented: $vm.end) {
+        }
+        .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)
         }
+//        .navigationDestination(for: Int.self) { string in
+//            ExecutionCompleteView(path: $path, vm: vm)
+//        }
     }
 }
 

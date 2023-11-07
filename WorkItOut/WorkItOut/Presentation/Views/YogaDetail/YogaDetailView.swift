@@ -49,8 +49,7 @@ struct YogaDetailView: View {
                 }
                 ButtonComponent(title: "Start Now") {
                     sheetToggle = false
-                    nextView = true
-                    path.append(1)
+                    path.append("String")
                 }
             }
             .padding()

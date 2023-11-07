@@ -20,13 +20,13 @@ struct UpdateProfileUseCase {
                 
                 let newHist = profilens.histories?.addingObjects(from: profile.histories.map{$0.intoNSObject(context: context, parentProfileNS: profilens)})
                 
-                let newYogaPlan = profilens.plan?.addingObjects(from: profile.plan.map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)})
+//                let newYogaPlan = profilens.plan?.addingObjects(from: profile.plan.map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)})
                 
                 // MARK: Adding History (Relation)
                 profilens.setValue(newHist, forKey: "histories")
                 
                 // MARK: Adding yogaPlan (Relation)
-                profilens.setValue(newYogaPlan, forKey: "plan")
+//                profilens.setValue(newYogaPlan, forKey: "plan")
                 
                 // MARK: Adding others self Field (Non Relation)
                 profilens.setValue(profile.name, forKey: "name")

@@ -81,7 +81,7 @@ struct HomeView: View {
                     await vm.loadProfile(moc: moc)
                 }
             }
-            .navigationDestination(isPresented: $vm.nextView) {
+            .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
                     .navigationBarBackButtonHidden()
             }
