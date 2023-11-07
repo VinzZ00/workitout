@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import AVKit
 
 struct ExecutionView: View {
     @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
@@ -17,6 +18,7 @@ struct ExecutionView: View {
     @State var previousDisabled = true
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
+    @State var player = AVPlayer()
     
     var body: some View {
         VStack {
@@ -25,8 +27,15 @@ struct ExecutionView: View {
                     Button{
                         self.presentationMode.wrappedValue.dismiss()
                     }label: {
-                        Image(systemName: "x.circle.fill")
-                            .font(.title2)
+                        ZStack{
+                            Circle()
+                                .opacity(0.02)
+                                .frame(width: 40, height: 40)
+                            Image("tabler-icon-x")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                        }
+                        
                     }
                     Spacer()
                     HStack (spacing: 20){
@@ -35,17 +44,29 @@ struct ExecutionView: View {
                         Button{
                             
                         }label: {
-                            Image(systemName: "camera.viewfinder")
-                                .font(.title2)
+                            ZStack{
+                                Circle()
+                                    .opacity(0.02)
+                                    .frame(width: 40, height: 40)
+                                Image("tabler-icon-scan-eye")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                            }
                         }
                     }
                 }
                 .padding(.horizontal, 20)
-                Rectangle()
+                
+//                VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "video", withExtension: "MOV")!))
+//                    .frame(width: 358, height: 316)
+//                    .cornerRadius(12)
+                    
+                Image("\(String(describing: vm.poses[vm.index].image))")
                     .frame(width: 358, height: 316)
                     .cornerRadius(12)
                     .padding([.horizontal, .top], 16)
-                VStack{                    
+                
+                VStack{
                     Text("\(vm.poses[vm.index].name)")
                             .font(.title)
                             .bold()
@@ -107,8 +128,15 @@ struct ExecutionView: View {
                         }
                         
                     }label: {
-                        Image(systemName: "backward.end.circle")
-                            .font(.system(size: 44))
+                        ZStack{
+                            Circle()
+                                .stroke(Color.neutral6)
+                                .frame(width: 44, height: 44)
+                            Image("tabler-icon-player-skip-back")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                        }
+                        
                     }
                     .disabled(previousDisabled)
                     
@@ -121,13 +149,23 @@ struct ExecutionView: View {
                         
                     }label: {
                         if timerVm.isTimerPaused == false{
-                            Image(systemName: "pause.circle.fill")
-                                .font(.system(size: 68))
-                                .foregroundColor(.primary)
+                            ZStack{
+                                Circle()
+                                    .frame(width: 68, height: 68)
+                                    .foregroundColor(.primary)
+                                Image("tabler-icon-player-pause")
+                                    .resizable()
+                                    .frame(width: 24, height: 28)
+                            }
                         }else {
-                            Image(systemName: "play.circle.fill")
-                                .font(.system(size: 68))
-                                .foregroundColor(.primary)
+                            ZStack{
+                                Circle()
+                                    .frame(width: 68, height: 68)
+                                    .foregroundColor(.primary)
+                                Image("tabler-icon-player-play")
+                                    .resizable()
+                                    .frame(width: 22.75, height: 28)
+                            }
                         }
                     }
                     .padding(.horizontal, 50)
@@ -139,8 +177,14 @@ struct ExecutionView: View {
                             timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds))
                         }
                     }label: {
-                        Image(systemName: "forward.end.circle")
-                            .font(.system(size: 44))
+                        ZStack{
+                            Circle()
+                                .stroke(Color.neutral6)
+                                .frame(width: 44, height: 44)
+                            Image("tabler-icon-player-skip-forward")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                        }
                     }
                     .disabled(nextDisabled)
                     

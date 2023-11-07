@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560938812AF0E35D00C77989 /* ExecutionView.swift */; };
+		56BA8EDA2AFA2BA7007CFAF3 /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 56BA8ED92AFA2BA7007CFAF3 /* video.MOV */; };
 		56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */; };
 		56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */; };
 		56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */; };
@@ -123,6 +124,7 @@
 /* Begin PBXFileReference section */
 		560938812AF0E35D00C77989 /* ExecutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionView.swift; sourceTree = "<group>"; };
 		564D66772AF4EEA5002A5D6C /* YogaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaView.swift; path = "../../../../../../../../../../Library/Mobile Documents/.Trash/YogaView.swift"; sourceTree = "<group>"; };
+		56BA8ED92AFA2BA7007CFAF3 /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = video.MOV; path = ../../../../../../../Downloads/video.MOV; sourceTree = "<group>"; };
 		56D1BC902AE8B87C002DBDA0 /* ExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionViewModel.swift; sourceTree = "<group>"; };
 		56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionViewModel.swift; sourceTree = "<group>"; };
 		56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -614,6 +616,7 @@
 			children = (
 				D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */,
 				D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */,
+				56BA8ED92AFA2BA7007CFAF3 /* video.MOV */,
 				ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */,
 			);
 			path = Resources;
@@ -903,6 +906,7 @@
 				D862DB6E2AE28E5C0014F2FC /* Preview Assets.xcassets in Resources */,
 				D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */,
 				D8207AEC2AF0B61D005DBD3C /* GoogleService-Info.plist in Resources */,
+				56BA8EDA2AFA2BA7007CFAF3 /* video.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
