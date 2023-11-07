@@ -58,8 +58,8 @@ final class HistoryTests: XCTestCase {
     func testCategorizeHistoryByDate() {
         // Initliaze
         let poses = [
-            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], description: "Banana", seconds: 60, state: .completed),
-            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back, .pelvic], description: "Bound Angle", seconds: 60, state: .completed)
+            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .ankle, .foot], description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]),
+            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.back, .ankle, .foot], description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, bodyPartTrained: [.shoulders, .legs])
         
         ]
         let yoga = Yoga(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
@@ -83,8 +83,8 @@ final class HistoryTests: XCTestCase {
     
     func testSaveHistory() async {
         let poses = [
-            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], description: "Banana", seconds: 60, state: .completed),
-            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back, .pelvic], description: "Bound Angle", seconds: 60, state: .completed)
+            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .ankle, .foot], description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]),
+            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.back, .ankle, .foot], description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, bodyPartTrained: [.shoulders, .legs])
         
         ]
         let yoga = Yoga(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
