@@ -43,7 +43,7 @@ struct HomeCurrentYogaView: View {
         .animation(.default, value: vm.yoga.poses.isEmpty)
         .padding()
         .frame(width: 360, height: 480)
-        .background(.purple)
+        .background(vm.yoga.poses.isEmpty ? Color.primary.opacity(0.8) : Color.primary)
         .borderedCorner()
         .padding(.vertical)
     }
