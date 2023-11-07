@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HistoryView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var vm : HistoryViewModel = HistoryViewModel()
+    @StateObject var vm : HistoryViewModel
     @State var showSheet = false
     var body: some View {
         ZStack(alignment: .top){
@@ -24,6 +24,8 @@ struct HistoryView: View {
                     }
                     else{
                         Text("No History to show")
+                            .font(.title2.bold())
+                            .padding(.top, 50)
                     }
                 }
                 .padding(.vertical, 20)
@@ -53,12 +55,13 @@ struct HistoryView: View {
             }
         }
         .navigationTitle("History")
+        .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()
     }
 }
 
 #Preview {
     NavigationStack{
-        HistoryView()
+        HistoryView(vm: HistoryViewModel(histories: []))
     }
 }

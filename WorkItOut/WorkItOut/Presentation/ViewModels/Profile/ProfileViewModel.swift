@@ -5,12 +5,13 @@
 //  Created by Kevin Dallian on 31/10/23.
 //
 
+import CoreData
 import Foundation
 
 class ProfileViewModel : ObservableObject {
-    @Published var profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
+    @Published var profile = Profile()
     @Published var currentWeek: Int = 10
-    @Published var exceptions: [Exception] = [.vertigo, .abdominalSurgery, .diastasisRecti]
+    @Published var exceptions: [Exception] = []
     @Published var days : [Day] = [.monday]
     @Published var timeClock : TimeOfDay = .morning
     @Published var durationExercise : Duration = .tenMinutes
@@ -18,18 +19,18 @@ class ProfileViewModel : ObservableObject {
     @Published var experience: Difficulty = .beginner
     @Published var trimester: Trimester = .first
     @Published var relieve: [Relieve] = [.back]
+    var updateCoreData : UpdateProfileUseCase = UpdateProfileUseCase()
     
-    init(){
+    init(profile : Profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .ankle], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .tenMinutes, plan: [], histories: [])){
         // MARK: change to load profile from coredata
-        self.profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .ankle], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .thirtyMinutes, plan: [], histories: [])
-        
+        self.profile = profile
         self.days = self.profile.daysAvailable
         self.timeClock = self.profile.timeOfDay
         self.durationExercise = self.profile.preferredDuration
         self.experience = self.profile.fitnessLevel
+        self.exceptions = self.profile.exceptions
         // trimester ganti dengan function getTrimesterFromCurrentWeek
         self.relieve = self.profile.currentRelieveNeeded
-        
     }
     
     func convertToString(days : [Day]) -> String{
@@ -83,17 +84,20 @@ class ProfileViewModel : ObservableObject {
     }
     
     func saveProfile(){
-        self.profile.currentPregnancyWeek = 2
+        self.profile.currentPregnancyWeek = currentWeek
         self.profile.currentRelieveNeeded = relieve
         self.profile.daysAvailable = days
         self.profile.fitnessLevel = experience
         self.profile.preferredDuration = durationExercise
         self.profile.timeOfDay = timeClock
+        self.profile.exceptions = exceptions
         self.objectWillChange.send()
     }
     
-    func saveToCoreData(){
+    func saveToCoreData(moc: NSManagedObjectContext) async{
         // Logic for saving to core data
+        await updateCoreData.call(profile: self.profile, context: moc)
+        print("Update Core Data Success")
     }
     
     func revertProfile(){

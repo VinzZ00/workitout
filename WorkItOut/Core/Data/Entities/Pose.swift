@@ -24,18 +24,19 @@ struct Pose: Identifiable, Hashable, Entity {
     var seconds : Int = 60
     var state : YogaState = .notCompleted
 
-    var position : Position = .stand
-    var spineMovement : SpineMovement = .forwardBend
-    
-    var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
+//    MARK: Deprecated
+//    var position : Position = .stand
+//    var spineMovement : SpineMovement = .balance
+//    var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
     }
-    
-    func intoNSObject(context : NSManagedObjectContext) -> NSManagedObject {
-        var pose = PoseNSObject(context: context)
-        
+  
+    func intoNSObject(context : NSManagedObjectContext, ofYoga : YogaNSObject) -> NSManagedObject {
+        let pose = PoseNSObject(context: context)
+        pose.altName = self.altName
+        pose.category = self.category.rawValue
         pose.uuid = self.id
         pose.name = self.name
         pose.image = self.image
@@ -43,12 +44,16 @@ struct Pose: Identifiable, Hashable, Entity {
         pose.poseDescription = self.description
         pose.seconds = Int32(self.seconds)
         pose.state = self.state.rawValue
-        pose.position = self.position.rawValue
-        pose.spineMovement = self.spineMovement.rawValue
+        pose.exception = self.exception.map{$0.rawValue}.joined(separator: ", ")
         pose.recommendedTrimester = self.recommendedTrimester.rawValue
         pose.relieve = self.relieve.map{$0.rawValue}.joined(separator: ", ")
-        pose.bodyPartTrained = self.bodyPartTrained.map{$0.rawValue}.joined(separator: ", ")
         pose.difficulty = self.difficulty.rawValue
+        pose.ofYoga = ofYoga
+        
+//        MARK: Deprecated
+//        pose.position = self.position.rawValue
+//        pose.spineMovement = self.spineMovement.rawValue
+//        pose.bodyPartTrained = self.bodyPartTrained.map{$0.rawValue}.joined(separator: ", ")
         
         return pose;
     }

@@ -9,17 +9,16 @@
         <relationship name="yogaDone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YogaNSObject" inverseName="ofHistory" inverseEntity="YogaNSObject"/>
     </entity>
     <entity name="PoseNSObject" representedClassName="PoseNSObject" syncable="YES" codeGenerationType="class">
-        <attribute name="bodyPartTrained" attributeType="String"/>
+        <attribute name="altName" optional="YES" attributeType="String"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="difficulty" attributeType="String"/>
         <attribute name="exception" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="poseDescription" attributeType="String"/>
-        <attribute name="position" attributeType="String"/>
         <attribute name="recommendedTrimester" attributeType="String"/>
         <attribute name="relieve" attributeType="String"/>
         <attribute name="seconds" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="spineMovement" optional="YES" attributeType="String"/>
         <attribute name="state" attributeType="String"/>
         <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="video" optional="YES" attributeType="String"/>
@@ -29,6 +28,7 @@
         <attribute name="currentPregnancyWeek" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="currentRelieveNeeded" optional="YES" attributeType="String"/>
         <attribute name="daysAvailable" optional="YES" attributeType="String"/>
+        <attribute name="exceptions" optional="YES" attributeType="String"/>
         <attribute name="fitnessLevel" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="preferredDuration" optional="YES" attributeType="String"/>

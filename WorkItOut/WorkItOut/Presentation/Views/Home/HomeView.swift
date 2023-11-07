@@ -13,24 +13,31 @@ struct HomeView: View {
     @EnvironmentObject var dm : DataManager
     
     var body: some View {
-        NavigationStack {
+        NavigationStack{
             VStack {
-                ZStack {
-                    Image("AssesmentResultHeaderBackground")
-                        .ignoresSafeArea()
-                    VStack {
-                        HStack {
+                VStack {
+                    HStack {
+                        NavigationLink {
+                            ProfileView(viewModel: ProfileViewModel(profile: vm.profile))
+                        } label: {
                             HomeButtonView(icon: "person")
-                            Spacer()
-                            HomeWeekIndicatorView()
-                                .environmentObject(vm)
-                            Spacer()
+                        }
+                        Spacer()
+                        HomeWeekIndicatorView()
+                            .environmentObject(vm)
+                        Spacer()
+                        NavigationLink{
+                            HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
+                        } label: {
                             HomeButtonView(icon: "clock.arrow.circlepath")
                         }
-                        .padding(.bottom)
-                        HStack {
+                    }
+                    .padding(.vertical)
+                    
+                    HStack {
+                        if let profile = dm.profile {
                             ForEach(Day.allCases, id: \.self) { day in
-                                DayButtonView(selectedDay: $vm.day, days: vm.days, day: day)
+                                DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
                             }
                         }
                     }
@@ -66,10 +73,18 @@ struct HomeView: View {
             .sheet(isPresented: $vm.sheetToggle, content: {
                 YogaDetailView(yoga: vm.currentYoga)
             })
+            .navigationBarBackButtonHidden()
+            .onAppear{
+                Task{
+                    await vm.loadProfile(moc: moc)
+                }
+            }
         }
         .environmentObject(vm)
         .navigationBarBackButtonHidden()
     }
+    
+    
 }
 
 //#Preview {

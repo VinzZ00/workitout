@@ -18,6 +18,7 @@ struct GeneratePlanView: View {
     @State var showHeader: Bool = true
     
 //    @State private var offset = CGFloat.zero
+    @Binding var hasNoProfile : Bool
     
     var body: some View {
         NavigationStack {
@@ -100,7 +101,7 @@ struct GeneratePlanView: View {
                         print("Changed")
                         if let target = target {
                             vm.scrollTarget = nil
-
+                            
                             withAnimation {
                                 proxy.scrollTo(target, anchor: .center)
                             }
@@ -112,8 +113,35 @@ struct GeneratePlanView: View {
                 })
                 VStack {
                     ButtonComponent(title: "Finish") {
-                        avm.state = .chooseWeek
+                        Task{
+                            if let prof = dm.profile {
+                                await vm.addProfileToCoreData(profile: prof, moc: moc) // TODO: buang seru
+                            }
+                        }
                         finish.toggle()
+                        hasNoProfile.toggle()
+                    }
+                    .padding(.horizontal)
+                }
+                .navigationTitle("Workout Plan for Beginner")
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: {
+                            avm.resetTimer()
+                            avm.state = .chooseWeek
+                            self.presentationMode.wrappedValue.dismiss()
+                        }, label: {
+                            Image(systemName: "xmark")
+                                .font(.body)
+                                .padding(8)
+                                .background(Color.background.opacity(0.5))
+                                .clipShape(.circle)
+                        })
+                    }
+                }
+                .navigationDestination(isPresented: $finish, destination: {
+                    if let prof = dm.profile {
+                        HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
                     }
                 }
                 .padding(.horizontal)

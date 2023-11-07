@@ -11,16 +11,33 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var dm: DataManager
-//    @State var testFireStore : String = ""
-//    var db = FireStoreManager.shared
-    
+    @Environment(\.managedObjectContext) var moc
+    @State private var hasNoProfile = false
+    @State private var isLoading = true
     var body: some View {
-//        TestFetchFirebase()
-//        CameraView();
-        
-        AssessmentView()
-//        CompleteView()
-//        EmptyView()
+        ZStack{
+            if isLoading {
+                EmptyView()
+            }else{
+                if !hasNoProfile{
+                    HomeView()
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $hasNoProfile) {
+            AssessmentView(hasNoProfile: $hasNoProfile)
+        }
+        .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
+            if valueIsTrue {
+                hasNoProfile = false
+            }
+        })
+        .onAppear {
+            Task{
+                hasNoProfile = await !dm.loadProfile(moc: moc)
+                isLoading = false
+            }
+        }
     }
 }
 

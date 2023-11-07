@@ -12,6 +12,9 @@ struct AssessmentView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    @State var timeRemaining = 2
+    @Binding var hasNoProfile : Bool
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         NavigationStack {
@@ -71,7 +74,7 @@ struct AssessmentView: View {
             })
             .padding(.horizontal, 15)
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView()
+                GeneratePlanView(hasNoProfile: $hasNoProfile)
                     .environmentObject(avm)
             }
             .toolbar {
@@ -101,5 +104,5 @@ struct AssessmentView: View {
 }
 
 #Preview {
-    AssessmentView()
+    AssessmentView(hasNoProfile: .constant(false))
 }

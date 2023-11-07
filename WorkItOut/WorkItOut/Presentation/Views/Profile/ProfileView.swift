@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var viewModel = ProfileViewModel()
+    @Environment(\.managedObjectContext) var moc
+    @StateObject var viewModel : ProfileViewModel
     var body: some View {
         VStack{
             ScrollView(showsIndicators: false){
@@ -18,10 +19,17 @@ struct ProfileView: View {
                         .foregroundStyle(.gray)
                         .bold()
                         .padding(.top, 14)
-                    NavigationLink(value: AssessmentState.chooseWeek) {
+                    NavigationLink {
+                        AssessmentWrapperView(stateValue: .chooseWeek)
+                            .environmentObject(viewModel)
+                    } label: {
                         ProfileCard(assessmentState: .chooseWeek, value: viewModel.convertToStrings(currentPregnancyWeek: viewModel.profile.currentPregnancyWeek))
                     }
-                    NavigationLink(value: AssessmentState.chooseExceptions) {
+
+                    NavigationLink{
+                        AssessmentWrapperView(stateValue: .chooseExceptions)
+                            .environmentObject(viewModel)
+                    } label: {
                         ProfileCard(assessmentState: .chooseExceptions, value: viewModel.exceptions.isEmpty ? "None" : viewModel.convertToStrings(exceptions: viewModel.exceptions))
                     }
                 }
@@ -30,16 +38,28 @@ struct ProfileView: View {
                     Text("Yoga Plan")
                         .foregroundStyle(.gray)
                         .bold()
-                    NavigationLink(value: AssessmentState.chooseDay) {
+                    NavigationLink{
+                        AssessmentWrapperView(stateValue: .chooseDay)
+                            .environmentObject(viewModel)
+                    } label: {
                         ProfileCard(assessmentState: .chooseDay, value: viewModel.convertToString(days: viewModel.profile.daysAvailable))
                     }
-                    NavigationLink(value: AssessmentState.chooseDuration) {
+                    NavigationLink{
+                        AssessmentWrapperView(stateValue: .chooseDuration)
+                            .environmentObject(viewModel)
+                    } label: {
                         ProfileCard(assessmentState: .chooseDuration, value: viewModel.profile.preferredDuration.rawValue)
                     }
-                    NavigationLink(value: AssessmentState.chooseTime) {
+                    NavigationLink{
+                        AssessmentWrapperView(stateValue: .chooseTime)
+                            .environmentObject(viewModel)
+                    } label: {
                         ProfileCard(assessmentState: .chooseTime, value: viewModel.profile.timeOfDay.rawValue)
                     }
-                    NavigationLink(value: AssessmentState.chooseExperience) {
+                    NavigationLink{
+                        AssessmentWrapperView(stateValue: .chooseExperience)
+                            .environmentObject(viewModel)
+                    } label: {
                         ProfileCard(assessmentState: .chooseExperience, value: viewModel.profile.fitnessLevel.rawValue)
                     }
                 }
@@ -48,7 +68,10 @@ struct ProfileView: View {
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        Task{
+                            await viewModel.saveToCoreData(moc: moc)
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
                     } label: {
                         ZStack{
                             Circle()
@@ -64,10 +87,7 @@ struct ProfileView: View {
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
             .navigationTitle("Profile")
-            .navigationDestination(for: AssessmentState.self, destination: { state in
-                AssessmentWrapperView(stateValue: state)
-                    .environmentObject(viewModel)
-            })
+            .navigationBarTitleDisplayMode(.large)
             .navigationBarBackButtonHidden()
         }
     }
@@ -75,6 +95,6 @@ struct ProfileView: View {
 
 #Preview {
     NavigationStack{
-        ProfileView()
+        ProfileView(viewModel: ProfileViewModel())
     }
 }
