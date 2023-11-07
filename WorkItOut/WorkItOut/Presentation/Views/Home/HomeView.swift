@@ -18,37 +18,51 @@ struct HomeView: View {
         NavigationStack(path: $path){
             VStack {
                 VStack {
-                    HStack {
-                        NavigationLink {
-                            ProfileView(vm: ProfileViewModel(profile: vm.profile))
-                        } label: {
-                            HomeButtonView(icon: "person")
+                    ZStack {
+                        if vm.showHeader {
+                            Image("AssesmentResultHeaderBackground")
+                                .resizable()
+                                .frame(maxWidth: .infinity, maxHeight: 200)
+                                .ignoresSafeArea()
                         }
-                        Spacer()
-                        HomeWeekIndicatorView()
-                            .environmentObject(vm)
-                        Spacer()
-                        NavigationLink{
-                            HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
-                        } label: {
-                            HomeButtonView(icon: "clock.arrow.circlepath")
-                        }
-                    }
-                    .padding(.vertical)
-                    
-                    HStack {
-                        if let profile = dm.profile {
-                            ForEach(Day.allCases, id: \.self) { day in
-                                DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
+                        VStack {
+                            HStack {
+                                NavigationLink {
+                                    ProfileView(viewModel: ProfileViewModel(profile: vm.profile))
+                                } label: {
+                                    HomeButtonView(icon: "person")
+                                }
+                                Spacer()
+                                HomeWeekIndicatorView()
+                                    .environmentObject(vm)
+                                Spacer()
+                                NavigationLink{
+                                    HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
+                                } label: {
+                                    HomeButtonView(icon: "clock.arrow.circlepath")
+                                }
                             }
+                            .padding(.bottom)
+                            if vm.showHeader {
+                                HStack {
+                                    if let profile = dm.profile {
+                                        ForEach(Day.allCases, id: \.self) { day in
+                                            DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            
                         }
+                        .padding(.horizontal)
                     }
-                    .padding(.horizontal)
-                    .frame(maxWidth: .infinity)
+                    .animation(.default, value: vm.showHeader)
                 }
+                .frame(maxWidth: .infinity)
                 .background(.white)
                 
-                ScrollView {
+                ScrollListenerViewBuilder(showContent: $vm.showHeader) {
                     HomeCurrentYogaView()
                         .environmentObject(vm)
                     
@@ -65,6 +79,7 @@ struct HomeView: View {
                         }
                         ForEach(dm.handMadeYogaPlan[vm.selectedRelieve] ?? vm.yogaPlans, id: \.id) { yogaPlan in
                             HomeOtherPlansView(yogaPlan: yogaPlan)
+                                .animation(.default, value: vm.selectedRelieve)
                         }
                     }
                     .padding()
@@ -73,7 +88,8 @@ struct HomeView: View {
             
             .background(Color.background)
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(sheetToggle: $vm.sheetToggle, nextView: $vm.nextView, path: $path, yoga: vm.currentYoga)
+                YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
+                    .padding(.top)
             })
             .navigationBarBackButtonHidden()
             .onAppear{

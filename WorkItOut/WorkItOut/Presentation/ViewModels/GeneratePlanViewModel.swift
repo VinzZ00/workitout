@@ -11,6 +11,8 @@ import Foundation
 @MainActor
 class GeneratePlanViewModel: ObservableObject {
     @Published var scrollTarget: Int?
+    @Published var showHeader: Bool = true
+    @Published var finish: Bool = false
     
     func existingCategories(poses: [Pose]) -> [Category] {
         var categories: [Category] = []

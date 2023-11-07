@@ -14,6 +14,7 @@ class HomeViewModel: ObservableObject {
     var yogaPlans: [YogaPlan] = []
     @Published var day: Day = .monday
     @Published var profile : Profile = Profile()
+    var currentYoga: Yoga = Yoga()
     
     @Published var days: [Day] = Day.allCases
     @Published var relieves: [Relieve] = [
@@ -23,6 +24,8 @@ class HomeViewModel: ObservableObject {
     @Published var sheetToggle: Bool = false
     @Published var nextView: Bool = false
     @Published var fetch = FetchProfileUseCase()
+    
+    @Published var showHeader: Bool = true
     
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
@@ -91,8 +94,6 @@ class HomeViewModel: ObservableObject {
     var yoga: Yoga {
         return yogaPlan.yogas.first(where: {$0.day == day}) ?? Yoga()
     }
-    
-    var currentYoga: Yoga = Yoga()
     
     func previousWeek() {
         if self.week > 0 {

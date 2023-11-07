@@ -22,10 +22,22 @@ class AssessmentViewModel : ObservableObject {
     @Published var relieve: [Relieve] = [.back]
     
     @Published var state : AssessmentState = .chooseWeek
-    @Published var buttonDisable = false
     @Published var finishCreateYogaPlan: Bool = false
     
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @Published var timeRemaining: Double = 2
+    
+    func checkTimer() -> Bool {
+        if state == .complete && finishCreateYogaPlan == false {
+            if timeRemaining > 0 {
+                timeRemaining -= 0.5
+            }
+            else {
+                return true
+            }
+        }
+        return false
+    }
     
     func createProfile() ->Profile {
         return Profile(name: "User Name", currentPregnancyWeek: currentWeek, currentRelieveNeeded: relieve, fitnessLevel: experience, daysAvailable: days, timeOfDay: timeClock, preferredDuration: durationExercise, plan: [], histories: [], exceptions: exceptions)
@@ -37,6 +49,13 @@ class AssessmentViewModel : ObservableObject {
     
     func nextState() {
         self.state = AssessmentState.allCases.first(where: {$0.rawValue == (self.state.rawValue+1)}) ?? .complete
+    }
+    
+    func checkDaysIsEmpty() -> Bool {
+        if self.days.isEmpty && (self.state == .chooseDay) {
+            return true
+        }
+        return false
     }
     
     func checkCategory(poses: [Pose], category: Category) -> Bool {
