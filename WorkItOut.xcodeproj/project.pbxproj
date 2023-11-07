@@ -46,13 +46,13 @@
 		6CB5F8142AF618D70019539C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8132AF618D70019539C /* Status.swift */; };
 		6CB5F8162AF61A210019539C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8152AF61A210019539C /* Category.swift */; };
 		6CB5F8182AF64F740019539C /* GeneratePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */; };
+		6CC43D052AF9D36C00FEE93A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6CC43D042AF9D36C00FEE93A /* FirebaseFirestore */; };
+		6CC43D072AF9D36C00FEE93A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6CC43D062AF9D36C00FEE93A /* FirebaseFirestoreSwift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
 		6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */; };
 		6CEFB6812AF4C5330020D00F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6802AF4C5330020D00F /* Color.swift */; };
-		6CFC36C32AF8E3330073248D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6CFC36C22AF8E3330073248D /* FirebaseFirestore */; };
-		6CFC36C52AF8E3330073248D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6CFC36C42AF8E3330073248D /* FirebaseFirestoreSwift */; };
 		AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseManager.swift */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A622AE41138003B0C1F /* Yoga.swift */; };
@@ -239,8 +239,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CFC36C32AF8E3330073248D /* FirebaseFirestore in Frameworks */,
-				6CFC36C52AF8E3330073248D /* FirebaseFirestoreSwift in Frameworks */,
+				6CC43D052AF9D36C00FEE93A /* FirebaseFirestore in Frameworks */,
+				6CC43D072AF9D36C00FEE93A /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,8 +840,8 @@
 			);
 			name = WorkItOut;
 			packageProductDependencies = (
-				6CFC36C22AF8E3330073248D /* FirebaseFirestore */,
-				6CFC36C42AF8E3330073248D /* FirebaseFirestoreSwift */,
+				6CC43D042AF9D36C00FEE93A /* FirebaseFirestore */,
+				6CC43D062AF9D36C00FEE93A /* FirebaseFirestoreSwift */,
 			);
 			productName = WorkItOut;
 			productReference = D862DB632AE28E5A0014F2FC /* WorkItOut.app */;
@@ -1298,11 +1298,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6CFC36C22AF8E3330073248D /* FirebaseFirestore */ = {
+		6CC43D042AF9D36C00FEE93A /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FirebaseFirestore;
 		};
-		6CFC36C42AF8E3330073248D /* FirebaseFirestoreSwift */ = {
+		6CC43D062AF9D36C00FEE93A /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FirebaseFirestoreSwift;
 		};

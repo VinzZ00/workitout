@@ -14,7 +14,6 @@ struct AssessmentView: View {
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @State var timeRemaining = 2
     @Binding var hasNoProfile : Bool
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         NavigationStack {

@@ -40,22 +40,23 @@ struct GeneratePlanView: View {
                             .padding(.horizontal)
                                 
                         }
-                        DayPickerView(days: dm.profile.daysAvailable, selection: dm.profile.daysAvailable[0])
+                        DayPickerView(days: dm.profile!.daysAvailable, selection: dm.profile!.daysAvailable[0])
                             .environmentObject(vm)
+                            .padding(.top)
                     }
                 }
                 
                 ScrollViewReader( content: { (proxy: ScrollViewProxy) in
                     ScrollView {
                         VStack {
-                            if dm.profile.plan.isEmpty {
+                            if dm.profile!.plan.isEmpty {
                                 Text("No Plan yet")
                             }
                             else {
                                 VStack(alignment: .leading) {
-                                    ForEach(dm.profile.yogaPlan.yogas) { yoga in
+                                    ForEach(dm.profile!.yogas) { yoga in
                                         VStack(alignment: .leading) {
-                                            Text("Day \(yoga.day.getString()) - Upper Body")
+                                            Text(yoga.day.getString())
                                                 .font(.title3)
                                                 .bold()
                                                 .id(yoga.day.getInt())
@@ -123,28 +124,6 @@ struct GeneratePlanView: View {
                     }
                     .padding(.horizontal)
                 }
-                .navigationTitle("Workout Plan for Beginner")
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button(action: {
-                            avm.resetTimer()
-                            avm.state = .chooseWeek
-                            self.presentationMode.wrappedValue.dismiss()
-                        }, label: {
-                            Image(systemName: "xmark")
-                                .font(.body)
-                                .padding(8)
-                                .background(Color.background.opacity(0.5))
-                                .clipShape(.circle)
-                        })
-                    }
-                }
-                .navigationDestination(isPresented: $finish, destination: {
-                    if let prof = dm.profile {
-                        HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
-                    }
-                }
-                .padding(.horizontal)
             }
             .animation(.default, value: showHeader)
             .navigationBarBackButtonHidden()
@@ -166,7 +145,9 @@ struct GeneratePlanView: View {
                 }
             }
             .navigationDestination(isPresented: $finish, destination: {
-                HomeView(vm: HomeViewModel(profile: dm.profile))
+                if let prof = dm.profile {
+                    HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
+                }
             })
             
         }

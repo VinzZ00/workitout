@@ -63,9 +63,9 @@ struct Profile : Entity, Equatable {
         return plan.first(where: {$0.trimester == trimester}) ?? plan[0]
     }
     
-//    func getCurrentYogaPlan() -> YogaPlan {
-//        return self.plan
-//    }
+    var yogas: [Yoga] {
+        return yogaPlan.yogas
+    }
     
     func getCurrentYogaDay() {
         
