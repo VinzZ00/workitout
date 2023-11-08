@@ -26,9 +26,9 @@ class ExecutionViewModel: ObservableObject {
         getPose()
     }
     
-    func addprofile(moc: NSManagedObjectContext) async {
-        await self.profile = fetch.call(context: moc).last!
-    }
+//    func addprofile(moc: NSManagedObjectContext) async throws {
+//         self.profile = try await fetch.call(context: moc).last!
+//    }
     
     func getTrimester() -> Int{
         if  1...13 ~= profile.currentPregnancyWeek {
@@ -92,8 +92,8 @@ class ExecutionViewModel: ObservableObject {
         }
     }
     
-    func savePoses(context: NSManagedObjectContext) async{
-        profile = await fetch.call(context: context).last!
+    func savePoses(context: NSManagedObjectContext) async throws {
+        profile = try await fetch.call(context: context).last!
         
         let yogaPlanIndex = getYogaPlanIndex()
         guard let yogaIndex = profile.plan[yogaPlanIndex].yogas.firstIndex(of: yoga) else {
@@ -102,6 +102,6 @@ class ExecutionViewModel: ObservableObject {
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
         let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
         profile.histories.append(history)
-        await self.update.call(profile: profile, context: context)
+        try await self.update.call(profile: profile, context: context)
     }
 }

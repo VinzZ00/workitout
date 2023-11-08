@@ -94,9 +94,9 @@ class ProfileViewModel : ObservableObject {
         self.objectWillChange.send()
     }
     
-    func saveToCoreData(moc: NSManagedObjectContext) async{
+    func saveToCoreData(moc: NSManagedObjectContext) async throws{
         // Logic for saving to core data
-        await updateCoreData.call(profile: self.profile, context: moc)
+        try await updateCoreData.call(profile: self.profile, context: moc)
         print("Update Core Data Success")
     }
     

@@ -11,6 +11,7 @@ struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
     @StateObject var viewModel : ProfileViewModel
+    @State var alert : Bool = false;
     var body: some View {
         VStack{
             ScrollView(showsIndicators: false){
@@ -69,7 +70,11 @@ struct ProfileView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
                         Task{
-                            await viewModel.saveToCoreData(moc: moc)
+                            do {
+                                try await viewModel.saveToCoreData(moc: moc)
+                            } catch {
+                                self.alert = true
+                            }
                             self.presentationMode.wrappedValue.dismiss()
                         }
                     } label: {
@@ -89,6 +94,8 @@ struct ProfileView: View {
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.large)
             .navigationBarBackButtonHidden()
+        }.alert(isPresented: self.$alert) {
+            Alert(title: Text("Error"), message: Text("Sorry, your Profile Change is not saved, Please recheck your profile"))
         }
     }
 }

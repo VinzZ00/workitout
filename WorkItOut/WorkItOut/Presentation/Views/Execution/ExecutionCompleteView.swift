@@ -13,6 +13,7 @@ struct ExecutionCompleteView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var path : NavigationPath
     @ObservedObject var vm : ExecutionViewModel
+    @State var alert : Bool = false
     var body: some View {
         VStack(spacing: 60){
             Spacer()
@@ -34,10 +35,16 @@ struct ExecutionCompleteView: View {
             Spacer()
             Button("Back to Home"){
                 Task{
-                    await vm.savePoses(context: moc)
+                    do {
+                        try await vm.savePoses(context: moc)
+                    } catch {
+                        self.alert = true
+                    }
                     path.removeLast()
                 }
             }.buttonStyle(BorderedButton())
+        }.alert(isPresented: self.$alert){
+            Alert(title: Text("Error"), message: Text("Sorry, your yoga poses change is not saved, Please recheck your yoga poses"), dismissButton: .default(Text("OK")))
         }
         .navigationBarBackButtonHidden()
     }

@@ -128,8 +128,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "testCategorizeHistoryByDate()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -144,8 +144,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "testSaveHistory()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "34475ABB-A40C-4BE4-A69E-7E59470BD341 - 149f419d930e53bc"
@@ -207,8 +207,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "testSaveHistory()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - e6c17a49f036357e"
@@ -421,8 +421,8 @@
             filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "initMonth()"
             landmarkType = "7">
          </BreakpointContent>
@@ -437,8 +437,8 @@
             filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "initMonth()"
             landmarkType = "7">
             <Locations>
@@ -485,8 +485,8 @@
             filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "initMonth()"
             landmarkType = "7">
          </BreakpointContent>
@@ -581,8 +581,8 @@
             filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "initMonth()"
             landmarkType = "7">
          </BreakpointContent>
@@ -661,8 +661,8 @@
             filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "initMonth()"
             landmarkType = "7">
          </BreakpointContent>

@@ -13,6 +13,7 @@ struct HomeView: View {
     @State private var path : NavigationPath = NavigationPath()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
+    @State var failLoading = false
     
     var body: some View {
         NavigationStack(path: $path){
@@ -90,6 +91,18 @@ struct HomeView: View {
                     .padding()
                 }
             }
+            .alert(isPresented: $failLoading) {
+                Alert(title: Text("Error"), message: Text("Loading profile is not successful"), dismissButton: .default(Text("Reload"), action: {
+                    failLoading = false
+                    Task{
+                        do {
+                            self.failLoading = try await dm.loadProfile(moc: moc)
+                        } catch {
+                            self.failLoading = false
+                        }
+                    }
+                }))
+            }
             .onChange(of: vm.week) { _ in
                 vm.initMonth()
             }
@@ -104,7 +117,11 @@ struct HomeView: View {
             .navigationBarBackButtonHidden()
             .onAppear{
                 Task{
-                    await vm.loadProfile(moc: moc)
+                    do {
+                        self.failLoading = try await dm.loadProfile(moc: moc)
+                    } catch {
+                        self.failLoading = false
+                    }
                 }
             }
             .navigationDestination(for: String.self) { string in
