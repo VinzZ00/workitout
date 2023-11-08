@@ -16,6 +16,7 @@ struct HomeWeekIndicatorView: View {
     var body: some View {
         Button(action: {
             vm.previousWeek()
+
         }, label: {
             Image(systemName: "chevron.left")
                 .foregroundStyle(Color.neutral3)
@@ -29,6 +30,7 @@ struct HomeWeekIndicatorView: View {
         }
         Button(action: {
             vm.nextWeek()
+
         }, label: {
             Image(systemName: "chevron.right")
                 .foregroundStyle(Color.neutral3)

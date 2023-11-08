@@ -34,6 +34,9 @@ struct HomeView: View {
                                 }
                                 Spacer()
                                 HomeWeekIndicatorView()
+                                    .onAppear {
+                                        self.vm.initMonth()
+                                    }
                                     .environmentObject(vm)
                                 Spacer()
                                 NavigationLink{
@@ -42,13 +45,15 @@ struct HomeView: View {
                                     HomeButtonView(icon: "clock.arrow.circlepath")
                                 }
                             }
+                            
+                            
                             .padding(.bottom)
                             if vm.showHeader {
                                 HStack {
                                     if let profile = dm.profile {
                                         ForEach(Day.allCases, id: \.self) { day in
                                             DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
-                                        }
+                                        } 
                                     }
                                 }
                             }
@@ -85,7 +90,12 @@ struct HomeView: View {
                     .padding()
                 }
             }
-            
+            .onChange(of: vm.week) { _ in
+                vm.initMonth()
+            }
+            .onChange(of: vm.day) { _ in
+                vm.initMonth()
+            }
             .background(Color.background)
             .sheet(isPresented: $vm.sheetToggle, content: {
                 YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
