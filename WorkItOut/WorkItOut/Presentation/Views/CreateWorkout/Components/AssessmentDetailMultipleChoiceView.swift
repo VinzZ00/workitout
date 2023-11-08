@@ -30,7 +30,8 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
                                 return
                             }
                             selectedItems.remove(at: selectedIndex)
-                        }else{
+                        }
+                        else{
                             if limit == 0 {
                                 selectedItems.append(selection.wrappedValue)
                             }
