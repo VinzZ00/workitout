@@ -129,11 +129,11 @@ struct ProfileView: View {
                             .foregroundStyle(.main)
                     }
                     VStack(spacing: 10){
-                        Text(selection == 1 ? "Buat codingan 2 dulu aja" : "Save Profile Changes & Update Yoga Plan")
+                        Text(selection == 1 ? "Exit and Discard Changes" : "Save Profile Changes & Update Yoga Plan")
                             .font(.title2.bold())
                             .multilineTextAlignment(.center)
                             .frame(width: 250)
-                        Text(selection == 1 ? "Besok gw buatin wording lg" : "Your current and next yoga plan will be updated with your new data.")
+                        Text(selection == 1 ? "Looks like you have changes, Are you sure you want to exit?" : "Your current and next yoga plan will be updated with your new data.")
                             .foregroundStyle(.gray)
                             .multilineTextAlignment(.center)
                             .frame(width: 300)
