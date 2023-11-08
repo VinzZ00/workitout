@@ -34,6 +34,14 @@ class HomeViewModel: ObservableObject {
         self.profile = profile
     }
     
+    func loadProfile(moc: NSManagedObjectContext) async throws {
+        let fetchedProfile = try await fetch.call(context: moc)
+        self.profile = fetchedProfile.last!
+        self.week = self.profile.currentPregnancyWeek
+        self.days = self.profile.daysAvailable
+        self.yogaPlans = self.profile.plan
+        self.objectWillChange.send()
+    }
     
     func toggleSheet(yoga: Yoga) {
         self.currentYoga = yoga

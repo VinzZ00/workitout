@@ -13,8 +13,7 @@ struct HomeView: View {
     @State private var path : NavigationPath = NavigationPath()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
-    @State var failLoading = false
-    
+    @State var alert : Bool = false
     var body: some View {
         NavigationStack(path: $path){
             VStack {
@@ -91,18 +90,6 @@ struct HomeView: View {
                     .padding()
                 }
             }
-            .alert(isPresented: $failLoading) {
-                Alert(title: Text("Error"), message: Text("Loading profile is not successful"), dismissButton: .default(Text("Reload"), action: {
-                    failLoading = false
-                    Task{
-                        do {
-                            self.failLoading = try await dm.loadProfile(moc: moc)
-                        } catch {
-                            self.failLoading = false
-                        }
-                    }
-                }))
-            }
             .onChange(of: vm.week) { _ in
                 vm.initMonth()
             }
@@ -114,13 +101,25 @@ struct HomeView: View {
                 YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
                     .padding(.top)
             })
+            .alert(isPresented: self.$alert, content: {
+                Alert(title: Text("Error"), message: Text("Sorry Please Reload your profile, loading profile failed"), dismissButton: .default(Text("Reload"), action: {
+                    self.alert = false
+                    Task{
+                        do {
+                            try await vm.loadProfile(moc: moc)
+                        } catch {
+                            self.alert = true
+                        }
+                    }
+                }))
+            })
             .navigationBarBackButtonHidden()
             .onAppear{
                 Task{
                     do {
-                        self.failLoading = try await dm.loadProfile(moc: moc)
+                        try await vm.loadProfile(moc: moc)
                     } catch {
-                        self.failLoading = false
+                        self.alert = true
                     }
                 }
             }
