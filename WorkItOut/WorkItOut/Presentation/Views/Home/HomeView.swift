@@ -103,7 +103,6 @@ struct HomeView: View {
             })
             .alert(isPresented: self.$alert, content: {
                 Alert(title: Text("Error"), message: Text("Sorry Please Reload your profile, loading profile failed"), dismissButton: .default(Text("Reload"), action: {
-                    self.alert = false
                     Task{
                         do {
                             try await vm.loadProfile(moc: moc)
