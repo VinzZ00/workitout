@@ -94,24 +94,28 @@ struct PoseManager {
         poses = filterPosesByRelieves(poses: poses, relieves: relieves)
         var newPoses: [Pose] = []
         
-        newPoses.append(poseByCategory(poses: poses, category: .warmUp))
-        for _ in 0 ..< duration.getDurationInMinutes() {
-            var newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
-            if !poses.isEmpty {
+        if !poses.isEmpty {
+            newPoses.append(poseByCategory(poses: poses, category: .warmUp))
+            for _ in 0 ..< duration.getDurationInMinutes() {
+                var newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
+                
                 var i = 0
-                while newPoses.contains(where: {$0.name == newPose.name}) && (poses.count > newPoses.count) {
+                while newPoses.contains(where: {$0.name == newPose.name}) &&
+                    (poses.count > newPoses.count) &&
+                    !(poses.contains(newPoses)) {
                     i += 1
                     newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
                     print(i)
                     if i == 100 {
                         print("loop")
+                        break
                     }
                 }
                 
+                newPoses.append(newPose)
             }
-            newPoses.append(newPose)
+            newPoses.append(poseByCategory(poses: poses, category: .coolingDown))
         }
-        newPoses.append(poseByCategory(poses: poses, category: .coolingDown))
         
         newPoses.sort(by: {$0.category.getOrder() > $1.category.getOrder()})
         

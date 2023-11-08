@@ -10,11 +10,12 @@ import SwiftUI
 struct ScrollListenerViewBuilder<Content: View>: View {
     let content: Content
     
-    @State var scrollTarget: Int?
+    @Binding var scrollTarget: Int?
     @Binding var showContent: Bool
 
-    init(showContent: Binding<Bool>, @ViewBuilder content: () -> Content) {
+    init(scrollTarget: Binding<Int?> = .constant(0),showContent: Binding<Bool>, @ViewBuilder content: () -> Content) {
         self._showContent = showContent
+        self._scrollTarget = scrollTarget
         self.content = content()
     }
     
@@ -23,8 +24,7 @@ struct ScrollListenerViewBuilder<Content: View>: View {
             ScrollView {
                 content
                     .background(GeometryReader {
-                        Color.clear.preference(key: ViewOffsetKey.self,
-                                               value: -$0.frame(in: .named("scroll")).origin.y)
+                        Color.clear.preference(key: ViewOffsetKey.self, value: -$0.frame(in: .named("scroll")).origin.y)
                     })
                     .onPreferenceChange(ViewOffsetKey.self) {
 //                        print("offset >> \($0)")

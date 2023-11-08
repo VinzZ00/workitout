@@ -46,7 +46,7 @@ struct AssessmentWrapperView: View {
                     } label: {
                         Image(systemName: "x.circle.fill")
                     }
-                    .tint(.grayBorder)
+                    .tint(Color.neutral6)
                 }
             }
             .navigationBarBackButtonHidden()

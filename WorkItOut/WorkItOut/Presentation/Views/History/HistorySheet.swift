@@ -43,7 +43,7 @@ struct HistorySheet: View {
                 } label: {
                     ZStack{
                         Circle()
-                            .foregroundStyle(.grayBorder.opacity(0.25))
+                            .foregroundStyle(Color.neutral6.opacity(0.25))
                             .frame(width: 24, height: 24)
                         Image(systemName: "multiply")
                             .foregroundStyle(.black.opacity(0.6))

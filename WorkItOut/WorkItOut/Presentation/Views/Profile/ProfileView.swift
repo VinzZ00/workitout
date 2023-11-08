@@ -75,7 +75,7 @@ struct ProfileView: View {
                     } label: {
                         ZStack{
                             Circle()
-                                .tint(.grayBorder.opacity(0.15))
+                                .tint(Color.neutral6.opacity(0.15))
                                 .frame(width: 40)
                             Image(systemName: "arrow.left")
                                 .font(.system(size: 10))
