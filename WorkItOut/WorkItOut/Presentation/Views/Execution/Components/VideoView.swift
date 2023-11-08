@@ -38,6 +38,6 @@ struct VideoView: View {
     }
 }
 
-#Preview {
-    VideoView(name: "video")
-}
+//#Preview {
+//    VideoView(name: "video")
+//}
