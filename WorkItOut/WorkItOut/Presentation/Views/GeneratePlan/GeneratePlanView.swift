@@ -32,9 +32,9 @@ struct GeneratePlanView: View {
                             if let prof = dm.profile {
                                 await vm.addProfileToCoreData(profile: prof, moc: moc) // TODO: buang seru
                             }
+                            vm.finish.toggle()
+                            hasNoProfile.toggle()
                         }
-                        vm.finish.toggle()
-                        hasNoProfile.toggle()
                     }
                     .padding(.horizontal)
                 }

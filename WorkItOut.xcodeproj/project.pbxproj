@@ -386,7 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				6C8D5D142AE6619700A2986D /* Mock */,
-				6C8D5D0B2AE6618E00A2986D /* Enum */,
 				AC5A9A612AE41138003B0C1F /* Entities */,
 			);
 			path = Data;
@@ -625,6 +624,7 @@
 				6C8D5D0A2AE6617500A2986D /* Data */,
 				AC5A9A642AE41138003B0C1F /* Constant */,
 				ACFED3852AE2B5F10018CD03 /* Services */,
+				6C8D5D0B2AE6618E00A2986D /* Enum */,
 				ACFED3832AE2B5CD0018CD03 /* Config */,
 				ACFED3822AE2B5C20018CD03 /* Resources */,
 			);
