@@ -18,8 +18,8 @@ struct ExecutionView: View {
     @State var previousDisabled = true
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
-    @State var player = AVPlayer()
     @Binding var path : NavigationPath
+    @State var avPlayer = AVPlayer()
     
     var body: some View {
         VStack {
@@ -58,14 +58,12 @@ struct ExecutionView: View {
                 }
                 .padding(.horizontal, 20)
                 
-//                VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "video", withExtension: "MOV")!))
-//                    .frame(width: 358, height: 316)
-//                    .cornerRadius(12)
-                    
-                Image("\(String(describing: vm.poses[vm.index].image))")
-                    .frame(width: 358, height: 316)
+                AVPlayerController(player: avPlayer)
+                    .frame(width: 358, height: 300)
                     .cornerRadius(12)
-                    .padding([.horizontal, .top], 16)
+                    .onAppear {
+                        avPlayer.play()
+                    }
                 
                 VStack{
                     Text("\(vm.poses[vm.index].name)")
@@ -144,8 +142,10 @@ struct ExecutionView: View {
                     Button{
                         if timerVm.isTimerPaused == false{
                             timerVm.pauseTimer()
+                            avPlayer.pause()
                         }else {
                             timerVm.continueTimer()
+                            avPlayer.play()
                         }
                         
                     }label: {
@@ -220,6 +220,9 @@ struct ExecutionView: View {
                     }
                 }
             }
+        }
+        .onAppear{
+            self.avPlayer = AVPlayer(url: Bundle.main.url(forResource: vm.poses[vm.index].name, withExtension: "MOV")!)
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)
