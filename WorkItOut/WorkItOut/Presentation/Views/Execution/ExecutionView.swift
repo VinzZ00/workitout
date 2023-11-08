@@ -135,7 +135,6 @@ struct ExecutionView: View {
                                 .resizable()
                                 .frame(width: 20, height: 20)
                         }
-                        
                     }
                     .disabled(previousDisabled)
                     
@@ -170,8 +169,6 @@ struct ExecutionView: View {
                         }
                     }
                     .padding(.horizontal, 50)
-                    
-                    
                     Button{
                         vm.nextPose(skipped: true)
                         if !(vm.index + 1 >= vm.poses.count) {
@@ -222,7 +219,7 @@ struct ExecutionView: View {
             }
         }
         .onAppear{
-            self.avPlayer = AVPlayer(url: Bundle.main.url(forResource: vm.poses[vm.index].name, withExtension: "MOV")!)
+//            self.avPlayer = AVPlayer(url: Bundle.main.url(forResource: vm.poses[vm.index].name, withExtension: "MOV")!)
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)

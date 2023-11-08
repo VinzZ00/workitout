@@ -72,7 +72,6 @@ struct ProfileView: View {
                                     selection = 1
                                     vm.showAlert = true
                                 }
-                                
                             }
                         } label: {
                             ZStack{
@@ -105,6 +104,7 @@ struct ProfileView: View {
                     AssessmentWrapperView(stateValue: vm.currentState)
                         .environmentObject(vm)
                         .presentationDragIndicator(.hidden)
+                        .padding(.top, 24)
                 })
                 
                 .padding(.horizontal, 20)
