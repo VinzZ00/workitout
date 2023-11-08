@@ -42,11 +42,6 @@ struct AssessmentWrapperView: View {
                 Spacer()
             }
             .padding(.horizontal, 15)
-            Button("Save"){
-                vm.saveProfile()
-                self.presentationMode.wrappedValue.dismiss()
-            }
-            .buttonStyle(BorderedButton())
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
