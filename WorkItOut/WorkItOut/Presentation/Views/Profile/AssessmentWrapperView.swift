@@ -39,6 +39,24 @@ struct AssessmentWrapperView: View {
                 default:
                     EmptyView()
                 }
+                Spacer()
+            }
+            .padding(.horizontal, 15)
+            Button("Save"){
+                vm.saveProfile()
+                self.presentationMode.wrappedValue.dismiss()
+            }
+            .buttonStyle(BorderedButton())
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        vm.revertProfile()
+                        self.presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "x.circle.fill")
+                    }
+                    .tint(Color.neutral6)
+                }
             }
             .padding(.horizontal, 15)
             .navigationBarBackButtonHidden()

@@ -22,7 +22,7 @@ struct GeneratePlanView: View {
             VStack(alignment: .leading) {
                 GeneratePlanHeaderView()
                     .environmentObject(vm)
-                ScrollListenerViewBuilder(showContent: $vm.showHeader) {
+                ScrollListenerViewBuilder(scrollTarget: $vm.scrollTarget, showContent: $vm.showHeader) {
                     GeneratePlanYogaView()
                         .environmentObject(vm)
                 }

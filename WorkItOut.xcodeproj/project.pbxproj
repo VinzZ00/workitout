@@ -56,12 +56,13 @@
 		6CC43D0F2AF9FD6000FEE93A /* GeneratePlanYogaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D0E2AF9FD6000FEE93A /* GeneratePlanYogaView.swift */; };
 		6CC43D112AFA236000FEE93A /* YogaPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */; };
 		6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */; };
+		6CC43D152AFA3E0300FEE93A /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D142AFA3E0300FEE93A /* PoseManager.swift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
 		6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */; };
 		6CEFB6812AF4C5330020D00F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6802AF4C5330020D00F /* Color.swift */; };
-		AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseManager.swift */; };
+		AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A622AE41138003B0C1F /* Yoga.swift */; };
 		AC5A9A672AE41138003B0C1F /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A632AE41138003B0C1F /* Pose.swift */; };
@@ -86,7 +87,6 @@
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A282AF0EFD100333CB6 /* ProfileView.swift */; };
 		D8065A2F2AF0F33800333CB6 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */; };
-		D8207AE62AF0B29D005DBD3C /* TestFetchFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */; };
 		D8207AEC2AF0B61D005DBD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */; };
 		D8207AEE2AF0C50A005DBD3C /* SpineMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AED2AF0C50A005DBD3C /* SpineMovement.swift */; };
 		D8207AF02AF0E0F6005DBD3C /* RequestYogaPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */; };
@@ -178,12 +178,13 @@
 		6CC43D0E2AF9FD6000FEE93A /* GeneratePlanYogaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanYogaView.swift; sourceTree = "<group>"; };
 		6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPreviewView.swift; sourceTree = "<group>"; };
 		6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollListenerViewBuilder.swift; sourceTree = "<group>"; };
+		6CC43D142AFA3E0300FEE93A /* PoseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseManager.swift; sourceTree = "<group>"; };
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67A2AF383F80020D00F /* DayPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6CEFB67C2AF384C80020D00F /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
 		6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssesmentWeekView.swift; sourceTree = "<group>"; };
 		6CEFB6802AF4C5330020D00F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		AC437B2B2AF148D20055C0AD /* PoseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseManager.swift; sourceTree = "<group>"; };
+		AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseFirebaseManager.swift; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		AC5A9A622AE41138003B0C1F /* Yoga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
 		AC5A9A632AE41138003B0C1F /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
@@ -209,7 +210,6 @@
 		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D8065A282AF0EFD100333CB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
-		D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchFirebase.swift; sourceTree = "<group>"; };
 		D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8207AED2AF0C50A005DBD3C /* SpineMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineMovement.swift; sourceTree = "<group>"; };
 		D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestYogaPose.swift; sourceTree = "<group>"; };
@@ -331,9 +331,8 @@
 		6C732A3D2AF109AA00E17FDB /* YogaDetail */ = {
 			isa = PBXGroup;
 			children = (
+				6CC43D1A2AFA467A00FEE93A /* Components */,
 				6C732A3E2AF109AA00E17FDB /* YogaDetailView.swift */,
-				6CC43D082AF9E91F00FEE93A /* RelieveAssesmentView.swift */,
-				6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */,
 			);
 			path = YogaDetail;
 			sourceTree = "<group>";
@@ -343,7 +342,6 @@
 			children = (
 				6C7B2C492AEF6F8A00E0DADF /* Components */,
 				6C7B2C4C2AEF726A00E0DADF /* GeneratePlanView.swift */,
-				D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */,
 			);
 			path = GeneratePlan;
 			sourceTree = "<group>";
@@ -408,6 +406,15 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		6CC43D1A2AFA467A00FEE93A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6CC43D082AF9E91F00FEE93A /* RelieveAssesmentView.swift */,
+				6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		AC5A9A4E2AE3AC5E003B0C1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,7 +425,7 @@
 		AC5A9A512AE3BC9D003B0C1F /* FireStore */ = {
 			isa = PBXGroup;
 			children = (
-				AC437B2B2AF148D20055C0AD /* PoseManager.swift */,
+				AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */,
 				AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */,
 			);
 			path = FireStore;
@@ -795,6 +802,7 @@
 			isa = PBXGroup;
 			children = (
 				D8FBED4D2AE906FE0062CC00 /* ButtonStyles.swift */,
+				6CC43D142AFA3E0300FEE93A /* PoseManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -960,6 +968,7 @@
 				6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */,
 				6CB5F8082AF604850019539C /* HomeButtonView.swift in Sources */,
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
+				6CC43D152AFA3E0300FEE93A /* PoseManager.swift in Sources */,
 				ACD49E812AEFA47000793872 /* Helper.swift in Sources */,
 				D8FD5D6D2AF3577F005F8D4E /* HistorySection.swift in Sources */,
 				6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */,
@@ -986,12 +995,11 @@
 				6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
 				D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */,
-				AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */,
+				AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */,
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
 				D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */,
 				56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */,
 				D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */,
-				D8207AE62AF0B29D005DBD3C /* TestFetchFirebase.swift in Sources */,
 				AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */,
 				56BA8EDC2AFA3102007CFAF3 /* VideoView.swift in Sources */,
 				6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */,
@@ -1227,7 +1235,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -1260,7 +1268,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

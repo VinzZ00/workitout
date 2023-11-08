@@ -7,11 +7,13 @@
 import CoreData
 import Foundation
 
-struct Pose: Identifiable, Hashable, Entity {
+struct Pose: Identifiable, Hashable, Comparable, Entity {
+    
+    
     let id: UUID
     var name : String = "Pose Name"
     var altName: String = "Alternate Name"
-    var category: Category = .coolingDown
+    var category: Category = .warmUp
     var difficulty : Difficulty = .beginner
     var exception: [Exception] = [.abdominalSurgery, .diastasisRecti, .highBloodPressure]
     var recommendedTrimester : Trimester = .second
@@ -21,6 +23,7 @@ struct Pose: Identifiable, Hashable, Entity {
     var image : String?
     var video : String?
     var description : String = "Pose Description"
+    var instructions: [String] = ["Instruction 1", "Instruction 2", "Instruction 3"]
     var seconds : Int = 60
     var state : YogaState = .notCompleted
 
@@ -28,6 +31,10 @@ struct Pose: Identifiable, Hashable, Entity {
 //    var position : Position = .stand
 //    var spineMovement : SpineMovement = .balance
 //    var bodyPartTrained : [BodyPart] = [.arms, .back, .chest]
+    
+    static func < (lhs: Pose, rhs: Pose) -> Bool {
+        lhs.name < rhs.name
+    }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)

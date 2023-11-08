@@ -25,7 +25,7 @@ struct PoseCard: View {
                 Text("\(pose.name)")
                     .bold()
                 Text("\(pose.category.rawValue)")
-                    .foregroundStyle(.grayBorder)
+                    .foregroundStyle(Color.neutral6)
                     .font(.caption)
             }
             Spacer()

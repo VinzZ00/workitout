@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-class PoseManager: ObservableObject {
+class PoseFirebaseManager: ObservableObject {
     var firestore = FireStoreManager.shared
     @Published var firebasePoses: [RequestYogaPose] = []
     @Published var poses : [Pose] = []

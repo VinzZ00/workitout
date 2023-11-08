@@ -24,7 +24,7 @@ struct GeneratePlanYogaView: View {
                                 .font(.title3)
                                 .bold()
                                 .id(yoga.day.getInt())
-                            ForEach(vm.existingCategories(poses: yoga.poses), id: \.self) { category in
+                            ForEach(PoseManager.existingCategories(poses: yoga.poses), id: \.self) { category in
                                 HStack {
                                     Text(category.rawValue)
                                         .font(.subheadline)
@@ -35,7 +35,7 @@ struct GeneratePlanYogaView: View {
                                         .foregroundStyle(Color.neutral6)
                                 }
                                 
-                                ForEach(vm.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
+                                ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
                                     YogaCardView(name: pose.name)
                                 }
                             }

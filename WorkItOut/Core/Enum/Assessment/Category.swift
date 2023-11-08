@@ -12,11 +12,11 @@ enum Category: String, CaseIterable {
     case standingPose = "Standing Pose"
     case seatedPose = "Seated Pose"
     case hipOpeners = "Hip Openers"
-    case squattingAndBirthing = "Squatting And Birthing"
+//    case squattingAndBirthing = "Squatting And Birthing"
     case coolingDown = "Cooling Down"
     
     static func getMainCategories() -> [Category] {
-        return [.standingPose, .seatedPose, .hipOpeners, .squattingAndBirthing]
+        return [.standingPose, .seatedPose, .hipOpeners]
     }
     
     func getOrder() -> Int {
@@ -29,10 +29,10 @@ enum Category: String, CaseIterable {
             return 3
         case .hipOpeners:
             return 4
-        case .squattingAndBirthing:
-            return 5
+//        case .squattingAndBirthing:
+//            return 5
         case .coolingDown:
-            return 6
+            return 5
         }
     }
 }

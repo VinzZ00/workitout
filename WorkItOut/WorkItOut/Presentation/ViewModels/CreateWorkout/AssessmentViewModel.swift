@@ -16,7 +16,6 @@ class AssessmentViewModel : ObservableObject {
     @Published var experience: Difficulty = .beginner
     @Published var timeClock : TimeOfDay = .morning
     
-    
     @Published var timeSpan : Months = .oneMonth
     @Published var trimester: Trimester = .first
     @Published var relieve: [Relieve] = [.back]
@@ -37,6 +36,10 @@ class AssessmentViewModel : ObservableObject {
             }
         }
         return false
+    }
+    
+    func resetTimer() {
+        self.timeRemaining = 2
     }
     
     func createProfile() ->Profile {
@@ -65,7 +68,5 @@ class AssessmentViewModel : ObservableObject {
         return false
     }
     
-    func resetTimer() {
-        self.timeRemaining = 2
-    }
+    
 }
