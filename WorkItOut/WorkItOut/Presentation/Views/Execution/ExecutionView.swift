@@ -58,8 +58,8 @@ struct ExecutionView: View {
                 }
                 .padding(.horizontal, 20)
                 
-                AVPlayerController(player: avPlayer)
-                    .frame(width: 358, height: 300)
+                VideoPlayer(player: avPlayer)
+                    .mask(Rectangle().frame(width: 250, height: 220).cornerRadius(12))
                     .cornerRadius(12)
                     .onAppear {
                         avPlayer.play()
@@ -222,7 +222,7 @@ struct ExecutionView: View {
             }
         }
         .onAppear{
-            self.avPlayer = AVPlayer(url: Bundle.main.url(forResource: vm.poses[vm.index].name, withExtension: "MOV")!)
+            self.avPlayer = AVPlayer(url: URL(string: vm.poses[vm.index].video!)!)
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)
