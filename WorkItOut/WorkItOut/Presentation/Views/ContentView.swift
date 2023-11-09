@@ -14,6 +14,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var hasNoProfile = false
     @State private var isLoading = true
+    @State var alert = false
     var body: some View {
         ZStack{
             if isLoading {
@@ -34,7 +35,7 @@ struct ContentView: View {
         })
         .onAppear {
             Task{
-                hasNoProfile = await !dm.loadProfile(moc: moc)
+                hasNoProfile = try await !dm.loadProfile(moc: moc)
                 isLoading = false
             }
         }

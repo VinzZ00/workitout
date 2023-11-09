@@ -19,10 +19,10 @@ class DataManager: ObservableObject {
     
     var handMadeYogaPlan: [Relieve : [YogaPlan]] = [:]
     
-    public func loadProfile(moc : NSManagedObjectContext) async -> Bool {
+    public func loadProfile(moc : NSManagedObjectContext) async throws -> Bool {
         let fetchProfile = FetchProfileUseCase()
         
-        let fetchRes = await fetchProfile.call(context: moc)
+        let fetchRes = try await fetchProfile.call(context: moc)
         if fetchRes.isEmpty{
             return false
         }
@@ -34,6 +34,7 @@ class DataManager: ObservableObject {
     public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async {
         self.profile = profile
         
+        self.profile!.plan = []
         for trimester in Trimester.allCases {
             self.profile!.plan.append(PoseManager.createYogaPlan(poses: pm.poses, trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: []))
         }

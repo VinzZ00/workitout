@@ -13,6 +13,8 @@ struct ProfileView: View {
     @StateObject var vm : ProfileViewModel
     @State var selection = 0
     
+    @EnvironmentObject var dm: DataManager
+    
     var body: some View {
         ZStack{
             VStack{
@@ -139,6 +141,10 @@ struct ProfileView: View {
                             .frame(width: 300)
                         Button("Save"){
                             Task{
+                                dm.pm.addPosetoPoses()
+                                vm.setProfile()
+                                await dm.setUpProfile(moc: moc, profile: vm.profile)
+                                vm.profile = dm.profile!
                                 await vm.saveProfile(moc: moc)
                                 self.presentationMode.wrappedValue.dismiss()
                             }

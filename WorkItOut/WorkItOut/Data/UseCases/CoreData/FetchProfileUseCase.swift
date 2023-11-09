@@ -17,7 +17,7 @@ struct FetchProfileUseCase{
         var profile : [Profile] = []
         
         do {
-            switch try await repository.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
+            switch await try repository.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
             case .success(let data) :
                 for x in data as? [ProfileNSObject] ?? [] {
                     var p = x.intoObject();
@@ -28,6 +28,10 @@ struct FetchProfileUseCase{
                     }
                     
                 }
+//                let s = data as! [ProfileNSObject]
+//                profile.append(Profile(name: ""))
+//                profile.insert(contentsOf: s.map{ $0.intoObject() }, at: 0)
+                print(data)
             case .failure(let err) :
                 fatalError("Error getting workout : \(err.localizedDescription)")
             }

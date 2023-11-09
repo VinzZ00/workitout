@@ -27,7 +27,7 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func addprofile(moc: NSManagedObjectContext) async {
-        await self.profile = fetch.call(context: moc).last!
+        await self.profile = try! fetch.call(context: moc).last!
     }
     
     func getTrimester() -> Int{
@@ -93,7 +93,7 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func savePoses(context: NSManagedObjectContext) async{
-        profile = await fetch.call(context: context).last!
+        profile = try! await fetch.call(context: context).last!
         
         let yogaPlanIndex = getYogaPlanIndex()
         guard let yogaIndex = profile.plan[yogaPlanIndex].yogas.firstIndex(of: yoga) else {

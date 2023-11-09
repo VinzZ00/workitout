@@ -89,7 +89,7 @@ class ProfileViewModel : ObservableObject {
         return trimester
     }
     
-    func saveProfile(moc: NSManagedObjectContext) async {
+    func setProfile() {
         self.profile.currentPregnancyWeek = currentPregnancyWeek
         self.profile.currentRelieveNeeded = relieves
         self.profile.daysAvailable = daysAvailable
@@ -97,6 +97,10 @@ class ProfileViewModel : ObservableObject {
         self.profile.preferredDuration = preferredDuration
         self.profile.timeOfDay = timeOfDay
         self.profile.exceptions = exceptions
+    }
+    
+    func saveProfile(moc: NSManagedObjectContext) async {
+        
         self.objectWillChange.send()
         await saveToCoreData(moc: moc)
     }
