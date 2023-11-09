@@ -64,12 +64,12 @@ struct ExecutionView: View {
                         .frame(width: 358, height: 358)
                 }
                 
-                VideoPlayer(player: avPlayer)
-                    .mask(Rectangle().frame(width: 250, height: 220).cornerRadius(12))
-                    .cornerRadius(12)
-                    .onAppear {
-                        avPlayer.play()
-                    }
+//                VideoPlayer(player: avPlayer)
+//                    .mask(Rectangle().frame(width: 250, height: 220).cornerRadius(12))
+//                    .cornerRadius(12)
+//                    .onAppear {
+//                        avPlayer.play()
+//                    }
                 
                 VStack{
                     Text("\(vm.poses[vm.index].name)")
