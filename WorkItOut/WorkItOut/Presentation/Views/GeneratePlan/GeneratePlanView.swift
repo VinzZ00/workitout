@@ -16,6 +16,7 @@ struct GeneratePlanView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @Binding var hasNoProfile : Bool
+    @State var alert : Bool = false
     
     var body: some View {
         NavigationStack {
@@ -30,7 +31,11 @@ struct GeneratePlanView: View {
                     ButtonComponent(title: "Finish") {
                         Task{
                             if let prof = dm.profile {
-                                await vm.addProfileToCoreData(profile: prof, moc: moc) // TODO: buang seru
+                                do {
+                                    try await vm.addProfileToCoreData(profile: prof, moc: moc)
+                                } catch {
+                                    
+                                }
                             }
                             vm.finish.toggle()
                             hasNoProfile.toggle()
@@ -38,6 +43,8 @@ struct GeneratePlanView: View {
                     }
                     .padding(.horizontal)
                 }
+            }.alert(isPresented: self.$alert){
+                Alert(title: Text("Error"), message: Text("Sorry, your Profile is not saved, Please resave your profile"))
             }
             .animation(.default, value: vm.showHeader)
             .navigationBarBackButtonHidden()

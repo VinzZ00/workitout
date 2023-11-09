@@ -34,9 +34,9 @@ class HomeViewModel: ObservableObject {
         self.profile = profile
     }
     
-    func loadProfile(moc: NSManagedObjectContext) async {
-        let fetchedProfile = try! await fetch.call(context: moc)
-        self.profile = fetchedProfile.last ?? Profile()
+    func loadProfile(moc: NSManagedObjectContext) async throws {
+        let fetchedProfile = try await fetch.call(context: moc)
+        self.profile = fetchedProfile.last!
         self.week = self.profile.currentPregnancyWeek
         self.days = self.profile.daysAvailable
         self.yogaPlans = self.profile.plan

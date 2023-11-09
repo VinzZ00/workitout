@@ -35,7 +35,11 @@ struct ContentView: View {
         })
         .onAppear {
             Task{
-                hasNoProfile = try await !dm.loadProfile(moc: moc)
+                do {
+                    hasNoProfile = try await !dm.loadProfile(moc: moc)
+                } catch {
+                    hasNoProfile = false
+                }
                 isLoading = false
             }
         }

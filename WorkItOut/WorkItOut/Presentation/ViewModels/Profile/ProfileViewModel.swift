@@ -105,8 +105,10 @@ class ProfileViewModel : ObservableObject {
         await saveToCoreData(moc: moc)
     }
     
-    func saveToCoreData(moc: NSManagedObjectContext) async{
-        await updateCoreData.call(profile: self.profile, context: moc)
+    func saveToCoreData(moc: NSManagedObjectContext) async throws{
+        // Logic for saving to core data
+        try await updateCoreData.call(profile: self.profile, context: moc)
+        print("Update Core Data Success")
     }
     
     func revertProfile(){

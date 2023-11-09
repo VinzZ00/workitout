@@ -21,8 +21,14 @@ class DataManager: ObservableObject {
     
     public func loadProfile(moc : NSManagedObjectContext) async throws -> Bool {
         let fetchProfile = FetchProfileUseCase()
+        let fetchRes : [Profile]
         
-        let fetchRes = try await fetchProfile.call(context: moc)
+        do {
+            fetchRes = try await fetchProfile.call(context: moc)
+        } catch {
+            return true
+        }
+        
         if fetchRes.isEmpty{
             return false
         }

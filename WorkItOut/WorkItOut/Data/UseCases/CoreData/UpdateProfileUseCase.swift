@@ -11,8 +11,8 @@ import CoreData
 struct UpdateProfileUseCase {
     var repository = Repository()
     
-    func call(profile : Profile, context : NSManagedObjectContext) async {
-        do {
+    func call(profile : Profile, context : NSManagedObjectContext) async throws {
+//        do {
             
             switch try await repository.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
             case .success(let data) :
@@ -62,8 +62,8 @@ struct UpdateProfileUseCase {
             case .failure(let err) :
                 fatalError("Error Update, tidak berhasil melakukan fetch didalam updateUsecase with err : \(err.localizedDescription)")
             }
-        } catch let err {
-            fatalError("Error update workout: \(err.localizedDescription)")
-        }
+//        } catch let err {
+//            fatalError("Error update workout: \(err.localizedDescription)")
+//        }
     }
 }

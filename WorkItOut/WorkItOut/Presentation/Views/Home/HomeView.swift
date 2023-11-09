@@ -13,7 +13,7 @@ struct HomeView: View {
     @State private var path : NavigationPath = NavigationPath()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
-    
+    @State var alert : Bool = false
     var body: some View {
         NavigationStack(path: $path){
             VStack {
@@ -99,10 +99,25 @@ struct HomeView: View {
                 YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
                     .padding(.top)
             })
+            .alert(isPresented: self.$alert, content: {
+                Alert(title: Text("Error"), message: Text("Sorry Please Reload your profile, loading profile failed"), dismissButton: .default(Text("Reload"), action: {
+                    Task{
+                        do {
+                            try await vm.loadProfile(moc: moc)
+                        } catch {
+                            self.alert = true
+                        }
+                    }
+                }))
+            })
             .navigationBarBackButtonHidden()
             .onAppear{
                 Task{
-                    await vm.loadProfile(moc: moc)
+                    do {
+                        try await vm.loadProfile(moc: moc)
+                    } catch {
+                        self.alert = true
+                    }
                 }
             }
             .navigationDestination(for: String.self) { string in

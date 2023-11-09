@@ -11,7 +11,7 @@ struct HistorySheet: View {
     var history : History
     @Binding var showSheet : Bool
     var body: some View {
-        LazyVStack(alignment: .leading, spacing: 10){
+        VStack(alignment: .leading, spacing: 10){
             Text("\(history.executionDate.formatted(date: .long, time: .omitted))")
             LazyVStack(alignment: .leading, spacing: 5){
                 // MARK: menghapus first supaya tidak error.

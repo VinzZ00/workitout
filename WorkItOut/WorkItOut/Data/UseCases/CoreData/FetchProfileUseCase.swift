@@ -12,12 +12,12 @@ struct FetchProfileUseCase{
     
     let repository = Repository()
     
-    func call(context : NSManagedObjectContext) async -> [Profile]{
+    func call(context : NSManagedObjectContext) async throws -> [Profile]{
         
         var profile : [Profile] = []
         
-        do {
-            switch await try repository.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
+//        do {
+            switch try await repository.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
             case .success(let data) :
                 for x in data as? [ProfileNSObject] ?? [] {
                     var p = x.intoObject();
@@ -35,9 +35,9 @@ struct FetchProfileUseCase{
             case .failure(let err) :
                 fatalError("Error getting workout : \(err.localizedDescription)")
             }
-        } catch {
-            fatalError("Error getting the workout")
-        }
+//        } catch {
+//            fatalError("Error getting the workout")
+//        }
         return profile
     }
 }

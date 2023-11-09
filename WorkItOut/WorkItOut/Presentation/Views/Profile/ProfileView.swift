@@ -14,7 +14,7 @@ struct ProfileView: View {
     @State var selection = 0
     
     @EnvironmentObject var dm: DataManager
-    
+    @State var alert : Bool = false;
     var body: some View {
         ZStack{
             VStack{
@@ -147,8 +147,6 @@ struct ProfileView: View {
                                 vm.profile = dm.profile!
                                 await vm.saveProfile(moc: moc)
                                 self.presentationMode.wrappedValue.dismiss()
-                            }
-                        }.buttonStyle(BorderedButton())
                         Button("Discard Changes"){
                             vm.revertProfile()
                             self.presentationMode.wrappedValue.dismiss()
@@ -161,6 +159,13 @@ struct ProfileView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
             }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 20)
+            .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.large)
+            .navigationBarBackButtonHidden()
+        }.alert(isPresented: self.$alert) {
+            Alert(title: Text("Error"), message: Text("Sorry, your Profile Change is not saved, Please recheck your profile"))
         }
     }
 }
