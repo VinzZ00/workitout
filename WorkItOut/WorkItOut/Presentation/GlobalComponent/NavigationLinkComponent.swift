@@ -20,7 +20,7 @@ struct NavigationLinkComponent: View {
         }
         .foregroundStyle(.white)
         .padding(.vertical, 12)
-        .background(.orangePrimary)
+        .background(Color.primary)
         .clipShape(.rect(cornerRadius: 12))
     }
 }

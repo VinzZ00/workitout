@@ -23,6 +23,7 @@ struct HomeYogaCategoryView: View {
                         .fill(relieve == vm.selectedRelieve ? .main.opacity(0.25) : .white)
                         .stroke(relieve == vm.selectedRelieve ? Color.primary : .clear, lineWidth: 1)
                 )
+                .borderedCorner()
         })
     }
 }

@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var moc
     @StateObject var viewModel : ProfileViewModel
+    @State var alert : Bool = false;
     var body: some View {
         VStack{
             ScrollView(showsIndicators: false){
@@ -67,11 +69,18 @@ struct ProfileView: View {
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        Task{
+                            do {
+                                try await viewModel.saveToCoreData(moc: moc)
+                            } catch {
+                                self.alert = true
+                            }
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
                     } label: {
                         ZStack{
                             Circle()
-                                .tint(.grayBorder.opacity(0.15))
+                                .tint(Color.neutral6.opacity(0.15))
                                 .frame(width: 40)
                             Image(systemName: "arrow.left")
                                 .font(.system(size: 10))
@@ -83,7 +92,10 @@ struct ProfileView: View {
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
             .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.large)
             .navigationBarBackButtonHidden()
+        }.alert(isPresented: self.$alert) {
+            Alert(title: Text("Error"), message: Text("Sorry, your Profile Change is not saved, Please recheck your profile"))
         }
     }
 }

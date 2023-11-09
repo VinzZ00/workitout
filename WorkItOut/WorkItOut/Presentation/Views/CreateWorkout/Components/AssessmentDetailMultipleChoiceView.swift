@@ -30,7 +30,8 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
                                 return
                             }
                             selectedItems.remove(at: selectedIndex)
-                        }else{
+                        }
+                        else{
                             if limit == 0 {
                                 selectedItems.append(selection.wrappedValue)
                             }
@@ -50,8 +51,8 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
                         
                     })
                     .background(RoundedRectangle(cornerRadius: 12)
-                        .fill(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary.opacity(0.25) : .clear)
-                        .stroke(self.selectedItems.contains(selection.wrappedValue) ? .orangePrimary : .grayBorder, lineWidth: 1)
+                        .fill(self.selectedItems.contains(selection.wrappedValue) ? Color.primary.opacity(0.25) : .clear)
+                        .stroke(self.selectedItems.contains(selection.wrappedValue) ? Color.primary : Color.neutral6, lineWidth: 1)
                     )
                     .padding(.vertical, 3)
                 }

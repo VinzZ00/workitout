@@ -9,7 +9,7 @@ import SwiftUI
 
 struct YogaCardView: View {
     var name: String = "Mountain Pose (Tadasana)"
-    var category: String = "Category Item"
+    var description: String = "Help relieve back pain"
     var min: Int = 10
     
     var body: some View {
@@ -22,15 +22,15 @@ struct YogaCardView: View {
                 Text(name)
                     .font(.title3)
                     .bold()
-                Text(category)
+                Text("\(min) Min")
+                    .font(.subheadline)
+                    .padding(6)
+                    .background(Color.neutral6.opacity(0.5))
+                    .clipShape(.rect(cornerRadius: 10))
+                Text(description)
                     .foregroundStyle(Color.neutral3)
-                    .font(.body)
+                    .font(.subheadline)
             }
-            Spacer()
-            Text("\(min) min")
-                .padding(8)
-                .background(Color.neutral6)
-                .clipShape(.rect(cornerRadius: 12))
         }
     }
 }

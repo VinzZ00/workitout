@@ -24,6 +24,8 @@ struct HistoryView: View {
                     }
                     else{
                         Text("No History to show")
+                            .font(.title2.bold())
+                            .padding(.top, 50)
                     }
                 }
                 .padding(.vertical, 20)
@@ -33,7 +35,7 @@ struct HistoryView: View {
                     label: {
                         ZStack{
                             Circle()
-                                .tint(.grayBorder.opacity(0.15))
+                                .tint(Color.neutral6.opacity(0.15))
                                 .frame(width: 40)
                             Image(systemName: "arrow.left")
                                 .font(.system(size: 10))
@@ -53,6 +55,7 @@ struct HistoryView: View {
             }
         }
         .navigationTitle("History")
+        .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()
     }
 }

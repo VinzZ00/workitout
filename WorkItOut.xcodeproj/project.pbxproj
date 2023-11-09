@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560938812AF0E35D00C77989 /* ExecutionView.swift */; };
+		56BA8EDC2AFA3102007CFAF3 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BA8EDB2AFA3102007CFAF3 /* VideoView.swift */; };
+		56BA8EE02AFA3D83007CFAF3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BA8EDF2AFA3D83007CFAF3 /* Video.swift */; };
 		56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */; };
 		56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */; };
 		56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */; };
@@ -23,8 +25,6 @@
 		6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7752AEF558700C84D2A /* Profile.swift */; };
 		6C3FD7782AEF560A00C84D2A /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7772AEF560A00C84D2A /* History.swift */; };
 		6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */; };
-		6C6842D52AF89A840015E8CD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6842D42AF89A840015E8CD /* FirebaseFirestore */; };
-		6C6842D72AF89A840015E8CD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6842D62AF89A840015E8CD /* FirebaseFirestoreSwift */; };
 		6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */; };
 		6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */; };
 		6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */; };
@@ -48,12 +48,21 @@
 		6CB5F8142AF618D70019539C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8132AF618D70019539C /* Status.swift */; };
 		6CB5F8162AF61A210019539C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8152AF61A210019539C /* Category.swift */; };
 		6CB5F8182AF64F740019539C /* GeneratePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */; };
+		6CC43D052AF9D36C00FEE93A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6CC43D042AF9D36C00FEE93A /* FirebaseFirestore */; };
+		6CC43D072AF9D36C00FEE93A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6CC43D062AF9D36C00FEE93A /* FirebaseFirestoreSwift */; };
+		6CC43D092AF9E91F00FEE93A /* RelieveAssesmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D082AF9E91F00FEE93A /* RelieveAssesmentView.swift */; };
+		6CC43D0B2AF9F93F00FEE93A /* IconButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D0A2AF9F93F00FEE93A /* IconButtonComponent.swift */; };
+		6CC43D0D2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D0C2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift */; };
+		6CC43D0F2AF9FD6000FEE93A /* GeneratePlanYogaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D0E2AF9FD6000FEE93A /* GeneratePlanYogaView.swift */; };
+		6CC43D112AFA236000FEE93A /* YogaPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */; };
+		6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */; };
+		6CC43D152AFA3E0300FEE93A /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D142AFA3E0300FEE93A /* PoseManager.swift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
 		6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */; };
 		6CEFB6812AF4C5330020D00F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6802AF4C5330020D00F /* Color.swift */; };
-		AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseManager.swift */; };
+		AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A622AE41138003B0C1F /* Yoga.swift */; };
 		AC5A9A672AE41138003B0C1F /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A632AE41138003B0C1F /* Pose.swift */; };
@@ -67,9 +76,6 @@
 		AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC02AEA62E200C8ED8A /* CameraView.swift */; };
 		AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */; };
 		AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC72AEA751500C8ED8A /* Array.swift */; };
-		ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCACC2AE907E4007159F2 /* workoutListCard.swift */; };
-		ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */; };
-		ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */; };
 		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
 		ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */; };
 		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
@@ -81,8 +87,6 @@
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A282AF0EFD100333CB6 /* ProfileView.swift */; };
 		D8065A2F2AF0F33800333CB6 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */; };
-		D8207AE62AF0B29D005DBD3C /* TestFetchFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */; };
-		D8207AE82AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AE72AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift */; };
 		D8207AEC2AF0B61D005DBD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */; };
 		D8207AEE2AF0C50A005DBD3C /* SpineMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AED2AF0C50A005DBD3C /* SpineMovement.swift */; };
 		D8207AF02AF0E0F6005DBD3C /* RequestYogaPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */; };
@@ -126,7 +130,8 @@
 
 /* Begin PBXFileReference section */
 		560938812AF0E35D00C77989 /* ExecutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionView.swift; sourceTree = "<group>"; };
-		564D66772AF4EEA5002A5D6C /* YogaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YogaView.swift; path = "../../../../../../../../../../Library/Mobile Documents/.Trash/YogaView.swift"; sourceTree = "<group>"; };
+		56BA8EDB2AFA3102007CFAF3 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		56BA8EDF2AFA3D83007CFAF3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		56D1BC902AE8B87C002DBDA0 /* ExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionViewModel.swift; sourceTree = "<group>"; };
 		56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionViewModel.swift; sourceTree = "<group>"; };
 		56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -167,12 +172,19 @@
 		6CB5F8132AF618D70019539C /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		6CB5F8152AF61A210019539C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanViewModel.swift; sourceTree = "<group>"; };
+		6CC43D082AF9E91F00FEE93A /* RelieveAssesmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelieveAssesmentView.swift; sourceTree = "<group>"; };
+		6CC43D0A2AF9F93F00FEE93A /* IconButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonComponent.swift; sourceTree = "<group>"; };
+		6CC43D0C2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanHeaderView.swift; sourceTree = "<group>"; };
+		6CC43D0E2AF9FD6000FEE93A /* GeneratePlanYogaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanYogaView.swift; sourceTree = "<group>"; };
+		6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPreviewView.swift; sourceTree = "<group>"; };
+		6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollListenerViewBuilder.swift; sourceTree = "<group>"; };
+		6CC43D142AFA3E0300FEE93A /* PoseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseManager.swift; sourceTree = "<group>"; };
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67A2AF383F80020D00F /* DayPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6CEFB67C2AF384C80020D00F /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
 		6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssesmentWeekView.swift; sourceTree = "<group>"; };
 		6CEFB6802AF4C5330020D00F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		AC437B2B2AF148D20055C0AD /* PoseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseManager.swift; sourceTree = "<group>"; };
+		AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseFirebaseManager.swift; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		AC5A9A622AE41138003B0C1F /* Yoga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
 		AC5A9A632AE41138003B0C1F /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
@@ -186,9 +198,6 @@
 		AC71EEC02AEA62E200C8ED8A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPoint.swift; sourceTree = "<group>"; };
 		AC71EEC72AEA751500C8ED8A /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		ACABCACC2AE907E4007159F2 /* workoutListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutListCard.swift; sourceTree = "<group>"; };
-		ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAssessmentResult.swift; sourceTree = "<group>"; };
-		ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentResultView.swift; sourceTree = "<group>"; };
 		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSourceDelegate.swift; sourceTree = "<group>"; };
 		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
@@ -201,8 +210,6 @@
 		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D8065A282AF0EFD100333CB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
-		D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchFirebase.swift; sourceTree = "<group>"; };
-		D8207AE72AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchFirebaseViewModel.swift; sourceTree = "<group>"; };
 		D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8207AED2AF0C50A005DBD3C /* SpineMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineMovement.swift; sourceTree = "<group>"; };
 		D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestYogaPose.swift; sourceTree = "<group>"; };
@@ -247,8 +254,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C6842D52AF89A840015E8CD /* FirebaseFirestore in Frameworks */,
-				6C6842D72AF89A840015E8CD /* FirebaseFirestoreSwift in Frameworks */,
+				6CC43D052AF9D36C00FEE93A /* FirebaseFirestore in Frameworks */,
+				6CC43D072AF9D36C00FEE93A /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +265,9 @@
 		560938852AF1061400C77989 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				564D66772AF4EEA5002A5D6C /* YogaView.swift */,
 				56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */,
+				56BA8EDB2AFA3102007CFAF3 /* VideoView.swift */,
+				56BA8EDF2AFA3D83007CFAF3 /* Video.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -314,6 +322,8 @@
 				6C732A402AF109E500E17FDB /* NavigationLinkComponent.swift */,
 				6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */,
 				6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */,
+				6CC43D0A2AF9F93F00FEE93A /* IconButtonComponent.swift */,
+				6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */,
 			);
 			path = GlobalComponent;
 			sourceTree = "<group>";
@@ -321,6 +331,7 @@
 		6C732A3D2AF109AA00E17FDB /* YogaDetail */ = {
 			isa = PBXGroup;
 			children = (
+				6CC43D1A2AFA467A00FEE93A /* Components */,
 				6C732A3E2AF109AA00E17FDB /* YogaDetailView.swift */,
 			);
 			path = YogaDetail;
@@ -331,7 +342,6 @@
 			children = (
 				6C7B2C492AEF6F8A00E0DADF /* Components */,
 				6C7B2C4C2AEF726A00E0DADF /* GeneratePlanView.swift */,
-				D8207AE52AF0B29D005DBD3C /* TestFetchFirebase.swift */,
 			);
 			path = GeneratePlan;
 			sourceTree = "<group>";
@@ -342,6 +352,8 @@
 				6C7B2C4A2AEF6FAF00E0DADF /* YogaCardView.swift */,
 				6CEFB67A2AF383F80020D00F /* DayPickView.swift */,
 				6CEFB67C2AF384C80020D00F /* DayPickerView.swift */,
+				6CC43D0C2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift */,
+				6CC43D0E2AF9FD6000FEE93A /* GeneratePlanYogaView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -395,6 +407,15 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		6CC43D1A2AFA467A00FEE93A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6CC43D082AF9E91F00FEE93A /* RelieveAssesmentView.swift */,
+				6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		AC5A9A4E2AE3AC5E003B0C1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,7 +426,7 @@
 		AC5A9A512AE3BC9D003B0C1F /* FireStore */ = {
 			isa = PBXGroup;
 			children = (
-				AC437B2B2AF148D20055C0AD /* PoseManager.swift */,
+				AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */,
 				AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */,
 			);
 			path = FireStore;
@@ -484,7 +505,6 @@
 				56D1BCAF2AEE81DC002DBDA0 /* Notification */,
 				56D1BCA82AEA6BD1002DBDA0 /* Execution */,
 				AC71EEBE2AEA62B200C8ED8A /* CameraView */,
-				ACAE03BE2AE91C3D00878741 /* AssessmentResult */,
 				D8BC2BE52AE8002200E61487 /* CreateWorkout */,
 				D862DB682AE28E5A0014F2FC /* ContentView.swift */,
 			);
@@ -560,24 +580,6 @@
 				ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		ACABCAC92AE9075B007159F2 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				ACABCACC2AE907E4007159F2 /* workoutListCard.swift */,
-				ACABCAD02AE91283007159F2 /* DayAssessmentResult.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		ACAE03BE2AE91C3D00878741 /* AssessmentResult */ = {
-			isa = PBXGroup;
-			children = (
-				ACABCAC92AE9075B007159F2 /* Components */,
-				ACAE03BF2AE95E7800878741 /* AssessmentResultView.swift */,
-			);
-			path = AssessmentResult;
 			sourceTree = "<group>";
 		};
 		ACB8642C2AE65282005DF0D1 /* Datasource */ = {
@@ -755,12 +757,11 @@
 			children = (
 				D8FD5D632AF35364005F8D4E /* History */,
 				D8065A2A2AF0EFDD00333CB6 /* Profile */,
-				6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */,
 				56D1BCB02AEE81F4002DBDA0 /* Notification */,
-				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
 				56D1BC9E2AEA5653002DBDA0 /* Execution */,
 				D8BC2BEF2AE80F1B00E61487 /* CreateWorkout */,
-				D8207AE72AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift */,
+				6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */,
+				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
 				6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */,
 			);
 			path = ViewModels;
@@ -801,6 +802,7 @@
 			isa = PBXGroup;
 			children = (
 				D8FBED4D2AE906FE0062CC00 /* ButtonStyles.swift */,
+				6CC43D142AFA3E0300FEE93A /* PoseManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -868,8 +870,8 @@
 			);
 			name = WorkItOut;
 			packageProductDependencies = (
-				6C6842D42AF89A840015E8CD /* FirebaseFirestore */,
-				6C6842D62AF89A840015E8CD /* FirebaseFirestoreSwift */,
+				6CC43D042AF9D36C00FEE93A /* FirebaseFirestore */,
+				6CC43D062AF9D36C00FEE93A /* FirebaseFirestoreSwift */,
 			);
 			productName = WorkItOut;
 			productReference = D862DB632AE28E5A0014F2FC /* WorkItOut.app */;
@@ -959,16 +961,19 @@
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
+				6CC43D112AFA236000FEE93A /* YogaPreviewView.swift in Sources */,
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				D8207AEE2AF0C50A005DBD3C /* SpineMovement.swift in Sources */,
 				6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */,
 				6CB5F8082AF604850019539C /* HomeButtonView.swift in Sources */,
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
+				6CC43D152AFA3E0300FEE93A /* PoseManager.swift in Sources */,
 				ACD49E812AEFA47000793872 /* Helper.swift in Sources */,
 				D8FD5D6D2AF3577F005F8D4E /* HistorySection.swift in Sources */,
 				6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */,
 				AC71EEB22AEA556B00C8ED8A /* CameraDeviceManager.swift in Sources */,
+				6CC43D0D2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift in Sources */,
 				AC71EEB72AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift in Sources */,
 				6C3FD7652AEE405C00C84D2A /* Relieve.swift in Sources */,
 				6CEFB6812AF4C5330020D00F /* Color.swift in Sources */,
@@ -977,7 +982,6 @@
 				6CB5F80C2AF605D50019539C /* BorderedCorner.swift in Sources */,
 				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,
 				6C7B2C4B2AEF6FAF00E0DADF /* YogaCardView.swift in Sources */,
-				ACABCACD2AE907E4007159F2 /* workoutListCard.swift in Sources */,
 				56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */,
 				560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */,
 				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
@@ -988,18 +992,16 @@
 				56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */,
 				6C3FD7782AEF560A00C84D2A /* History.swift in Sources */,
 				D8FD5D6B2AF3576D005F8D4E /* HistoryCard.swift in Sources */,
-				ACAE03C02AE95E7800878741 /* AssessmentResultView.swift in Sources */,
 				6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
 				D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */,
-				AC437B2C2AF148D20055C0AD /* PoseManager.swift in Sources */,
+				AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */,
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
 				D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */,
-				D8207AE82AF0B2B7005DBD3C /* TestFetchFirebaseViewModel.swift in Sources */,
 				56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */,
 				D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */,
-				D8207AE62AF0B29D005DBD3C /* TestFetchFirebase.swift in Sources */,
 				AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */,
+				56BA8EDC2AFA3102007CFAF3 /* VideoView.swift in Sources */,
 				6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */,
 				6CB5F8102AF60C9F0019539C /* HomeYogaCategoryView.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
@@ -1012,6 +1014,7 @@
 				AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */,
 				D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */,
 				D8BC2BFA2AE81EA200E61487 /* Months.swift in Sources */,
+				6CC43D092AF9E91F00FEE93A /* RelieveAssesmentView.swift in Sources */,
 				AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */,
 				D8FBED562AE918200062CC00 /* CompleteView.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
@@ -1022,10 +1025,12 @@
 				D8FBED5A2AE91A880062CC00 /* LoadingCircle.swift in Sources */,
 				6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */,
 				6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */,
+				6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */,
 				6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
 				D8FD5D682AF3538F005F8D4E /* HistoryView.swift in Sources */,
+				6CC43D0F2AF9FD6000FEE93A /* GeneratePlanYogaView.swift in Sources */,
 				D8BC2BF82AE81E0400E61487 /* Duration.swift in Sources */,
 				6C732A412AF109E500E17FDB /* NavigationLinkComponent.swift in Sources */,
 				6C3FD7722AEE40E600C84D2A /* BodyPart.swift in Sources */,
@@ -1034,12 +1039,12 @@
 				6C3FD76C2AEE40BD00C84D2A /* Trimester.swift in Sources */,
 				56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */,
 				ACBFBDA42AE67CEE00109D94 /* UpdateProfileUseCase.swift in Sources */,
+				56BA8EE02AFA3D83007CFAF3 /* Video.swift in Sources */,
 				D8BC2BF42AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift in Sources */,
 				6C3FD7742AEEB26800C84D2A /* TimeOfDay.swift in Sources */,
 				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
 				D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */,
 				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
-				ACABCAD12AE91283007159F2 /* DayAssessmentResult.swift in Sources */,
 				D8FD5D652AF35371005F8D4E /* HistoryViewModel.swift in Sources */,
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6CB5F8122AF612DD0019539C /* HomeOtherPlansView.swift in Sources */,
@@ -1048,6 +1053,7 @@
 				AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */,
 				6C3FD7672AEE409700C84D2A /* Position.swift in Sources */,
 				6C732A3F2AF109AA00E17FDB /* YogaDetailView.swift in Sources */,
+				6CC43D0B2AF9F93F00FEE93A /* IconButtonComponent.swift in Sources */,
 				D8BC2BE72AE8003000E61487 /* AssessmentView.swift in Sources */,
 				AC5A9A672AE41138003B0C1F /* Pose.swift in Sources */,
 				6CB5F80A2AF604FD0019539C /* HomeWeekIndicatorView.swift in Sources */,
@@ -1229,7 +1235,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -1262,7 +1268,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -1330,11 +1336,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6C6842D42AF89A840015E8CD /* FirebaseFirestore */ = {
+		6CC43D042AF9D36C00FEE93A /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FirebaseFirestore;
 		};
-		6C6842D62AF89A840015E8CD /* FirebaseFirestoreSwift */ = {
+		6CC43D062AF9D36C00FEE93A /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FirebaseFirestoreSwift;
 		};

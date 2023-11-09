@@ -10,54 +10,103 @@ import CoreData
 
 struct YogaDetailView: View {
     @State var isPresentedExecution = false
-    @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
     @EnvironmentObject var vm: HomeViewModel
+    @Binding var sheetToggle : Bool
+    @Binding var path : NavigationPath
+    
     var yoga: Yoga
+    @State private var state: YogaPreviewEnum = .relieveChoice
+    @State var showHeader: Bool = true
+    
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                Image(systemName: "xmark")
-                Text("Balancing and Grounding")
-                Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
-                ScrollView {
-                    ForEach(Category.allCases, id: \.self) { category in
-                        if vm.checkCategory(poses: yoga.poses, category: category) {
-                            HStack {
-                                Text(category.rawValue)
-                                    .font(.subheadline)
-                                    .foregroundStyle(Color.neutral3)
-                                    .bold()
-                                Rectangle()
-                                    .frame(height: 0.5)
-                                    .foregroundStyle(Color.neutral6)
-                            }
-                            
+                if showHeader {
+                    Text(state.getTitle())
+                        .font(.largeTitle)
+                        .bold()
+                    state.getDescription(yoga: yoga)
+                }
                 
-                        }
-                        
-                        ForEach(yoga.poses, id: \.self) { pose in
-                            if pose.category == category {
-                                YogaCardView(name: pose.name, category: (pose.relieve.first ?? .ankle).rawValue, min: pose.seconds)
-                            }
-                        }
+                ScrollListenerViewBuilder(showContent: $showHeader) {
+                    if state == .relieveChoice {
+                        RelieveAssesmentView()
+                    }
+                    else {
+                        YogaPreviewView(yoga: yoga)
                     }
                 }
                 
-                
-                ButtonComponent(title: "Start Now") {
-                    self.isPresentedExecution = true
-                }
-                .navigationDestination(isPresented: $isPresentedExecution) {
-                        ExecutionView()
-                        .navigationBarBackButtonHidden(true)
+                ButtonComponent(title: state.rawValue) {
+                    if state == .relieveChoice {
+                        state = .yogaPreview
+                    }
+                    else {
+                        sheetToggle = false
+                        path.append("String")
+                    }
+                    
                 }
             }
+            .navigationTitle(showHeader ? "" : state.getTitle())
+            .navigationBarTitleDisplayMode(.inline)
             .padding()
+            .animation(.default, value: state)
+            .animation(.default, value: showHeader)
+            .toolbarBackground(.hidden)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    IconButtonComponent(icon: state.getIcon()) {
+                        if state == .relieveChoice {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                        else {
+                            state = .relieveChoice
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    enum YogaPreviewEnum: String {
+        case relieveChoice = "Next"
+        case yogaPreview = "Start Now"
+        
+        func getIcon() -> String {
+            switch self {
+            case .relieveChoice:
+                return "xmark"
+            case .yogaPreview:
+                return "chevron.left"
+            }
+        }
+        
+        func getTitle() -> String {
+            switch self {
+            case .relieveChoice:
+                return "What Are Your Current Conditions?"
+            case .yogaPreview:
+                return "Balancing and Grounding"
+            }
+        }
+        
+        @ViewBuilder
+        func getDescription(yoga: Yoga) -> some View {
+            switch self {
+            case .relieveChoice:
+                Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. ") + Text("(You can skip this part)").foregroundStyle(.purple)
+            case .yogaPreview:
+                Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
+                    .foregroundStyle(Color.neutral3)
+            }
         }
     }
 }
 
 #Preview {
-    YogaDetailView(yoga: Yoga())
+    YogaDetailView(sheetToggle: .constant(false), path: .constant(NavigationPath()), yoga: Yoga())
 }

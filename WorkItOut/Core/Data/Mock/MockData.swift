@@ -23,9 +23,9 @@ struct MockData {
         plan: [
             YogaPlan(id: UUID(), name: "Plan 1", yogas: [
                 Yoga(id: UUID(), name: "Yoga 1", poses: [
-                    Pose(id: UUID(), name: "Pose1", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, bodyPartTrained: [.arms, .back]),
-                    Pose(id: UUID(), name: "Pose2", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.ankle], description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, bodyPartTrained: [.arms, .back]),
-                    Pose(id: UUID(), name: "Pose3", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, bodyPartTrained: [.arms, .back])
+                    Pose(id: UUID(), name: "Pose1", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed),
+                    Pose(id: UUID(), name: "Pose2", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.ankle], description: "Desc 1", seconds: 12, state: .completed),
+                    Pose(id: UUID(), name: "Pose3", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed)
                 ], day: .friday, estimationDuration: 12, image: "Image 1")
             ], trimester: .first)
         ],
