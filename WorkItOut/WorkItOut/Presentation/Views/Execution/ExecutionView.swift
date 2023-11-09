@@ -57,8 +57,13 @@ struct ExecutionView: View {
                     }
                 }
                 .padding(.horizontal, 20)
+                if let image = UIImage(named: vm.poses[vm.index].name){
+                    PoseImageCard(name: vm.poses[vm.index].name, width: 358)
+                }else{
+                    RoundedRectangle(cornerRadius: 12)
+                        .frame(width: 358, height: 358)
+                }
                 
-                PoseImageCard(name: vm.poses[vm.index].name, width: 358)
 //                AVPlayerController(player: avPlayer)
 //                    .frame(width: 358, height: 300)
 //                    .cornerRadius(12)
