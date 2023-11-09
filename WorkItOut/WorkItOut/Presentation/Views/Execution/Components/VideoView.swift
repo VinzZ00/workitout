@@ -15,9 +15,8 @@ struct VideoView: View {
     
     var body: some View {
         VStack {
-            AVPlayerController(player: avPlayer)
-                .frame(width: 358, height: 300)
-                .cornerRadius(12)
+            VideoPlayer(player: avPlayer)
+                .mask(Rectangle().frame(width: 250, height: 220).cornerRadius(12))
                 .onAppear {
                     avPlayer.play()
                 }
@@ -33,11 +32,11 @@ struct VideoView: View {
             
         }
         .onAppear {
-            self.avPlayer = AVPlayer(url: Bundle.main.url(forResource: name, withExtension: "MOV")!)
+            self.avPlayer = AVPlayer(url: URL(string: name)!)
         }
     }
 }
 
 #Preview {
-    VideoView(name: "video")
+    VideoView(name: "https://cdn.flowplayer.com/a30bd6bc-f98b-47bc-abf5-97633d4faea0/hls/de3f6ca7-2db3-4689-8160-0f574a5996ad/playlist.m3u8")
 }
