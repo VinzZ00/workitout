@@ -37,9 +37,9 @@ struct GeneratePlanView: View {
                                     
                                 }
                             }
+                            vm.finish.toggle()
+                            hasNoProfile.toggle()
                         }
-                        vm.finish.toggle()
-                        hasNoProfile.toggle()
                     }
                     .padding(.horizontal)
                 }

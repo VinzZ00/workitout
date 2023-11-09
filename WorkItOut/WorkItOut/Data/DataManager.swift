@@ -19,22 +19,22 @@ class DataManager: ObservableObject {
     
     var handMadeYogaPlan: [Relieve : [YogaPlan]] = [:]
     
-    public func loadProfile(moc : NSManagedObjectContext) async throws-> Bool {
+    public func loadProfile(moc : NSManagedObjectContext) async throws -> Bool {
         let fetchProfile = FetchProfileUseCase()
         let fetchRes : [Profile]
         
         do {
             fetchRes = try await fetchProfile.call(context: moc)
         } catch {
-            return false
+            return true
         }
         
-//        if fetchRes.isEmpty{
-//            return false
-//        }
+        if fetchRes.isEmpty{
+            return true
+        }
         self.profile = fetchRes.first
         savedToCoreData = true
-        return true
+        return false
     }
     
     public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async {
