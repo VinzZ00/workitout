@@ -24,9 +24,6 @@ struct ContentView: View {
                 }
             }
         }
-//        .alert(isPresented: $hasNoProfile, content: {
-//            Alert(title: Text("Error"), message: Text("Error loading your data"), dismissButton: .default(Text("OK")))
-//        })
         .fullScreenCover(isPresented: $hasNoProfile) {
             AssessmentView(hasNoProfile: $hasNoProfile)
         }

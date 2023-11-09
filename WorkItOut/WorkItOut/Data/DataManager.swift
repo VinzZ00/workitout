@@ -30,11 +30,11 @@ class DataManager: ObservableObject {
         }
         
         if fetchRes.isEmpty{
-            return true
+            return false
         }
         self.profile = fetchRes.first
         savedToCoreData = true
-        return false
+        return true
     }
     
     public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async {

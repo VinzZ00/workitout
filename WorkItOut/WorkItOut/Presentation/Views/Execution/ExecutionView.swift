@@ -58,12 +58,13 @@ struct ExecutionView: View {
                 }
                 .padding(.horizontal, 20)
                 
-                AVPlayerController(player: avPlayer)
-                    .frame(width: 358, height: 300)
-                    .cornerRadius(12)
-                    .onAppear {
-                        avPlayer.play()
-                    }
+                PoseImageCard(name: vm.poses[vm.index].name, width: 358)
+//                AVPlayerController(player: avPlayer)
+//                    .frame(width: 358, height: 300)
+//                    .cornerRadius(12)
+//                    .onAppear {
+//                        avPlayer.play()
+//                    }
                 
                 VStack{
                     Text("\(vm.poses[vm.index].name)")
@@ -222,7 +223,7 @@ struct ExecutionView: View {
             }
         }
         .onAppear{
-            self.avPlayer = AVPlayer(url: Bundle.main.url(forResource: vm.poses[vm.index].name, withExtension: "MOV")!)
+//            self.avPlayer = AVPlayer(url: Bundle.main.url(forResource: vm.poses[vm.index].name, withExtension: "MOV")!)
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)
