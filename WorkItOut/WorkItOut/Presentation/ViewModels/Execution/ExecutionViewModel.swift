@@ -15,7 +15,7 @@ class ExecutionViewModel: ObservableObject {
     @Published var profile: Profile = MockData.mockProfile
     @Published var yogaPlan: YogaPlan = YogaPlan()
     @Published var yoga: Yoga = Yoga()
-    @Published var poses: [Pose] = []
+    var poses: [Pose] = []
     @Published var index = 0
     @Published var end = false
     @Published var start = true
@@ -55,8 +55,10 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func getPose() {
-        for p in yoga.poses{
-            poses.append(p)
+        for categori in PoseManager.existingCategories(poses: yoga.poses) {
+            for p in PoseManager.getPosesByCategory(poses: yoga.poses, category: categori) {
+                poses.append(p)
+            }
         }
     }
     
