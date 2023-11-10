@@ -17,12 +17,7 @@ struct ExecutionCompleteView: View {
     var body: some View {
         VStack(spacing: 60){
             Spacer()
-            ZStack{
-                RoundedRectangle(cornerRadius: 12)
-                    .frame(width: 120, height: 120)
-                Text("Placeholder")
-                    .foregroundStyle(.white)
-            }
+            Image(.completeIllustration)
             VStack{
                 Text("Exercise Completed")
                     .font(.title.bold())
@@ -42,6 +37,7 @@ struct ExecutionCompleteView: View {
                     }
                     path.removeLast()
                 }
+                vm.objectWillChange.send()
             }.buttonStyle(BorderedButton())
         }.alert(isPresented: self.$alert){
             Alert(title: Text("Error"), message: Text("Sorry, your yoga poses change is not saved, Please recheck your yoga poses"), dismissButton: .default(Text("OK")))
