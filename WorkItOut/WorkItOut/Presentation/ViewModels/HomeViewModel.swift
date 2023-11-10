@@ -36,7 +36,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func loadProfile(profile : Profile) async throws {
-//        let fetchedProfile = try await fetch.call(context: moc)
+//       let fetchedProfile = try await fetch.call(context: moc)
         self.profile = profile
         self.week = self.profile.currentPregnancyWeek
         self.days = self.profile.daysAvailable
@@ -103,12 +103,12 @@ class HomeViewModel: ObservableObject {
     
     @Published var month: String = ""
     
-    var yogaPlan: YogaPlan {
-        return yogaPlans.first(where: {$0.trimester == trimester}) ?? YogaPlan()
+    var yogaPlan: YogaPlan? {
+        return yogaPlans.first(where: {$0.trimester == trimester})
     }
     
-    var yoga: Yoga {
-        return yogaPlan.yogas.first(where: {$0.day == day}) ?? Yoga()
+    var yoga: Yoga? {
+        return yogaPlan?.yogas.first(where: {$0.day == day})
     }
     
     func previousWeek() {

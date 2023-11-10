@@ -93,7 +93,19 @@ struct HomeView: View {
             .onChange(of: vm.day) { _ in
                 vm.initMonth()
             }
-            .sheet(isPresented: $vm.showProfile, content: {
+            .sheet(isPresented: $vm.showProfile, onDismiss: {
+                Task{
+                    do {
+                        print("Load Profile from dm.profile")
+                        try await vm.loadProfile(profile: dm.profile!)
+                    } catch {
+                        print("masuk ke alert")
+                        self.alert = true
+                    }
+                }
+                
+                dm.objectWillChange.send()
+            },  content: {
                 NavigationStack{
                     ProfileView(vm: ProfileViewModel(profile: vm.profile))
                 }
@@ -108,9 +120,12 @@ struct HomeView: View {
                         print("Load Profile from dm.profile")
                         try await vm.loadProfile(profile: dm.profile!)
                     } catch {
+                        print("masuk ke alert")
                         self.alert = true
                     }
                 }
+                
+
             }
             .background(Color.background)
             .navigationDestination(for: String.self) { string in
