@@ -104,8 +104,7 @@ struct HomeView: View {
             .onAppear{
                 Task{
                     do {
-                        try await vm.loadProfile(profile: dm.profile!)
-                        print("Load Profile from dm.profile")
+                        try await vm.loadProfile(moc: moc)
                     } catch {
                         self.alert = true
                     }
@@ -114,6 +113,7 @@ struct HomeView: View {
             .background(Color.background)
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
+                    .environmentObject(dm)
                     .navigationBarBackButtonHidden()
             }
         }
