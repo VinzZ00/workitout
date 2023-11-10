@@ -13,15 +13,6 @@ struct AssessmentWrapperView: View {
     @State var stateValue : AssessmentState
     var body: some View {
         VStack(alignment: .leading){
-            Button(action: {self.presentationMode.wrappedValue.dismiss()}, label: {
-                ZStack{
-                    Circle()
-                        .frame(width: 24)
-                        .foregroundStyle(.grayBorder.opacity(0.25))
-                    Image(systemName: "multiply")
-                }
-            })
-            .padding([.leading, .top], 20)
             VStack{
                 switch stateValue {
                     case .chooseDay:
@@ -45,10 +36,9 @@ struct AssessmentWrapperView: View {
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        vm.revertProfile()
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Image(systemName: "x.circle.fill")
+                        Image(systemName: "multiply")
                     }
                     .tint(Color.neutral6)
                 }

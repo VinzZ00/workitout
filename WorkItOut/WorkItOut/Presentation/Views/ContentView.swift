@@ -22,6 +22,7 @@ struct ContentView: View {
             }else{
                 if !hasNoProfile{
                     HomeView()
+                        .environmentObject(dm);
                 }
             }
         }
@@ -35,7 +36,13 @@ struct ContentView: View {
         })
         .onAppear {
             Task{
-                hasNoProfile = try await !dm.loadProfile(moc: moc)
+                do {
+                    hasNoProfile = try await !dm.loadProfile(moc: moc)
+                    
+                } catch {
+                    hasNoProfile = false
+                    print("Masuk try catch di content view")
+                }
                 isLoading = false
             }
         }

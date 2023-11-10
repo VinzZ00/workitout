@@ -14,10 +14,14 @@ struct YogaCardView: View {
     
     var body: some View {
         HStack {
-            Rectangle()
-                .foregroundStyle(.purple)
-                .frame(width: 70, height: 70)
-                .clipShape(.rect(cornerRadius: 12))
+            if let image = UIImage(named: name){
+                PoseImageCard(name: name, width: 70)
+            }else{
+                Rectangle()
+                    .foregroundStyle(.purple)
+                    .frame(width: 70, height: 70)
+                    .clipShape(.rect(cornerRadius: 12))
+            }
             VStack(alignment: .leading) {
                 Text(name)
                     .font(.title3)
@@ -36,5 +40,5 @@ struct YogaCardView: View {
 }
 
 #Preview {
-    YogaCardView()
+    YogaCardView(name: "Mountain")
 }

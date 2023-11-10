@@ -13,7 +13,7 @@ struct HomeView: View {
     @State private var path : NavigationPath = NavigationPath()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
-    
+    @State var alert : Bool = false
     var body: some View {
         NavigationStack(path: $path){
             VStack {
@@ -27,8 +27,8 @@ struct HomeView: View {
                         }
                         VStack {
                             HStack {
-                                NavigationLink {
-                                    ProfileView(vm: ProfileViewModel(profile: vm.profile))
+                                Button {
+                                    vm.showProfile = true
                                 } label: {
                                     HomeButtonView(icon: "person")
                                 }
@@ -93,17 +93,26 @@ struct HomeView: View {
             .onChange(of: vm.day) { _ in
                 vm.initMonth()
             }
-            .background(Color.background)
+            .sheet(isPresented: $vm.showProfile, content: {
+                NavigationStack{
+                    ProfileView(vm: ProfileViewModel(profile: vm.profile))
+                }
+            })
             .sheet(isPresented: $vm.sheetToggle, content: {
                 YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
                     .padding(.top)
             })
-            .navigationBarBackButtonHidden()
             .onAppear{
                 Task{
-                    await vm.loadProfile(moc: moc)
+                    do {
+                        print("Load Profile from dm.profile")
+                        try await vm.loadProfile(profile: dm.profile!)
+                    } catch {
+                        self.alert = true
+                    }
                 }
             }
+            .background(Color.background)
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
                     .navigationBarBackButtonHidden()

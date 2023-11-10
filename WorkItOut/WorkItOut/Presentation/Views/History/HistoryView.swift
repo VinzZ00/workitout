@@ -62,6 +62,8 @@ struct HistoryView: View {
 
 #Preview {
     NavigationStack{
-        HistoryView(vm: HistoryViewModel(histories: []))
+        HistoryView(vm: HistoryViewModel(histories: [
+            History(id: UUID(), yogaDone: Yoga(id: UUID(), name: "Yoga", poses: [Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed), Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed)], day: .monday, estimationDuration: 30, yogaState: .completed, image: ""), executionDate: Date.now, duration: 30, rating: 5)
+        ]))
     }
 }

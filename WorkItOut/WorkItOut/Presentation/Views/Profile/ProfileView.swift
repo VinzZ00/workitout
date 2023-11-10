@@ -14,7 +14,7 @@ struct ProfileView: View {
     @State var selection = 0
     
     @EnvironmentObject var dm: DataManager
-    
+    @State var alert : Bool = false;
     var body: some View {
         ZStack{
             VStack{
@@ -24,15 +24,10 @@ struct ProfileView: View {
                             .foregroundStyle(.gray)
                             .bold()
                             .padding(.top, 14)
-                        Button {
-                            vm.showSheetwithState(state: .chooseWeek)
-                        } label: {
+                        NavigationLink(value: AssessmentState.chooseWeek) {
                             ProfileCard(assessmentState: .chooseWeek, value: vm.convertToStrings(currentPregnancyWeek: vm.currentPregnancyWeek))
                         }
-
-                        Button{
-                            vm.showSheetwithState(state: .chooseExceptions)
-                        } label: {
+                        NavigationLink(value: AssessmentState.chooseExceptions) {
                             ProfileCard(assessmentState: .chooseExceptions, value: vm.exceptions.isEmpty ? "None" : vm.convertToStrings(exceptions: vm.exceptions))
                         }
                     }
@@ -41,24 +36,16 @@ struct ProfileView: View {
                         Text("Yoga Plan")
                             .foregroundStyle(.gray)
                             .bold()
-                        Button{
-                            vm.showSheetwithState(state: .chooseDay)
-                        } label: {
+                        NavigationLink(value: AssessmentState.chooseDay) {
                             ProfileCard(assessmentState: .chooseDay, value: vm.convertToString(days: vm.daysAvailable))
                         }
-                        Button{
-                            vm.showSheetwithState(state: .chooseDuration)
-                        } label: {
+                        NavigationLink(value: AssessmentState.chooseDuration) {
                             ProfileCard(assessmentState: .chooseDuration, value: vm.preferredDuration.rawValue)
                         }
-                        Button{
-                            vm.showSheetwithState(state: .chooseTime)
-                        } label: {
+                        NavigationLink(value: AssessmentState.chooseTime) {
                             ProfileCard(assessmentState: .chooseTime, value: vm.timeOfDay.rawValue)
                         }
-                        Button{
-                            vm.showSheetwithState(state: .chooseExperience)
-                        } label: {
+                        NavigationLink(value: AssessmentState.chooseExperience){
                             ProfileCard(assessmentState: .chooseExperience, value: vm.fitnessLevel.rawValue)
                         }
                     }
@@ -80,7 +67,7 @@ struct ProfileView: View {
                                 Circle()
                                     .tint(.grayBorder.opacity(0.15))
                                     .frame(width: 40)
-                                Image(systemName: "arrow.left")
+                                Image(systemName: "multiply")
                                     .font(.system(size: 10))
                                     .bold()
                             }
@@ -100,6 +87,11 @@ struct ProfileView: View {
                         .disabled(vm.equalWithProfile())
                     }
                 }
+                .navigationDestination(for: AssessmentState.self, destination: { state in
+                    AssessmentWrapperView(stateValue: state)
+                        .environmentObject(vm)
+                        .presentationDragIndicator(.hidden)
+                })
                 .sheet(isPresented: $vm.showSheet, onDismiss: {
                     vm.objectWillChange.send()
                 }, content: {
@@ -111,9 +103,6 @@ struct ProfileView: View {
                 
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
-                .navigationTitle("Profile")
-                .navigationBarTitleDisplayMode(.large)
-                .navigationBarBackButtonHidden()
             }
             
             if vm.showAlert {
@@ -161,6 +150,12 @@ struct ProfileView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
             }
+        }
+        .navigationTitle("My Assessment")
+        .navigationBarTitleDisplayMode(.large)
+        .navigationBarBackButtonHidden()
+        .alert(isPresented: self.$alert) {
+            Alert(title: Text("Error"), message: Text("Sorry, your Profile Change is not saved, Please recheck your profile"))
         }
     }
 }

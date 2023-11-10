@@ -70,6 +70,12 @@ struct Pose: Identifiable, Hashable, Comparable, Entity {
     }
 }
 
+extension Pose {
+    func getImage(name: String){
+        
+    }
+}
+
 
 
 

@@ -26,6 +26,7 @@ class HomeViewModel: ObservableObject {
     @Published var fetch = FetchProfileUseCase()
     @Published var selectedDate = Date()
     @Published var showHeader: Bool = true
+    @Published var showProfile: Bool = false
     
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
@@ -34,9 +35,9 @@ class HomeViewModel: ObservableObject {
         self.profile = profile
     }
     
-    func loadProfile(moc: NSManagedObjectContext) async {
-        let fetchedProfile = try! await fetch.call(context: moc)
-        self.profile = fetchedProfile.last ?? Profile()
+    func loadProfile(profile : Profile) async throws {
+//        let fetchedProfile = try await fetch.call(context: moc)
+        self.profile = profile
         self.week = self.profile.currentPregnancyWeek
         self.days = self.profile.daysAvailable
         self.yogaPlans = self.profile.plan
