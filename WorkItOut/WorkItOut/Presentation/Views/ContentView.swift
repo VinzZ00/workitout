@@ -14,30 +14,34 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var hasNoProfile = false
     @State private var isLoading = true
+    
     var body: some View {
         ZStack{
             if isLoading {
                 EmptyView()
             }else{
-                if !hasNoProfile{
+                if !dm.hasNoProfile{
                     HomeView()
                 }
             }
         }
-        .fullScreenCover(isPresented: $hasNoProfile) {
-            AssessmentView(hasNoProfile: $hasNoProfile)
+        .fullScreenCover(isPresented: $dm.hasNoProfile) {
+            OnboardingView()
         }
         .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
             if valueIsTrue {
-                hasNoProfile = false
+                dm.hasNoProfile = false
+//                hasNoProfile = false
             }
         })
         .onAppear {
             Task{
                 do {
-                    hasNoProfile = try await !dm.loadProfile(moc: moc)
+                    dm.hasNoProfile = try await !dm.loadProfile(moc: moc)
+//                    hasNoProfile = try await !dm.loadProfile(moc: moc)
                 } catch {
-                    hasNoProfile = false
+                    dm.hasNoProfile = false
+//                    hasNoProfile = false
                 }
                 isLoading = false
             }

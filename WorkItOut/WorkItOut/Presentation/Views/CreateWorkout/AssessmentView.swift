@@ -11,7 +11,6 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
-    @Binding var hasNoProfile : Bool
     
     var body: some View {
         NavigationStack {
@@ -52,7 +51,7 @@ struct AssessmentView: View {
                 }
             })
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView(hasNoProfile: $hasNoProfile)
+                GeneratePlanView()
                     .environmentObject(avm)
             }
             .toolbar {
@@ -70,6 +69,7 @@ struct AssessmentView: View {
                 }
                 
             }
+            .navigationBarBackButtonHidden()
         }
         
         
@@ -78,5 +78,5 @@ struct AssessmentView: View {
 }
 
 #Preview {
-    AssessmentView(hasNoProfile: .constant(false))
+    AssessmentView()
 }

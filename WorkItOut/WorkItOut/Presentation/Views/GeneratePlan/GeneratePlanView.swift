@@ -15,7 +15,6 @@ struct GeneratePlanView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @Binding var hasNoProfile : Bool
     @State var alert : Bool = false
     
     var body: some View {
@@ -38,7 +37,7 @@ struct GeneratePlanView: View {
                                 }
                             }
                             vm.finish.toggle()
-                            hasNoProfile.toggle()
+                            dm.hasNoProfile.toggle()
                         }
                     }
                     .padding(.horizontal)
