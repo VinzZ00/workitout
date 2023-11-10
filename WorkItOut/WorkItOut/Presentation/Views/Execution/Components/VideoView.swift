@@ -16,9 +16,15 @@ struct VideoView: View {
     var body: some View {
         VStack {
             VideoPlayer(player: avPlayer)
-                .mask(Rectangle().frame(width: 250, height: 220).cornerRadius(12))
+                .scaleEffect(1.57)
+                .frame(width: 358, height: 316)
+                .cornerRadius(12)
                 .onAppear {
                     avPlayer.play()
+                    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
+                            avPlayer.seek(to: .zero)
+                            avPlayer.play()
+                                       }
                 }
             Button("Play/Pause") {
                 if isPaused{

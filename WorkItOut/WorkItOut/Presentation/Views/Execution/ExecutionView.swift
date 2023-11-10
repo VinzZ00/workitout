@@ -20,6 +20,7 @@ struct ExecutionView: View {
     @State var progress: CGFloat = 0.0
     @Binding var path : NavigationPath
     @State var avPlayer = AVPlayer()
+    @State var ready = false
     
     var body: some View {
         VStack {
@@ -58,12 +59,24 @@ struct ExecutionView: View {
                 }
                 .padding(.horizontal, 20)
                 
-                VideoPlayer(player: avPlayer)
-                    .mask(Rectangle().frame(width: 250, height: 220).cornerRadius(12))
-                    .cornerRadius(12)
-                    .onAppear {
-                        avPlayer.play()
-                    }
+                if ready == false {
+                    Image(vm.poses[vm.index].image!)
+                        .frame(width: 358, height: 316)
+                        .cornerRadius(12)
+                }else {
+                    VideoPlayer(player: avPlayer)
+                        .scaleEffect(1.57)
+                        .frame(width: 358, height: 316)
+                        .cornerRadius(12)
+                        .onAppear {
+                            avPlayer.play()
+                            NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
+                                    avPlayer.seek(to: .zero)
+                                    avPlayer.play()
+                            }
+                        }
+                }
+                
                 
                 VStack{
                     Text("\(vm.poses[vm.index].name)")
@@ -191,6 +204,13 @@ struct ExecutionView: View {
                     
                 }
                 .padding(.top, 40)
+                .onChange(of: avPlayer.status, { _, newValue in
+                    if newValue == .readyToPlay{
+                        ready = true
+                    }else{
+                        ready = false
+                    }
+                })
                 .onChange(of: vm.index) { _, _ in
                     if vm.index == vm.poses.count {
                         nextDisabled = true
@@ -222,7 +242,10 @@ struct ExecutionView: View {
             }
         }
         .onAppear{
-            self.avPlayer = AVPlayer(url: URL(string: vm.poses[vm.index].video!)!)
+            if vm.poses[vm.index].video != nil {
+                self.avPlayer = AVPlayer(url: URL(string: vm.poses[vm.index].video!)!)
+            }
+            
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)
