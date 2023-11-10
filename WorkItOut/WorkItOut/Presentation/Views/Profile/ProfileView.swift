@@ -11,7 +11,6 @@ struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
     @StateObject var vm : ProfileViewModel
-    @State var selection = 0
     
     @EnvironmentObject var dm: DataManager
     @State var alert : Bool = false;
@@ -58,7 +57,6 @@ struct ProfileView: View {
                                 self.presentationMode.wrappedValue.dismiss()
                             }else{
                                 withAnimation(.easeInOut(duration: 0.15)) {
-                                    selection = 1
                                     vm.showAlert = true
                                 }
                             }
@@ -75,13 +73,21 @@ struct ProfileView: View {
                     }
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            withAnimation(.easeInOut(duration: 0.15)) {
-                                selection = 2
-                                vm.showAlert.toggle()
+                            Task{
+                                dm.pm.addPosetoPoses()
+                                vm.setProfile()
+                                await dm.setUpProfile(moc: moc, profile: vm.profile)
+                                vm.profile = dm.profile!
+                                await vm.saveProfile(moc: moc)
                             }
+                            self.presentationMode.wrappedValue.dismiss()
                         } label: {
-                            Text("Save")
+                            Text("Update")
                                 .foregroundStyle(vm.equalWithProfile() ? .grayBorder : Color(.orangePrimary))
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 8)
+                                .background(vm.equalWithProfile() ? .grayBorder.opacity(0.25) : .orangePrimary.opacity(0.25))
+                                .cornerRadius(8)
                         }
                         .padding(.top, 10)
                         .disabled(vm.equalWithProfile())
@@ -120,27 +126,22 @@ struct ProfileView: View {
                             .foregroundStyle(.main)
                     }
                     VStack(spacing: 10){
-                        Text(selection == 1 ? "Exit and Discard Changes" : "Save Profile Changes & Update Yoga Plan")
+                        Text("Discard Changes")
                             .font(.title2.bold())
                             .multilineTextAlignment(.center)
                             .frame(width: 250)
-                        Text(selection == 1 ? "Looks like you have changes, Are you sure you want to exit?" : "Your current and next yoga plan will be updated with your new data.")
+                        Text("Looks like you have changes, Are you sure want to exit?")
                             .foregroundStyle(.gray)
                             .multilineTextAlignment(.center)
                             .frame(width: 300)
-                        Button("Save"){
-                            Task{
-                                dm.pm.addPosetoPoses()
-                                vm.setProfile()
-                                await dm.setUpProfile(moc: moc, profile: vm.profile)
-                                vm.profile = dm.profile!
-                                await vm.saveProfile(moc: moc)
-                                self.presentationMode.wrappedValue.dismiss()
-                            }
-                        }.buttonStyle(BorderedButton())
-                        Button("Discard Changes"){
+                        Button("Exit"){
                             vm.revertProfile()
                             self.presentationMode.wrappedValue.dismiss()
+                        }.buttonStyle(BorderedButton())
+                        Button("Cancel"){
+                            withAnimation(.easeOut(duration: 0.15)) {
+                                vm.showAlert = false
+                            }
                         }.buttonStyle(OutlineButton())
                     }
                 }

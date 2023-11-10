@@ -104,8 +104,8 @@ struct HomeView: View {
             .onAppear{
                 Task{
                     do {
-                        print("Load Profile from dm.profile")
                         try await vm.loadProfile(profile: dm.profile!)
+                        print("Load Profile from dm.profile")
                     } catch {
                         self.alert = true
                     }

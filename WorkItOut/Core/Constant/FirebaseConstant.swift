@@ -45,6 +45,8 @@ extension FirebaseConstant {
         static let recommendedTrimester = "recommendedTrimester"
         static let relieves = "relieves"
         static let status = "status"
+        static let videoURL = "videoUrl"
+        static let imageURL = "imageUrl"
 //        static let spineMovement = "spineMovement"
     }
 }

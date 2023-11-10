@@ -16,4 +16,6 @@ struct RequestYogaPose {
     var recommendedTrimester : Trimester
     var relieves : [Relieve]
     var status : Status
+    var videoURL : String?
+    var imageURL : String?
 }
