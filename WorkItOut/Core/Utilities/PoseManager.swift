@@ -103,9 +103,7 @@ struct PoseManager {
                 while newPoses.contains(where: {$0.name == newPose.name}) &&
                     (poses.count > newPoses.count) &&
                     !(poses.contains(newPoses)) {
-                    i += 1
                     newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
-                    print(i)
                     if i == 100 {
                         print("loop")
                         break
@@ -118,8 +116,6 @@ struct PoseManager {
         }
         
         newPoses.sort(by: {$0.category.getOrder() > $1.category.getOrder()})
-        
-        print("Pose work")
         return newPoses
     }
     
@@ -130,7 +126,6 @@ struct PoseManager {
             yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: createPoses(poses: poses, duration: duration, exceptions: exceptions, relieves: relieves), day: day, estimationDuration: duration.getDurationInMinutes(), image: "ExampleImage.png"))
         }
         
-        print("yoga work")
         return yogas
     }
     
@@ -138,7 +133,6 @@ struct PoseManager {
         var yogaPlan = YogaPlan(name: name, trimester: trimester)
         yogaPlan.yogas = self.createYogas(poses: poses, days: days, duration: duration, exceptions: exceptions, relieves: relieves)
 
-        print("Yoga plan work")
         return yogaPlan
     }
 }

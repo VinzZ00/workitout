@@ -5,9 +5,9 @@
 //  Created by Angela Valentine Darmawan on 30/10/23.
 //
 
+import AVKit
 import SwiftUI
 import CoreData
-import AVKit
 
 struct ExecutionView: View {
     @Environment(\.managedObjectContext) var moc : NSManagedObjectContext
@@ -19,7 +19,6 @@ struct ExecutionView: View {
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
     @Binding var path : NavigationPath
-    @State var avPlayer = AVPlayer()
     
     var body: some View {
         VStack {
@@ -63,13 +62,6 @@ struct ExecutionView: View {
                     RoundedRectangle(cornerRadius: 12)
                         .frame(width: 358, height: 358)
                 }
-                
-//                VideoPlayer(player: avPlayer)
-//                    .mask(Rectangle().frame(width: 250, height: 220).cornerRadius(12))
-//                    .cornerRadius(12)
-//                    .onAppear {
-//                        avPlayer.play()
-//                    }
                 
                 VStack{
                     Text("\(vm.poses[vm.index].name)")
@@ -141,17 +133,16 @@ struct ExecutionView: View {
                                 .resizable()
                                 .frame(width: 20, height: 20)
                         }
-                        
                     }
                     .disabled(previousDisabled)
                     
                     Button{
                         if timerVm.isTimerPaused == false{
                             timerVm.pauseTimer()
-                            avPlayer.pause()
+                            vm.avPlayer?.pause()
                         }else {
                             timerVm.continueTimer()
-                            avPlayer.play()
+                            vm.avPlayer?.play()
                         }
                         
                     }label: {
@@ -176,8 +167,6 @@ struct ExecutionView: View {
                         }
                     }
                     .padding(.horizontal, 50)
-                    
-                    
                     Button{
                         vm.nextPose(skipped: true)
                         if !(vm.index + 1 >= vm.poses.count) {
@@ -233,9 +222,6 @@ struct ExecutionView: View {
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)
         }
-//        .navigationDestination(for: Int.self) { string in
-//            ExecutionCompleteView(path: $path, vm: vm)
-//        }
     }
 }
 

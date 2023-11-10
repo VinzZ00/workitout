@@ -14,6 +14,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var hasNoProfile = false
     @State private var isLoading = true
+    @State var alert = false
     var body: some View {
         ZStack{
             if isLoading {
@@ -21,6 +22,7 @@ struct ContentView: View {
             }else{
                 if !hasNoProfile{
                     HomeView()
+                        .environmentObject(dm);
                 }
             }
         }
@@ -36,8 +38,10 @@ struct ContentView: View {
             Task{
                 do {
                     hasNoProfile = try await !dm.loadProfile(moc: moc)
+                    
                 } catch {
                     hasNoProfile = false
+                    print("Masuk try catch di content view")
                 }
                 isLoading = false
             }
