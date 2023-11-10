@@ -38,7 +38,12 @@ struct YogaDetailView: View {
                         YogaPreviewView(yoga: yoga)
                     }
                 }
-                
+                HStack{
+                    Image(systemName: "info.circle.fill")
+                        .foregroundStyle(Color.neutral3)
+                    Text("You can skip this part")
+                        .foregroundStyle(Color.neutral3)
+                }
                 ButtonComponent(title: state.rawValue) {
                     if state == .relieveChoice {
                         state = .yogaPreview
@@ -47,7 +52,6 @@ struct YogaDetailView: View {
                         sheetToggle = false
                         path.append("String")
                     }
-                    
                 }
             }
             .navigationTitle(showHeader ? "" : state.getTitle())
@@ -88,7 +92,7 @@ struct YogaDetailView: View {
         func getTitle() -> String {
             switch self {
             case .relieveChoice:
-                return "What Are Your Current Conditions?"
+                return "Choose Your Pain and Relief and Target Area"
             case .yogaPreview:
                 return "Balancing and Grounding"
             }

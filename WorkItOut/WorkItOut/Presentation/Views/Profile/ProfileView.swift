@@ -18,6 +18,16 @@ struct ProfileView: View {
         ZStack{
             VStack{
                 ScrollView(showsIndicators: false){
+                    HStack{
+                        Image(systemName: "info.circle.fill")
+                            .foregroundStyle(Color.neutral3)
+                        Text("Your yoga plan will be updated when you save the changes of assessment")
+                            .foregroundStyle(Color.neutral3)
+                    }
+                    .padding(.horizontal, 5)
+                    .padding(.vertical, 10)
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(8)
                     VStack(alignment: .leading){
                         Text("Pregnancy & Health Condition")
                             .foregroundStyle(.gray)

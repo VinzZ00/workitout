@@ -12,9 +12,8 @@ struct HistorySheet: View {
     @Binding var showSheet : Bool
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
-            Text("\(history.executionDate.formatted(date: .long, time: .omitted))")
+            Text("\(history.executionDate.formatted(date: .complete, time: .omitted))")
             LazyVStack(alignment: .leading, spacing: 5){
-                // MARK: menghapus first supaya tidak error.
                 Text("\(history.yogaDone.name)")
                     .font(.largeTitle.bold())
                 Text("\(history.yogaDone.poses.count) Exercise (\(history.duration) Min)")
@@ -22,7 +21,7 @@ struct HistorySheet: View {
                     .background(.ultraThinMaterial)
                     .cornerRadius(8)
                     .lineLimit(1)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(Color.neutral3)
             }
             .padding(.bottom, 10)
             ScrollView{
@@ -61,7 +60,7 @@ struct HistorySheet: View {
 #Preview {
     let poses = [
         Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed),
-        Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back, .pelvic], image: nil, description: "Bound Angle", seconds: 60, state: .completed),
+        Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back], image: nil, description: "Bound Angle", seconds: 60, state: .completed),
         Pose(id: UUID(), name: "Cat", difficulty: .beginner, recommendedTrimester: .first, relieve: [.back, .pelvic], image: nil, description: "Cat", seconds: 60, state: .skipped)
     
     ]

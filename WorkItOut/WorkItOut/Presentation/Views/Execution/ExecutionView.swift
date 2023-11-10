@@ -20,6 +20,8 @@ struct ExecutionView: View {
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
     @State var showAlert = false
+    @State var showTips = true
+    @State var checkBox = false
     @Binding var path :  NavigationPath
     
     var body: some View {
@@ -31,7 +33,6 @@ struct ExecutionView: View {
                             withAnimation(.easeIn(duration: 0.25)) {
                                 showAlert = true
                             }
-                            
                         }label: {
                             ZStack{
                                 Circle()
@@ -41,7 +42,6 @@ struct ExecutionView: View {
                                     .resizable()
                                     .frame(width: 20, height: 20)
                             }
-                            
                         }
                         Spacer()
                         HStack (spacing: 20){
@@ -62,18 +62,16 @@ struct ExecutionView: View {
                         }
                     }
                     .padding(.horizontal, 20)
-                    if let image = UIImage(named: vm.poses[vm.index].name){
+                    if let _ = UIImage(named: vm.poses[vm.index].name){
                         PoseImageCard(name: vm.poses[vm.index].name, width: 358)
                     }else{
                         RoundedRectangle(cornerRadius: 12)
                             .frame(width: 358, height: 358)
                     }
-                    
                     VStack{
                         Text("\(vm.poses[vm.index].name)")
                                 .font(.title)
                                 .bold()
-                            
                         if !(vm.index + 1 == vm.poses.count) {
                             Text("Next: \(vm.poses[vm.index+1].name)")
                                 .foregroundStyle(Color.gray)
@@ -86,11 +84,6 @@ struct ExecutionView: View {
                             .font(.system(size: 48))
                             .bold()
                             .padding(50)
-                            .onAppear {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                                    self.textSwitch.toggle()
-                                }
-                            }
                     }else {
                         VStack {
                             Text("\(timerVm.currentTime())")
@@ -122,14 +115,12 @@ struct ExecutionView: View {
                         })
                         .padding(14)
                     }
-                    
                     HStack{
                         Button{
                             vm.previousPose()
                             if !(vm.index == 0){
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds))
                             }
-                            
                         }label: {
                             ZStack{
                                 Circle()
@@ -198,13 +189,11 @@ struct ExecutionView: View {
                         }else {
                             nextDisabled = false
                         }
-                        
                         if vm.index == 0 {
                             previousDisabled = true
                         }else{
                             previousDisabled = false
                         }
-                        
                         timerVm.isTimerPaused = false
                         textSwitch = false
                         progress = 0.0
@@ -220,7 +209,17 @@ struct ExecutionView: View {
                             path.append(1)
                         }
                     }
+                    .onChange(of: showTips) { _, valueIsTrue in
+                        if !valueIsTrue {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                                self.textSwitch.toggle()
+                            }
+                        }
+                    }
                 }
+            }
+            if showTips {
+                TipView(showTips: $showTips, toggle: $checkBox)
             }
             if showAlert {
                 ZStack{
@@ -264,7 +263,7 @@ struct ExecutionView: View {
         }
         
         .onAppear{
-//            self.avPlayer = AVPlayer(url: Bundle.main.url(forResource: vm.poses[vm.index].name, withExtension: "MOV")!)
+            // Start AVPlayer Logic
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)

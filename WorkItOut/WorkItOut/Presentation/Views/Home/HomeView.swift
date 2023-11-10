@@ -65,6 +65,7 @@ struct HomeView: View {
                 
                 ScrollListenerViewBuilder(showContent: $vm.showHeader) {
                     HomeCurrentYogaView()
+                        .background(Color.background)
                         .environmentObject(vm)
                     
                     VStack(alignment: .leading) {
@@ -110,7 +111,7 @@ struct HomeView: View {
                     }
                 }
             }
-            .background(Color.background)
+            
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
                     .environmentObject(dm)
