@@ -45,9 +45,8 @@ struct HomeView: View {
                                     HomeButtonView(icon: "clock.arrow.circlepath")
                                 }
                             }
-                            
-                            
                             .padding(.bottom)
+                            
                             if vm.showHeader {
                                 HStack {
                                     if let profile = dm.profile {
