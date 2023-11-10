@@ -101,6 +101,8 @@
 		D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E322AF21E070050D9E1 /* ProfileTests.swift */; };
 		D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */; };
 		D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B57DF42AF3958900AD9842 /* HistorySheet.swift */; };
+		D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */; };
+		D8BA73C32AFCCCA8004A795A /* PoseImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA73C22AFCCCA8004A795A /* PoseImageCard.swift */; };
 		D8BC2BE72AE8003000E61487 /* AssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BE62AE8003000E61487 /* AssessmentView.swift */; };
 		D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BEA2AE802D100E61487 /* AssessmentDetailView.swift */; };
 		D8BC2BEE2AE80F1800E61487 /* AssessmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BED2AE80F1800E61487 /* AssessmentViewModel.swift */; };
@@ -225,6 +227,8 @@
 		D88A3E322AF21E070050D9E1 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionCompleteView.swift; sourceTree = "<group>"; };
 		D8B57DF42AF3958900AD9842 /* HistorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySheet.swift; sourceTree = "<group>"; };
+		D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseConstant.swift; sourceTree = "<group>"; };
+		D8BA73C22AFCCCA8004A795A /* PoseImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseImageCard.swift; sourceTree = "<group>"; };
 		D8BC2BE62AE8003000E61487 /* AssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentView.swift; sourceTree = "<group>"; };
 		D8BC2BEA2AE802D100E61487 /* AssessmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentDetailView.swift; sourceTree = "<group>"; };
 		D8BC2BED2AE80F1800E61487 /* AssessmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewModel.swift; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 				6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */,
 				6CC43D0A2AF9F93F00FEE93A /* IconButtonComponent.swift */,
 				6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */,
+				D8BA73C22AFCCCA8004A795A /* PoseImageCard.swift */,
 			);
 			path = GlobalComponent;
 			sourceTree = "<group>";
@@ -383,7 +388,6 @@
 			isa = PBXGroup;
 			children = (
 				6C8D5D142AE6619700A2986D /* Mock */,
-				6C8D5D0B2AE6618E00A2986D /* Enum */,
 				AC5A9A612AE41138003B0C1F /* Entities */,
 			);
 			path = Data;
@@ -458,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */,
+				D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -632,6 +637,7 @@
 				6C8D5D0A2AE6617500A2986D /* Data */,
 				AC5A9A642AE41138003B0C1F /* Constant */,
 				ACFED3852AE2B5F10018CD03 /* Services */,
+				6C8D5D0B2AE6618E00A2986D /* Enum */,
 				ACFED3832AE2B5CD0018CD03 /* Config */,
 				ACFED3822AE2B5C20018CD03 /* Resources */,
 			);
@@ -1011,6 +1017,7 @@
 				D836D93C2AF499DA00260299 /* PoseCard.swift in Sources */,
 				6CB5F8142AF618D70019539C /* Status.swift in Sources */,
 				6CB5F8162AF61A210019539C /* Category.swift in Sources */,
+				D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */,
 				D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */,
 				D8BC2BFA2AE81EA200E61487 /* Months.swift in Sources */,
@@ -1030,6 +1037,7 @@
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
 				D8FD5D682AF3538F005F8D4E /* HistoryView.swift in Sources */,
+				D8BA73C32AFCCCA8004A795A /* PoseImageCard.swift in Sources */,
 				6CC43D0F2AF9FD6000FEE93A /* GeneratePlanYogaView.swift in Sources */,
 				D8BC2BF82AE81E0400E61487 /* Duration.swift in Sources */,
 				6C732A412AF109E500E17FDB /* NavigationLinkComponent.swift in Sources */,
@@ -1235,7 +1243,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 382VG5FRJK;
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -1268,7 +1276,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 382VG5FRJK;
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

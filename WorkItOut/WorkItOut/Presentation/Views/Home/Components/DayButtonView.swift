@@ -65,5 +65,5 @@ struct DayButtonView: View {
 }
 
 //#Preview {
-//    DayButtonView()
+//    DayButtonView(selectedDay: .constant(.friday), workoutDay: [.friday, .saturday, .sunday], day: .friday, weekXpreg: 20, checkedWeek: 20)
 //}
