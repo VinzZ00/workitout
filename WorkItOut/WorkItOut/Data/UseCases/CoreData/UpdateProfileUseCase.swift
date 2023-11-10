@@ -37,14 +37,24 @@ struct UpdateProfileUseCase {
                     }
                 }
                 
-                
                 (profilens.plan?.allObjects as! [YogaPlanNSObject]).forEach { ygp in
                     profilens.removeFromPlan(ygp)
+                    
+                    context.delete(ygp)
+                    try? context.save()
+//                    ygp.yogas?.allObjects as! [YogaNSObject].ForEach { y in
+//                        context
+//                    }
+                    
                 }
                 
-                (profilens.plan?.allObjects as! [YogaPlanNSObject]).forEach { ygp in
-                    ygp.ofProfile = profilens
-                    profilens.addToPlan(ygp)
+                
+//                (profilens.plan?.allObjects as! [YogaPlanNSObject]).forEach { ygp in
+//                    ygp.ofProfile = profilens
+//                    profilens.addToPlan(ygp)
+//                }
+                profile.plan.map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)}.forEach{ obj in
+                    profilens.addToPlan( obj as! YogaPlanNSObject)
                 }
                 
                 

@@ -7,742 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E1C2631B-E41B-4205-ACF6-EAD7AEE62298"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/Components/DayButtonView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "265CD05A-EFFD-4855-AA10-DCCB7B7406A3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/Core/Data/Entities/Helper.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "intoObject()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "265CD05A-EFFD-4855-AA10-DCCB7B7406A3 - 3d5b20298d65876d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WorkItOut.ProfileNSObject.intoObject() -&gt; WorkItOut.Profile"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOut/Core/Data/Entities/Helper.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "580">
-               </Location>
-               <Location
-                  uuid = "265CD05A-EFFD-4855-AA10-DCCB7B7406A3 - cdc32cda97c66500"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Substring) -&gt; WorkItOut.Relieve in WorkItOut.ProfileNSObject.intoObject() -&gt; WorkItOut.Profile"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOut/Core/Data/Entities/Helper.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "108">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B7E0052-C70F-408A-8A82-FE81E257729A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/Core/Data/Entities/Helper.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "intoObject()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3B7E0052-C70F-408A-8A82-FE81E257729A - 20c6e94f103dfc4d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WorkItOut.PoseNSObject.intoObject() -&gt; WorkItOut.Pose"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOut/Core/Data/Entities/Helper.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "2408">
-               </Location>
-               <Location
-                  uuid = "3B7E0052-C70F-408A-8A82-FE81E257729A - 609fc9cdf37456b7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Substring) -&gt; WorkItOut.Exception in WorkItOut.PoseNSObject.intoObject() -&gt; WorkItOut.Pose"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOut/Core/Data/Entities/Helper.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "108">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "19A19463-4AAE-46BF-B9A8-85043FECEE86"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/HistoryTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "testCategorizeHistoryByDate()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "34475ABB-A40C-4BE4-A69E-7E59470BD341"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/HistoryTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "testSaveHistory()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "34475ABB-A40C-4BE4-A69E-7E59470BD341 - 149f419d930e53bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "708">
-               </Location>
-               <Location
-                  uuid = "34475ABB-A40C-4BE4-A69E-7E59470BD341 - 149f419d930e53bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "1048">
-               </Location>
-               <Location
-                  uuid = "34475ABB-A40C-4BE4-A69E-7E59470BD341 - 149f419d930e53bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "1008">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/HistoryTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "testSaveHistory()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - e6c17a49f036357e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "1132">
-               </Location>
-               <Location
-                  uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - 55e655481d6ea66"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) await resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - 9dba4de781826170"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - e6c17a49f0363b2c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "840">
-               </Location>
-               <Location
-                  uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - 55e655481d6e434"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) await resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - 9dba4de781826f22"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - e6c17a49f0363b2c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "1044">
-               </Location>
-               <Location
-                  uuid = "E776B3F2-0C81-4C61-A81A-B4CF3DB12BE9 - 9dba4de781826f22"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for WorkItOutTests.HistoryTests.testSaveHistory() async -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/HistoryTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "120">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "14FB7CED-D059-44E2-8DE5-179302EE1411"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/WorkItOutTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "testUpdate()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "14FB7CED-D059-44E2-8DE5-179302EE1411 - 6283264ad8bf7ce8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "508">
-               </Location>
-               <Location
-                  uuid = "14FB7CED-D059-44E2-8DE5-179302EE1411 - 9d2ba6d977b938aa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOutTests/WorkItOutTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "212">
-               </Location>
-               <Location
-                  uuid = "14FB7CED-D059-44E2-8DE5-179302EE1411 - 46ab9576e89e1605"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOutTests/WorkItOutTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "508">
-               </Location>
-               <Location
-                  uuid = "14FB7CED-D059-44E2-8DE5-179302EE1411 - b90315e547985247"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOutTests/WorkItOutTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "212">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BF08A7B3-2D52-4298-98C9-E2FD1BBFC17A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "initMonth()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FA51C2C3-A5B9-4454-B425-D8C7612EF436"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "initMonth()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FA51C2C3-A5B9-4454-B425-D8C7612EF436 - 1900644e2eba79"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WorkItOut.HomeViewModel.initMonth() -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "1964">
-               </Location>
-               <Location
-                  uuid = "FA51C2C3-A5B9-4454-B425-D8C7612EF436 - 1900644e2eba79"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WorkItOut.HomeViewModel.initMonth() -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "808">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "653F38A9-CFAF-4F41-B88A-B366D97E4984"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "initMonth()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CA3F5B30-AE46-4D7D-A0B9-D1DC6C81862E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/Components/HomeCurrentYogaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5D38DB3F-715A-4FE0-B6C8-22CA419270BB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/Components/HomeCurrentYogaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF81468D-B27A-4C8F-8FBE-5B5BB80B86E4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/Components/HomeCurrentYogaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6F50B2E1-75EC-450F-91A4-B8CF091B40EE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/Components/HomeCurrentYogaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A74CC92-2519-42EE-859D-D692E53340D3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/Components/HomeCurrentYogaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7A42407F-F492-4D3C-B71A-5CE6234E5281"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "initMonth()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "61C6CDC1-84D8-47AF-AEFE-29F2CB3A22D1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/Components/HomeCurrentYogaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "36EE55B7-3C8B-453A-AE01-6E2AF23A07C8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/WorkItOutTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "testUpdate()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "36EE55B7-3C8B-453A-AE01-6E2AF23A07C8 - 46ab9576e89e1605"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOutTests/WorkItOutTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "508">
-               </Location>
-               <Location
-                  uuid = "36EE55B7-3C8B-453A-AE01-6E2AF23A07C8 - b90315e547985247"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for WorkItOutTests.WorkitOutTests.testUpdate() async throws -&gt; ()"
-                  moduleName = "WorkItOutTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOutTests/WorkItOutTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "212">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "37349D26-ECA0-44DB-9981-A57797FB5E1E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "initMonth()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "03C73E67-B35E-4D6E-BCB5-A88C2858BE0F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/HistoryTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "testSet()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0EFFC0D7-C575-46CF-B4CE-D4BA42F596B6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/HistoryTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "testSet()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "34FABFF9-E825-45A8-98C4-166726E21B6A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/HistoryTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "testSet()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "830C7B6A-7D0A-4596-B1C6-C6BFA78AAC30"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOutTests/HistoryTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "testSaveHistory()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B8E995D0-F5C9-408B-BF82-CA3BA52F0528"
-            shouldBeEnabled = "No"
+            uuid = "E9A2746A-7C30-4F5B-A055-D7ABD95161E9"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "call(profile:context:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -750,7 +23,355 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8DB92792-280C-4D69-B4E9-4645C586EE2C"
+            uuid = "B1C2F23E-548E-4A74-A472-A96BD08CC52C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91EE7381-92AE-4260-9233-862248A63F5E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "91EE7381-92AE-4260-9233-862248A63F5E - ea46809f921891a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "91EE7381-92AE-4260-9233-862248A63F5E - fafdef8b799c23ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E70345A2-626D-467D-AF43-B18320F0D126"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E70345A2-626D-467D-AF43-B18320F0D126 - 8f9181ae93bb5f63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "E70345A2-626D-467D-AF43-B18320F0D126 - 54353bc235d29b6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "E70345A2-626D-467D-AF43-B18320F0D126 - 4f870ed018fd756c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "E70345A2-626D-467D-AF43-B18320F0D126 - 8f9181ae93bb5f63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A351B277-DA4B-4DDE-B16A-D8325B3F6241"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4CC2DBA-13FC-4A54-B86F-715F388F12E5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C4CC2DBA-13FC-4A54-B86F-715F388F12E5 - 8f9181ae93bb5ea1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1128">
+               </Location>
+               <Location
+                  uuid = "C4CC2DBA-13FC-4A54-B86F-715F388F12E5 - 5e6869e13198bac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (WorkItOut.History) -&gt; Swift.Bool in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "C4CC2DBA-13FC-4A54-B86F-715F388F12E5 - 8f9181ae93bb5ea1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BDB2ADA-F121-4A0D-92E0-D30745912152"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0BDB2ADA-F121-4A0D-92E0-D30745912152 - 5e6869e13198b8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (WorkItOut.History) -&gt; Swift.Bool in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "0BDB2ADA-F121-4A0D-92E0-D30745912152 - a14668314ab79d8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (WorkItOut.HistoryNSObject) -&gt; Swift.Optional&lt;Foundation.UUID&gt; in closure #1 (WorkItOut.History) -&gt; Swift.Bool in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F55C1C1-E851-4E1F-AABD-C15C190CF5BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1931BE2-65CD-401F-B8A5-D85581A906C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B1931BE2-65CD-401F-B8A5-D85581A906C1 - 8f9181ae93bb5ea1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1128">
+               </Location>
+               <Location
+                  uuid = "B1931BE2-65CD-401F-B8A5-D85581A906C1 - 5e6869e13198bac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (WorkItOut.History) -&gt; Swift.Bool in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "B1931BE2-65CD-401F-B8A5-D85581A906C1 - 8f9181ae93bb5ea1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93CAE16C-FE3A-4C01-A3CA-26EC0950B26C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -766,7 +387,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F90A8087-6B9B-4527-80DF-C6A079BF8A25"
+            uuid = "43BFC54A-9715-40F8-8E65-3C56BEB0EA43"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -779,1160 +400,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F90A8087-6B9B-4527-80DF-C6A079BF8A25 - d04d39a828371ba9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "2012">
-               </Location>
-               <Location
-                  uuid = "F90A8087-6B9B-4527-80DF-C6A079BF8A25 - 876232f34ffa5c9a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (__C.NSManagedObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C839D288-5321-4A16-A389-883AAD1956BF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C839D288-5321-4A16-A389-883AAD1956BF - d04d39a828371ae7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "2168">
-               </Location>
-               <Location
-                  uuid = "C839D288-5321-4A16-A389-883AAD1956BF - 3d0124056531e7d7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #6 (__C.NSManagedObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOutDebug/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "27282D14-D8C3-4D0B-BA4A-DE7C6ED8697F"
-            shouldBeEnabled = "No"
-            condition = "true"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po  &quot;erorr  \(self.alert)&quot;">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-            <Locations>
-               <Location
-                  uuid = "27282D14-D8C3-4D0B-BA4A-DE7C6ED8697F - 13e7939b126098d6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "1812">
-               </Location>
-               <Location
-                  uuid = "27282D14-D8C3-4D0B-BA4A-DE7C6ED8697F - 3bb9e01176806870"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 () -&gt; SwiftUI.Alert in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "27282D14-D8C3-4D0B-BA4A-DE7C6ED8697F - 13c00697c71e859d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "1108">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E883DB9B-C1BC-4323-8E1B-B2E4042D79A8"
-            shouldBeEnabled = "No"
-            condition = "true"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po &quot;masuk sini &quot;">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-            <Locations>
-               <Location
-                  uuid = "E883DB9B-C1BC-4323-8E1B-B2E4042D79A8 - 3bb9e01176806853"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 () -&gt; SwiftUI.Alert in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  uuid = "E883DB9B-C1BC-4323-8E1B-B2E4042D79A8 - d6c3058329473cc7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #5 () -&gt; SwiftUI.Alert in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "148">
-               </Location>
-               <Location
-                  uuid = "E883DB9B-C1BC-4323-8E1B-B2E4042D79A8 - 3bb9e01176806853"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 () -&gt; SwiftUI.Alert in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "1220">
-               </Location>
-               <Location
-                  uuid = "E883DB9B-C1BC-4323-8E1B-B2E4042D79A8 - 13e7939b126098f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "2928">
-               </Location>
-               <Location
-                  uuid = "E883DB9B-C1BC-4323-8E1B-B2E4042D79A8 - 366407129b54eba5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #6 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "144">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "79DCC3FE-517F-49CB-A838-B2B69ADBFDE9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "454DC6CB-0752-427B-B24A-5CE4083825D3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B82F09BA-B42B-4CCA-AF89-29A89970AD3A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "HomeView"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F014BC49-A70A-444C-B72A-DD3EB93A27E0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "HomeView"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EC246F72-CF51-417B-AA5D-E1EE513A75DF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "99113B77-B694-477A-B9CD-721FCF6FF9D8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0B56F83B-2664-44A1-9BE7-372F63038D05"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "0B56F83B-2664-44A1-9BE7-372F63038D05 - 366407129b54eb44"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #6 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "0B56F83B-2664-44A1-9BE7-372F63038D05 - d8e2e492592f433a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () async -&gt; () in closure #6 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "172">
-               </Location>
-               <Location
-                  uuid = "0B56F83B-2664-44A1-9BE7-372F63038D05 - 15c3c9c5be9fe60b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #6 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6685C7D1-E4C7-4F8B-99CB-3ADF6E414CF9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "6685C7D1-E4C7-4F8B-99CB-3ADF6E414CF9 - 869a6c24f297dbcd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #7 (Swift.String) -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "980">
-               </Location>
-               <Location
-                  uuid = "6685C7D1-E4C7-4F8B-99CB-3ADF6E414CF9 - 15c3c9c5be9fe41a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #7 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "332">
-               </Location>
-               <Location
-                  uuid = "6685C7D1-E4C7-4F8B-99CB-3ADF6E414CF9 - b941e3dc6bc52937"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #7 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "6685C7D1-E4C7-4F8B-99CB-3ADF6E414CF9 - e11c0ac89800a818"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #7 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "6685C7D1-E4C7-4F8B-99CB-3ADF6E414CF9 - 88f22a4d76f50a67"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #7 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "96">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DA7129A9-F684-49A1-8B32-D698A3B81782"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "DA7129A9-F684-49A1-8B32-D698A3B81782 - 869a6c24f297dbec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #7 (Swift.String) -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "1136">
-               </Location>
-               <Location
-                  uuid = "DA7129A9-F684-49A1-8B32-D698A3B81782 - e11c0ac89800a839"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #7 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "DA7129A9-F684-49A1-8B32-D698A3B81782 - 88f22a4d76f50a46"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #7 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0B2110FB-EDDD-43F2-A50E-40554434E662"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "0B2110FB-EDDD-43F2-A50E-40554434E662 - 13e7939b12609a4b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "3876">
-               </Location>
-               <Location
-                  uuid = "0B2110FB-EDDD-43F2-A50E-40554434E662 - 88f22a4d76f50a29"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #7 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "208">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "525A08DA-BE33-4848-8309-2FBDB5E28C14"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "525A08DA-BE33-4848-8309-2FBDB5E28C14 - e11c0ac89800a9e0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #6 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  uuid = "525A08DA-BE33-4848-8309-2FBDB5E28C14 - 88f22a4d76f50b9f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #6 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "260">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F19958D0-BDB7-43A0-B99C-6C94F5A1505F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "F19958D0-BDB7-43A0-B99C-6C94F5A1505F - 869a6c24f297db2e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #7 (Swift.String) -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
-                  offsetFromSymbolStart = "564">
-               </Location>
-               <Location
-                  uuid = "F19958D0-BDB7-43A0-B99C-6C94F5A1505F - 15c3c9c5be9fe4f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #7 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
-                  offsetFromSymbolStart = "204">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "431E5D3C-E83D-4619-8475-C387BDB5EE01"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A27C16D8-CE6F-4164-B522-E8DF35751440"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "A27C16D8-CE6F-4164-B522-E8DF35751440 - 15c3c9c5be9fe74d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "332">
-               </Location>
-               <Location
-                  uuid = "A27C16D8-CE6F-4164-B522-E8DF35751440 - b941e3dc6bc52a60"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "A27C16D8-CE6F-4164-B522-E8DF35751440 - e11c0ac89800ab4f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "A27C16D8-CE6F-4164-B522-E8DF35751440 - 88f22a4d76f50930"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "96">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9DA5D77B-5375-4705-B575-B2BB598E0D45"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F214E418-AD36-489D-B0A2-6FD088F3F736"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "79AEBE0E-7467-4F5B-A1CD-C22775DD09B2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "33349E73-23BA-426F-ACAB-2B12DB67AC8C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "33349E73-23BA-426F-ACAB-2B12DB67AC8C - fafdef8b799c2327"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "33349E73-23BA-426F-ACAB-2B12DB67AC8C - 331156f2ee4320c9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "33349E73-23BA-426F-ACAB-2B12DB67AC8C - 8f9181ae93bb5f25"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "296">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AD3C074B-26C5-4746-982A-77BEEEDD16DF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AD3C074B-26C5-4746-982A-77BEEEDD16DF - 8f9181ae93bb5f04"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "328">
-               </Location>
-               <Location
-                  uuid = "AD3C074B-26C5-4746-982A-77BEEEDD16DF - 8f9181ae93bb5f04"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "356">
-               </Location>
-               <Location
-                  uuid = "AD3C074B-26C5-4746-982A-77BEEEDD16DF - 8f9181ae93bb5f04"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "352">
-               </Location>
-               <Location
-                  uuid = "AD3C074B-26C5-4746-982A-77BEEEDD16DF - 8f9181ae93bb5f04"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "380">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2F281F49-E22B-4592-AE62-79CA84C0A44F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2F281F49-E22B-4592-AE62-79CA84C0A44F - 8f9181ae93bb5ea1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "1104">
-               </Location>
-               <Location
-                  uuid = "2F281F49-E22B-4592-AE62-79CA84C0A44F - 5e6869e13198bac"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (WorkItOut.History) -&gt; Swift.Bool in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "168">
-               </Location>
-               <Location
-                  uuid = "2F281F49-E22B-4592-AE62-79CA84C0A44F - 8f9181ae93bb5ea1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "1128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B5A4E153-B90E-4533-8B72-60CC6C269C58"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B5A4E153-B90E-4533-8B72-60CC6C269C58 - 8f9181ae93bb5f63"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "376">
-               </Location>
-               <Location
-                  uuid = "B5A4E153-B90E-4533-8B72-60CC6C269C58 - 54353bc235d29b6d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "B5A4E153-B90E-4533-8B72-60CC6C269C58 - 4f870ed018fd756c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DCA0ECF1-BC77-4753-B471-D982B0CEAC18"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DCA0ECF1-BC77-4753-B471-D982B0CEAC18 - 8f9181ae93bb41d6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "2012">
-               </Location>
-               <Location
-                  uuid = "DCA0ECF1-BC77-4753-B471-D982B0CEAC18 - 8f9181ae93bb41d6"
+                  uuid = "43BFC54A-9715-40F8-8E65-3C56BEB0EA43 - 8f9181ae93bb41d6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1946,56 +414,41 @@
                   endingLineNumber = "32"
                   offsetFromSymbolStart = "1628">
                </Location>
+               <Location
+                  uuid = "43BFC54A-9715-40F8-8E65-3C56BEB0EA43 - 3d95fe006074eb29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (__C.NSManagedObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "100">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AC641B00-210C-45D3-9AD1-78A1C3B8B883"
+            uuid = "0A75F259-2349-4408-9432-9F1C2800050A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "call(profile:context:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AC641B00-210C-45D3-9AD1-78A1C3B8B883 - fafdef8b799c2327"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "AC641B00-210C-45D3-9AD1-78A1C3B8B883 - 331156f2ee4320c9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "AC641B00-210C-45D3-9AD1-78A1C3B8B883 - 8f9181ae93bb5f25"
+                  uuid = "0A75F259-2349-4408-9432-9F1C2800050A - 8f9181ae93bb41d6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2005,9 +458,24 @@
                   urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "296">
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1628">
+               </Location>
+               <Location
+                  uuid = "0A75F259-2349-4408-9432-9F1C2800050A - 3d95fe006074eb29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (__C.NSManagedObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "100">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2015,314 +483,93 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9CDE4A4D-FDC7-4658-891C-D416A8EAEF8E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9CDE4A4D-FDC7-4658-891C-D416A8EAEF8E - 6baac17d736b007a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "9CDE4A4D-FDC7-4658-891C-D416A8EAEF8E - 6baac17d736b0025"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "56D27801-A7B1-4BF2-9FBF-B819468935AC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "56D27801-A7B1-4BF2-9FBF-B819468935AC - 6baac17d736b005b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "56D27801-A7B1-4BF2-9FBF-B819468935AC - 6baac17d736b007a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E8FD779-1ECE-49DE-A542-81996D94A246"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6E8FD779-1ECE-49DE-A542-81996D94A246 - 8f9181ae93bb405a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "2124">
-               </Location>
-               <Location
-                  uuid = "6E8FD779-1ECE-49DE-A542-81996D94A246 - 6baac17d736b03b8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "6E8FD779-1ECE-49DE-A542-81996D94A246 - 8f9181ae93bb43b9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "2124">
-               </Location>
-               <Location
-                  uuid = "6E8FD779-1ECE-49DE-A542-81996D94A246 - 6baac17d736b005b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "88B207BA-B745-4B7E-9F4F-2315ED7C6FD3"
+            uuid = "D797AF1B-EA79-434F-81B7-A5BD8255390E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35301941-95C4-4037-842A-44D818094505"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "call(profile:context:)"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "88B207BA-B745-4B7E-9F4F-2315ED7C6FD3 - 9a746899f4fbde5d"
+                  uuid = "35301941-95C4-4037-842A-44D818094505 - 8f9181ae93bb403d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
                   moduleName = "WorkItOut"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "88B207BA-B745-4B7E-9F4F-2315ED7C6FD3 - 62b10272c767d133"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "88B207BA-B745-4B7E-9F4F-2315ED7C6FD3 - e3025fcaeda4025b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "88B207BA-B745-4B7E-9F4F-2315ED7C6FD3 - 3f69b4a56930e45a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "88B207BA-B745-4B7E-9F4F-2315ED7C6FD3 - e3025fcaeda4025b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "76">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CBBAE9D3-ACE6-46AA-BA8B-7C4DAA95E5B6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "CBBAE9D3-ACE6-46AA-BA8B-7C4DAA95E5B6 - 3f69b4a56930e424"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "164">
-               </Location>
-               <Location
-                  uuid = "CBBAE9D3-ACE6-46AA-BA8B-7C4DAA95E5B6 - e3025fcaeda4027a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "41"
                   endingLineNumber = "41"
-                  offsetFromSymbolStart = "292">
+                  offsetFromSymbolStart = "1768">
+               </Location>
+               <Location
+                  uuid = "35301941-95C4-4037-842A-44D818094505 - 8fe15f0d19c654d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "35301941-95C4-4037-842A-44D818094505 - 8f9181ae93bb40de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1780">
+               </Location>
+               <Location
+                  uuid = "35301941-95C4-4037-842A-44D818094505 - 8fe15f0d19c6543b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2330,253 +577,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4EB94243-2BA1-43B8-85B2-15D3FF6549D9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "4EB94243-2BA1-43B8-85B2-15D3FF6549D9 - e3025fcaeda402a1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "244">
-               </Location>
-               <Location
-                  uuid = "4EB94243-2BA1-43B8-85B2-15D3FF6549D9 - 3f69b4a56930e4a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #4 () -&gt; () in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "480">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FB29077F-3232-4141-B4A8-AC4DE28570FA"
+            uuid = "49C92955-BA2A-42BC-BBA1-5F5FAFF93D69"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "33B22227-9082-42E5-8C85-180EE4BD5EFE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "33B22227-9082-42E5-8C85-180EE4BD5EFE - 13e7939b12608fe3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "816">
-               </Location>
-               <Location
-                  uuid = "33B22227-9082-42E5-8C85-180EE4BD5EFE - b805293d9302c200"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, ignoresSafeAreaEdges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, WorkItOut.ScrollListenerViewBuilder&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in WorkItOut.HomeView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/Home/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "448">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8FF00C88-9AB2-4974-9BBC-26219CF53F3F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8D23B3C8-5087-4E5F-B1FE-1E13A0D677E6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "8D23B3C8-5087-4E5F-B1FE-1E13A0D677E6 - 3b172ee74e30f635"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "672">
-               </Location>
-               <Location
-                  uuid = "8D23B3C8-5087-4E5F-B1FE-1E13A0D677E6 - e73f5a309018b092"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; WorkItOut.AssessmentView in WorkItOut.ContentView.body.getter : some"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "615C9ED4-01D7-494E-884E-401C19C01E15"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "loadProfile(moc:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "call(profile:context:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "615C9ED4-01D7-494E-884E-401C19C01E15 - dc439c550308f24e"
+                  uuid = "49C92955-BA2A-42BC-BBA1-5F5FAFF93D69 - 8fe15f0d19c654f9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for WorkItOut.DataManager.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; Swift.Bool"
+                  symbolName = "closure #4 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
                   moduleName = "WorkItOut"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/DataManager.swift"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "96">
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "68">
                </Location>
                <Location
-                  uuid = "615C9ED4-01D7-494E-884E-401C19C01E15 - d12a3ea661317b83"
+                  uuid = "49C92955-BA2A-42BC-BBA1-5F5FAFF93D69 - 8fe15f0d19c654d8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for WorkItOut.DataManager.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; Swift.Bool"
+                  symbolName = "closure #4 (WorkItOut.YogaPlanNSObject) -&gt; () in WorkItOut.UpdateProfileUseCase.call(profile: WorkItOut.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
                   moduleName = "WorkItOut"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/DataManager.swift"
+                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "615C9ED4-01D7-494E-884E-401C19C01E15 - edab03ebe20e3e88"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.DataManager.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; Swift.Bool"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  uuid = "615C9ED4-01D7-494E-884E-401C19C01E15 - a60c3a3328d18e9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for WorkItOut.DataManager.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; Swift.Bool"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "56">
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "68">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2584,79 +625,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A7D8EFCC-CCB2-422F-812F-AE84E3AA26C9"
+            uuid = "573C19A4-22F6-4110-919A-5DA46983A462"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WorkItOut/WorkItOut/Data/DataManager.swift"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "loadProfile(moc:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "call(profile:context:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A7D8EFCC-CCB2-422F-812F-AE84E3AA26C9 - dc439c550308f24e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for WorkItOut.DataManager.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; Swift.Bool"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "A7D8EFCC-CCB2-422F-812F-AE84E3AA26C9 - d12a3ea661317b83"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for WorkItOut.DataManager.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; Swift.Bool"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "A7D8EFCC-CCB2-422F-812F-AE84E3AA26C9 - edab03ebe20e3e88"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WorkItOut.DataManager.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; Swift.Bool"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  uuid = "A7D8EFCC-CCB2-422F-812F-AE84E3AA26C9 - a60c3a3328d18e9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for WorkItOut.DataManager.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; Swift.Bool"
-                  moduleName = "WorkItOut"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/DataManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
