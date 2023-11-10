@@ -12,16 +12,8 @@ struct FirebaseConstant {
 }
 
 
-// TODO : FIreBase constant harus di ganti ke yang yoga
 
 extension FirebaseConstant {
-//    struct WorkoutCollectionConstants {
-//        static let collectionName = "Workout"
-//        static let exercise = "exercise"
-//        static let workoutState = "workoutState"
-//        
-//        private init() {}
-//    }
     
     struct ExerciseCollectionConstants {
         static let collectionName = "Exercise"
@@ -38,15 +30,17 @@ extension FirebaseConstant {
         static let name = "yogaPose"
         static let altName = "altName"
         static let category = "category"
-//        static let bodyPartTrained = "bodyPartTrained"
         static let difficulty = "difficulty"
         static let exceptions = "exceptions"
-//        static let position = "position"
         static let recommendedTrimester = "recommendedTrimester"
         static let relieves = "relieves"
         static let status = "status"
         static let videoURL = "videoUrl"
         static let imageURL = "imageUrl"
+        
+//        Deprecated
+//        static let bodyPartTrained = "bodyPartTrained"
+//        static let position = "position"
 //        static let spineMovement = "spineMovement"
     }
 }
