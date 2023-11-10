@@ -13,7 +13,7 @@ struct UpdateProfileUseCase {
     
     func call(profile : Profile, context : NSManagedObjectContext) async throws {
 //        do {
-            
+        
             switch try await repository.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
             case .success(let data) :
                 let profilens = data.last! as! ProfileNSObject
@@ -23,9 +23,9 @@ struct UpdateProfileUseCase {
                 }).map{$0.intoNSObject(context: context, parentProfileNS: profilens)}
                                                                  
                 
-                let newYogaPlan = profile.plan.filter({ yp in
-                    !(profilens.plan!.allObjects as! [YogaPlanNSObject]).map{$0.uuid}.contains(yp.id)
-                }).map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)}
+//                let newYogaPlan = profile.plan.filter({ yp in
+//                    !(profilens.plan!.allObjects as! [YogaPlanNSObject]).map{$0.uuid}.contains(yp.id)
+//                }).map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)}
                 
                 // MARK: Adding History (Relation)
 //                profilens.setValue(newHist, forKey: "histories")
@@ -37,14 +37,25 @@ struct UpdateProfileUseCase {
                     }
                 }
                 
+                
+                (profilens.plan?.allObjects as! [YogaPlanNSObject]).forEach { ygp in
+                    profilens.removeFromPlan(ygp)
+                }
+                
+                (profilens.plan?.allObjects as! [YogaPlanNSObject]).forEach { ygp in
+                    ygp.ofProfile = profilens
+                    profilens.addToPlan(ygp)
+                }
+                
+                
                 // MARK: Adding yogaPlan (Relation)
 //                profilens.setValue(newYogaPlan, forKey: "plan")
-                newYogaPlan.forEach{ ygp in
-                    var yp = ygp as! YogaPlanNSObject
-                    if !profilens.plan!.contains(yp) {
-                        profilens.addToPlan(yp)
-                    }
-                }
+//                newYogaPlan.forEach{ ygp in
+//                    var yp = ygp as! YogaPlanNSObject
+//                    if !profilens.plan!.contains(yp) {
+//                        profilens.addToPlan(yp)
+//                    }
+//                }
                 
                 
                 // MARK: Adding others self Field (Non Relation)

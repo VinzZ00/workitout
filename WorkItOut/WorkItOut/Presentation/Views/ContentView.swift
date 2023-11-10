@@ -38,7 +38,7 @@ struct ContentView: View {
             Task{
                 do {
                     hasNoProfile = try await !dm.loadProfile(moc: moc)
-                    
+                    print("")
                 } catch {
                     hasNoProfile = false
                     print("Masuk try catch di content view")

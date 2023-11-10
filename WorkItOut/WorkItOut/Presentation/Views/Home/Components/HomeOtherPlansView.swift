@@ -37,6 +37,6 @@ struct HomeOtherPlansView: View {
     }
 }
 
-#Preview {
-    HomeOtherPlansView(yogaPlan: YogaPlan())
-}
+//#Preview {
+//    HomeOtherPlansView(yogaPlan: YogaPlan())
+//}
