@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GeneratePlanView: View {
+struct AssessmentResultView: View {
     @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
     @EnvironmentObject var avm: AssessmentViewModel
     @Environment(\.managedObjectContext) var moc
