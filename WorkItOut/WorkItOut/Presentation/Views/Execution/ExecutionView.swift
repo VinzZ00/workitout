@@ -197,6 +197,9 @@ struct ExecutionView: View {
                         timerVm.isTimerPaused = false
                         textSwitch = false
                         progress = 0.0
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                            self.textSwitch.toggle()
+                        }
                     }
                     .onChange(of: timerVm.timesUp) { _, valueIsTrue in
                         if valueIsTrue {

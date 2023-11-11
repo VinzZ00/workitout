@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RelieveAssesmentView: View {
     @State var selectedRelieves: [Relieve] = []
+    @State var selections : [Relieve] = [.back, .hip, .neck, .leg, .pelvic]
     
     let columns = [
             GridItem(.flexible()),
@@ -18,7 +19,7 @@ struct RelieveAssesmentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(Relieve.allCases, id: \.self) { relieve in
+                ForEach(selections, id: \.self) { relieve in
                     Button(action: {
                         if selectedRelieves.contains(relieve){
                             guard let selectedIndex = selectedRelieves.firstIndex(of: relieve) else {
@@ -45,8 +46,6 @@ struct RelieveAssesmentView: View {
                                 .stroke(Color.neutral6)
                         }
                     })
-                    
-                    
                 }
             }
             

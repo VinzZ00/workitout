@@ -47,7 +47,6 @@ class HomeViewModel: ObservableObject {
             self.yogaPlans = self.profile.plan
             self.objectWillChange.send()
         }
-
     }
     
     func toggleSheet(yoga: Yoga) {

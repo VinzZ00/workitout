@@ -9,16 +9,16 @@ import Foundation
 import CoreData
 
 class AssessmentViewModel : ObservableObject {
-    @Published var currentWeek: Int = 10
-    @Published var exceptions: [Exception] = [.vertigo, .abdominalSurgery, .diastasisRecti]
-    @Published var days : [Day] = [.monday, .wednesday, .sunday]
+    @Published var currentWeek: Int = 1
+    @Published var exceptions: [Exception] = []
+    @Published var days : [Day] = []
     @Published var durationExercise : Duration = .tenMinutes
     @Published var experience: Difficulty = .beginner
     @Published var timeClock : TimeOfDay = .morning
     
     @Published var timeSpan : Months = .oneMonth
     @Published var trimester: Trimester = .first
-    @Published var relieve: [Relieve] = [.back]
+    @Published var relieve: [Relieve] = []
     
     @Published var state : AssessmentState = .chooseWeek
     @Published var finishCreateYogaPlan: Bool = false

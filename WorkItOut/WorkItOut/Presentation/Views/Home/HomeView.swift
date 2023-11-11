@@ -22,7 +22,7 @@ struct HomeView: View {
                         if vm.showHeader {
                             Image("AssesmentResultHeaderBackground")
                                 .resizable()
-                                .frame(maxWidth: .infinity, maxHeight: 200)
+                                .frame(maxWidth: .infinity, maxHeight: 160)
                                 .ignoresSafeArea()
                         }
                         VStack {
@@ -66,7 +66,6 @@ struct HomeView: View {
                 
                 ScrollListenerViewBuilder(showContent: $vm.showHeader) {
                     HomeCurrentYogaView()
-                        .background(Color.background)
                         .environmentObject(vm)
                     
                     VStack(alignment: .leading) {
@@ -96,17 +95,13 @@ struct HomeView: View {
             }
             .sheet(isPresented: $vm.showProfile, onDismiss: {
                 Task{
-                    do {
-                        print("Load Profile from dm.profile")
-                        try await vm.loadProfile(profile: dm.profile!)
+                    do{
+                        try await vm.loadProfile(moc: moc)
                     } catch {
-                        print("masuk ke alert")
                         self.alert = true
                     }
                 }
-                
-                dm.objectWillChange.send()
-            },  content: {
+            }, content: {
                 NavigationStack{
                     ProfileView(vm: ProfileViewModel(profile: vm.profile))
                 }
@@ -120,14 +115,10 @@ struct HomeView: View {
                     do {
                         try await vm.loadProfile(moc: moc)
                     } catch {
-                        print("masuk ke alert")
                         self.alert = true
                     }
                 }
-                
-
             }
-            
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
                     .environmentObject(dm)

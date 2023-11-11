@@ -30,14 +30,17 @@ struct YogaDetailView: View {
                     state.getDescription(yoga: yoga)
                 }
                 
-                ScrollListenerViewBuilder(showContent: $showHeader) {
-                    if state == .relieveChoice {
+                if state == .relieveChoice {
+                    ScrollView{
                         RelieveAssesmentView()
                     }
-                    else {
+                }
+                else {
+                    ScrollListenerViewBuilder(showContent: $showHeader){
                         YogaPreviewView(yoga: yoga)
                     }
                 }
+                
                 HStack{
                     Image(systemName: "info.circle.fill")
                         .foregroundStyle(Color.neutral3)
@@ -102,7 +105,7 @@ struct YogaDetailView: View {
         func getDescription(yoga: Yoga) -> some View {
             switch self {
             case .relieveChoice:
-                Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. ") + Text("(You can skip this part)").foregroundStyle(.purple)
+                Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions.")
             case .yogaPreview:
                 Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
                     .foregroundStyle(Color.neutral3)
