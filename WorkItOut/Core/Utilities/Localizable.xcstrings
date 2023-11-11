@@ -77,6 +77,9 @@
     "Current Date:" : {
 
     },
+    "Discard Changes" : {
+
+    },
     "Do you have any health conditions that could affect your yoga?" : {
 
     },
@@ -110,6 +113,12 @@
     "Exercise that might help you" : {
 
     },
+    "Exit and Discard Changes" : {
+
+    },
+    "Friday" : {
+
+    },
     "Get Started" : {
       "localizations" : {
         "id" : {
@@ -133,6 +142,15 @@
 
     },
     "How much time do you have to commit to yoga in a session?" : {
+
+    },
+    "Looks like you have changes, Are you sure you want to exit?" : {
+
+    },
+    "Monday" : {
+
+    },
+    "My Assessment" : {
 
     },
     "Next" : {
@@ -179,12 +197,6 @@
     "Pregnancy & Health Condition" : {
 
     },
-    "Profile" : {
-
-    },
-    "Reload" : {
-
-    },
     "Safety first" : {
       "localizations" : {
         "id" : {
@@ -195,13 +207,16 @@
         }
       }
     },
+    "Saturday" : {
+
+    },
     "Save" : {
 
     },
-    "Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. " : {
+    "Save Profile Changes & Update Yoga Plan" : {
 
     },
-    "Sorry Please Reload your profile, loading profile failed" : {
+    "Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. " : {
 
     },
     "Sorry, your Profile Change is not saved, Please recheck your profile" : {
@@ -213,13 +228,25 @@
     "Sorry, your yoga poses change is not saved, Please recheck your yoga poses" : {
 
     },
+    "Sunday" : {
+
+    },
     "Take a break, Enjoy Your day!" : {
 
     },
     "Taking into account your health conditions" : {
 
     },
+    "Thursday" : {
+
+    },
     "Time Reminder" : {
+
+    },
+    "Tuesday" : {
+
+    },
+    "Wednesday" : {
 
     },
     "Week %lld" : {
@@ -289,6 +316,9 @@
 
     },
     "You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!" : {
+
+    },
+    "Your current and next yoga plan will be updated with your new data." : {
 
     },
     "Your personalized yoga guide for a healthy pregnancy" : {
