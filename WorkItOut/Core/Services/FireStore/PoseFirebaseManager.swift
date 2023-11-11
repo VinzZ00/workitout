@@ -20,8 +20,15 @@ class PoseFirebaseManager: ObservableObject {
     
     func addPosetoPoses(){
         if poses.isEmpty {
-            for pose in firebasePoses {
-                self.poses.append(Pose(id: UUID(), name: pose.yogaPose, altName: pose.altName, category: pose.category, difficulty: pose.difficulty, exception: pose.exceptions, recommendedTrimester: pose.recommendedTrimester, relieve: pose.relieves, status: pose.status))
+            for firebasePose in firebasePoses {
+                var pose = Pose(id: UUID(), name: firebasePose.yogaPose, altName: firebasePose.altName, category: firebasePose.category, difficulty: firebasePose.difficulty, exception: firebasePose.exceptions, recommendedTrimester: firebasePose.recommendedTrimester, relieve: firebasePose.relieves, status: firebasePose.status)
+                if let imageURL = firebasePose.imageURL {
+                    pose.image = imageURL
+                }
+                if let videoURL = firebasePose.videoURL {
+                    pose.video = videoURL
+                }
+                self.poses.append(pose)
             }
         }
         
@@ -72,7 +79,15 @@ class PoseFirebaseManager: ObservableObject {
                     return
                 }
                 
-                let requestYogaPose = RequestYogaPose(yogaPose: poseName, altName: altName, category: category, difficulty: difficulty, exceptions: exceptions, recommendedTrimester: trimester, relieves: relieves, status: status)
+                
+                
+                var requestYogaPose = RequestYogaPose(yogaPose: poseName, altName: altName, category: category, difficulty: difficulty, exceptions: exceptions, recommendedTrimester: trimester, relieves: relieves, status: status)
+                if let videoURL = doc.data()[FirebaseConstant.YogaPoseConstants.videoURL] as? String {
+                    requestYogaPose.videoURL = videoURL
+                }
+                if let imageURL = doc.data()[FirebaseConstant.YogaPoseConstants.imageURL] as? String {
+                    requestYogaPose.imageURL = imageURL
+                }
                 
                 self.firebasePoses.append(requestYogaPose)
                 self.objectWillChange.send()

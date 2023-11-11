@@ -11,7 +11,7 @@ struct PoseCard: View {
     var pose : Pose
     var body: some View {
         HStack{
-            if let image = UIImage(named: pose.name){
+            if let _ = UIImage(named: pose.name){
                 PoseImageCard(name: pose.name, width: 70)
             }else{
                 RoundedRectangle(cornerRadius: 12)
@@ -21,8 +21,16 @@ struct PoseCard: View {
             VStack(alignment: .leading){
                 Text("\(pose.name)")
                     .bold()
+                HStack(spacing: 5){
+                    Image(systemName: "clock")
+                        .font(.caption)
+                        .foregroundStyle(Color.neutral3)
+                    Text("\(pose.seconds/60) min")
+                        .font(.caption)
+                        .foregroundStyle(Color.neutral3)
+                }
                 Text("\(pose.category.rawValue)")
-                    .foregroundStyle(Color.neutral6)
+                    .foregroundStyle(Color.neutral3)
                     .font(.caption)
             }
             Spacer()

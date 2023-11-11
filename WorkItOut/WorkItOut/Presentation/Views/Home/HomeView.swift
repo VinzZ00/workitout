@@ -66,6 +66,7 @@ struct HomeView: View {
                 
                 ScrollListenerViewBuilder(showContent: $vm.showHeader) {
                     HomeCurrentYogaView()
+                        .background(Color.background)
                         .environmentObject(vm)
                     
                     VStack(alignment: .leading) {
@@ -117,8 +118,7 @@ struct HomeView: View {
             .onAppear{
                 Task{
                     do {
-                        print("Load Profile from dm.profile")
-                        try await vm.loadProfile(profile: dm.profile!)
+                        try await vm.loadProfile(moc: moc)
                     } catch {
                         print("masuk ke alert")
                         self.alert = true
@@ -127,9 +127,10 @@ struct HomeView: View {
                 
 
             }
-            .background(Color.background)
+            
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
+                    .environmentObject(dm)
                     .navigationBarBackButtonHidden()
             }
         }

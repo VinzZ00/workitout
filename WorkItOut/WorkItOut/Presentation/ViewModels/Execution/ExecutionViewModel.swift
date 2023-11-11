@@ -5,6 +5,7 @@
 //  Created by Angela Valentine Darmawan on 25/10/23.
 //
 
+import AVKit
 import CoreData
 import Foundation
 
@@ -15,10 +16,12 @@ class ExecutionViewModel: ObservableObject {
     @Published var profile: Profile = MockData.mockProfile
     @Published var yogaPlan: YogaPlan!
     @Published var yoga: Yoga = Yoga()
-    @Published var poses: [Pose] = []
+    var poses: [Pose] = []
     @Published var index = 0
     @Published var end = false
     @Published var start = true
+    
+    @Published var avPlayer : AVPlayer?
     
     
     init(yoga: Yoga) {
@@ -55,8 +58,10 @@ class ExecutionViewModel: ObservableObject {
 //    }
     
     func getPose() {
-        for p in yoga.poses{
-            poses.append(p)
+        for categori in PoseManager.existingCategories(poses: yoga.poses) {
+            for p in PoseManager.getPosesByCategory(poses: yoga.poses, category: categori) {
+                poses.append(p)
+            }
         }
     }
     
@@ -105,5 +110,13 @@ class ExecutionViewModel: ObservableObject {
         let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
         profile.histories.append(history)
         try await self.update.call(profile: profile, context: context)
+    }
+    
+    func loadVideo(urlString : String = "https://youtu.be/moCuqURlEyY?t=74"){
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        avPlayer = AVPlayer(url: url)
+        avPlayer?.play()
     }
 }

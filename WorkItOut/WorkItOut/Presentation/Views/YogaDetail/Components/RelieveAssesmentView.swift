@@ -32,14 +32,13 @@ struct RelieveAssesmentView: View {
                         print(relieve)
                     }, label: {
                         VStack {
-                            RoundedRectangle(cornerRadius: 12)
-                                .frame(width: 98, height: 98)
-                                .foregroundStyle(Color.primary.opacity(0.5))
+                            Image(relieve.getAsset())
+                                .resizable()
+                                .frame(width: 50, height: 98)
                             Text("\(relieve.getString())")
                                 .bold()
                         }
-                        .padding(.vertical)
-                        .padding(.horizontal, 24)
+                        .frame(width: 150, height: 170)
                         .background {
                             RoundedRectangle(cornerRadius: 12)
                                 .fill(selectedRelieves.contains(relieve) ? Color.primary.opacity(0.25) : .clear)

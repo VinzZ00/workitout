@@ -21,4 +21,23 @@ enum Relieve: String, UserPreference {
     case ankle = "Ankle"
     case foot = "Foot"
     case knee = "Knee"
+    
+    func getAsset()-> String {
+        var string : String
+        switch self {
+        case .back:
+            string = "Back Pain"
+        case .hip:
+            string = "Hip Pain"
+        case .neck:
+            string = "Neck Pain"
+        case .leg:
+            string = "Leg Pain"
+        case .pelvic:
+            string = "Pelvic Pain"
+        default:
+            string = ""
+        }
+        return string
+    }
 }
