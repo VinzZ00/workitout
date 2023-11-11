@@ -1,0 +1,307 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "(Check all that apply)" : {
+
+    },
+    "(Pick Three)" : {
+
+    },
+    "(You can skip this part)" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld %2$@"
+          }
+        }
+      }
+    },
+    "%lld Exercise (%lld Min)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld Exercise (%2$lld Min)"
+          }
+        }
+      }
+    },
+    "%lld Min" : {
+
+    },
+    "6 Exercise (60 Min)" : {
+
+    },
+    "Back to Home" : {
+
+    },
+    "By continuing, I acknowledge that **I have consulted with my Doctor or healthcare provider** to ensure my pregnancy condition and my unique medical conditions and circumstances. My well-being and the safety of my baby are of the utmost importance.\n\n I consent to Mamaste **processing all data** I provide through this app, including sensitive data such as health information so that Mamaste can provide services to me." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dengan melanjutkan, saya mengakui bahwa **saya telah berkonsultasi dengan Dokter atau penyedia layanan kesehatan saya** untuk memastikan kondisi kehamilan saya dan kondisi serta keadaan medis unik saya. Kesejahteraan saya dan keselamatan bayi saya adalah yang paling penting.\n\nSaya mengizinkan Mamaste **memproses semua data** yang saya berikan melalui aplikasi ini, termasuk data sensitif seperti informasi kesehatan sehingga Mamaste dapat memberikan layanan kepada saya."
+          }
+        }
+      }
+    },
+    "Creating Exercise Plan" : {
+
+    },
+    "Curating best yoga poses for your pregnancy weeks" : {
+
+    },
+    "Current Date" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanggal Sekarang"
+          }
+        }
+      }
+    },
+    "Current Date:" : {
+
+    },
+    "Do you have any health conditions that could affect your yoga?" : {
+
+    },
+    "Do you have any health conditions?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apakah Anda memiliki kondisi kesehatan tertentu?"
+          }
+        }
+      }
+    },
+    "Error" : {
+
+    },
+    "Exercise %lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Exercise %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "Exercise Completed" : {
+
+    },
+    "Exercise that might help you" : {
+
+    },
+    "Get Started" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai"
+          }
+        }
+      }
+    },
+    "Have you ever done yoga before?" : {
+
+    },
+    "Health conditions" : {
+
+    },
+    "History" : {
+
+    },
+    "How long does a typical exercise session fit into your schedule?" : {
+
+    },
+    "How much time do you have to commit to yoga in a session?" : {
+
+    },
+    "Next" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selanjutnya"
+          }
+        }
+      }
+    },
+    "Next: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selanjutnya: %@"
+          }
+        }
+      }
+    },
+    "No History to show" : {
+
+    },
+    "No Plan yet" : {
+
+    },
+    "OK" : {
+
+    },
+    "Placeholder" : {
+
+    },
+    "Play/Pause" : {
+
+    },
+    "Please wait, we are crafting the best exercise plan for you" : {
+
+    },
+    "Predicting best sessions for your schedules" : {
+
+    },
+    "Pregnancy & Health Condition" : {
+
+    },
+    "Profile" : {
+
+    },
+    "Reload" : {
+
+    },
+    "Safety first" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utamakan keselamatan\n"
+          }
+        }
+      }
+    },
+    "Save" : {
+
+    },
+    "Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. " : {
+
+    },
+    "Sorry Please Reload your profile, loading profile failed" : {
+
+    },
+    "Sorry, your Profile Change is not saved, Please recheck your profile" : {
+
+    },
+    "Sorry, your Profile is not saved, Please resave your profile" : {
+
+    },
+    "Sorry, your yoga poses change is not saved, Please recheck your yoga poses" : {
+
+    },
+    "Take a break, Enjoy Your day!" : {
+
+    },
+    "Taking into account your health conditions" : {
+
+    },
+    "Time Reminder" : {
+
+    },
+    "Week %lld" : {
+
+    },
+    "Week %lld - %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Week %1$lld - %2$@"
+          }
+        }
+      }
+    },
+    "Week Picker" : {
+
+    },
+    "Weekly Schedule" : {
+
+    },
+    "Welcome to Mamaste" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selamat Datang di Mamaste"
+          }
+        }
+      }
+    },
+    "What availability day to commit to yoga each week?" : {
+
+    },
+    "What weeks of pregnancy are you in?" : {
+
+    },
+    "When do you want to be reminded to do yoga?" : {
+
+    },
+    "Which days of the week are you available for exercise? " : {
+
+    },
+    "Workout Date" : {
+
+    },
+    "Workout Date:" : {
+
+    },
+    "Workout Plan for Beginner" : {
+
+    },
+    "Workout Plan for Beginner - New Beginnings" : {
+
+    },
+    "Yeayy, you made it! You have completed today yoga." : {
+
+    },
+    "Yoga Duration in a Session" : {
+
+    },
+    "Yoga Experience" : {
+
+    },
+    "Yoga Plan" : {
+
+    },
+    "You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!" : {
+
+    },
+    "Your personalized yoga guide for a healthy pregnancy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panduan yoga pribadi Anda untuk kehamilan yang sehat"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

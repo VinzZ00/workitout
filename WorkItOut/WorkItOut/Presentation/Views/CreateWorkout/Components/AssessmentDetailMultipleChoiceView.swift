@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
-    var title : String
-    var explanation: String = "(Check all that apply)"
+    var title : LocalizedStringResource
+    var explanation: LocalizedStringResource = "(Check all that apply)"
     @Binding var selectedItems : [E]
     @State var selections : [E]
     

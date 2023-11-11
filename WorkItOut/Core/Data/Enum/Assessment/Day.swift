@@ -7,9 +7,19 @@
 
 import Foundation
 
+extension Day {
+    func test() {
+        print("test")
+    }
+}
+
 enum Day: String, UserPreference {
+    private static let constant = Constant.String.Enum.Day.self
     func getString() -> String {
         return self.rawValue
+    }
+    func getLocalizedString() -> LocalizedStringResource {
+        return LocalizedStringResource(stringLiteral: self.rawValue)
     }
     
     case monday = "Monday"
