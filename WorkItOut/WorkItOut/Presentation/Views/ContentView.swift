@@ -14,7 +14,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var hasNoProfile = false
     @State private var isLoading = true
-    
+    @State var alert = false
     var body: some View {
         ZStack{
             if isLoading {
@@ -22,6 +22,7 @@ struct ContentView: View {
             }else{
                 if !dm.hasNoProfile{
                     HomeView()
+                        .environmentObject(dm);
                 }
             }
         }

@@ -20,6 +20,10 @@ class GeneratePlanViewModel: ObservableObject {
 
         var fetchProfile = FetchProfileUseCase()
 
-        let fetchRes = try await fetchProfile.call(context: moc)
+        do {
+            let fetchRes = try await fetchProfile.call(context: moc)
+        } catch {
+            print("error")
+        }
     }
 }

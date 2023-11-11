@@ -141,7 +141,6 @@ struct ExecutionView: View {
                                 .resizable()
                                 .frame(width: 20, height: 20)
                         }
-                        
                     }
                     .disabled(previousDisabled)
                     
@@ -176,8 +175,6 @@ struct ExecutionView: View {
                         }
                     }
                     .padding(.horizontal, 50)
-                    
-                    
                     Button{
                         vm.nextPose(skipped: true)
                         if !(vm.index + 1 >= vm.poses.count) {

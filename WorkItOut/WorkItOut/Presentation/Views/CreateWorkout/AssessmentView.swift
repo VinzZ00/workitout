@@ -46,8 +46,8 @@ struct AssessmentView: View {
                     dm.pm.addPosetoPoses()
                     Task {
                         await dm.setUpProfile(moc: moc, profile: avm.createProfile())
+                        avm.finishCreateYogaPlan = true
                     }
-                    avm.finishCreateYogaPlan = true
                 }
             })
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {

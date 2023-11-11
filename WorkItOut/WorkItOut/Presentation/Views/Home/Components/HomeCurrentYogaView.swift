@@ -24,20 +24,20 @@ struct HomeCurrentYogaView: View {
                 Text("\(df.string(from: vm.selectedDate))")
                     .font(.title3)
                     .bold()
-                if vm.yoga.poses.isEmpty {
+                if vm.yoga?.poses.isEmpty ?? true {
                     Text("Take a break, Enjoy Your day!")
                         .font(.largeTitle)
                         .bold()
                         .padding(.vertical)
                 }
                 else {
-                    Text(vm.yoga.name)
+                    Text(vm.yoga!.name)
                         .font(.largeTitle)
                         .bold()
-                    Text("\(vm.yoga.poses.count) Exercise (\(vm.yoga.totalDurationMinute()) Min)")
+                    Text("\(vm.yoga!.poses.count) Exercise (\(vm.yoga!.totalDurationMinute()) Min)")
                         .font(.body)
                     ButtonComponent(title: "Start Exercise") {
-                        vm.toggleSheet(yoga: vm.yoga)
+                        vm.toggleSheet(yoga: vm.yoga!)
                     }
                 }
                 
@@ -48,10 +48,10 @@ struct HomeCurrentYogaView: View {
             .borderedCorner()
         }
         
-        .animation(.default, value: vm.yoga.poses.isEmpty)
+        .animation(.default, value: vm.yoga?.poses.isEmpty ?? true)
         .padding()
         .frame(width: 360, height: 480)
-        .background(vm.yoga.poses.isEmpty ? Color.primary.opacity(0.8) : Color.primary)
+        .background(vm.yoga?.poses.isEmpty ?? true ? Color.primary.opacity(0.8) : Color.primary)
         .borderedCorner()
         .padding(.vertical)
     }

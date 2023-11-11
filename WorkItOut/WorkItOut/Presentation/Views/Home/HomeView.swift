@@ -27,8 +27,8 @@ struct HomeView: View {
                         }
                         VStack {
                             HStack {
-                                NavigationLink {
-                                    ProfileView(viewModel: ProfileViewModel(profile: vm.profile))
+                                Button {
+                                    vm.showProfile = true
                                 } label: {
                                     HomeButtonView(icon: "person")
                                 }
@@ -45,9 +45,8 @@ struct HomeView: View {
                                     HomeButtonView(icon: "clock.arrow.circlepath")
                                 }
                             }
-                            
-                            
                             .padding(.bottom)
+                            
                             if vm.showHeader {
                                 HStack {
                                     if let profile = dm.profile {
@@ -57,8 +56,6 @@ struct HomeView: View {
                                     }
                                 }
                             }
-                            
-                            
                         }
                         .padding(.horizontal)
                     }
@@ -96,32 +93,41 @@ struct HomeView: View {
             .onChange(of: vm.day) { _ in
                 vm.initMonth()
             }
-            .background(Color.background)
+            .sheet(isPresented: $vm.showProfile, onDismiss: {
+                Task{
+                    do {
+                        print("Load Profile from dm.profile")
+                        try await vm.loadProfile(profile: dm.profile!)
+                    } catch {
+                        print("masuk ke alert")
+                        self.alert = true
+                    }
+                }
+                
+                dm.objectWillChange.send()
+            },  content: {
+                NavigationStack{
+                    ProfileView(vm: ProfileViewModel(profile: vm.profile))
+                }
+            })
             .sheet(isPresented: $vm.sheetToggle, content: {
                 YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
                     .padding(.top)
             })
-            .alert(isPresented: self.$alert, content: {
-                Alert(title: Text("Error"), message: Text("Sorry Please Reload your profile, loading profile failed"), dismissButton: .default(Text("Reload"), action: {
-                    Task{
-                        do {
-                            try await vm.loadProfile(moc: moc)
-                        } catch {
-                            self.alert = true
-                        }
-                    }
-                }))
-            })
-            .navigationBarBackButtonHidden()
             .onAppear{
                 Task{
                     do {
-                        try await vm.loadProfile(moc: moc)
+                        print("Load Profile from dm.profile")
+                        try await vm.loadProfile(profile: dm.profile!)
                     } catch {
+                        print("masuk ke alert")
                         self.alert = true
                     }
                 }
+                
+
             }
+            .background(Color.background)
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
                     .navigationBarBackButtonHidden()

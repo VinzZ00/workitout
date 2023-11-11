@@ -13,7 +13,7 @@ class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
     var update: UpdateProfileUseCase = UpdateProfileUseCase()
     @Published var profile: Profile = MockData.mockProfile
-    @Published var yogaPlan: YogaPlan = YogaPlan()
+    @Published var yogaPlan: YogaPlan!
     @Published var yoga: Yoga = Yoga()
     @Published var poses: [Pose] = []
     @Published var index = 0
@@ -44,15 +44,15 @@ class ExecutionViewModel: ObservableObject {
         return profile.plan.firstIndex(where: {$0.trimester.getInt() == getTrimester()}) ?? -1
     }
     
-    func getYoga() {
-        let date = 5 // ganti dengan hari ini
-        
-        for yoga in yogaPlan.yogas {
-            if (yoga.day.getInt() == date) {
-                self.yoga = yoga
-            }
-        }
-    }
+//    func getYoga() {
+//        let date = 5 // ganti dengan hari ini
+//        
+//        for yoga in yogaPlan.yogas {
+//            if (yoga.day.getInt() == date) {
+//                self.yoga = yoga
+//            }
+//        }
+//    }
     
     func getPose() {
         for p in yoga.poses{
@@ -94,6 +94,8 @@ class ExecutionViewModel: ObservableObject {
     
     func savePoses(context: NSManagedObjectContext) async throws {
         profile = try await fetch.call(context: context).last!
+        
+        
         
         let yogaPlanIndex = getYogaPlanIndex()
         guard let yogaIndex = profile.plan[yogaPlanIndex].yogas.firstIndex(of: yoga) else {

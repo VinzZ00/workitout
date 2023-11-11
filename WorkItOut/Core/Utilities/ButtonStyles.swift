@@ -22,6 +22,24 @@ struct BorderedButton : ButtonStyle {
     }
 }
 
+struct OutlineButton : ButtonStyle {
+    func makeBody(configuration : Configuration) -> some View {
+        configuration.label
+            .bold()
+            .padding(.vertical, 10)
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            .foregroundStyle(configuration.isPressed ? .white : .gray)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(configuration.isPressed ? .white : .gray, lineWidth: 0.5)
+            )
+            .buttonBorderShape(.roundedRectangle(radius: 12))
+            .animation(.easeOut(duration: 0.15), value: configuration.isPressed)
+            .padding(.horizontal)
+    }
+}
+
+
 struct BorderedDisabledButton : ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -36,15 +54,7 @@ struct BorderedDisabledButton : ButtonStyle {
 }
 
 #Preview {
-    VStack{
-        Button("I'm a Button"){
-            print("Im a button")
-        }
-        .buttonStyle(BorderedButton())
+    Button(""){
         
-        Button("I'm a Disabled Button"){
-            print("Im a Disabled button")
-        }
-        .buttonStyle(BorderedDisabledButton())
     }
 }

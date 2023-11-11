@@ -40,6 +40,7 @@ class DataManager: ObservableObject {
     public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async {
         self.profile = profile
         
+        self.profile!.plan = []
         for trimester in Trimester.allCases {
             self.profile!.plan.append(PoseManager.createYogaPlan(poses: pm.poses, trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: []))
         }

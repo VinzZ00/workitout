@@ -22,13 +22,13 @@ enum Day: String, UserPreference {
         return LocalizedStringResource(stringLiteral: self.rawValue)
     }
     
+    case sunday = "Sunday"
     case monday = "Monday"
     case tuesday = "Tuesday"
     case wednesday = "Wednesday"
     case thursday = "Thursday"
     case friday = "Friday"
     case saturday = "Saturday"
-    case sunday = "Sunday"
     
     func getShortenedDay() -> String {
         return String(self.getString().prefix(3))
