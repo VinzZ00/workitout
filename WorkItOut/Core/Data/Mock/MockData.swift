@@ -11,26 +11,32 @@ struct MockData {
 //    static var mockWorkoutPlan: YogaPlan = YogaPlan()
 //    static var mockWorkout: Yoga = Yoga(exercises: [], workoutState: .onProgress, date: Date.now)
     
-    static var mockProfile: Profile =
-    Profile(
-        name: "Testing add and fetch",
-        currentPregnancyWeek: 2,
-        currentRelieveNeeded: [.back, .ankle],
-        fitnessLevel: .beginner,
-        daysAvailable: [.monday, .wednesday, .friday],
-        timeOfDay: .evening,
-        preferredDuration: .thirtyMinutes,
-        plan: [
-            YogaPlan(id: UUID(), name: "Plan 1", yogas: [
-                Yoga(id: UUID(), name: "Yoga 1", poses: [
-                    Pose(id: UUID(), name: "Pose1", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, bodyPartTrained: [.arms, .back]),
-                    Pose(id: UUID(), name: "Pose2", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.ankle], description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, bodyPartTrained: [.arms, .back]),
-                    Pose(id: UUID(), name: "Pose3", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed, position: .armBalance, spineMovement: .backBend, bodyPartTrained: [.arms, .back])
-                ], day: .friday, estimationDuration: 12, image: "Image 1")
-            ], trimester: .first)
-        ],
-        histories: [])
+    static var yogas =
+        Yoga(id: UUID(), name: "Yoga 1", poses: [
+            Pose(id: UUID(), name: "Pose1", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed),
+            Pose(id: UUID(), name: "Pose2", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.ankle], description: "Desc 1", seconds: 12, state: .completed),
+            Pose(id: UUID(), name: "Pose3", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed)
+        ], day: .friday, estimationDuration: 12, image: "Image 1")
     
+    
+    static var mockProfile: Profile {
+        var profile =
+        Profile(
+            name: "Testing add and fetch",
+            currentPregnancyWeek: 2,
+            currentRelieveNeeded: [.back, .ankle],
+            fitnessLevel: .beginner,
+            daysAvailable: [.monday, .wednesday, .friday],
+            timeOfDay: .evening,
+            preferredDuration: .thirtyMinutes,
+            plan: [
+                YogaPlan(id: UUID(), name: "Plan 1", trimester: .first)
+            ],
+            histories: [])
+        
+        profile.plan[0].yogas.append(yogas);
+        return profile;
+    }
 //    static var mockExercises: [Pose] = [
 //        Pose(
 //            name: "Triceps Extension",

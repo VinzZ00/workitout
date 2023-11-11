@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct ButtonComponent: View {
-    var title: String
-    var role : ButtonRole?
-    var action: () -> Void
-    var color : Color
-    
-    init(title: String, role: ButtonRole? = nil, color : Color = .orangePrimary, action: @escaping () -> Void) {
-        self.title = title
-        self.role = role
-        self.color = color
-        self.action = action
+    var title: String = "Next"
+    var role : ButtonRole? = .none
+    var color : Color = Color.primary
+    var action: () -> Void = {
+        print("I'm a button")
     }
+    
     var body: some View {
         Button(role: role, action: action) {
             Text(title)
@@ -33,7 +29,5 @@ struct ButtonComponent: View {
 }
 
 #Preview {
-    ButtonComponent(title: "Submit", role: .none) {
-        print("I'm a button")
-    }
+    ButtonComponent()
 }

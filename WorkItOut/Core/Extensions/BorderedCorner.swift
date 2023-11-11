@@ -10,7 +10,7 @@ import SwiftUI
 struct BorderedCorner: ViewModifier {
     func body(content: Content) -> some View {
             content
-                .clipShape(.rect(cornerRadius: 12))
+                .clipShape(.rect(cornerRadius: 8))
         }
 }
 

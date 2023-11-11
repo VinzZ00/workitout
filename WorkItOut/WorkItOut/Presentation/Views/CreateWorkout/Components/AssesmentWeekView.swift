@@ -20,7 +20,6 @@ struct AssesmentWeekView: View {
                 }
             }
             .pickerStyle(.wheel)
-
         }
     }
 }

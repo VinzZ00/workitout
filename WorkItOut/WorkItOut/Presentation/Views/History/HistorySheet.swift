@@ -11,10 +11,9 @@ struct HistorySheet: View {
     var history : History
     @Binding var showSheet : Bool
     var body: some View {
-        LazyVStack(alignment: .leading, spacing: 10){
-            Text("\(history.executionDate.formatted(date: .long, time: .omitted))")
+        VStack(alignment: .leading, spacing: 10){
+            Text("\(history.executionDate.formatted(date: .complete, time: .omitted))")
             LazyVStack(alignment: .leading, spacing: 5){
-                // MARK: menghapus first supaya tidak error.
                 Text("\(history.yogaDone.name)")
                     .font(.largeTitle.bold())
                 Text("\(history.yogaDone.poses.count) Exercise (\(history.duration) Min)")
@@ -22,7 +21,7 @@ struct HistorySheet: View {
                     .background(.ultraThinMaterial)
                     .cornerRadius(8)
                     .lineLimit(1)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(Color.neutral3)
             }
             .padding(.bottom, 10)
             ScrollView{
@@ -43,7 +42,7 @@ struct HistorySheet: View {
                 } label: {
                     ZStack{
                         Circle()
-                            .foregroundStyle(.grayBorder.opacity(0.25))
+                            .foregroundStyle(Color.neutral6.opacity(0.25))
                             .frame(width: 24, height: 24)
                         Image(systemName: "multiply")
                             .foregroundStyle(.black.opacity(0.6))
@@ -60,9 +59,9 @@ struct HistorySheet: View {
 
 #Preview {
     let poses = [
-        Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]),
-        Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back, .pelvic], image: nil, description: "Bound Angle", seconds: 60, state: .completed, position: .seated, spineMovement: .neutral, bodyPartTrained: [.shoulders, .legs]),
-        Pose(id: UUID(), name: "Cat", difficulty: .beginner, recommendedTrimester: .first, relieve: [.back, .pelvic], image: nil, description: "Cat", seconds: 60, state: .skipped, position: .armLegSupport, spineMovement: .forwardBend, bodyPartTrained: [.back, .neck])
+        Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed),
+        Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back], image: nil, description: "Bound Angle", seconds: 60, state: .completed),
+        Pose(id: UUID(), name: "Cat", difficulty: .beginner, recommendedTrimester: .first, relieve: [.back, .pelvic], image: nil, description: "Cat", seconds: 60, state: .skipped)
     
     ]
     return NavigationStack{ 

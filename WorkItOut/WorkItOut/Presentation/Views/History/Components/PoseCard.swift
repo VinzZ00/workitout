@@ -11,11 +11,8 @@ struct PoseCard: View {
     var pose : Pose
     var body: some View {
         HStack{
-            if let image = pose.image{
-                Image(image)
-                    .resizable()
-                    .frame(width: 70, height: 70)
-                    .padding(.trailing, 10)
+            if let _ = UIImage(named: pose.name){
+                PoseImageCard(name: pose.name, width: 70)
             }else{
                 RoundedRectangle(cornerRadius: 12)
                     .frame(width: 70, height: 70)
@@ -24,8 +21,16 @@ struct PoseCard: View {
             VStack(alignment: .leading){
                 Text("\(pose.name)")
                     .bold()
-                Text("\(pose.position.rawValue)")
-                    .foregroundStyle(.grayBorder)
+                HStack(spacing: 5){
+                    Image(systemName: "clock")
+                        .font(.caption)
+                        .foregroundStyle(Color.neutral3)
+                    Text("\(pose.seconds/60) min")
+                        .font(.caption)
+                        .foregroundStyle(Color.neutral3)
+                }
+                Text("\(pose.category.rawValue)")
+                    .foregroundStyle(Color.neutral3)
                     .font(.caption)
             }
             Spacer()
@@ -35,7 +40,7 @@ struct PoseCard: View {
                     .frame(width: 12, height: 10)
                     .foregroundStyle(.green)
             }else{
-                Text("x")
+                Image(systemName: "multiply")
                     .foregroundStyle(.red)
             }
         }
@@ -46,9 +51,9 @@ struct PoseCard: View {
     VStack(spacing: 20){
         Text("Completed State")
             .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]))
+        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed))
         Text("Skipped State")
             .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed, position: .supine, spineMovement: .lateralBend, bodyPartTrained: [.back, .chest, .core]))
+        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .skipped))
     }
 }

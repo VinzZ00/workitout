@@ -11,15 +11,15 @@ import CoreData
 struct AddProfileUseCase {
     var repository : Repository = Repository()
     
-    func call(profile : Profile, context : NSManagedObjectContext) async {
+    func call(profile : Profile, context : NSManagedObjectContext) async throws{
         
         let prof = profile
         
-        do {
+//        do {
             try await repository.coreData.saveToCoreData(entity: prof.intoNSObject(context: context), context: context)
             
-        } catch let err{
-            fatalError("Failed to save to coredata: \(err.localizedDescription)")
-        }
+//        } catch let err{
+//            fatalError("Failed to save to coredata: \(err.localizedDescription)")
+//        }
     }
 }

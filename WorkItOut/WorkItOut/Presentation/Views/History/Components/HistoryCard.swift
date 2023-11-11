@@ -30,7 +30,7 @@ struct HistoryCard: View {
         .padding(.vertical, 8)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(.grayBorder)
+                .stroke(Color.neutral6)
         )
     }
 }

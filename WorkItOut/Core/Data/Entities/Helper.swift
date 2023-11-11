@@ -17,16 +17,18 @@ extension PoseNSObject {
         let pose = Pose(
             id : self.uuid!,
             name: self.name!,
-            difficulty: Difficulty(rawValue: self.difficulty!)!, 
-            exception: self.exception!.split(separator: ", ").map{Exception(rawValue: String($0))!}, 
+            altName: self.altName!,
+            category: Category(rawValue: self.category!)!, 
+            difficulty: Difficulty(rawValue: self.difficulty!)!,
+            exception: self.exception!.split(separator: ", ").map{Exception(rawValue: String($0))!},
             recommendedTrimester: Trimester(rawValue: self.recommendedTrimester!)!, 
             relieve: self.relieve!.split(separator: ", ").map{Relieve(rawValue: String($0))!}, 
             description: self.poseDescription!,
             seconds: Int(self.seconds),
-            state: YogaState(rawValue: self.state!)!,
-            position: Position(rawValue: self.position!)!,
-            spineMovement: SpineMovement(rawValue: self.spineMovement!)!,
-            bodyPartTrained: self.bodyPartTrained!.split(separator: ", ").map{BodyPart(rawValue: String($0))!}
+            state: YogaState(rawValue: self.state!)!
+//            position: Position(rawValue: self.position!)!,
+//            spineMovement: SpineMovement(rawValue: self.spineMovement!)!,
+//            bodyPartTrained: self.bodyPartTrained!.split(separator: ", ").map{BodyPart(rawValue: String($0))!}
         ) //Pose
         return pose
     }
@@ -49,12 +51,13 @@ extension YogaNSObject {
 
 extension YogaPlanNSObject {
     func intoObject() -> YogaPlan {
-        let yogaPlan = YogaPlan(
+        var yogaPlan = YogaPlan(
             id: self.uuid!,
             name: self.name!,
-            yogas: (self.yogas!.allObjects as? [YogaNSObject] ?? []).map{$0.intoObject()},
             trimester: Trimester(rawValue: self.trimester!)!
         ) // YogaPlan
+        
+        yogaPlan.yogas.append(contentsOf: (self.yogas!.allObjects as? [YogaNSObject] ?? []).map{$0.intoObject()})
         
         return yogaPlan
     }
@@ -82,7 +85,7 @@ extension HistoryNSObject {
 
 extension ProfileNSObject {
     func intoObject() -> Profile {
-        let profile = Profile(name: self.name!,
+        var profile = Profile(name: self.name!,
                               currentPregnancyWeek: Int(self.currentPregnancyWeek),
                               currentRelieveNeeded: self.currentRelieveNeeded!.split(separator: ", ").map{Relieve(rawValue: String($0))!},
                               fitnessLevel: Difficulty(rawValue: self.fitnessLevel!)!,
@@ -90,8 +93,19 @@ extension ProfileNSObject {
                               timeOfDay: TimeOfDay(rawValue: self.timeOfDay!)!,
                               preferredDuration: Duration(rawValue: self.preferredDuration!)!,
                               plan: (self.plan!.allObjects as? [YogaPlanNSObject] ?? []).map{$0.intoObject()},
-                              histories: (self.histories!.allObjects as? [HistoryNSObject] ?? []).map{$0.intoObject()}
+                              histories: (self.histories!.allObjects as? [HistoryNSObject] ?? []).map{$0.intoObject()},
+                              exceptions: []
         ) // Profile
+        
+        if let exc = self.exceptions {
+            exc.split(separator: ", ").forEach { rawVal in
+                let e = Exception(rawValue: String(rawVal))
+                if let ex = e {
+                    profile.exceptions.append(ex)
+                }
+            }
+        }
+        
         return profile
     }
 }

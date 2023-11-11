@@ -11,123 +11,68 @@ struct GeneratePlanView: View {
     @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
     @EnvironmentObject var avm: AssessmentViewModel
     @Environment(\.managedObjectContext) var moc
-    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var dm: DataManager
     
-    @State var finish: Bool = false
+    @Environment(\.presentationMode) var presentationMode
+    
     @Binding var hasNoProfile : Bool
+    @State var alert : Bool = false
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
-                    .padding(.horizontal)
-                DayPickerView(days: dm.profile!.daysAvailable, selection: dm.profile!.daysAvailable[0])
+                GeneratePlanHeaderView()
                     .environmentObject(vm)
-                ScrollViewReader(content: { (proxy: ScrollViewProxy) in
-                    ScrollView {
-                        VStack {
-                            if dm.profile!.plan.isEmpty {
-                                Text("No Plan yet")
-                            }
-                            else {
-                                VStack(alignment: .leading) {
-                                    ForEach(Array(dm.profile!.yogaPlan.yogas.enumerated()), id: \.element) { index, yoga in
-                                        VStack {
-                                            HStack {
-                                                VStack(alignment: .leading) {
-                                                    Text("Day \(index+1) - Upper Body")
-                                                        .font(.title3)
-                                                        .bold()
-                                                    Text("\(yoga.day.getString()), \(dm.profile!.timeOfDay.getString())")
-                                                        .foregroundStyle(Color.neutral3)
-                                                        .font(.body)
-                                                }
-                                                .id(yoga.day.getInt())
-                                                Spacer()
-                                                Button(action: {
-                                                    
-                                                }, label: {
-                                                    Image(systemName: "pencil")
-                                                })
-                                            }
-                                            ForEach(Category.allCases, id: \.self) { category in
-                                                if vm.checkCategory(poses: yoga.poses, category: category) {
-                                                    HStack {
-                                                        Text(category.rawValue)
-                                                            .font(.subheadline)
-                                                            .foregroundStyle(Color.neutral3)
-                                                            .bold()
-                                                        Rectangle()
-                                                            .frame(height: 0.5)
-                                                            .foregroundStyle(Color.neutral6)
-                                                    }
-                                                }
-                                                ForEach(yoga.poses, id: \.self) { pose in
-                                                    if pose.category == category {
-                                                        YogaCardView(name: pose.name)
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        .padding()
-                                        .background(.white)
-                                        .padding(.bottom)
-                                    }
-                                }
-                                .background(Color.background)
-                            }
-                        }
-                    }
-                    .onChange(of: vm.scrollTarget) { target in
-                        print("Changed")
-                        if let target = target {
-                            vm.scrollTarget = nil
-                            
-                            withAnimation {
-                                print("called")
-                                proxy.scrollTo(target, anchor: .center)
-                            }
-                        }
-                    }
-                    
-                })
+                ScrollListenerViewBuilder(scrollTarget: $vm.scrollTarget, showContent: $vm.showHeader) {
+                    GeneratePlanYogaView()
+                        .environmentObject(vm)
+                }
                 VStack {
                     ButtonComponent(title: "Finish") {
                         Task{
                             if let prof = dm.profile {
-                                await vm.addProfileToCoreData(profile: prof, moc: moc) // TODO: buang seru
+                                do {
+                                    try await vm.addProfileToCoreData(profile: prof, moc: moc)
+                                } catch {
+                                    
+                                }
                             }
+                            vm.finish.toggle()
+                            hasNoProfile.toggle()
                         }
-                        finish.toggle()
-                        hasNoProfile.toggle()
                     }
                     .padding(.horizontal)
                 }
-                .navigationTitle("Workout Plan for Beginner")
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button(action: {
-                            avm.resetTimer()
-                            avm.state = .chooseWeek
-                            self.presentationMode.wrappedValue.dismiss()
-                        }, label: {
-                            Image(systemName: "xmark")
-                                .font(.body)
-                                .padding(8)
-                                .background(Color.background.opacity(0.5))
-                                .clipShape(.circle)
-                        })
+            }.alert(isPresented: self.$alert){
+                Alert(title: Text("Error"), message: Text("Sorry, your Profile is not saved, Please resave your profile"))
+            }
+            .animation(.default, value: vm.showHeader)
+            .navigationBarBackButtonHidden()
+            .navigationTitle(vm.showHeader ? "" : "Workout Plan for Beginner")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    IconButtonComponent(icon: "xmark") {
+                        avm.resetTimer()
+                        avm.state = .chooseWeek
+                        self.presentationMode.wrappedValue.dismiss()
                     }
                 }
-                .navigationDestination(isPresented: $finish, destination: {
-                    if let prof = dm.profile {
-                        HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
-                    }
-                })
-                .navigationBarBackButtonHidden()
             }
-            .ignoresSafeArea()
+            .navigationDestination(isPresented: $vm.finish, destination: {
+                if let prof = dm.profile {
+                    HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
+                }
+            })
+            
+        }
+    }
+    
+    struct ViewOffsetKey: PreferenceKey {
+        typealias Value = CGFloat
+        static var defaultValue = CGFloat.zero
+        static func reduce(value: inout Value, nextValue: () -> Value) {
+            value += nextValue()
         }
     }
 }
