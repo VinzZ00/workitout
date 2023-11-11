@@ -7,21 +7,7 @@
 
 import Foundation
 
-extension Day {
-    func test() {
-        print("test")
-    }
-}
-
 enum Day: String, UserPreference {
-    private static let constant = Constant.String.Enum.Day.self
-    func getString() -> String {
-        return self.rawValue
-    }
-    func getLocalizedString() -> LocalizedStringResource {
-        return LocalizedStringResource(stringLiteral: self.rawValue)
-    }
-    
     case sunday = "Sunday"
     case monday = "Monday"
     case tuesday = "Tuesday"
@@ -29,6 +15,29 @@ enum Day: String, UserPreference {
     case thursday = "Thursday"
     case friday = "Friday"
     case saturday = "Saturday"
+    
+    func getString() -> String {
+        return self.rawValue
+    }
+    
+    func getLocalizedString() -> LocalizedStringResource {
+        switch self {
+            case .sunday:
+                return "Sunday"
+            case .monday:
+                return "Monday"
+            case .tuesday:
+                return "Tuesday"
+            case .wednesday:
+                return "Wednesday"
+            case .thursday:
+                return "Thursday"
+            case .friday:
+                return "Friday"
+            case .saturday:
+                return "Saturday"
+        }
+    }
     
     func getShortenedDay() -> String {
         return String(self.getString().prefix(3))
@@ -56,24 +65,7 @@ enum Day: String, UserPreference {
     func dateForWeekday(week: Int, year: Int) -> Date {
         let calendar = Calendar.current
 
-        var weekDayInt: Int {
-            switch self {
-            case .monday:
-                return 2
-            case .tuesday:
-                return 3
-            case .wednesday:
-                return 4
-            case .thursday:
-                return 5
-            case .friday:
-                return 6
-            case .saturday:
-                return 7
-            case .sunday:
-                return 1
-            }
-        }
+        var weekDayInt: Int = self.getInt()
         
         var dateComponents = DateComponents()
         dateComponents.year = year
@@ -85,38 +77,5 @@ enum Day: String, UserPreference {
         }
         
         return date
-        
-//        var day = calendar.dateComponents([.day], from: date)
-//        
-//        guard let day = day.day else {
-//            fatalError("Day didn't found, from dateForWeekDay(weekday: Day, week: Int, year: Int) -> Int")
-//        }
-//
-//        return day;
-        
     }
-    
-//    func getWeekdayInInt() -> Int {
-//        let today = Date()
-//        let calendar = Calendar.current
-//        let day = calendar.component(.day, from: self.getWeekday())
-//        
-//        return day
-//    }
-//    
-//    func getWeekday() -> Date {
-//        let today = Date()
-//        let calendar = Calendar.current
-//        let dayOfWeek = calendar.component(.weekday, from: today)
-//        
-//        let adjustedDayOfWeek = (dayOfWeek - calendar.firstWeekday + self.getInt()) % 7
-//        
-//        let adjustedDate = calendar.date(byAdding: .day, value: adjustedDayOfWeek, to: today)
-//        
-//        return adjustedDate ?? Date.now
-//    }
 }
-
-//var d = Date()
-
-//print(Calendar.current.dateComponents([.weekday], from: d).weekday)

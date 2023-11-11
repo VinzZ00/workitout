@@ -8,8 +8,23 @@
 import Foundation
 
 enum Duration : String, UserPreference {
+    case tenMinutes = "10 Minutes"
+    case twentyMinutes = "20 Minutes"
+    case thirtyMinutes = "30 Minutes"
+    
     func getString() -> String {
         return self.rawValue
+    }
+    
+    var localizedString: LocalizedStringResource {
+        switch self {
+        case .tenMinutes:
+            return "10 Minutes"
+        case .twentyMinutes:
+            return "20 Minutes"
+        case .thirtyMinutes:
+            return "30 Minutes"
+        }
     }
     
     func getDurationInMinutes() -> Int {
@@ -34,7 +49,5 @@ enum Duration : String, UserPreference {
         }
     }
     
-    case tenMinutes = "10 Minutes"
-    case twentyMinutes = "20 Minutes"
-    case thirtyMinutes = "30 Minutes"
+    
 }

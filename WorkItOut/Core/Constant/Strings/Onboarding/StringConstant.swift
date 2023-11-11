@@ -10,22 +10,6 @@ import SwiftUI
 
 extension Constant {
     struct String {
-        struct Enum {
-            struct AssesmentState {
-               
-            }
-            
-            struct Day {
-                static let monday: LocalizedStringResource = "Monday"
-                static let tuesday: LocalizedStringResource = "Tuesday"
-                static let wednesday: LocalizedStringResource = "Wednesday"
-                static let thursday: LocalizedStringResource = "Thursday"
-                static let friday: LocalizedStringResource = "Friday"
-                static let saturday: LocalizedStringResource = "Saturday"
-                static let sunday: LocalizedStringResource = "Sunday"
-            }
-        }
-        
         struct Onboarding {
             struct OnboardingView {
                 static let title: LocalizedStringResource = "Welcome to Mamaste"

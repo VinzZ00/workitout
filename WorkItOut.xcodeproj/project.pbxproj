@@ -112,7 +112,6 @@
 		D8BC2BF42AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BF32AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift */; };
 		D8BC2BF62AE81D0600E61487 /* AssessmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BF52AE81D0600E61487 /* AssessmentState.swift */; };
 		D8BC2BF82AE81E0400E61487 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BF72AE81E0400E61487 /* Duration.swift */; };
-		D8BC2BFA2AE81EA200E61487 /* Months.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC2BF92AE81EA200E61487 /* Months.swift */; };
 		D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FBED4A2AE8F2680062CC00 /* StateIndicator.swift */; };
 		D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FBED4D2AE906FE0062CC00 /* ButtonStyles.swift */; };
 		D8FBED562AE918200062CC00 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FBED552AE918200062CC00 /* CompleteView.swift */; };
@@ -242,7 +241,6 @@
 		D8BC2BF32AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentDetailMultipleChoiceView.swift; sourceTree = "<group>"; };
 		D8BC2BF52AE81D0600E61487 /* AssessmentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentState.swift; sourceTree = "<group>"; };
 		D8BC2BF72AE81E0400E61487 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
-		D8BC2BF92AE81EA200E61487 /* Months.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Months.swift; sourceTree = "<group>"; };
 		D8FBED4A2AE8F2680062CC00 /* StateIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateIndicator.swift; sourceTree = "<group>"; };
 		D8FBED4D2AE906FE0062CC00 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		D8FBED552AE918200062CC00 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
@@ -816,7 +814,6 @@
 				6C8D5D0D2AE6618E00A2986D /* Day.swift */,
 				D8BC2BF52AE81D0600E61487 /* AssessmentState.swift */,
 				D8BC2BF72AE81E0400E61487 /* Duration.swift */,
-				D8BC2BF92AE81EA200E61487 /* Months.swift */,
 				6C3FD7642AEE405C00C84D2A /* Relieve.swift */,
 				6C3FD76B2AEE40BD00C84D2A /* Trimester.swift */,
 				6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */,
@@ -1050,7 +1047,6 @@
 				D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */,
 				D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */,
-				D8BC2BFA2AE81EA200E61487 /* Months.swift in Sources */,
 				6CC43D092AF9E91F00FEE93A /* RelieveAssesmentView.swift in Sources */,
 				AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */,
 				6C68361A2AFE2EED00285904 /* OnboardingView.swift in Sources */,
