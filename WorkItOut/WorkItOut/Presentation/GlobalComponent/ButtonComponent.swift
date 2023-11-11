@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ButtonComponent: View {
-    var title: String = "Next"
+    var title: LocalizedStringResource = "Next"
     var role : ButtonRole? = .none
     var color : Color = Color.primary
     var action: () -> Void = {

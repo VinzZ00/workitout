@@ -34,6 +34,4 @@ struct YogaPlan : Identifiable, Entity, Equatable {
         yogaPlan.ofProfile = parentProfileNSObject
         return yogaPlan
     }
-    
-    
 }

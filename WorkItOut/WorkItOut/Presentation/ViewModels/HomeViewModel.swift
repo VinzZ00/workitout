@@ -36,7 +36,6 @@ class HomeViewModel: ObservableObject {
     }
     
     func loadProfile(profile : Profile) async throws {
-//       let fetchedProfile = try await fetch.call(context: moc)
         self.profile = profile
         self.week = self.profile.currentPregnancyWeek
         self.days = self.profile.daysAvailable
@@ -76,7 +75,6 @@ class HomeViewModel: ObservableObject {
     
     
     func initMonth() {
-        
         let DisplayWeek = self.week /* checkingWeek */ - self.profile.currentPregnancyWeek /* weekXpreg; */
         
         // MARK: TO GET THE CURRENT WEEK OF THE YEAR

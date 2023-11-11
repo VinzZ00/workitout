@@ -47,7 +47,7 @@ struct AssessmentResultView: View {
             }
             .animation(.default, value: vm.showHeader)
             .navigationBarBackButtonHidden()
-            .navigationTitle(vm.showHeader ? "" : "Workout Plan for Beginner")
+            .navigationTitle(vm.showHeader ? "" : String(localized: "Workout Plan for Beginner"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {

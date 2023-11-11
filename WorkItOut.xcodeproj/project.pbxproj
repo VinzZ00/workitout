@@ -27,8 +27,6 @@
 		6C68361C2AFE30FE00285904 /* UserConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68361B2AFE30FE00285904 /* UserConsentView.swift */; };
 		6C68361E2AFE62F800285904 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6C68361D2AFE62F800285904 /* Localizable.xcstrings */; };
 		6C6836202AFF328B00285904 /* LocalizedStringKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68361F2AFF328B00285904 /* LocalizedStringKey.swift */; };
-		6C6836242AFF45AF00285904 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6836232AFF45AF00285904 /* StringConstant.swift */; };
-		6C6836262AFF56D500285904 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6836252AFF56D500285904 /* Constant.swift */; };
 		6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */; };
 		6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */; };
 		6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */; };
@@ -156,8 +154,6 @@
 		6C68361B2AFE30FE00285904 /* UserConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConsentView.swift; sourceTree = "<group>"; };
 		6C68361D2AFE62F800285904 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		6C68361F2AFF328B00285904 /* LocalizedStringKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringKey.swift; sourceTree = "<group>"; };
-		6C6836232AFF45AF00285904 /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
-		6C6836252AFF56D500285904 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderComponent.swift; sourceTree = "<group>"; };
 		6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayButtonView.swift; sourceTree = "<group>"; };
@@ -324,22 +320,6 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
-		6C6836212AFF44A500285904 /* Strings */ = {
-			isa = PBXGroup;
-			children = (
-				6C6836222AFF458B00285904 /* Onboarding */,
-			);
-			path = Strings;
-			sourceTree = "<group>";
-		};
-		6C6836222AFF458B00285904 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				6C6836232AFF45AF00285904 /* StringConstant.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		6C6F34CA2AE7B9390059E74D /* GlobalComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,10 +462,8 @@
 		AC5A9A642AE41138003B0C1F /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				6C6836212AFF44A500285904 /* Strings */,
 				AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */,
 				D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */,
-				6C6836252AFF56D500285904 /* Constant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -990,7 +968,6 @@
 				6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
-				6C6836262AFF56D500285904 /* Constant.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
@@ -1018,7 +995,6 @@
 				560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */,
 				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
 				6CB5F80E2AF60C170019539C /* HomeCurrentYogaView.swift in Sources */,
-				6C6836242AFF45AF00285904 /* StringConstant.swift in Sources */,
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */,

@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    let stringConstant = Constant.String.Onboarding.OnboardingView.self
     @State var getStarted: Bool = false
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
                 Spacer()
-                Text(stringConstant.title)
+                Text("Welcome to Mamaste")
                     .font(.largeTitle)
                     .bold()
-                Text(stringConstant.desc)
-                ButtonComponent(title: stringConstant.button.stringValue()) {
+                Text("Your personalized yoga guide for a healthy pregnancy")
+                ButtonComponent(title: "Get Started") {
                     getStarted = true
                 }
             }

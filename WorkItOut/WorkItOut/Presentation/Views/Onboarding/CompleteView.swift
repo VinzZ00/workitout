@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct CompleteView: View {
-    var stringConstant = Constant.String.Onboarding.CompleteView.self
     var counter: Double = 0.75
     
     var body: some View {
-        var strings: [Double : String] = [
-            1.5 : stringConstant.Strings.first.stringValue(),
-            1 : stringConstant.Strings.second.stringValue(),
-            0.5 : stringConstant.Strings.third.stringValue(),
+        let strings: [Double : LocalizedStringResource] = [
+            1.5 : "Curating best yoga poses for your pregnancy weeks",
+            1 : "Taking into account your health conditions",
+            0.5 : "Predicting best sessions for your schedules",
         ]
         
         ZStack {
@@ -24,9 +23,9 @@ struct CompleteView: View {
                 Spacer()
             }
             VStack {
-                Text(stringConstant.title)
+                Text("Creating Exercise Plan")
                     .font(.title.bold())
-                Text(stringConstant.desc)
+                Text("Please wait, we are crafting the best exercise plan for you")
                     .frame(width: 240)
                     .multilineTextAlignment(.center)
                 LoadingCircle()

@@ -19,8 +19,6 @@ struct HomeCurrentYogaView: View {
         VStack(alignment: .leading) {
             Spacer()
             VStack(alignment: .leading) {
-
-                
                 Text("\(df.string(from: vm.selectedDate))")
                     .font(.title3)
                     .bold()

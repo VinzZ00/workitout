@@ -25,7 +25,7 @@ struct HomeOtherPlansView: View {
                         .font(.title3)
                         .bold()
                     Spacer()
-                    Text("6 Exercise (60 Min)")
+                    Text("\(yogaPlan.yogas.count) Exercise (60 Min)")
                 }
                 Spacer()
             }

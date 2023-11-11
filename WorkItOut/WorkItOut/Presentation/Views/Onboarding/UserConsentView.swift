@@ -34,7 +34,7 @@ struct UserConsentView: View {
                     Image("AssesmentBackground")
                     Spacer()
                 }
-                    .ignoresSafeArea()
+                .ignoresSafeArea()
             )
             .navigationDestination(isPresented: $next) {
                 AssessmentView()

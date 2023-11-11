@@ -50,7 +50,7 @@ struct YogaDetailView: View {
                     
                 }
             }
-            .navigationTitle(showHeader ? "" : state.getTitle())
+            .navigationTitle(showHeader ? "" : state.getTitle().stringValue())
             .navigationBarTitleDisplayMode(.inline)
             .padding()
             .animation(.default, value: state)
@@ -72,7 +72,7 @@ struct YogaDetailView: View {
         }
     }
     
-    enum YogaPreviewEnum: String {
+    enum YogaPreviewEnum: LocalizedStringResource {
         case relieveChoice = "Next"
         case yogaPreview = "Start Now"
         
@@ -85,7 +85,7 @@ struct YogaDetailView: View {
             }
         }
         
-        func getTitle() -> String {
+        func getTitle() -> LocalizedStringResource {
             switch self {
             case .relieveChoice:
                 return "What Are Your Current Conditions?"
