@@ -130,7 +130,7 @@ struct PoseManager {
     }
     
     static func createYogaPlan(poses: [Pose], name: String = "Yoga Plan Name", trimester: Trimester, days: [Day], duration: Duration, exceptions: [Exception], relieves: [Relieve]) -> YogaPlan {
-        var yogaPlan = YogaPlan(name: name, trimester: trimester)
+        var yogaPlan = YogaPlan(id : UUID(), name: name, trimester: trimester)
         yogaPlan.yogas = self.createYogas(poses: poses, days: days, duration: duration, exceptions: exceptions, relieves: relieves)
 
         return yogaPlan

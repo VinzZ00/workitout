@@ -18,6 +18,7 @@ struct HomeCurrentYogaView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
+
             ZStack(alignment: .bottom){
                 Image(vm.yoga.poses.isEmpty ? "NoYoga" : "YogaPlanImage")
                 VStack(alignment: .leading) {
@@ -34,7 +35,7 @@ struct HomeCurrentYogaView: View {
                         Text(vm.yoga.name)
                             .font(.largeTitle)
                             .bold()
-                        Text("\(vm.yoga.poses.count) Exercise (\(vm.yoga.totalDurationMinute()) Min)")
+                        Text("\(vm.yoga.poses.count) Exercise (\(vm.yoga!.totalDurationMinute()) Min)")
                             .font(.body)
                         ButtonComponent(title: "Start Exercise") {
                             vm.toggleSheet(yoga: vm.yoga)

@@ -9,10 +9,17 @@ import Foundation
 import CoreData
 
 struct YogaPlan : Identifiable, Entity, Equatable {
-    var id: UUID = UUID()
-    var name: String = "Yoga Plan Name"
-    var yogas: [Yoga] = []
-    var trimester: Trimester = .second
+    var id: UUID
+    var name: String
+    var yogas: [Yoga]
+    var trimester: Trimester
+    
+    init(id: UUID, name: String, trimester: Trimester) {
+        self.id = id
+        self.name = name
+        self.yogas = []
+        self.trimester = trimester
+    }
     
     static func == (lhs : YogaPlan, rhs : YogaPlan ) -> Bool {
         return lhs.id == rhs.id

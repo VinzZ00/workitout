@@ -46,6 +46,7 @@ struct HomeView: View {
                                 }
                             }
                             .padding(.bottom)
+                            
                             if vm.showHeader {
                                 HStack {
                                     if let profile = dm.profile {
@@ -93,7 +94,19 @@ struct HomeView: View {
             .onChange(of: vm.day) { _ in
                 vm.initMonth()
             }
-            .sheet(isPresented: $vm.showProfile, content: {
+            .sheet(isPresented: $vm.showProfile, onDismiss: {
+                Task{
+                    do {
+                        print("Load Profile from dm.profile")
+                        try await vm.loadProfile(profile: dm.profile!)
+                    } catch {
+                        print("masuk ke alert")
+                        self.alert = true
+                    }
+                }
+                
+                dm.objectWillChange.send()
+            },  content: {
                 NavigationStack{
                     ProfileView(vm: ProfileViewModel(profile: vm.profile))
                 }
@@ -107,9 +120,12 @@ struct HomeView: View {
                     do {
                         try await vm.loadProfile(moc: moc)
                     } catch {
+                        print("masuk ke alert")
                         self.alert = true
                     }
                 }
+                
+
             }
             
             .navigationDestination(for: String.self) { string in

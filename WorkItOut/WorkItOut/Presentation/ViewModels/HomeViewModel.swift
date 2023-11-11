@@ -35,6 +35,7 @@ class HomeViewModel: ObservableObject {
         self.profile = profile
     }
     
+
     func loadProfile(moc : NSManagedObjectContext) async throws {
         let fetchedProfile = try await fetch.call(context: moc)
         if fetchedProfile.isEmpty {
@@ -46,6 +47,7 @@ class HomeViewModel: ObservableObject {
             self.yogaPlans = self.profile.plan
             self.objectWillChange.send()
         }
+
     }
     
     func toggleSheet(yoga: Yoga) {
@@ -107,12 +109,12 @@ class HomeViewModel: ObservableObject {
     
     @Published var month: String = ""
     
-    var yogaPlan: YogaPlan {
-        return yogaPlans.first(where: {$0.trimester == trimester}) ?? YogaPlan()
+    var yogaPlan: YogaPlan? {
+        return yogaPlans.first(where: {$0.trimester == trimester})
     }
     
-    var yoga: Yoga {
-        return yogaPlan.yogas.first(where: {$0.day == day}) ?? Yoga()
+    var yoga: Yoga? {
+        return yogaPlan?.yogas.first(where: {$0.day == day})
     }
     
     func previousWeek() {

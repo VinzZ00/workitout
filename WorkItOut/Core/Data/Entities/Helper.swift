@@ -51,12 +51,13 @@ extension YogaNSObject {
 
 extension YogaPlanNSObject {
     func intoObject() -> YogaPlan {
-        let yogaPlan = YogaPlan(
+        var yogaPlan = YogaPlan(
             id: self.uuid!,
             name: self.name!,
-            yogas: (self.yogas!.allObjects as? [YogaNSObject] ?? []).map{$0.intoObject()},
             trimester: Trimester(rawValue: self.trimester!)!
         ) // YogaPlan
+        
+        yogaPlan.yogas.append(contentsOf: (self.yogas!.allObjects as? [YogaNSObject] ?? []).map{$0.intoObject()})
         
         return yogaPlan
     }
