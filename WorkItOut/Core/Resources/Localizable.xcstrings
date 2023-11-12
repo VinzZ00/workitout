@@ -315,6 +315,9 @@
         }
       }
     },
+    "Completed" : {
+
+    },
     "Cooling Down" : {
       "localizations" : {
         "id" : {

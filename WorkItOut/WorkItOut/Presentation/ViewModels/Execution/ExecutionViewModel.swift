@@ -100,13 +100,12 @@ class ExecutionViewModel: ObservableObject {
     func savePoses(context: NSManagedObjectContext) async throws {
         profile = try await fetch.call(context: context).last!
         
-        
-        
         let yogaPlanIndex = getYogaPlanIndex()
         guard let yogaIndex = profile.plan[yogaPlanIndex].yogas.firstIndex(of: yoga) else {
             return
         }
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
+        profile.plan[yogaPlanIndex].yogas[yogaIndex].yogaState = .completed
         let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
         profile.histories.append(history)
         try await self.update.call(profile: profile, context: context)

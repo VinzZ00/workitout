@@ -37,8 +37,15 @@ struct HomeCurrentYogaView: View {
                                 .bold()
                             Text("\(yoga.poses.count) Exercise (\(yoga.totalDurationMinute()) Min)")
                                 .font(.body)
-                            ButtonComponent(title: "Start Exercise") {
-                                vm.toggleSheet(yoga: yoga)
+                            if yoga.yogaState == .completed {
+                                ButtonComponent(title: "Completed", color: Color.black.opacity(0.1), textColor: Color.green) {
+//                                    vm.toggleSheet(yoga: yoga)
+                                }
+                            }
+                            else {
+                                ButtonComponent(title: "Start Exercise") {
+                                    vm.toggleSheet(yoga: yoga)
+                                }
                             }
                         }
                     }

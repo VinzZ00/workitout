@@ -30,6 +30,7 @@ struct WorkItOutApp: App {
             ContentView()
                 .environment(\.managedObjectContext, coreDataManager.container.viewContext)
                 .environmentObject(dm)
+                .preferredColorScheme(.light)
         }
     }
 }
