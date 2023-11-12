@@ -95,7 +95,9 @@ struct ExecutionView: View {
                         .padding(50)
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                                self.textSwitch.toggle()
+                                withAnimation {
+                                    self.textSwitch.toggle()
+                                }
                             }
                         }
                 }else {
@@ -111,12 +113,12 @@ struct ExecutionView: View {
                             .contentTransition(.numericText(value: timerVm.timeRemaining))
                         ZStack(alignment: .leading) {
                           Rectangle()
-                            .frame(width: 300, height: 20)
+                            .frame(width: 320, height: 12)
                             .opacity(0.3)
                             .foregroundColor(.gray)
 
                           Rectangle()
-                            .frame(width: progress * 300, height: 20)
+                            .frame(width: progress * 320, height: 12)
                             .foregroundColor(.primary)
                             .animation(.easeInOut, value: progress)
                         }
@@ -143,7 +145,7 @@ struct ExecutionView: View {
                     }label: {
                         ZStack{
                             Circle()
-                                .stroke(Color.neutral6)
+                                .stroke(Color.neutral6.opacity(0.7))
                                 .frame(width: 44, height: 44)
                             Image("tabler-icon-player-skip-back")
                                 .resizable()
@@ -199,7 +201,7 @@ struct ExecutionView: View {
                     }label: {
                         ZStack{
                             Circle()
-                                .stroke(Color.neutral6)
+                                .stroke(Color.neutral6.opacity(0.7))
                                 .frame(width: 44, height: 44)
                                 
                             Image("tabler-icon-player-skip-forward")
