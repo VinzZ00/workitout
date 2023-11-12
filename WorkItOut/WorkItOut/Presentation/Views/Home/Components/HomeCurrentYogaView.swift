@@ -45,13 +45,22 @@ struct HomeCurrentYogaView: View {
             .background(.black.opacity(0.5))
             .borderedCorner()
         }
-        
-        .animation(.default, value: vm.yoga?.poses.isEmpty ?? true)
         .padding()
         .frame(width: 360, height: 480)
-        .background(vm.yoga?.poses.isEmpty ?? true ? Image("YogaStatusNone") : Image("YogaStatusExist"))
+        .background(
+            VStack {
+                if vm.yoga?.poses.isEmpty ?? true {
+                    Image("YogaStatusNone")
+                }
+                else {
+                    Image("YogaStatusExist")
+                }
+            }
+        )
+        .animation(.default, value: vm.yoga)
         .borderedCorner()
         .padding(.vertical)
+        
     }
 }
 

@@ -1050,6 +1050,9 @@
         }
       }
     },
+    "Toggle" : {
+
+    },
     "Tuesday" : {
       "localizations" : {
         "id" : {

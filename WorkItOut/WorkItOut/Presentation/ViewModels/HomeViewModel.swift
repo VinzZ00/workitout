@@ -145,4 +145,8 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
+    
+    func getHandmadeYogaPlans(relieve: Relieve) -> [YogaPlan] {
+        return self.handmadeYogaPlans[relieve] ?? self.yogaPlans
+    }
 }
