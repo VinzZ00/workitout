@@ -15,6 +15,7 @@
 		56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */; };
 		56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */; };
 		56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */; };
+		6C11B8212B008B5600EF2869 /* HandmadeYogas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C11B8202B008B5600EF2869 /* HandmadeYogas.swift */; };
 		6C3FD7652AEE405C00C84D2A /* Relieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7642AEE405C00C84D2A /* Relieve.swift */; };
 		6C3FD76C2AEE40BD00C84D2A /* Trimester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76B2AEE40BD00C84D2A /* Trimester.swift */; };
 		6C3FD76E2AEE40C900C84D2A /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */; };
@@ -141,6 +142,7 @@
 		56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		6C11B8202B008B5600EF2869 /* HandmadeYogas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandmadeYogas.swift; sourceTree = "<group>"; };
 		6C3FD7642AEE405C00C84D2A /* Relieve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relieve.swift; sourceTree = "<group>"; };
 		6C3FD76B2AEE40BD00C84D2A /* Trimester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trimester.swift; sourceTree = "<group>"; };
 		6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 			children = (
 				6C8D5D142AE6619700A2986D /* Mock */,
 				AC5A9A612AE41138003B0C1F /* Entities */,
+				6C11B8202B008B5600EF2869 /* HandmadeYogas.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -964,6 +967,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CB5F8182AF64F740019539C /* GeneratePlanViewModel.swift in Sources */,
+				6C11B8212B008B5600EF2869 /* HandmadeYogas.swift in Sources */,
 				D8BC2BF62AE81D0600E61487 /* AssessmentState.swift in Sources */,
 				6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
@@ -1246,7 +1250,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 5V99WU443D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkItOut/Info.plist;
@@ -1261,7 +1265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1279,7 +1283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 5V99WU443D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkItOut/Info.plist;
@@ -1294,7 +1298,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

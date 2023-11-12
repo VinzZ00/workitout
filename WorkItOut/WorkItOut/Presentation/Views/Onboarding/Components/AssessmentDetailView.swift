@@ -15,7 +15,7 @@ struct AssessmentDetailView<E: UserPreference>: View {
     var body: some View {
         VStack(alignment: .leading){
             Text(title)
-                .font(.title).bold()
+                .font(.largeTitle).bold()
             ForEach(selections, id: \.self){ selection in
                 Button(action: {self.selection = selection}, label: {
                     HStack{
@@ -30,7 +30,7 @@ struct AssessmentDetailView<E: UserPreference>: View {
                         .stroke(selection == self.selection ? Color.primary : Color.neutral6, lineWidth: 1)
                     )
                 })
-                .padding(.vertical, 3)
+                .padding(4)
             }
         }
     }

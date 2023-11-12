@@ -18,7 +18,7 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
     var body: some View {
         VStack(alignment: .leading){
             Text(title)
-                .font(.title).bold()
+                .font(.largeTitle).bold()
             Text(explanation)
                 .font(.headline)
                 .foregroundStyle(.gray)
@@ -54,7 +54,7 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
                         .fill(self.selectedItems.contains(selection.wrappedValue) ? Color.primary.opacity(0.25) : .clear)
                         .stroke(self.selectedItems.contains(selection.wrappedValue) ? Color.primary : Color.neutral6, lineWidth: 1)
                     )
-                    .padding(.vertical, 3)
+                    .padding(4)
                 }
 
             }
@@ -63,5 +63,5 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
 }
 
 //#Preview {
-//    AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", selectedItems: .constant(["Monday", "Wednesday", "Friday"]), selections: Day.allCases.map({$0.rawValue}))
+//    AssessmentDetailMultipleChoiceView(title: .constant("Test Title"), selectedItems: .constant(Day.allCases), selections: <#T##[UserPreference]#>)
 //}

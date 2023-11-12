@@ -19,7 +19,8 @@ struct ContentView: View {
         ZStack{
             if isLoading {
                 EmptyView()
-            }else{
+            }
+            else{
                 if !dm.hasNoProfile{
                     HomeView()
                         .environmentObject(dm);
@@ -29,20 +30,22 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $dm.hasNoProfile) {
             OnboardingView()
         }
+        .transaction { transaction in
+            transaction.disablesAnimations = true
+            transaction.animation = .linear(duration: 0.5)
+        }
         .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
             if valueIsTrue {
                 dm.hasNoProfile = false
-//                hasNoProfile = false
             }
         })
         .onAppear {
+            
             Task{
                 do {
                     dm.hasNoProfile = try await !dm.loadProfile(moc: moc)
-//                    hasNoProfile = try await !dm.loadProfile(moc: moc)
                 } catch {
                     dm.hasNoProfile = false
-//                    hasNoProfile = false
                 }
                 isLoading = false
             }

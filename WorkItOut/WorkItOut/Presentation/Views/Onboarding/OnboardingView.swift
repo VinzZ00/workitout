@@ -35,9 +35,6 @@ struct OnboardingView: View {
                 UserConsentView()
             }
         }
-        
-        
-        
     }
 }
 

@@ -141,8 +141,8 @@
             filePath = "WorkItOut/WorkItOut/Presentation/Views/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -198,6 +198,21 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "default argument 4 of WorkItOut.ProfileView.init(presentationMode: SwiftUI.Environment&lt;SwiftUI.Binding&lt;SwiftUI.PresentationMode&gt;&gt;, moc: SwiftUI.Environment&lt;__C.NSManagedObjectContext&gt;, vm: @autoclosure () -&gt; WorkItOut.ProfileViewModel, selection: Swift.Int, dm: SwiftUI.EnvironmentObject&lt;WorkItOut.DataManager&gt;) -&gt; WorkItOut.ProfileView"
+                  moduleName = "WorkItOut"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0 - 88a10ebe38acc670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 4 of WorkItOut.ProfileView.init(presentationMode: SwiftUI.Environment&lt;SwiftUI.Binding&lt;SwiftUI.PresentationMode&gt;&gt;, moc: SwiftUI.Environment&lt;__C.NSManagedObjectContext&gt;, vm: @autoclosure () -&gt; WorkItOut.ProfileViewModel, selection: Swift.Int, dm: SwiftUI.EnvironmentObject&lt;WorkItOut.DataManager&gt;, alert: Swift.Bool) -&gt; WorkItOut.ProfileView"
                   moduleName = "WorkItOut"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jeremyraymond/Documents/MacroChallenge/WorkItOut/WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"

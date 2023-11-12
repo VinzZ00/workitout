@@ -12,6 +12,8 @@ struct AssessmentView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -39,7 +41,7 @@ struct AssessmentView: View {
                     .disabled(avm.checkDaysIsEmpty() ? true : false)
                 }
             }
-            .padding(.horizontal, 15)
+            .padding(.horizontal)
             .animation(.default, value: avm.state)
             .onReceive(avm.timer, perform: { _ in
                 if avm.checkTimer() {
@@ -56,13 +58,14 @@ struct AssessmentView: View {
             }
             .toolbar {
                 if avm.state != .complete {
-                    if avm.state != .chooseWeek {
                         ToolbarItem(placement: .topBarLeading) {
                             IconButtonComponent(icon: "chevron.left") {
+                                if avm.state == .chooseWeek {
+                                    self.presentationMode.wrappedValue.dismiss()
+                                }
                                 avm.previousState()
                             }
                         }
-                    }
                     ToolbarItem(placement: .principal) {
                         StateIndicator(state: $avm.state)
                     }
@@ -70,6 +73,8 @@ struct AssessmentView: View {
                 
             }
             .navigationBarBackButtonHidden()
+            .navigationBarTitleDisplayMode(.inline)
+            
         }
         
         
