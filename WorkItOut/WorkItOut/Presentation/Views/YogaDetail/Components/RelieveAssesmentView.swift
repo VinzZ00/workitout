@@ -30,7 +30,6 @@ struct RelieveAssesmentView: View {
                         else{
                             selectedRelieves.append(relieve)
                         }
-                        print(relieve)
                     }, label: {
                         VStack {
                             Image(relieve.getAsset())
@@ -48,7 +47,6 @@ struct RelieveAssesmentView: View {
                     })
                 }
             }
-            
             .padding(.vertical)
         }
     }

@@ -13,7 +13,6 @@ struct YogaPreviewView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            
             ForEach(PoseManager.existingCategories(poses: yoga.poses), id: \.self) { category in
                 HStack {
                     Text(category.rawValue)
@@ -31,7 +30,7 @@ struct YogaPreviewView: View {
                     }
                 }
             }
-            
+            .padding(.vertical)
         }
     }
 }

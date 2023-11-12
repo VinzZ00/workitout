@@ -82,6 +82,7 @@ struct YogaDetailView: View {
                             state = .relieveChoice
                         }
                     }
+                    .contentTransition(.symbolEffect(.automatic))
                 }
             }
             

@@ -20,7 +20,7 @@ struct ExecutionView: View {
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
     @State var showAlert = false
-    @State var showTips = true
+    @State var showTips = false
     @State var checkBox = false
     @Binding var path :  NavigationPath
     
@@ -234,8 +234,12 @@ struct ExecutionView: View {
                     }
                 }
             }
+            .onAppear {
+                showTips = true
+            }
             if showTips {
                 TipView(showTips: $showTips, toggle: $checkBox)
+                    
             }
             if showAlert {
                 ZStack{
