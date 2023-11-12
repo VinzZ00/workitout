@@ -16,7 +16,7 @@ struct AssesmentWeekView: View {
                 .font(.largeTitle).bold()
             Spacer()
             Picker("Week Picker", selection: $week) {
-                ForEach(0...40, id: \.self) { i in
+                ForEach(1...32, id: \.self) { i in
                     Text("Week \(i)").tag(i)
                         .font(.title)
                 }

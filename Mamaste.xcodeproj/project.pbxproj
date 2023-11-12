@@ -35,6 +35,7 @@
 		6C85C0792B0154220076B057 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C0772B0154220076B057 /* OnboardingView.swift */; };
 		6C85C07B2B0157A80076B057 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6C85C07A2B0157A80076B057 /* Localizable.xcstrings */; };
 		6C85C07D2B0158F00076B057 /* LocalizedStringKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C07C2B0158F00076B057 /* LocalizedStringKey.swift */; };
+		6C85C07F2B015EE40076B057 /* YogaNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C07E2B015EE40076B057 /* YogaNames.swift */; };
 		6C8D5CFC2AE660B200A2986D /* YogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */; };
 		6C8D5D112AE6618E00A2986D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0D2AE6618E00A2986D /* Day.swift */; };
 		6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */; };
@@ -163,6 +164,7 @@
 		6C85C0772B0154220076B057 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		6C85C07A2B0157A80076B057 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		6C85C07C2B0158F00076B057 /* LocalizedStringKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringKey.swift; sourceTree = "<group>"; };
+		6C85C07E2B015EE40076B057 /* YogaNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaNames.swift; sourceTree = "<group>"; };
 		6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPlan.swift; sourceTree = "<group>"; };
 		6C8D5D0D2AE6618E00A2986D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutState.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				6C8D5D152AE6619700A2986D /* MockData.swift */,
+				6C85C07E2B015EE40076B057 /* YogaNames.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -994,6 +997,7 @@
 				6CEFB6812AF4C5330020D00F /* Color.swift in Sources */,
 				6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */,
 				ACBFBD9F2AE6775A00109D94 /* FetchProfileUseCase.swift in Sources */,
+				6C85C07F2B015EE40076B057 /* YogaNames.swift in Sources */,
 				6CB5F80C2AF605D50019539C /* BorderedCorner.swift in Sources */,
 				D8BA73C72AFE73AC004A795A /* TipView.swift in Sources */,
 				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,

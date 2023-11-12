@@ -24,7 +24,7 @@ struct YogaDetailView: View {
         NavigationStack{
             VStack(alignment: .leading) {
                 if showHeader {
-                    Text(state.getTitle())
+                    Text(state.getTitle(yoga: yoga))
                         .font(.largeTitle)
                         .bold()
                     state.getDescription(yoga: yoga)
@@ -57,7 +57,7 @@ struct YogaDetailView: View {
                     }
                 }
             }
-            .navigationTitle(showHeader ? "" : state.getTitle())
+            .navigationTitle(showHeader ? "" : state.getTitle(yoga: yoga).stringValue())
             .navigationBarTitleDisplayMode(.inline)
             .padding()
             .animation(.default, value: state)
@@ -79,7 +79,7 @@ struct YogaDetailView: View {
         }
     }
     
-    enum YogaPreviewEnum: String {
+    enum YogaPreviewEnum: LocalizedStringResource {
         case relieveChoice = "Next"
         case yogaPreview = "Start Now"
         
@@ -92,12 +92,12 @@ struct YogaDetailView: View {
             }
         }
         
-        func getTitle() -> String {
+        func getTitle(yoga: Yoga) -> LocalizedStringResource {
             switch self {
             case .relieveChoice:
-                return "Choose Your Pain and Relief and Target Area"
+                return "What Are Your Current Conditions?"
             case .yogaPreview:
-                return "Balancing and Grounding"
+                return LocalizedStringResource(stringLiteral: yoga.name)
             }
         }
         
@@ -105,7 +105,7 @@ struct YogaDetailView: View {
         func getDescription(yoga: Yoga) -> some View {
             switch self {
             case .relieveChoice:
-                Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions.")
+                Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. ") + Text("(You can skip this part)").foregroundStyle(.purple)
             case .yogaPreview:
                 Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
                     .foregroundStyle(Color.neutral3)

@@ -123,7 +123,7 @@ struct PoseManager {
         var yogas: [Yoga] = []
         
         for day in days {
-            yogas.append(Yoga(id: UUID(), name: "Yoga Name", poses: createPoses(poses: poses, duration: duration, exceptions: exceptions, relieves: relieves), day: day, estimationDuration: duration.getDurationInMinutes(), image: "ExampleImage.png"))
+            yogas.append(Yoga(id: UUID(), name: YogaNames.yogaNames.randomElement()!, poses: createPoses(poses: poses, duration: duration, exceptions: exceptions, relieves: relieves), day: day, estimationDuration: duration.getDurationInMinutes(), image: "ExampleImage.png"))
         }
         
         return yogas

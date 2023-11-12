@@ -32,7 +32,6 @@
       }
     },
     "(You can skip this part)" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -95,7 +94,6 @@
       }
     },
     "%lld Exercise (60 Min)" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -119,9 +117,6 @@
       }
     },
     "• Listen to your body and don't push yourself too hard.\n• Modify poses as needed to accommodate your growing belly.\n• Drink plenty of water before, during, and after your practice.\n• Wear comfortable clothing that allows you to move freely." : {
-
-    },
-    "6 Exercise (60 Min)" : {
 
     },
     "10 Minutes" : {
@@ -195,7 +190,6 @@
       }
     },
     "Agree and Continue" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -454,7 +448,6 @@
       }
     },
     "Finish" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -950,11 +943,7 @@
         }
       }
     },
-    "Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions." : {
-
-    },
     "Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. " : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1005,7 +994,6 @@
       }
     },
     "Start Exercise" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1016,7 +1004,6 @@
       }
     },
     "Start Now" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1203,7 +1190,6 @@
       }
     },
     "What Are Your Current Conditions?" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

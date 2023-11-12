@@ -16,14 +16,17 @@ struct HomeYogaCategoryView: View {
             vm.selectedRelieve = relieve
         }, label: {
             Text(relieve.getString())
+                .bold(relieve == vm.selectedRelieve)
+                .frame(minWidth: 72)
                 .foregroundStyle(relieve == vm.selectedRelieve ? .purple : .black)
                 .padding(12)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(relieve == vm.selectedRelieve ? .main.opacity(0.25) : .white)
+                        .fill(relieve == vm.selectedRelieve ? Color.primary.opacity(0.25) : .white)
                         .stroke(relieve == vm.selectedRelieve ? Color.primary : .clear, lineWidth: 1)
                 )
                 .borderedCorner()
+                
         })
     }
 }

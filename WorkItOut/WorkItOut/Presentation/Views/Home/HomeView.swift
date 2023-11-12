@@ -78,13 +78,24 @@ struct HomeView: View {
                                     HomeYogaCategoryView(relieve: relieve)
                                 }
                             }
+                            .scrollIndicators(.hidden)
                         }
-                        ForEach(dm.handMadeYogaPlan[vm.selectedRelieve] ?? vm.yogaPlans, id: \.id) { yogaPlan in
-                            HomeOtherPlansView(yogaPlan: yogaPlan)
-                                .animation(.default, value: vm.selectedRelieve)
+                        VStack {
+                            ForEach(Relieve.allCases, id: \.self) { relieve in
+                                VStack {
+                                    if vm.selectedRelieve == relieve {
+                                        ForEach(0..<self.vm.getHandmadeYogaPlans(relieve: relieve).count, id: \.self) { i in
+                                            HomeOtherPlansView(yogaPlan: self.vm.getHandmadeYogaPlans(relieve: relieve)[i], image: "Handmade\(relieve.getString())\(i+1)")
+                                        }
+                                    }
+                                }
+                            }
                         }
+                        .padding(.vertical, 4)
+                        .animation(.default, value: vm.selectedRelieve)
                     }
                     .padding()
+
                 }
             }
             .onChange(of: vm.week) { _ in
@@ -119,6 +130,7 @@ struct HomeView: View {
                     }
                 }
             }
+            .background(Color.background)
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
                     .environmentObject(dm)
