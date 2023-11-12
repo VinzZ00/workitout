@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ProfileCard: View {
-    var detail : (String, String)
+    var detail : (LocalizedStringResource, LocalizedStringResource)
     var value : String
     init(assessmentState: AssessmentState, value: String) {
-        self.detail = assessmentState.getDescription()
+        self.detail = assessmentState.getLocalizedString()
         self.value = value
     }
     var body: some View {

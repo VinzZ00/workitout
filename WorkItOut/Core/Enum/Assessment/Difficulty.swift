@@ -12,20 +12,35 @@ enum Difficulty: String, UserPreference {
     case intermediate = "Intermediate"
     case advanced = "Advanced"
     
-    func getDescription() -> String {
-        var desc = ""
-        switch self {
-        case .beginner:
-            desc = "None at all"
-        case .intermediate:
-            desc = "A little bit"
-        case .advanced:
-            desc = "I do yoga often"
-        }
-        return desc
-    }
-    
     func getString() -> String {
         return self.rawValue
     }
+    
+    func getLocalizedString() -> LocalizedStringResource {
+        switch self {
+        case .beginner:
+            return "Beginner"
+        case .intermediate:
+            return "Intermidiate"
+        case .advanced:
+            return "Advanced"
+        }
+    }
+    
+    func getDescription() -> String {
+        return self.getLocalizedDescription().stringValue()
+    }
+    
+    func getLocalizedDescription() -> LocalizedStringResource {
+        switch self {
+            case .beginner:
+                return "None at all"
+            case .intermediate:
+                return "A little bit"
+            case .advanced:
+                return "I do yoga often"
+        }
+    }
+    
+    
 }

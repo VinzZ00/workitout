@@ -8,10 +8,6 @@
 import Foundation
 
 enum Day: String, UserPreference {
-    func getString() -> String {
-        return self.rawValue
-    }
-    
     case sunday = "Sunday"
     case monday = "Monday"
     case tuesday = "Tuesday"
@@ -19,6 +15,29 @@ enum Day: String, UserPreference {
     case thursday = "Thursday"
     case friday = "Friday"
     case saturday = "Saturday"
+    
+    func getString() -> String {
+        return self.rawValue
+    }
+    
+    func getLocalizedString() -> LocalizedStringResource {
+        switch self {
+            case .sunday:
+                return "Sunday"
+            case .monday:
+                return "Monday"
+            case .tuesday:
+                return "Tuesday"
+            case .wednesday:
+                return "Wednesday"
+            case .thursday:
+                return "Thursday"
+            case .friday:
+                return "Friday"
+            case .saturday:
+                return "Saturday"
+        }
+    }
     
     func getShortenedDay() -> String {
         return String(self.getString().prefix(3))

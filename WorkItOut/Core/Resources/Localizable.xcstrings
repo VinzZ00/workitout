@@ -125,7 +125,6 @@
 
     },
     "10 Minutes" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -136,7 +135,6 @@
       }
     },
     "20 Minutes" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -147,7 +145,6 @@
       }
     },
     "30 Minutes" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -158,7 +155,6 @@
       }
     },
     "A little bit" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -169,7 +165,6 @@
       }
     },
     "Abdominal Surgery" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -180,7 +175,6 @@
       }
     },
     "Advanced" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -191,7 +185,6 @@
       }
     },
     "Afternoon" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -213,7 +206,6 @@
       }
     },
     "All" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -224,7 +216,6 @@
       }
     },
     "All Trimester" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -235,7 +226,6 @@
       }
     },
     "Ankle" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -249,7 +239,6 @@
 
     },
     "Back" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -281,7 +270,6 @@
       }
     },
     "Beginner" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -305,7 +293,6 @@
 
     },
     "Cooling Down" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -357,7 +344,6 @@
       }
     },
     "Diastatis Recti" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -378,7 +364,6 @@
       }
     },
     "Do you have any health conditions that could affect your yoga?" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -410,7 +395,6 @@
       }
     },
     "Evening" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -482,7 +466,6 @@
       }
     },
     "First" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -493,7 +476,6 @@
       }
     },
     "First Trimester" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -515,7 +497,6 @@
       }
     },
     "Friday" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -536,7 +517,6 @@
       }
     },
     "Glucoma" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -560,7 +540,6 @@
       }
     },
     "Health conditions" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -571,7 +550,6 @@
       }
     },
     "Hernia" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -582,7 +560,6 @@
       }
     },
     "High Blood Pressure" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -593,7 +570,6 @@
       }
     },
     "Hip" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -604,7 +580,6 @@
       }
     },
     "Hip Openers" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -635,7 +610,6 @@
       }
     },
     "How much time do you have to commit to yoga in a session?" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -646,7 +620,6 @@
       }
     },
     "I do yoga often" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -656,8 +629,10 @@
         }
       }
     },
+    "Intermidiate" : {
+
+    },
     "Knee" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -668,7 +643,6 @@
       }
     },
     "Lack of Flexibity" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -679,7 +653,6 @@
       }
     },
     "Leg" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -704,7 +677,6 @@
       }
     },
     "Low Blood Pressuer" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -715,7 +687,6 @@
       }
     },
     "Monday" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -726,7 +697,6 @@
       }
     },
     "Morning" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -735,6 +705,9 @@
           }
         }
       }
+    },
+    "Multiples" : {
+
     },
     "My Assessment" : {
       "localizations" : {
@@ -747,7 +720,6 @@
       }
     },
     "Neck" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -807,7 +779,6 @@
 
     },
     "None at all" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -831,7 +802,6 @@
 
     },
     "Orthopedic Issues" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -842,7 +812,6 @@
       }
     },
     "Pelvic" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -905,7 +874,6 @@
       }
     },
     "Preterm Labor" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -926,7 +894,6 @@
       }
     },
     "Saturday" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -959,7 +926,6 @@
       }
     },
     "Seated Pose" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -970,7 +936,6 @@
       }
     },
     "Second" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -981,7 +946,6 @@
       }
     },
     "Second Trimester" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1036,7 +1000,6 @@
       }
     },
     "Standing Pose" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1069,7 +1032,6 @@
       }
     },
     "Sunday" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1101,7 +1063,6 @@
       }
     },
     "Third" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1112,7 +1073,6 @@
       }
     },
     "Third Trimester" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1126,7 +1086,6 @@
 
     },
     "Thursday" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1137,7 +1096,6 @@
       }
     },
     "Time Reminder" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1151,7 +1109,6 @@
 
     },
     "Tuesday" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1165,7 +1122,6 @@
 
     },
     "Vertigo" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1176,7 +1132,6 @@
       }
     },
     "Warm Up" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1187,7 +1142,6 @@
       }
     },
     "Wednesday" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1234,7 +1188,6 @@
       }
     },
     "Weekly Schedule" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1267,7 +1220,6 @@
       }
     },
     "What availability day to commit to yoga each week?" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1358,7 +1310,6 @@
       }
     },
     "Yoga Duration in a Session" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1369,7 +1320,6 @@
       }
     },
     "Yoga Experience" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

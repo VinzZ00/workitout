@@ -17,19 +17,34 @@ enum Trimester: String, UserPreference {
         return self.rawValue
     }
     
-    func getDescription() -> String {
-        var desc = ""
+    func getLocalizedString() -> LocalizedStringResource {
         switch self {
         case .first:
-            desc = "First Trimester"
+            return "First"
         case .second:
-            desc = "Second Trimester"
+            return "Second"
         case .third:
-            desc = "Third Trimester"
+            return "Third"
         case .all:
-            desc = "All Available"
+            return "All"
         }
-        return desc
+    }
+    
+    func getLocalizedDescription() -> LocalizedStringResource {
+        switch self {
+        case .first:
+            return "First Trimester"
+        case .second:
+            return "Second Trimester"
+        case .third:
+            return "Third Trimester"
+        case .all:
+            return "All Trimester"
+        }
+    }
+    
+    func getDescription() -> String {
+        return self.getLocalizedDescription().stringValue()
     }
     
     func getInt() -> Int {
