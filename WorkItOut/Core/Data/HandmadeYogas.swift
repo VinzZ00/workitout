@@ -8,7 +8,5 @@
 import Foundation
 
 struct HandmadeYogas {
-//    static let yogas: [Yoga] = [
-//        Yoga(id: UUID(), name: "", poses: <#T##[Pose]#>, day: <#T##Day#>, estimationDuration: <#T##Int#>, yogaState: <#T##YogaState#>, image: <#T##String#>)
-//    ]
+    static private let poses: [Pose] = []
 }

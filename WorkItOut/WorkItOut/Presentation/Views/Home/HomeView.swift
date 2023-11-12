@@ -78,8 +78,9 @@ struct HomeView: View {
                                     HomeYogaCategoryView(relieve: relieve)
                                 }
                             }
+                            .scrollIndicators(.hidden)
                         }
-                        ForEach(dm.handMadeYogaPlan[vm.selectedRelieve] ?? vm.yogaPlans, id: \.id) { yogaPlan in
+                        ForEach(vm.handmadeYogaPlans[vm.selectedRelieve] ?? vm.yogaPlans, id: \.id) { yogaPlan in
                             HomeOtherPlansView(yogaPlan: yogaPlan)
                                 .animation(.default, value: vm.selectedRelieve)
                         }

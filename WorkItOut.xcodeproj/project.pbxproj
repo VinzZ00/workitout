@@ -60,6 +60,7 @@
 		6CC43D112AFA236000FEE93A /* YogaPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */; };
 		6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */; };
 		6CC43D152AFA3E0300FEE93A /* PoseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC43D142AFA3E0300FEE93A /* PoseManager.swift */; };
+		6CD2FCA62B010ADB00F70B13 /* YogaNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD2FCA52B010ADB00F70B13 /* YogaNames.swift */; };
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67A2AF383F80020D00F /* DayPickView.swift */; };
 		6CEFB67D2AF384C80020D00F /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67C2AF384C80020D00F /* DayPickerView.swift */; };
@@ -186,6 +187,7 @@
 		6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPreviewView.swift; sourceTree = "<group>"; };
 		6CC43D122AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollListenerViewBuilder.swift; sourceTree = "<group>"; };
 		6CC43D142AFA3E0300FEE93A /* PoseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseManager.swift; sourceTree = "<group>"; };
+		6CD2FCA52B010ADB00F70B13 /* YogaNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaNames.swift; sourceTree = "<group>"; };
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67A2AF383F80020D00F /* DayPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6CEFB67C2AF384C80020D00F /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				6C8D5D142AE6619700A2986D /* Mock */,
 				AC5A9A612AE41138003B0C1F /* Entities */,
 				6C11B8202B008B5600EF2869 /* HandmadeYogas.swift */,
+				6CD2FCA52B010ADB00F70B13 /* YogaNames.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1010,6 +1013,7 @@
 				D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */,
 				AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */,
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
+				6CD2FCA62B010ADB00F70B13 /* YogaNames.swift in Sources */,
 				D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */,
 				56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */,
 				D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */,

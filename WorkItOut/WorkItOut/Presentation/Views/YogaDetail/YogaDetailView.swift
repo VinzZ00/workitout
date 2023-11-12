@@ -24,7 +24,7 @@ struct YogaDetailView: View {
         NavigationStack{
             VStack(alignment: .leading) {
                 if showHeader {
-                    Text(state.getTitle())
+                    Text(state.getTitle(yoga: yoga))
                         .font(.largeTitle)
                         .bold()
                     state.getDescription(yoga: yoga)
@@ -50,7 +50,7 @@ struct YogaDetailView: View {
                     
                 }
             }
-            .navigationTitle(showHeader ? "" : state.getTitle().stringValue())
+            .navigationTitle(showHeader ? "" : state.getTitle(yoga: yoga).stringValue())
             .navigationBarTitleDisplayMode(.inline)
             .padding()
             .animation(.default, value: state)
@@ -85,12 +85,12 @@ struct YogaDetailView: View {
             }
         }
         
-        func getTitle() -> LocalizedStringResource {
+        func getTitle(yoga: Yoga) -> LocalizedStringResource {
             switch self {
             case .relieveChoice:
                 return "What Are Your Current Conditions?"
             case .yogaPreview:
-                return "Balancing and Grounding"
+                return LocalizedStringResource(stringLiteral: yoga.name)
             }
         }
         

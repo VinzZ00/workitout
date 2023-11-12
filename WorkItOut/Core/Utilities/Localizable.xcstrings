@@ -244,6 +244,7 @@
       }
     },
     "Balancing and Grounding" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

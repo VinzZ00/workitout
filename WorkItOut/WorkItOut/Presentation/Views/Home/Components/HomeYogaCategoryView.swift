@@ -16,6 +16,8 @@ struct HomeYogaCategoryView: View {
             vm.selectedRelieve = relieve
         }, label: {
             Text(relieve.getString())
+                .bold(relieve == vm.selectedRelieve)
+                .frame(minWidth: 72)
                 .foregroundStyle(relieve == vm.selectedRelieve ? .purple : .black)
                 .padding(12)
                 .background(
@@ -24,6 +26,7 @@ struct HomeYogaCategoryView: View {
                         .stroke(relieve == vm.selectedRelieve ? Color.primary : .clear, lineWidth: 1)
                 )
                 .borderedCorner()
+                
         })
     }
 }

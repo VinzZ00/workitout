@@ -28,11 +28,15 @@ class HomeViewModel: ObservableObject {
     @Published var showHeader: Bool = true
     @Published var showProfile: Bool = false
     
+    @Published var handmadeYogaPlans: [Relieve : [YogaPlan]] = [:]
+    
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
         self.days = profile.daysAvailable
         self.yogaPlans = profile.plan
         self.profile = profile
+        
+        
     }
     
     func loadProfile(profile : Profile) async throws {
@@ -40,6 +44,13 @@ class HomeViewModel: ObservableObject {
         self.week = self.profile.currentPregnancyWeek
         self.days = self.profile.daysAvailable
         self.yogaPlans = self.profile.plan
+        
+        if !profile.plan.isEmpty {
+            self.initHandmadeYogaPlans()
+            print("handmade loaded")
+        }
+        
+        
         self.objectWillChange.send()
     }
     
@@ -118,6 +129,20 @@ class HomeViewModel: ObservableObject {
     func nextWeek() {
         if self.week < 36 {
             self.week += 1
+        }
+    }
+    
+    func initHandmadeYogaPlans() {
+        if self.handmadeYogaPlans.isEmpty {
+            for relieve in Relieve.allCases {
+                self.handmadeYogaPlans[relieve] = self.profile.plan
+                for i in 0..<Trimester.allCases.count {
+                    self.handmadeYogaPlans[relieve]?[i].name = YogaNames.yogaRelieveNames[relieve]?[i] ?? "Balancing and Grounding"
+                    for j in 0..<self.handmadeYogaPlans[relieve]![i].yogas.count {
+                        self.handmadeYogaPlans[relieve]?[i].yogas[j].name = YogaNames.yogaRelieveNames[relieve]?[i] ?? "Balancing and Grounding"
+                    }
+                }
+            }
         }
     }
 }
