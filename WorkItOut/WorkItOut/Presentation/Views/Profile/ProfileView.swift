@@ -20,14 +20,14 @@ struct ProfileView: View {
                 ScrollView(showsIndicators: false){
                     HStack{
                         Image(systemName: "info.circle.fill")
-                            .foregroundStyle(Color.neutral3)
                         Text("Your yoga plan will be updated when you save the changes of assessment")
-                            .foregroundStyle(Color.neutral3)
                     }
-                    .padding(.horizontal, 5)
-                    .padding(.vertical, 10)
+                    .foregroundStyle(Color.neutral3)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical)
                     .background(.ultraThinMaterial)
-                    .cornerRadius(8)
+                    .borderedCorner()
                     VStack(alignment: .leading){
                         Text("Pregnancy & Health Condition")
                             .foregroundStyle(.gray)
@@ -73,9 +73,10 @@ struct ProfileView: View {
                         } label: {
                             ZStack{
                                 Circle()
-                                    .tint(.grayBorder.opacity(0.15))
+                                    .tint(Color.neutral3.opacity(0.1))
                                     .frame(width: 40)
-                                Image(systemName: "multiply")
+                                Image(systemName: "xmark")
+                                    .foregroundStyle(Color.neutral3)
                                     .font(.system(size: 10))
                                     .bold()
                             }
@@ -93,13 +94,14 @@ struct ProfileView: View {
                             self.presentationMode.wrappedValue.dismiss()
                         } label: {
                             Text("Update")
-                                .foregroundStyle(vm.equalWithProfile() ? .grayBorder : Color(.orangePrimary))
-                                .padding(.horizontal, 10)
+                                .bold(!vm.equalWithProfile())
+                                .foregroundStyle(vm.equalWithProfile() ? Color.neutral3 : Color.primary)
+                                .padding(.horizontal, 12)
                                 .padding(.vertical, 8)
-                                .background(vm.equalWithProfile() ? .grayBorder.opacity(0.25) : .orangePrimary.opacity(0.25))
-                                .cornerRadius(8)
+                                .background(vm.equalWithProfile() ? Color.neutral3.opacity(0.1) : Color.primary.opacity(0.1))
+                                .cornerRadius(4)
                         }
-                        .padding(.top, 10)
+                        .padding(.top, 12)
                         .disabled(vm.equalWithProfile())
                     }
                 }

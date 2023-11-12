@@ -45,7 +45,7 @@ struct HomeCurrentYogaView: View {
                     .frame(width: 300)
                     .foregroundStyle(.white)
                     .padding()
-                    .background(.black.opacity(0.85))
+                    .background(.black.opacity(0.75).gradient)
                     .borderedCorner()
                 }
                 .borderedCorner()

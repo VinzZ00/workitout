@@ -58,6 +58,7 @@ struct HomeView: View {
                             }
                         }
                         .padding(.horizontal)
+                        .animation(.default, value: vm.week)
                     }
                     .animation(.default, value: vm.showHeader)
                 }
@@ -78,8 +79,9 @@ struct HomeView: View {
                                     HomeYogaCategoryView(relieve: relieve)
                                 }
                             }
-                            .scrollIndicators(.hidden)
+                            
                         }
+                        .scrollIndicators(.hidden)
                         VStack {
                             ForEach(Relieve.allCases, id: \.self) { relieve in
                                 VStack {

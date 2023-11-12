@@ -27,7 +27,7 @@ enum AssessmentState: Int, CaseIterable {
         
         switch self {
         case .chooseWeek:
-            title = "What weeks of pregnancy are you in?"
+            title = "Pregnancy Weeks"
             description = ""
         case .chooseExceptions:
             title = "Health conditions"

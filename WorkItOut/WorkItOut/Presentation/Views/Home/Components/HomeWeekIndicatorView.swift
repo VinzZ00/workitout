@@ -25,9 +25,12 @@ struct HomeWeekIndicatorView: View {
             Text("Week \(vm.week) - \(vm.month)")
                 .font(.title3)
                 .bold()
+                
             Text(vm.getTrimesterRoman())
                 .foregroundStyle(Color.neutral3)
         }
+        .frame(minWidth: 160)
+        .animation(.default, value: vm.week)
         Button(action: {
             vm.nextWeek()
 

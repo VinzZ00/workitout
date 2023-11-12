@@ -125,13 +125,13 @@ class HomeViewModel: ObservableObject {
     }
     
     func previousWeek() {
-        if self.week > 0 {
+        if self.week > 1 {
             self.week -= 1
         }
     }
     
     func nextWeek() {
-        if self.week < 36 {
+        if self.week < 32 {
             self.week += 1
         }
     }

@@ -31,9 +31,24 @@ struct YogaDetailView: View {
                 }
                 
                 if state == .relieveChoice {
-                    ScrollListenerViewBuilder(showContent: $showHeader) {
-                        RelieveAssesmentView()
+                    VStack {
+                        ScrollListenerViewBuilder(showContent: $showHeader) {
+                            RelieveAssesmentView()
+                                .padding(.vertical)
+                        }
+                        if showHeader {
+                            HStack{
+                                Image(systemName: "info.circle.fill")
+                                Text("You can skip this part if you feel no pain")
+                            }
+                            .foregroundStyle(Color.neutral3)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(.ultraThinMaterial)
+                            .borderedCorner()
+                        }
                     }
+                    
                 }
                 else {
                     ScrollListenerViewBuilder(showContent: $showHeader){
@@ -41,12 +56,6 @@ struct YogaDetailView: View {
                     }
                 }
                 
-                HStack{
-                    Image(systemName: "info.circle.fill")
-                        .foregroundStyle(Color.neutral3)
-                    Text("You can skip this part")
-                        .foregroundStyle(Color.neutral3)
-                }
                 ButtonComponent(title: state.rawValue) {
                     if state == .relieveChoice {
                         state = .yogaPreview
