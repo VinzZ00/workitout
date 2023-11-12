@@ -1,0 +1,1445 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "(Check all that apply)" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(Centang semua yang sesuai)"
+          }
+        }
+      }
+    },
+    "(Pick Three)" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(Pilih Tiga)"
+          }
+        }
+      }
+    },
+    "(You can skip this part)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(Anda dapat melewati bagian ini)"
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "%lld %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld %2$@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "%lld Exercise (%lld Min)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld Exercise (%2$lld Min)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld Latihan (%2$lld Min)"
+          }
+        }
+      }
+    },
+    "%lld Exercise (60 Min)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Latihan (60 Menit)"
+          }
+        }
+      }
+    },
+    "%lld min" : {
+
+    },
+    "%lld Min" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Menit"
+          }
+        }
+      }
+    },
+    "• Listen to your body and don't push yourself too hard.\n• Modify poses as needed to accommodate your growing belly.\n• Drink plenty of water before, during, and after your practice.\n• Wear comfortable clothing that allows you to move freely." : {
+
+    },
+    "6 Exercise (60 Min)" : {
+
+    },
+    "10 Minutes" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 Menit"
+          }
+        }
+      }
+    },
+    "20 Minutes" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20 Menit"
+          }
+        }
+      }
+    },
+    "30 Minutes" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 Menit"
+          }
+        }
+      }
+    },
+    "A little bit" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sedikit"
+          }
+        }
+      }
+    },
+    "Abdominal Surgery" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedah Perut"
+          }
+        }
+      }
+    },
+    "Advanced" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Afternoon" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sore"
+          }
+        }
+      }
+    },
+    "Agree and Continue" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setuju dan Lanjut"
+          }
+        }
+      }
+    },
+    "All" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semua"
+          }
+        }
+      }
+    },
+    "All Trimester" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semua Trimester"
+          }
+        }
+      }
+    },
+    "Ankle" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pergelangan kaki"
+          }
+        }
+      }
+    },
+    "Are you sure you want to exit this session?" : {
+
+    },
+    "Back" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punggung"
+          }
+        }
+      }
+    },
+    "Back to Home" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kembali ke Beranda"
+          }
+        }
+      }
+    },
+    "Balancing and Grounding" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penyeimbangan"
+          }
+        }
+      }
+    },
+    "Beginner" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemula"
+          }
+        }
+      }
+    },
+    "By continuing, I acknowledge that **I have consulted with my Doctor or healthcare provider** to ensure my pregnancy condition and my unique medical conditions and circumstances. My well-being and the safety of my baby are of the utmost importance.\n\n I consent to Mamaste **processing all data** I provide through this app, including sensitive data such as health information so that Mamaste can provide services to me." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dengan melanjutkan, saya mengakui bahwa **saya telah berkonsultasi dengan Dokter atau penyedia layanan kesehatan saya** untuk memastikan kondisi kehamilan saya dan kondisi serta keadaan medis unik saya. Kesejahteraan saya dan keselamatan bayi saya adalah yang paling penting.\n\nSaya mengizinkan Mamaste **memproses semua data** yang saya berikan melalui aplikasi ini, termasuk data sensitif seperti informasi kesehatan sehingga Mamaste dapat memberikan layanan kepada saya."
+          }
+        }
+      }
+    },
+    "Cancel" : {
+
+    },
+    "Cooling Down" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pendinginan"
+          }
+        }
+      }
+    },
+    "Creating Exercise Plan" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membuat rencana latihan"
+          }
+        }
+      }
+    },
+    "Curating best yoga poses for your pregnancy weeks" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memilih pose yoga terbaik untuk minggu-minggu kehamilan Anda"
+          }
+        }
+      }
+    },
+    "Current Date" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanggal Sekarang"
+          }
+        }
+      }
+    },
+    "Current Date:" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanggal Sekarang:"
+          }
+        }
+      }
+    },
+    "Diastatis Recti" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Discard Changes" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Perubahan"
+          }
+        }
+      }
+    },
+    "Do you have any health conditions that could affect your yoga?" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apakah Anda memiliki kondisi kesehatan yang dapat mempengaruhi yoga Anda?"
+          }
+        }
+      }
+    },
+    "Do you have any health conditions?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apakah Anda memiliki kondisi kesehatan tertentu?"
+          }
+        }
+      }
+    },
+    "Error" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "Evening" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siang"
+          }
+        }
+      }
+    },
+    "Exercise %lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Exercise %1$lld/%2$lld"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latihan %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "Exercise Completed" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latihan Selesai"
+          }
+        }
+      }
+    },
+    "Exercise that might help you" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latihan yang dapat membantu anda"
+          }
+        }
+      }
+    },
+    "Exit" : {
+
+    },
+    "Exit and Discard Changes" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keluar dan Hapus Perubahan"
+          }
+        }
+      }
+    },
+    "Finish" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
+          }
+        }
+      }
+    },
+    "First" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pertama"
+          }
+        }
+      }
+    },
+    "First Trimester" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trimester Pertama"
+          }
+        }
+      }
+    },
+    "Foot" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaki"
+          }
+        }
+      }
+    },
+    "Friday" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jumat"
+          }
+        }
+      }
+    },
+    "Get Started" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai"
+          }
+        }
+      }
+    },
+    "Glucoma" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glucoma"
+          }
+        }
+      }
+    },
+    "Got It" : {
+
+    },
+    "Have you ever done yoga before?" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apakah Anda pernah melakukan yoga sebelumnya?"
+          }
+        }
+      }
+    },
+    "Health conditions" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondisi Kesehatan"
+          }
+        }
+      }
+    },
+    "Hernia" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hernia"
+          }
+        }
+      }
+    },
+    "High Blood Pressure" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekanan Darah Tinggi"
+          }
+        }
+      }
+    },
+    "Hip" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinggang"
+          }
+        }
+      }
+    },
+    "Hip Openers" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pembuka Pinggang"
+          }
+        }
+      }
+    },
+    "History" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riwayat"
+          }
+        }
+      }
+    },
+    "How long does a typical exercise session fit into your schedule?" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berapa lama sesi olahraga yang sesuai dengan jadwal Anda?"
+          }
+        }
+      }
+    },
+    "How much time do you have to commit to yoga in a session?" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berapa banyak waktu yang Anda miliki untuk melakukan yoga dalam satu sesi?"
+          }
+        }
+      }
+    },
+    "I do yoga often" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saya sering melakukan yoga"
+          }
+        }
+      }
+    },
+    "Knee" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lutut"
+          }
+        }
+      }
+    },
+    "Lack of Flexibity" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurangnya Fleksibilitas"
+          }
+        }
+      }
+    },
+    "Leg" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaki"
+          }
+        }
+      }
+    },
+    "Looks like you have changes, Are you sure want to exit?" : {
+
+    },
+    "Looks like you have changes, Are you sure you want to exit?" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sepertinya Anda memiliki perubahan, Apakah Anda yakin ingin keluar?"
+          }
+        }
+      }
+    },
+    "Low Blood Pressuer" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekanan darah rendah"
+          }
+        }
+      }
+    },
+    "Monday" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senin"
+          }
+        }
+      }
+    },
+    "Morning" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pagi"
+          }
+        }
+      }
+    },
+    "My Assessment" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penilaian Saya"
+          }
+        }
+      }
+    },
+    "Neck" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leher"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selanjutnya"
+          }
+        }
+      }
+    },
+    "Next: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next: %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selanjutnya: %@"
+          }
+        }
+      }
+    },
+    "No History to show" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada Riwayat yang ditampilkan"
+          }
+        }
+      }
+    },
+    "No Plan yet" : {
+
+    },
+    "No Yoga History" : {
+
+    },
+    "None at all" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak sama sekali"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "On the days you're available, what times work best for you?" : {
+
+    },
+    "Orthopedic Issues" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masalah Ortopedi"
+          }
+        }
+      }
+    },
+    "Pelvic" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pelvic"
+          }
+        }
+      }
+    },
+    "Placeholder" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Play/Pause" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Please wait, we are crafting the best exercise plan for you" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mohon tunggu, kami sedang menyusun rencana latihan terbaik untuk Anda"
+          }
+        }
+      }
+    },
+    "Predicting best sessions for your schedules" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memprediksi sesi terbaik untuk jadwal Anda"
+          }
+        }
+      }
+    },
+    "Pregnancy & Health Condition" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondisi Kehamilan & Kesehatan"
+          }
+        }
+      }
+    },
+    "Preterm Labor" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preterm Labor"
+          }
+        }
+      }
+    },
+    "Safety first" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utamakan keselamatan\n"
+          }
+        }
+      }
+    },
+    "Saturday" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sabtu"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        }
+      }
+    },
+    "Save Profile Changes & Update Yoga Plan" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan Perubahan Profil & Perbaharui Plan Yoga"
+          }
+        }
+      }
+    },
+    "Seated Pose" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posisi Duduk"
+          }
+        }
+      }
+    },
+    "Second" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kedua"
+          }
+        }
+      }
+    },
+    "Second Trimester" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trimester Kedua"
+          }
+        }
+      }
+    },
+    "Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions." : {
+
+    },
+    "Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. " : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih kondisi fisik Anda di bawah ini, dan kami akan membantu Anda menemukan pose yoga yang sempurna untuk meningkatkan kondisi Anda. "
+          }
+        }
+      }
+    },
+    "Sorry, your Profile Change is not saved, Please recheck your profile" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maaf, Perubahan Profil Anda tidak tersimpan, Silakan periksa kembali profil Anda"
+          }
+        }
+      }
+    },
+    "Sorry, your Profile is not saved, Please resave your profile" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maaf, Profil Anda tidak tersimpan, Harap simpan ulang profil Anda"
+          }
+        }
+      }
+    },
+    "Sorry, your yoga poses change is not saved, Please recheck your yoga poses" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maaf, perubahan pose yoga Anda tidak tersimpan, Silakan periksa kembali pose yoga Anda"
+          }
+        }
+      }
+    },
+    "Standing Pose" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pose Berdiri"
+          }
+        }
+      }
+    },
+    "Start Exercise" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai Latihan"
+          }
+        }
+      }
+    },
+    "Start Now" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai"
+          }
+        }
+      }
+    },
+    "Sunday" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minggu"
+          }
+        }
+      }
+    },
+    "Take a break, Enjoy Your day!" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Istirahatlah, Nikmati hari Anda!"
+          }
+        }
+      }
+    },
+    "Taking into account your health conditions" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mempertimbangkan kondisi kesehatan Anda"
+          }
+        }
+      }
+    },
+    "Third" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketiga"
+          }
+        }
+      }
+    },
+    "Third Trimester" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trimester Ketiga"
+          }
+        }
+      }
+    },
+    "This session will not be saved" : {
+
+    },
+    "Thursday" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamis"
+          }
+        }
+      }
+    },
+    "Time Reminder" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengingat Waktu"
+          }
+        }
+      }
+    },
+    "Tips for Pregnancy Exercise" : {
+
+    },
+    "Tuesday" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selasa"
+          }
+        }
+      }
+    },
+    "Update" : {
+
+    },
+    "Vertigo" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertigo"
+          }
+        }
+      }
+    },
+    "Warm Up" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemanasan"
+          }
+        }
+      }
+    },
+    "Wednesday" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rabu"
+          }
+        }
+      }
+    },
+    "Week %lld" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minggu %lld"
+          }
+        }
+      }
+    },
+    "Week %lld - %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Week %1$lld - %2$@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minggu %1$lld - %2$@"
+          }
+        }
+      }
+    },
+    "Week Picker" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Weekly Schedule" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jadwal Mingguan"
+          }
+        }
+      }
+    },
+    "Welcome to Mamaste" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selamat Datang di Mamaste"
+          }
+        }
+      }
+    },
+    "What Are Your Current Conditions?" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagaimana Kondisi Anda Saat Ini?"
+          }
+        }
+      }
+    },
+    "What availability day to commit to yoga each week?" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hari apa yang tersedia untuk melakukan yoga setiap minggunya?"
+          }
+        }
+      }
+    },
+    "What weeks of pregnancy are you in?" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berapa minggu kehamilan Anda sekarang?"
+          }
+        }
+      }
+    },
+    "When do you want to be reminded to do yoga?" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapan Anda ingin diingatkan untuk melakukan yoga?"
+          }
+        }
+      }
+    },
+    "Which days of the week are you available for exercise? " : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hari apa saja dalam seminggu yang tersedia untuk berolahraga? "
+          }
+        }
+      }
+    },
+    "Workout Date" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanggal Latihan"
+          }
+        }
+      }
+    },
+    "Workout Date:" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanggal Latihan:"
+          }
+        }
+      }
+    },
+    "Workout Plan for Beginner" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rencana Latihan untuk Pemula"
+          }
+        }
+      }
+    },
+    "Workout Plan for Beginner - New Beginnings" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rencana Latihan untuk Pemula - Awal yang Baru"
+          }
+        }
+      }
+    },
+    "Yeayy, you made it! You have completed today yoga." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeayy, Anda berhasil! Anda telah menyelesaikan yoga hari ini."
+          }
+        }
+      }
+    },
+    "Yoga Duration in a Session" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durasi yoga pada setiap sesi"
+          }
+        }
+      }
+    },
+    "Yoga Experience" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengalaman Yoga"
+          }
+        }
+      }
+    },
+    "Yoga Plan" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "You are in week %lld of pregnancy, so we are giving you the %@ trimester yoga plan!" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You are in week %1$lld of pregnancy, so we are giving you the %2$@ trimester yoga plan!"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamu berada pada minggu ke %1$lld dari kehamilan, oleh karena itu kami memberikan yoga plan untuk trimester ke %2$@!"
+          }
+        }
+      }
+    },
+    "You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!" : {
+
+    },
+    "You can skip this part" : {
+
+    },
+    "Your current and next yoga plan will be updated with your new data." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan yoga Anda saat ini dan berikutnya akan diperbarui dengan data baru Anda."
+          }
+        }
+      }
+    },
+    "Your personalized yoga guide for a healthy pregnancy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panduan yoga pribadi Anda untuk kehamilan yang sehat"
+          }
+        }
+      }
+    },
+    "Your yoga plan will be updated when you save the changes of assessment" : {
+
+    },
+    "Your yoga session will be recorded here" : {
+
+    }
+  },
+  "version" : "1.0"
+}

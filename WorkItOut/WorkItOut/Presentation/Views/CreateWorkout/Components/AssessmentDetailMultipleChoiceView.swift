@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
-    var title : String
-    var explanation: String = "(Check all that apply)"
+    var title : LocalizedStringResource
+    var explanation: LocalizedStringResource = "(Check all that apply)"
     @Binding var selectedItems : [E]
     @State var selections : [E]
     
@@ -54,7 +54,7 @@ struct AssessmentDetailMultipleChoiceView<E: UserPreference>: View {
                         .fill(self.selectedItems.contains(selection.wrappedValue) ? Color.primary.opacity(0.25) : .clear)
                         .stroke(self.selectedItems.contains(selection.wrappedValue) ? Color.primary : Color.neutral6, lineWidth: 1)
                     )
-                    .padding(.vertical, 3)
+                    .padding(4)
                 }
 
             }

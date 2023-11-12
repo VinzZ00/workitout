@@ -11,7 +11,8 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
-    @Binding var hasNoProfile : Bool
+
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationStack {
@@ -52,14 +53,17 @@ struct AssessmentView: View {
                 }
             })
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView(hasNoProfile: $hasNoProfile)
+                GeneratePlanView()
                     .environmentObject(avm)
             }
             .toolbar {
                 if avm.state != .complete {
-                    if avm.state != .chooseWeek {
-                        ToolbarItem(placement: .topBarLeading) {
-                            IconButtonComponent(icon: "chevron.left") {
+                    ToolbarItem(placement: .topBarLeading) {
+                        IconButtonComponent(icon: "chevron.left") {
+                            if avm.state == .chooseWeek {
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
+                            else {
                                 avm.previousState()
                             }
                         }
@@ -70,6 +74,8 @@ struct AssessmentView: View {
                 }
                 
             }
+            .navigationBarBackButtonHidden()
+            .navigationBarTitleDisplayMode(.inline)
         }
         
         
@@ -78,5 +84,5 @@ struct AssessmentView: View {
 }
 
 #Preview {
-    AssessmentView(hasNoProfile: .constant(false))
+    AssessmentView()
 }

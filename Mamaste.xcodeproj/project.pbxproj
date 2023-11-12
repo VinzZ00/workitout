@@ -33,6 +33,9 @@
 		6C7B2C4B2AEF6FAF00E0DADF /* YogaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C4A2AEF6FAF00E0DADF /* YogaCardView.swift */; };
 		6C7B2C4D2AEF726A00E0DADF /* GeneratePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C4C2AEF726A00E0DADF /* GeneratePlanView.swift */; };
 		6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B2C502AEF74D500E0DADF /* HomeView.swift */; };
+		6C85C0782B0154220076B057 /* UserConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C0762B0154220076B057 /* UserConsentView.swift */; };
+		6C85C0792B0154220076B057 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C0772B0154220076B057 /* OnboardingView.swift */; };
+		6C85C07B2B0157A80076B057 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6C85C07A2B0157A80076B057 /* Localizable.xcstrings */; };
 		6C8D5CFC2AE660B200A2986D /* YogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */; };
 		6C8D5D112AE6618E00A2986D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0D2AE6618E00A2986D /* Day.swift */; };
 		6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */; };
@@ -161,6 +164,9 @@
 		6C7B2C4A2AEF6FAF00E0DADF /* YogaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaCardView.swift; sourceTree = "<group>"; };
 		6C7B2C4C2AEF726A00E0DADF /* GeneratePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePlanView.swift; sourceTree = "<group>"; };
 		6C7B2C502AEF74D500E0DADF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6C85C0762B0154220076B057 /* UserConsentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConsentView.swift; sourceTree = "<group>"; };
+		6C85C0772B0154220076B057 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		6C85C07A2B0157A80076B057 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPlan.swift; sourceTree = "<group>"; };
 		6C8D5D0D2AE6618E00A2986D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutState.swift; sourceTree = "<group>"; };
@@ -654,6 +660,7 @@
 		ACFED3822AE2B5C20018CD03 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6C85C07A2B0157A80076B057 /* Localizable.xcstrings */,
 				D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */,
 				D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */,
 				ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */,
@@ -750,6 +757,8 @@
 				D8BC2BE92AE8025900E61487 /* Components */,
 				D8BC2BE62AE8003000E61487 /* AssessmentView.swift */,
 				D8FBED552AE918200062CC00 /* CompleteView.swift */,
+				6C85C0772B0154220076B057 /* OnboardingView.swift */,
+				6C85C0762B0154220076B057 /* UserConsentView.swift */,
 			);
 			path = CreateWorkout;
 			sourceTree = "<group>";
@@ -946,6 +955,7 @@
 			files = (
 				D862DB6E2AE28E5C0014F2FC /* Preview Assets.xcassets in Resources */,
 				D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */,
+				6C85C07B2B0157A80076B057 /* Localizable.xcstrings in Resources */,
 				D8207AEC2AF0B61D005DBD3C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,6 +982,7 @@
 				6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
+				6C85C0782B0154220076B057 /* UserConsentView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
@@ -1009,6 +1020,7 @@
 				D8FD5D6B2AF3576D005F8D4E /* HistoryCard.swift in Sources */,
 				6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
+				6C85C0792B0154220076B057 /* OnboardingView.swift in Sources */,
 				D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */,
 				AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */,
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
@@ -1262,7 +1274,6 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "Mamaste wants to access your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1298,7 +1309,6 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "Mamaste wants to access your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

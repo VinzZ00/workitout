@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AssessmentDetailView<E: UserPreference>: View {
-    var title : String
+    var title : LocalizedStringResource
     @Binding var selection : E
     @State var selections : [E]
     
@@ -30,7 +30,7 @@ struct AssessmentDetailView<E: UserPreference>: View {
                         .stroke(selection == self.selection ? Color.primary : Color.neutral6, lineWidth: 1)
                     )
                 })
-                .padding(.vertical, 3)
+                .padding(4)
             }
         }
     }
