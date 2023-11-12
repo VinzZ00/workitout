@@ -42,6 +42,8 @@ struct ExecutionView: View {
                     HStack (spacing: 20){
                         Text("Exercise \(vm.index + 1)/\(vm.poses.count)")
                             .font(.system(size: 14))
+                            .animation(.default, value: vm.index)
+                            .contentTransition(.numericText(value: Double(vm.index)))
                         Button{
                             
                         }label: {
@@ -75,7 +77,6 @@ struct ExecutionView: View {
                     Text("\(vm.poses[vm.index].name)")
                             .font(.title)
                             .bold()
-                        
                     if !(vm.index + 1 == vm.poses.count) {
                         Text("Next: \(vm.poses[vm.index+1].name)")
                             .foregroundStyle(Color.gray)
@@ -83,6 +84,10 @@ struct ExecutionView: View {
                     }
                 }
                 .padding()
+//                .animation(.easeIn, value: vm.index)
+                
+//                .transition(.opacity.combined(with: .move(edge: .bottom)))
+                
                 if textSwitch == false {
                     Text("Get Started")
                         .font(.system(size: 48))
@@ -99,8 +104,11 @@ struct ExecutionView: View {
                             .font(.system(size: 60))
                             .bold()
                             .onReceive(timerVm.timer){ _ in
-                                timerVm.updateCurrentTime()
+                                withAnimation {
+                                    timerVm.updateCurrentTime()
+                                }
                             }
+                            .contentTransition(.numericText(value: timerVm.timeRemaining))
                         ZStack(alignment: .leading) {
                           Rectangle()
                             .frame(width: 300, height: 20)
@@ -154,25 +162,33 @@ struct ExecutionView: View {
                         }
                         
                     }label: {
-                        if timerVm.isTimerPaused == false{
-                            ZStack{
-                                Circle()
-                                    .frame(width: 68, height: 68)
-                                    .foregroundColor(.primary)
-                                Image("tabler-icon-player-pause")
-                                    .resizable()
-                                    .frame(width: 24, height: 28)
-                            }
-                        }else {
-                            ZStack{
-                                Circle()
-                                    .frame(width: 68, height: 68)
-                                    .foregroundColor(.primary)
-                                Image("tabler-icon-player-play")
-                                    .resizable()
-                                    .frame(width: 22.75, height: 28)
-                            }
-                        }
+                        Image(systemName: timerVm.isTimerPaused ? "play.fill" : "pause.fill")
+                            .font(.largeTitle)
+                            .foregroundStyle(Color.white)
+                            .padding()
+                            .background(Color.primary)
+                            .clipShape(.circle)
+                            .animation(.default, value: timerVm.isTimerPaused)
+                            .contentTransition(.symbolEffect(.automatic))
+//                        if timerVm.isTimerPaused == false{
+//                            ZStack{
+//                                Circle()
+//                                    .frame(width: 68, height: 68)
+//                                    .foregroundColor(.primary)
+//                                Image("tabler-icon-player-pause")
+//                                    .resizable()
+//                                    .frame(width: 24, height: 28)
+//                            }
+//                        }else {
+//                            ZStack{
+//                                Circle()
+//                                    .frame(width: 68, height: 68)
+//                                    .foregroundColor(.primary)
+//                                Image("tabler-icon-player-play")
+//                                    .resizable()
+//                                    .frame(width: 22.75, height: 28)
+//                            }
+//                        }
                     }
                     .padding(.horizontal, 50)
                     Button{
@@ -185,6 +201,7 @@ struct ExecutionView: View {
                             Circle()
                                 .stroke(Color.neutral6)
                                 .frame(width: 44, height: 44)
+                                
                             Image("tabler-icon-player-skip-forward")
                                 .resizable()
                                 .frame(width: 20, height: 20)
