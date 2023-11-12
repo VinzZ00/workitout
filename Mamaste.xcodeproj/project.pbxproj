@@ -217,6 +217,7 @@
 		D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8207AED2AF0C50A005DBD3C /* SpineMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineMovement.swift; sourceTree = "<group>"; };
 		D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestYogaPose.swift; sourceTree = "<group>"; };
+		D82951592B00D51800F3425B /* Mamaste-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mamaste-Info.plist"; sourceTree = "<group>"; };
 		D836D93B2AF499DA00260299 /* PoseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCard.swift; sourceTree = "<group>"; };
 		D84CEC0E2AF4C76E008BEC1C /* HistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTests.swift; sourceTree = "<group>"; };
 		D84CEC102AF4DF69008BEC1C /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -707,6 +708,7 @@
 		D862DB5A2AE28E5A0014F2FC = {
 			isa = PBXGroup;
 			children = (
+				D82951592B00D51800F3425B /* Mamaste-Info.plist */,
 				D862DB652AE28E5A0014F2FC /* WorkItOut */,
 				ACD49E8B2AF0069900793872 /* WorkItOutTests */,
 				D862DB642AE28E5A0014F2FC /* Products */,
@@ -1254,7 +1256,9 @@
 				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_FILE = "Mamaste-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Mamaste;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Mamaste wants to access your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1288,7 +1292,9 @@
 				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_FILE = "Mamaste-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Mamaste;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Mamaste wants to access your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
