@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D862DB622AE28E5A0014F2FC"
-               BuildableName = "WorkItOut.app"
-               BlueprintName = "WorkItOut"
-               ReferencedContainer = "container:WorkItOut.xcodeproj">
+               BuildableName = "Mamaste.app"
+               BlueprintName = "Mamaste"
+               ReferencedContainer = "container:Mamaste.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ACD49E892AF0069900793872"
-               BuildableName = "WorkItOutTests.xctest"
-               BlueprintName = "WorkItOutTests"
-               ReferencedContainer = "container:WorkItOut.xcodeproj">
+               BuildableName = "MamasteTests.xctest"
+               BlueprintName = "MamasteTests"
+               ReferencedContainer = "container:Mamaste.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D862DB622AE28E5A0014F2FC"
-            BuildableName = "WorkItOut.app"
-            BlueprintName = "WorkItOut"
-            ReferencedContainer = "container:WorkItOut.xcodeproj">
+            BuildableName = "Mamaste.app"
+            BlueprintName = "Mamaste"
+            ReferencedContainer = "container:Mamaste.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D862DB622AE28E5A0014F2FC"
-            BuildableName = "WorkItOut.app"
-            BlueprintName = "WorkItOut"
-            ReferencedContainer = "container:WorkItOut.xcodeproj">
+            BuildableName = "Mamaste.app"
+            BlueprintName = "Mamaste"
+            ReferencedContainer = "container:Mamaste.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
