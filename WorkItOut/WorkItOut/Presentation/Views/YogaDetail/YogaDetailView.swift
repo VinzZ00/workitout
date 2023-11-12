@@ -31,7 +31,7 @@ struct YogaDetailView: View {
                 }
                 
                 if state == .relieveChoice {
-                    ScrollView{
+                    ScrollListenerViewBuilder(showContent: $showHeader) {
                         RelieveAssesmentView()
                     }
                 }

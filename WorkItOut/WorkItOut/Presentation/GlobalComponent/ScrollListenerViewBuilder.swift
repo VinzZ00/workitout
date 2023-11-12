@@ -28,7 +28,7 @@ struct ScrollListenerViewBuilder<Content: View>: View {
                     })
                     .onPreferenceChange(ViewOffsetKey.self) {
 //                        print("offset >> \($0)")
-                        if $0 > 100 {
+                        if $0 > 25 {
                             showContent = false
                         }
                         else {
