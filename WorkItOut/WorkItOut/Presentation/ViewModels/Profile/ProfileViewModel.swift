@@ -27,6 +27,9 @@ class ProfileViewModel : ObservableObject {
     @Published var showAlert = false
     var updateCoreData : UpdateProfileUseCase = UpdateProfileUseCase()
     
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    @Published var timeRemaining: Double = 2
+    
     init(profile : Profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .leg], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .tenMinutes, plan: [], histories: [])){
         // MARK: change to load profile from coredata
         self.profile = profile
@@ -137,5 +140,22 @@ class ProfileViewModel : ObservableObject {
         profile.preferredDuration == preferredDuration &&
         profile.fitnessLevel == fitnessLevel &&
         profile.currentRelieveNeeded == relieves
+    }
+    
+    func checkTimer(load: Bool) -> Bool {
+        if load {
+            if timeRemaining > 0 {
+                timeRemaining -= 0.5
+                return false
+            }
+            else {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func resetTimer() {
+        self.timeRemaining = 2
     }
 }

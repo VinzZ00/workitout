@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct CompleteView: View {
+    var title: LocalizedStringResource = "Creating Exercise Plan"
+    var desc: LocalizedStringResource = "Please wait, we are crafting the best exercise plan for you"
     var counter: Double = 0.75
+    var showBackground: Bool = true
     
     var body: some View {
         let strings: [Double : LocalizedStringResource] = [
@@ -18,14 +21,16 @@ struct CompleteView: View {
         ]
         
         ZStack {
-            VStack {
-                Image("AssesmentBackground")
-                Spacer()
+            if showBackground {
+                VStack {
+                    Image("AssesmentBackground")
+                    Spacer()
+                }
             }
             VStack {
-                Text("Creating Exercise Plan")
+                Text(title)
                     .font(.title.bold())
-                Text("Please wait, we are crafting the best exercise plan for you")
+                Text(desc)
                     .frame(width: 240)
                     .multilineTextAlignment(.center)
                 LoadingCircle()

@@ -841,6 +841,9 @@
         }
       }
     },
+    "Please Wait, we are generating the best yoga plan for you" : {
+
+    },
     "Predicting best sessions for your schedules" : {
       "localizations" : {
         "id" : {
@@ -1103,6 +1106,9 @@
       }
     },
     "Update" : {
+
+    },
+    "Update Yoga Plan" : {
 
     },
     "Vertigo" : {

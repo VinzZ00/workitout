@@ -14,6 +14,9 @@ struct ProfileView: View {
     
     @EnvironmentObject var dm: DataManager
     @State var alert : Bool = false;
+    
+    @State var load: Bool = false
+    
     var body: some View {
         ZStack{
             VStack{
@@ -84,14 +87,8 @@ struct ProfileView: View {
                     }
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            Task{
-                                dm.pm.addPosetoPoses()
-                                vm.setProfile()
-                                await dm.setUpProfile(moc: moc, profile: vm.profile)
-                                vm.profile = dm.profile!
-                                await vm.saveProfile(moc: moc)
-                            }
-                            self.presentationMode.wrappedValue.dismiss()
+                            load = true
+                            
                         } label: {
                             Text("Update")
                                 .bold(!vm.equalWithProfile())
@@ -117,6 +114,22 @@ struct ProfileView: View {
                         .environmentObject(vm)
                         .presentationDragIndicator(.hidden)
                         .padding(.top, 24)
+                })
+                .navigationDestination(isPresented: $load, destination: {
+                    CompleteView(title: "Update Yoga Plan", desc: "Please Wait, we are generating the best yoga plan for you", counter: vm.timeRemaining, showBackground: false)
+                        .navigationBarBackButtonHidden()
+                })
+                .onReceive(vm.timer, perform: { _ in
+                    if vm.checkTimer(load: load) {
+                        Task{
+                            dm.pm.addPosetoPoses()
+                            vm.setProfile()
+                            await dm.setUpProfile(moc: moc, profile: vm.profile)
+                            vm.profile = dm.profile!
+                            await vm.saveProfile(moc: moc)
+                        }
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
                 })
                 
                 .padding(.horizontal, 20)
