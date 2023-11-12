@@ -17,6 +17,9 @@ struct ContentView: View {
     @State var alert = false
     var body: some View {
         ZStack{
+            if dm.hasNoProfile {
+                OnboardingView()
+            }
             if isLoading {
                 EmptyView()
             }
@@ -26,13 +29,6 @@ struct ContentView: View {
                         .environmentObject(dm);
                 }
             }
-        }
-        .fullScreenCover(isPresented: $dm.hasNoProfile) {
-            OnboardingView()
-        }
-        .transaction { transaction in
-            transaction.disablesAnimations = true
-            transaction.animation = .linear(duration: 0.5)
         }
         .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
             if valueIsTrue {
