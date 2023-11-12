@@ -104,6 +104,7 @@ struct PoseManager {
                     (poses.count > newPoses.count) &&
                     !(poses.contains(newPoses)) {
                     newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
+                    i += 1
                     if i == 100 {
                         print("loop")
                         break

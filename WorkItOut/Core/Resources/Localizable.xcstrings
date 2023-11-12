@@ -94,6 +94,7 @@
       }
     },
     "%lld Exercise (60 Min)" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

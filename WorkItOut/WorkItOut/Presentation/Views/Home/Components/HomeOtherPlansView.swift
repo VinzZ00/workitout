@@ -26,7 +26,9 @@ struct HomeOtherPlansView: View {
                         .font(.title3)
                         .bold()
                     Spacer()
-                    Text("\(yogaPlan.yogas.count) Exercise (60 Min)")
+                    Text("\(yogaPlan.yogas[0].poses.count) Exercise (\(yogaPlan.yogas[0].totalDurationMinute()) Min)")
+                        .font(.callout)
+                        .foregroundStyle(Color.neutral3)
                 }
                 Spacer()
             }

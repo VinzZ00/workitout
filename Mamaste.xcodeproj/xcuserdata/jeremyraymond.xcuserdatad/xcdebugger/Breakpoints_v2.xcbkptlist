@@ -103,7 +103,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B90DCAC8-855C-4C61-BE88-8DF04D284A45"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/Core/Data/Entities/YogaPlan.swift"
@@ -111,7 +111,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "intoNSObject(context:parentProfileNSObject:)"
+            landmarkName = "init(id:name:trimester:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -119,7 +119,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "764CA924-4FF2-4645-B799-85B0F6BBECF6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/Core/Data/Entities/Helper.swift"
@@ -151,7 +151,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"
@@ -206,6 +206,159 @@
                   startingLineNumber = "0"
                   endingLineNumber = "0"
                   offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0 - 6d81c65972edfe36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Mamaste.ProfileView.alert : Swift.Bool"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0 - d8f387154880955c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mamaste.ProfileView.alert.getter : Swift.Bool"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0 - 806fdf49b572f378"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mamaste.ProfileView.alert.setter : Swift.Bool"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0 - a65d99d12ce3116f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mamaste.ProfileView.alert.modify : Swift.Bool"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0 - a8fd9c5c074a6d4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mamaste.ProfileView.alert.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0 - e4d26601536e5fb0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mamaste.ProfileView.$alert.getter : SwiftUI.Binding&lt;Swift.Bool&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "9F76710B-6E36-4771-ADD7-46C242E648C0 - 3fcd4203563da6a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 4 of Mamaste.ProfileView.init(presentationMode: SwiftUI.Environment&lt;SwiftUI.Binding&lt;SwiftUI.PresentationMode&gt;&gt;, moc: SwiftUI.Environment&lt;__C.NSManagedObjectContext&gt;, vm: @autoclosure () -&gt; Mamaste.ProfileViewModel, dm: SwiftUI.EnvironmentObject&lt;Mamaste.DataManager&gt;, alert: Swift.Bool, load: Swift.Bool) -&gt; Mamaste.ProfileView"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/WorkItOut/Presentation/Views/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A848AEA7-B0D1-4598-83F3-30705B2085D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/Core/Utilities/PoseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "createPoses(poses:duration:exceptions:relieves:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A848AEA7-B0D1-4598-83F3-30705B2085D5 - 87a72176d11c8c95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Mamaste.PoseManager.createPoses(poses: Swift.Array&lt;Mamaste.Pose&gt;, duration: Mamaste.Duration, exceptions: Swift.Array&lt;Mamaste.Exception&gt;, relieves: Swift.Array&lt;Mamaste.Relieve&gt;) -&gt; Swift.Array&lt;Mamaste.Pose&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/Core/Utilities/PoseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "1832">
+               </Location>
+               <Location
+                  uuid = "A848AEA7-B0D1-4598-83F3-30705B2085D5 - 87a72176d11c8c53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Mamaste.PoseManager.createPoses(poses: Swift.Array&lt;Mamaste.Pose&gt;, duration: Mamaste.Duration, exceptions: Swift.Array&lt;Mamaste.Exception&gt;, relieves: Swift.Array&lt;Mamaste.Relieve&gt;) -&gt; Swift.Array&lt;Mamaste.Pose&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/Core/Utilities/PoseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "1944">
                </Location>
             </Locations>
          </BreakpointContent>
