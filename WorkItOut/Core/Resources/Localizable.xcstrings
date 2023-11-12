@@ -105,7 +105,14 @@
       }
     },
     "%lld min" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld menit"
+          }
+        }
+      }
     },
     "%lld Min" : {
       "localizations" : {
@@ -118,7 +125,14 @@
       }
     },
     "• Listen to your body and don't push yourself too hard.\n• Modify poses as needed to accommodate your growing belly.\n• Drink plenty of water before, during, and after your practice.\n• Wear comfortable clothing that allows you to move freely." : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- Dengarkan tubuh Anda dan jangan memaksakan diri Anda terlalu keras.\n- Modifikasi pose sesuai kebutuhan untuk mengakomodasi perut Anda yang semakin membesar.\n- Minumlah banyak air sebelum, selama, dan setelah latihan.\n- Kenakan pakaian yang nyaman yang memungkinkan Anda bergerak bebas."
+          }
+        }
+      }
     },
     "10 Minutes" : {
       "localizations" : {
@@ -231,7 +245,14 @@
       }
     },
     "Are you sure you want to exit this session?" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apakah anda yakin ingin keluar dari sesi ini?"
+          }
+        }
+      }
     },
     "Back" : {
       "localizations" : {
@@ -285,7 +306,14 @@
       }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batalkan"
+          }
+        }
+      }
     },
     "Cooling Down" : {
       "localizations" : {
@@ -435,7 +463,14 @@
       }
     },
     "Exit" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keluar"
+          }
+        }
+      }
     },
     "Exit and Discard Changes" : {
       "extractionState" : "stale",
@@ -520,7 +555,14 @@
       }
     },
     "Got It" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dimengerti"
+          }
+        }
+      }
     },
     "Have you ever done yoga before?" : {
       "localizations" : {
@@ -623,7 +665,14 @@
       }
     },
     "Intermidiate" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : ""
+          }
+        }
+      }
     },
     "Knee" : {
       "localizations" : {
@@ -656,7 +705,14 @@
       }
     },
     "Looks like you have changes, Are you sure want to exit?" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sepertinya anda memiliki perubahan, apakah anda yakin ingin keluar?"
+          }
+        }
+      }
     },
     "Looks like you have changes, Are you sure you want to exit?" : {
       "extractionState" : "stale",
@@ -700,7 +756,14 @@
       }
     },
     "Multiples" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "My Assessment" : {
       "localizations" : {
@@ -766,10 +829,24 @@
       }
     },
     "No Plan yet" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum ada Plan"
+          }
+        }
+      }
     },
     "No Yoga History" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada Riwayat Yoga"
+          }
+        }
+      }
     },
     "None at all" : {
       "localizations" : {
@@ -843,7 +920,14 @@
       }
     },
     "Please Wait, we are generating the best yoga plan for you" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mohon tunggu, kami sedang menciptakan yoga plan terbaik untuk Anda"
+          }
+        }
+      }
     },
     "Predicting best sessions for your schedules" : {
       "localizations" : {
@@ -866,7 +950,14 @@
       }
     },
     "Pregnancy Weeks" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minggu Kehamilan"
+          }
+        }
+      }
     },
     "Preterm Labor" : {
       "localizations" : {
@@ -1071,7 +1162,14 @@
       }
     },
     "This session will not be saved" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sesi ini tidak akan disimpan"
+          }
+        }
+      }
     },
     "Thursday" : {
       "localizations" : {
@@ -1094,7 +1192,14 @@
       }
     },
     "Tips for Pregnancy Exercise" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tips untuk olahraga kehamilan"
+          }
+        }
+      }
     },
     "Tuesday" : {
       "localizations" : {
@@ -1107,10 +1212,24 @@
       }
     },
     "Update" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perbaharui"
+          }
+        }
+      }
     },
     "Update Yoga Plan" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perbahurui Plan Yoga"
+          }
+        }
+      }
     },
     "Vertigo" : {
       "localizations" : {
@@ -1323,8 +1442,8 @@
       "localizations" : {
         "id" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Plan Yoga"
           }
         }
       }
@@ -1346,7 +1465,14 @@
       }
     },
     "You can skip this part if you feel no pain" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anda bisa melewati bagian ini"
+          }
+        }
+      }
     },
     "Your current and next yoga plan will be updated with your new data." : {
       "extractionState" : "stale",
@@ -1371,10 +1497,24 @@
       }
     },
     "Your yoga plan will be updated when you save the changes of assessment" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yoga Plan anda akan diperbaharui ketika anda menyimpan perubahan tersebut"
+          }
+        }
+      }
     },
     "Your yoga session will be recorded here" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sesi yoga anda akan disimpan disini"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
