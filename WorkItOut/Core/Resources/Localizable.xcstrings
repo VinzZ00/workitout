@@ -313,7 +313,6 @@
       }
     },
     "Curating best yoga poses for your pregnancy weeks" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -798,9 +797,6 @@
         }
       }
     },
-    "On the days you're available, what times work best for you?" : {
-
-    },
     "Orthopedic Issues" : {
       "localizations" : {
         "id" : {
@@ -853,7 +849,6 @@
       }
     },
     "Predicting best sessions for your schedules" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1052,7 +1047,6 @@
       }
     },
     "Taking into account your health conditions" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1340,7 +1334,6 @@
       }
     },
     "You are in week %lld of pregnancy, so we are giving you the %@ trimester yoga plan!" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1355,9 +1348,6 @@
           }
         }
       }
-    },
-    "You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!" : {
-
     },
     "You can skip this part" : {
 

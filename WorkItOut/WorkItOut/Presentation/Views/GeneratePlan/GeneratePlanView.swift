@@ -47,7 +47,7 @@ struct GeneratePlanView: View {
             }
             .animation(.default, value: vm.showHeader)
             .navigationBarBackButtonHidden()
-            .navigationTitle(vm.showHeader ? "" : "Workout Plan for Beginner")
+            .navigationTitle(vm.showHeader ? "" : String(localized: "Workout Plan for Beginner"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -64,14 +64,6 @@ struct GeneratePlanView: View {
                 }
             })
             
-        }
-    }
-    
-    struct ViewOffsetKey: PreferenceKey {
-        typealias Value = CGFloat
-        static var defaultValue = CGFloat.zero
-        static func reduce(value: inout Value, nextValue: () -> Value) {
-            value += nextValue()
         }
     }
 }

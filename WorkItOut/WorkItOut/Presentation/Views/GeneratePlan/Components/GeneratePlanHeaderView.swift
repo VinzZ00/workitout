@@ -29,7 +29,7 @@ struct GeneratePlanHeaderView: View {
                         Text("Workout Plan for Beginner - New Beginnings")
                             .font(.largeTitle)
                             .bold()
-                        Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
+                        Text("You are in week \(dm.profile!.currentPregnancyWeek) of pregnancy, so we are giving you the \(dm.profile!.trimester.getLocalizedString()) trimester yoga plan!")
                     }
                     .padding(.horizontal)
                         

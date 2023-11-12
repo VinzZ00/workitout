@@ -21,15 +21,15 @@ struct AssessmentView: View {
                     case .chooseWeek:
                         AssesmentWeekView(week: $avm.currentWeek)
                     case .chooseExceptions:
-                        AssessmentDetailMultipleChoiceView(title: "Do you have any health conditions?", selectedItems: $avm.exceptions, selections: Exception.allCases)
+                        AssessmentDetailMultipleChoiceView(title: avm.state.getLocalizedString().title, selectedItems: $avm.exceptions, selections: Exception.allCases)
                     case .chooseDay:
-                        AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $avm.days, selections: Day.allCases, limit: 3)
+                        AssessmentDetailMultipleChoiceView(title: avm.state.getLocalizedString().title, explanation: "(Pick Three)", selectedItems: $avm.days, selections: Day.allCases, limit: 3)
                     case .chooseDuration:
-                        AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $avm.durationExercise, selections: Duration.allCases)
+                        AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.durationExercise, selections: Duration.allCases)
                     case .chooseExperience:
-                        AssessmentDetailView(title: "Have you ever done yoga before?", selection: $avm.experience, selections: Difficulty.allCases)
+                        AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.experience, selections: Difficulty.allCases)
                     case .chooseTime:
-                        AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeOfDay.allCases)
+                        AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.timeClock, selections: TimeOfDay.allCases)
                     case .complete:
                         CompleteView(counter: avm.timeRemaining)
                 }

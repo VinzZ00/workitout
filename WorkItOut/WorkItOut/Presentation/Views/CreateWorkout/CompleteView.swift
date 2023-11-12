@@ -9,13 +9,14 @@ import SwiftUI
 
 struct CompleteView: View {
     var counter: Double = 0.75
-    var strings: [Double : String] = [
-        1.5 : "Curating best yoga poses for your pregnancy weeks",
-        1 : "Taking into account your health conditions",
-        0.5 :"Predicting best sessions for your schedules",
-    ]
     
     var body: some View {
+        let strings: [Double : LocalizedStringResource] = [
+            1.5 : "Curating best yoga poses for your pregnancy weeks",
+            1 : "Taking into account your health conditions",
+            0.5 : "Predicting best sessions for your schedules",
+        ]
+        
         ZStack {
             VStack {
                 Image("AssesmentBackground")
