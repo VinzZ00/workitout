@@ -32,9 +32,12 @@ struct RelieveAssesmentView: View {
                         print(relieve)
                     }, label: {
                         VStack {
-                            RoundedRectangle(cornerRadius: 12)
+                            Image("\(relieve.rawValue)")
                                 .frame(width: 98, height: 98)
                                 .foregroundStyle(Color.primary.opacity(0.5))
+//                            RoundedRectangle(cornerRadius: 12)
+//                                .frame(width: 98, height: 98)
+//                                .foregroundStyle(Color.primary.opacity(0.5))
                             Text("\(relieve.getString())")
                                 .bold()
                         }

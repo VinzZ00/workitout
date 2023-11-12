@@ -18,7 +18,7 @@ class HomeViewModel: ObservableObject {
     
     @Published var days: [Day] = Day.allCases
     @Published var relieves: [Relieve] = [
-        .ankle, .back, .hip
+        .neck, .back, .hip
     ]
     @Published var selectedRelieve: Relieve = .back
     @Published var sheetToggle: Bool = false

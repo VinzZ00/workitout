@@ -17,7 +17,7 @@ struct Pose: Identifiable, Hashable, Comparable, Entity {
     var difficulty : Difficulty = .beginner
     var exception: [Exception] = [.abdominalSurgery, .diastasisRecti, .highBloodPressure]
     var recommendedTrimester : Trimester = .second
-    var relieve: [Relieve] = [.ankle, .back, .foot]
+    var relieve: [Relieve] = [.leg, .back, .hip]
     var status: Status = .necessary
     
     var image : String?

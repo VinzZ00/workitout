@@ -27,7 +27,7 @@ class ProfileViewModel : ObservableObject {
     @Published var showAlert = false
     var updateCoreData : UpdateProfileUseCase = UpdateProfileUseCase()
     
-    init(profile : Profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .ankle], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .tenMinutes, plan: [], histories: [])){
+    init(profile : Profile = Profile(name: "Mamam", currentPregnancyWeek: 3, currentRelieveNeeded: [.back, .neck], fitnessLevel: .beginner, daysAvailable: [.monday, .wednesday, .friday], timeOfDay: .morning, preferredDuration: .tenMinutes, plan: [], histories: [])){
         // MARK: change to load profile from coredata
         self.profile = profile
         self.daysAvailable = self.profile.daysAvailable

@@ -14,7 +14,7 @@ struct MockData {
     static var yogas =
         Yoga(id: UUID(), name: "Yoga 1", poses: [
             Pose(id: UUID(), name: "Pose1", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed),
-            Pose(id: UUID(), name: "Pose2", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.ankle], description: "Desc 1", seconds: 12, state: .completed),
+            Pose(id: UUID(), name: "Pose2", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed),
             Pose(id: UUID(), name: "Pose3", difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed)
         ], day: .friday, estimationDuration: 12, image: "Image 1")
     
@@ -24,7 +24,7 @@ struct MockData {
         Profile(
             name: "Testing add and fetch",
             currentPregnancyWeek: 2,
-            currentRelieveNeeded: [.back, .ankle],
+            currentRelieveNeeded: [.back, .hip],
             fitnessLevel: .beginner,
             daysAvailable: [.monday, .wednesday, .friday],
             timeOfDay: .evening,
