@@ -209,7 +209,7 @@
 		ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileUseCase.swift; sourceTree = "<group>"; };
 		ACD49E802AEFA47000793872 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfileUseCase.swift; sourceTree = "<group>"; };
-		ACD49E8A2AF0069900793872 /* WorkItOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkItOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACD49E8A2AF0069900793872 /* MamasteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MamasteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutTests.swift; sourceTree = "<group>"; };
 		ACFED3872AE2B6100018CD03 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		D8065A282AF0EFD100333CB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		D836D93B2AF499DA00260299 /* PoseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCard.swift; sourceTree = "<group>"; };
 		D84CEC0E2AF4C76E008BEC1C /* HistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTests.swift; sourceTree = "<group>"; };
 		D84CEC102AF4DF69008BEC1C /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		D862DB632AE28E5A0014F2FC /* WorkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D862DB632AE28E5A0014F2FC /* Mamaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mamaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862DB662AE28E5A0014F2FC /* WorkItOutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutApp.swift; sourceTree = "<group>"; };
 		D862DB682AE28E5A0014F2FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -718,8 +718,8 @@
 		D862DB642AE28E5A0014F2FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D862DB632AE28E5A0014F2FC /* WorkItOut.app */,
-				ACD49E8A2AF0069900793872 /* WorkItOutTests.xctest */,
+				D862DB632AE28E5A0014F2FC /* Mamaste.app */,
+				ACD49E8A2AF0069900793872 /* MamasteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -850,9 +850,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ACD49E892AF0069900793872 /* WorkItOutTests */ = {
+		ACD49E892AF0069900793872 /* MamasteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACD49E902AF0069900793872 /* Build configuration list for PBXNativeTarget "WorkItOutTests" */;
+			buildConfigurationList = ACD49E902AF0069900793872 /* Build configuration list for PBXNativeTarget "MamasteTests" */;
 			buildPhases = (
 				ACD49E862AF0069900793872 /* Sources */,
 				ACD49E872AF0069900793872 /* Frameworks */,
@@ -863,14 +863,14 @@
 			dependencies = (
 				ACD49E8F2AF0069900793872 /* PBXTargetDependency */,
 			);
-			name = WorkItOutTests;
+			name = MamasteTests;
 			productName = WorkItOutTests;
-			productReference = ACD49E8A2AF0069900793872 /* WorkItOutTests.xctest */;
+			productReference = ACD49E8A2AF0069900793872 /* MamasteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D862DB622AE28E5A0014F2FC /* WorkItOut */ = {
+		D862DB622AE28E5A0014F2FC /* Mamaste */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D862DB712AE28E5C0014F2FC /* Build configuration list for PBXNativeTarget "WorkItOut" */;
+			buildConfigurationList = D862DB712AE28E5C0014F2FC /* Build configuration list for PBXNativeTarget "Mamaste" */;
 			buildPhases = (
 				D862DB5F2AE28E5A0014F2FC /* Sources */,
 				D862DB602AE28E5A0014F2FC /* Frameworks */,
@@ -880,13 +880,13 @@
 			);
 			dependencies = (
 			);
-			name = WorkItOut;
+			name = Mamaste;
 			packageProductDependencies = (
 				6CC43D042AF9D36C00FEE93A /* FirebaseFirestore */,
 				6CC43D062AF9D36C00FEE93A /* FirebaseFirestoreSwift */,
 			);
 			productName = WorkItOut;
-			productReference = D862DB632AE28E5A0014F2FC /* WorkItOut.app */;
+			productReference = D862DB632AE28E5A0014F2FC /* Mamaste.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -908,7 +908,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D862DB5E2AE28E5A0014F2FC /* Build configuration list for PBXProject "WorkItOut" */;
+			buildConfigurationList = D862DB5E2AE28E5A0014F2FC /* Build configuration list for PBXProject "Mamaste" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -924,8 +924,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D862DB622AE28E5A0014F2FC /* WorkItOut */,
-				ACD49E892AF0069900793872 /* WorkItOutTests */,
+				D862DB622AE28E5A0014F2FC /* Mamaste */,
+				ACD49E892AF0069900793872 /* MamasteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1081,7 +1081,7 @@
 /* Begin PBXTargetDependency section */
 		ACD49E8F2AF0069900793872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D862DB622AE28E5A0014F2FC /* WorkItOut */;
+			target = D862DB622AE28E5A0014F2FC /* Mamaste */;
 			targetProxy = ACD49E8E2AF0069900793872 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1101,7 +1101,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkItOut.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorkItOut";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mamaste.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mamaste";
 			};
 			name = Debug;
 		};
@@ -1119,7 +1119,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkItOut.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorkItOut";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mamaste.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mamaste";
 			};
 			name = Release;
 		};
@@ -1311,7 +1311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ACD49E902AF0069900793872 /* Build configuration list for PBXNativeTarget "WorkItOutTests" */ = {
+		ACD49E902AF0069900793872 /* Build configuration list for PBXNativeTarget "MamasteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ACD49E912AF0069900793872 /* Debug */,
@@ -1320,7 +1320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D862DB5E2AE28E5A0014F2FC /* Build configuration list for PBXProject "WorkItOut" */ = {
+		D862DB5E2AE28E5A0014F2FC /* Build configuration list for PBXProject "Mamaste" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D862DB6F2AE28E5C0014F2FC /* Debug */,
@@ -1329,7 +1329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D862DB712AE28E5C0014F2FC /* Build configuration list for PBXNativeTarget "WorkItOut" */ = {
+		D862DB712AE28E5C0014F2FC /* Build configuration list for PBXNativeTarget "Mamaste" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D862DB722AE28E5C0014F2FC /* Debug */,
