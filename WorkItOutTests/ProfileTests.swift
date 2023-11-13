@@ -6,12 +6,12 @@
 //
 
 import XCTest
-@testable import WorkItOut
+@testable import Mamaste
 
 final class ProfileTests: XCTestCase {
     var profileViewModel : ProfileViewModel?
     
-    override func setUpWithError() throws {
+    @MainActor override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try super.setUpWithError()
         profileViewModel = ProfileViewModel()
@@ -23,7 +23,7 @@ final class ProfileTests: XCTestCase {
         profileViewModel = nil
     }
     
-    func testConvertDaytoStrings(){
+    @MainActor func testConvertDaytoStrings(){
         let days : [Day] = [.monday, .tuesday, .sunday]
         if let pvm = profileViewModel {
             let strings = pvm.convertToString(days: days)
@@ -32,7 +32,7 @@ final class ProfileTests: XCTestCase {
         }
     }
     
-    func testConvertExceptionstoStrings(){
+    @MainActor func testConvertExceptionstoStrings(){
         let exceptions : [Exception] = [.abdominalSurgery, .diastasisRecti]
         if let pvm = profileViewModel {
             let strings = pvm.convertToStrings(exceptions: exceptions)
@@ -42,7 +42,7 @@ final class ProfileTests: XCTestCase {
         
     }
     
-    func testConvertGetTrimester(){
+    @MainActor func testConvertGetTrimester(){
         let currentPregnantWeek = 20
         if let pvm = profileViewModel {
             let strings = pvm.convertToStrings(currentPregnancyWeek: currentPregnantWeek)
