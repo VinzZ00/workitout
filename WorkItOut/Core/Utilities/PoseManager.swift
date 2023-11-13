@@ -44,7 +44,7 @@ struct PoseManager {
         for relieve in Relieve.allCases {
             var yogaPlans: [YogaPlan] = []
             for trimester in Trimester.allCases {
-                var name = relieve.getString() + " " + trimester.getString()
+                let name = relieve.getString() + " " + trimester.getString()
                 yogaPlans.append(createYogaPlan(poses: poses, name: name,trimester: trimester, days: profile.daysAvailable, duration: profile.preferredDuration, exceptions: profile.exceptions, relieves: [relieve]))
             }
             handMadeYogaPlans.updateValue(yogaPlans, forKey: relieve)

@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeCurrentYogaView: View {
     @EnvironmentObject var vm: HomeViewModel
     var df : DateFormatter {
-        var f = DateFormatter();
+        let f = DateFormatter();
         f.dateFormat = "EEEE, dd MMMM"
         return f
     }

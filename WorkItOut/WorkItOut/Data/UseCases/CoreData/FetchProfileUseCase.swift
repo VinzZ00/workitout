@@ -20,7 +20,7 @@ struct FetchProfileUseCase{
             switch try await repository.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
             case .success(let data) :
                 for x in data as? [ProfileNSObject] ?? [] {
-                    var p = x.intoObject();
+                    let p = x.intoObject();
                     if p.plan.contains(where: { ygp in
                         !ygp.yogas.isEmpty
                     }) {

@@ -59,7 +59,7 @@ struct GeneratePlanView: View {
                 }
             }
             .navigationDestination(isPresented: $vm.finish, destination: {
-                if let prof = dm.profile {
+                if dm.profile != nil {
                     HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
                 }
             })

@@ -100,10 +100,10 @@ struct HomeView: View {
 
                 }
             }
-            .onChange(of: vm.week) { _ in
+            .onChange(of: vm.week) { _, _ in
                 vm.initMonth()
             }
-            .onChange(of: vm.day) { _ in
+            .onChange(of: vm.day) { _, _ in
                 vm.initMonth()
             }
             .sheet(isPresented: $vm.showProfile, onDismiss: {

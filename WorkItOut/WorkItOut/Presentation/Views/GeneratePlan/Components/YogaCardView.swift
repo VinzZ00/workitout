@@ -14,7 +14,7 @@ struct YogaCardView: View {
     
     var body: some View {
         HStack {
-            if let image = UIImage(named: name){
+            if UIImage(named: name) != nil{
                 PoseImageCard(name: name, width: 70)
             }else{
                 Rectangle()

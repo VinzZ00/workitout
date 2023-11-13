@@ -30,7 +30,7 @@ struct UpdateProfileUseCase {
                 // MARK: Adding History (Relation)
 //                profilens.setValue(newHist, forKey: "histories")
                 newHist.forEach { his in
-                    var hist = his as! HistoryNSObject
+                    let hist = his as! HistoryNSObject
                     
                     if ((profilens.histories!.contains(hist))) {
                         profilens.addToHistories(hist)
