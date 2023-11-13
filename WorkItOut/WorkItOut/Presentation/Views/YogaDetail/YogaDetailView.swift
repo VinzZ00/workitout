@@ -9,12 +9,15 @@ import SwiftUI
 import CoreData
 
 struct YogaDetailView: View {
+    @StateObject var yvm: YogaDetailViewModel
+    
+    @EnvironmentObject var dm: DataManager
+    
     @State var isPresentedExecution = false
     @EnvironmentObject var vm: HomeViewModel
     @Binding var sheetToggle : Bool
     @Binding var path : NavigationPath
     
-    var yoga: Yoga
     @State private var state: YogaPreviewEnum = .relieveChoice
     @State var showHeader: Bool = true
     
@@ -23,17 +26,19 @@ struct YogaDetailView: View {
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                if showHeader {
-                    Text(state.getTitle(yoga: yoga))
-                        .font(.largeTitle)
-                        .bold()
-                    state.getDescription(yoga: yoga)
-                }
+                
                 
                 if state == .relieveChoice {
+                    if showHeader {
+                        Text(state.getTitle(yoga: yvm.oldYoga))
+                            .font(.largeTitle)
+                            .bold()
+                        state.getDescription(yoga: yvm.oldYoga)
+                    }
                     VStack {
                         ScrollListenerViewBuilder(showContent: $showHeader) {
                             RelieveAssesmentView()
+                                .environmentObject(yvm)
                                 .padding(.vertical)
                         }
                         if showHeader {
@@ -51,13 +56,22 @@ struct YogaDetailView: View {
                     
                 }
                 else {
+                    if showHeader {
+                        Text(state.getTitle(yoga: yvm.newYoga))
+                            .font(.largeTitle)
+                            .bold()
+                        state.getDescription(yoga: yvm.newYoga)
+                    }
                     ScrollListenerViewBuilder(showContent: $showHeader){
-                        YogaPreviewView(yoga: yoga)
+                        YogaPreviewView(oldYoga: yvm.oldYoga, newYoga: yvm.newYoga)
                     }
                 }
                 
                 ButtonComponent(title: state.rawValue) {
                     if state == .relieveChoice {
+                        dm.pm.addPosetoPoses()
+                        yvm.relievesPoses = dm.posesByRelieves(relieves: yvm.selectedRelieves)
+                        yvm.newYoga = yvm.addRelieves(yoga: yvm.oldYoga)
                         state = .yogaPreview
                     }
                     else {
@@ -66,7 +80,7 @@ struct YogaDetailView: View {
                     }
                 }
             }
-            .navigationTitle(showHeader ? "" : state.getTitle(yoga: yoga).stringValue())
+            .navigationTitle(showHeader ? "" : state.getTitle(yoga: yvm.oldYoga).stringValue())
             .navigationBarTitleDisplayMode(.inline)
             .padding()
             .animation(.default, value: state)
@@ -124,6 +138,6 @@ struct YogaDetailView: View {
     }
 }
 
-#Preview {
-    YogaDetailView(sheetToggle: .constant(false), path: .constant(NavigationPath()), yoga: Yoga())
-}
+//#Preview {
+//    YogaDetailView(sheetToggle: .constant(false), path: .constant(NavigationPath()), yoga: Yoga())
+//}

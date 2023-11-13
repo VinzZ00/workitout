@@ -54,7 +54,7 @@ struct PoseManager {
         return handMadeYogaPlans
     }
     
-    static private func filterPosesByRelieves(poses: [Pose], relieves: [Relieve]) -> [Pose] {
+    static public func filterPosesByRelieves(poses: [Pose], relieves: [Relieve]) -> [Pose] {
         var filteredPoses: [Pose] = []
         
         if relieves.isEmpty {
@@ -85,6 +85,34 @@ struct PoseManager {
         return filteredPoses
     }
     
+    static private func probRandomizer(duration: Duration) -> Int {
+        let random: Int = Int.random(in: 0...100)
+        
+        if random <= 70 {
+            return duration.getDurationInSeconds()
+        }
+        else {
+            var durations: [Duration] = []
+            for dur in Duration.allCases {
+                if dur != duration {
+                    durations.append(dur)
+                }
+            }
+            return durations.randomElement()!.getDurationInSeconds()
+        }
+    }
+    
+    static func changeDuration(duration: Duration, poses: [Pose]) -> [Pose] {
+        var newPoses: [Pose] = []
+        for pose in poses {
+            let seconds: Int = probRandomizer(duration: duration)
+            
+            newPoses.append(Pose(id: pose.id, name: pose.name, altName: pose.altName, category: pose.category, difficulty: pose.difficulty, exception: pose.exception, recommendedTrimester: pose.recommendedTrimester, relieve: pose.relieve, status: pose.status, image: pose.image, video: pose.video, description: pose.description, instructions: pose.instructions, seconds: seconds, state: pose.state))
+        }
+        
+        return newPoses
+    }
+    
     static private func poseByCategory(poses: [Pose], category: Category) -> Pose {
         return poses.filter({$0.category == category}).randomElement() ?? Pose(id: UUID())
     }
@@ -96,7 +124,7 @@ struct PoseManager {
         
         if !poses.isEmpty {
             newPoses.append(poseByCategory(poses: poses, category: .warmUp))
-            for _ in 0 ..< duration.getDurationInMinutes() {
+            for _ in 0 ..< Int.random(in: 6...8) {
                 var newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
                 
                 var i = 0

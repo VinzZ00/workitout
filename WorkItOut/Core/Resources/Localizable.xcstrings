@@ -51,6 +51,22 @@
         }
       }
     },
+    "%@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$@)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ (%2$@)"
+          }
+        }
+      }
+    },
     "%lld" : {
       "localizations" : {
         "id" : {
@@ -184,12 +200,22 @@
         }
       }
     },
+    "Added Yoga Pose" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yoga Pose Ditambah"
+          }
+        }
+      }
+    },
     "Advanced" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Advanced"
           }
         }
       }
@@ -210,6 +236,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Setuju dan Lanjut"
+          }
+        }
+      }
+    },
+    "Aids digestion, strengthens the lower back, and promotes focus and concentration." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membantu pencernaan, memperkuat bagian bawah punggung, dan mempromosikan fokus dan konsentrasi."
           }
         }
       }
@@ -316,7 +352,14 @@
       }
     },
     "Completed" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
+          }
+        }
+      }
     },
     "Cooling Down" : {
       "localizations" : {
@@ -409,6 +452,36 @@
         }
       }
     },
+    "Enhances balance and concentration, strengthens the legs, and opens the hips and chest." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meningkatkan keseimbangan dan konsentrasi, memperkuat kaki, dan membuka pinggul dan dada."
+          }
+        }
+      }
+    },
+    "Enhances balance, strengthens the legs and core, and improves overall body awareness." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meningkatkan keseimbangan, memperkuat kaki dan otot inti, dan meningkatkan kesadaran tubuh secara keseluruhan."
+          }
+        }
+      }
+    },
+    "Enhances flexibility in the inner thighs and groins, stimulates abdominal organs, and improves posture." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meningkatkan fleksibilitas di paha dalam dan pangkal paha, merangsang organ perut, dan memperbaiki postur."
+          }
+        }
+      }
+    },
     "Error" : {
       "localizations" : {
         "id" : {
@@ -482,6 +555,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keluar dan Hapus Perubahan"
+          }
+        }
+      }
+    },
+    "Facilitates deep relaxation, reduces stress, and promotes mental clarity and focus." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memfasilitasi relaksasi mendalam, mengurangi stres, dan mempromosikan kejelasan mental dan fokus."
           }
         }
       }
@@ -667,12 +750,42 @@
         }
       }
     },
+    "Improves balance, strengthens the legs, and opens the hips and chest." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meningkatkan keseimbangan, memperkuat kaki, dan membuka pinggang dan dada."
+          }
+        }
+      }
+    },
+    "Improves posture, strengthens the thighs and ankles, and enhances overall body awareness." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperbaiki postur, memperkuat paha dan pergelangan kaki, dan meningkatkan kesadaran tubuh secara keseluruhan."
+          }
+        }
+      }
+    },
+    "Increases flexibility and mobility of the spine, promoting a healthy spine and relieving tension in the back." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meningkatkan fleksibilitas dan mobilitas tulang belakang, mempromosikan tulang belakang yang sehat, dan mengurangi ketegangan pada punggung."
+          }
+        }
+      }
+    },
     "Intermidiate" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : ""
+            "state" : "translated",
+            "value" : "Intermediate"
           }
         }
       }
@@ -703,6 +816,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kaki"
+          }
+        }
+      }
+    },
+    "Lengthens and strengthens the entire body, improves circulation, and relieves tension in the spine." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memanjangkan dan memperkuat seluruh tubuh, meningkatkan peredaran darah, dan mengurangi ketegangan pada tulang belakang."
           }
         }
       }
@@ -972,6 +1095,16 @@
         }
       }
     },
+    "Promotes a comfortable seated posture, aids in meditation, and releases tension in the hips." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mempromosikan postur duduk yang nyaman, membantu dalam meditasi, dan melepaskan ketegangan di pinggul."
+          }
+        }
+      }
+    },
     "Safety first" : {
       "localizations" : {
         "id" : {
@@ -1110,6 +1243,246 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mulai"
+          }
+        }
+      }
+    },
+    "Strengthens and stretches the legs, opens the chest and shoulders, and improves balance." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat dan meregangkan kaki, membuka dada dan bahu, dan meningkatkan keseimbangan."
+          }
+        }
+      }
+    },
+    "Strengthens and stretches the legs, opens the chest and shoulders, and improves overall stability." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat dan meregangkan kaki, membuka dada dan bahu, dan meningkatkan stabilitas secara keseluruhan."
+          }
+        }
+      }
+    },
+    "Strengthens the arms and shoulders, stretches the spine, and improves core strength." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat lengan dan bahu, meregangkan tulang belakang, dan meningkatkan kekuatan inti."
+          }
+        }
+      }
+    },
+    "Strengthens the arms, shoulders, and core, improves balance, and tones the waist." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat lengan, bahu, dan otot inti, meningkatkan keseimbangan, dan membentuk pinggang."
+          }
+        }
+      }
+    },
+    "Strengthens the back muscles, improves posture, and stretches the legs." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat otot punggung, memperbaiki postur, dan meregangkan kaki."
+          }
+        }
+      }
+    },
+    "Strengthens the legs and core, opens the hips, and improves flexibility in the spine." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat kaki dan otot inti, membuka pinggul, dan meningkatkan fleksibilitas pada tulang belakang."
+          }
+        }
+      }
+    },
+    "Strengthens the legs and core, opens the hips, and promotes grounding and balance." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat kaki dan otot inti, membuka pinggul, dan mempromosikan ketenangan dan keseimbangan."
+          }
+        }
+      }
+    },
+    "Strengthens the legs, opens the chest, and enhances overall body strength and stability." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat kaki, membuka dada, dan meningkatkan kekuatan dan stabilitas seluruh tubuh."
+          }
+        }
+      }
+    },
+    "Strengthens the legs, opens the hips and chest, and improves balance and concentration." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat kaki, membuka pinggul dan dada, dan meningkatkan keseimbangan dan konsentrasi."
+          }
+        }
+      }
+    },
+    "Strengthens the legs, opens the hips and chest, and improves balance and focus." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat kaki, membuka pinggul dan dada, dan meningkatkan keseimbangan dan fokus."
+          }
+        }
+      }
+    },
+    "Strengthens the legs, tones the core muscles, and improves overall stability and balance." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat kaki, membentuk otot inti, dan meningkatkan stabilitas dan keseimbangan secara keseluruhan."
+          }
+        }
+      }
+    },
+    "Strengthens the legs, tones the glutes, and improves flexibility in the spine." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat kaki, membentuk otot inti, dan meningkatkan stabilitas dan keseimbangan dari punggung."
+          }
+        }
+      }
+    },
+    "Strengthens the lower back and tones the core, while opening the hips and improving flexibility." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memperkuat bagian bawah punggung dan otot inti, sambil membuka pinggul dan meningkatkan fleksibilitas."
+          }
+        }
+      }
+    },
+    "Stretches and strengthens the spine while opening the shoulders, improving flexibility and relieving tension." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan dan memperkuat tulang belakang sambil membuka bahu, meningkatkan fleksibilitas, dan mengurangi ketegangan."
+          }
+        }
+      }
+    },
+    "Stretches the hamstrings and spine, opens the chest, and improves overall flexibility." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan otot hamstring dan tulang belakang, membuka dada, dan meningkatkan fleksibilitas secara keseluruhan."
+          }
+        }
+      }
+    },
+    "Stretches the hamstrings and spine, promotes blood circulation, and releases tension in the neck and shoulders." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan otot hamstring dan tulang belakang, mempromosikan peredaran darah, dan melepaskan ketegangan di leher dan bahu."
+          }
+        }
+      }
+    },
+    "Stretches the hip flexors and hamstrings, opens the chest, and improves hip flexibility." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan otot fleksor panggul dan otot hamstring, membuka dada, dan meningkatkan fleksibilitas pinggul."
+          }
+        }
+      }
+    },
+    "Stretches the hip flexors and opens the chest, promoting hip flexibility and relieving tension." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan otot fleksor panggul dan membuka dada, meningkatkan fleksibilitas panggul dan mengurangi ketegangan."
+          }
+        }
+      }
+    },
+    "Stretches the hips and groin, increases hip flexibility, and helps alleviate discomfort in the lower back." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan pinggul dan pangkal paha, meningkatkan fleksibilitas pinggul, dan membantu mengurangi ketidaknyamanan di bagian bawah punggung."
+          }
+        }
+      }
+    },
+    "Stretches the inner thighs, groins, and hamstrings, improving overall lower body flexibility." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan paha dalam, pangkal paha, dan otot hamstring, meningkatkan fleksibilitas tubuh bagian bawah secara keseluruhan."
+          }
+        }
+      }
+    },
+    "Stretches the sides of the body, opens the chest, and improves flexibility in the spine." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan sisi tubuh, membuka dada, dan meningkatkan fleksibilitas pada tulang belakang."
+          }
+        }
+      }
+    },
+    "Stretches the spine and hamstrings, stimulates abdominal organs, and calms the mind." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan tulang belakang dan otot hamstring, merangsang organ perut, dan menenangkan pikiran."
+          }
+        }
+      }
+    },
+    "Stretches the spine and shoulders, opens the chest, and promotes relaxation." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan tulang belakang dan bahu, membuka dada, dan mempromosikan relaksasi."
+          }
+        }
+      }
+    },
+    "Stretches the spine, hips, and thighs, promoting relaxation and stress relief." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meregangkan tulang belakang, pinggul, dan paha, mempromosikan relaksasi dan mengurangi stres."
           }
         }
       }

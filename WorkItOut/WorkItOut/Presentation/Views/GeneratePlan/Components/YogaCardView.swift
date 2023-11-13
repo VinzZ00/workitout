@@ -8,32 +8,50 @@
 import SwiftUI
 
 struct YogaCardView: View {
-    var name: String = "Mountain Pose (Tadasana)"
+    @EnvironmentObject var vm: YogaDetailViewModel
+    
+    var name: String = "Mountain Pose"
+    var altName: String = "Tadasana"
     var description: String = "Help relieve back pain"
-    var min: Int = 10
+    var seconds: Int = 60
+    var min: Int {
+        return seconds/60
+    }
+    var added: Bool = false
     
     var body: some View {
         HStack {
-            if let image = UIImage(named: name){
-                PoseImageCard(name: name, width: 70)
-            }else{
-                Rectangle()
-                    .foregroundStyle(.purple)
-                    .frame(width: 70, height: 70)
-                    .clipShape(.rect(cornerRadius: 12))
+            VStack {
+                if let image = UIImage(named: name){
+                    PoseImageCard(name: name, width: 70)
+                }else{
+                    Rectangle()
+                        .foregroundStyle(.purple)
+                        .frame(width: 70, height: 70)
+                        .clipShape(.rect(cornerRadius: 12))
+                }
+                Spacer()
             }
             VStack(alignment: .leading) {
-                Text(name)
+                Text("\(name) (\(altName))")
                     .font(.title3)
                     .bold()
-                Text("\(min) Min")
-                    .font(.subheadline)
-                    .padding(6)
-                    .background(Color.neutral6.opacity(0.5))
-                    .clipShape(.rect(cornerRadius: 10))
-                Text(description)
+                if added {
+                   Text("Added Yoga Pose")
+                        .font(.caption)
+                        .foregroundStyle(Color.primary)
+                        .padding(8)
+                        .background(Color.primary.opacity(0.25))
+                        .borderedCorner()
+                        
+                }
+                Label("\(min) Min", systemImage: "clock")
                     .foregroundStyle(Color.neutral3)
                     .font(.subheadline)
+                Text((YogaNames.poseDesc[altName] ?? YogaNames.poseDesc.first?.value)!)
+                    .foregroundStyle(Color.neutral3)
+                    .font(.footnote)
+                    .lineLimit(2)
             }
         }
     }

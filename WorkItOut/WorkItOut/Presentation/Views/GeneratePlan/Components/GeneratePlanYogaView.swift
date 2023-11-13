@@ -36,7 +36,7 @@ struct GeneratePlanYogaView: View {
                                 }
                                 
                                 ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
-                                    YogaCardView(name: pose.name)
+                                    YogaCardView(name: pose.name, altName: pose.altName, seconds: pose.seconds)
                                 }
                             }
                         }

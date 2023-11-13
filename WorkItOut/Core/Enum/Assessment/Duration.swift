@@ -41,11 +41,11 @@ enum Duration : String, UserPreference {
     func getDurationInSeconds() -> Int {
         switch self {
             case .tenMinutes:
-                return 10*60
+                return 1*60
             case .twentyMinutes:
-                return 20*60
+                return 2*60
             case .thirtyMinutes:
-                return 30*60
+                return 3*60
         }
     }
     

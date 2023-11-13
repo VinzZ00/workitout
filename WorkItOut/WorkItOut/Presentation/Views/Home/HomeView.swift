@@ -120,7 +120,7 @@ struct HomeView: View {
                 }
             })
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
+                YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.yoga!), sheetToggle: $vm.sheetToggle, path: $path)
                     .padding(.top)
             })
             .onAppear{
