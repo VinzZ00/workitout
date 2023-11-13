@@ -10,9 +10,10 @@ import Foundation
 
 @MainActor
 class GeneratePlanViewModel: ObservableObject {
-    @Published var scrollTarget: Int?
+    @Published var scrollTarget: Int? = 0
     @Published var showHeader: Bool = true
     @Published var finish: Bool = false
+    @Published var scrollCurrPos : Int? = 0
 
     func addProfileToCoreData(profile: Profile, moc: NSManagedObjectContext) async throws {
         var addProfile: AddProfileUseCase = AddProfileUseCase()

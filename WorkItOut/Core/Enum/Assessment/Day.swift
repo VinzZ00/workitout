@@ -22,25 +22,46 @@ enum Day: String, UserPreference {
     
     func getLocalizedString() -> LocalizedStringResource {
         switch self {
-            case .sunday:
-                return "Sunday"
-            case .monday:
-                return "Monday"
-            case .tuesday:
-                return "Tuesday"
-            case .wednesday:
-                return "Wednesday"
-            case .thursday:
-                return "Thursday"
-            case .friday:
-                return "Friday"
-            case .saturday:
-                return "Saturday"
+        case .sunday:
+            return "Sunday"
+        case .monday:
+            return "Monday"
+        case .tuesday:
+            return "Tuesday"
+        case .wednesday:
+            return "Wednesday"
+        case .thursday:
+            return "Thursday"
+        case .friday:
+            return "Friday"
+        case .saturday:
+            return "Saturday"
         }
     }
     
     func getShortenedDay() -> String {
         return String(self.getString().prefix(3))
+    }
+    
+    func fromInt(dayInt : Int) -> Day {
+        switch dayInt {
+        case 1:
+            return .monday
+        case 2:
+            return .tuesday
+        case 3:
+            return .wednesday
+        case 4:
+            return .thursday
+        case 5:
+            return .friday
+        case 6:
+            return .saturday
+        case 7:
+            return .sunday
+        default :
+            fatalError("Day is not valid")
+        }
     }
     
     func getInt()-> Int {

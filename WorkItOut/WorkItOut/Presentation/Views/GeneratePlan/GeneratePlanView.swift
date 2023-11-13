@@ -22,10 +22,13 @@ struct GeneratePlanView: View {
             VStack(alignment: .leading) {
                 GeneratePlanHeaderView()
                     .environmentObject(vm)
-                ScrollListenerViewBuilder(scrollTarget: $vm.scrollTarget, showContent: $vm.showHeader) {
-                    GeneratePlanYogaView()
-                        .environmentObject(vm)
-                }
+                GeneratePlanScrollViewBuilder(scrollTarget: $vm.scrollTarget, showContent: $vm.showHeader)
+                    .environmentObject(vm)
+                    .environmentObject(dm)
+//                {
+//                    GeneratePlanYogaView()
+//                        .environmentObject(vm)
+//                }
                 VStack {
                     ButtonComponent(title: "Finish") {
                         Task{

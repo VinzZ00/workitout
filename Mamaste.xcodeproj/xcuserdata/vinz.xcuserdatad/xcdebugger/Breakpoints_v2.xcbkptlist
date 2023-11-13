@@ -34,6 +34,53 @@
             endingLineNumber = "55"
             landmarkName = "call(profile:context:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B1C2F23E-548E-4A74-A472-A96BD08CC52C - 336f479321eac148"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "2192">
+               </Location>
+               <Location
+                  uuid = "B1C2F23E-548E-4A74-A472-A96BD08CC52C - 29597b6507f60bb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 (Mamaste.YogaPlan) -&gt; __C.NSManagedObject in Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "B1C2F23E-548E-4A74-A472-A96BD08CC52C - d25079e2f89f8abc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #6 (__C.NSManagedObject) -&gt; () in Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -75,6 +122,36 @@
                   moduleName = "WorkItOut"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vinz/Desktop/Workspace/MacroChallengeREVAMP/workitOut/workitout/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "91EE7381-92AE-4260-9233-862248A63F5E - de96d3995d9a8d70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "91EE7381-92AE-4260-9233-862248A63F5E - f005158cbc358234"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -159,6 +236,51 @@
                   endingLineNumber = "19"
                   offsetFromSymbolStart = "408">
                </Location>
+               <Location
+                  uuid = "E70345A2-626D-467D-AF43-B18320F0D126 - 336f479321eacd95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "E70345A2-626D-467D-AF43-B18320F0D126 - 6e4979978b830997"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "E70345A2-626D-467D-AF43-B18320F0D126 - 8c49295c694f796"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "60">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -238,6 +360,36 @@
                   endingLineNumber = "21"
                   offsetFromSymbolStart = "1136">
                </Location>
+               <Location
+                  uuid = "C4CC2DBA-13FC-4A54-B86F-715F388F12E5 - 336f479321eacdcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+               <Location
+                  uuid = "C4CC2DBA-13FC-4A54-B86F-715F388F12E5 - 45562184c7a4b900"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Mamaste.History) -&gt; Swift.Bool in Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "188">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -285,6 +437,36 @@
                   startingLineNumber = "22"
                   endingLineNumber = "22"
                   offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "0BDB2ADA-F121-4A0D-92E0-D30745912152 - 45562184c7a4b9e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Mamaste.History) -&gt; Swift.Bool in Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "0BDB2ADA-F121-4A0D-92E0-D30745912152 - afcb6ee5e31723d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Mamaste.HistoryNSObject) -&gt; Swift.Optional&lt;Foundation.UUID&gt; in closure #1 (Mamaste.History) -&gt; Swift.Bool in Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "188">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -364,6 +546,36 @@
                   startingLineNumber = "21"
                   endingLineNumber = "21"
                   offsetFromSymbolStart = "1136">
+               </Location>
+               <Location
+                  uuid = "B1931BE2-65CD-401F-B8A5-D85581A906C1 - 336f479321eacdcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+               <Location
+                  uuid = "B1931BE2-65CD-401F-B8A5-D85581A906C1 - 45562184c7a4b900"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Mamaste.History) -&gt; Swift.Bool in Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "188">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -571,6 +783,36 @@
                   endingLineNumber = "40"
                   offsetFromSymbolStart = "52">
                </Location>
+               <Location
+                  uuid = "35301941-95C4-4037-842A-44D818094505 - 336f479321eac358"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1780">
+               </Location>
+               <Location
+                  uuid = "35301941-95C4-4037-842A-44D818094505 - cec3518415757d6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Mamaste.YogaPlanNSObject) -&gt; () in Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "92">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -618,6 +860,21 @@
                   startingLineNumber = "41"
                   endingLineNumber = "41"
                   offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "49C92955-BA2A-42BC-BBA1-5F5FAFF93D69 - cec3518415757c8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Mamaste.YogaPlanNSObject) -&gt; () in Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "108">
                </Location>
             </Locations>
          </BreakpointContent>
