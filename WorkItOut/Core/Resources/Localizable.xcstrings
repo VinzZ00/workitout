@@ -51,16 +51,6 @@
         }
       }
     },
-    "%@ and %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ and %2$lld"
-          }
-        }
-      }
-    },
     "%lld" : {
       "localizations" : {
         "id" : {
@@ -843,6 +833,7 @@
       }
     },
     "No Plan yet" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

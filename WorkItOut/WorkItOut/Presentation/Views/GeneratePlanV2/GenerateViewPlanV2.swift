@@ -82,11 +82,28 @@ struct GenerateViewPlanV2: View {
                             VStack {
                                 ForEach(dm.profile!.yogas) { yoga in
                                     VStack(alignment: .leading) {
-                                        Text("\(yoga.day.getString()) and \(yoga.day.getInt())")
+                                        Text(yoga.day.getString())
                                             .font(.title3)
                                             .bold()
-                                            .frame(height: 400)
+//                                            .frame(height: 400) // For Development Purpose
+                                            ForEach(PoseManager.existingCategories(poses: yoga.poses), id: \.self) { category in
+                                                HStack {
+                                                    Text(category.rawValue)
+                                                        .font(.subheadline)
+                                                        .foregroundStyle(Color.neutral3)
+                                                        .bold()
+                                                    Rectangle()
+                                                        .frame(height: 0.5)
+                                                        .foregroundStyle(Color.neutral6)
+                                                }
+                                                
+                                                ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
+                                                    YogaCardView(name: pose.name)
+                                                }
+                                            }
+                                        
                                     }
+                                    // MARK: kalo mau pake geo untuk dapetin gede dari si component, bisa pake yang ini.
 //                                    .background {
 //                                        GeometryReader { geo in
 //                                            Path { path in
@@ -142,7 +159,9 @@ struct GenerateViewPlanV2: View {
                     }
                     .coordinateSpace(name: "YogaDaySection")
                 }
+                .padding(.horizontal, 16)
             }
+            
             // MARK: ERROR Handling
             .alert(isPresented: self.$alert){
                 Alert(title: Text("Error"), message: Text("Sorry, your Profile is not saved, Please resave your profile"))
