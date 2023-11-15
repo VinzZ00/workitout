@@ -29,7 +29,6 @@ struct HeaderExploreView: View {
             }
         }
         .padding(.horizontal)
-        .padding(.bottom)
     }
 }
 

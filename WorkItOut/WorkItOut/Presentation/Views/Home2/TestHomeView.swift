@@ -31,7 +31,7 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
         case .plan:
             PlanBodyView()
         case .explore:
-            ExploreView()
+            ExploreBodyView()
         }
     }
     
@@ -104,8 +104,6 @@ struct TestHomeView: View {
             YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.yoga!), sheetToggle: $vm.sheetToggle, path: $path)
                 .padding(.top)
         })
-        
-        
     }
 }
 

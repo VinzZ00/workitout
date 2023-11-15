@@ -354,6 +354,9 @@
         }
       }
     },
+    "Color Picker" : {
+
+    },
     "Completed" : {
       "localizations" : {
         "id" : {
@@ -870,6 +873,9 @@
         }
       }
     },
+    "Menu" : {
+
+    },
     "Monday" : {
       "localizations" : {
         "id" : {
@@ -1002,6 +1008,9 @@
           }
         }
       }
+    },
+    "Order" : {
+
     },
     "Orthopedic Issues" : {
       "localizations" : {

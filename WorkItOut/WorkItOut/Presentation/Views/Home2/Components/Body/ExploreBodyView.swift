@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExploreView: View {
+struct ExploreBodyView: View {
     @EnvironmentObject var vm: HomeViewModel
     
     var body: some View {
@@ -43,5 +43,5 @@ struct ExploreView: View {
 }
 
 #Preview {
-    ExploreView()
+    ExploreBodyView()
 }
