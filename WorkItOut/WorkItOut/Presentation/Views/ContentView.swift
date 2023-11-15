@@ -24,7 +24,7 @@ struct ContentView: View {
                 EmptyView()
             }else{
                 if !dm.hasNoProfile{
-                    HomeView()
+                    TestHomeView()
                         .environmentObject(dm);
                 }
             }

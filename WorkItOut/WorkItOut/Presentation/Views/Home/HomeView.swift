@@ -14,6 +14,7 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
     @State var alert : Bool = false
+    
     var body: some View {
         NavigationStack(path: $path){
             VStack {
@@ -68,7 +69,6 @@ struct HomeView: View {
                 ScrollListenerViewBuilder(showContent: $vm.showHeader) {
                     HomeCurrentYogaView()
                         .environmentObject(vm)
-                    
                     VStack(alignment: .leading) {
                         Text("Exercise that might help you")
                             .font(.title2)

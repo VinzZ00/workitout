@@ -26,8 +26,6 @@ struct YogaDetailView: View {
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                
-                
                 if state == .relieveChoice {
                     if showHeader {
                         Text(state.getTitle(yoga: yvm.oldYoga))

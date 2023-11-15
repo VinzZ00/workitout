@@ -17,7 +17,6 @@ struct HomeCurrentYogaView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Spacer()
             if let yoga = vm.yoga {
                 ZStack(alignment: .bottom){
                     Image(yoga.poses.isEmpty ? "NoYoga" : "YogaPlanImage")

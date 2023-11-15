@@ -31,6 +31,9 @@
         }
       }
     },
+    "(Trimester II)" : {
+
+    },
     "(You can skip this part)" : {
       "localizations" : {
         "id" : {
@@ -559,6 +562,9 @@
         }
       }
     },
+    "Explore" : {
+
+    },
     "Facilitates deep relaxation, reduces stress, and promotes mental clarity and focus." : {
       "localizations" : {
         "id" : {
@@ -598,6 +604,9 @@
           }
         }
       }
+    },
+    "First Trimester - New Beginnings" : {
+
     },
     "Foot" : {
       "extractionState" : "stale",
@@ -1024,6 +1033,9 @@
           }
         }
       }
+    },
+    "Plan" : {
+
     },
     "Play/Pause" : {
       "localizations" : {
@@ -1577,6 +1589,12 @@
         }
       }
     },
+    "Today" : {
+
+    },
+    "Trimester Picker" : {
+
+    },
     "Tuesday" : {
       "localizations" : {
         "id" : {
@@ -1662,6 +1680,9 @@
           }
         }
       }
+    },
+    "Week 12 - August" : {
+
     },
     "Week Picker" : {
       "localizations" : {
@@ -1839,6 +1860,9 @@
           }
         }
       }
+    },
+    "You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!" : {
+
     },
     "You can skip this part if you feel no pain" : {
       "localizations" : {

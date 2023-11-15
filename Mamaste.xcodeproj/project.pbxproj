@@ -16,6 +16,14 @@
 		56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */; };
 		56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */; };
 		6C1228EB2B01CB6500DE2A46 /* YogaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EA2B01CB6500DE2A46 /* YogaDetailViewModel.swift */; };
+		6C1228ED2B034A5C00DE2A46 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EC2B034A5C00DE2A46 /* HomeTabView.swift */; };
+		6C1228F02B039ECA00DE2A46 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EF2B039ECA00DE2A46 /* TabButtonView.swift */; };
+		6C12290E2B04745C00DE2A46 /* TestHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C12290D2B04745C00DE2A46 /* TestHomeView.swift */; };
+		6C1229142B047DD500DE2A46 /* HeaderTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1229132B047DD500DE2A46 /* HeaderTodayView.swift */; };
+		6C1229162B04953600DE2A46 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1229152B04953600DE2A46 /* ExploreView.swift */; };
+		6C1229182B0495ED00DE2A46 /* HeaderExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1229172B0495ED00DE2A46 /* HeaderExploreView.swift */; };
+		6C12291B2B04969900DE2A46 /* PlanBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C12291A2B04969900DE2A46 /* PlanBodyView.swift */; };
+		6C12291D2B04970700DE2A46 /* PlanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C12291C2B04970700DE2A46 /* PlanHeaderView.swift */; };
 		6C3FD7652AEE405C00C84D2A /* Relieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7642AEE405C00C84D2A /* Relieve.swift */; };
 		6C3FD76C2AEE40BD00C84D2A /* Trimester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76B2AEE40BD00C84D2A /* Trimester.swift */; };
 		6C3FD76E2AEE40C900C84D2A /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */; };
@@ -146,6 +154,14 @@
 		56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6C1228EA2B01CB6500DE2A46 /* YogaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaDetailViewModel.swift; sourceTree = "<group>"; };
+		6C1228EC2B034A5C00DE2A46 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		6C1228EF2B039ECA00DE2A46 /* TabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
+		6C12290D2B04745C00DE2A46 /* TestHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeView.swift; sourceTree = "<group>"; };
+		6C1229132B047DD500DE2A46 /* HeaderTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTodayView.swift; sourceTree = "<group>"; };
+		6C1229152B04953600DE2A46 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		6C1229172B0495ED00DE2A46 /* HeaderExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderExploreView.swift; sourceTree = "<group>"; };
+		6C12291A2B04969900DE2A46 /* PlanBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanBodyView.swift; sourceTree = "<group>"; };
+		6C12291C2B04970700DE2A46 /* PlanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanHeaderView.swift; sourceTree = "<group>"; };
 		6C3FD7642AEE405C00C84D2A /* Relieve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relieve.swift; sourceTree = "<group>"; };
 		6C3FD76B2AEE40BD00C84D2A /* Trimester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trimester.swift; sourceTree = "<group>"; };
 		6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
@@ -346,6 +362,45 @@
 			path = YogaDetail;
 			sourceTree = "<group>";
 		};
+		6C1228EE2B039E8C00DE2A46 /* Home2 */ = {
+			isa = PBXGroup;
+			children = (
+				6C1229112B047DBC00DE2A46 /* Components */,
+				6C1228EC2B034A5C00DE2A46 /* HomeTabView.swift */,
+				6C1228EF2B039ECA00DE2A46 /* TabButtonView.swift */,
+				6C12290D2B04745C00DE2A46 /* TestHomeView.swift */,
+			);
+			path = Home2;
+			sourceTree = "<group>";
+		};
+		6C1229112B047DBC00DE2A46 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6C1229192B04968C00DE2A46 /* Body */,
+				6C1229122B047DC700DE2A46 /* Header */,
+				6C1229152B04953600DE2A46 /* ExploreView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6C1229122B047DC700DE2A46 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				6C1229132B047DD500DE2A46 /* HeaderTodayView.swift */,
+				6C1229172B0495ED00DE2A46 /* HeaderExploreView.swift */,
+				6C12291C2B04970700DE2A46 /* PlanHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		6C1229192B04968C00DE2A46 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				6C12291A2B04969900DE2A46 /* PlanBodyView.swift */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
 		6C6F34CA2AE7B9390059E74D /* GlobalComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +584,7 @@
 		AC5A9A772AE42D30003B0C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6C1228EE2B039E8C00DE2A46 /* Home2 */,
 				D8FD5D662AF35381005F8D4E /* History */,
 				D8065A272AF0EF8800333CB6 /* Profile */,
 				6C732A3D2AF109AA00E17FDB /* YogaDetail */,
@@ -996,6 +1052,7 @@
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
 				6C85C0782B0154220076B057 /* UserConsentView.swift in Sources */,
+				6C12291B2B04969900DE2A46 /* PlanBodyView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
@@ -1007,7 +1064,9 @@
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
 				6CC43D152AFA3E0300FEE93A /* PoseManager.swift in Sources */,
 				ACD49E812AEFA47000793872 /* Helper.swift in Sources */,
+				6C1229182B0495ED00DE2A46 /* HeaderExploreView.swift in Sources */,
 				D8FD5D6D2AF3577F005F8D4E /* HistorySection.swift in Sources */,
+				6C1229162B04953600DE2A46 /* ExploreView.swift in Sources */,
 				6C7B2C512AEF74D500E0DADF /* HomeView.swift in Sources */,
 				AC71EEB22AEA556B00C8ED8A /* CameraDeviceManager.swift in Sources */,
 				6CC43D0D2AF9FC2300FEE93A /* GeneratePlanHeaderView.swift in Sources */,
@@ -1031,6 +1090,7 @@
 				56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */,
 				6C3FD7782AEF560A00C84D2A /* History.swift in Sources */,
 				D8FD5D6B2AF3576D005F8D4E /* HistoryCard.swift in Sources */,
+				6C12291D2B04970700DE2A46 /* PlanHeaderView.swift in Sources */,
 				6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
 				6C85C0792B0154220076B057 /* OnboardingView.swift in Sources */,
@@ -1039,6 +1099,7 @@
 				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
 				D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */,
 				56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */,
+				6C12290E2B04745C00DE2A46 /* TestHomeView.swift in Sources */,
 				D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */,
 				AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */,
 				56BA8EDC2AFA3102007CFAF3 /* VideoView.swift in Sources */,
@@ -1063,9 +1124,12 @@
 				D8BC2BEE2AE80F1800E61487 /* AssessmentViewModel.swift in Sources */,
 				6C7B2C4D2AEF726A00E0DADF /* GeneratePlanView.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
+				6C1229142B047DD500DE2A46 /* HeaderTodayView.swift in Sources */,
 				6C3FD76E2AEE40C900C84D2A /* Difficulty.swift in Sources */,
 				D8FBED5A2AE91A880062CC00 /* LoadingCircle.swift in Sources */,
+				6C1228ED2B034A5C00DE2A46 /* HomeTabView.swift in Sources */,
 				6CEFB67B2AF383F80020D00F /* DayPickView.swift in Sources */,
+				6C1228F02B039ECA00DE2A46 /* TabButtonView.swift in Sources */,
 				6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */,
 				6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */,
 				6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */,
@@ -1295,7 +1359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1331,7 +1395,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
