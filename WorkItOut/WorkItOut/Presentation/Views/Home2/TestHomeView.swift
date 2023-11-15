@@ -61,7 +61,6 @@ struct TestHomeView: View {
         NavigationStack(path: $path) {
             VStack {
                 selected.header
-                
                 Spacer()
                 selected.body
                 Spacer()

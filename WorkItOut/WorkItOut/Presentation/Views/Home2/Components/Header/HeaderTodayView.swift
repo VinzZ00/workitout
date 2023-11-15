@@ -15,10 +15,11 @@ struct HeaderTodayView: View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Week 12 - August")
+                    Text("Week \(vm.week) - \(vm.month)")
                         .font(.title2.bold())
-                    Text("(Trimester II)")
+                    Text("(\(vm.getTrimesterRoman()))")
                         .foregroundStyle(Color.neutral3)
+                        .font(.caption)
                 }
                 Spacer()
                 NavigationLink{
@@ -39,6 +40,9 @@ struct HeaderTodayView: View {
                     }
                 }
             }
+        }
+        .onAppear{
+            vm.initMonth()
         }
         .padding(.horizontal)
         .padding(.bottom)

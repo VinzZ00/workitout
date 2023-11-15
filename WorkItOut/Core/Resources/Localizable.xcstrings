@@ -11,6 +11,9 @@
         }
       }
     },
+    "(%@)" : {
+
+    },
     "(Check all that apply)" : {
       "localizations" : {
         "id" : {
@@ -30,9 +33,6 @@
           }
         }
       }
-    },
-    "(Trimester II)" : {
-
     },
     "(You can skip this part)" : {
       "localizations" : {
@@ -1680,9 +1680,6 @@
           }
         }
       }
-    },
-    "Week 12 - August" : {
-
     },
     "Week Picker" : {
       "localizations" : {

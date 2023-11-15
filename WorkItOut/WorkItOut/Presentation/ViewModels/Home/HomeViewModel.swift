@@ -37,7 +37,6 @@ class HomeViewModel: ObservableObject {
         self.profile = profile
     }
     
-
     func loadProfile(moc : NSManagedObjectContext) async throws {
         let fetchedProfile = try await fetch.call(context: moc)
         if fetchedProfile.isEmpty {
@@ -88,7 +87,6 @@ class HomeViewModel: ObservableObject {
     
     
     func initMonth() {
-        
         let DisplayWeek = self.week /* checkingWeek */ - self.profile.currentPregnancyWeek /* weekXpreg; */
         
         // MARK: TO GET THE CURRENT WEEK OF THE YEAR
@@ -102,6 +100,11 @@ class HomeViewModel: ObservableObject {
         let year = calendar.dateComponents([.year], from: currentDate).year!
         
         // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
+        let weekDay = calendar.dateComponents([.weekday], from: currentDate)
+        guard let intWeekDay = weekDay.weekday else {
+            return
+        }
+        day = Day.getDayFromInt(int: intWeekDay)
         let displayDate = day.dateForWeekday(week: woy, year: year);
         
         self.selectedDate = displayDate
