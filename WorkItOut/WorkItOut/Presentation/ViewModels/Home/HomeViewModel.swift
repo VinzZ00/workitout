@@ -37,7 +37,6 @@ class HomeViewModel: ObservableObject {
         self.profile = profile
     }
     
-
     func loadProfile(moc : NSManagedObjectContext) async throws {
         let fetchedProfile = try await fetch.call(context: moc)
         if fetchedProfile.isEmpty {
@@ -88,7 +87,6 @@ class HomeViewModel: ObservableObject {
     
     
     func initMonth() {
-        
         let DisplayWeek = self.week /* checkingWeek */ - self.profile.currentPregnancyWeek /* weekXpreg; */
         
         // MARK: TO GET THE CURRENT WEEK OF THE YEAR
@@ -97,13 +95,16 @@ class HomeViewModel: ObservableObject {
         let pregDate = calendar.date(byAdding: .weekOfYear, value: -self.profile.currentPregnancyWeek, to: currentDate)
         let weekOfPreg = calendar.dateComponents([.weekOfYear], from: pregDate!)
         let woy = self.profile.currentPregnancyWeek + weekOfPreg.weekOfYear! + DisplayWeek
-        
         // MARK: TO GET CURRENT YEAR
         let year = calendar.dateComponents([.year], from: currentDate).year!
         
         // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
+        let weekDay = calendar.dateComponents([.weekday], from: currentDate)
+        guard let intWeekDay = weekDay.weekday else {
+            return
+        }
+        day = Day.getDayFromInt(int: intWeekDay)
         let displayDate = day.dateForWeekday(week: woy, year: year);
-        
         self.selectedDate = displayDate
         
         let df = DateFormatter()
@@ -151,5 +152,19 @@ class HomeViewModel: ObservableObject {
     
     func getHandmadeYogaPlans(relieve: Relieve) -> [YogaPlan] {
         return self.handmadeYogaPlans[relieve] ?? self.yogaPlans
+    }
+    
+    func changeDay(){
+        var calendar = Calendar.current
+        let currentDate = Date()
+        let pregDate = calendar.date(byAdding: .weekOfYear, value: -profile.currentPregnancyWeek, to: currentDate)
+        let weekOfPreg = calendar.dateComponents([.weekOfYear], from: pregDate!)
+        let woy = profile.currentPregnancyWeek + weekOfPreg.weekOfYear!
+        
+        // MARK: TO GET CURRENT YEAR
+        let year = calendar.dateComponents([.year], from: currentDate).year!
+        
+        // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
+        self.selectedDate = day.dateForWeekday(week: woy, year: year)
     }
 }
