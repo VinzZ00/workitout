@@ -50,7 +50,6 @@ class HomeViewModel: ObservableObject {
             
             if !profile.plan.isEmpty {
                 self.initHandmadeYogaPlans()
-                print("handmade loaded")
             }
             
             self.objectWillChange.send()

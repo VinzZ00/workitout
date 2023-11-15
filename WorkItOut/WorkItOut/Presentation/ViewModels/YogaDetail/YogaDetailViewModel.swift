@@ -26,7 +26,6 @@ class YogaDetailViewModel: ObservableObject {
         for relieve in selectedRelieves {
             let filteredRelievePose = self.relievesPoses.filter({$0.relieve.contains(relieve)}).randomElement()
             if let relievePose = filteredRelievePose {
-                print(relievePose.relieve)
                 newYoga.poses.append(relievePose)
             }
             self.objectWillChange.send()

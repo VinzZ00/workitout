@@ -50,7 +50,6 @@ struct PoseManager {
             handMadeYogaPlans.updateValue(yogaPlans, forKey: relieve)
         }
         
-        print("Handmade work")
         return handMadeYogaPlans
     }
     

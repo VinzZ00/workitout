@@ -84,6 +84,11 @@ struct TestHomeView: View {
                     ProfileView(vm: ProfileViewModel(profile: vm.profile))
                 }
             })
+            .navigationDestination(for: String.self) { string in
+                ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
+                    .environmentObject(dm)
+                    .navigationBarBackButtonHidden()
+            }
         }
         .environmentObject(vm)
         .onAppear{
@@ -99,6 +104,7 @@ struct TestHomeView: View {
             YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.yoga!), sheetToggle: $vm.sheetToggle, path: $path)
                 .padding(.top)
         })
+        
         
     }
 }
