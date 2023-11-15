@@ -83,6 +83,9 @@ struct TestHomeView: View {
                     ProfileView(vm: ProfileViewModel(profile: vm.profile))
                 }
             })
+            .onChange(of: vm.day, { _, newValue in
+                vm.changeDay()
+            })
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
                     .environmentObject(dm)
