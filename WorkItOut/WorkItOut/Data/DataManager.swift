@@ -47,6 +47,4 @@ class DataManager: ObservableObject {
         
         self.handMadeYogaPlan = PoseManager.createHandMadeYogaPlan(profile: profile, poses: pm.poses)
     }
-    
-    
 }
