@@ -8,8 +8,6 @@ import CoreData
 import Foundation
 
 struct Pose: Identifiable, Hashable, Comparable, Entity {
-    
-    
     let id: UUID
     var name : String = "Pose Name"
     var altName: String = "Alternate Name"

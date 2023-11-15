@@ -79,8 +79,6 @@ class PoseFirebaseManager: ObservableObject {
                     return
                 }
                 
-                
-                
                 var requestYogaPose = RequestYogaPose(yogaPose: poseName, altName: altName, category: category, difficulty: difficulty, exceptions: exceptions, recommendedTrimester: trimester, relieves: relieves, status: status)
                 if let videoURL = doc.data()[FirebaseConstant.YogaPoseConstants.videoURL] as? String {
                     requestYogaPose.videoURL = videoURL

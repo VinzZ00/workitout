@@ -17,6 +17,19 @@ enum Trimester: String, UserPreference {
         return self.rawValue
     }
     
+    func getRomanString() -> String {
+        switch self {
+        case .first:
+            return "Trimester I"
+        case .second:
+            return "Trimester II"
+        case .third:
+            return "Trimester III"
+        case .all:
+            return "Trimester X"
+        }
+    }
+    
     func getLocalizedString() -> LocalizedStringResource {
         switch self {
         case .first:

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GeneratePlanYogaView: View {
     @EnvironmentObject var dm: DataManager
-    @EnvironmentObject var vm: GeneratePlanViewModel
+//    @EnvironmentObject var vm: GeneratePlanViewModel
+    let yogaPlan: YogaPlan
     
     var body: some View {
         VStack {
@@ -18,7 +19,7 @@ struct GeneratePlanYogaView: View {
             }
             else {
                 VStack(alignment: .leading) {
-                    ForEach(dm.profile!.yogas) { yoga in
+                    ForEach(yogaPlan.yogas) { yoga in
                         VStack(alignment: .leading) {
                             Text(yoga.day.getString())
                                 .font(.title3)
@@ -36,7 +37,7 @@ struct GeneratePlanYogaView: View {
                                 }
                                 
                                 ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
-                                    YogaCardView(name: pose.name)
+                                    YogaCardView(name: pose.name, altName: pose.altName, seconds: pose.seconds)
                                 }
                             }
                         }
