@@ -80,10 +80,11 @@ struct TestHomeView: View {
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
-                selected.view
-                
+                selected.header
+                Spacer()
+                selected.body
+                Spacer()
                 HomeTabView(selected: $selected)
-                    
             }
             .ignoresSafeArea(edges: .bottom)
             .background(Color.background)
@@ -99,6 +100,9 @@ struct TestHomeView: View {
                 NavigationStack{
                     ProfileView(vm: ProfileViewModel(profile: vm.profile))
                 }
+            })
+            .onChange(of: vm.day, { _, newValue in
+                vm.changeDay()
             })
             .navigationDestination(for: String.self) { string in
                 ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
