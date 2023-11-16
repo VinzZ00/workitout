@@ -24,10 +24,29 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
     }
     
     @ViewBuilder
+    var view: some View {
+        switch self {
+        case .today:
+            HomeTodayView()
+        case .plan:
+            VStack {
+                self.header
+                self.body
+            }
+        case .explore:
+            VStack {
+                self.header
+                self.body
+            }
+        }
+    }
+    
+    @ViewBuilder
     var body: some View {
         switch self {
         case .today:
-            HomeCurrentYogaView()
+//            TodayBodyView()
+            PlanBodyView()
         case .plan:
             PlanBodyView()
         case .explore:
@@ -39,7 +58,8 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
     var header: some View {
         switch self {
         case .today:
-            HeaderTodayView()
+//            HeaderTodayView()
+            PlanHeaderView()
         case .plan:
             PlanHeaderView()
         case .explore:
@@ -60,11 +80,7 @@ struct TestHomeView: View {
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
-                selected.header
-                
-                Spacer()
-                selected.body
-                Spacer()
+                selected.view
                 
                 HomeTabView(selected: $selected)
                     

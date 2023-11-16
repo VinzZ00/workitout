@@ -11,17 +11,21 @@ struct HeaderTodayView: View {
     @EnvironmentObject var vm: HomeViewModel
     @EnvironmentObject var dm : DataManager
     
+    @Binding var scrollPosition: Day?
+    
     var body: some View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Week 12 - August")
-                        .font(.title2.bold())
-                    Text("(Trimester II)")
+                    Text("Week \(vm.week) - \(vm.month)")
+                        .font(.title3)
+                        .bold()
+                        
+                    Text(vm.getTrimesterRoman())
                         .foregroundStyle(Color.neutral3)
                 }
                 Spacer()
-                NavigationLink{
+                NavigationLink {
                     HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
                 } label: {
                     HomeButtonView(icon: "clock.arrow.circlepath")
@@ -31,6 +35,7 @@ struct HeaderTodayView: View {
                 } label: {
                     HomeButtonView(icon: "person")
                 }
+                
             }
             HStack {
                 if let profile = dm.profile {
@@ -43,9 +48,10 @@ struct HeaderTodayView: View {
         .padding(.horizontal)
         .padding(.bottom)
         .background(Color.white)
+        
     }
 }
 
-#Preview {
-    HeaderTodayView()
-}
+//#Preview {
+//    HeaderTodayView()
+//}
