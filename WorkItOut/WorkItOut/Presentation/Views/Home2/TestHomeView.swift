@@ -24,14 +24,38 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
     }
     
     @ViewBuilder
+    var view: some View {
+        switch self {
+        case .today:
+            VStack {
+                self.header
+                Spacer()
+                self.body
+                Spacer()
+            }
+        case .plan:
+            VStack {
+                self.header
+                self.body
+            }
+        case .explore:
+            VStack {
+                self.header
+                self.body
+            }
+        }
+    }
+    
+    @ViewBuilder
     var body: some View {
         switch self {
         case .today:
-            HomeCurrentYogaView()
+            TodayBodyView()
+//            PlanBodyView()
         case .plan:
             PlanBodyView()
         case .explore:
-            ExploreView()
+            ExploreBodyView()
         }
     }
     
@@ -40,6 +64,7 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
         switch self {
         case .today:
             HeaderTodayView()
+//            PlanHeaderView()
         case .plan:
             PlanHeaderView()
         case .explore:
@@ -60,13 +85,9 @@ struct TestHomeView: View {
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
-                selected.header
-                Spacer()
-                selected.body
-                Spacer()
+                selected.view
                 
                 HomeTabView(selected: $selected)
-                    
             }
             .ignoresSafeArea(edges: .bottom)
             .background(Color.background)
@@ -106,8 +127,6 @@ struct TestHomeView: View {
             YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.yoga!), sheetToggle: $vm.sheetToggle, path: $path)
                 .padding(.top)
         })
-        
-        
     }
 }
 

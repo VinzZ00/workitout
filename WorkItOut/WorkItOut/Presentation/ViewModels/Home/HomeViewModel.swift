@@ -28,6 +28,8 @@ class HomeViewModel: ObservableObject {
     @Published var showHeader: Bool = true
     @Published var showProfile: Bool = false
     
+    @Published var scrollPosition: Day?
+    
     @Published var handmadeYogaPlans: [Relieve : [YogaPlan]] = [:]
     
     init(profile: Profile = Profile()) {
@@ -36,7 +38,7 @@ class HomeViewModel: ObservableObject {
         self.yogaPlans = profile.plan
         self.profile = profile
     }
-    
+
     func loadProfile(moc : NSManagedObjectContext) async throws {
         let fetchedProfile = try await fetch.call(context: moc)
         if fetchedProfile.isEmpty {
@@ -85,7 +87,6 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    
     func initMonth() {
         let DisplayWeek = self.week /* checkingWeek */ - self.profile.currentPregnancyWeek /* weekXpreg; */
         
@@ -122,6 +123,10 @@ class HomeViewModel: ObservableObject {
     
     var yoga: Yoga? {
         return yogaPlan?.yogas.first(where: {$0.day == day})
+    }
+    
+    func getYogaByDay(day: Day) -> Yoga? {
+        return yogaPlan!.yogas.first(where: {$0.day == day})
     }
     
     func previousWeek() {

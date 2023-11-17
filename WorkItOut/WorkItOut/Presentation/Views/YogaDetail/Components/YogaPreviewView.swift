@@ -27,7 +27,7 @@ struct YogaPreviewView: View {
                 VStack(alignment: .leading) {
                     ForEach(PoseManager.getPosesByCategory(poses: newYoga.poses, category: category)) { pose in
                         
-                        YogaCardView(name: pose.name, altName: pose.altName, seconds: pose.seconds, added: !oldYoga.poses.contains(pose))
+                        YogaCardView(pose: pose, added: !oldYoga.poses.contains(pose))
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }

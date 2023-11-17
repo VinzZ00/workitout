@@ -29,7 +29,6 @@ struct PlanHeaderView: View {
             }
         }
         .padding(.horizontal)
-        .padding(.bottom)
     }
 }
 

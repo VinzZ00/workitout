@@ -39,6 +39,19 @@ enum Day: String, UserPreference {
         }
     }
     
+    func getDateByDay() -> Date {
+        let calendar = Calendar.current
+        let today = Date()
+        
+        // Get the start of the week
+        let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: today))!
+        
+        // Iterate through the days of the week
+        let date = calendar.date(byAdding: .day, value: self.getInt(), to: startOfWeek)
+        
+        return date!
+    }
+    
     func getShortenedDay() -> String {
         return String(self.getString().prefix(3))
     }

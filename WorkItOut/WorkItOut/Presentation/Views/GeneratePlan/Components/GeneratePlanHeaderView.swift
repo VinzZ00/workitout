@@ -32,11 +32,8 @@ struct GeneratePlanHeaderView: View {
                         Text("You are in week \(dm.profile!.currentPregnancyWeek) of pregnancy, so we are giving you the \(dm.profile!.trimester.getLocalizedString()) trimester yoga plan!")
                     }
                     .padding(.horizontal)
-                        
+                    
                 }
-                DayPickerView(days: dm.profile!.daysAvailable, selection: dm.profile!.daysAvailable[0])
-                    .environmentObject(vm)
-                    .padding(.top)
             }
         }
     }

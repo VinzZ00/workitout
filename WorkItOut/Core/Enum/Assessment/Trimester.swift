@@ -13,6 +13,10 @@ enum Trimester: String, UserPreference {
     case third = "Third"
     case all = "All"
     
+    static func getTrimesterExceptAll() -> [Trimester] {
+        return [.first, .second, .third]
+    }
+    
     func getString() -> String {
         return self.rawValue
     }

@@ -11,6 +11,8 @@ struct HeaderTodayView: View {
     @EnvironmentObject var vm: HomeViewModel
     @EnvironmentObject var dm : DataManager
     
+//    @Binding var scrollPosition: Day?
+    
     var body: some View {
         VStack {
             HStack {
@@ -22,7 +24,7 @@ struct HeaderTodayView: View {
                         .font(.caption)
                 }
                 Spacer()
-                NavigationLink{
+                NavigationLink {
                     HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
                 } label: {
                     HomeButtonView(icon: "clock.arrow.circlepath")
@@ -32,6 +34,7 @@ struct HeaderTodayView: View {
                 } label: {
                     HomeButtonView(icon: "person")
                 }
+                
             }
             HStack {
                 if let profile = dm.profile {
@@ -47,9 +50,10 @@ struct HeaderTodayView: View {
         .padding(.horizontal)
         .padding(.bottom)
         .background(Color.white)
+        
     }
 }
 
-#Preview {
-    HeaderTodayView()
-}
+//#Preview {
+//    HeaderTodayView()
+//}
