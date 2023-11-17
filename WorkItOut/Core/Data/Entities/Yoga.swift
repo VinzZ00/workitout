@@ -7,10 +7,6 @@
 
 import Foundation
 import CoreData
-//enum WorkoutState {
-//    case onProgress
-//    case finished
-//}
 
 struct Yoga: Identifiable, Hashable, Entity {
     var id : UUID = UUID()

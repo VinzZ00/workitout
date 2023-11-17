@@ -38,7 +38,7 @@ struct NotificationView: View {
             vm.requestAuthorization()
             
         }
-        .onChange(of: currentDate) { newDate in
+        .onChange(of: currentDate) { _, newDate in
             if newDate == workoutDate{
                 vm.makeNotification(title: "Workout", subtitle: "Today is your schedule to workout")
             }

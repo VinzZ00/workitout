@@ -18,7 +18,7 @@ struct AddHistoryUseCase {
                 fatalError("Error getting workout : the profile is empty");
             }
             
-            var nsHistory = history.intoNSObject(context: context, parentProfileNS: profile) as! HistoryNSObject
+            let nsHistory = history.intoNSObject(context: context, parentProfileNS: profile) as! HistoryNSObject
             
             let nsYoga = ((profile.plan!.allObjects as! [YogaPlanNSObject]).first{ $0.uuid == yogaPlan.id}?
                 .yogas!.allObjects as! [YogaNSObject]).first { $0.uuid
@@ -40,7 +40,7 @@ struct AddHistoryUseCase {
                 }
                 try context.save();
             case .failure(let err) :
-                print("Error delete the duplicate row")
+                print("Error delete the duplicate row: \(err)")
             }
         case .failure(let err):
             fatalError("Error getting workout : \(err.localizedDescription)")

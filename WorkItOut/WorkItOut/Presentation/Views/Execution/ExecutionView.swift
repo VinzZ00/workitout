@@ -276,7 +276,9 @@ struct ExecutionView: View {
         }
         
         .onAppear{
-            vm.checkBox = vm.accessUserDefault()
+            if let valueUserDefault = vm.accessUserDefault() {
+                vm.checkBox = valueUserDefault
+            }
             if !vm.checkBox {
                 vm.showTips = true
             }

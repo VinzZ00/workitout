@@ -6,7 +6,7 @@
 //
 import CoreData
 import XCTest
-@testable import WorkItOut
+@testable import Mamaste
 
 final class WorkitOutTests: XCTestCase {
 
@@ -36,8 +36,17 @@ final class WorkitOutTests: XCTestCase {
 
     func testAddAndFetchCoreData() async throws {
         if let moc = self.moc {
-            
-            
+            let pose = Pose(id: UUID())
+            var yoga = Yoga()
+            yoga.poses.append(pose)
+            var yogaPlanAll = YogaPlan(id: UUID(), name: "Yoga Plan 1", trimester: .all)
+            var yogaPlanFirst = YogaPlan(id: UUID(), name: "Yoga Plan 1", trimester: .first)
+            var yogaPlanSecond = YogaPlan(id: UUID(), name: "Yoga Plan 1", trimester: .second)
+            var yogaPlanThird = YogaPlan(id: UUID(), name: "Yoga Plan 1", trimester: .third)
+            yogaPlanAll.yogas.append(yoga)
+            yogaPlanFirst.yogas.append(yoga)
+            yogaPlanSecond.yogas.append(yoga)
+            yogaPlanThird.yogas.append(yoga)
             testRecord = Profile(
                 name: "Testing add and fetch",
                 currentPregnancyWeek: 2,
@@ -46,54 +55,46 @@ final class WorkitOutTests: XCTestCase {
                 daysAvailable: [.monday, .wednesday, .friday],
                 timeOfDay: .evening,
                 preferredDuration: .tenMinutes,
-                plan: [
-                    YogaPlan(id: UUID(), name: "Plan 1", yogas: [
-                        Yoga(id: UUID(), name: "Yoga 1", poses: [
-                            Pose(id: UUID(), name: "Pose1", altName: "altName", category: .seatedPose, difficulty: .beginner, exception: [.vertigo], recommendedTrimester: .all, relieve: [.back], description: "Desc 1", seconds: 12, state: .completed)
-                        ], day: .monday, estimationDuration: 12, image: "Image 1")
-                    ], trimester: .all)
-                ],
+                plan: [yogaPlanFirst, yogaPlanThird, yogaPlanSecond,yogaPlanAll ],
                 histories: [],
                 exceptions: []
-            );
-
+            )
             
             if let testRecord = testRecord {
-                await addUsecase?.call(profile: testRecord, context: moc)
+                try await addUsecase?.call(profile: testRecord, context: moc)
             }
             
-            let fetchRes = await fetchUsecase?.call(context: moc);
+            let fetchRes = try await fetchUsecase?.call(context: moc);
             
             XCTAssertEqual(fetchRes?.last?.name, testRecord!.name, "Done the test")
-            
         }
     }
     
     func testUpdate() async throws {
         if let moc = self.moc {
-            let fetchRes = await fetchUsecase?.call(context: moc)
+            let fetchRes = try await fetchUsecase?.call(context: moc)
             if fetchRes?.last != nil {
                 var p = fetchRes!.last!
                 p.name = "Elvin Sestomi"
                 
-                await UpdateProfileUseCase().call(profile: p, context: moc)
+                try await UpdateProfileUseCase().call(profile: p, context: moc)
                 
-                let newFetchRequest = await fetchUsecase?.call(context: moc)
+                let newFetchRequest = try await fetchUsecase?.call(context: moc)
                 
-                XCTAssertEqual(newFetchRequest!.last!.name, "Elvin Sestomi")
+                XCTAssertEqual(newFetchRequest!.last!.name, "Elvin Sestomi", "Done")
             }
         }
     }
     
     func testUpdateAddingException() async throws {
-        let fetchRes = await fetchUsecase?.call(context: moc!)
+        let fetchRes = try await fetchUsecase?.call(context: moc!)
         
         var newProfile = fetchRes![fetchRes!.count - 1]
         newProfile.exceptions.append(Exception.vertigo)
         
-        await UpdateProfileUseCase().call(profile: newProfile, context: moc!)
+        try await UpdateProfileUseCase().call(profile: newProfile, context: moc!)
         
-        let afterUpdate = await fetchUsecase?.call(context: moc!)
+        let afterUpdate = try await fetchUsecase?.call(context: moc!)
         
         XCTAssertEqual(afterUpdate!.last!.exceptions.map{$0.rawValue}.joined(separator: ", "), newProfile.exceptions.map{$0.rawValue}.joined(separator: ", "), "Done the update test")
         

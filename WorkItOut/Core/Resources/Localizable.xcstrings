@@ -618,7 +618,6 @@
 
     },
     "Foot" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -1176,6 +1175,9 @@
           }
         }
       }
+    },
+    "Sciatic" : {
+
     },
     "Seated Pose" : {
       "localizations" : {

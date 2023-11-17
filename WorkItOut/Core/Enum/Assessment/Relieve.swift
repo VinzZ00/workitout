@@ -13,10 +13,10 @@ enum Relieve: String, UserPreference {
     case neck = "Neck"
     case leg = "Leg"
     case pelvic = "Pelvic"
-//    case sciatic = "Sciatic"
-//    case ankle = "Ankle"
-//    case foot = "Foot"
-//    case knee = "Knee"
+    case sciatic = "Sciatic"
+    case ankle = "Ankle"
+    case foot = "Foot"
+    case knee = "Knee"
     
     func getString() -> String {
         return self.rawValue
@@ -34,14 +34,14 @@ enum Relieve: String, UserPreference {
             return "Leg"
         case .pelvic:
             return "Pelvic"
-//        case .sciatic:
-//            return "Sciatic"
-//        case .ankle:
-//            return "Ankle"
-//        case .foot:
-//            return "Foot"
-//        case .knee:
-//            return "Knee"
+        case .sciatic:
+            return "Sciatic"
+        case .ankle:
+            return "Ankle"
+        case .foot:
+            return "Foot"
+        case .knee:
+            return "Knee"
         }
     }
     

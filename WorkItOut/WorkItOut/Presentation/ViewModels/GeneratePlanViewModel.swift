@@ -15,13 +15,13 @@ class GeneratePlanViewModel: ObservableObject {
     @Published var finish: Bool = false
 
     func addProfileToCoreData(profile: Profile, moc: NSManagedObjectContext) async throws {
-        var addProfile: AddProfileUseCase = AddProfileUseCase()
+        let addProfile: AddProfileUseCase = AddProfileUseCase()
         try await addProfile.call(profile: profile, context: moc)
 
-        var fetchProfile = FetchProfileUseCase()
+        let fetchProfile = FetchProfileUseCase()
 
         do {
-            let fetchRes = try await fetchProfile.call(context: moc)
+            _ = try await fetchProfile.call(context: moc)
         } catch {
             print("error")
         }
