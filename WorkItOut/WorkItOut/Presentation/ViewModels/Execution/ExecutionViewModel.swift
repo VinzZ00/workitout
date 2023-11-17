@@ -28,6 +28,7 @@ class ExecutionViewModel: ObservableObject {
     @Published var textSwitch : Bool = false
     @Published var avPlayer : AVPlayer?
     
+    var addHist : AddHistoryUseCase = AddHistoryUseCase()
     
     init(yoga: Yoga) {
         self.yoga = yoga
@@ -97,9 +98,16 @@ class ExecutionViewModel: ObservableObject {
         }
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
         profile.plan[yogaPlanIndex].yogas[yogaIndex].yogaState = .completed
-        let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
-        profile.histories.append(history)
-        try await self.update.call(profile: profile, context: context)
+        
+//        profile.histories.append(history)
+//        try await self.update.call(profile: profile, context: context)
+        let yoga = profile.plan[yogaPlanIndex].yogas[yogaIndex]
+        let yogaPlan = profile.plan[yogaPlanIndex]
+        let history = History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 5, rating: 5)
+        
+        
+        
+        try await self.addHist.call(history: history, context: context, yoga: yoga, yogaPlan: yogaPlan)
     }
     
     func loadVideo(urlString : String = "https://youtu.be/moCuqURlEyY?t=74"){

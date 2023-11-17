@@ -11,7 +11,7 @@ import CoreData
 struct AddHistoryUseCase {
     var repo = Repository()
     
-    func call(history : History, context : NSManagedObjectContext, yoga : Yoga) async throws{
+    func call(history : History, context : NSManagedObjectContext, yoga : Yoga, yogaPlan : YogaPlan) async throws{
         switch try await repo.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
         case .success(let data):
             guard let profile = (data as! [ProfileNSObject]).last else {
@@ -20,20 +20,73 @@ struct AddHistoryUseCase {
             
             var nsHistory = history.intoNSObject(context: context, parentProfileNS: profile) as! HistoryNSObject
             
-            let yoga = yoga.intoNSObject(context: context, parentHistoryNS: nsHistory) as? YogaNSObject
+            let nsYoga = ((profile.plan!.allObjects as! [YogaPlanNSObject]).first{ $0.uuid == yogaPlan.id}?
+                .yogas!.allObjects as! [YogaNSObject]).first { $0.uuid
+                    ==  yoga.id}!
+            
+            // ganti yogaState
+            nsYoga.setValue("completed", forKey: "yogaState")
+            
+            // tambah history
+            nsYoga.ofHistory = nsHistory
             
             
-            // Validasi supaya tidak yogaplan tidak kosong.
-            if let _ = yoga?.ofYogaPlan {
-                nsHistory.yogaDone = yoga!
-            }
             
-            nsHistory.yogaDone = yoga
+//            profile.addToHistories(nsHistory)
+            
+            try await repo.coreData.updateToCoreData(entity: nsYoga, context: context)
+//
+//            let yogaPlanNS = (profile.plan?.allObjects as! [YogaPlanNSObject]).first(where: { p in
+//                p.uuid == yogaPlan.id
+//            })
+//            
+//            let yogaNS = (yogaPlanNS?.yogas?.allObjects as! [YogaNSObject]).first { yg in
+//                yg.uuid == yoga.id
+//            }
+//            
+//            yogaNS?.ofHistory = nsHistory
+//            
+//            try await repo.coreData.updateToCoreData(entity: yogaNS!, context: context)
+//            
+//            
             
             
-            try await repo.coreData.saveToCoreData(entity: nsHistory, context: context)
             
             
+//            let yoga = yoga.intoNSObject(context: context, parentHistoryNS: nsHistory) as? YogaNSObject
+            
+            
+//            switch try await repo.coreData.fetchFromCoreData(context: context, entity: YogaNSObject.self) {
+//            case .success(let data):
+//                let yogaNS = (data as? [YogaNSObject])?.first(where: { yg in
+//                    yg.uuid == yoga.id
+//                });
+//                yogaNS?.yogaState = yoga.yogaState.rawValue
+//                nsHistory.yogaDone = yogaNS
+//                print("yogaNS?.ofYogaPlan : \(yogaNS?.ofYogaPlan)")
+//                
+//                switch try await repo.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
+//                case .success(let fetchres) :
+//                    var prof = fetchres as! [ProfileNSObject]
+//                    
+//                    var profile = prof.last;
+//                case .failure(_):
+//                    print("failed")
+//                }
+//                
+//                
+//                try await repo.coreData.saveToCoreData(entity: nsHistory, context: context)
+//                
+//            case .failure(let err):
+//                fatalError("Error getting Yoga : \(err.localizedDescription)")
+//            }
+//            
+//    
+//            
+//            
+//            
+//            
+//            
         case .failure(let err):
             fatalError("Error getting workout : \(err.localizedDescription)")
         }
