@@ -11,6 +11,7 @@ struct HomeCurrentYogaView: View {
     @EnvironmentObject var vm: HomeViewModel
     
     let yoga: Yoga?
+    let date : Date
     
     var df : DateFormatter {
         var f = DateFormatter();
@@ -20,11 +21,11 @@ struct HomeCurrentYogaView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            if let yogaData = vm.yoga {
+            if let yogaData = yoga {
                 ZStack(alignment: .bottom) {
                     Image("YogaPlanImage")
                     VStack(alignment: .leading) {
-                        Text("\(df.string(from: vm.selectedDate))")
+                        Text("\(df.string(from: date))")
                             .font(.title3)
                             .bold()
                         Text(yogaData.name)
@@ -53,7 +54,7 @@ struct HomeCurrentYogaView: View {
                 ZStack(alignment: .bottom) {
                     Image("NoYoga")
                     VStack(alignment: .leading) {
-                        Text("\(df.string(from: vm.selectedDate))")
+                        Text("\(df.string(from: date))")
                             .font(.title3)
                             .bold()
                         Text("Take a break, Enjoy Your day!")
