@@ -97,6 +97,7 @@
 		AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC02AEA62E200C8ED8A /* CameraView.swift */; };
 		AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */; };
 		AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC72AEA751500C8ED8A /* Array.swift */; };
+		AC7B06ED2B074DE1006F9940 /* AddHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */; };
 		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
 		ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */; };
 		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
@@ -242,6 +243,7 @@
 		AC71EEC02AEA62E200C8ED8A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPoint.swift; sourceTree = "<group>"; };
 		AC71EEC72AEA751500C8ED8A /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHistoryUseCase.swift; sourceTree = "<group>"; };
 		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSourceDelegate.swift; sourceTree = "<group>"; };
 		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
@@ -727,6 +729,7 @@
 				ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */,
 				ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */,
 				ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */,
+				AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1110,6 +1113,7 @@
 				6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
+				AC7B06ED2B074DE1006F9940 /* AddHistoryUseCase.swift in Sources */,
 				6C85C0782B0154220076B057 /* UserConsentView.swift in Sources */,
 				6C12291B2B04969900DE2A46 /* PlanBodyView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
