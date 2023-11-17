@@ -101,7 +101,7 @@ struct GenerateViewPlanV2: View {
                                                 }
                                                 
                                                 ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
-                                                    YogaCardView(name: pose.name)
+                                                    YogaCardView(pose: pose)
                                                 }
                                             }
                                         
