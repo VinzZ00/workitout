@@ -8,7 +8,6 @@
 import SwiftUI
 
 
-// MARK: Elvin minta tolon bikin calendar
 struct HomeWeekIndicatorView: View {
     @EnvironmentObject var vm: HomeViewModel
     @EnvironmentObject var dm : DataManager

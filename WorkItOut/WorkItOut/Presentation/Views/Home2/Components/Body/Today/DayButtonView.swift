@@ -60,7 +60,6 @@ struct DayButtonView: View {
             }
         })
         
-        
     }
 }
 

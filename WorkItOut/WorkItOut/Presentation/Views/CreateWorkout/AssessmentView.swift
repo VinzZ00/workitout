@@ -25,7 +25,7 @@ struct AssessmentView: View {
                     case .chooseDay:
                         AssessmentDetailMultipleChoiceView(title: avm.state.getLocalizedString().title, explanation: "(Pick Three)", selectedItems: $avm.days, selections: Day.allCases, limit: 3)
                     case .chooseDuration:
-                        AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.durationExercise, selections: Duration.allCases)
+                    AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.durationExercise, selections: Duration.allCases)
                     case .chooseExperience:
                         AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.experience, selections: Difficulty.allCases)
                     case .chooseTime:
@@ -53,7 +53,9 @@ struct AssessmentView: View {
                 }
             })
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView()
+//                GeneratePlanView()
+//                    .environmentObject(avm)
+                GenerateViewPlanV2()
                     .environmentObject(avm)
             }
             .toolbar {

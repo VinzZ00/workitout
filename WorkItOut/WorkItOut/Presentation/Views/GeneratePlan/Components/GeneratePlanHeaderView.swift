@@ -34,9 +34,9 @@ struct GeneratePlanHeaderView: View {
                     .padding(.horizontal)
                         
                 }
-                DayPickerView(days: dm.profile!.daysAvailable, selection: dm.profile!.daysAvailable[0])
-                    .environmentObject(vm)
-                    .padding(.top)
+//                DayPickerView(days: dm.profile!.daysAvailable, selection: dm.profile!.daysAvailable[0])
+//                    .environmentObject(vm)
+//                    .padding(.top)
             }
         }
     }

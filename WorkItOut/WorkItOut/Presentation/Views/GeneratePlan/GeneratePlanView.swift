@@ -23,7 +23,7 @@ struct GeneratePlanView: View {
                 GeneratePlanHeaderView()
                     .environmentObject(vm)
                 ScrollListenerViewBuilder(scrollTarget: $vm.scrollTarget, showContent: $vm.showHeader) {
-                    GeneratePlanYogaView()
+                    GeneratePlanYogaView(yogaPlan: dm.profile!.yogaPlan)
                         .environmentObject(vm)
                 }
                 VStack {

@@ -28,6 +28,8 @@ class HomeViewModel: ObservableObject {
     @Published var showHeader: Bool = true
     @Published var showProfile: Bool = false
     
+    @Published var scrollPosition: Day?
+    
     @Published var handmadeYogaPlans: [Relieve : [YogaPlan]] = [:]
     
     init(profile: Profile = Profile()) {
@@ -36,7 +38,6 @@ class HomeViewModel: ObservableObject {
         self.yogaPlans = profile.plan
         self.profile = profile
     }
-    
 
     func loadProfile(moc : NSManagedObjectContext) async throws {
         let fetchedProfile = try await fetch.call(context: moc)
@@ -50,7 +51,6 @@ class HomeViewModel: ObservableObject {
             
             if !profile.plan.isEmpty {
                 self.initHandmadeYogaPlans()
-                print("handmade loaded")
             }
             
             self.objectWillChange.send()
@@ -87,9 +87,7 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    
     func initMonth() {
-        
         let DisplayWeek = self.week /* checkingWeek */ - self.profile.currentPregnancyWeek /* weekXpreg; */
         
         // MARK: TO GET THE CURRENT WEEK OF THE YEAR
@@ -98,13 +96,16 @@ class HomeViewModel: ObservableObject {
         let pregDate = calendar.date(byAdding: .weekOfYear, value: -self.profile.currentPregnancyWeek, to: currentDate)
         let weekOfPreg = calendar.dateComponents([.weekOfYear], from: pregDate!)
         let woy = self.profile.currentPregnancyWeek + weekOfPreg.weekOfYear! + DisplayWeek
-        
         // MARK: TO GET CURRENT YEAR
         let year = calendar.dateComponents([.year], from: currentDate).year!
         
         // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
+        let weekDay = calendar.dateComponents([.weekday], from: currentDate)
+        guard let intWeekDay = weekDay.weekday else {
+            return
+        }
+        day = Day.getDayFromInt(int: intWeekDay)
         let displayDate = day.dateForWeekday(week: woy, year: year);
-        
         self.selectedDate = displayDate
         
         let df = DateFormatter()
@@ -122,6 +123,11 @@ class HomeViewModel: ObservableObject {
     
     var yoga: Yoga? {
         return yogaPlan?.yogas.first(where: {$0.day == day})
+    }
+    
+    func getYogaByDay(day: Day) -> Yoga? {
+        let yoga = yogaPlan?.yogas.first(where: {$0.day == day})
+        return yoga
     }
     
     func previousWeek() {
@@ -152,5 +158,19 @@ class HomeViewModel: ObservableObject {
     
     func getHandmadeYogaPlans(relieve: Relieve) -> [YogaPlan] {
         return self.handmadeYogaPlans[relieve] ?? self.yogaPlans
+    }
+    
+    func changeDay(day: Day) -> Date {
+        var calendar = Calendar.current
+        let currentDate = Date()
+        let pregDate = calendar.date(byAdding: .weekOfYear, value: -profile.currentPregnancyWeek, to: currentDate)
+        let weekOfPreg = calendar.dateComponents([.weekOfYear], from: pregDate!)
+        let woy = profile.currentPregnancyWeek + weekOfPreg.weekOfYear!
+        
+        // MARK: TO GET CURRENT YEAR
+        let year = calendar.dateComponents([.year], from: currentDate).year!
+        
+        // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
+        return day.dateForWeekday(week: woy, year: year)
     }
 }

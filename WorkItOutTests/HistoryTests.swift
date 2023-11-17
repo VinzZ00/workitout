@@ -56,6 +56,8 @@ final class HistoryTests: XCTestCase {
         }
     }
 
+    
+    
     func testCategorizeHistoryByDate() {
         // Initliaze
         let poses = [

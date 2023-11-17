@@ -9,6 +9,10 @@ import SwiftUI
 
 struct HomeCurrentYogaView: View {
     @EnvironmentObject var vm: HomeViewModel
+    
+    let yoga: Yoga?
+    let date : Date
+    
     var df : DateFormatter {
         let f = DateFormatter();
         f.dateFormat = "EEEE, dd MMMM"
@@ -17,35 +21,24 @@ struct HomeCurrentYogaView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Spacer()
-            if let yoga = vm.yoga {
-                ZStack(alignment: .bottom){
-                    Image(yoga.poses.isEmpty ? "NoYoga" : "YogaPlanImage")
+            if let yogaData = yoga {
+                ZStack(alignment: .bottom) {
+                    Image("YogaPlanImage")
                     VStack(alignment: .leading) {
-                        Text("\(df.string(from: vm.selectedDate))")
+                        Text("\(df.string(from: date))")
                             .font(.title3)
                             .bold()
-                        if yoga.poses.isEmpty {
-                            Text("Take a break, Enjoy Your day!")
-                                .font(.largeTitle)
-                                .bold()
-                                .padding(.vertical)
+                        Text(yogaData.name)
+                            .font(.largeTitle)
+                            .bold()
+                        Text("\(yogaData.poses.count) Exercise (\(yogaData.totalDurationMinute()) Min)")
+                            .font(.body)
+                        if yogaData.yogaState == .completed {
+                            ButtonComponent(title: "Completed", color: Color.black.opacity(0.1), textColor: Color.green) {}
                         }
                         else {
-                            Text(yoga.name)
-                                .font(.largeTitle)
-                                .bold()
-                            Text("\(yoga.poses.count) Exercise (\(yoga.totalDurationMinute()) Min)")
-                                .font(.body)
-                            if yoga.yogaState == .completed {
-                                ButtonComponent(title: "Completed", color: Color.black.opacity(0.1), textColor: Color.green) {
-//                                    vm.toggleSheet(yoga: yoga)
-                                }
-                            }
-                            else {
-                                ButtonComponent(title: "Start Exercise") {
-                                    vm.toggleSheet(yoga: yoga)
-                                }
+                            ButtonComponent(title: "Start Exercise") {
+                                vm.toggleSheet(yoga: yogaData)
                             }
                         }
                     }
@@ -56,11 +49,12 @@ struct HomeCurrentYogaView: View {
                     .borderedCorner()
                 }
                 .borderedCorner()
-            }else{
-                ZStack(alignment: .bottom){
+            }
+            else{
+                ZStack(alignment: .bottom) {
                     Image("NoYoga")
                     VStack(alignment: .leading) {
-                        Text("\(df.string(from: vm.selectedDate))")
+                        Text("\(df.string(from: date))")
                             .font(.title3)
                             .bold()
                         Text("Take a break, Enjoy Your day!")
@@ -82,6 +76,6 @@ struct HomeCurrentYogaView: View {
 }
 
 
-#Preview {
-    HomeCurrentYogaView()
-}
+//#Preview {
+//    HomeCurrentYogaView()
+//}

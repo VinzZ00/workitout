@@ -15,13 +15,10 @@ struct ExecutionView: View {
     @StateObject var vm : ExecutionViewModel
     @StateObject var timerVm : TimerViewModel = TimerViewModel()
     @Environment(\.presentationMode) var presentationMode
-    @State var textSwitch = false
     @State var previousDisabled = true
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
     @State var showAlert = false
-    @State var showTips = false
-    @State var checkBox = false
     @Binding var path :  NavigationPath
     
     var body: some View {
@@ -50,7 +47,7 @@ struct ExecutionView: View {
                                 .animation(.default, value: vm.index)
                                 .contentTransition(.numericText(value: Double(vm.index)))
                             Button{
-                                
+                                // Vision
                             }label: {
                                 ZStack{
                                     Circle()
@@ -81,20 +78,19 @@ struct ExecutionView: View {
                         }
                     }
                     .padding()
-                    if textSwitch == false {
+                    if vm.textSwitch == false {
+                        Spacer()
                         Text("Get Started")
                             .font(.system(size: 48))
                             .bold()
-                            .padding(50)
+                        Spacer()
                     }
                     else {
+                        Spacer()
                         VStack {
                             Text("\(timerVm.currentTime())")
                                 .font(.system(size: 60))
                                 .bold()
-                                .onReceive(timerVm.timer){ _ in
-                                    timerVm.updateCurrentTime()
-                                }
                                 .animation(.default, value: timerVm.timeRemaining)
                                 .contentTransition(.numericText(value: timerVm.timeRemaining))
                             ZStack(alignment: .leading) {
@@ -102,7 +98,6 @@ struct ExecutionView: View {
                                 .frame(width: 240, height: 12)
                                 .opacity(0.3)
                                 .foregroundColor(.gray)
-
                               Rectangle()
                                 .frame(width: progress * 240, height: 12)
                                 .foregroundColor(.primary)
@@ -110,21 +105,18 @@ struct ExecutionView: View {
                             }
                             .cornerRadius(15)
                             .onReceive(timerVm.timer) { _ in
-                              if progress < 1.0 {
-                                  progress += 0.01/Double(vm.poses[vm.index].seconds-1)
-                              }
+                                if progress < 1.0 {
+                                    progress += 1/Double(vm.poses[vm.index].seconds-1)
+                                }
                             }
                         }
-                        .onAppear(perform: {
-                            timerVm.startTimer(time: Double(vm.poses[vm.index].seconds))
-                        })
-                        .padding(14)
+                        Spacer()
                     }
                     HStack{
                         Button{
                             vm.previousPose()
                             if !(vm.index == 0){
-                                timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds))
+                                timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds + 2))
                             }
                         }label: {
                             ZStack{
@@ -180,7 +172,7 @@ struct ExecutionView: View {
                         Button{
                             vm.nextPose(skipped: true)
                             if !(vm.index + 1 >= vm.poses.count) {
-                                timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds))
+                                timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds + 2))
                             }
                         }label: {
                             ZStack{
@@ -208,11 +200,9 @@ struct ExecutionView: View {
                             previousDisabled = false
                         }
                         timerVm.isTimerPaused = false
-                        textSwitch = false
+                        vm.textSwitch = false
                         progress = 0.0
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                            self.textSwitch.toggle()
-                        }
+                        timerVm.startTimer(time: Double(vm.poses[vm.index].seconds + 2))
                     }
                     .onChange(of: timerVm.timesUp) { _, valueIsTrue in
                         if valueIsTrue {
@@ -225,21 +215,24 @@ struct ExecutionView: View {
                             path.append(1)
                         }
                     }
-                    .onChange(of: showTips) { _, valueIsTrue in
+                    .onChange(of: vm.showTips) { _, valueIsTrue in
                         if !valueIsTrue {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                                self.textSwitch.toggle()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                                vm.textSwitch.toggle()
                             }
                         }
                     }
+                    .onReceive(timerVm.timer) { _ in
+                        timerVm.updateCurrentTime()
+                        if Int(timerVm.timeRemaining) == vm.poses[vm.index].seconds {
+                            vm.textSwitch = true
+                        }
+                    }
+                    
                 }
             }
-            .onAppear {
-                showTips = true
-            }
-            if showTips {
-                TipView(showTips: $showTips, toggle: $checkBox)
-                    
+            if vm.showTips {
+                TipView(showTips: $vm.showTips, toggle: $vm.checkBox)
             }
             if showAlert {
                 ZStack{
@@ -283,7 +276,11 @@ struct ExecutionView: View {
         }
         
         .onAppear{
-            // Start AVPlayer Logic
+            vm.checkBox = vm.accessUserDefault()
+            if !vm.checkBox {
+                vm.showTips = true
+            }
+            timerVm.startTimer(time: Double(vm.poses[vm.index].seconds + 2))
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)

@@ -9,11 +9,12 @@ import SwiftUI
 
 struct YogaPreviewView: View {
     @EnvironmentObject var vm: HomeViewModel
-    var yoga: Yoga
+    var oldYoga: Yoga
+    var newYoga: Yoga
     
     var body: some View {
         VStack(alignment: .leading) {
-            ForEach(PoseManager.existingCategories(poses: yoga.poses), id: \.self) { category in
+            ForEach(PoseManager.existingCategories(poses: newYoga.poses), id: \.self) { category in
                 HStack {
                     Text(category.rawValue)
                         .font(.subheadline)
@@ -24,13 +25,14 @@ struct YogaPreviewView: View {
                         .foregroundStyle(Color.neutral6)
                 }
                 VStack(alignment: .leading) {
-                    ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
-                        YogaCardView(name: pose.name, min: pose.seconds)
+                    ForEach(PoseManager.getPosesByCategory(poses: newYoga.poses, category: category)) { pose in
+                        
+                        YogaCardView(pose: pose, added: !oldYoga.poses.contains(pose))
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
             }
-            .padding(.vertical)
+            
         }
     }
 }

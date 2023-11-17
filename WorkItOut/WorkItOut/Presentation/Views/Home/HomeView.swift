@@ -14,6 +14,7 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
     @State var alert : Bool = false
+    
     var body: some View {
         NavigationStack(path: $path){
             VStack {
@@ -51,7 +52,7 @@ struct HomeView: View {
                                 HStack {
                                     if let profile = dm.profile {
                                         ForEach(Day.allCases, id: \.self) { day in
-                                            DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
+//                                            DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
                                         } 
                                     }
                                 }
@@ -66,9 +67,8 @@ struct HomeView: View {
                 .background(.white)
                 
                 ScrollListenerViewBuilder(showContent: $vm.showHeader) {
-                    HomeCurrentYogaView()
-                        .environmentObject(vm)
-                    
+//                    HomeCurrentYogaView()
+//                        .environmentObject(vm)
                     VStack(alignment: .leading) {
                         Text("Exercise that might help you")
                             .font(.title2)
@@ -120,7 +120,7 @@ struct HomeView: View {
                 }
             })
             .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
+                YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.yoga!), sheetToggle: $vm.sheetToggle, path: $path)
                     .padding(.top)
             })
             .onAppear{

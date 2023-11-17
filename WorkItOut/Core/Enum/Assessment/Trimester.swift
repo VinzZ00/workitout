@@ -13,8 +13,25 @@ enum Trimester: String, UserPreference {
     case third = "Third"
     case all = "All"
     
+    static func getTrimesterExceptAll() -> [Trimester] {
+        return [.first, .second, .third]
+    }
+    
     func getString() -> String {
         return self.rawValue
+    }
+    
+    func getRomanString() -> String {
+        switch self {
+        case .first:
+            return "Trimester I"
+        case .second:
+            return "Trimester II"
+        case .third:
+            return "Trimester III"
+        case .all:
+            return "Trimester X"
+        }
     }
     
     func getLocalizedString() -> LocalizedStringResource {
