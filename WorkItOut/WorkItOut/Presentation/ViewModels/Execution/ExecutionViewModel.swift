@@ -21,6 +21,11 @@ class ExecutionViewModel: ObservableObject {
     @Published var end = false
     @Published var start = true
     
+    // Pregnancy Tips
+    @Published var showTips : Bool = false
+    @Published var checkBox : Bool = false
+    
+    @Published var textSwitch : Bool = false
     @Published var avPlayer : AVPlayer?
     
     
@@ -28,10 +33,6 @@ class ExecutionViewModel: ObservableObject {
         self.yoga = yoga
         getPose()
     }
-    
-//    func addprofile(moc: NSManagedObjectContext) async throws {
-//         self.profile = try await fetch.call(context: moc).last!
-//    }
     
     func getTrimester() -> Int{
         if  1...13 ~= profile.currentPregnancyWeek {
@@ -46,16 +47,6 @@ class ExecutionViewModel: ObservableObject {
     func getYogaPlanIndex() -> Int {
         return profile.plan.firstIndex(where: {$0.trimester.getInt() == getTrimester()}) ?? -1
     }
-    
-//    func getYoga() {
-//        let date = 5 // ganti dengan hari ini
-//        
-//        for yoga in yogaPlan.yogas {
-//            if (yoga.day.getInt() == date) {
-//                self.yoga = yoga
-//            }
-//        }
-//    }
     
     func getPose() {
         for categori in PoseManager.existingCategories(poses: yoga.poses) {
@@ -117,5 +108,10 @@ class ExecutionViewModel: ObservableObject {
         }
         avPlayer = AVPlayer(url: url)
         avPlayer?.play()
+    }
+    
+    func accessUserDefault() -> Bool{
+        let defaults = UserDefaults.standard
+        return defaults.object(forKey: "skipPregnancyTips") as? Bool ?? false
     }
 }
