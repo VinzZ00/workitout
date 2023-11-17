@@ -20,8 +20,6 @@ struct ExecutionView: View {
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
     @State var showAlert = false
-    @State var showTips = false
-    @State var checkBox = false
     @Binding var path :  NavigationPath
     
     var body: some View {
@@ -225,7 +223,7 @@ struct ExecutionView: View {
                             path.append(1)
                         }
                     }
-                    .onChange(of: showTips) { _, valueIsTrue in
+                    .onChange(of: vm.showTips) { _, valueIsTrue in
                         if !valueIsTrue {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1){
                                 self.textSwitch.toggle()
@@ -234,12 +232,8 @@ struct ExecutionView: View {
                     }
                 }
             }
-            .onAppear {
-                showTips = true
-            }
-            if showTips {
-                TipView(showTips: $showTips, toggle: $checkBox)
-                    
+            if vm.showTips {
+                TipView(showTips: $vm.showTips, toggle: $vm.checkBox)
             }
             if showAlert {
                 ZStack{
@@ -283,7 +277,10 @@ struct ExecutionView: View {
         }
         
         .onAppear{
-            // Start AVPlayer Logic
+            vm.checkBox = vm.accessUserDefault()
+            if !vm.checkBox {
+                vm.showTips = true
+            }
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)
