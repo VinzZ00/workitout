@@ -11,7 +11,7 @@ struct HeaderTodayView: View {
     @EnvironmentObject var vm: HomeViewModel
     @EnvironmentObject var dm : DataManager
     
-    @Binding var scrollPosition: Day?
+//    @Binding var scrollPosition: Day?
     
     var body: some View {
         VStack {

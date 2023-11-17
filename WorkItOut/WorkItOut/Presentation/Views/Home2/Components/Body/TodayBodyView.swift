@@ -11,7 +11,7 @@ struct TodayBodyView: View {
     @EnvironmentObject var vm: HomeViewModel
     @EnvironmentObject var dm: DataManager
     
-    @Binding var scrollPosition: Day?
+    @State var scrollPosition: Day?
     
     var body: some View {
         VStack {

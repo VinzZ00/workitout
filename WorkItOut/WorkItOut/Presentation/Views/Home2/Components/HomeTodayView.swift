@@ -46,10 +46,10 @@ struct HomeTodayView: View {
                     }
                 }
             }
-            
             .padding(.horizontal)
             .padding(.bottom)
             .background(Color.white)
+            
             VStack {
                 ScrollView(.horizontal) {
                     HStack {

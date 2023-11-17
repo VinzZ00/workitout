@@ -42,7 +42,6 @@ extension View {
 }
 
 struct GenerateViewPlanV2: View {
-    
     @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
     @EnvironmentObject var avm: AssessmentViewModel
     @Environment(\.managedObjectContext) var moc
@@ -60,21 +59,25 @@ struct GenerateViewPlanV2: View {
     
     var body: some View {
         NavigationStack {
-            VStack (alignment: .leading){
+            VStack (alignment: .leading) {
                 
                 // MARK: Header Section
                 VStack {
-                    // MARK: Header Design
-                    GeneratePlanHeaderView()
-                        .environmentObject(vm)
-                    
-                    // MARK: Hstack Custom Picker
-                    HStack {
-                        ForEach(dm.profile!.daysAvailable, id : \.self) { d in
-                            DayPickView(selected: $selectedDay , day: d)
-                                .environmentObject(vm)
+                    VStack {
+                        // MARK: Header Design
+                        GeneratePlanHeaderView()
+                            .environmentObject(vm)
+                        
+                        // MARK: Hstack Custom Picker
+                        HStack(spacing: 0) {
+                            ForEach(dm.profile!.daysAvailable, id : \.self) { day in
+                                DayPickView(selected: $selectedDay , day: day)
+                                    .environmentObject(vm)
+                                    .font(.body)
+                            }
                         }
                     }
+                    .background(Color.white)
                     
                     // MARK: Content of the yogas by day
                     ScrollViewReader { prox in
@@ -110,20 +113,23 @@ struct GenerateViewPlanV2: View {
 //                                                addSize(size: geo.size)
 //                                            }
 //                                        }
-//                                    }
+            //                                    }
                                     .id(yoga.day.getInt())
                                     .offset("YogaDaySection") { rect in
                                         let minY = rect.minY
                                         
-                                        // MARK: Check whether the view is already scroll down about 30 point offset, in the ScrollOffsetKey.
-                                        if (minY < 30 && -minY < (rect.midY/2) && selectedDay.getInt() != yoga.day.getInt()) {
+                                        // MARK: Check whether the view is already scroll down about 10 point offset, in the ScrollOffsetKey.
+                                        if (minY < 10 && -minY < (rect.midY/2) && selectedDay.getInt() != yoga.day.getInt()) {
                                             withAnimation(.easeInOut(duration: 0.3)) {
-                                                selectedDay =  (minY < 30 && -minY < (rect.midY/2) && selectedDay.getInt() != yoga.day.getInt()) ? yoga.day : selectedDay;
+                                                selectedDay =  (minY < 10 && -minY < (rect.midY/2) && selectedDay.getInt() != yoga.day.getInt()) ? yoga.day : selectedDay;
                                             }
                                         }
                                     }
                                 }
                             }
+                            .padding()
+                            .background(Color.white)
+                            .padding(.vertical)
                             // MARK: Reset all Size of the view
                             .onAppear {
                                 self.sizes = []
@@ -144,7 +150,6 @@ struct GenerateViewPlanV2: View {
                             .background(GeometryReader {
                                 Color.clear.preference(key: ViewOffsetKey.self, value: -$0.frame(in: .named("scroll")).origin.y)
                             })
-                            
                             // MARK: Listening change to the view generated value
                             .onPreferenceChange(ViewOffsetKey.self) {
                                 print("offset >> \($0)")
@@ -159,14 +164,30 @@ struct GenerateViewPlanV2: View {
                     }
                     .coordinateSpace(name: "YogaDaySection")
                 }
-                .padding(.horizontal, 16)
+//                .padding(.horizontal, 16)
+                VStack {
+                    ButtonComponent(title: "Finish") {
+                        Task{
+                            if let prof = dm.profile {
+                                do {
+                                    try await vm.addProfileToCoreData(profile: prof, moc: moc)
+                                } catch {
+                                    
+                                }
+                            }
+                            vm.finish.toggle()
+                            dm.hasNoProfile.toggle()
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+                .background(Color.white)
             }
-            
+            .background(Color.background)
             // MARK: ERROR Handling
             .alert(isPresented: self.$alert){
                 Alert(title: Text("Error"), message: Text("Sorry, your Profile is not saved, Please resave your profile"))
             }
-            
             // MARK: init selected day
             .onAppear{
                 guard let selectedDay = dm.profile?.daysAvailable[0] else {
@@ -174,7 +195,6 @@ struct GenerateViewPlanV2: View {
                     return
                 }
             }
-            
             .animation(.default, value: vm.showHeader)
             .navigationBarBackButtonHidden()
             .navigationTitle(vm.showHeader ? "" : String(localized: "Workout Plan for Beginner"))

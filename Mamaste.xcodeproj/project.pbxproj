@@ -450,16 +450,8 @@
 			isa = PBXGroup;
 			children = (
 				6C53C6EF2B05F9E90044EC06 /* GenerateViewPlanV2.swift */,
-				6C53C6F02B05F9E90044EC06 /* Components */,
 			);
 			path = "Generate View Plan V2";
-			sourceTree = "<group>";
-		};
-		6C53C6F02B05F9E90044EC06 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		6C6F34CA2AE7B9390059E74D /* GlobalComponent */ = {
