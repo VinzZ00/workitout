@@ -25,6 +25,7 @@ class ExecutionViewModel: ObservableObject {
     @Published var showTips : Bool = false
     @Published var checkBox : Bool = false
     
+    @Published var textSwitch : Bool = false
     @Published var avPlayer : AVPlayer?
     
     
