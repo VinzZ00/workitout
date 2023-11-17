@@ -1136,8 +1136,8 @@
             filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/AddHistoryUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "call(history:context:yoga:yogaPlan:)"
             landmarkType = "7">
             <Locations>
@@ -1214,8 +1214,8 @@
             filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/AddHistoryUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "call(history:context:yoga:yogaPlan:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1230,8 +1230,8 @@
             filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/AddHistoryUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "call(history:context:yoga:yogaPlan:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1246,8 +1246,8 @@
             filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/AddHistoryUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "call(history:context:yoga:yogaPlan:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1262,8 +1262,8 @@
             filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/AddHistoryUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "call(history:context:yoga:yogaPlan:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1278,8 +1278,8 @@
             filePath = "WorkItOut/WorkItOut/Data/UseCases/CoreData/AddHistoryUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "call(history:context:yoga:yogaPlan:)"
             landmarkType = "7">
          </BreakpointContent>

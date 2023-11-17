@@ -78,7 +78,7 @@ struct UpdateProfileUseCase {
                 profilens.setValue(profile.exceptions.map{$0.rawValue}.joined(separator: ", "), forKey: "exceptions")
                 profilens.setValue(profile.timeOfDay.rawValue, forKey: "timeOfDay")
                 
-                try await repository.coreData.updateToCoreData( context: context)
+                try await repository.coreData.updateToCoreData(entity: profilens, context: context)
                 
             case .failure(let err) :
                 fatalError("Error Update, tidak berhasil melakukan fetch didalam updateUsecase with err : \(err.localizedDescription)")

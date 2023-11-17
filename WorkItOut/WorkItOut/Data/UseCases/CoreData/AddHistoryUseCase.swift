@@ -34,7 +34,20 @@ struct AddHistoryUseCase {
             
 //            profile.addToHistories(nsHistory)
             
-            try await repo.coreData.updateToCoreData(context: context)
+            try await repo.coreData.updateToCoreData(entity: nsYoga, context: context)
+            
+            switch try await repo.coreData.fetchFromCoreData(context: context, entity: YogaNSObject.self) {
+            case .success(let data) :
+                (data as! [YogaNSObject]).forEach { yg in
+                    if yg.ofYogaPlan == nil {
+                        context.delete(yg)
+                    }
+                }
+                
+                try context.save();
+            case .failure(let err) :
+                print("erorr delete the duplicate row")
+            }
 //
 //            let yogaPlanNS = (profile.plan?.allObjects as! [YogaPlanNSObject]).first(where: { p in
 //                p.uuid == yogaPlan.id
