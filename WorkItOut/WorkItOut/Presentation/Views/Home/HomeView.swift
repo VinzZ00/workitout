@@ -50,7 +50,7 @@ struct HomeView: View {
                             
                             if vm.showHeader {
                                 HStack {
-                                    if let profile = dm.profile {
+                                    if dm.profile != nil {
                                         ForEach(Day.allCases, id: \.self) { day in
 //                                            DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
                                         } 

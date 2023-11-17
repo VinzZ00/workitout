@@ -44,7 +44,7 @@ class CameraViewModel : ObservableObject {
             
             var points : [VNHumanBodyPoseObservation.JointName : (CGPoint, CGFloat)] = [:]
             
-            var jointPoint : [VNHumanBodyPoseObservation.JointName : CGPoint] = [:]
+            let jointPoint : [VNHumanBodyPoseObservation.JointName : CGPoint] = [:]
             
             self.keyPoints.forEach {  kp in
                 do {

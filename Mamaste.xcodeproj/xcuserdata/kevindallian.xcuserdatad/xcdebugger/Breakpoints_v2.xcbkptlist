@@ -14,9 +14,9 @@
             filePath = "WorkItOut/WorkItOut/Presentation/ViewModels/Execution/ExecutionViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "accessUserDefault()"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "loadVideo(urlString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

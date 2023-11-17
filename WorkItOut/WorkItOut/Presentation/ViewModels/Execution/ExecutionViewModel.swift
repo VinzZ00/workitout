@@ -12,7 +12,6 @@ import Foundation
 @MainActor
 class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
-    var update: UpdateProfileUseCase = UpdateProfileUseCase()
     @Published var profile: Profile = MockData.mockProfile
     @Published var yogaPlan: YogaPlan!
     @Published var yoga: Yoga = Yoga()
@@ -99,14 +98,9 @@ class ExecutionViewModel: ObservableObject {
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
         profile.plan[yogaPlanIndex].yogas[yogaIndex].yogaState = .completed
         
-//        profile.histories.append(history)
-//        try await self.update.call(profile: profile, context: context)
         let yoga = profile.plan[yogaPlanIndex].yogas[yogaIndex]
         let yogaPlan = profile.plan[yogaPlanIndex]
         let history = History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 5, rating: 5)
-        
-        
-        
         try await self.addHist.call(history: history, context: context, yoga: yoga, yogaPlan: yogaPlan)
     }
     
@@ -118,8 +112,8 @@ class ExecutionViewModel: ObservableObject {
         avPlayer?.play()
     }
     
-    func accessUserDefault() -> Bool{
+    func accessUserDefault() -> Bool?{
         let defaults = UserDefaults.standard
-        return defaults.object(forKey: "skipPregnancyTips") as? Bool ?? false
+        return defaults.object(forKey: "skipPregnancyTips") as? Bool
     }
 }

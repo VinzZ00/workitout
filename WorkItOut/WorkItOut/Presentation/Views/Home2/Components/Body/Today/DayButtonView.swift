@@ -20,7 +20,7 @@ struct DayButtonView: View {
         self.workoutDay = workoutDay
         self.day = day
         
-        let DisplayWeek = checkedWeek - weekXpreg;
+        let DisplayWeek = checkedWeek - weekXpreg
         
         // MARK: TO GET THE CURRENT WEEK OF THE YEAR
         let currentDate = Date()

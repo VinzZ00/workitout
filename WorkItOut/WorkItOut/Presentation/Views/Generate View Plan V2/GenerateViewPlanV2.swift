@@ -136,7 +136,7 @@ struct GenerateViewPlanV2: View {
                             }
                             
                             // MARK: Auto Scroll feature
-                            .onChange(of: vm.scrollTarget) { target in
+                            .onChange(of: vm.scrollTarget) { _, target in
                                 if let target = target {
                                     vm.scrollTarget = nil
                                     
@@ -190,7 +190,7 @@ struct GenerateViewPlanV2: View {
             }
             // MARK: init selected day
             .onAppear{
-                guard let selectedDay = dm.profile?.daysAvailable[0] else {
+                guard (dm.profile?.daysAvailable[0]) != nil else {
                     self.alert = true;
                     return
                 }
@@ -209,7 +209,7 @@ struct GenerateViewPlanV2: View {
                 }
             }
             .navigationDestination(isPresented: $vm.finish, destination: {
-                if let prof = dm.profile {
+                if dm.profile != nil {
                     HomeView(vm: HomeViewModel(profile: dm.profile!))
                 }
             })
