@@ -20,7 +20,7 @@ struct HomeCurrentYogaView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            if let yogaData = yoga {
+            if let yogaData = vm.yoga {
                 ZStack(alignment: .bottom) {
                     Image("YogaPlanImage")
                     VStack(alignment: .leading) {

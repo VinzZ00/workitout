@@ -126,7 +126,8 @@ class HomeViewModel: ObservableObject {
     }
     
     func getYogaByDay(day: Day) -> Yoga? {
-        return yogaPlan!.yogas.first(where: {$0.day == day})
+        let yoga = yogaPlan?.yogas.first(where: {$0.day == day})
+        return yoga
     }
     
     func previousWeek() {

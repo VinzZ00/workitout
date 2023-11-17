@@ -585,7 +585,6 @@
       }
     },
     "Finish" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -980,7 +979,6 @@
       }
     },
     "No Plan yet" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

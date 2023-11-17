@@ -18,14 +18,8 @@ struct TodayBodyView: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(Day.allCases, id: \.self) { day in
-                        if vm.days.contains(day) {
-                            HomeCurrentYogaView(yoga: vm.getYogaByDay(day: day))
-                                .frame(width: UIScreen.main.bounds.width)
-                        }
-                        else {
-                            HomeCurrentYogaView(yoga: nil)
-                                .frame(width: UIScreen.main.bounds.width)
-                        }
+                        HomeCurrentYogaView(yoga: vm.getYogaByDay(day: day))
+                            .frame(width: UIScreen.main.bounds.width)
                     }
                 }
                 .scrollTargetLayout()
