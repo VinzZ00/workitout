@@ -116,7 +116,6 @@ struct ExecutionView: View {
                         Button{
                             vm.previousPose()
                             if !(vm.index == 0){
-                                print("Previous Pose")
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds + 2))
                             }
                         }label: {
@@ -171,7 +170,6 @@ struct ExecutionView: View {
                         }
                         .padding(.horizontal, 50)
                         Button{
-                            print("Next Pose")
                             vm.nextPose(skipped: true)
                             if !(vm.index + 1 >= vm.poses.count) {
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds + 2))
@@ -226,10 +224,8 @@ struct ExecutionView: View {
                     }
                     .onReceive(timerVm.timer) { _ in
                         timerVm.updateCurrentTime()
-                        print(timerVm.timeRemaining)
                         if Int(timerVm.timeRemaining) == vm.poses[vm.index].seconds {
                             vm.textSwitch = true
-                            print("vm.textSwitch true")
                         }
                     }
                     
