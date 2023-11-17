@@ -16,7 +16,7 @@ struct AddProfileUseCase {
         let prof = profile
         
 //        do {
-            try await repository.coreData.saveToCoreData(entity: prof.intoNSObject(context: context), context: context)
+            try await repository.coreData.saveToCoreData( context: context)
             
 //        } catch let err{
 //            fatalError("Failed to save to coredata: \(err.localizedDescription)")

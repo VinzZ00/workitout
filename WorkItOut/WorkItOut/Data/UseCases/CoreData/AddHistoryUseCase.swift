@@ -34,7 +34,7 @@ struct AddHistoryUseCase {
             
 //            profile.addToHistories(nsHistory)
             
-            try await repo.coreData.updateToCoreData(entity: nsYoga, context: context)
+            try await repo.coreData.updateToCoreData(context: context)
 //
 //            let yogaPlanNS = (profile.plan?.allObjects as! [YogaPlanNSObject]).first(where: { p in
 //                p.uuid == yogaPlan.id
