@@ -37,11 +37,9 @@ struct ContentView: View {
         .onAppear {
             Task{
                 do {
-                    print("onAppear di ContentView")
                     dm.hasNoProfile = try await !dm.loadProfile(moc: moc)
                 } catch {
                     dm.hasNoProfile = false
-                    print("Masuk try catch di content view")
                 }
                 isLoading = false
             }

@@ -51,7 +51,6 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
         switch self {
         case .today:
             TodayBodyView()
-//            PlanBodyView()
         case .plan:
             PlanBodyView()
         case .explore:
@@ -64,7 +63,6 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
         switch self {
         case .today:
             HeaderTodayView()
-//            PlanHeaderView()
         case .plan:
             PlanHeaderView()
         case .explore:
@@ -89,6 +87,15 @@ struct TestHomeView: View {
                 
                 HomeTabView(selected: $selected)
             }
+            .onAppear{
+                Task{
+                    do {
+                        try await vm.loadProfile(moc: moc)
+                    } catch {
+                        self.alert = true
+                    }
+                }
+            }
             .ignoresSafeArea(edges: .bottom)
             .background(Color.background)
             .sheet(isPresented: $vm.showProfile, onDismiss: {
@@ -110,16 +117,9 @@ struct TestHomeView: View {
                     .navigationBarBackButtonHidden()
             }
         }
+        
         .environmentObject(vm)
-        .onAppear{
-            Task{
-                do {
-                    try await vm.loadProfile(moc: moc)
-                } catch {
-                    self.alert = true
-                }
-            }
-        }
+        
         .sheet(isPresented: $vm.sheetToggle, content: {
             YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.yoga!), sheetToggle: $vm.sheetToggle, path: $path)
                 .padding(.top)
