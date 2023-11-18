@@ -541,6 +541,7 @@
       }
     },
     "Exercise that might help you" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
