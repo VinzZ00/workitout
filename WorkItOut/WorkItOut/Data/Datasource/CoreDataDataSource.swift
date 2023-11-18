@@ -41,14 +41,6 @@ struct CoreDataDataSource : CoreDataDataSourceDelegate {
     }
 }
 
-//var ygpl = YogaPlan()
-//
-//@Environment(\.managedObjectContext) var moc : NSManagedObjectContext
-//
-//ygpl.yogas.first?.poses.first?.name = "yoga pose 1";
-//
-//UpdateYogaPlanUsecase().call(yogaPlan: ygpl, context: moc)
-
 
 
 

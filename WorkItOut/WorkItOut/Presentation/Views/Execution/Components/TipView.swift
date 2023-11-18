@@ -35,8 +35,9 @@ struct TipView: View {
                 
                 Button("Got It"){
                     withAnimation(.easeOut(duration: 0.25)) {
+                        
                         let defaults = UserDefaults.standard
-                        defaults.set(true, forKey: "skipPregnancyTips")
+                        defaults.set(toggle, forKey: "skipPregnancyTips")
                         showTips = false
                     }
                 }

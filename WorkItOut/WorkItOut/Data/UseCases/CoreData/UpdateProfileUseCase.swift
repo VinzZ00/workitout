@@ -21,7 +21,7 @@ struct UpdateProfileUseCase {
             }).map{$0.intoNSObject(context: context, parentProfileNS: profilens)}
             
             newHist.forEach { his in
-                var hist = his as! HistoryNSObject
+                let hist = his as! HistoryNSObject
                 
                 if ((profilens.histories!.contains(hist))) {
                     profilens.addToHistories(hist)

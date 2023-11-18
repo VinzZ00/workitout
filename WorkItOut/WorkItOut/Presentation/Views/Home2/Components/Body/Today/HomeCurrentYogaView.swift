@@ -14,7 +14,7 @@ struct HomeCurrentYogaView: View {
     let date : Date
     
     var df : DateFormatter {
-        var f = DateFormatter();
+        let f = DateFormatter();
         f.dateFormat = "EEEE, dd MMMM"
         return f
     }

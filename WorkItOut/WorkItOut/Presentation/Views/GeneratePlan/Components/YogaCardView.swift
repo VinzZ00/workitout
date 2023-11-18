@@ -25,7 +25,7 @@ struct YogaCardView: View {
         } label: {
             HStack {
                 VStack {
-                    if let image = UIImage(named: pose.name){
+                    if UIImage(named: pose.name) != nil{
                         PoseImageCard(name: pose.name, width: 70)
                     }else{
                         Rectangle()
@@ -71,7 +71,7 @@ struct YogaCardView: View {
                             .font(.body.bold())
                             .foregroundStyle(Color.primary)
                     }
-                    if let image = UIImage(named: pose.name){
+                    if UIImage(named: pose.name) != nil{
                         PoseImageCard(name: pose.name, width: 320)
                     }else{
                         Rectangle()
