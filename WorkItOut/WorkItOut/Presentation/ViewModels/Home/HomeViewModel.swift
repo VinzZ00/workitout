@@ -30,7 +30,7 @@ class HomeViewModel: ObservableObject {
     
     @Published var scrollPosition: Day?
     
-    @Published var currentPregnantDate : Date?
+    @Published var PregnantDate : Date?
     
     @Published var handmadeYogaPlans: [Relieve : [YogaPlan]] = [:]
     var getPregDate = UserDefaultGetUseCase()
@@ -46,7 +46,7 @@ class HomeViewModel: ObservableObject {
     
     func loadPregnantDate() {
         if let pregWeek = self.getPregDate.getpregnantDate() {
-            self.currentPregnantDate = pregWeek
+            self.PregnantDate = pregWeek
         } else {
             fatalError("PregnantDate is nil");
         }
