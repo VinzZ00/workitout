@@ -10,8 +10,11 @@ import SwiftUI
 struct VideoPlayerView: View {
     var videoURLManager = VideoURLManager()
     var body: some View {
-        WebView(url: videoURLManager.generateURL(videoID: "snYu2JUqSWs"))
-            .frame(width: 300, height: 200)
+        if let url = videoURLManager.generateURL(videoID: "snYu2JUqSWs") {
+            WebView(url: url)
+                .frame(width: 300, height: 200)
+        }
+        
     }
 }
 

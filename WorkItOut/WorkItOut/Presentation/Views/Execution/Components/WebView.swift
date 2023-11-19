@@ -20,7 +20,7 @@ struct WebView : UIViewRepresentable {
         webConfiguration.allowsPictureInPictureMediaPlayback = true
         
         var webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        
+        webView.sizeToFit()
         return webView
     }
     
@@ -29,3 +29,4 @@ struct WebView : UIViewRepresentable {
         webView.load(request)
     }
 }
+

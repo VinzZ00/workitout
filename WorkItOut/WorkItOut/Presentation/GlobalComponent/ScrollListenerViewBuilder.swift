@@ -27,7 +27,6 @@ struct ScrollListenerViewBuilder<Content: View>: View {
                         Color.clear.preference(key: ViewOffsetKey.self, value: -$0.frame(in: .named("scroll")).origin.y)
                     })
                     .onPreferenceChange(ViewOffsetKey.self) {
-//                        print("offset >> \($0)")
                         if $0 > 10 {
                             showContent = false
                         }

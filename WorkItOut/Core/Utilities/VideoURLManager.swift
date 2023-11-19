@@ -11,7 +11,7 @@ struct VideoURLManager {
     var scheme = "https"
     var youtubeHost = "www.youtube.com"
     
-    func generateURL(videoID: String) -> URL {
+    func generateURL(videoID: String) -> URL? {
         var components = URLComponents()
         components.scheme = self.scheme
         components.host = self.youtubeHost
@@ -21,6 +21,6 @@ struct VideoURLManager {
             URLQueryItem(name: "autoplay", value: "1"),
             URLQueryItem(name: "playlist", value: videoID)
         ]
-        return components.url!
+        return components.url
     }
 }
