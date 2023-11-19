@@ -76,4 +76,30 @@ enum Trimester: String, UserPreference {
             return 0
         }
     }
+    
+    func getTitle() -> LocalizedStringResource {
+        switch self {
+        case .first:
+            return "First Trimester: Beginnings and Growth"
+        case .second:
+            return "Second Trimester: Blossoming Strength"
+        case .third:
+            return "Third Trimester: Harmony and Culmination"
+        case .all:
+            return "Third Trimester: Harmony and Culmination"
+        }
+    }
+    
+    func getDesc() -> LocalizedStringResource {
+        switch self {
+        case .first:
+            return "Lay the foundation for your yoga journey with foundational poses and alignment."
+        case .second:
+            return "Experience a surge of energy as you embrace challenging poses and cultivate physical prowess."
+        case .third:
+            return "Celebrate the culmination of your yoga journey with a harmonious blend of strength, flexibility, and serenity."
+        case .all:
+            return "Celebrate the culmination of your yoga journey by finding harmony on and off the mat, integrating strength, flexibility, and serenity for a fulfilling and balanced practice."
+        }
+    }
 }

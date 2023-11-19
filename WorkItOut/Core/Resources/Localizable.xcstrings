@@ -357,6 +357,12 @@
         }
       }
     },
+    "Celebrate the culmination of your yoga journey by finding harmony on and off the mat, integrating strength, flexibility, and serenity for a fulfilling and balanced practice." : {
+
+    },
+    "Celebrate the culmination of your yoga journey with a harmonious blend of strength, flexibility, and serenity." : {
+
+    },
     "Color Picker" : {
 
     },
@@ -572,6 +578,9 @@
         }
       }
     },
+    "Experience a surge of energy as you embrace challenging poses and cultivate physical prowess." : {
+
+    },
     "Explore" : {
 
     },
@@ -615,7 +624,7 @@
         }
       }
     },
-    "First Trimester - New Beginnings" : {
+    "First Trimester: Beginnings and Growth" : {
 
     },
     "Foot" : {
@@ -830,6 +839,9 @@
           }
         }
       }
+    },
+    "Lay the foundation for your yoga journey with foundational poses and alignment." : {
+
     },
     "Leg" : {
       "localizations" : {
@@ -1210,6 +1222,9 @@
         }
       }
     },
+    "Second Trimester: Blossoming Strength" : {
+
+    },
     "Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. " : {
       "localizations" : {
         "id" : {
@@ -1570,6 +1585,9 @@
         }
       }
     },
+    "Third Trimester: Harmony and Culmination" : {
+
+    },
     "This session will not be saved" : {
       "localizations" : {
         "id" : {
@@ -1884,9 +1902,6 @@
           }
         }
       }
-    },
-    "You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!" : {
-
     },
     "You can skip this part if you feel no pain" : {
       "localizations" : {

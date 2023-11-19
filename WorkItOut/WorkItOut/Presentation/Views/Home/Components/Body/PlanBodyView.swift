@@ -32,17 +32,18 @@ struct PlanBodyView: View {
                             ForEach(Trimester.getTrimesterExceptAll(), id: \.self) { trimester in
                                 VStack {
                                     VStack(alignment: .center) {
-                                        Text("First Trimester - New Beginnings")
+                                        Text(trimester.getTitle())
                                             .font(.title.bold())
-                                        Text("You are in week 4 of pregnancy, so we are giving you the first trimester yoga plan!")
+                                        Text(trimester.getDesc())
                                     }
                                     .multilineTextAlignment(.center)
-                                    .padding(.vertical)
+                                    .padding()
                                     GeneratePlanYogaView(yogaPlan: dm.profile!.getYogasByTrimester(trimester: trimester))
                                         .borderedCorner()
                                         .padding(.horizontal)
                                 }
                                 .frame(width: UIScreen.main.bounds.width)
+                                .borderedCorner()
                             }
                         }
                         .scrollTargetLayout()

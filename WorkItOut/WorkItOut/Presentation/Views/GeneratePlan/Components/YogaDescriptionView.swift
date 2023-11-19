@@ -10,15 +10,31 @@ import SwiftUI
 struct YogaDescriptionView: View {
     @State var pose: Pose
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
+                
                 HStack {
                     VStack(alignment: .leading) {
+                        Button {
+                            self.presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            ZStack{
+                                Circle()
+                                    .tint(Color.neutral3.opacity(0.1))
+                                    .frame(width: 40)
+                                Image(systemName: "xmark")
+                                    .foregroundStyle(Color.neutral3)
+                                    .font(.system(size: 10))
+                                    .bold()
+                            }
+                        }
                         Text(pose.name)
                             .font(.title.bold())
                         Text("(\(pose.altName))")
-                            .font(.title.bold())
+                            .font(.title2.bold())
                         Text((YogaNames.poseDesc[pose.altName] ?? YogaNames.poseDesc.first?.value)!)
                         Text(pose.category.getLocalizedString())
                             .font(.body.bold())
@@ -76,6 +92,7 @@ struct YogaDescriptionView: View {
             }
             .padding()
         }
+        
     }
 }
 
