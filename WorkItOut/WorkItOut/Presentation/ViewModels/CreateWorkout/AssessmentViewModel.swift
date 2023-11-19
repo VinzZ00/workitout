@@ -10,8 +10,8 @@ import CoreData
 
 class AssessmentViewModel : ObservableObject {
     @Published var currentWeek: Int = 1
-    @Published var exceptions: [Exception] = [.abdominalSurgery]
-    @Published var days : [Day] = [.friday, .saturday, .monday]
+    @Published var exceptions: [Exception] = []
+    @Published var days : [Day] = []
     @Published var durationExercise : Duration = .tenMinutes
     @Published var experience: Difficulty = .beginner
     @Published var timeClock : TimeOfDay = .morning
@@ -66,6 +66,4 @@ class AssessmentViewModel : ObservableObject {
         }
         return false
     }
-    
-    
 }
