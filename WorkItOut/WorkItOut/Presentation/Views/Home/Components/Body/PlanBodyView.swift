@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlanBodyView: View {
     @EnvironmentObject var dm: DataManager
-    @State var picker: Trimester = .first
+    @Binding var picker: Trimester
     @State var scrollPosition: Trimester?
     
     var body: some View {
@@ -54,7 +54,6 @@ struct PlanBodyView: View {
             }
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical)
         .animation(.easeInOut.speed(1), value: scrollPosition)
         .onChange(of: scrollPosition) {
             if let scrollPosition {
@@ -68,5 +67,5 @@ struct PlanBodyView: View {
 }
 
 #Preview {
-    PlanBodyView()
+    PlanBodyView(picker: .constant(.first))
 }

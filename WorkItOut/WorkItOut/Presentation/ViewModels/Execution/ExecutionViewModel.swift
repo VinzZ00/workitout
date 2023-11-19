@@ -12,7 +12,6 @@ import Foundation
 @MainActor
 class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
-    var update: UpdateProfileUseCase = UpdateProfileUseCase()
     @Published var profile: Profile = MockData.mockProfile
     @Published var yogaPlan: YogaPlan!
     @Published var yoga: Yoga = Yoga()
@@ -21,17 +20,19 @@ class ExecutionViewModel: ObservableObject {
     @Published var end = false
     @Published var start = true
     
+    // Pregnancy Tips
+    @Published var showTips : Bool = false
+    @Published var checkBox : Bool = false
+    
+    @Published var textSwitch : Bool = false
     @Published var avPlayer : AVPlayer?
     
+    var addHist : AddHistoryUseCase = AddHistoryUseCase()
     
     init(yoga: Yoga) {
         self.yoga = yoga
         getPose()
     }
-    
-//    func addprofile(moc: NSManagedObjectContext) async throws {
-//         self.profile = try await fetch.call(context: moc).last!
-//    }
     
     func getTrimester() -> Int{
         if  1...13 ~= profile.currentPregnancyWeek {
@@ -46,16 +47,6 @@ class ExecutionViewModel: ObservableObject {
     func getYogaPlanIndex() -> Int {
         return profile.plan.firstIndex(where: {$0.trimester.getInt() == getTrimester()}) ?? -1
     }
-    
-//    func getYoga() {
-//        let date = 5 // ganti dengan hari ini
-//        
-//        for yoga in yogaPlan.yogas {
-//            if (yoga.day.getInt() == date) {
-//                self.yoga = yoga
-//            }
-//        }
-//    }
     
     func getPose() {
         for categori in PoseManager.existingCategories(poses: yoga.poses) {
@@ -106,9 +97,11 @@ class ExecutionViewModel: ObservableObject {
         }
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
         profile.plan[yogaPlanIndex].yogas[yogaIndex].yogaState = .completed
-        let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
-        profile.histories.append(history)
-        try await self.update.call(profile: profile, context: context)
+        
+        let yoga = profile.plan[yogaPlanIndex].yogas[yogaIndex]
+        let yogaPlan = profile.plan[yogaPlanIndex]
+        let history = History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 5, rating: 5)
+        try await self.addHist.call(history: history, context: context, yoga: yoga, yogaPlan: yogaPlan)
     }
     
     func loadVideo(urlString : String = "https://youtu.be/moCuqURlEyY?t=74"){
@@ -117,5 +110,10 @@ class ExecutionViewModel: ObservableObject {
         }
         avPlayer = AVPlayer(url: url)
         avPlayer?.play()
+    }
+    
+    func accessUserDefault() -> Bool?{
+        let defaults = UserDefaults.standard
+        return defaults.object(forKey: "skipPregnancyTips") as? Bool
     }
 }

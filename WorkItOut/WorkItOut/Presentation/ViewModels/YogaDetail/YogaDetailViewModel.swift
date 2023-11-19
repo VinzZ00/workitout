@@ -14,7 +14,7 @@ class YogaDetailViewModel: ObservableObject {
     @Published var newYoga: Yoga = Yoga()
     
     @Published var selectedRelieves: [Relieve] = []
-    @Published var selections : [Relieve] = Relieve.allCases
+    @Published var selections : [Relieve] = [.back, .hip, .neck, .leg, .pelvic]
     
     init(oldYoga: Yoga = Yoga()) {
         self.oldYoga = oldYoga

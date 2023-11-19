@@ -37,7 +37,6 @@
 		6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7752AEF558700C84D2A /* Profile.swift */; };
 		6C3FD7782AEF560A00C84D2A /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7772AEF560A00C84D2A /* History.swift */; };
 		6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */; };
-		6C53C6DD2B05ED0D0044EC06 /* HomeTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C6DC2B05ED0D0044EC06 /* HomeTodayView.swift */; };
 		6C53C6F42B05F9E90044EC06 /* GenerateViewPlanV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C6EF2B05F9E90044EC06 /* GenerateViewPlanV2.swift */; };
 		6C53C7012B071F850044EC06 /* GeneratePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C6F92B071F850044EC06 /* GeneratePlanView.swift */; };
 		6C53C7032B071F850044EC06 /* customScrollViewReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C6FC2B071F850044EC06 /* customScrollViewReader.swift */; };
@@ -46,6 +45,8 @@
 		6C53C7062B071F850044EC06 /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C6FF2B071F850044EC06 /* DayPickerView.swift */; };
 		6C53C7072B071F850044EC06 /* DayPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C7002B071F850044EC06 /* DayPickView.swift */; };
 		6C53C70F2B071FA60044EC06 /* GeneratePlanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C70B2B071FA60044EC06 /* GeneratePlanHeaderView.swift */; };
+		6C53C7132B08B66D0044EC06 /* TestGradientRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C7122B08B66D0044EC06 /* TestGradientRectangle.swift */; };
+		6C53C7152B08BF730044EC06 /* TestQuarterCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C7142B08BF730044EC06 /* TestQuarterCircle.swift */; };
 		6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */; };
 		6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */; };
 		6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */; };
@@ -63,6 +64,9 @@
 		6C93694E2B04E919004E4778 /* TodayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C93694D2B04E919004E4778 /* TodayBodyView.swift */; };
 		6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99C1F32AF105C200CEA7D3 /* DataManager.swift */; };
 		6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */; };
+		6CA760BE2B09C5C600A89B80 /* HomeTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760BD2B09C5C600A89B80 /* HomeTodayView.swift */; };
+		6CA760C02B09C5F300A89B80 /* HomePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760BF2B09C5F300A89B80 /* HomePlanView.swift */; };
+		6CA760C22B09C61A00A89B80 /* HomeExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760C12B09C61A00A89B80 /* HomeExploreView.swift */; };
 		6CB5F8082AF604850019539C /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8072AF604850019539C /* HomeButtonView.swift */; };
 		6CB5F80A2AF604FD0019539C /* HomeWeekIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8092AF604FD0019539C /* HomeWeekIndicatorView.swift */; };
 		6CB5F80C2AF605D50019539C /* BorderedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F80B2AF605D50019539C /* BorderedCorner.swift */; };
@@ -96,6 +100,7 @@
 		AC71EEC12AEA62E200C8ED8A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC02AEA62E200C8ED8A /* CameraView.swift */; };
 		AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */; };
 		AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC72AEA751500C8ED8A /* Array.swift */; };
+		AC7B06ED2B074DE1006F9940 /* AddHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */; };
 		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
 		ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */; };
 		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
@@ -183,7 +188,6 @@
 		6C3FD7752AEF558700C84D2A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		6C3FD7772AEF560A00C84D2A /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
-		6C53C6DC2B05ED0D0044EC06 /* HomeTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayView.swift; sourceTree = "<group>"; };
 		6C53C6EF2B05F9E90044EC06 /* GenerateViewPlanV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateViewPlanV2.swift; sourceTree = "<group>"; };
 		6C53C6F92B071F850044EC06 /* GeneratePlanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePlanView.swift; sourceTree = "<group>"; };
 		6C53C6FC2B071F850044EC06 /* customScrollViewReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customScrollViewReader.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 		6C53C6FF2B071F850044EC06 /* DayPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
 		6C53C7002B071F850044EC06 /* DayPickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayPickView.swift; sourceTree = "<group>"; };
 		6C53C70B2B071FA60044EC06 /* GeneratePlanHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePlanHeaderView.swift; sourceTree = "<group>"; };
+		6C53C7122B08B66D0044EC06 /* TestGradientRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGradientRectangle.swift; sourceTree = "<group>"; };
+		6C53C7142B08BF730044EC06 /* TestQuarterCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuarterCircle.swift; sourceTree = "<group>"; };
 		6C6F34CB2AE7B9460059E74D /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		6C6F34CF2AE7BDD60059E74D /* SliderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderComponent.swift; sourceTree = "<group>"; };
 		6C732A3B2AF1098D00E17FDB /* DayButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayButtonView.swift; sourceTree = "<group>"; };
@@ -209,6 +215,9 @@
 		6C93694D2B04E919004E4778 /* TodayBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBodyView.swift; sourceTree = "<group>"; };
 		6C99C1F32AF105C200CEA7D3 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6CA760BD2B09C5C600A89B80 /* HomeTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayView.swift; sourceTree = "<group>"; };
+		6CA760BF2B09C5F300A89B80 /* HomePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlanView.swift; sourceTree = "<group>"; };
+		6CA760C12B09C61A00A89B80 /* HomeExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExploreView.swift; sourceTree = "<group>"; };
 		6CB5F8072AF604850019539C /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 		6CB5F8092AF604FD0019539C /* HomeWeekIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWeekIndicatorView.swift; sourceTree = "<group>"; };
 		6CB5F80B2AF605D50019539C /* BorderedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCorner.swift; sourceTree = "<group>"; };
@@ -240,6 +249,7 @@
 		AC71EEC02AEA62E200C8ED8A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPoint.swift; sourceTree = "<group>"; };
 		AC71EEC72AEA751500C8ED8A /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHistoryUseCase.swift; sourceTree = "<group>"; };
 		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSourceDelegate.swift; sourceTree = "<group>"; };
 		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
@@ -395,7 +405,9 @@
 				6C1229442B04BC6900DE2A46 /* Test */,
 				6C1229192B04968C00DE2A46 /* Body */,
 				6C1229122B047DC700DE2A46 /* Header */,
-				6C53C6DC2B05ED0D0044EC06 /* HomeTodayView.swift */,
+				6CA760BD2B09C5C600A89B80 /* HomeTodayView.swift */,
+				6CA760BF2B09C5F300A89B80 /* HomePlanView.swift */,
+				6CA760C12B09C61A00A89B80 /* HomeExploreView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -429,6 +441,8 @@
 				6C1229222B04AD4000DE2A46 /* TestScrollSwipeView.swift */,
 				6C1229242B04B27C00DE2A46 /* TestAppearView.swift */,
 				6C1229262B04B47E00DE2A46 /* TestMatchedGeometryView.swift */,
+				6C53C7122B08B66D0044EC06 /* TestGradientRectangle.swift */,
+				6C53C7142B08BF730044EC06 /* TestQuarterCircle.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -692,6 +706,7 @@
 				ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */,
 				ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */,
 				ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */,
+				AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1075,6 +1090,7 @@
 				6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
+				AC7B06ED2B074DE1006F9940 /* AddHistoryUseCase.swift in Sources */,
 				6C85C0782B0154220076B057 /* UserConsentView.swift in Sources */,
 				6C12291B2B04969900DE2A46 /* PlanBodyView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
@@ -1086,7 +1102,9 @@
 				6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */,
 				6C93694E2B04E919004E4778 /* TodayBodyView.swift in Sources */,
 				6C1229252B04B27C00DE2A46 /* TestAppearView.swift in Sources */,
+				6C53C7132B08B66D0044EC06 /* TestGradientRectangle.swift in Sources */,
 				6CB5F8082AF604850019539C /* HomeButtonView.swift in Sources */,
+				6CA760BE2B09C5C600A89B80 /* HomeTodayView.swift in Sources */,
 				6C53C7062B071F850044EC06 /* DayPickerView.swift in Sources */,
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
 				6CC43D152AFA3E0300FEE93A /* PoseManager.swift in Sources */,
@@ -1140,11 +1158,11 @@
 				6C85C07D2B0158F00076B057 /* LocalizedStringKey.swift in Sources */,
 				6CB5F8142AF618D70019539C /* Status.swift in Sources */,
 				6CB5F8162AF61A210019539C /* Category.swift in Sources */,
+				6C53C7152B08BF730044EC06 /* TestQuarterCircle.swift in Sources */,
 				D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */,
 				AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */,
 				D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */,
 				6CC43D092AF9E91F00FEE93A /* RelieveAssesmentView.swift in Sources */,
-				6C53C6DD2B05ED0D0044EC06 /* HomeTodayView.swift in Sources */,
 				AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */,
 				D8FBED562AE918200062CC00 /* CompleteView.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
@@ -1160,6 +1178,7 @@
 				6C1228F02B039ECA00DE2A46 /* TabButtonView.swift in Sources */,
 				6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */,
 				6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */,
+				6CA760C22B09C61A00A89B80 /* HomeExploreView.swift in Sources */,
 				6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
@@ -1188,6 +1207,7 @@
 				6CB5F8122AF612DD0019539C /* HomeOtherPlansView.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,
 				D84CEC112AF4DF69008BEC1C /* ProfileViewModel.swift in Sources */,
+				6CA760C02B09C5F300A89B80 /* HomePlanView.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */,
 				6C732A3F2AF109AA00E17FDB /* YogaDetailView.swift in Sources */,
 				6CC43D0B2AF9F93F00FEE93A /* IconButtonComponent.swift in Sources */,

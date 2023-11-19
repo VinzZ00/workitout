@@ -161,11 +161,11 @@ class HomeViewModel: ObservableObject {
     }
     
     func changeDay(day: Day) -> Date {
-        var calendar = Calendar.current
+        let calendar = Calendar.current
         let currentDate = Date()
         let pregDate = calendar.date(byAdding: .weekOfYear, value: -profile.currentPregnancyWeek, to: currentDate)
         let weekOfPreg = calendar.dateComponents([.weekOfYear], from: pregDate!)
-        let woy = profile.currentPregnancyWeek + weekOfPreg.weekOfYear!
+        let woy = self.week + weekOfPreg.weekOfYear!
         
         // MARK: TO GET CURRENT YEAR
         let year = calendar.dateComponents([.year], from: currentDate).year!

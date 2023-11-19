@@ -36,7 +36,7 @@ struct CustomScrollListenerViewBuilder<Content: View>: View {
                         }
                     }
             }
-            .onChange(of: scrollTarget) { target in
+            .onChange(of: scrollTarget) { _, target in
                 if let target = target {
                     scrollTarget = nil
                     

@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  TestHomeView.swift
 //  Mamaste
 //
 //  Created by Jeremy Raymond on 15/11/23.
@@ -27,16 +27,51 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
     var view: some View {
         switch self {
         case .today:
-            HomeTodayView()
+            VStack {
+                self.header
+                Spacer()
+                self.body
+                Spacer()
+            }
         case .plan:
-            HomePlanView()
+            VStack {
+                self.header
+                self.body
+            }
         case .explore:
-            HomeExploreView()
+            VStack {
+                self.header
+                self.body
+            }
+        }
+    }
+    
+    @ViewBuilder
+    var body: some View {
+        switch self {
+        case .today:
+            TodayBodyView()
+        case .plan:
+            PlanBodyView()
+        case .explore:
+            ExploreBodyView()
+        }
+    }
+    
+    @ViewBuilder
+    var header: some View {
+        switch self {
+        case .today:
+            HeaderTodayView()
+        case .plan:
+            PlanHeaderView()
+        case .explore:
+            HeaderExploreView()
         }
     }
 }
 
-struct HomeView: View {
+struct TestHomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
     @State private var path : NavigationPath = NavigationPath()
     @Environment(\.managedObjectContext) var moc
@@ -47,10 +82,19 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            VStack(spacing: 0) {
+            VStack {
                 selected.view
                 
                 HomeTabView(selected: $selected)
+            }
+            .onAppear{
+                Task{
+                    do {
+                        try await vm.loadProfile(moc: moc)
+                    } catch {
+                        self.alert = true
+                    }
+                }
             }
             .ignoresSafeArea(edges: .bottom)
             .background(Color.background)
@@ -73,16 +117,9 @@ struct HomeView: View {
                     .navigationBarBackButtonHidden()
             }
         }
+        
         .environmentObject(vm)
-        .onAppear{
-            Task{
-                do {
-                    try await vm.loadProfile(moc: moc)
-                } catch {
-                    self.alert = true
-                }
-            }
-        }
+        
         .sheet(isPresented: $vm.sheetToggle, content: {
             YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.yoga!), sheetToggle: $vm.sheetToggle, path: $path)
                 .padding(.top)
@@ -91,5 +128,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    TestHomeView()
 }
