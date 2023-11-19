@@ -13,24 +13,17 @@ protocol SetUserDefault {
 
 class UserDefaultSaveUseCase : SetUserDefault {
     func saveToUserDefault(currentWeek : Int) -> Bool{
-        var userDefault = UserDefaults.standard;
-        var propListEncoder = PropertyListEncoder();
+        let userDefault = UserDefaults.standard;
         
         
         if currentWeek > 0 {
-            var cal = Calendar.current
-            var pregnantDate = cal.date(byAdding: .weekOfYear, value: -currentWeek, to: Date.now);
+            let cal = Calendar.current
+            let pregnantDate = cal.date(byAdding: .weekOfYear, value: -currentWeek, to: Date.now);
+            userDefault.set(pregnantDate, forKey: "pregDate")
             
-            if let encodedDate = try? propListEncoder.encode(pregnantDate) {
-                userDefault.set(encodedDate, forKey: "pregDate")
-                return true
-            } else {
-                return false;
-            }
-            
-            
+            return true
         } else {
-            return false;
+            return false
         }
         
     }

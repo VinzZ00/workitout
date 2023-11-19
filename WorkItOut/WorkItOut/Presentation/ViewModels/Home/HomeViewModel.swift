@@ -33,7 +33,8 @@ class HomeViewModel: ObservableObject {
     @Published var currentPregnantDate : Date?
     
     @Published var handmadeYogaPlans: [Relieve : [YogaPlan]] = [:]
-    var getUserDefault = UserDefaultGetUseCase()
+    var getPregDate = UserDefaultGetUseCase()
+    
     
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
@@ -44,10 +45,10 @@ class HomeViewModel: ObservableObject {
     }
     
     func loadPregnantDate() {
-        if let pregWeek = self.getUserDefault.getpregnantDate() {
+        if let pregWeek = self.getPregDate.getpregnantDate() {
             self.currentPregnantDate = pregWeek
         } else {
-            fatalError("PregnantDate is invalid");
+            fatalError("PregnantDate is nil");
         }
     }
 

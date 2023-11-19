@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 class AssessmentViewModel : ObservableObject {
-    @Published var currentWeek: Int = -1
+    @Published var currentWeek: Int = 1
     @Published var exceptions: [Exception] = [.abdominalSurgery]
     @Published var days : [Day] = [.friday, .saturday, .monday]
     @Published var durationExercise : Duration = .tenMinutes
@@ -21,7 +21,9 @@ class AssessmentViewModel : ObservableObject {
     
     @Published var state : AssessmentState = .chooseWeek
     @Published var finishCreateYogaPlan: Bool = false
-    var userdefaultUseCase = UserDefaultSaveUseCase()
+    
+    var savePregDate = UserDefaultSaveUseCase()
+    
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @Published var timeRemaining: Double = 2
     
@@ -44,6 +46,7 @@ class AssessmentViewModel : ObservableObject {
     }
     
     func createProfile() ->Profile {
+        
         return Profile(name: "User Name", currentPregnancyWeek: currentWeek, currentRelieveNeeded: relieve, fitnessLevel: experience, daysAvailable: days, timeOfDay: timeClock, preferredDuration: durationExercise, plan: [], histories: [], exceptions: exceptions)
     }
     

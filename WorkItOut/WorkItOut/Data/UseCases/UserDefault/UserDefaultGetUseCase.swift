@@ -14,16 +14,12 @@ protocol UserDefaultGetProtocol {
 }
 
 class UserDefaultGetUseCase : UserDefaultGetProtocol {
-    var userDef = UserDefaults.standard
-    var propListDecoder = PropertyListDecoder();
+    let userDef = UserDefaults.standard
+    
     
     func getpregnantDate() -> Date? {
-        if let pregDate = userDef.data(forKey: "pregDate") {
-            if let date = try? propListDecoder.decode(Date.self, from: pregDate) {
-                return date
-            } else {
-                return nil
-            }
+        if let pregDate = userDef.object(forKey: "pregDate") {
+            return pregDate as? Date ?? nil
         } else {
             return nil
         }
