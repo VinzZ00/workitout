@@ -31,6 +31,7 @@ struct ProfileView: View {
                     .padding(.vertical)
                     .background(.ultraThinMaterial)
                     .borderedCorner()
+                    
                     VStack(alignment: .leading){
                         Text("Pregnancy & Health Condition")
                             .foregroundStyle(.gray)
@@ -63,7 +64,7 @@ struct ProfileView: View {
                     }
                     .padding(.bottom, 24)
                 }
-                .toolbar{
+                .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
                         Button {
                             if vm.equalWithProfile() {

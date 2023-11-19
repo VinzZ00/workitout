@@ -45,13 +45,13 @@ struct TestGradientRectangle: View {
                 }
                 else if picker == .third {
                     HStack {
-                        GradientRectangle(width: 140)
+                        GradientRectangle(width: 120)
                         Spacer()
-                        GradientRectangle(width: 140)
+                        GradientRectangle(width: 120)
                         Spacer()
-                        GradientRectangle(width: 140)
+                        GradientRectangle(width: 120)
                     }
-                    
+                    .ignoresSafeArea()
                 }
             }
             

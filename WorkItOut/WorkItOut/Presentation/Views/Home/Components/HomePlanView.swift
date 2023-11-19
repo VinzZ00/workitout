@@ -21,8 +21,6 @@ struct HomePlanView: View {
                     PlanBodyView(picker: $picker)
                 }
             }
-            
-            
         }
     }
 }

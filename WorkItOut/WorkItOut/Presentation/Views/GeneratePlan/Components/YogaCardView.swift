@@ -37,6 +37,7 @@ struct YogaCardView: View {
                 }
                 VStack(alignment: .leading) {
                     Text("\(pose.name) (\(pose.altName))")
+                        .lineLimit(1)
                         .font(.title3)
                         .bold()
                     if added {
@@ -46,7 +47,6 @@ struct YogaCardView: View {
                             .padding(8)
                             .background(Color.primary.opacity(0.25))
                             .borderedCorner()
-                            
                     }
                     Label("\(min) Min", systemImage: "clock")
                         .foregroundStyle(Color.neutral3)
@@ -59,68 +59,7 @@ struct YogaCardView: View {
             }
         }
         .sheet(isPresented: $showSheet) {
-            ScrollView {
-                VStack(alignment: .center) {
-                    VStack(alignment: .leading) {
-                        Text(pose.name)
-                            .font(.title.bold())
-                        Text("(\(pose.altName))")
-                            .font(.title.bold())
-                        Text(pose.description)
-                        Text(pose.category.getLocalizedString())
-                            .font(.body.bold())
-                            .foregroundStyle(Color.primary)
-                    }
-                    if UIImage(named: pose.name) != nil{
-                        PoseImageCard(name: pose.name, width: 320)
-                    }else{
-                        Rectangle()
-                            .foregroundStyle(.purple)
-                            .frame(width: 320, height: 320)
-                            .clipShape(.rect(cornerRadius: 12))
-                    }
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Difficulty")
-                            Text(pose.difficulty.getLocalizedString())
-                                .bold()
-                        }
-                        Spacer()
-                        Divider()
-                        Spacer()
-                        VStack {
-                            Text("Trimester")
-                            Text(pose.recommendedTrimester.getLocalizedString())
-                                .bold()
-                        }
-                        Spacer()
-                    }
-                    .padding()
-                    .background(Color.background)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                    VStack(alignment: .leading) {
-                        Text("How to do this pose")
-                            .bold()
-                        ForEach(0...5, id: \.self) { _ in
-                            HStack {
-                                VStack {
-                                    Text("1")
-                                        .padding()
-                                        .background(Color.background)
-                                        .clipShape(Circle())
-                                    Spacer()
-                                }
-                                
-                                Text("Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis, 2 lines example")
-                            }
-                        }
-                    }
-                    
-                }
-                .padding()
-            }
-            
+            YogaDescriptionView(pose: pose)
         }
         
     }
