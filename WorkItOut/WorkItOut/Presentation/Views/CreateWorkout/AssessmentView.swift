@@ -50,6 +50,14 @@ struct AssessmentView: View {
                         await dm.setUpProfile(moc: moc, profile: avm.createProfile())
                         avm.finishCreateYogaPlan = true
                     }
+                    
+                    
+                    // Save User Default current week
+                    if avm.userdefaultUseCase.saveToUserDefault(currentWeek: avm.currentWeek) {
+                        print("userDefault saved successfully")
+                    } else {
+                        print("user default didn't saved successfully from assessment view")
+                    }
                 }
             })
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
