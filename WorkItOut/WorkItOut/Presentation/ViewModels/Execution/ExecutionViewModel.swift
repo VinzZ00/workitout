@@ -24,6 +24,10 @@ class ExecutionViewModel: ObservableObject {
     @Published var showTips : Bool = false
     @Published var checkBox : Bool = false
     
+    // Video and Image Toggler
+    @Published var videoURLManager = VideoURLManager()
+    @Published var showVideo : Bool = false
+    
     @Published var textSwitch : Bool = false
     @Published var avPlayer : AVPlayer?
     

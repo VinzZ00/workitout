@@ -31,7 +31,7 @@ struct Profile : Entity, Equatable {
         profilens.histories?.addingObjects(from: self.histories.map{
             $0.intoNSObject(context: context, parentProfileNS: profilens)})
         profilens.preferredDuration = self.preferredDuration.rawValue
-        profilens.exceptions = self.exceptions.map{$0.rawValue}.joined(separator: ", ");
+        profilens.exceptions = self.exceptions.map{$0.rawValue}.joined(separator: ", ")
         
         return profilens
     }

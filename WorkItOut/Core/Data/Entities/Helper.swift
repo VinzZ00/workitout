@@ -14,7 +14,7 @@ protocol Entity {
 
 extension PoseNSObject {
     func intoObject() -> Pose {
-        let pose = Pose(
+        var pose = Pose(
             id : self.uuid!,
             name: self.name!,
             altName: self.altName!,
@@ -26,10 +26,10 @@ extension PoseNSObject {
             description: self.poseDescription!,
             seconds: Int(self.seconds),
             state: YogaState(rawValue: self.state!)!
-//            position: Position(rawValue: self.position!)!,
-//            spineMovement: SpineMovement(rawValue: self.spineMovement!)!,
-//            bodyPartTrained: self.bodyPartTrained!.split(separator: ", ").map{BodyPart(rawValue: String($0))!}
         ) //Pose
+        if self.video != nil {
+            pose.video = self.video
+        }
         return pose
     }
 }

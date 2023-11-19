@@ -152,7 +152,6 @@ struct GenerateViewPlanV2: View {
                             })
                             // MARK: Listening change to the view generated value
                             .onPreferenceChange(ViewOffsetKey.self) {
-                                print("offset >> \($0)")
                                 if $0 > 10 {
                                     vm.showHeader = false
                                 }
