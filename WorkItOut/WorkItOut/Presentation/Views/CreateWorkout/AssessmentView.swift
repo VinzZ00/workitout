@@ -46,10 +46,17 @@ struct AssessmentView: View {
             .onReceive(avm.timer, perform: { _ in
                 if avm.checkTimer() {
                     dm.pm.addPosetoPoses()
+                    // Save User Default current week
+                    
+
+                    
                     Task {
                         await dm.setUpProfile(moc: moc, profile: avm.createProfile())
                         avm.finishCreateYogaPlan = true
                     }
+                    
+                    
+                   
                 }
             })
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {

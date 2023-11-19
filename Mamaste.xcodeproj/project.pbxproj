@@ -94,6 +94,8 @@
 		AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */; };
 		AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A702AE41FB8003B0C1F /* GetYogaPosesUseCase.swift */; };
 		AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */; };
+		AC6EC6C42B0A52E000BE8FA8 /* UserDefaultSaveUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6EC6C32B0A52E000BE8FA8 /* UserDefaultSaveUseCase.swift */; };
+		AC6EC6C62B0A562E00BE8FA8 /* UserDefaultGetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6EC6C52B0A562E00BE8FA8 /* UserDefaultGetUseCase.swift */; };
 		AC71EEB22AEA556B00C8ED8A /* CameraDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEB12AEA556B00C8ED8A /* CameraDeviceManager.swift */; };
 		AC71EEB72AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEB62AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift */; };
 		AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEB92AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift */; };
@@ -247,6 +249,8 @@
 		AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConstant.swift; sourceTree = "<group>"; };
 		AC5A9A702AE41FB8003B0C1F /* GetYogaPosesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYogaPosesUseCase.swift; sourceTree = "<group>"; };
 		AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		AC6EC6C32B0A52E000BE8FA8 /* UserDefaultSaveUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultSaveUseCase.swift; sourceTree = "<group>"; };
+		AC6EC6C52B0A562E00BE8FA8 /* UserDefaultGetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultGetUseCase.swift; sourceTree = "<group>"; };
 		AC71EEB12AEA556B00C8ED8A /* CameraDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDeviceManager.swift; sourceTree = "<group>"; };
 		AC71EEB62AEA59DC00C8ED8A /* SampleBufferOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBufferOutputDelegate.swift; sourceTree = "<group>"; };
 		AC71EEB92AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewUIKit.swift; sourceTree = "<group>"; };
@@ -571,6 +575,7 @@
 		AC5A9A582AE3C09B003B0C1F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				AC6EC6C22B0A52CD00BE8FA8 /* UserDefault */,
 				AC7391AF2AE7BF1F0012BC1B /* CoreData */,
 				AC7391AE2AE7BF150012BC1B /* Firebase */,
 			);
@@ -654,6 +659,15 @@
 				AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AC6EC6C22B0A52CD00BE8FA8 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				AC6EC6C32B0A52E000BE8FA8 /* UserDefaultSaveUseCase.swift */,
+				AC6EC6C52B0A562E00BE8FA8 /* UserDefaultGetUseCase.swift */,
+			);
+			path = UserDefault;
 			sourceTree = "<group>";
 		};
 		AC71EEB02AEA555500C8ED8A /* AVFoundation */ = {
@@ -1135,6 +1149,7 @@
 				ACBFBD9F2AE6775A00109D94 /* FetchProfileUseCase.swift in Sources */,
 				6C85C07F2B015EE40076B057 /* YogaNames.swift in Sources */,
 				6CB5F80C2AF605D50019539C /* BorderedCorner.swift in Sources */,
+				AC6EC6C42B0A52E000BE8FA8 /* UserDefaultSaveUseCase.swift in Sources */,
 				6C53C7032B071F850044EC06 /* customScrollViewReader.swift in Sources */,
 				6C53C7012B071F850044EC06 /* GeneratePlanView.swift in Sources */,
 				D8BA73C72AFE73AC004A795A /* TipView.swift in Sources */,
@@ -1215,6 +1230,7 @@
 				D8BA73C92AFE76E2004A795A /* CheckBox.swift in Sources */,
 				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
 				6C53C70F2B071FA60044EC06 /* GeneratePlanHeaderView.swift in Sources */,
+				AC6EC6C62B0A562E00BE8FA8 /* UserDefaultGetUseCase.swift in Sources */,
 				D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */,
 				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
 				D8FD5D652AF35371005F8D4E /* HistoryViewModel.swift in Sources */,
