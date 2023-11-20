@@ -18,18 +18,15 @@ struct TodayBodyView: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(Day.allCases, id: \.self) { day in
-                        if let yoga = vm.getYogaByDay(day: day) {
-                            HomeCurrentYogaView(yoga: yoga, date: vm.changeDay(day: day))
-                                .frame(width: UIScreen.main.bounds.width)
-                                .id(day)
-                        }else{
-                            HomeCurrentYogaView(yoga: nil, date: vm.changeDay(day: day))
-                                .frame(width: UIScreen.main.bounds.width)
-                                .id(day)
-                        }
+                        HomeCurrentYogaView(yoga: vm.getYogaByDay(day: day), date: vm.changeDay(day: day))
+                            .frame(width: UIScreen.main.bounds.width)
+                            .id(day)
                     }
                 }
                 .scrollTargetLayout()
+                .onAppear {
+                    vm.scrollPosition = vm.day
+                }
                 
             }
             .scrollIndicators(.hidden)
@@ -39,7 +36,7 @@ struct TodayBodyView: View {
         .animation(.easeInOut, value: vm.day)
         .animation(.easeInOut, value: vm.scrollPosition)
         .onAppear {
-//            vm.scrollPosition = vm.day
+            vm.scrollPosition = vm.day
         }
         .onChange(of: vm.day) { _, _ in
             vm.scrollPosition = vm.day
@@ -48,6 +45,7 @@ struct TodayBodyView: View {
             if let scrollPosition = vm.scrollPosition {
                 vm.day = scrollPosition
             }
+            print(vm.scrollPosition)
         }
     }
 }

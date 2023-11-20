@@ -36,6 +36,7 @@ struct YogaDescriptionView: View {
                         Text("(\(pose.altName))")
                             .font(.title2.bold())
                         Text((YogaNames.poseDesc[pose.altName] ?? YogaNames.poseDesc.first?.value)!)
+                            .lineLimit(nil)
                         Text(pose.category.getLocalizedString())
                             .font(.body.bold())
                             .foregroundStyle(Color.primary)
@@ -74,17 +75,17 @@ struct YogaDescriptionView: View {
                 VStack(alignment: .leading) {
                     Text("How to do this pose")
                         .bold()
-                    ForEach(0...5, id: \.self) { _ in
+                    ForEach((YogaNames.poseInstructions[pose.name] ?? YogaNames.poseInstructions.first?.value)!, id: \.originalString) { instruction in
                         HStack {
                             VStack {
-                                Text("1")
+                                Text("\((YogaNames.poseInstructions[pose.name] ?? YogaNames.poseInstructions.first?.value)!.firstIndex(of: instruction)!+1)")
                                     .padding()
                                     .background(Color.background)
                                     .clipShape(Circle())
                                 Spacer()
                             }
                             
-                            Text("Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis, 2 lines example")
+                            Text(instruction)
                         }
                     }
                 }

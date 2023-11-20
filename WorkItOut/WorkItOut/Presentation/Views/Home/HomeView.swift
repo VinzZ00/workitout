@@ -28,6 +28,7 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
         switch self {
         case .today:
             HomeTodayView()
+                
         case .plan:
             HomePlanView()
         case .explore:
