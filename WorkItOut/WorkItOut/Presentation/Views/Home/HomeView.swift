@@ -77,7 +77,7 @@ struct HomeView: View {
                 }
             })
             .navigationDestination(for: String.self) { string in
-                ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
+                ExecutionView(vm: ExecutionViewModel(yoga: vm.getYogaByDay(day: vm.day)!), path: $path)
                     .environmentObject(dm)
                     .navigationBarBackButtonHidden()
             }
@@ -85,7 +85,7 @@ struct HomeView: View {
         .environmentObject(vm)
         
         .sheet(isPresented: $vm.sheetToggle, content: {
-            YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.yoga ?? Yoga()), sheetToggle: $vm.sheetToggle, path: $path, yogaTitle: vm.yogaTitle)
+            YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.getYogaByDay(day: vm.day) ?? Yoga()), sheetToggle: $vm.sheetToggle, path: $path, yogaTitle: vm.yogaTitle)
                 .padding(.top)
         })
     }
