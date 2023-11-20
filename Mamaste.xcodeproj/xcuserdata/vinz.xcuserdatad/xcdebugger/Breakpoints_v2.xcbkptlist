@@ -1255,6 +1255,21 @@
                   endingLineNumber = "21"
                   offsetFromSymbolStart = "188">
                </Location>
+               <Location
+                  uuid = "ED6DB3FA-181C-4929-B069-A0CFE1B112E9 - c867ca5f098e523e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in Mamaste.GeneratePlanYogaView.body.getter : some"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/Components/GeneratePlanYogaView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1480">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1332,6 +1347,36 @@
                   startingLineNumber = "22"
                   endingLineNumber = "22"
                   offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "69E87B40-E332-40AD-BB45-5EEBA484FDFC - c867ca5f098e53fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in Mamaste.GeneratePlanYogaView.body.getter : some"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/Components/GeneratePlanYogaView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "1492">
+               </Location>
+               <Location
+                  uuid = "69E87B40-E332-40AD-BB45-5EEBA484FDFC - b50dd7fb9e1b195d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Mamaste.Yoga&gt;, Foundation.UUID, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in Mamaste.GeneratePlanYogaView.body.getter : some"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/Components/GeneratePlanYogaView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "252">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1935,7 +1980,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "72417A32-6382-4077-97AE-BC680EE06D15"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GenerateViewPlanV2.swift"
@@ -2169,7 +2214,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A04C592B-F7E2-48E6-A31D-A84D6A0F50DC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GenerateViewPlanV2.swift"
@@ -2185,7 +2230,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0EB90D72-E665-4D7D-ADF1-A07C6740B210"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/GenerateViewPlanV2.swift"
