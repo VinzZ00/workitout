@@ -37,21 +37,30 @@ class HomeViewModel: ObservableObject {
     @Published var yogaTitle: String = ""
 
     var getPregDate = UserDefaultGetUseCase()
-    
+    var savePregDate = UserDefaultSaveUseCase()
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
         self.days = profile.daysAvailable
         self.yogaPlans = profile.plan
         self.profile = profile
-        loadPregnantDate();
+        
+        
     }
     
     func loadPregnantDate() {
-        if let pregWeek = self.getPregDate.getpregnantDate() {
-            self.PregnantDate = pregWeek
+        if let pregDate = self.getPregDate.getpregnantDate() {
+            self.PregnantDate = pregDate
         } else {
-            fatalError("PregnantDate is nil");
+            if savePregDate.saveToUserDefault(currentWeek: profile.currentPregnancyWeek) {
+                if let pregDate = self.getPregDate.getpregnantDate() {
+                    self.PregnantDate  = pregDate
+                }
+            }
         }
+        
+        self.profile.currentPregnancyWeek = Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1
+        
+        print("profile current pregnancyWeek = \(Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1)")
     }
 
     func loadProfile(moc : NSManagedObjectContext) async throws {
@@ -60,13 +69,20 @@ class HomeViewModel: ObservableObject {
             throw URLError(.badServerResponse)
         }else{
             self.profile = fetchedProfile.last!
-            self.week = self.profile.currentPregnancyWeek
             self.days = self.profile.daysAvailable
             self.yogaPlans = self.profile.plan
             
             if !profile.plan.isEmpty {
                 self.initHandmadeYogaPlans()
             }
+            
+            loadPregnantDate()
+            
+            self.profile.currentPregnancyWeek = Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1
+            
+            print("profile current pregnancyWeek = \(Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1)")
+            
+            self.week = self.profile.currentPregnancyWeek
             
             self.objectWillChange.send()
         }
@@ -138,8 +154,7 @@ class HomeViewModel: ObservableObject {
     }
     
     var yoga: Yoga? {
-//        return yogaPlan?.yogas.first(where: {$0.day == day})
-        return yogaPlan?.yogas.first
+        return yogaPlan?.yogas.first(where: {$0.day == day})
     }
     
     func getYogaByDay(day: Day) -> Yoga? {
