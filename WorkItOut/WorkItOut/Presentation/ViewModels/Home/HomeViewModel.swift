@@ -33,12 +33,10 @@ class HomeViewModel: ObservableObject {
     @Published var PregnantDate : Date?
     
     @Published var handmadeYogaPlans: [Relieve : [YogaPlan]] = [:]
-<<<<<<< HEAD
+
     @Published var yogaTitle: String = ""
-=======
+
     var getPregDate = UserDefaultGetUseCase()
-    
->>>>>>> development
     
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek

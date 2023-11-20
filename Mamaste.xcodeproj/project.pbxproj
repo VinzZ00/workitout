@@ -54,7 +54,6 @@
 		6C732A412AF109E500E17FDB /* NavigationLinkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C732A402AF109E500E17FDB /* NavigationLinkComponent.swift */; };
 		6C85C0782B0154220076B057 /* UserConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C0762B0154220076B057 /* UserConsentView.swift */; };
 		6C85C0792B0154220076B057 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C0772B0154220076B057 /* OnboardingView.swift */; };
-		6C85C07B2B0157A80076B057 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6C85C07A2B0157A80076B057 /* Localizable.xcstrings */; };
 		6C85C07D2B0158F00076B057 /* LocalizedStringKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C07C2B0158F00076B057 /* LocalizedStringKey.swift */; };
 		6C85C07F2B015EE40076B057 /* YogaNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C07E2B015EE40076B057 /* YogaNames.swift */; };
 		6C8D5CFC2AE660B200A2986D /* YogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */; };
@@ -69,6 +68,7 @@
 		6CA760C22B09C61A00A89B80 /* HomeExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760C12B09C61A00A89B80 /* HomeExploreView.swift */; };
 		6CA760C42B09D17E00A89B80 /* YogaDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760C32B09D17E00A89B80 /* YogaDescriptionView.swift */; };
 		6CA760C62B0B1E7D00A89B80 /* YogaCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760C52B0B1E7D00A89B80 /* YogaCardViewModel.swift */; };
+		6CA760C82B0B347F00A89B80 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6CA760C72B0B347F00A89B80 /* Localizable.xcstrings */; };
 		6CB5F8082AF604850019539C /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8072AF604850019539C /* HomeButtonView.swift */; };
 		6CB5F80A2AF604FD0019539C /* HomeWeekIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8092AF604FD0019539C /* HomeWeekIndicatorView.swift */; };
 		6CB5F80C2AF605D50019539C /* BorderedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F80B2AF605D50019539C /* BorderedCorner.swift */; };
@@ -212,7 +212,6 @@
 		6C732A402AF109E500E17FDB /* NavigationLinkComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkComponent.swift; sourceTree = "<group>"; };
 		6C85C0762B0154220076B057 /* UserConsentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConsentView.swift; sourceTree = "<group>"; };
 		6C85C0772B0154220076B057 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		6C85C07A2B0157A80076B057 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		6C85C07C2B0158F00076B057 /* LocalizedStringKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringKey.swift; sourceTree = "<group>"; };
 		6C85C07E2B015EE40076B057 /* YogaNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaNames.swift; sourceTree = "<group>"; };
 		6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPlan.swift; sourceTree = "<group>"; };
@@ -227,6 +226,7 @@
 		6CA760C12B09C61A00A89B80 /* HomeExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExploreView.swift; sourceTree = "<group>"; };
 		6CA760C32B09D17E00A89B80 /* YogaDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaDescriptionView.swift; sourceTree = "<group>"; };
 		6CA760C52B0B1E7D00A89B80 /* YogaCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaCardViewModel.swift; sourceTree = "<group>"; };
+		6CA760C72B0B347F00A89B80 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = ../../../../../Localizable.xcstrings; sourceTree = "<group>"; };
 		6CB5F8072AF604850019539C /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 		6CB5F8092AF604FD0019539C /* HomeWeekIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWeekIndicatorView.swift; sourceTree = "<group>"; };
 		6CB5F80B2AF605D50019539C /* BorderedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCorner.swift; sourceTree = "<group>"; };
@@ -785,7 +785,6 @@
 			children = (
 				AC71EEC62AEA751500C8ED8A /* Extensions */,
 				D8FBED4C2AE906980062CC00 /* Utilities */,
-				6C8D5D0A2AE6617500A2986D /* Data */,
 				AC5A9A642AE41138003B0C1F /* Constant */,
 				ACFED3852AE2B5F10018CD03 /* Services */,
 				6C8D5D0B2AE6618E00A2986D /* Enum */,
@@ -798,7 +797,7 @@
 		ACFED3822AE2B5C20018CD03 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6C85C07A2B0157A80076B057 /* Localizable.xcstrings */,
+				6CA760C72B0B347F00A89B80 /* Localizable.xcstrings */,
 				D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */,
 				D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */,
 				ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */,
@@ -960,6 +959,7 @@
 		D8FBED4C2AE906980062CC00 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6C8D5D0A2AE6617500A2986D /* Data */,
 				D8FBED4D2AE906FE0062CC00 /* ButtonStyles.swift */,
 				6CC43D142AFA3E0300FEE93A /* PoseManager.swift */,
 				D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */,
@@ -1091,8 +1091,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D862DB6E2AE28E5C0014F2FC /* Preview Assets.xcassets in Resources */,
+				6CA760C82B0B347F00A89B80 /* Localizable.xcstrings in Resources */,
 				D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */,
-				6C85C07B2B0157A80076B057 /* Localizable.xcstrings in Resources */,
 				D8207AEC2AF0B61D005DBD3C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
