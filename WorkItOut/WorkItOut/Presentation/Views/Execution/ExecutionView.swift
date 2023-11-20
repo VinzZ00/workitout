@@ -47,25 +47,41 @@ struct ExecutionView: View {
                                 .animation(.default, value: vm.index)
                                 .contentTransition(.numericText(value: Double(vm.index)))
                             Button{
-                                // Vision
+                                vm.showVideo.toggle()
                             }label: {
                                 ZStack{
                                     Circle()
                                         .opacity(0.02)
                                         .frame(width: 40, height: 40)
-                                    Image("tabler-icon-scan-eye")
-                                        .resizable()
-                                        .frame(width: 20, height: 20)
+                                    Image(systemName: vm.showVideo ? "video" : "video.slash")
                                 }
                             }
+                            .disabled(vm.poses[vm.index].video == nil && !vm.showVideo)
                         }
                     }
                     .padding(.horizontal, 20)
-                    if let _ = UIImage(named: vm.poses[vm.index].name){
-                        PoseImageCard(name: vm.poses[vm.index].name, width: 358)
+                    if vm.showVideo {
+                        if let videoURL = vm.poses[vm.index].video {
+                            if let url = vm.videoURLManager.generateURL(videoID: videoURL){
+                                WebView(url: url)
+                                    .frame(width: 400, height: 400)
+                                    .aspectRatio(contentMode: .fill)
+                            }
+                        } else{
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 12)
+                                    .frame(width: 358, height: 358)
+                                Text("Video not Available")
+                                    .foregroundStyle(Color.white)
+                            }
+                        }
                     }else{
-                        RoundedRectangle(cornerRadius: 12)
-                            .frame(width: 358, height: 358)
+                        if let _ = UIImage(named: vm.poses[vm.index].name){
+                            PoseImageCard(name: vm.poses[vm.index].name, width: 358)
+                        }else{
+                            RoundedRectangle(cornerRadius: 12)
+                                .frame(width: 358, height: 358)
+                        }
                     }
                     VStack{
                         Text("\(vm.poses[vm.index].name)")
@@ -148,25 +164,6 @@ struct ExecutionView: View {
                                 .clipShape(.circle)
                                 .animation(.default, value: timerVm.isTimerPaused)
                                 .contentTransition(.symbolEffect(.automatic))
-//                            if timerVm.isTimerPaused == false{
-//                                ZStack{
-//                                    Circle()
-//                                        .frame(width: 68, height: 68)
-//                                        .foregroundColor(.primary)
-//                                    Image("tabler-icon-player-pause")
-//                                        .resizable()
-//                                        .frame(width: 24, height: 28)
-//                                }
-//                            }else {
-//                                ZStack{
-//                                    Circle()
-//                                        .frame(width: 68, height: 68)
-//                                        .foregroundColor(.primary)
-//                                    Image("tabler-icon-player-play")
-//                                        .resizable()
-//                                        .frame(width: 22.75, height: 28)
-//                                }
-//                            }
                         }
                         .padding(.horizontal, 50)
                         Button{

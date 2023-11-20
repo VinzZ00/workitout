@@ -10,8 +10,8 @@ import CoreData
 
 class AssessmentViewModel : ObservableObject {
     @Published var currentWeek: Int = 1
-    @Published var exceptions: [Exception] = [.abdominalSurgery]
-    @Published var days : [Day] = [.friday, .saturday, .monday]
+    @Published var exceptions: [Exception] = []
+    @Published var days : [Day] = []
     @Published var durationExercise : Duration = .tenMinutes
     @Published var experience: Difficulty = .beginner
     @Published var timeClock : TimeOfDay = .morning
@@ -22,8 +22,12 @@ class AssessmentViewModel : ObservableObject {
     @Published var state : AssessmentState = .chooseWeek
     @Published var finishCreateYogaPlan: Bool = false
     
+    var savePregDate = UserDefaultSaveUseCase()
+    
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @Published var timeRemaining: Double = 2
+    
+    
     
     func checkTimer() -> Bool {
         if state == .complete && finishCreateYogaPlan == false {
@@ -42,6 +46,7 @@ class AssessmentViewModel : ObservableObject {
     }
     
     func createProfile() ->Profile {
+        
         return Profile(name: "User Name", currentPregnancyWeek: currentWeek, currentRelieveNeeded: relieve, fitnessLevel: experience, daysAvailable: days, timeOfDay: timeClock, preferredDuration: durationExercise, plan: [], histories: [], exceptions: exceptions)
     }
     
@@ -66,6 +71,4 @@ class AssessmentViewModel : ObservableObject {
         }
         return false
     }
-    
-    
 }

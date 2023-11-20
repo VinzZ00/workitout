@@ -159,7 +159,6 @@ struct GenerateViewPlanV2: View {
                             })
                             // MARK: Listening change to the view generated value
                             .onPreferenceChange(ViewOffsetKey.self) {
-                                print("offset >> \($0)")
                                 if $0 > 10 {
                                     vm.showHeader = false
                                 }
@@ -174,6 +173,12 @@ struct GenerateViewPlanV2: View {
 //                .padding(.horizontal, 16)
                 VStack {
                     ButtonComponent(title: "Finish") {
+                        if avm.savePregDate.saveToUserDefault(currentWeek: avm.currentWeek) {
+                            print("userDefault saved successfully")
+                        } else {
+                            print("user default didn't saved successfully from assessment view")
+                        }
+                        
                         Task{
                             if let prof = dm.profile {
                                 do {

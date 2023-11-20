@@ -10,7 +10,7 @@ import Foundation
 
 @MainActor
 class HomeViewModel: ObservableObject {
-    @Published var week: Int = 20
+    @Published var week: Int = -1
     @Published var yogaPlans: [YogaPlan] = []
     @Published var day: Day = .monday
     @Published var profile : Profile = Profile()
@@ -30,14 +30,30 @@ class HomeViewModel: ObservableObject {
     
     @Published var scrollPosition: Day?
     
+    @Published var PregnantDate : Date?
+    
     @Published var handmadeYogaPlans: [Relieve : [YogaPlan]] = [:]
+<<<<<<< HEAD
     @Published var yogaTitle: String = ""
+=======
+    var getPregDate = UserDefaultGetUseCase()
+    
+>>>>>>> development
     
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
         self.days = profile.daysAvailable
         self.yogaPlans = profile.plan
         self.profile = profile
+        loadPregnantDate();
+    }
+    
+    func loadPregnantDate() {
+        if let pregWeek = self.getPregDate.getpregnantDate() {
+            self.PregnantDate = pregWeek
+        } else {
+            fatalError("PregnantDate is nil");
+        }
     }
 
     func loadProfile(moc : NSManagedObjectContext) async throws {
