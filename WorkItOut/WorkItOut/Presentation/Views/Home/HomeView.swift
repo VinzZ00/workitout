@@ -28,7 +28,6 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
         switch self {
         case .today:
             HomeTodayView()
-                
         case .plan:
             HomePlanView()
         case .explore:
@@ -50,9 +49,18 @@ struct HomeView: View {
         NavigationStack(path: $path) {
             VStack(spacing: 0) {
                 selected.view
-                
                 HomeTabView(selected: $selected)
+                    .onAppear{
+                        Task{
+                            do {
+                                try await vm.loadProfile(moc: moc)
+                            } catch {
+                                self.alert = true
+                            }
+                        }
+                    }
             }
+            
             .ignoresSafeArea(edges: .bottom)
             .background(Color.background)
             .sheet(isPresented: $vm.showProfile, onDismiss: {
@@ -75,15 +83,7 @@ struct HomeView: View {
             }
         }
         .environmentObject(vm)
-        .onAppear{
-            Task{
-                do {
-                    try await vm.loadProfile(moc: moc)
-                } catch {
-                    self.alert = true
-                }
-            }
-        }
+        
         .sheet(isPresented: $vm.sheetToggle, content: {
             YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.getYogaByDay(day: vm.day) ?? Yoga()), sheetToggle: $vm.sheetToggle, path: $path, yogaTitle: vm.yogaTitle)
                 .padding(.top)

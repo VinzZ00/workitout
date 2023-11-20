@@ -43,8 +43,6 @@ class HomeViewModel: ObservableObject {
         self.days = profile.daysAvailable
         self.yogaPlans = profile.plan
         self.profile = profile
-        
-        
     }
     
     func loadPregnantDate() {
@@ -79,8 +77,6 @@ class HomeViewModel: ObservableObject {
             loadPregnantDate()
             
             self.profile.currentPregnancyWeek = Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1
-            
-            print("profile current pregnancyWeek = \(Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1)")
             
             self.week = self.profile.currentPregnancyWeek
             
