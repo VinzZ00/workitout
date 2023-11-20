@@ -9,17 +9,10 @@ import Foundation
 import SwiftUI
 import WebKit
 
-class WebViewModel : ObservableObject {
-    @Published var url : URL
-    @Binding var isLoading : Bool
-    init(url : URL, isLoading : Binding<Bool>) {
-        self.url = url
-        self._isLoading = isLoading
-    }
-}
 
 struct WebView : UIViewRepresentable {
-    @ObservedObject var vm : WebViewModel
+    var url : URL
+    @ObservedObject var vm : ExecutionViewModel
     
     func makeUIView(context: Context) -> WKWebView {
         let webConfiguration = WKWebViewConfiguration()
@@ -30,32 +23,36 @@ struct WebView : UIViewRepresentable {
         
         var webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.navigationDelegate = context.coordinator
-        let request = URLRequest(url: vm.url)
+        let request = URLRequest(url: url)
         webView.load(request)
         webView.isUserInteractionEnabled = false
         return webView
     }
     
     func updateUIView(_ webView: WKWebView, context: Context) {
-        
+        if vm.videoIsLoading{
+            if let desiredURL = vm.desiredVideoURL {
+                let request = URLRequest(url: desiredURL)
+                webView.load(request)
+            }
+        }
     }
     
     class Coordinator: NSObject, WKNavigationDelegate {
-        private var vm: WebViewModel
+        @Binding var videoIsLoading : Bool
 
-        init(_ viewModel: WebViewModel) {
-            self.vm = viewModel
+        init(_ videoIsLoading : Binding<Bool>) {
+            self._videoIsLoading = videoIsLoading
         }
         
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             withAnimation(.easeInOut) {
-                vm.isLoading = false
+                videoIsLoading = false
             }
-            
         }
     }
 
     func makeCoordinator() -> WebView.Coordinator {
-        Coordinator(vm)
+        Coordinator($vm.videoIsLoading)
     }
 }

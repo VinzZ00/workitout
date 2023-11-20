@@ -178,6 +178,7 @@ struct ProfileView: View {
                 .padding(.bottom, 20)
             }
         }
+        .interactiveDismissDisabled()
         .navigationTitle("My Assessment")
         .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()

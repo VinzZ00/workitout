@@ -19,7 +19,7 @@ struct ExecutionView: View {
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
     @State var showAlert = false
-    @Binding var path :  NavigationPath
+    @Binding var path : NavigationPath
     
     var body: some View {
         ZStack(alignment: .center){
@@ -67,7 +67,7 @@ struct ExecutionView: View {
                         if let videoURL = vm.poses[vm.index].video {
                             if let url = vm.videoURLManager.generateURL(videoID: videoURL){
                                 ZStack{
-                                    WebView(vm: WebViewModel(url: url, isLoading: $vm.videoIsLoading))
+                                    WebView(url: url, vm: vm)
                                         .frame(width: 368, height: 400)
                                         .aspectRatio(contentMode: .fill)
                                         .cornerRadius(12)
@@ -146,6 +146,8 @@ struct ExecutionView: View {
                             vm.previousPose()
                             if !(vm.index == 0){
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds + 2))
+                                vm.loadVideo(videoID: vm.poses[vm.index].video ?? "")
+                                vm.videoIsLoading = true
                             }
                         }label: {
                             ZStack{
@@ -166,7 +168,6 @@ struct ExecutionView: View {
                                 timerVm.continueTimer()
                                 vm.avPlayer?.play()
                             }
-                            
                         }label: {
                             Image(systemName: timerVm.isTimerPaused ? "play.fill" : "pause.fill")
                                 .font(.largeTitle)
@@ -182,6 +183,8 @@ struct ExecutionView: View {
                             vm.nextPose(skipped: true)
                             if !(vm.index + 1 >= vm.poses.count) {
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds + 2))
+                                vm.loadVideo(videoID: vm.poses[vm.index].video ?? "")
+                                vm.videoIsLoading = true
                             }
                         }label: {
                             ZStack{
@@ -236,7 +239,6 @@ struct ExecutionView: View {
                             vm.textSwitch = true
                         }
                     }
-                    
                 }
             }
             if vm.showTips {
