@@ -47,7 +47,10 @@ struct ExecutionView: View {
                                 .animation(.default, value: vm.index)
                                 .contentTransition(.numericText(value: Double(vm.index)))
                             Button{
-                                vm.showVideo.toggle()
+                                withAnimation(.easeInOut) {
+                                    vm.showVideo.toggle()
+                                }
+                                vm.videoIsLoading = true
                             }label: {
                                 ZStack{
                                     Circle()
@@ -63,9 +66,16 @@ struct ExecutionView: View {
                     if vm.showVideo {
                         if let videoURL = vm.poses[vm.index].video {
                             if let url = vm.videoURLManager.generateURL(videoID: videoURL){
-                                WebView(url: url)
-                                    .frame(width: 400, height: 400)
-                                    .aspectRatio(contentMode: .fill)
+                                ZStack{
+                                    WebView(vm: WebViewModel(url: url, isLoading: $vm.videoIsLoading))
+                                        .frame(width: 368, height: 400)
+                                        .aspectRatio(contentMode: .fill)
+                                        .cornerRadius(12)
+                                    Color.black
+                                        .frame(width: 368, height: 400)
+                                        .opacity(vm.videoIsLoading ? 1 : 0)
+                                        .cornerRadius(12)
+                                }
                             }
                         } else{
                             ZStack{
@@ -77,7 +87,12 @@ struct ExecutionView: View {
                         }
                     }else{
                         if let _ = UIImage(named: vm.poses[vm.index].name){
-                            PoseImageCard(name: vm.poses[vm.index].name, width: 358)
+                            Image(vm.poses[vm.index].name)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 368, height: 400)
+                                .cornerRadius(12)
+                                .clipped()
                         }else{
                             RoundedRectangle(cornerRadius: 12)
                                 .frame(width: 358, height: 358)
@@ -94,18 +109,16 @@ struct ExecutionView: View {
                         }
                     }
                     .padding()
+                    Spacer()
                     if vm.textSwitch == false {
-                        Spacer()
                         Text("Get Started")
                             .font(.system(size: 48))
                             .bold()
-                        Spacer()
                     }
                     else {
-                        Spacer()
                         VStack {
                             Text("\(timerVm.currentTime())")
-                                .font(.system(size: 60))
+                                .font(.system(size: 48))
                                 .bold()
                                 .animation(.default, value: timerVm.timeRemaining)
                                 .contentTransition(.numericText(value: timerVm.timeRemaining))
@@ -126,8 +139,8 @@ struct ExecutionView: View {
                                 }
                             }
                         }
-                        Spacer()
                     }
+                    Spacer()
                     HStack{
                         Button{
                             vm.previousPose()

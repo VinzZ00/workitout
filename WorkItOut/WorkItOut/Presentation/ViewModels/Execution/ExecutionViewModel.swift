@@ -27,6 +27,7 @@ class ExecutionViewModel: ObservableObject {
     // Video and Image Toggler
     @Published var videoURLManager = VideoURLManager()
     @Published var showVideo : Bool = false
+    @Published var videoIsLoading : Bool = true
     
     @Published var textSwitch : Bool = false
     @Published var avPlayer : AVPlayer?
