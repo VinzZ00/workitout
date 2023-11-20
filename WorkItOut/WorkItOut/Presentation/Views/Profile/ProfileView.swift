@@ -146,10 +146,10 @@ struct ProfileView: View {
                     ZStack{
                         Circle()
                             .frame(width: 70)
-                            .foregroundStyle(.main.opacity(0.1))
+                            .foregroundStyle(Color.primary.opacity(0.1))
                         Image(systemName: "exclamationmark.triangle")
                             .font(.largeTitle)
-                            .foregroundStyle(.main)
+                            .foregroundStyle(Color.primary)
                     }
                     VStack(spacing: 10){
                         Text("Discard Changes")

@@ -13,7 +13,7 @@ struct StateIndicator: View {
         HStack{
             ForEach(0..<AssessmentState.allCases.count-1){ idx in
                 RoundedRectangle(cornerRadius: 12)
-                    .foregroundStyle(idx < state.rawValue+1 ? Color.primary : Color.grayBorder)
+                    .foregroundStyle(idx < state.rawValue+1 ? Color.primary : Color.neutral3)
                     .frame(width: 36, height: 4)
             }
         }

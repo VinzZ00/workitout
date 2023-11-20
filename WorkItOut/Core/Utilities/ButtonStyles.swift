@@ -31,7 +31,7 @@ struct OutlineButton : ButtonStyle {
             .foregroundStyle(configuration.isPressed ? .white : .gray)
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
-                    .stroke(.grayBorder, lineWidth: 1)
+                    .stroke(Color.neutral3, lineWidth: 1)
             )
             .background(.white)
             .animation(.easeOut(duration: 0.15), value: configuration.isPressed)
