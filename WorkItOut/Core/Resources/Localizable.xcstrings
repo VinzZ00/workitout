@@ -1189,6 +1189,9 @@
         }
       }
     },
+    "Scheduled" : {
+
+    },
     "Sciatic" : {
 
     },
@@ -1758,6 +1761,7 @@
       }
     },
     "What Are Your Current Conditions?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

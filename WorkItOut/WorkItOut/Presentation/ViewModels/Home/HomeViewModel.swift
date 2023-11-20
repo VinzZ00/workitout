@@ -31,6 +31,7 @@ class HomeViewModel: ObservableObject {
     @Published var scrollPosition: Day?
     
     @Published var handmadeYogaPlans: [Relieve : [YogaPlan]] = [:]
+    @Published var yogaTitle: String = ""
     
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
@@ -57,7 +58,8 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    func toggleSheet(yoga: Yoga) {
+    func toggleSheet(yoga: Yoga, yogaTitle: String = "") {
+        self.yogaTitle = yogaTitle
         self.currentYoga = yoga
         self.sheetToggle.toggle()
     }
@@ -87,7 +89,7 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    func initMonth() {
+    func initDates() {
         let DisplayWeek = self.week /* checkingWeek */ - self.profile.currentPregnancyWeek /* weekXpreg; */
         
         // MARK: TO GET THE CURRENT WEEK OF THE YEAR
@@ -105,6 +107,26 @@ class HomeViewModel: ObservableObject {
             return
         }
         day = Day.getDayFromInt(int: intWeekDay)
+    }
+    
+    func initMonth() {
+        let DisplayWeek = self.week /* checkingWeek */ - self.profile.currentPregnancyWeek /* weekXpreg; */
+        
+        // MARK: TO GET THE CURRENT WEEK OF THE YEAR
+        let calendar = Calendar.current
+        let currentDate = Date()
+        let pregDate = calendar.date(byAdding: .weekOfYear, value: -self.profile.currentPregnancyWeek, to: currentDate)
+        let weekOfPreg = calendar.dateComponents([.weekOfYear], from: pregDate!)
+        let woy = self.profile.currentPregnancyWeek + weekOfPreg.weekOfYear! + DisplayWeek
+        // MARK: TO GET CURRENT YEAR
+        let year = calendar.dateComponents([.year], from: currentDate).year!
+        
+        // MARK: TO GET THE CURRENT DATE OF THE WEEKDAY
+        let weekDay = calendar.dateComponents([.weekday], from: currentDate)
+        guard let intWeekDay = weekDay.weekday else {
+            return
+        }
+//        day = Day.getDayFromInt(int: intWeekDay)
         let displayDate = day.dateForWeekday(week: woy, year: year);
         self.selectedDate = displayDate
         

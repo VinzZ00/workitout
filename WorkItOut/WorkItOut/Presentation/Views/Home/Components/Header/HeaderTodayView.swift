@@ -27,6 +27,8 @@ struct HeaderTodayView: View {
                         VStack(alignment: .leading) {
                             Text("Week \(vm.week) - \(vm.month)")
                                 .font(.title2.bold())
+                                .contentTransition(.numericText(value: Double(vm.week)))
+                                .animation(.easeInOut, value: vm.week)
                             Text("(\(vm.getTrimesterRoman()))")
                                 .foregroundStyle(Color.neutral3)
                                 .font(.caption)
@@ -45,26 +47,32 @@ struct HeaderTodayView: View {
                         
                     }
                     .padding(.horizontal)
-                    ScrollView(.horizontal) {
-                        HStack {
-                            ForEach(1..<32, id: \.self) { week in
-                                HStack {
-                                    if let profile = dm.profile {
-                                        ForEach(Day.allCases, id: \.self) { day in
-                                            DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
-                                                .id(day)
+                    VStack(spacing: 0) {
+                        ScrollView(.horizontal) {
+                            LazyHStack {
+                                ForEach(1..<32, id: \.self) { week in
+                                    HStack {
+                                        if let profile = dm.profile {
+                                            ForEach(Day.allCases, id: \.self) { day in
+                                                DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
+                                                    .id(day)
+                                            }
                                         }
                                     }
+                                    .frame(width: UIScreen.main.bounds.width)
                                 }
-                                .frame(width: UIScreen.main.bounds.width)
                             }
+                            .frame(height: 84)
+                            .scrollTargetLayout()
+    //                        .ignoresSafeArea()
+                            
                         }
-                        .scrollTargetLayout()
-                        
+    //                    .ignoresSafeArea()
+                        .scrollIndicators(.hidden)
+                        .scrollTargetBehavior(.viewAligned)
+                        .scrollPosition(id: $weekScrollPosition)
                     }
-                    .scrollIndicators(.hidden)
-                    .scrollTargetBehavior(.viewAligned)
-                    .scrollPosition(id: $weekScrollPosition)
+                    
 //                    Spacer()
                 }
                 

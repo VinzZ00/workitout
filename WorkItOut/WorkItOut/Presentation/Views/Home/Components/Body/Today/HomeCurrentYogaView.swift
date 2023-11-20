@@ -33,7 +33,14 @@ struct HomeCurrentYogaView: View {
                             .bold()
                         Text("\(yogaData.poses.count) Exercise (\(yogaData.totalDurationMinute()) Min)")
                             .font(.body)
-                        if yogaData.yogaState == .completed {
+                        if vm.week > vm.profile.currentPregnancyWeek {
+                            ButtonComponent(title: "Scheduled", color: Color.black.opacity(0.1), textColor: Color.yellow) {}
+
+                        }
+                        else if vm.week < vm.profile.currentPregnancyWeek {
+                            
+                        }
+                        else if yogaData.yogaState == .completed {
                             ButtonComponent(title: "Completed", color: Color.black.opacity(0.1), textColor: Color.green) {}
                         }
                         else {

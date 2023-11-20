@@ -36,12 +36,15 @@ struct TodayBodyView: View {
             .scrollTargetBehavior(.viewAligned)
             .scrollPosition(id: $vm.scrollPosition)
         }
-        .onChange(of: vm.day) { _, _ in
-            withAnimation(.easeInOut) {
-                vm.scrollPosition = vm.day
-            }
+        .animation(.easeInOut, value: vm.day)
+        .animation(.easeInOut, value: vm.scrollPosition)
+        .onAppear {
+            vm.scrollPosition = vm.day
         }
-        .onChange(of: vm.scrollPosition) { oldValue, newValue in
+        .onChange(of: vm.day) { _, _ in
+            vm.scrollPosition = vm.day
+        }
+        .onChange(of: vm.scrollPosition) { _, _ in
             if let scrollPosition = vm.scrollPosition {
                 vm.day = scrollPosition
             }

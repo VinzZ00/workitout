@@ -14,7 +14,7 @@ struct HomeOtherPlansView: View {
     
     var body: some View {
         Button(action: {
-            vm.toggleSheet(yoga: yogaPlan.yogas[0])
+            vm.toggleSheet(yoga: yogaPlan.yogas[0], yogaTitle: yogaPlan.name)
         }, label: {
             HStack {
                 Image(image)

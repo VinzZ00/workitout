@@ -30,7 +30,7 @@ struct PlanBodyView: View {
                     ScrollView(.horizontal) {
                         LazyHStack {
                             ForEach(Trimester.getTrimesterExceptAll(), id: \.self) { trimester in
-                                VStack {
+                                LazyVStack {
                                     VStack(alignment: .center) {
                                         Text(trimester.getTitle())
                                             .font(.title.bold())

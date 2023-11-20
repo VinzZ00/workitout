@@ -21,6 +21,8 @@ struct YogaDetailView: View {
     @State private var state: YogaPreviewEnum = .relieveChoice
     @State var showHeader: Bool = true
     
+    var yogaTitle: String = ""
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -28,7 +30,7 @@ struct YogaDetailView: View {
             VStack(alignment: .leading) {
                 if state == .relieveChoice {
                     if showHeader {
-                        Text(state.getTitle(yoga: yvm.oldYoga))
+                        Text(state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
                             .font(.largeTitle)
                             .bold()
                         state.getDescription(yoga: yvm.oldYoga)
@@ -55,7 +57,7 @@ struct YogaDetailView: View {
                 }
                 else {
                     if showHeader {
-                        Text(state.getTitle(yoga: yvm.newYoga))
+                        Text(state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
                             .font(.largeTitle)
                             .bold()
                         state.getDescription(yoga: yvm.newYoga)
@@ -67,10 +69,13 @@ struct YogaDetailView: View {
                 
                 ButtonComponent(title: state.rawValue) {
                     if state == .relieveChoice {
-                        dm.pm.addPosetoPoses()
-                        yvm.relievesPoses = dm.posesByRelieves(relieves: yvm.selectedRelieves)
-                        yvm.newYoga = yvm.addRelieves(yoga: yvm.oldYoga)
-                        state = .yogaPreview
+                        withAnimation {
+                            dm.pm.addPosetoPoses()
+                            yvm.relievesPoses = dm.posesByRelieves(relieves: yvm.selectedRelieves)
+                            yvm.newYoga = yvm.addRelieves(yoga: yvm.oldYoga)
+                            state = .yogaPreview
+                        }
+                        
                     }
                     else {
                         sheetToggle = false
@@ -78,10 +83,16 @@ struct YogaDetailView: View {
                     }
                 }
             }
-            .navigationTitle(showHeader ? "" : state.getTitle(yoga: yvm.oldYoga).stringValue())
+            .onAppear(perform: {
+                if yogaTitle != "" {
+                    yvm.newYoga = yvm.oldYoga
+                    state = .yogaPreview
+                }
+            })
+            .navigationTitle(showHeader ? "" : state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
             .navigationBarTitleDisplayMode(.inline)
             .padding()
-            .animation(.default, value: state)
+//            .animation(.default, value: state)
             .animation(.default, value: showHeader)
             .toolbarBackground(.hidden)
             .toolbar {
@@ -91,6 +102,9 @@ struct YogaDetailView: View {
                             self.presentationMode.wrappedValue.dismiss()
                         }
                         else {
+                            if yogaTitle != "" {
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
                             state = .relieveChoice
                         }
                     }
@@ -114,12 +128,17 @@ struct YogaDetailView: View {
             }
         }
         
-        func getTitle(yoga: Yoga) -> LocalizedStringResource {
+        func getTitle(yoga: Yoga, yogaTitle: String = "") -> String {
             switch self {
             case .relieveChoice:
                 return "What Are Your Current Conditions?"
             case .yogaPreview:
-                return LocalizedStringResource(stringLiteral: yoga.name)
+                if yogaTitle != "" {
+                    return yogaTitle
+                }
+                else {
+                    return yoga.name
+                }
             }
         }
         
