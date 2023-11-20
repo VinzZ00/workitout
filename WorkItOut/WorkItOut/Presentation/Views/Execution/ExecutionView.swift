@@ -80,7 +80,7 @@ struct ExecutionView: View {
                         } else{
                             ZStack{
                                 RoundedRectangle(cornerRadius: 12)
-                                    .frame(width: 358, height: 358)
+                                    .frame(width: 368, height: 400)
                                 Text("Video not Available")
                                     .foregroundStyle(Color.white)
                             }
@@ -95,7 +95,7 @@ struct ExecutionView: View {
                                 .clipped()
                         }else{
                             RoundedRectangle(cornerRadius: 12)
-                                .frame(width: 358, height: 358)
+                                .frame(width: 368, height: 400)
                         }
                     }
                     VStack{
