@@ -37,7 +37,7 @@ class HomeViewModel: ObservableObject {
     @Published var yogaTitle: String = ""
 
     var getPregDate = UserDefaultGetUseCase()
-    
+    var savePregDate = UserDefaultSaveUseCase()
     init(profile: Profile = Profile()) {
         self.week = profile.currentPregnancyWeek
         self.days = profile.daysAvailable
@@ -47,10 +47,14 @@ class HomeViewModel: ObservableObject {
     }
     
     func loadPregnantDate() {
-        if let pregWeek = self.getPregDate.getpregnantDate() {
-            self.PregnantDate = pregWeek
+        if let pregDate = self.getPregDate.getpregnantDate() {
+            self.PregnantDate = pregDate
         } else {
-            fatalError("PregnantDate is nil");
+            if savePregDate.saveToUserDefault(currentWeek: profile.currentPregnancyWeek) {
+                if let pregDate = self.getPregDate.getpregnantDate() {
+                    self.PregnantDate  = pregDate
+                }
+            }
         }
     }
 
