@@ -43,7 +43,7 @@ class HomeViewModel: ObservableObject {
         self.days = profile.daysAvailable
         self.yogaPlans = profile.plan
         self.profile = profile
-        loadPregnantDate();
+        
         
     }
     
@@ -60,7 +60,7 @@ class HomeViewModel: ObservableObject {
         
         self.profile.currentPregnancyWeek = Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1
         
-        
+        print("profile current pregnancyWeek = \(Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1)")
     }
 
     func loadProfile(moc : NSManagedObjectContext) async throws {
@@ -69,13 +69,20 @@ class HomeViewModel: ObservableObject {
             throw URLError(.badServerResponse)
         }else{
             self.profile = fetchedProfile.last!
-            self.week = self.profile.currentPregnancyWeek
             self.days = self.profile.daysAvailable
             self.yogaPlans = self.profile.plan
             
             if !profile.plan.isEmpty {
                 self.initHandmadeYogaPlans()
             }
+            
+            loadPregnantDate()
+            
+            self.profile.currentPregnancyWeek = Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1
+            
+            print("profile current pregnancyWeek = \(Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1)")
+            
+            self.week = self.profile.currentPregnancyWeek
             
             self.objectWillChange.send()
         }
