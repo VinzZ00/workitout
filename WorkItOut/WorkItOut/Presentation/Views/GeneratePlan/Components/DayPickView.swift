@@ -20,7 +20,7 @@ struct DayPickView: View {
             }, label: {
                 VStack {
                     Text(day.getString())
-                        .font(.caption)
+//                        .font()
                         .bold()
                     Rectangle()
                         .frame(height: 4)

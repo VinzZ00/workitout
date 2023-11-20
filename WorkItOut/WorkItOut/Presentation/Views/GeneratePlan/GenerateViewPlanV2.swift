@@ -109,6 +109,9 @@ struct GenerateViewPlanV2: View {
                                             }
                                         
                                     }
+                                    .padding()
+                                    .background(Color.white)
+                                    .padding(.vertical)
                                     // MARK: kalo mau pake geo untuk dapetin gede dari si component, bisa pake yang ini.
 //                                    .background {
 //                                        GeometryReader { geo in
@@ -130,8 +133,9 @@ struct GenerateViewPlanV2: View {
                                     }
                                 }
                             }
-                            .padding()
-                            .background(Color.white)
+                            .background(Color.background)
+//                            .padding()
+                            
                             .padding(.vertical)
                             // MARK: Reset all Size of the view
                             .onAppear {

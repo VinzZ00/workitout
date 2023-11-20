@@ -39,7 +39,7 @@ struct TodayBodyView: View {
         .animation(.easeInOut, value: vm.day)
         .animation(.easeInOut, value: vm.scrollPosition)
         .onAppear {
-            vm.scrollPosition = vm.day
+//            vm.scrollPosition = vm.day
         }
         .onChange(of: vm.day) { _, _ in
             vm.scrollPosition = vm.day
