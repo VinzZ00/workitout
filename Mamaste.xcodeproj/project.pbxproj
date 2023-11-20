@@ -68,6 +68,7 @@
 		6CA760C02B09C5F300A89B80 /* HomePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760BF2B09C5F300A89B80 /* HomePlanView.swift */; };
 		6CA760C22B09C61A00A89B80 /* HomeExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760C12B09C61A00A89B80 /* HomeExploreView.swift */; };
 		6CA760C42B09D17E00A89B80 /* YogaDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760C32B09D17E00A89B80 /* YogaDescriptionView.swift */; };
+		6CA760C62B0B1E7D00A89B80 /* YogaCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA760C52B0B1E7D00A89B80 /* YogaCardViewModel.swift */; };
 		6CB5F8082AF604850019539C /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8072AF604850019539C /* HomeButtonView.swift */; };
 		6CB5F80A2AF604FD0019539C /* HomeWeekIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F8092AF604FD0019539C /* HomeWeekIndicatorView.swift */; };
 		6CB5F80C2AF605D50019539C /* BorderedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5F80B2AF605D50019539C /* BorderedCorner.swift */; };
@@ -220,6 +221,7 @@
 		6CA760BF2B09C5F300A89B80 /* HomePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlanView.swift; sourceTree = "<group>"; };
 		6CA760C12B09C61A00A89B80 /* HomeExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExploreView.swift; sourceTree = "<group>"; };
 		6CA760C32B09D17E00A89B80 /* YogaDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaDescriptionView.swift; sourceTree = "<group>"; };
+		6CA760C52B0B1E7D00A89B80 /* YogaCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaCardViewModel.swift; sourceTree = "<group>"; };
 		6CB5F8072AF604850019539C /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 		6CB5F8092AF604FD0019539C /* HomeWeekIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWeekIndicatorView.swift; sourceTree = "<group>"; };
 		6CB5F80B2AF605D50019539C /* BorderedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCorner.swift; sourceTree = "<group>"; };
@@ -901,6 +903,7 @@
 				D8BC2BEF2AE80F1B00E61487 /* CreateWorkout */,
 				AC71EEBC2AEA5D4E00C8ED8A /* CameraViewModel.swift */,
 				6CB5F8172AF64F740019539C /* GeneratePlanViewModel.swift */,
+				6CA760C52B0B1E7D00A89B80 /* YogaCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1088,6 +1091,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CA760C62B0B1E7D00A89B80 /* YogaCardViewModel.swift in Sources */,
 				6CA760C42B09D17E00A89B80 /* YogaDescriptionView.swift in Sources */,
 				6CB5F8182AF64F740019539C /* GeneratePlanViewModel.swift in Sources */,
 				D8BC2BF62AE81D0600E61487 /* AssessmentState.swift in Sources */,

@@ -12,6 +12,8 @@ struct YogaPreviewView: View {
     var oldYoga: Yoga
     var newYoga: Yoga
     
+    @StateObject var yvm: YogaCardViewModel = YogaCardViewModel()
+    
     var body: some View {
         VStack(alignment: .leading) {
             ForEach(PoseManager.existingCategories(poses: newYoga.poses), id: \.self) { category in
@@ -26,13 +28,16 @@ struct YogaPreviewView: View {
                 }
                 VStack(alignment: .leading) {
                     ForEach(PoseManager.getPosesByCategory(poses: newYoga.poses, category: category)) { pose in
-                        
                         YogaCardView(pose: pose, added: !oldYoga.poses.contains(pose))
+                            .environmentObject(yvm)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
             }
             
+        }
+        .sheet(isPresented: $yvm.showSheet) {
+            YogaDescriptionView(pose: yvm.currentPose)
         }
     }
 }

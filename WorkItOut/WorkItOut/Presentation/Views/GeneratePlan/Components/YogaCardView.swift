@@ -9,6 +9,7 @@ import SwiftUI
 
 struct YogaCardView: View {
     @EnvironmentObject var vm: YogaDetailViewModel
+    @EnvironmentObject var yvm: YogaCardViewModel
     
     var pose: Pose = Pose(id: UUID())
     
@@ -17,11 +18,12 @@ struct YogaCardView: View {
     }
     var added: Bool = false
     
-    @State var showSheet: Bool = false
+//    @State var showSheet: Bool = false
     
     var body: some View {
         Button {
-            showSheet.toggle()
+//            showSheet.toggle()
+            yvm.toggleSheet(pose: pose)
         } label: {
             HStack {
                 VStack {
@@ -58,9 +60,9 @@ struct YogaCardView: View {
                 }
             }
         }
-        .sheet(isPresented: $showSheet) {
-            YogaDescriptionView(pose: pose)
-        }
+//        .sheet(isPresented: $showSheet) {
+//            YogaDescriptionView(pose: pose)
+//        }
         
     }
 }

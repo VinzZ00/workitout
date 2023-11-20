@@ -53,6 +53,8 @@ struct GenerateViewPlanV2: View {
     @State var selectedDay : Day = .monday;
     @State var sizes : [CGSize] = []
     
+    @StateObject var yvm: YogaCardViewModel = YogaCardViewModel()
+    
 //    @MainActor func addSize(size : CGSize) {
 //        self.sizes.append(size)
 //    }
@@ -102,6 +104,7 @@ struct GenerateViewPlanV2: View {
                                                 
                                                 ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
                                                     YogaCardView(pose: pose)
+                                                        .environmentObject(yvm)
                                                 }
                                             }
                                         
@@ -182,6 +185,9 @@ struct GenerateViewPlanV2: View {
                     .padding(.horizontal)
                 }
                 .background(Color.white)
+            }
+            .sheet(isPresented: $yvm.showSheet) {
+                YogaDescriptionView(pose: yvm.currentPose)
             }
             .background(Color.background)
             // MARK: ERROR Handling

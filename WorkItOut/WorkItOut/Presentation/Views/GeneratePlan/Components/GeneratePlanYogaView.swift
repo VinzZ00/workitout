@@ -12,6 +12,8 @@ struct GeneratePlanYogaView: View {
 //    @EnvironmentObject var vm: GeneratePlanViewModel
     let yogaPlan: YogaPlan
     
+    @StateObject var yvm: YogaCardViewModel = YogaCardViewModel()
+    
     var body: some View {
         VStack {
             if dm.profile!.plan.isEmpty {
@@ -38,6 +40,7 @@ struct GeneratePlanYogaView: View {
                                 
                                 ForEach(PoseManager.getPosesByCategory(poses: yoga.poses, category: category)) { pose in
                                     YogaCardView(pose: pose)
+                                        .environmentObject(yvm)
                                 }
                             }
                         }
@@ -47,7 +50,9 @@ struct GeneratePlanYogaView: View {
                     }
                 }
                 .background(Color.background)
-                
+                .sheet(isPresented: $yvm.showSheet) {
+                    YogaDescriptionView(pose: yvm.currentPose)
+                }
             }
         }
     }
