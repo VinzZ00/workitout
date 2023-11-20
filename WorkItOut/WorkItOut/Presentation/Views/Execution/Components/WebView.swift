@@ -32,6 +32,7 @@ struct WebView : UIViewRepresentable {
         webView.navigationDelegate = context.coordinator
         let request = URLRequest(url: vm.url)
         webView.load(request)
+        webView.isUserInteractionEnabled = false
         return webView
     }
     
