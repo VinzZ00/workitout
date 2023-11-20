@@ -11,7 +11,8 @@ struct AssessmentView: View {
     @StateObject var avm : AssessmentViewModel = AssessmentViewModel()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
-    @Binding var hasNoProfile : Bool
+
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationStack {
@@ -20,15 +21,15 @@ struct AssessmentView: View {
                     case .chooseWeek:
                         AssesmentWeekView(week: $avm.currentWeek)
                     case .chooseExceptions:
-                        AssessmentDetailMultipleChoiceView(title: "Do you have any health conditions?", selectedItems: $avm.exceptions, selections: Exception.allCases)
+                        AssessmentDetailMultipleChoiceView(title: avm.state.getLocalizedString().title, selectedItems: $avm.exceptions, selections: Exception.allCases)
                     case .chooseDay:
-                        AssessmentDetailMultipleChoiceView(title: "Which days of the week are you available for exercise? ", explanation: "(Pick Three)", selectedItems: $avm.days, selections: Day.allCases, limit: 3)
+                        AssessmentDetailMultipleChoiceView(title: avm.state.getLocalizedString().title, explanation: "(Pick Three)", selectedItems: $avm.days, selections: Day.allCases, limit: 3)
                     case .chooseDuration:
-                        AssessmentDetailView(title: "How long does a typical exercise session fit into your schedule?", selection: $avm.durationExercise, selections: Duration.allCases)
+                    AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.durationExercise, selections: Duration.allCases)
                     case .chooseExperience:
-                        AssessmentDetailView(title: "Have you ever done yoga before?", selection: $avm.experience, selections: Difficulty.allCases)
+                        AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.experience, selections: Difficulty.allCases)
                     case .chooseTime:
-                        AssessmentDetailView(title: "On the days you're available, what times work best for you?", selection: $avm.timeClock, selections: TimeOfDay.allCases)
+                        AssessmentDetailView(title: avm.state.getLocalizedString().title, selection: $avm.timeClock, selections: TimeOfDay.allCases)
                     case .complete:
                         CompleteView(counter: avm.timeRemaining)
                 }
@@ -45,21 +46,33 @@ struct AssessmentView: View {
             .onReceive(avm.timer, perform: { _ in
                 if avm.checkTimer() {
                     dm.pm.addPosetoPoses()
+                    // Save User Default current week
+                    
+
+                    
                     Task {
                         await dm.setUpProfile(moc: moc, profile: avm.createProfile())
                         avm.finishCreateYogaPlan = true
                     }
+                    
+                    
+                   
                 }
             })
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-                GeneratePlanView(hasNoProfile: $hasNoProfile)
+//                GeneratePlanView()
+//                    .environmentObject(avm)
+                GenerateViewPlanV2()
                     .environmentObject(avm)
             }
             .toolbar {
                 if avm.state != .complete {
-                    if avm.state != .chooseWeek {
-                        ToolbarItem(placement: .topBarLeading) {
-                            IconButtonComponent(icon: "chevron.left") {
+                    ToolbarItem(placement: .topBarLeading) {
+                        IconButtonComponent(icon: "chevron.left") {
+                            if avm.state == .chooseWeek {
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
+                            else {
                                 avm.previousState()
                             }
                         }
@@ -70,6 +83,8 @@ struct AssessmentView: View {
                 }
                 
             }
+            .navigationBarBackButtonHidden()
+            .navigationBarTitleDisplayMode(.inline)
         }
         
         
@@ -78,5 +93,5 @@ struct AssessmentView: View {
 }
 
 #Preview {
-    AssessmentView(hasNoProfile: .constant(false))
+    AssessmentView()
 }

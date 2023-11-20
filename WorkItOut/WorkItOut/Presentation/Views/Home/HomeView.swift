@@ -1,12 +1,40 @@
 //
 //  HomeView.swift
-//  WorkItOut
+//  Mamaste
 //
-//  Created by Jeremy Raymond on 30/10/23.
+//  Created by Jeremy Raymond on 15/11/23.
 //
 
-import CoreData
 import SwiftUI
+
+enum TabBarEnum: LocalizedStringResource, CaseIterable {
+    case today = "Today"
+    case plan = "Plan"
+    case explore = "Explore"
+    
+    var icon: String {
+        switch self {
+        case .today:
+            return "rectangle"
+        case .plan:
+            return "rectangle.grid.1x2"
+        case .explore:
+            return "rectangle.grid.2x2"
+        }
+    }
+    
+    @ViewBuilder
+    var view: some View {
+        switch self {
+        case .today:
+            HomeTodayView()
+        case .plan:
+            HomePlanView()
+        case .explore:
+            HomeExploreView()
+        }
+    }
+}
 
 struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
@@ -14,85 +42,27 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
     @State var alert : Bool = false
+    
+    @State var selected: TabBarEnum = .today
+    
     var body: some View {
-        NavigationStack(path: $path){
-            VStack {
-                VStack {
-                    ZStack {
-                        if vm.showHeader {
-                            Image("AssesmentResultHeaderBackground")
-                                .resizable()
-                                .frame(maxWidth: .infinity, maxHeight: 160)
-                                .ignoresSafeArea()
-                        }
-                        VStack {
-                            HStack {
-                                Button {
-                                    vm.showProfile = true
-                                } label: {
-                                    HomeButtonView(icon: "person")
-                                }
-                                Spacer()
-                                HomeWeekIndicatorView()
-                                    .onAppear {
-                                        self.vm.initMonth()
-                                    }
-                                    .environmentObject(vm)
-                                Spacer()
-                                NavigationLink{
-                                    HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
-                                } label: {
-                                    HomeButtonView(icon: "clock.arrow.circlepath")
-                                }
+        NavigationStack(path: $path) {
+            VStack(spacing: 0) {
+                selected.view
+                HomeTabView(selected: $selected)
+                    .onAppear{
+                        Task{
+                            do {
+                                try await vm.loadProfile(moc: moc)
+                            } catch {
+                                self.alert = true
                             }
-                            .padding(.bottom)
-                            
-                            if vm.showHeader {
-                                HStack {
-                                    if let profile = dm.profile {
-                                        ForEach(Day.allCases, id: \.self) { day in
-                                            DayButtonView(selectedDay: $vm.day, workoutDay: vm.days, day: day, weekXpreg: profile.currentPregnancyWeek, checkedWeek: vm.week)
-                                        } 
-                                    }
-                                }
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-                    .animation(.default, value: vm.showHeader)
-                }
-                .frame(maxWidth: .infinity)
-                .background(.white)
-                
-                ScrollListenerViewBuilder(showContent: $vm.showHeader) {
-                    HomeCurrentYogaView()
-                        .environmentObject(vm)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Exercise that might help you")
-                            .font(.title2)
-                            .bold()
-                        ScrollView(.horizontal) {
-                            HStack {
-                                ForEach(Relieve.allCases, id: \.self) { relieve in
-                                    HomeYogaCategoryView(relieve: relieve)
-                                }
-                            }
-                        }
-                        ForEach(dm.handMadeYogaPlan[vm.selectedRelieve] ?? vm.yogaPlans, id: \.id) { yogaPlan in
-                            HomeOtherPlansView(yogaPlan: yogaPlan)
-                                .animation(.default, value: vm.selectedRelieve)
                         }
                     }
-                    .padding()
-                }
             }
-            .onChange(of: vm.week) { _ in
-                vm.initMonth()
-            }
-            .onChange(of: vm.day) { _ in
-                vm.initMonth()
-            }
+            
+            .ignoresSafeArea(edges: .bottom)
+            .background(Color.background)
             .sheet(isPresented: $vm.showProfile, onDismiss: {
                 Task{
                     do{
@@ -106,32 +76,21 @@ struct HomeView: View {
                     ProfileView(vm: ProfileViewModel(profile: vm.profile))
                 }
             })
-            .sheet(isPresented: $vm.sheetToggle, content: {
-                YogaDetailView(sheetToggle: $vm.sheetToggle, path: $path, yoga: vm.currentYoga)
-                    .padding(.top)
-            })
-            .onAppear{
-                Task{
-                    do {
-                        try await vm.loadProfile(moc: moc)
-                    } catch {
-                        self.alert = true
-                    }
-                }
-            }
             .navigationDestination(for: String.self) { string in
-                ExecutionView(vm: ExecutionViewModel(yoga: vm.currentYoga), path: $path)
+                ExecutionView(vm: ExecutionViewModel(yoga: vm.getYogaByDay(day: vm.day)!), path: $path)
                     .environmentObject(dm)
                     .navigationBarBackButtonHidden()
             }
         }
         .environmentObject(vm)
-        .navigationBarBackButtonHidden()
+        
+        .sheet(isPresented: $vm.sheetToggle, content: {
+            YogaDetailView(yvm: YogaDetailViewModel(oldYoga: vm.getYogaByDay(day: vm.day) ?? Yoga()), sheetToggle: $vm.sheetToggle, path: $path, yogaTitle: vm.yogaTitle)
+                .padding(.top)
+        })
     }
-    
-    
 }
 
-//#Preview {
-//    HomeView()
-//}
+#Preview {
+    HomeView()
+}

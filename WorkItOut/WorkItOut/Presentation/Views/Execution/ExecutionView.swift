@@ -15,14 +15,11 @@ struct ExecutionView: View {
     @StateObject var vm : ExecutionViewModel
     @StateObject var timerVm : TimerViewModel = TimerViewModel()
     @Environment(\.presentationMode) var presentationMode
-    @State var textSwitch = false
     @State var previousDisabled = true
     @State var nextDisabled = false
     @State var progress: CGFloat = 0.0
     @State var showAlert = false
-    @State var showTips = true
-    @State var checkBox = false
-    @Binding var path :  NavigationPath
+    @Binding var path : NavigationPath
     
     var body: some View {
         ZStack(alignment: .center){
@@ -47,26 +44,59 @@ struct ExecutionView: View {
                         HStack (spacing: 20){
                             Text("Exercise \(vm.index + 1)/\(vm.poses.count)")
                                 .font(.system(size: 14))
+                                .animation(.default, value: vm.index)
+                                .contentTransition(.numericText(value: Double(vm.index)))
                             Button{
-                                
+                                withAnimation(.easeInOut) {
+                                    vm.showVideo.toggle()
+                                }
+                                vm.videoIsLoading = true
                             }label: {
                                 ZStack{
                                     Circle()
                                         .opacity(0.02)
                                         .frame(width: 40, height: 40)
-                                    Image("tabler-icon-scan-eye")
-                                        .resizable()
-                                        .frame(width: 20, height: 20)
+                                    Image(systemName: vm.showVideo ? "video" : "video.slash")
                                 }
                             }
+                            .disabled(vm.poses[vm.index].video == nil && !vm.showVideo)
                         }
                     }
                     .padding(.horizontal, 20)
-                    if let _ = UIImage(named: vm.poses[vm.index].name){
-                        PoseImageCard(name: vm.poses[vm.index].name, width: 358)
+                    if vm.showVideo {
+                        if let videoURL = vm.poses[vm.index].video {
+                            if let url = vm.videoURLManager.generateURL(videoID: videoURL){
+                                ZStack{
+                                    WebView(url: url, vm: vm)
+                                        .frame(width: 368, height: 400)
+                                        .aspectRatio(contentMode: .fill)
+                                        .cornerRadius(12)
+                                    Color.black
+                                        .frame(width: 368, height: 400)
+                                        .opacity(vm.videoIsLoading ? 1 : 0)
+                                        .cornerRadius(12)
+                                }
+                            }
+                        } else{
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 12)
+                                    .frame(width: 368, height: 400)
+                                Text("Video not Available")
+                                    .foregroundStyle(Color.white)
+                            }
+                        }
                     }else{
-                        RoundedRectangle(cornerRadius: 12)
-                            .frame(width: 358, height: 358)
+                        if let _ = UIImage(named: vm.poses[vm.index].name){
+                            Image(vm.poses[vm.index].name)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 368, height: 400)
+                                .cornerRadius(12)
+                                .clipped()
+                        }else{
+                            RoundedRectangle(cornerRadius: 12)
+                                .frame(width: 368, height: 400)
+                        }
                     }
                     VStack{
                         Text("\(vm.poses[vm.index].name)")
@@ -79,47 +109,45 @@ struct ExecutionView: View {
                         }
                     }
                     .padding()
-                    if textSwitch == false {
+                    Spacer()
+                    if vm.textSwitch == false {
                         Text("Get Started")
                             .font(.system(size: 48))
                             .bold()
-                            .padding(50)
-                    }else {
+                    }
+                    else {
                         VStack {
                             Text("\(timerVm.currentTime())")
-                                .font(.system(size: 60))
+                                .font(.system(size: 48))
                                 .bold()
-                                .onReceive(timerVm.timer){ _ in
-                                    timerVm.updateCurrentTime()
-                                }
+                                .animation(.default, value: timerVm.timeRemaining)
+                                .contentTransition(.numericText(value: timerVm.timeRemaining))
                             ZStack(alignment: .leading) {
                               Rectangle()
-                                .frame(width: 300, height: 20)
+                                .frame(width: 240, height: 12)
                                 .opacity(0.3)
                                 .foregroundColor(.gray)
-
                               Rectangle()
-                                .frame(width: progress * 300, height: 20)
+                                .frame(width: progress * 240, height: 12)
                                 .foregroundColor(.primary)
                                 .animation(.easeInOut, value: progress)
                             }
                             .cornerRadius(15)
                             .onReceive(timerVm.timer) { _ in
-                              if progress < 1.0 {
-                                  progress += 0.01/Double(vm.poses[vm.index].seconds-1)
-                              }
+                                if progress < 1.0 {
+                                    progress += 1/Double(vm.poses[vm.index].seconds-1)
+                                }
                             }
                         }
-                        .onAppear(perform: {
-                            timerVm.startTimer(time: Double(vm.poses[vm.index].seconds))
-                        })
-                        .padding(14)
                     }
+                    Spacer()
                     HStack{
                         Button{
                             vm.previousPose()
                             if !(vm.index == 0){
-                                timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds))
+                                timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds + 2))
+                                vm.loadVideo(videoID: vm.poses[vm.index].video ?? "")
+                                vm.videoIsLoading = true
                             }
                         }label: {
                             ZStack{
@@ -132,7 +160,6 @@ struct ExecutionView: View {
                             }
                         }
                         .disabled(previousDisabled)
-                        
                         Button{
                             if timerVm.isTimerPaused == false{
                                 timerVm.pauseTimer()
@@ -141,33 +168,23 @@ struct ExecutionView: View {
                                 timerVm.continueTimer()
                                 vm.avPlayer?.play()
                             }
-                            
                         }label: {
-                            if timerVm.isTimerPaused == false{
-                                ZStack{
-                                    Circle()
-                                        .frame(width: 68, height: 68)
-                                        .foregroundColor(.primary)
-                                    Image("tabler-icon-player-pause")
-                                        .resizable()
-                                        .frame(width: 24, height: 28)
-                                }
-                            }else {
-                                ZStack{
-                                    Circle()
-                                        .frame(width: 68, height: 68)
-                                        .foregroundColor(.primary)
-                                    Image("tabler-icon-player-play")
-                                        .resizable()
-                                        .frame(width: 22.75, height: 28)
-                                }
-                            }
+                            Image(systemName: timerVm.isTimerPaused ? "play.fill" : "pause.fill")
+                                .font(.largeTitle)
+                                .foregroundStyle(Color.white)
+                                .padding()
+                                .background(Color.primary)
+                                .clipShape(.circle)
+                                .animation(.default, value: timerVm.isTimerPaused)
+                                .contentTransition(.symbolEffect(.automatic))
                         }
                         .padding(.horizontal, 50)
                         Button{
                             vm.nextPose(skipped: true)
                             if !(vm.index + 1 >= vm.poses.count) {
-                                timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds))
+                                timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds + 2))
+                                vm.loadVideo(videoID: vm.poses[vm.index].video ?? "")
+                                vm.videoIsLoading = true
                             }
                         }label: {
                             ZStack{
@@ -180,7 +197,6 @@ struct ExecutionView: View {
                             }
                         }
                         .disabled(nextDisabled)
-                        
                     }
                     .padding(.top, 40)
                     .onChange(of: vm.index) { _, _ in
@@ -195,11 +211,9 @@ struct ExecutionView: View {
                             previousDisabled = false
                         }
                         timerVm.isTimerPaused = false
-                        textSwitch = false
+                        vm.textSwitch = false
                         progress = 0.0
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                            self.textSwitch.toggle()
-                        }
+                        timerVm.startTimer(time: Double(vm.poses[vm.index].seconds + 2))
                     }
                     .onChange(of: timerVm.timesUp) { _, valueIsTrue in
                         if valueIsTrue {
@@ -212,17 +226,23 @@ struct ExecutionView: View {
                             path.append(1)
                         }
                     }
-                    .onChange(of: showTips) { _, valueIsTrue in
+                    .onChange(of: vm.showTips) { _, valueIsTrue in
                         if !valueIsTrue {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                                self.textSwitch.toggle()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                                vm.textSwitch.toggle()
                             }
+                        }
+                    }
+                    .onReceive(timerVm.timer) { _ in
+                        timerVm.updateCurrentTime()
+                        if Int(timerVm.timeRemaining) == vm.poses[vm.index].seconds {
+                            vm.textSwitch = true
                         }
                     }
                 }
             }
-            if showTips {
-                TipView(showTips: $showTips, toggle: $checkBox)
+            if vm.showTips {
+                TipView(showTips: $vm.showTips, toggle: $vm.checkBox)
             }
             if showAlert {
                 ZStack{
@@ -233,10 +253,10 @@ struct ExecutionView: View {
                         ZStack{
                             Circle()
                                 .frame(width: 70)
-                                .foregroundStyle(.main.opacity(0.1))
+                                .foregroundStyle(Color.primary.opacity(0.1))
                             Image(systemName: "exclamationmark.triangle")
                                 .font(.largeTitle)
-                                .foregroundStyle(.main)
+                                .foregroundStyle(Color.primary)
                         }
                         VStack(spacing: 10){
                             Text("Are you sure you want to exit this session?")
@@ -266,7 +286,13 @@ struct ExecutionView: View {
         }
         
         .onAppear{
-            // Start AVPlayer Logic
+            if let valueUserDefault = vm.accessUserDefault() {
+                vm.checkBox = valueUserDefault
+            }
+            if !vm.checkBox {
+                vm.showTips = true
+            }
+            timerVm.startTimer(time: Double(vm.poses[vm.index].seconds + 2))
         }
         .navigationDestination(isPresented: $vm.end) {
             ExecutionCompleteView(path: $path, vm: vm)

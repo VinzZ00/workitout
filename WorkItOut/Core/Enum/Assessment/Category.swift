@@ -12,8 +12,26 @@ enum Category: String, CaseIterable {
     case standingPose = "Standing Pose"
     case seatedPose = "Seated Pose"
     case hipOpeners = "Hip Openers"
-//    case squattingAndBirthing = "Squatting And Birthing"
     case coolingDown = "Cooling Down"
+    
+    func getString() -> String {
+        return self.getLocalizedString().stringValue()
+    }
+    
+    func getLocalizedString() -> LocalizedStringResource {
+        switch self {
+        case .warmUp:
+            return "Warm Up"
+        case .standingPose:
+            return "Standing Pose"
+        case .seatedPose:
+            return "Seated Pose"
+        case .hipOpeners:
+            return "Hip Openers"
+        case .coolingDown:
+            return "Cooling Down"
+        }
+    }
     
     static func getMainCategories() -> [Category] {
         return [.standingPose, .seatedPose, .hipOpeners]
@@ -29,8 +47,6 @@ enum Category: String, CaseIterable {
             return 3
         case .hipOpeners:
             return 4
-//        case .squattingAndBirthing:
-//            return 5
         case .coolingDown:
             return 5
         }

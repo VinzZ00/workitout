@@ -15,38 +15,19 @@ enum AssessmentState: Int, CaseIterable {
     case chooseExperience = 4
     case chooseTime = 5
     
-    func getTitle() -> String {
-        switch self {
-        case .chooseWeek:
-            return "Pregnancy Weeks"
-        case .chooseExceptions:
-            return "Health Conditions"
-        case .chooseDay:
-            return "Weekly Schedule"
-        case .chooseDuration:
-            return "Yoga Duration in a Session"
-        case .chooseTime:
-            return "Time Reminder"
-        case .chooseExperience:
-            return "Yoga Experience"
-        case .complete:
-            return "Complete"
-        }
-    }
-    
-//    case chooseMonth
-//    case chooseTrimester
-//    case chooseRelieve
-    
     case complete = 6
     
-    func getDescription() -> (String, String) {
-        var title = ""
-        var description = ""
+    func getString() -> (title: String, description: String) {
+        return (self.getLocalizedString().title.stringValue(), self.getLocalizedString().title.stringValue())
+    }
+    
+    func getLocalizedString() -> (title: LocalizedStringResource, description: LocalizedStringResource) {
+        var title: LocalizedStringResource = ""
+        var description: LocalizedStringResource = ""
         
         switch self {
         case .chooseWeek:
-            title = "What weeks of pregnancy are you in?"
+            title = "Pregnancy Weeks"
             description = ""
         case .chooseExceptions:
             title = "Health conditions"

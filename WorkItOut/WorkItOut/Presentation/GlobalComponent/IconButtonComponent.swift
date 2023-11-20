@@ -9,6 +9,7 @@ import SwiftUI
 
 struct IconButtonComponent: View {
     var icon: String = "person"
+    var font: Font = .body
     var action: () -> Void = {
         print("I'm a button")
     }
@@ -16,6 +17,7 @@ struct IconButtonComponent: View {
     var body: some View {
         Button(action: action) {
             Image(systemName: icon)
+                .font(font)
                 .padding(12)
                 .background(Color.background.opacity(0.5))
                 .clipShape(.circle)

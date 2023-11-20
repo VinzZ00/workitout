@@ -9,47 +9,73 @@ import SwiftUI
 import CoreData
 
 struct YogaDetailView: View {
+    @StateObject var yvm: YogaDetailViewModel
+    
+    @EnvironmentObject var dm: DataManager
+    
     @State var isPresentedExecution = false
     @EnvironmentObject var vm: HomeViewModel
     @Binding var sheetToggle : Bool
     @Binding var path : NavigationPath
     
-    var yoga: Yoga
     @State private var state: YogaPreviewEnum = .relieveChoice
     @State var showHeader: Bool = true
+    
+    var yogaTitle: String = ""
     
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                if showHeader {
-                    Text(state.getTitle())
-                        .font(.largeTitle)
-                        .bold()
-                    state.getDescription(yoga: yoga)
-                }
-                
                 if state == .relieveChoice {
-                    ScrollView{
-                        RelieveAssesmentView()
+                    if showHeader {
+                        Text(state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
+                            .font(.largeTitle)
+                            .bold()
+                        state.getDescription(yoga: yvm.oldYoga)
                     }
+                    VStack {
+                        ScrollListenerViewBuilder(showContent: $showHeader) {
+                            RelieveAssesmentView()
+                                .environmentObject(yvm)
+                                .padding(.vertical)
+                        }
+                        if showHeader {
+                            HStack{
+                                Image(systemName: "info.circle.fill")
+                                Text("You can skip this part if you feel no pain")
+                            }
+                            .foregroundStyle(Color.neutral3)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(.ultraThinMaterial)
+                            .borderedCorner()
+                        }
+                    }
+                    
                 }
                 else {
+                    if showHeader {
+                        Text(state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
+                            .font(.largeTitle)
+                            .bold()
+                        state.getDescription(yoga: yvm.newYoga)
+                    }
                     ScrollListenerViewBuilder(showContent: $showHeader){
-                        YogaPreviewView(yoga: yoga)
+                        YogaPreviewView(oldYoga: yvm.oldYoga, newYoga: yvm.newYoga)
                     }
                 }
                 
-                HStack{
-                    Image(systemName: "info.circle.fill")
-                        .foregroundStyle(Color.neutral3)
-                    Text("You can skip this part")
-                        .foregroundStyle(Color.neutral3)
-                }
                 ButtonComponent(title: state.rawValue) {
                     if state == .relieveChoice {
-                        state = .yogaPreview
+                        withAnimation {
+                            dm.pm.addPosetoPoses()
+                            yvm.relievesPoses = dm.posesByRelieves(relieves: yvm.selectedRelieves)
+                            yvm.newYoga = yvm.addRelieves(yoga: yvm.oldYoga)
+                            state = .yogaPreview
+                        }
+                        
                     }
                     else {
                         sheetToggle = false
@@ -57,10 +83,16 @@ struct YogaDetailView: View {
                     }
                 }
             }
-            .navigationTitle(showHeader ? "" : state.getTitle())
+            .onAppear(perform: {
+                if yogaTitle != "" {
+                    yvm.newYoga = yvm.oldYoga
+                    state = .yogaPreview
+                }
+            })
+            .navigationTitle(showHeader ? "" : state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
             .navigationBarTitleDisplayMode(.inline)
             .padding()
-            .animation(.default, value: state)
+//            .animation(.default, value: state)
             .animation(.default, value: showHeader)
             .toolbarBackground(.hidden)
             .toolbar {
@@ -70,16 +102,20 @@ struct YogaDetailView: View {
                             self.presentationMode.wrappedValue.dismiss()
                         }
                         else {
+                            if yogaTitle != "" {
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
                             state = .relieveChoice
                         }
                     }
+                    .contentTransition(.symbolEffect(.automatic))
                 }
             }
             
         }
     }
     
-    enum YogaPreviewEnum: String {
+    enum YogaPreviewEnum: LocalizedStringResource {
         case relieveChoice = "Next"
         case yogaPreview = "Start Now"
         
@@ -92,12 +128,17 @@ struct YogaDetailView: View {
             }
         }
         
-        func getTitle() -> String {
+        func getTitle(yoga: Yoga, yogaTitle: String = "") -> String {
             switch self {
             case .relieveChoice:
-                return "Choose Your Pain and Relief and Target Area"
+                return "What Are Your Current Conditions?"
             case .yogaPreview:
-                return "Balancing and Grounding"
+                if yogaTitle != "" {
+                    return yogaTitle
+                }
+                else {
+                    return yoga.name
+                }
             }
         }
         
@@ -105,7 +146,7 @@ struct YogaDetailView: View {
         func getDescription(yoga: Yoga) -> some View {
             switch self {
             case .relieveChoice:
-                Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions.")
+                Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. ") + Text("(You can skip this part)").foregroundStyle(.purple)
             case .yogaPreview:
                 Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
                     .foregroundStyle(Color.neutral3)
@@ -114,6 +155,6 @@ struct YogaDetailView: View {
     }
 }
 
-#Preview {
-    YogaDetailView(sheetToggle: .constant(false), path: .constant(NavigationPath()), yoga: Yoga())
-}
+//#Preview {
+//    YogaDetailView(sheetToggle: .constant(false), path: .constant(NavigationPath()), yoga: Yoga())
+//}

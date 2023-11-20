@@ -33,7 +33,7 @@ struct HistoryView: View {
                             .foregroundStyle(Color.background)
                         Image(systemName: "folder.badge.questionmark")
                             .font(.system(size: 32))
-                            .foregroundStyle(Color.main)
+                            .foregroundStyle(Color.primary)
                     }
                     
                     VStack(spacing: 4){

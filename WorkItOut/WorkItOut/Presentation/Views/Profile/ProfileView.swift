@@ -14,20 +14,24 @@ struct ProfileView: View {
     
     @EnvironmentObject var dm: DataManager
     @State var alert : Bool = false;
+    
+    @State var load: Bool = false
+    
     var body: some View {
         ZStack{
             VStack{
                 ScrollView(showsIndicators: false){
                     HStack{
                         Image(systemName: "info.circle.fill")
-                            .foregroundStyle(Color.neutral3)
                         Text("Your yoga plan will be updated when you save the changes of assessment")
-                            .foregroundStyle(Color.neutral3)
                     }
-                    .padding(.horizontal, 5)
-                    .padding(.vertical, 10)
+                    .foregroundStyle(Color.neutral3)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical)
                     .background(.ultraThinMaterial)
-                    .cornerRadius(8)
+                    .borderedCorner()
+                    
                     VStack(alignment: .leading){
                         Text("Pregnancy & Health Condition")
                             .foregroundStyle(.gray)
@@ -60,7 +64,7 @@ struct ProfileView: View {
                     }
                     .padding(.bottom, 24)
                 }
-                .toolbar{
+                .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
                         Button {
                             if vm.equalWithProfile() {
@@ -73,9 +77,10 @@ struct ProfileView: View {
                         } label: {
                             ZStack{
                                 Circle()
-                                    .tint(.grayBorder.opacity(0.15))
+                                    .tint(Color.neutral3.opacity(0.1))
                                     .frame(width: 40)
-                                Image(systemName: "multiply")
+                                Image(systemName: "xmark")
+                                    .foregroundStyle(Color.neutral3)
                                     .font(.system(size: 10))
                                     .bold()
                             }
@@ -83,23 +88,18 @@ struct ProfileView: View {
                     }
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            Task{
-                                dm.pm.addPosetoPoses()
-                                vm.setProfile()
-                                await dm.setUpProfile(moc: moc, profile: vm.profile)
-                                vm.profile = dm.profile!
-                                await vm.saveProfile(moc: moc)
-                            }
-                            self.presentationMode.wrappedValue.dismiss()
+                            load = true
+                            
                         } label: {
                             Text("Update")
-                                .foregroundStyle(vm.equalWithProfile() ? .grayBorder : Color(.orangePrimary))
-                                .padding(.horizontal, 10)
+                                .bold(!vm.equalWithProfile())
+                                .foregroundStyle(vm.equalWithProfile() ? Color.neutral3 : Color.primary)
+                                .padding(.horizontal, 12)
                                 .padding(.vertical, 8)
-                                .background(vm.equalWithProfile() ? .grayBorder.opacity(0.25) : .orangePrimary.opacity(0.25))
-                                .cornerRadius(8)
+                                .background(vm.equalWithProfile() ? Color.neutral3.opacity(0.1) : Color.primary.opacity(0.1))
+                                .cornerRadius(4)
                         }
-                        .padding(.top, 10)
+                        .padding(.top, 12)
                         .disabled(vm.equalWithProfile())
                     }
                 }
@@ -116,6 +116,22 @@ struct ProfileView: View {
                         .presentationDragIndicator(.hidden)
                         .padding(.top, 24)
                 })
+                .navigationDestination(isPresented: $load, destination: {
+                    CompleteView(title: "Update Yoga Plan", desc: "Please Wait, we are generating the best yoga plan for you", counter: vm.timeRemaining, showBackground: false)
+                        .navigationBarBackButtonHidden()
+                })
+                .onReceive(vm.timer, perform: { _ in
+                    if vm.checkTimer(load: load) {
+                        Task{
+                            dm.pm.addPosetoPoses()
+                            vm.setProfile()
+                            await dm.setUpProfile(moc: moc, profile: vm.profile)
+                            vm.profile = dm.profile!
+                            await vm.saveProfile(moc: moc)
+                        }
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                })
                 
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
@@ -130,10 +146,10 @@ struct ProfileView: View {
                     ZStack{
                         Circle()
                             .frame(width: 70)
-                            .foregroundStyle(.main.opacity(0.1))
+                            .foregroundStyle(Color.primary.opacity(0.1))
                         Image(systemName: "exclamationmark.triangle")
                             .font(.largeTitle)
-                            .foregroundStyle(.main)
+                            .foregroundStyle(Color.primary)
                     }
                     VStack(spacing: 10){
                         Text("Discard Changes")
@@ -162,6 +178,7 @@ struct ProfileView: View {
                 .padding(.bottom, 20)
             }
         }
+        .interactiveDismissDisabled()
         .navigationTitle("My Assessment")
         .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()

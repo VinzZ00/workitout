@@ -7,7 +7,7 @@
 
 import XCTest
 import CoreData
-@testable import WorkItOut
+@testable import Mamaste
 
 
 final class HistoryTests: XCTestCase {
@@ -56,11 +56,13 @@ final class HistoryTests: XCTestCase {
         }
     }
 
+    
+    
     func testCategorizeHistoryByDate() {
         // Initliaze
         let poses = [
-            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .ankle, .foot], description: "Banana", seconds: 60, state: .completed),
-            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.back, .ankle, .foot], description: "Bound Angle", seconds: 60, state: .completed)
+            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .hip, .leg], description: "Banana", seconds: 60, state: .completed),
+            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.back, .hip, .leg], description: "Bound Angle", seconds: 60, state: .completed)
         
         ]
         let yoga = Yoga(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
@@ -97,8 +99,8 @@ final class HistoryTests: XCTestCase {
     
     func testSaveHistory() async {
         let poses = [
-            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .ankle, .foot], description: "Banana", seconds: 60, state: .completed),
-            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.back, .ankle, .foot], description: "Bound Angle", seconds: 60, state: .completed)
+            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .hip, .leg], description: "Banana", seconds: 60, state: .completed),
+            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.back, .hip, .leg], description: "Bound Angle", seconds: 60, state: .completed)
         
         ]
         let yoga = Yoga(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
@@ -113,21 +115,37 @@ final class HistoryTests: XCTestCase {
         
         if let fetch = fetchUsecase {
             
-            // Dapetin profile dlu
-            // MARK: GANTI DARI YANG ADD JADI FETCH ELVIN 4 NOV 17.15
-            var profile = await fetch.call(context: self.moc!).last
-            
-            profile!.histories.append(contentsOf: histories)
-            if let update = updateUseCase {
-                await update.call(profile: profile!, context: moc!)
-                if let fetch = fetchUsecase {
-                    let fetchedProfile = await fetch.call(context: moc!).last!
-                    print("Size : \(fetchedProfile.histories.count)")
-                    XCTAssertEqual(fetchedProfile.histories.count, profile!.histories.count, "First Done")
-                }
+            var profile : Profile = Profile()
+            do{
+                profile = try await fetch.call(context: self.moc!).last!
+            }catch let error{
+                print(error)
             }
             
-            var profileNew = await fetch.call(context: self.moc!).last
+            profile.histories.append(contentsOf: histories)
+            if let update = updateUseCase {
+                do{
+                    try await update.call(profile: profile, context: moc!)
+                }catch let error {
+                    print(error)
+                }
+                
+                if let fetch = fetchUsecase {
+                    do{
+                        let fetchedProfile = try await fetch.call(context: moc!).last!
+                        XCTAssertEqual(fetchedProfile.histories.count, profile.histories.count, "First Done")
+                    }catch let error {
+                        print(error)
+                    }
+                    
+                }
+            }
+            var profileNew : Profile = Profile()
+            do{
+                profileNew = try await fetch.call(context: self.moc!).last!
+            }catch let error {
+                print(error)
+            }
             
             let poses = [
                 Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], description: "Banana", seconds: 60, state: .completed),
@@ -137,13 +155,23 @@ final class HistoryTests: XCTestCase {
             
             let yoga3 = Yoga(id: UUID(), name: "Day 4 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
             
-            profileNew!.histories.append(History(id: UUID(), yogaDone: yoga3, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
+            profileNew.histories.append(History(id: UUID(), yogaDone: yoga3, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
             if let update = updateUseCase {
-                await update.call(profile: profileNew!, context: moc!)
+                do {
+                    try await update.call(profile: profileNew, context: moc!)
+                } catch let error {
+                    print(error)
+                }
+                
                 if let fetch = fetchUsecase {
-                    let fetchedProfile = await fetch.call(context: moc!).last!
-                    print(fetchedProfile)
-                    XCTAssertEqual(fetchedProfile.histories.count, profileNew!.histories.count, "Second Done")
+                    do{
+                        let fetchedProfile = try await fetch.call(context: moc!).last!
+                        print(fetchedProfile)
+                        XCTAssertEqual(fetchedProfile.histories.count, profileNew.histories.count, "Second Done")
+                    } catch let error {
+                        print(error)
+                    }
+                    
                 }
             }
         }

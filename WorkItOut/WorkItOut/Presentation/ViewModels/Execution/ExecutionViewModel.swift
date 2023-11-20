@@ -12,7 +12,6 @@ import Foundation
 @MainActor
 class ExecutionViewModel: ObservableObject {
     var fetch: FetchProfileUseCase = FetchProfileUseCase()
-    var update: UpdateProfileUseCase = UpdateProfileUseCase()
     @Published var profile: Profile = MockData.mockProfile
     @Published var yogaPlan: YogaPlan!
     @Published var yoga: Yoga = Yoga()
@@ -21,17 +20,25 @@ class ExecutionViewModel: ObservableObject {
     @Published var end = false
     @Published var start = true
     
+    // Pregnancy Tips
+    @Published var showTips : Bool = false
+    @Published var checkBox : Bool = false
+    
+    // Video and Image Toggler
+    @Published var videoURLManager = VideoURLManager()
+    @Published var showVideo : Bool = false
+    @Published var videoIsLoading : Bool = true
+    @Published var desiredVideoURL : URL?
+    
+    @Published var textSwitch : Bool = false
     @Published var avPlayer : AVPlayer?
     
+    var addHist : AddHistoryUseCase = AddHistoryUseCase()
     
     init(yoga: Yoga) {
         self.yoga = yoga
         getPose()
     }
-    
-//    func addprofile(moc: NSManagedObjectContext) async throws {
-//         self.profile = try await fetch.call(context: moc).last!
-//    }
     
     func getTrimester() -> Int{
         if  1...13 ~= profile.currentPregnancyWeek {
@@ -46,16 +53,6 @@ class ExecutionViewModel: ObservableObject {
     func getYogaPlanIndex() -> Int {
         return profile.plan.firstIndex(where: {$0.trimester.getInt() == getTrimester()}) ?? -1
     }
-    
-//    func getYoga() {
-//        let date = 5 // ganti dengan hari ini
-//        
-//        for yoga in yogaPlan.yogas {
-//            if (yoga.day.getInt() == date) {
-//                self.yoga = yoga
-//            }
-//        }
-//    }
     
     func getPose() {
         for categori in PoseManager.existingCategories(poses: yoga.poses) {
@@ -100,23 +97,28 @@ class ExecutionViewModel: ObservableObject {
     func savePoses(context: NSManagedObjectContext) async throws {
         profile = try await fetch.call(context: context).last!
         
-        
-        
         let yogaPlanIndex = getYogaPlanIndex()
         guard let yogaIndex = profile.plan[yogaPlanIndex].yogas.firstIndex(of: yoga) else {
             return
         }
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
-        let history = History(id: UUID(), yogaDone: profile.plan[yogaPlanIndex].yogas[yogaIndex], executionDate: Date.now, duration: 5, rating: 5)
-        profile.histories.append(history)
-        try await self.update.call(profile: profile, context: context)
+        profile.plan[yogaPlanIndex].yogas[yogaIndex].yogaState = .completed
+        
+        let yoga = profile.plan[yogaPlanIndex].yogas[yogaIndex]
+        let yogaPlan = profile.plan[yogaPlanIndex]
+        let history = History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 5, rating: 5)
+        try await self.addHist.call(history: history, context: context, yoga: yoga, yogaPlan: yogaPlan)
     }
     
-    func loadVideo(urlString : String = "https://youtu.be/moCuqURlEyY?t=74"){
-        guard let url = URL(string: urlString) else {
+    func loadVideo(videoID : String){
+        guard let url = videoURLManager.generateURL(videoID: videoID) else {
             return
         }
-        avPlayer = AVPlayer(url: url)
-        avPlayer?.play()
+        self.desiredVideoURL = url
+    }
+    
+    func accessUserDefault() -> Bool?{
+        let defaults = UserDefaults.standard
+        return defaults.object(forKey: "skipPregnancyTips") as? Bool
     }
 }

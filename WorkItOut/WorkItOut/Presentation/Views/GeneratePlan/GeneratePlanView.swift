@@ -15,7 +15,6 @@ struct GeneratePlanView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    @Binding var hasNoProfile : Bool
     @State var alert : Bool = false
     
     var body: some View {
@@ -24,7 +23,7 @@ struct GeneratePlanView: View {
                 GeneratePlanHeaderView()
                     .environmentObject(vm)
                 ScrollListenerViewBuilder(scrollTarget: $vm.scrollTarget, showContent: $vm.showHeader) {
-                    GeneratePlanYogaView()
+                    GeneratePlanYogaView(yogaPlan: dm.profile!.yogaPlan)
                         .environmentObject(vm)
                 }
                 VStack {
@@ -38,7 +37,7 @@ struct GeneratePlanView: View {
                                 }
                             }
                             vm.finish.toggle()
-                            hasNoProfile.toggle()
+                            dm.hasNoProfile.toggle()
                         }
                     }
                     .padding(.horizontal)
@@ -48,7 +47,7 @@ struct GeneratePlanView: View {
             }
             .animation(.default, value: vm.showHeader)
             .navigationBarBackButtonHidden()
-            .navigationTitle(vm.showHeader ? "" : "Workout Plan for Beginner")
+            .navigationTitle(vm.showHeader ? "" : String(localized: "Workout Plan for Beginner"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -60,19 +59,11 @@ struct GeneratePlanView: View {
                 }
             }
             .navigationDestination(isPresented: $vm.finish, destination: {
-                if let prof = dm.profile {
+                if dm.profile != nil {
                     HomeView(vm: HomeViewModel(profile: dm.profile!)) // TODO: buang seru
                 }
             })
             
-        }
-    }
-    
-    struct ViewOffsetKey: PreferenceKey {
-        typealias Value = CGFloat
-        static var defaultValue = CGFloat.zero
-        static func reduce(value: inout Value, nextValue: () -> Value) {
-            value += nextValue()
         }
     }
 }

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ProfileCard: View {
-    var detail : (String, String)
+    var detail : (LocalizedStringResource, LocalizedStringResource)
     var value : String
     init(assessmentState: AssessmentState, value: String) {
-        self.detail = assessmentState.getDescription()
+        self.detail = assessmentState.getLocalizedString()
         self.value = value
     }
     var body: some View {
@@ -20,6 +20,7 @@ struct ProfileCard: View {
                 Text("\(detail.0)")
                     .bold()
                 Text("\(detail.1)")
+                    .foregroundStyle(Color.neutral3)
                     .lineLimit(nil)
                     .multilineTextAlignment(.leading)
                 Text("\(value)")
@@ -32,12 +33,13 @@ struct ProfileCard: View {
             }
             Spacer()
             Image(systemName: "chevron.right")
+                .foregroundStyle(Color.neutral3)
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 8)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.neutral6)
+                .stroke(Color.neutral6.opacity(0.5))
         )
     }
 }

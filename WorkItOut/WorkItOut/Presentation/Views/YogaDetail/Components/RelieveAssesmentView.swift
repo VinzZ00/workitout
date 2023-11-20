@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct RelieveAssesmentView: View {
-    @State var selectedRelieves: [Relieve] = []
-    @State var selections : [Relieve] = [.back, .hip, .neck, .leg, .pelvic]
+    @EnvironmentObject var yvm: YogaDetailViewModel
     
     let columns = [
             GridItem(.flexible()),
@@ -19,41 +18,39 @@ struct RelieveAssesmentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(selections, id: \.self) { relieve in
+                ForEach(yvm.selections, id: \.self) { relieve in
                     Button(action: {
-                        if selectedRelieves.contains(relieve){
-                            guard let selectedIndex = selectedRelieves.firstIndex(of: relieve) else {
+                        if yvm.selectedRelieves.contains(relieve){
+                            guard let selectedIndex = yvm.selectedRelieves.firstIndex(of: relieve) else {
                                 return
                             }
-                            selectedRelieves.remove(at: selectedIndex)
+                            yvm.selectedRelieves.remove(at: selectedIndex)
                         }
                         else{
-                            selectedRelieves.append(relieve)
+                            yvm.selectedRelieves.append(relieve)
                         }
-                        print(relieve)
                     }, label: {
                         VStack {
                             Image(relieve.getAsset())
                                 .resizable()
-                                .frame(width: 50, height: 98)
+                                .frame(width: 50, height: 112)
                             Text("\(relieve.getString())")
                                 .bold()
                         }
-                        .frame(width: 150, height: 170)
+                        .frame(width: 150, height: 160)
                         .background {
                             RoundedRectangle(cornerRadius: 12)
-                                .fill(selectedRelieves.contains(relieve) ? Color.primary.opacity(0.25) : .clear)
-                                .stroke(Color.neutral6)
+                                .fill(yvm.selectedRelieves.contains(relieve) ? Color.primary.opacity(0.25) : .clear)
+                                .stroke(yvm.selectedRelieves.contains(relieve) ? Color.primary : Color.neutral6.opacity(0.5))
                         }
                     })
                 }
             }
-            
             .padding(.vertical)
         }
     }
 }
 
-#Preview {
-    RelieveAssesmentView()
-}
+//#Preview {
+//    RelieveAssesmentView()
+//}

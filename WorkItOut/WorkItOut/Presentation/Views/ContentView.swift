@@ -12,36 +12,34 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var dm: DataManager
     @Environment(\.managedObjectContext) var moc
-    @State private var hasNoProfile = false
     @State private var isLoading = true
     @State var alert = false
+    
     var body: some View {
         ZStack{
+            if dm.hasNoProfile {
+                OnboardingView()
+            }
             if isLoading {
                 EmptyView()
             }else{
-                if !hasNoProfile{
+                if !dm.hasNoProfile{
                     HomeView()
                         .environmentObject(dm);
                 }
             }
         }
-        .fullScreenCover(isPresented: $hasNoProfile) {
-            AssessmentView(hasNoProfile: $hasNoProfile)
-        }
         .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
             if valueIsTrue {
-                hasNoProfile = false
+                dm.hasNoProfile = false
             }
         })
         .onAppear {
             Task{
                 do {
-                    hasNoProfile = try await !dm.loadProfile(moc: moc)
-                    print("")
+                    dm.hasNoProfile = try await !dm.loadProfile(moc: moc)
                 } catch {
-                    hasNoProfile = false
-                    print("Masuk try catch di content view")
+                    dm.hasNoProfile = false
                 }
                 isLoading = false
             }

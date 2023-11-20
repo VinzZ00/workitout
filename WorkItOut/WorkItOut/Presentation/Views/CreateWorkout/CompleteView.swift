@@ -8,23 +8,29 @@
 import SwiftUI
 
 struct CompleteView: View {
+    var title: LocalizedStringResource = "Creating Exercise Plan"
+    var desc: LocalizedStringResource = "Please wait, we are crafting the best exercise plan for you"
     var counter: Double = 0.75
-    var strings: [Double : String] = [
-        1.5 : "Curating best yoga poses for your pregnancy weeks",
-        1 : "Taking into account your health conditions",
-        0.5 :"Predicting best sessions for your schedules",
-    ]
+    var showBackground: Bool = true
     
     var body: some View {
+        let strings: [Double : LocalizedStringResource] = [
+            1.5 : "Curating best yoga poses for your pregnancy weeks",
+            1 : "Taking into account your health conditions",
+            0.5 : "Predicting best sessions for your schedules",
+        ]
+        
         ZStack {
-            VStack {
-                Image("AssesmentBackground")
-                Spacer()
+            if showBackground {
+                VStack {
+                    Image("AssesmentBackground")
+                    Spacer()
+                }
             }
             VStack {
-                Text("Creating Exercise Plan")
+                Text(title)
                     .font(.title.bold())
-                Text("Please wait, we are crafting the best exercise plan for you")
+                Text(desc)
                     .frame(width: 240)
                     .multilineTextAlignment(.center)
                 LoadingCircle()

@@ -33,16 +33,24 @@ struct AssessmentWrapperView: View {
                 Spacer()
             }
             .padding(.horizontal, 15)
-            .toolbar{
+            .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Image(systemName: "multiply")
+                        ZStack{
+                            Circle()
+                                .tint(Color.neutral3.opacity(0.1))
+                                .frame(width: 40)
+                            Image(systemName: "arrow.left")
+                                .foregroundStyle(Color.neutral3)
+                                .font(.system(size: 10))
+                                .bold()
+                        }
                     }
-                    .tint(Color.neutral6)
                 }
             }
+            .interactiveDismissDisabled()
             .padding(.horizontal, 15)
             .navigationBarBackButtonHidden()
         }

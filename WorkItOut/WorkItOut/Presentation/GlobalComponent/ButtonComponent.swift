@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ButtonComponent: View {
-    var title: String = "Next"
+    var title: LocalizedStringResource = "Next"
     var role : ButtonRole? = .none
     var color : Color = Color.primary
+    var textColor: Color = Color.white
     var action: () -> Void = {
         print("I'm a button")
     }
@@ -18,6 +19,7 @@ struct ButtonComponent: View {
     var body: some View {
         Button(role: role, action: action) {
             Text(title)
+                .foregroundStyle(textColor)
                 .bold()
                 .padding(.vertical, 4)
                 .frame(maxWidth: .infinity)

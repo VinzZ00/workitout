@@ -29,11 +29,11 @@ struct OutlineButton : ButtonStyle {
             .padding(.vertical, 10)
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
             .foregroundStyle(configuration.isPressed ? .white : .gray)
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(configuration.isPressed ? .white : .gray, lineWidth: 0.5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 5)
+                    .stroke(Color.neutral3, lineWidth: 1)
             )
-            .buttonBorderShape(.roundedRectangle(radius: 12))
+            .background(.white)
             .animation(.easeOut(duration: 0.15), value: configuration.isPressed)
             .padding(.horizontal)
     }

@@ -27,8 +27,7 @@ struct ScrollListenerViewBuilder<Content: View>: View {
                         Color.clear.preference(key: ViewOffsetKey.self, value: -$0.frame(in: .named("scroll")).origin.y)
                     })
                     .onPreferenceChange(ViewOffsetKey.self) {
-//                        print("offset >> \($0)")
-                        if $0 > 100 {
+                        if $0 > 10 {
                             showContent = false
                         }
                         else {
@@ -36,7 +35,7 @@ struct ScrollListenerViewBuilder<Content: View>: View {
                         }
                     }
             }
-            .onChange(of: scrollTarget) { target in
+            .onChange(of: scrollTarget) {_, target in
                 if let target = target {
                     scrollTarget = nil
                     

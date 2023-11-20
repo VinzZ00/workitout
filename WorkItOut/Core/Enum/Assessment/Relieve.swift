@@ -8,10 +8,6 @@
 import Foundation
 
 enum Relieve: String, UserPreference {
-    func getString() -> String {
-        return self.rawValue
-    }
-    
     case back = "Back"
     case hip = "Hip"
     case neck = "Neck"
@@ -21,6 +17,33 @@ enum Relieve: String, UserPreference {
     case ankle = "Ankle"
     case foot = "Foot"
     case knee = "Knee"
+    
+    func getString() -> String {
+        return self.rawValue
+    }
+    
+    func getLocalizedString() -> LocalizedStringResource {
+        switch self {
+        case .back:
+            return "Back"
+        case .hip:
+            return "Hip"
+        case .neck:
+            return "Neck"
+        case .leg:
+            return "Leg"
+        case .pelvic:
+            return "Pelvic"
+        case .sciatic:
+            return "Sciatic"
+        case .ankle:
+            return "Ankle"
+        case .foot:
+            return "Foot"
+        case .knee:
+            return "Knee"
+        }
+    }
     
     func getAsset()-> String {
         var string : String
