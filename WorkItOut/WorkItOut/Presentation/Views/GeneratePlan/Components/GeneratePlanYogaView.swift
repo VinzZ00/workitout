@@ -47,6 +47,7 @@ struct GeneratePlanYogaView: View {
                     }
                 }
                 .background(Color.background)
+                
             }
         }
     }

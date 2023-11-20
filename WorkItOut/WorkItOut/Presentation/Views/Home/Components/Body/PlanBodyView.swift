@@ -25,34 +25,33 @@ struct PlanBodyView: View {
             .colorMultiply(Color.white)
             .padding(.horizontal)
             
-            ScrollView {
-                VStack {
-                    ScrollView(.horizontal) {
-                        LazyHStack {
-                            ForEach(Trimester.getTrimesterExceptAll(), id: \.self) { trimester in
-                                LazyVStack {
-                                    VStack(alignment: .center) {
-                                        Text(trimester.getTitle())
-                                            .font(.title.bold())
-                                        Text(trimester.getDesc())
-                                    }
-                                    .multilineTextAlignment(.center)
-                                    .padding()
-                                    GeneratePlanYogaView(yogaPlan: dm.profile!.getYogasByTrimester(trimester: trimester))
-                                        .borderedCorner()
-                                        .padding(.horizontal)
+            ScrollView(.horizontal) {
+                LazyHStack {
+                    ForEach(Trimester.getTrimesterExceptAll(), id: \.self) { trimester in
+                        ScrollView {
+                            LazyVStack {
+                                VStack(alignment: .center) {
+                                    Text(trimester.getTitle())
+                                        .font(.title.bold())
+                                    Text(trimester.getDesc())
                                 }
-                                .frame(width: UIScreen.main.bounds.width)
-                                .borderedCorner()
+                                .multilineTextAlignment(.center)
+                                .padding()
+                                GeneratePlanYogaView(yogaPlan: dm.profile!.getYogasByTrimester(trimester: trimester))
+                                    .borderedCorner()
+                                    .padding(.horizontal)
                             }
+                            .frame(width: UIScreen.main.bounds.width)
+                            .borderedCorner()
                         }
-                        .scrollTargetLayout()
+                        
                     }
-                    .scrollIndicators(.hidden)
-                    .scrollTargetBehavior(.viewAligned)
-                    .scrollPosition(id: $scrollPosition)
                 }
+                .scrollTargetLayout()
             }
+            .scrollIndicators(.hidden)
+            .scrollTargetBehavior(.viewAligned)
+            .scrollPosition(id: $scrollPosition)
         }
         .frame(maxWidth: .infinity)
         .animation(.easeInOut.speed(1), value: scrollPosition)

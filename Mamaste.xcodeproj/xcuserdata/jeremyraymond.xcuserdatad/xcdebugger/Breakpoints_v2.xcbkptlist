@@ -18,38 +18,6 @@
             endingLineNumber = "24"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "1B6B5CE9-8680-48ED-B24D-C6EC3DD40389 - beaddd737da6d82d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Mamaste.YogaCardView.body.getter : some"
-                  moduleName = "Mamaste"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/Components/YogaCardView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "1B6B5CE9-8680-48ED-B24D-C6EC3DD40389 - beaddd737da6d82d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Mamaste.YogaCardView.body.getter : some"
-                  moduleName = "Mamaste"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeremyraymond/Documents/Mamaste/workitout/WorkItOut/WorkItOut/Presentation/Views/GeneratePlan/Components/YogaCardView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

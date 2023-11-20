@@ -13,6 +13,9 @@ class GeneratePlanViewModel: ObservableObject {
     @Published var scrollTarget: Int?
     @Published var showHeader: Bool = true
     @Published var finish: Bool = false
+    
+//    @Published var pose: Pose = Pose(id: UUID())
+//    @Published var showSheet: Bool = false
 
     func addProfileToCoreData(profile: Profile, moc: NSManagedObjectContext) async throws {
         let addProfile: AddProfileUseCase = AddProfileUseCase()
