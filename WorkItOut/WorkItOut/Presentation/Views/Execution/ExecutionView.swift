@@ -158,7 +158,6 @@ struct ExecutionView: View {
                             }
                         }
                         .disabled(previousDisabled)
-                        
                         Button{
                             if timerVm.isTimerPaused == false{
                                 timerVm.pauseTimer()
@@ -195,7 +194,6 @@ struct ExecutionView: View {
                             }
                         }
                         .disabled(nextDisabled)
-                        
                     }
                     .padding(.top, 40)
                     .onChange(of: vm.index) { _, _ in
