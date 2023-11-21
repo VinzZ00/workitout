@@ -20,6 +20,19 @@ struct PoseHistory : Entity, Identifiable {
     var seconds : Int
     var state : YogaState
     
+    func toPose() -> Pose {
+        return Pose(id: self.id,
+                    name: self.name,
+                    altName: self.altName,
+                    category: self.category,
+                    difficulty: self.difficulty,
+                    image : self.image,
+                    description: self.description,
+                    seconds: self.seconds,
+                    state: self.state
+        )
+    }
+    
     func intoNSObject(context: NSManagedObjectContext, parentYogaHistoryNS : YogaHistoryNSObject) -> NSManagedObject {
         let poseHistory = PoseHistoryNSObject(context: context)
         poseHistory.uuid = self.id

@@ -89,6 +89,7 @@
 		AC05658E2B0BC13D00685C2E /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05658D2B0BC13D00685C2E /* REST.swift */; };
 		AC0565902B0C85B000685C2E /* HittingAPITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05658F2B0C85B000685C2E /* HittingAPITesting.swift */; };
 		AC0565922B0C995100685C2E /* UpdateYogaPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0565912B0C995100685C2E /* UpdateYogaPlanUseCase.swift */; };
+		AC0565942B0D108500685C2E /* YogaHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0565932B0D108500685C2E /* YogaHistory.swift */; };
 		AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A622AE41138003B0C1F /* Yoga.swift */; };
@@ -245,6 +246,7 @@
 		AC05658D2B0BC13D00685C2E /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		AC05658F2B0C85B000685C2E /* HittingAPITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HittingAPITesting.swift; sourceTree = "<group>"; };
 		AC0565912B0C995100685C2E /* UpdateYogaPlanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateYogaPlanUseCase.swift; sourceTree = "<group>"; };
+		AC0565932B0D108500685C2E /* YogaHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaHistory.swift; sourceTree = "<group>"; };
 		AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseFirebaseManager.swift; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		AC5A9A622AE41138003B0C1F /* Yoga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
@@ -599,6 +601,7 @@
 				6C3FD7772AEF560A00C84D2A /* History.swift */,
 				ACD49E802AEFA47000793872 /* Helper.swift */,
 				D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */,
+				AC0565932B0D108500685C2E /* YogaHistory.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1249,6 +1252,7 @@
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6CB5F8122AF612DD0019539C /* HomeOtherPlansView.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,
+				AC0565942B0D108500685C2E /* YogaHistory.swift in Sources */,
 				D84CEC112AF4DF69008BEC1C /* ProfileViewModel.swift in Sources */,
 				6CA760C02B09C5F300A89B80 /* HomePlanView.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */,

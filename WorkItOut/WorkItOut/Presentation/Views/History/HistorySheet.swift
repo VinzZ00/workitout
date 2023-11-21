@@ -26,7 +26,7 @@ struct HistorySheet: View {
             .padding(.bottom, 10)
             ScrollView{
                 LazyVStack{
-                    ForEach(history.yogaDone.poses, id: \.id){ pose in
+                    ForEach(history.yogaDone.poses.map{$0.toPose()}, id: \.id){ pose in
                         PoseCard(pose: pose)
                     }
                 }
@@ -57,15 +57,15 @@ struct HistorySheet: View {
     }
 }
 
-#Preview {
-    let poses = [
-        Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed),
-        Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back], image: nil, description: "Bound Angle", seconds: 60, state: .completed),
-        Pose(id: UUID(), name: "Cat", difficulty: .beginner, recommendedTrimester: .first, relieve: [.back, .pelvic], image: nil, description: "Cat", seconds: 60, state: .skipped)
-    
-    ]
-    return NavigationStack{ 
-        HistorySheet(history: History(id: UUID(), yogaDone: Yoga(id: UUID(), name: "Day 1 Upper Body", poses: poses, day: .monday, estimationDuration: 30, image: ""), executionDate: Date.now, duration: 30, rating: 5), showSheet: .constant(true))
-    }
+//#Preview {
+//    let poses = [
+//        Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed),
+//        Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back], image: nil, description: "Bound Angle", seconds: 60, state: .completed),
+//        Pose(id: UUID(), name: "Cat", difficulty: .beginner, recommendedTrimester: .first, relieve: [.back, .pelvic], image: nil, description: "Cat", seconds: 60, state: .skipped)
+//    
+//    ]
+//    return NavigationStack{ 
+//        HistorySheet(history: History(id: UUID(), yogaDone: Yoga(id: UUID(), name: "Day 1 Upper Body", poses: poses, day: .monday, estimationDuration: 30, image: "").generateYogaHistory(poseHistory: <#T##[PoseHistory]#>), executionDate: Date.now, duration: 30, rating: 5), showSheet: .constant(true))
+//    }
         
-}
+//}

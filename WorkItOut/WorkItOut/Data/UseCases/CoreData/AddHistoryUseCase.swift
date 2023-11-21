@@ -11,7 +11,7 @@ import CoreData
 struct AddHistoryUseCase {
     var repo = Repository()
     
-    func call(history : History, context : NSManagedObjectContext, yoga : Yoga, yogaPlan : YogaPlan) async throws{
+    func call(history : History, context : NSManagedObjectContext) async throws{
         switch try await repo.coreData.fetchFromCoreData(context: context, entity: ProfileNSObject.self) {
         case .success(let data):
             guard let profile = (data as! [ProfileNSObject]).last else {
@@ -20,28 +20,21 @@ struct AddHistoryUseCase {
             
             let nsHistory = history.intoNSObject(context: context, parentProfileNS: profile) as! HistoryNSObject
             
-            let nsYoga = ((profile.plan!.allObjects as! [YogaPlanNSObject]).first{ $0.uuid == yogaPlan.id}?
-                .yogas!.allObjects as! [YogaNSObject]).first { $0.uuid
-                    ==  yoga.id}!
-            // ganti yogaState
-            nsYoga.setValue("completed", forKey: "yogaState")
-            
-            // tambah relationship history dari nsyoga
-            nsYoga.ofHistory = nsHistory
-            
-            try await repo.coreData.updateToCoreData(entity: nsYoga, context: context)
+            try await repo.coreData.saveToCoreData(entity: nsHistory, context: context)
             
             switch try await repo.coreData.fetchFromCoreData(context: context, entity: YogaNSObject.self) {
             case .success(let data) :
-                (data as! [YogaNSObject]).forEach { yg in
-                    if yg.ofYogaPlan == nil {
-                        context.delete(yg)
-                    }
+                var updatedYoga = (data as! [YogaNSObject]).first { yg in
+                    nsHistory.yogaDone?.uuid == yg.uuid
                 }
-                try context.save();
+                
+                updatedYoga?.setValue("completed", forKey: "yogaState")
+                try await repo.coreData.updateToCoreData(entity: updatedYoga!, context: context)
             case .failure(let err) :
-                print("Error delete the duplicate row: \(err)")
+                print("Error fetching the yogaNSObject with : \(err.localizedDescription)")
             }
+            
+            
         case .failure(let err):
             fatalError("Error getting workout : \(err.localizedDescription)")
         }
