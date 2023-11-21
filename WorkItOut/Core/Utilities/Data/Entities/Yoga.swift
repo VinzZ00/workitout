@@ -48,8 +48,8 @@ struct Yoga: Identifiable, Hashable, Entity {
         return yoga;
     }
     
-    func generateYogaHistory() -> YogaHistory {
-        YogaHistory(id: self.id, name: self.name, poses: self.poses, day: self.day, estimationDuration: self.estimationDuration, yogaState: self.yogaState, image: self.image)
+    func generateYogaHistory(poseHistory : [PoseHistory]) -> YogaHistory {
+        YogaHistory(id: self.id, name: self.name, poses: poseHistory, day: self.day, estimationDuration: self.estimationDuration, yogaState: self.yogaState, image: self.image)
     }
 
 }

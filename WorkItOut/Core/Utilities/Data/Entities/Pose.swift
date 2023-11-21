@@ -64,17 +64,8 @@ struct Pose: Identifiable, Hashable, Comparable, Entity {
         return pose;
     }
     
-    func intoPose() -> Pose? {
-        return nil
-    }
+    
 }
-
-extension Pose {
-    func getImage(name: String){
-        
-    }
-}
-
 
 
 
