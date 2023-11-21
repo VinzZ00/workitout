@@ -112,8 +112,7 @@ class ExecutionViewModel: ObservableObject {
         let yogaHistory = yoga.generateYogaHistory(poseHistory: poseHistories)
         
         let histories = History(id: UUID(), yogaDone: yogaHistory, executionDate: Date.now, duration: profile.preferredDuration.getDurationInMinutes(), rating: 5)
-//        let history = History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 5, rating: 5)
-//        try await self.addHist.call(history: history, context: context, yoga: yoga, yogaPlan: yogaPlan)
+        // MARK: Tolong Lanjutin @Elvin
     }
     
     func loadVideo(videoID : String){
