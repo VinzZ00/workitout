@@ -124,7 +124,6 @@
 		D862DB6B2AE28E5C0014F2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */; };
 		D862DB6E2AE28E5C0014F2FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862DB6D2AE28E5C0014F2FC /* Preview Assets.xcassets */; };
 		D868F2CD2B09ECEA00CFCF93 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868F2CC2B09ECEA00CFCF93 /* WebView.swift */; };
-		D868F2CF2B09ED6800CFCF93 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868F2CE2B09ED6800CFCF93 /* VideoPlayerView.swift */; };
 		D868F2D32B09F61400CFCF93 /* VideoURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */; };
 		D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */; };
 		D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E322AF21E070050D9E1 /* ProfileTests.swift */; };
@@ -281,7 +280,6 @@
 		D862DB6A2AE28E5C0014F2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D862DB6D2AE28E5C0014F2FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D868F2CC2B09ECEA00CFCF93 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		D868F2CE2B09ED6800CFCF93 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoURLManager.swift; sourceTree = "<group>"; };
 		D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentWrapperView.swift; sourceTree = "<group>"; };
 		D88A3E322AF21E070050D9E1 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
@@ -363,7 +361,6 @@
 				560938852AF1061400C77989 /* Components */,
 				560938812AF0E35D00C77989 /* ExecutionView.swift */,
 				D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */,
-				D868F2CE2B09ED6800CFCF93 /* VideoPlayerView.swift */,
 			);
 			path = Execution;
 			sourceTree = "<group>";
@@ -1130,7 +1127,6 @@
 				6C1229252B04B27C00DE2A46 /* TestAppearView.swift in Sources */,
 				6C53C7132B08B66D0044EC06 /* TestGradientRectangle.swift in Sources */,
 				6CB5F8082AF604850019539C /* HomeButtonView.swift in Sources */,
-				D868F2CF2B09ED6800CFCF93 /* VideoPlayerView.swift in Sources */,
 				6CA760BE2B09C5C600A89B80 /* HomeTodayView.swift in Sources */,
 				D868F2CD2B09ECEA00CFCF93 /* WebView.swift in Sources */,
 				6C53C7062B071F850044EC06 /* DayPickerView.swift in Sources */,
@@ -1420,9 +1416,9 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 5V99WU443D;
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mamaste-Info.plist";
@@ -1438,7 +1434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1456,9 +1452,9 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = 5V99WU443D;
+				DEVELOPMENT_TEAM = MH2BSYHQQX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mamaste-Info.plist";
@@ -1474,7 +1470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

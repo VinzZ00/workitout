@@ -27,6 +27,8 @@ class ExecutionViewModel: ObservableObject {
     // Video and Image Toggler
     @Published var videoURLManager = VideoURLManager()
     @Published var showVideo : Bool = false
+    @Published var videoIsLoading : Bool = true
+    @Published var desiredVideoURL : URL?
     
     @Published var textSwitch : Bool = false
     @Published var avPlayer : AVPlayer?
@@ -108,12 +110,11 @@ class ExecutionViewModel: ObservableObject {
         try await self.addHist.call(history: history, context: context, yoga: yoga, yogaPlan: yogaPlan)
     }
     
-    func loadVideo(urlString : String = "https://youtu.be/moCuqURlEyY?t=74"){
-        guard let url = URL(string: urlString) else {
+    func loadVideo(videoID : String){
+        guard let url = videoURLManager.generateURL(videoID: videoID) else {
             return
         }
-        avPlayer = AVPlayer(url: url)
-        avPlayer?.play()
+        self.desiredVideoURL = url
     }
     
     func accessUserDefault() -> Bool?{
