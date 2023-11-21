@@ -13,7 +13,7 @@ struct HomeButtonView: View {
     var body: some View {
         Image(systemName: icon)
             .padding(12)
-            .background(Color.neutral6.opacity(0.1))
+            .background(Color.neutral6.opacity(0.5))
             .clipShape(.circle)
     }
 }
