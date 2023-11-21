@@ -54,6 +54,7 @@ struct Pose: Identifiable, Hashable, Comparable, Entity {
         pose.relieve = self.relieve.map{$0.rawValue}.joined(separator: ", ")
         pose.difficulty = self.difficulty.rawValue
         pose.ofYoga = ofYoga
+        pose.instructions = self.instructions.joined(separator: "# ")
         
 //        MARK: Deprecated
 //        pose.position = self.position.rawValue
