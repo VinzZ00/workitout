@@ -7,6 +7,14 @@
 
 import Foundation
 
+// unknown error Notes :
+/*
+ -100 = URL session Error tidak dapat dijalankan (check Connection, or url)
+ -99 = gaad response
+ -
+ other than that should be based on the httpresp if not in 200 - 299
+ */
+
 enum HttpError : Error {
     case BadRequest
     case ServerError
@@ -29,11 +37,11 @@ class RESTRequest {
         do {
             (data, resp) = try await URLSession.shared.data(from: endpointURL)
         } catch let err {
-            fatalError("Error in http get request to endpoint : \(endpointURL.absoluteString) with error : \(err.localizedDescription)")
+            return .failure(NSError(domain: "Error in hitting url endpoint with error : \(err.localizedDescription)", code: -100))
         }
         
         guard let httpResp = resp as? HTTPURLResponse else {
-            return .failure(HttpError.unknownError(<#T##Int#>))
+            return .failure(HttpError.unknownError(-99));
         }
         
         
@@ -43,29 +51,13 @@ class RESTRequest {
                     fatalError("nil returned decoding data into [String : String");
                 }
                 return .success(decodedData)
-            } catch {
-                fatalError("Error in decoding data into [String : String");
+            } catch let err{
+                return .failure(NSError(domain: "Error in decoding data into [String : String] with error desc : \(err.localizedDescription)", code: httpResp.statusCode))
             }
+        } else {
+            return .failure(HttpError.unknownError(httpResp.statusCode))
         }
-//        let task = URLSession.shared.dataTask(with: endpointURL) { data, resp, err in
-//            if let err = err {
-//                fatalError("Error in fetching data with error : \(err.localizedDescription)")
-//            }
-//            
-//            guard let httpResp = resp as? HTTPURLResponse else {
-//                fatalError("Error the response is nil")
-//            }
-//        
-//            if (200...299).contains(httpResp.statusCode) {
-//                do {
-//                    if let data = data {
-//                        if let decodedData = JSONSerialization.jsonObject(with: data, options: [], ) as? [String : String] {
-//                            return .
-//                        }
-//                    }
-//                }
-//            }
-//        }
     }
+    
     
 }
