@@ -6,7 +6,7 @@
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="ofProfile" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ProfileNSObject" inverseName="histories" inverseEntity="ProfileNSObject"/>
-        <relationship name="yogaDone" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="YogaNSObject" inverseName="ofHistory" inverseEntity="YogaNSObject"/>
+        <relationship name="yogaDone" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="YogaHistoryNSObject" inverseName="ofHistory" inverseEntity="YogaHistoryNSObject"/>
     </entity>
     <entity name="PoseNSObject" representedClassName="PoseNSObject" syncable="YES" codeGenerationType="class">
         <attribute name="altName" optional="YES" attributeType="String"/>
@@ -37,7 +37,7 @@
         <relationship name="histories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HistoryNSObject" inverseName="ofProfile" inverseEntity="HistoryNSObject"/>
         <relationship name="plan" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="YogaPlanNSObject" inverseName="ofProfile" inverseEntity="YogaPlanNSObject"/>
     </entity>
-    <entity name="YogaNSObject" representedClassName="YogaNSObject" syncable="YES" codeGenerationType="class">
+    <entity name="YogaHistoryNSObject" representedClassName="YogaHistoryNSObject" syncable="YES" codeGenerationType="class">
         <attribute name="day" attributeType="String"/>
         <attribute name="estimationDuration" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="String"/>
@@ -45,6 +45,14 @@
         <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="yogaState" attributeType="String"/>
         <relationship name="ofHistory" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HistoryNSObject" inverseName="yogaDone" inverseEntity="HistoryNSObject"/>
+    </entity>
+    <entity name="YogaNSObject" representedClassName="YogaNSObject" syncable="YES" codeGenerationType="class">
+        <attribute name="day" attributeType="String"/>
+        <attribute name="estimationDuration" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="yogaState" attributeType="String"/>
         <relationship name="ofYogaPlan" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="YogaPlanNSObject" inverseName="yogas" inverseEntity="YogaPlanNSObject"/>
         <relationship name="poses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PoseNSObject" inverseName="ofYoga" inverseEntity="PoseNSObject"/>
     </entity>

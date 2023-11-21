@@ -48,18 +48,7 @@ struct Yoga: Identifiable, Hashable, Entity {
         return yoga;
     }
     
-    func intoNSObject(context : NSManagedObjectContext, parentHistoryNS : HistoryNSObject) -> NSManagedObject {
-        let yoga = YogaNSObject(context: context)
-        yoga.uuid = self.id
-        yoga.name = self.name
-        yoga.day = self.day.rawValue
-        yoga.poses?.addingObjects(from: poses.map{$0.intoNSObject(context: context, ofYoga: yoga)})
-        yoga.estimationDuration = Int32(self.estimationDuration)
-        yoga.yogaState = self.yogaState.rawValue
-        yoga.image = self.image
-        yoga.ofHistory = parentHistoryNS
-        return yoga;
-    }
+   
     
     
 //    dm: <#T##DataManager#>, 
