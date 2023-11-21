@@ -29,7 +29,7 @@ class PoseFirebaseManager: ObservableObject {
                     pose.video = videoURL
                 }
                 
-                pose.instructions = YogaNames.poseInstructions[pose.name]!.map {$0.stringValue()}
+//                pose.instructions = YogaNames.poseInstructions[pose.name]!.map {$0.stringValue()}
                 
                 self.poses.append(pose)
             }
