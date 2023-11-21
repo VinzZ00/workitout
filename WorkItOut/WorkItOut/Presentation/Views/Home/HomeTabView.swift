@@ -13,7 +13,6 @@ struct HomeTabView: View {
     @Binding var selected: TabBarEnum
     
     @Namespace private var tabAnimation
-    @Namespace private var backgroundAnimation
     
     var body: some View {
         VStack {
@@ -23,7 +22,6 @@ struct HomeTabView: View {
                         withAnimation(.easeInOut) {
                             selected = tab
                         }
-                        
                     }, label: {
                         VStack(spacing: 8) {
                             ZStack {
@@ -36,7 +34,6 @@ struct HomeTabView: View {
                                     .frame(height: 2)
                                     .opacity(0)
                             }
-                            
                             Image(systemName: tab.icon)
                                 .font(.body)
                             Text(tab.rawValue)

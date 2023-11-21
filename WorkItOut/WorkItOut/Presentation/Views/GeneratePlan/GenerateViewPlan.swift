@@ -1,5 +1,5 @@
 //
-//  GenerateViewPlanV2.swift
+//  GenerateViewPlan.swift
 //  Mamaste
 //
 //  Created by Elvin Sestomi on 14/11/23.
@@ -41,7 +41,7 @@ extension View {
     }
 }
 
-struct GenerateViewPlanV2: View {
+struct GenerateViewPlan: View {
     @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
     @EnvironmentObject var avm: AssessmentViewModel
     @Environment(\.managedObjectContext) var moc
@@ -234,5 +234,5 @@ struct GenerateViewPlanV2: View {
 }
 
 //#Preview {
-//    GenerateViewPlanV2()
+//    GenerateViewPlan()
 //}

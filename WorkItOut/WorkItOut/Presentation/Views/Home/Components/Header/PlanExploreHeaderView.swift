@@ -1,19 +1,20 @@
 //
-//  TestPlanHeaderView.swift
+//  PlanExploreHeaderView.swift
 //  Mamaste
 //
-//  Created by Jeremy Raymond on 15/11/23.
+//  Created by Jeremy Raymond on 20/11/23.
 //
 
 import SwiftUI
 
-struct PlanHeaderView: View {
+struct PlanExploreHeaderView: View {
     @EnvironmentObject var vm: HomeViewModel
+    var title: String
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Plan")
+                Text(title)
                     .font(.title2.bold())
             }
             Spacer()
@@ -33,5 +34,5 @@ struct PlanHeaderView: View {
 }
 
 #Preview {
-    PlanHeaderView()
+    PlanExploreHeaderView(title: "Plan")
 }

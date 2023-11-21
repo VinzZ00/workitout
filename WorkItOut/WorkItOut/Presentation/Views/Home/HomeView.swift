@@ -28,7 +28,6 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
         switch self {
         case .today:
             HomeTodayView()
-                
         case .plan:
             HomePlanView()
         case .explore:
@@ -54,7 +53,7 @@ struct HomeView: View {
                 HomeTabView(selected: $selected)
             }
             .ignoresSafeArea(edges: .bottom)
-            .background(Color.background)
+            .background(Color.neutral6)
             .sheet(isPresented: $vm.showProfile, onDismiss: {
                 Task{
                     do{

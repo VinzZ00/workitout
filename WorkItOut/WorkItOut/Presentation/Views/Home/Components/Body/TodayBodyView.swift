@@ -20,32 +20,32 @@ struct TodayBodyView: View {
                     ForEach(Day.allCases, id: \.self) { day in
                         HomeCurrentYogaView(yoga: vm.getYogaByDay(day: day), date: vm.changeDay(day: day))
                             .frame(width: UIScreen.main.bounds.width)
-                            .id(day)
                     }
                 }
                 .scrollTargetLayout()
                 .onAppear {
-                    vm.scrollPosition = vm.day
+                    scrollPosition = vm.day
                 }
                 
             }
             .scrollIndicators(.hidden)
             .scrollTargetBehavior(.viewAligned)
-            .scrollPosition(id: $vm.scrollPosition)
+            .scrollPosition(id: $scrollPosition)
+            
         }
         .animation(.easeInOut, value: vm.day)
-        .animation(.easeInOut, value: vm.scrollPosition)
+        .animation(.easeInOut, value: scrollPosition)
         .onAppear {
-            vm.scrollPosition = vm.day
+            scrollPosition = vm.day
         }
         .onChange(of: vm.day) { _, _ in
-            vm.scrollPosition = vm.day
+            scrollPosition = vm.day
         }
-        .onChange(of: vm.scrollPosition) { _, _ in
-            if let scrollPosition = vm.scrollPosition {
+        .onChange(of: scrollPosition) { _, _ in
+            if let scrollPosition = scrollPosition {
                 vm.day = scrollPosition
             }
-            print(vm.scrollPosition)
+            print(scrollPosition)
         }
     }
 }

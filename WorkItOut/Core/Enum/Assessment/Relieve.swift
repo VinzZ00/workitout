@@ -18,6 +18,10 @@ enum Relieve: String, UserPreference {
     case foot = "Foot"
     case knee = "Knee"
     
+    static func getFunctionalRelieves() -> [Relieve] {
+        return [.back, .hip, .neck, .leg, .pelvic]
+    }
+    
     func getString() -> String {
         return self.rawValue
     }
