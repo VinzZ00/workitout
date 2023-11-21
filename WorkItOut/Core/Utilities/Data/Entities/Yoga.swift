@@ -48,10 +48,9 @@ struct Yoga: Identifiable, Hashable, Entity {
         return yoga;
     }
     
-   
-    
-    
-//    dm: <#T##DataManager#>, 
+    func generateYogaHistory() -> YogaHistory {
+        YogaHistory(id: self.id, name: self.name, poses: self.poses, day: self.day, estimationDuration: self.estimationDuration, yogaState: self.yogaState, image: self.image)
+    }
 
 }
 

@@ -8,31 +8,64 @@
 import Foundation
 import CoreData
 
-struct YogaHistory : Entity, Identifiable {
+
+struct PoseHistory : Entity, Identifiable {
+    let id: UUID
+    var name : String
+    var altName: String
+    var category: Category
+    var difficulty : Difficulty
+    var image : String?
+    var description : String
+    var seconds : Int
+    var state : YogaState
     
-    func intoNSObject(context : NSManagedObjectContext, parentHistoryNS : HistoryNSObject) -> NSManagedObject {
-        let yoga = YogaHistoryNSObject(context: context)
-        yoga.uuid = self.id
-        yoga.name = self.name
-        yoga.day = self.day.rawValue
-        yoga.poses?.addingObjects(from: poses.map{$0.intoNSObject(context: context, ofYoga: yoga)})
-        yoga.estimationDuration = Int32(self.estimationDuration)
-        yoga.yogaState = self.yogaState.rawValue
-        yoga.image = self.image
-        yoga.of
-        return yoga;
+    func intoNSObject(context: NSManagedObjectContext, parentYogaHistoryNS : YogaHistoryNSObject) -> NSManagedObject {
+        let poseHistory = PoseHistoryNSObject(context: context)
+        poseHistory.uuid = self.id
+        poseHistory.name = self.name
+        poseHistory.altName = self.altName
+        poseHistory.category = self.category.rawValue
+        poseHistory.difficulty = self.difficulty.rawValue
+        poseHistory.image = self.image
+        poseHistory.poseDescription = self.description
+        poseHistory.seconds = Int32(self.seconds)
+        poseHistory.state = self.state.rawValue
+        return poseHistory
     }
-    
-    var id : UUID = UUID()
-    var name : String = "Yoga Name"
-    var poses : [Pose] = []
-    var day : Day = .monday
-    var estimationDuration : Int = Duration.tenMinutes.getDurationInSeconds()
-    var yogaState : YogaState = .notCompleted
-    var image: String = "yogaImage.png"
 }
 
-struct History : Entity, Identifiable, Equatable {
+
+struct YogaHistory : Entity, Identifiable {
+    var id : UUID
+    var name : String
+    var poses : [PoseHistory]
+    var day : Day
+    var estimationDuration : Int
+    var yogaState : YogaState
+    var image: String
+    
+    func intoNSObject(context : NSManagedObjectContext, parentHistoryNS : HistoryNSObject) -> NSManagedObject {
+        let yogaHistoryNS = YogaHistoryNSObject(context: context)
+        yogaHistoryNS.uuid = self.id
+        yogaHistoryNS.name = self.name
+        yogaHistoryNS.day = self.day.rawValue
+        yogaHistoryNS.historyofPoses?.addingObjects(from: poses.map{$0.intoNSObject(context: context, parentYogaHistoryNS: yogaHistoryNS)})
+        yogaHistoryNS.estimationDuration = Int32(self.estimationDuration)
+        yogaHistoryNS.yogaState = self.yogaState.rawValue
+        yogaHistoryNS.image = self.image
+        yogaHistoryNS.ofHistory = parentHistoryNS
+        return yogaHistoryNS
+    }
+}
+
+struct History : Entity, Identifiable, Equatable { 
+    var id : UUID
+    var yogaDone : YogaHistory
+    var executionDate : Date
+    var duration : Int
+    var rating : Int
+    
     func intoNSObject(context: NSManagedObjectContext, parentProfileNS : ProfileNSObject) -> NSManagedObject {
         let historyNS = HistoryNSObject(context: context)
         historyNS.uuid = self.id;
@@ -41,19 +74,11 @@ struct History : Entity, Identifiable, Equatable {
         historyNS.duration = Int32(self.duration)
         historyNS.ofProfile = parentProfileNS
         // MARK: YANG DITAMBAHKAN UNTUK MENGANTIKAN VERSI SEBELUMNYA YANG ARRAY
-        historyNS.yogaDone = self.yogaDone.intoNSObject(context: context, parentHistoryNS: historyNS) as? YogaNSObject
+        historyNS.yogaDone = self.yogaDone.intoNSObject(context: context, parentHistoryNS: historyNS) as? YogaHistoryNSObject
         return historyNS;
     }
     
     static func == (lhs : History, rhs : History) -> Bool {
         return lhs.id == rhs.id
     }
-    
-    var id : UUID
-    var yogaDone : Yoga
-    var executionDate : Date
-    var duration : Int
-    var rating : Int
-    
-    
 }
