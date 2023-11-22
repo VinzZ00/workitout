@@ -43,6 +43,7 @@ extension View {
 
 struct GenerateViewPlan: View {
     @StateObject var vm: GeneratePlanViewModel = GeneratePlanViewModel()
+    @StateObject var nvm : NotificationViewModel = NotificationViewModel()
     @EnvironmentObject var avm: AssessmentViewModel
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm: DataManager
@@ -205,6 +206,7 @@ struct GenerateViewPlan: View {
             }
             // MARK: init selected day
             .onAppear{
+                nvm.makeNotification(title: "Mamaste", subtitle: "Today is your schedule to do Yoga!", yogaPlan: dm.profile!.yogas, time: dm.profile!.timeOfDay)
                 guard (dm.profile?.daysAvailable[0]) != nil else {
                     self.alert = true;
                     return

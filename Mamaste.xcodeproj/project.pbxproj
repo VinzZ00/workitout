@@ -8,13 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560938812AF0E35D00C77989 /* ExecutionView.swift */; };
+		566366C22B0DECDA00CCAC15 /* YogaNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366B52B0DECDA00CCAC15 /* YogaNames.swift */; };
+		566366C32B0DECDA00CCAC15 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366B62B0DECDA00CCAC15 /* MockData.swift */; };
+		566366C42B0DECDA00CCAC15 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366B82B0DECDA00CCAC15 /* Profile.swift */; };
+		566366C52B0DECDA00CCAC15 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366B92B0DECDA00CCAC15 /* Pose.swift */; };
+		566366C62B0DECDA00CCAC15 /* YogaHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366BB2B0DECDA00CCAC15 /* YogaHistory.swift */; };
+		566366C72B0DECDA00CCAC15 /* PoseHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366BC2B0DECDA00CCAC15 /* PoseHistory.swift */; };
+		566366C82B0DECDA00CCAC15 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366BD2B0DECDA00CCAC15 /* History.swift */; };
+		566366C92B0DECDA00CCAC15 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366BE2B0DECDA00CCAC15 /* Helper.swift */; };
+		566366CA2B0DECDA00CCAC15 /* YogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366BF2B0DECDA00CCAC15 /* YogaPlan.swift */; };
+		566366CB2B0DECDA00CCAC15 /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366C02B0DECDA00CCAC15 /* Yoga.swift */; };
+		566366CC2B0DECDA00CCAC15 /* RequestYogaPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366C12B0DECDA00CCAC15 /* RequestYogaPose.swift */; };
+		566366CE2B0DED3B00CCAC15 /* UpdateYogaPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566366CD2B0DED3B00CCAC15 /* UpdateYogaPlanUseCase.swift */; };
 		56BA8EDC2AFA3102007CFAF3 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BA8EDB2AFA3102007CFAF3 /* VideoView.swift */; };
 		56BA8EE02AFA3D83007CFAF3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BA8EDF2AFA3D83007CFAF3 /* Video.swift */; };
 		56D1BC9D2AEA53B5002DBDA0 /* ExecutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9C2AEA53B5002DBDA0 /* ExecutionViewModel.swift */; };
 		56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */; };
 		56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */; };
 		56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */; };
-		56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */; };
 		6C1228EB2B01CB6500DE2A46 /* YogaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EA2B01CB6500DE2A46 /* YogaDetailViewModel.swift */; };
 		6C1228ED2B034A5C00DE2A46 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EC2B034A5C00DE2A46 /* HomeTabView.swift */; };
 		6C1228F02B039ECA00DE2A46 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EF2B039ECA00DE2A46 /* TabButtonView.swift */; };
@@ -32,8 +43,6 @@
 		6C3FD76E2AEE40C900C84D2A /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */; };
 		6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD76F2AEE40D800C84D2A /* YogaState.swift */; };
 		6C3FD7742AEEB26800C84D2A /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7732AEEB26800C84D2A /* TimeOfDay.swift */; };
-		6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7752AEF558700C84D2A /* Profile.swift */; };
-		6C3FD7782AEF560A00C84D2A /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7772AEF560A00C84D2A /* History.swift */; };
 		6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */; };
 		6C53C6F42B05F9E90044EC06 /* GenerateViewPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C6EF2B05F9E90044EC06 /* GenerateViewPlan.swift */; };
 		6C53C7032B071F850044EC06 /* customScrollViewReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C6FC2B071F850044EC06 /* customScrollViewReader.swift */; };
@@ -52,11 +61,8 @@
 		6C85C0782B0154220076B057 /* UserConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C0762B0154220076B057 /* UserConsentView.swift */; };
 		6C85C0792B0154220076B057 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C0772B0154220076B057 /* OnboardingView.swift */; };
 		6C85C07D2B0158F00076B057 /* LocalizedStringKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C07C2B0158F00076B057 /* LocalizedStringKey.swift */; };
-		6C85C07F2B015EE40076B057 /* YogaNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85C07E2B015EE40076B057 /* YogaNames.swift */; };
-		6C8D5CFC2AE660B200A2986D /* YogaPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */; };
 		6C8D5D112AE6618E00A2986D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0D2AE6618E00A2986D /* Day.swift */; };
 		6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */; };
-		6C8D5D162AE6619700A2986D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D5D152AE6619700A2986D /* MockData.swift */; };
 		6C93694E2B04E919004E4778 /* TodayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C93694D2B04E919004E4778 /* TodayBodyView.swift */; };
 		6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99C1F32AF105C200CEA7D3 /* DataManager.swift */; };
 		6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */; };
@@ -86,14 +92,8 @@
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */; };
 		6CEFB6812AF4C5330020D00F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6802AF4C5330020D00F /* Color.swift */; };
-		AC05658E2B0BC13D00685C2E /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05658D2B0BC13D00685C2E /* REST.swift */; };
-		AC0565902B0C85B000685C2E /* HittingAPITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05658F2B0C85B000685C2E /* HittingAPITesting.swift */; };
-		AC0565922B0C995100685C2E /* UpdateYogaPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0565912B0C995100685C2E /* UpdateYogaPlanUseCase.swift */; };
-		AC0565942B0D108500685C2E /* YogaHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0565932B0D108500685C2E /* YogaHistory.swift */; };
 		AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
-		AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A622AE41138003B0C1F /* Yoga.swift */; };
-		AC5A9A672AE41138003B0C1F /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A632AE41138003B0C1F /* Pose.swift */; };
 		AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */; };
 		AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A702AE41FB8003B0C1F /* GetYogaPosesUseCase.swift */; };
 		AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */; };
@@ -112,14 +112,12 @@
 		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
 		ACBFBD9F2AE6775A00109D94 /* FetchProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */; };
 		ACBFBDA42AE67CEE00109D94 /* UpdateProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */; };
-		ACD49E812AEFA47000793872 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E802AEFA47000793872 /* Helper.swift */; };
 		ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */; };
 		ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */; };
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A282AF0EFD100333CB6 /* ProfileView.swift */; };
 		D8065A2F2AF0F33800333CB6 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */; };
 		D8207AEC2AF0B61D005DBD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */; };
-		D8207AF02AF0E0F6005DBD3C /* RequestYogaPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */; };
 		D836D93C2AF499DA00260299 /* PoseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836D93B2AF499DA00260299 /* PoseCard.swift */; };
 		D84CEC0F2AF4C76E008BEC1C /* HistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84CEC0E2AF4C76E008BEC1C /* HistoryTests.swift */; };
 		D84CEC112AF4DF69008BEC1C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84CEC102AF4DF69008BEC1C /* ProfileViewModel.swift */; };
@@ -131,7 +129,6 @@
 		D868F2D32B09F61400CFCF93 /* VideoURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */; };
 		D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */; };
 		D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E322AF21E070050D9E1 /* ProfileTests.swift */; };
-		D88A57CD2B0DDCD1005B3E30 /* PoseHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */; };
 		D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */; };
 		D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B57DF42AF3958900AD9842 /* HistorySheet.swift */; };
 		D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */; };
@@ -166,6 +163,18 @@
 
 /* Begin PBXFileReference section */
 		560938812AF0E35D00C77989 /* ExecutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionView.swift; sourceTree = "<group>"; };
+		566366B52B0DECDA00CCAC15 /* YogaNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaNames.swift; sourceTree = "<group>"; };
+		566366B62B0DECDA00CCAC15 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		566366B82B0DECDA00CCAC15 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		566366B92B0DECDA00CCAC15 /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		566366BB2B0DECDA00CCAC15 /* YogaHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaHistory.swift; sourceTree = "<group>"; };
+		566366BC2B0DECDA00CCAC15 /* PoseHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseHistory.swift; sourceTree = "<group>"; };
+		566366BD2B0DECDA00CCAC15 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		566366BE2B0DECDA00CCAC15 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		566366BF2B0DECDA00CCAC15 /* YogaPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaPlan.swift; sourceTree = "<group>"; };
+		566366C02B0DECDA00CCAC15 /* Yoga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
+		566366C12B0DECDA00CCAC15 /* RequestYogaPose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestYogaPose.swift; sourceTree = "<group>"; };
+		566366CD2B0DED3B00CCAC15 /* UpdateYogaPlanUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateYogaPlanUseCase.swift; sourceTree = "<group>"; };
 		56BA8EDB2AFA3102007CFAF3 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		56BA8EDF2AFA3D83007CFAF3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		56D1BC902AE8B87C002DBDA0 /* ExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionViewModel.swift; sourceTree = "<group>"; };
@@ -174,7 +183,6 @@
 		56D1BCA42AEA5BAF002DBDA0 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
-		56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6C1228EA2B01CB6500DE2A46 /* YogaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaDetailViewModel.swift; sourceTree = "<group>"; };
 		6C1228EC2B034A5C00DE2A46 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		6C1228EF2B039ECA00DE2A46 /* TabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
@@ -192,8 +200,6 @@
 		6C3FD76D2AEE40C900C84D2A /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		6C3FD76F2AEE40D800C84D2A /* YogaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaState.swift; sourceTree = "<group>"; };
 		6C3FD7732AEEB26800C84D2A /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
-		6C3FD7752AEF558700C84D2A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		6C3FD7772AEF560A00C84D2A /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		6C3FD7792AEF5AB800C84D2A /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		6C53C6EF2B05F9E90044EC06 /* GenerateViewPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateViewPlan.swift; sourceTree = "<group>"; };
 		6C53C6FC2B071F850044EC06 /* customScrollViewReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customScrollViewReader.swift; sourceTree = "<group>"; };
@@ -212,11 +218,8 @@
 		6C85C0762B0154220076B057 /* UserConsentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConsentView.swift; sourceTree = "<group>"; };
 		6C85C0772B0154220076B057 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		6C85C07C2B0158F00076B057 /* LocalizedStringKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringKey.swift; sourceTree = "<group>"; };
-		6C85C07E2B015EE40076B057 /* YogaNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaNames.swift; sourceTree = "<group>"; };
-		6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPlan.swift; sourceTree = "<group>"; };
 		6C8D5D0D2AE6618E00A2986D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6C8D5D0E2AE6618E00A2986D /* WorkoutState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutState.swift; sourceTree = "<group>"; };
-		6C8D5D152AE6619700A2986D /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		6C93694D2B04E919004E4778 /* TodayBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBodyView.swift; sourceTree = "<group>"; };
 		6C99C1F32AF105C200CEA7D3 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6C99C1F52AF108C700CEA7D3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -244,14 +247,8 @@
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssesmentWeekView.swift; sourceTree = "<group>"; };
 		6CEFB6802AF4C5330020D00F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		AC05658D2B0BC13D00685C2E /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
-		AC05658F2B0C85B000685C2E /* HittingAPITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HittingAPITesting.swift; sourceTree = "<group>"; };
-		AC0565912B0C995100685C2E /* UpdateYogaPlanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateYogaPlanUseCase.swift; sourceTree = "<group>"; };
-		AC0565932B0D108500685C2E /* YogaHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaHistory.swift; sourceTree = "<group>"; };
 		AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseFirebaseManager.swift; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
-		AC5A9A622AE41138003B0C1F /* Yoga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
-		AC5A9A632AE41138003B0C1F /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		AC5A9A652AE41138003B0C1F /* FirebaseConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConstant.swift; sourceTree = "<group>"; };
 		AC5A9A702AE41FB8003B0C1F /* GetYogaPosesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetYogaPosesUseCase.swift; sourceTree = "<group>"; };
 		AC5A9A792AE52DA4003B0C1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -270,7 +267,6 @@
 		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
 		ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProfileUseCase.swift; sourceTree = "<group>"; };
 		ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileUseCase.swift; sourceTree = "<group>"; };
-		ACD49E802AEFA47000793872 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfileUseCase.swift; sourceTree = "<group>"; };
 		ACD49E8A2AF0069900793872 /* MamasteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MamasteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItOutTests.swift; sourceTree = "<group>"; };
@@ -278,7 +274,6 @@
 		D8065A282AF0EFD100333CB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
 		D8207AEB2AF0B61D005DBD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestYogaPose.swift; sourceTree = "<group>"; };
 		D82951592B00D51800F3425B /* Mamaste-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mamaste-Info.plist"; sourceTree = "<group>"; };
 		D836D93B2AF499DA00260299 /* PoseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCard.swift; sourceTree = "<group>"; };
 		D84CEC0E2AF4C76E008BEC1C /* HistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTests.swift; sourceTree = "<group>"; };
@@ -292,7 +287,6 @@
 		D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoURLManager.swift; sourceTree = "<group>"; };
 		D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentWrapperView.swift; sourceTree = "<group>"; };
 		D88A3E322AF21E070050D9E1 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
-		D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseHistory.swift; sourceTree = "<group>"; };
 		D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionCompleteView.swift; sourceTree = "<group>"; };
 		D8B57DF42AF3958900AD9842 /* HistorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySheet.swift; sourceTree = "<group>"; };
 		D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseConstant.swift; sourceTree = "<group>"; };
@@ -347,6 +341,48 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		566366B32B0DECDA00CCAC15 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				566366B42B0DECDA00CCAC15 /* Mock */,
+				566366B72B0DECDA00CCAC15 /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		566366B42B0DECDA00CCAC15 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				566366B52B0DECDA00CCAC15 /* YogaNames.swift */,
+				566366B62B0DECDA00CCAC15 /* MockData.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		566366B72B0DECDA00CCAC15 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				566366B82B0DECDA00CCAC15 /* Profile.swift */,
+				566366B92B0DECDA00CCAC15 /* Pose.swift */,
+				566366BA2B0DECDA00CCAC15 /* History */,
+				566366BE2B0DECDA00CCAC15 /* Helper.swift */,
+				566366BF2B0DECDA00CCAC15 /* YogaPlan.swift */,
+				566366C02B0DECDA00CCAC15 /* Yoga.swift */,
+				566366C12B0DECDA00CCAC15 /* RequestYogaPose.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		566366BA2B0DECDA00CCAC15 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				566366BB2B0DECDA00CCAC15 /* YogaHistory.swift */,
+				566366BC2B0DECDA00CCAC15 /* PoseHistory.swift */,
+				566366BD2B0DECDA00CCAC15 /* History.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		56D1BC9B2AEA51BE002DBDA0 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,14 +409,6 @@
 				D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */,
 			);
 			path = Execution;
-			sourceTree = "<group>";
-		};
-		56D1BCAF2AEE81DC002DBDA0 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */,
-			);
-			path = Notification;
 			sourceTree = "<group>";
 		};
 		56D1BCB02AEE81F4002DBDA0 /* Notification */ = {
@@ -523,15 +551,6 @@
 			path = YogaDetail;
 			sourceTree = "<group>";
 		};
-		6C8D5D0A2AE6617500A2986D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				6C8D5D142AE6619700A2986D /* Mock */,
-				AC5A9A612AE41138003B0C1F /* Entities */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		6C8D5D0B2AE6618E00A2986D /* Enum */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,15 +560,6 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		6C8D5D142AE6619700A2986D /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				6C8D5D152AE6619700A2986D /* MockData.swift */,
-				6C85C07E2B015EE40076B057 /* YogaNames.swift */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
 		6CC43D1A2AFA467A00FEE93A /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,14 +567,6 @@
 				6CC43D102AFA236000FEE93A /* YogaPreviewView.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		AC05658A2B0BC0F600685C2E /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				AC05658D2B0BC13D00685C2E /* REST.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		AC5A9A4E2AE3AC5E003B0C1F /* Frameworks */ = {
@@ -591,20 +593,6 @@
 				AC7391AE2AE7BF150012BC1B /* Firebase */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		AC5A9A612AE41138003B0C1F /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				D88A57CE2B0DDCE6005B3E30 /* History */,
-				AC5A9A622AE41138003B0C1F /* Yoga.swift */,
-				AC5A9A632AE41138003B0C1F /* Pose.swift */,
-				6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */,
-				6C3FD7752AEF558700C84D2A /* Profile.swift */,
-				ACD49E802AEFA47000793872 /* Helper.swift */,
-				D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		AC5A9A642AE41138003B0C1F /* Constant */ = {
@@ -655,7 +643,6 @@
 				D8FD5D662AF35381005F8D4E /* History */,
 				D8065A272AF0EF8800333CB6 /* Profile */,
 				6C732A3D2AF109AA00E17FDB /* YogaDetail */,
-				56D1BCAF2AEE81DC002DBDA0 /* Notification */,
 				56D1BCA82AEA6BD1002DBDA0 /* Execution */,
 				AC71EEBE2AEA62B200C8ED8A /* CameraView */,
 				D8BC2BE52AE8002200E61487 /* CreateWorkout */,
@@ -739,11 +726,11 @@
 		AC7391AF2AE7BF1F0012BC1B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				566366CD2B0DED3B00CCAC15 /* UpdateYogaPlanUseCase.swift */,
 				ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */,
 				ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */,
 				ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */,
 				AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */,
-				AC0565912B0C995100685C2E /* UpdateYogaPlanUseCase.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -786,7 +773,6 @@
 				ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */,
 				D88A3E322AF21E070050D9E1 /* ProfileTests.swift */,
 				D84CEC0E2AF4C76E008BEC1C /* HistoryTests.swift */,
-				AC05658F2B0C85B000685C2E /* HittingAPITesting.swift */,
 			);
 			path = WorkItOutTests;
 			sourceTree = "<group>";
@@ -794,7 +780,7 @@
 		ACFED3812AE2B5B60018CD03 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6C8D5D0A2AE6617500A2986D /* Data */,
+				566366B32B0DECDA00CCAC15 /* Data */,
 				AC71EEC62AEA751500C8ED8A /* Extensions */,
 				D8FBED4C2AE906980062CC00 /* Utilities */,
 				AC5A9A642AE41138003B0C1F /* Constant */,
@@ -828,7 +814,6 @@
 		ACFED3852AE2B5F10018CD03 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AC05658A2B0BC0F600685C2E /* Network */,
 				AC71EEB02AEA555500C8ED8A /* AVFoundation */,
 				AC5A9A782AE52D93003B0C1F /* CoreData */,
 				AC5A9A512AE3BC9D003B0C1F /* FireStore */,
@@ -899,16 +884,6 @@
 				D862DB6D2AE28E5C0014F2FC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D88A57CE2B0DDCE6005B3E30 /* History */ = {
-			isa = PBXGroup;
-			children = (
-				6C3FD7772AEF560A00C84D2A /* History.swift */,
-				AC0565932B0D108500685C2E /* YogaHistory.swift */,
-				D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */,
-			);
-			path = History;
 			sourceTree = "<group>";
 		};
 		D8BC2BE52AE8002200E61487 /* CreateWorkout */ = {
@@ -1127,7 +1102,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */,
-				AC0565902B0C85B000685C2E /* HittingAPITesting.swift in Sources */,
 				D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */,
 				D84CEC0F2AF4C76E008BEC1C /* HistoryTests.swift in Sources */,
 			);
@@ -1144,16 +1118,17 @@
 				6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D8FBED4B2AE8F2680062CC00 /* StateIndicator.swift in Sources */,
+				566366CB2B0DECDA00CCAC15 /* Yoga.swift in Sources */,
 				AC7B06ED2B074DE1006F9940 /* AddHistoryUseCase.swift in Sources */,
 				6C85C0782B0154220076B057 /* UserConsentView.swift in Sources */,
 				6C12291B2B04969900DE2A46 /* PlanBodyView.swift in Sources */,
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
+				566366C92B0DECDA00CCAC15 /* Helper.swift in Sources */,
+				566366CE2B0DED3B00CCAC15 /* UpdateYogaPlanUseCase.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
-				AC0565922B0C995100685C2E /* UpdateYogaPlanUseCase.swift in Sources */,
 				6CC43D112AFA236000FEE93A /* YogaPreviewView.swift in Sources */,
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
-				AC05658E2B0BC13D00685C2E /* REST.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */,
 				6CA760CC2B0B5C4D00A89B80 /* PlanExploreHeaderView.swift in Sources */,
@@ -1166,7 +1141,6 @@
 				6C53C7062B071F850044EC06 /* DayPickerView.swift in Sources */,
 				D8BC2BEB2AE802D100E61487 /* AssessmentDetailView.swift in Sources */,
 				6CC43D152AFA3E0300FEE93A /* PoseManager.swift in Sources */,
-				ACD49E812AEFA47000793872 /* Helper.swift in Sources */,
 				D8FD5D6D2AF3577F005F8D4E /* HistorySection.swift in Sources */,
 				6C1229162B04953600DE2A46 /* ExploreBodyView.swift in Sources */,
 				AC71EEB22AEA556B00C8ED8A /* CameraDeviceManager.swift in Sources */,
@@ -1175,29 +1149,25 @@
 				6CEFB6812AF4C5330020D00F /* Color.swift in Sources */,
 				6C6F34CC2AE7B9460059E74D /* ButtonComponent.swift in Sources */,
 				ACBFBD9F2AE6775A00109D94 /* FetchProfileUseCase.swift in Sources */,
-				6C85C07F2B015EE40076B057 /* YogaNames.swift in Sources */,
 				6CB5F80C2AF605D50019539C /* BorderedCorner.swift in Sources */,
 				AC6EC6C42B0A52E000BE8FA8 /* UserDefaultSaveUseCase.swift in Sources */,
 				6C53C7032B071F850044EC06 /* customScrollViewReader.swift in Sources */,
 				D8BA73C72AFE73AC004A795A /* TipView.swift in Sources */,
 				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,
-				56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */,
 				560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */,
-				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
 				6CB5F80E2AF60C170019539C /* HomeCurrentYogaView.swift in Sources */,
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
-				D88A57CD2B0DDCD1005B3E30 /* PoseHistory.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */,
+				566366C72B0DECDA00CCAC15 /* PoseHistory.swift in Sources */,
 				56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */,
-				6C3FD7782AEF560A00C84D2A /* History.swift in Sources */,
 				D8FD5D6B2AF3576D005F8D4E /* HistoryCard.swift in Sources */,
+				566366C42B0DECDA00CCAC15 /* Profile.swift in Sources */,
 				6C99C1F62AF108C700CEA7D3 /* HomeViewModel.swift in Sources */,
 				AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */,
 				6C85C0792B0154220076B057 /* OnboardingView.swift in Sources */,
 				D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */,
 				AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */,
-				6C8D5D162AE6619700A2986D /* MockData.swift in Sources */,
 				D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */,
 				6C1229272B04B47E00DE2A46 /* TestMatchedGeometryView.swift in Sources */,
 				56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */,
@@ -1209,15 +1179,12 @@
 				6CB5F8102AF60C9F0019539C /* HomeYogaCategoryView.swift in Sources */,
 				AC5A9A682AE41138003B0C1F /* FirebaseConstant.swift in Sources */,
 				D8065A2F2AF0F33800333CB6 /* ProfileCard.swift in Sources */,
-				D8207AF02AF0E0F6005DBD3C /* RequestYogaPose.swift in Sources */,
-				6C8D5CFC2AE660B200A2986D /* YogaPlan.swift in Sources */,
 				D836D93C2AF499DA00260299 /* PoseCard.swift in Sources */,
 				6C85C07D2B0158F00076B057 /* LocalizedStringKey.swift in Sources */,
 				6CB5F8142AF618D70019539C /* Status.swift in Sources */,
 				6CB5F8162AF61A210019539C /* Category.swift in Sources */,
 				6C53C7152B08BF730044EC06 /* TestQuarterCircle.swift in Sources */,
 				D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */,
-				AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */,
 				D8FBED4E2AE906FE0062CC00 /* ButtonStyles.swift in Sources */,
 				6CC43D092AF9E91F00FEE93A /* RelieveAssesmentView.swift in Sources */,
 				AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */,
@@ -1237,12 +1204,14 @@
 				6CC43D132AFA2CAD00FEE93A /* ScrollListenerViewBuilder.swift in Sources */,
 				6CA760C22B09C61A00A89B80 /* HomeExploreView.swift in Sources */,
 				6C6F34D02AE7BDD60059E74D /* SliderComponent.swift in Sources */,
+				566366C62B0DECDA00CCAC15 /* YogaHistory.swift in Sources */,
 				AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */,
 				6C8D5D112AE6618E00A2986D /* Day.swift in Sources */,
 				D8FD5D682AF3538F005F8D4E /* HistoryView.swift in Sources */,
 				D8BA73C32AFCCCA8004A795A /* PoseImageCard.swift in Sources */,
 				6C12291F2B04A91B00DE2A46 /* TestTabView.swift in Sources */,
 				6C1229232B04AD4000DE2A46 /* TestScrollSwipeView.swift in Sources */,
+				566366C82B0DECDA00CCAC15 /* History.swift in Sources */,
 				D8BC2BF82AE81E0400E61487 /* Duration.swift in Sources */,
 				6C732A412AF109E500E17FDB /* NavigationLinkComponent.swift in Sources */,
 				56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */,
@@ -1252,11 +1221,13 @@
 				ACBFBDA42AE67CEE00109D94 /* UpdateProfileUseCase.swift in Sources */,
 				56BA8EE02AFA3D83007CFAF3 /* Video.swift in Sources */,
 				D8BC2BF42AE81A1000E61487 /* AssessmentDetailMultipleChoiceView.swift in Sources */,
+				566366C32B0DECDA00CCAC15 /* MockData.swift in Sources */,
 				6C53C6F42B05F9E90044EC06 /* GenerateViewPlan.swift in Sources */,
 				6C3FD7742AEEB26800C84D2A /* TimeOfDay.swift in Sources */,
 				D8BA73C92AFE76E2004A795A /* CheckBox.swift in Sources */,
 				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
 				6C53C70F2B071FA60044EC06 /* GeneratePlanHeaderView.swift in Sources */,
+				566366CA2B0DECDA00CCAC15 /* YogaPlan.swift in Sources */,
 				AC6EC6C62B0A562E00BE8FA8 /* UserDefaultGetUseCase.swift in Sources */,
 				D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */,
 				ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */,
@@ -1264,16 +1235,17 @@
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6CB5F8122AF612DD0019539C /* HomeOtherPlansView.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,
-				AC0565942B0D108500685C2E /* YogaHistory.swift in Sources */,
 				D84CEC112AF4DF69008BEC1C /* ProfileViewModel.swift in Sources */,
 				6CA760C02B09C5F300A89B80 /* HomePlanView.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */,
 				6C732A3F2AF109AA00E17FDB /* YogaDetailView.swift in Sources */,
 				6CC43D0B2AF9F93F00FEE93A /* IconButtonComponent.swift in Sources */,
+				566366C22B0DECDA00CCAC15 /* YogaNames.swift in Sources */,
 				D868F2D32B09F61400CFCF93 /* VideoURLManager.swift in Sources */,
+				566366C52B0DECDA00CCAC15 /* Pose.swift in Sources */,
 				6C53C7072B071F850044EC06 /* DayPickView.swift in Sources */,
+				566366CC2B0DECDA00CCAC15 /* RequestYogaPose.swift in Sources */,
 				D8BC2BE72AE8003000E61487 /* AssessmentView.swift in Sources */,
-				AC5A9A672AE41138003B0C1F /* Pose.swift in Sources */,
 				6CB5F80A2AF604FD0019539C /* HomeWeekIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1454,7 +1426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 7ZC94KFN26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mamaste-Info.plist";
@@ -1471,7 +1443,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1490,7 +1462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 7ZC94KFN26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mamaste-Info.plist";
@@ -1507,7 +1479,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
