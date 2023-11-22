@@ -14,7 +14,6 @@
 		56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BC9F2AEA566D002DBDA0 /* TimerViewModel.swift */; };
 		56D1BCAA2AEA6BD1002DBDA0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */; };
 		56D1BCAC2AECDEF0002DBDA0 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */; };
-		56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */; };
 		6C1228EB2B01CB6500DE2A46 /* YogaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EA2B01CB6500DE2A46 /* YogaDetailViewModel.swift */; };
 		6C1228ED2B034A5C00DE2A46 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EC2B034A5C00DE2A46 /* HomeTabView.swift */; };
 		6C1228F02B039ECA00DE2A46 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1228EF2B039ECA00DE2A46 /* TabButtonView.swift */; };
@@ -169,7 +168,6 @@
 		56D1BCA42AEA5BAF002DBDA0 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		56D1BCA92AEA6BD1002DBDA0 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		56D1BCAB2AECDEF0002DBDA0 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
-		56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6C1228EA2B01CB6500DE2A46 /* YogaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaDetailViewModel.swift; sourceTree = "<group>"; };
 		6C1228EC2B034A5C00DE2A46 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		6C1228EF2B039ECA00DE2A46 /* TabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
@@ -363,14 +361,6 @@
 				D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */,
 			);
 			path = Execution;
-			sourceTree = "<group>";
-		};
-		56D1BCAF2AEE81DC002DBDA0 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				56D1BCAD2AEE56F3002DBDA0 /* NotificationView.swift */,
-			);
-			path = Notification;
 			sourceTree = "<group>";
 		};
 		56D1BCB02AEE81F4002DBDA0 /* Notification */ = {
@@ -637,7 +627,6 @@
 				D8FD5D662AF35381005F8D4E /* History */,
 				D8065A272AF0EF8800333CB6 /* Profile */,
 				6C732A3D2AF109AA00E17FDB /* YogaDetail */,
-				56D1BCAF2AEE81DC002DBDA0 /* Notification */,
 				56D1BCA82AEA6BD1002DBDA0 /* Execution */,
 				AC71EEBE2AEA62B200C8ED8A /* CameraView */,
 				D8BC2BE52AE8002200E61487 /* CreateWorkout */,
@@ -1147,7 +1136,6 @@
 				6C53C7032B071F850044EC06 /* customScrollViewReader.swift in Sources */,
 				D8BA73C72AFE73AC004A795A /* TipView.swift in Sources */,
 				ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */,
-				56D1BCAE2AEE56F3002DBDA0 /* NotificationView.swift in Sources */,
 				560938822AF0E35D00C77989 /* ExecutionView.swift in Sources */,
 				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
 				6CB5F80E2AF60C170019539C /* HomeCurrentYogaView.swift in Sources */,
@@ -1418,7 +1406,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 7ZC94KFN26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mamaste-Info.plist";
@@ -1454,7 +1442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkItOut/Preview Content\"";
-				DEVELOPMENT_TEAM = MH2BSYHQQX;
+				DEVELOPMENT_TEAM = 7ZC94KFN26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mamaste-Info.plist";

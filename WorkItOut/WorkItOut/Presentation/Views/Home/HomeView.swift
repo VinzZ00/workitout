@@ -38,6 +38,7 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
 
 struct HomeView: View {
     @StateObject var vm: HomeViewModel = HomeViewModel()
+    @StateObject var nvm : NotificationViewModel = NotificationViewModel()
     @State private var path : NavigationPath = NavigationPath()
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var dm : DataManager
@@ -60,6 +61,9 @@ struct HomeView: View {
                         }
                     }
             }
+//            .onAppear(perform: {
+//                nvm.makeNotification(title: "Mamaste", subtitle: "Today is your schedule to do Yoga!", date: vm.getYogaByDay(day: vm.day)!.day, time: vm.profile.timeOfDay)
+//            })
             
             .ignoresSafeArea(edges: .bottom)
             .background(Color.neutral6)
