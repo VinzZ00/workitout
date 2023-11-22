@@ -26,7 +26,7 @@ class ProfileViewModel : ObservableObject {
     @Published var showSheet = false
     @Published var showAlert = false
     var updateCoreData : UpdateProfileUseCase = UpdateProfileUseCase()
-    
+    var updateYogaPlan : UpdateYogaPlanUseCase = UpdateYogaPlanUseCase()
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @Published var timeRemaining: Double = 2
     

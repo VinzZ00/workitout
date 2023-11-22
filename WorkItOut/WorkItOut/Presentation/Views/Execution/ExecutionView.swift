@@ -146,7 +146,6 @@ struct ExecutionView: View {
                             vm.previousPose()
                             if !(vm.index == 0){
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds + 2))
-                                vm.loadVideo(videoID: vm.poses[vm.index].video ?? "")
                                 vm.videoIsLoading = true
                             }
                         }label: {
@@ -183,7 +182,6 @@ struct ExecutionView: View {
                             vm.nextPose(skipped: true)
                             if !(vm.index + 1 >= vm.poses.count) {
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds + 2))
-                                vm.loadVideo(videoID: vm.poses[vm.index].video ?? "")
                                 vm.videoIsLoading = true
                             }
                         }label: {

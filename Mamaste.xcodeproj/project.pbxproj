@@ -85,6 +85,10 @@
 		6CEFB6792AF1F5CC0020D00F /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6782AF1F5CC0020D00F /* Exception.swift */; };
 		6CEFB67F2AF3AD5D0020D00F /* AssesmentWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */; };
 		6CEFB6812AF4C5330020D00F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFB6802AF4C5330020D00F /* Color.swift */; };
+		AC05658E2B0BC13D00685C2E /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05658D2B0BC13D00685C2E /* REST.swift */; };
+		AC0565902B0C85B000685C2E /* HittingAPITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05658F2B0C85B000685C2E /* HittingAPITesting.swift */; };
+		AC0565922B0C995100685C2E /* UpdateYogaPlanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0565912B0C995100685C2E /* UpdateYogaPlanUseCase.swift */; };
+		AC0565942B0D108500685C2E /* YogaHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0565932B0D108500685C2E /* YogaHistory.swift */; };
 		AC437B2C2AF148D20055C0AD /* PoseFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */; };
 		AC5A9A532AE3BCB1003B0C1F /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */; };
 		AC5A9A662AE41138003B0C1F /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A9A622AE41138003B0C1F /* Yoga.swift */; };
@@ -126,6 +130,7 @@
 		D868F2D32B09F61400CFCF93 /* VideoURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */; };
 		D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */; };
 		D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E322AF21E070050D9E1 /* ProfileTests.swift */; };
+		D88A57CD2B0DDCD1005B3E30 /* PoseHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */; };
 		D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */; };
 		D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B57DF42AF3958900AD9842 /* HistorySheet.swift */; };
 		D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */; };
@@ -237,6 +242,10 @@
 		6CEFB6782AF1F5CC0020D00F /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		6CEFB67E2AF3AD5D0020D00F /* AssesmentWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssesmentWeekView.swift; sourceTree = "<group>"; };
 		6CEFB6802AF4C5330020D00F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AC05658D2B0BC13D00685C2E /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
+		AC05658F2B0C85B000685C2E /* HittingAPITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HittingAPITesting.swift; sourceTree = "<group>"; };
+		AC0565912B0C995100685C2E /* UpdateYogaPlanUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateYogaPlanUseCase.swift; sourceTree = "<group>"; };
+		AC0565932B0D108500685C2E /* YogaHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaHistory.swift; sourceTree = "<group>"; };
 		AC437B2B2AF148D20055C0AD /* PoseFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseFirebaseManager.swift; sourceTree = "<group>"; };
 		AC5A9A522AE3BCB1003B0C1F /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		AC5A9A622AE41138003B0C1F /* Yoga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
@@ -281,6 +290,7 @@
 		D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoURLManager.swift; sourceTree = "<group>"; };
 		D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentWrapperView.swift; sourceTree = "<group>"; };
 		D88A3E322AF21E070050D9E1 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseHistory.swift; sourceTree = "<group>"; };
 		D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionCompleteView.swift; sourceTree = "<group>"; };
 		D8B57DF42AF3958900AD9842 /* HistorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySheet.swift; sourceTree = "<group>"; };
 		D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseConstant.swift; sourceTree = "<group>"; };
@@ -539,6 +549,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		AC05658A2B0BC0F600685C2E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AC05658D2B0BC13D00685C2E /* REST.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		AC5A9A4E2AE3AC5E003B0C1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,11 +586,11 @@
 		AC5A9A612AE41138003B0C1F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D88A57CE2B0DDCE6005B3E30 /* History */,
 				AC5A9A622AE41138003B0C1F /* Yoga.swift */,
 				AC5A9A632AE41138003B0C1F /* Pose.swift */,
 				6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */,
 				6C3FD7752AEF558700C84D2A /* Profile.swift */,
-				6C3FD7772AEF560A00C84D2A /* History.swift */,
 				ACD49E802AEFA47000793872 /* Helper.swift */,
 				D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */,
 			);
@@ -714,6 +732,7 @@
 				ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */,
 				ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */,
 				AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */,
+				AC0565912B0C995100685C2E /* UpdateYogaPlanUseCase.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -756,6 +775,7 @@
 				ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */,
 				D88A3E322AF21E070050D9E1 /* ProfileTests.swift */,
 				D84CEC0E2AF4C76E008BEC1C /* HistoryTests.swift */,
+				AC05658F2B0C85B000685C2E /* HittingAPITesting.swift */,
 			);
 			path = WorkItOutTests;
 			sourceTree = "<group>";
@@ -763,6 +783,7 @@
 		ACFED3812AE2B5B60018CD03 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6C8D5D0A2AE6617500A2986D /* Data */,
 				AC71EEC62AEA751500C8ED8A /* Extensions */,
 				D8FBED4C2AE906980062CC00 /* Utilities */,
 				AC5A9A642AE41138003B0C1F /* Constant */,
@@ -796,6 +817,7 @@
 		ACFED3852AE2B5F10018CD03 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AC05658A2B0BC0F600685C2E /* Network */,
 				AC71EEB02AEA555500C8ED8A /* AVFoundation */,
 				AC5A9A782AE52D93003B0C1F /* CoreData */,
 				AC5A9A512AE3BC9D003B0C1F /* FireStore */,
@@ -866,6 +888,16 @@
 				D862DB6D2AE28E5C0014F2FC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D88A57CE2B0DDCE6005B3E30 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				6C3FD7772AEF560A00C84D2A /* History.swift */,
+				AC0565932B0D108500685C2E /* YogaHistory.swift */,
+				D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		D8BC2BE52AE8002200E61487 /* CreateWorkout */ = {
@@ -939,7 +971,6 @@
 		D8FBED4C2AE906980062CC00 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6C8D5D0A2AE6617500A2986D /* Data */,
 				D8FBED4D2AE906FE0062CC00 /* ButtonStyles.swift */,
 				6CC43D142AFA3E0300FEE93A /* PoseManager.swift */,
 				D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */,
@@ -1085,6 +1116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */,
+				AC0565902B0C85B000685C2E /* HittingAPITesting.swift in Sources */,
 				D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */,
 				D84CEC0F2AF4C76E008BEC1C /* HistoryTests.swift in Sources */,
 			);
@@ -1107,8 +1139,10 @@
 				D862DB692AE28E5A0014F2FC /* ContentView.swift in Sources */,
 				D862DB672AE28E5A0014F2FC /* WorkItOutApp.swift in Sources */,
 				6C3FD77A2AEF5AB800C84D2A /* UserPreference.swift in Sources */,
+				AC0565922B0C995100685C2E /* UpdateYogaPlanUseCase.swift in Sources */,
 				6CC43D112AFA236000FEE93A /* YogaPreviewView.swift in Sources */,
 				AC71EEBA2AEA5B3C00C8ED8A /* CameraPreviewUIKit.swift in Sources */,
+				AC05658E2B0BC13D00685C2E /* REST.swift in Sources */,
 				ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */,
 				6C99C1F42AF105C200CEA7D3 /* DataManager.swift in Sources */,
 				6CA760CC2B0B5C4D00A89B80 /* PlanExploreHeaderView.swift in Sources */,
@@ -1140,6 +1174,7 @@
 				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
 				6CB5F80E2AF60C170019539C /* HomeCurrentYogaView.swift in Sources */,
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
+				D88A57CD2B0DDCD1005B3E30 /* PoseHistory.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */,
 				56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */,
@@ -1217,6 +1252,7 @@
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6CB5F8122AF612DD0019539C /* HomeOtherPlansView.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,
+				AC0565942B0D108500685C2E /* YogaHistory.swift in Sources */,
 				D84CEC112AF4DF69008BEC1C /* ProfileViewModel.swift in Sources */,
 				6CA760C02B09C5F300A89B80 /* HomePlanView.swift in Sources */,
 				AC5A9A712AE41FB8003B0C1F /* GetYogaPosesUseCase.swift in Sources */,
@@ -1423,7 +1459,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1459,7 +1495,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dallian.Kevin.WorkItOut-";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Dallian.Kevin.WorkItOut-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

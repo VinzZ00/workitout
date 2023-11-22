@@ -20,23 +20,6 @@ struct UpdateProfileUseCase {
                 !(profilens.histories!.allObjects as! [HistoryNSObject]).map{$0.uuid}.contains(h.id)
             }).map{$0.intoNSObject(context: context, parentProfileNS: profilens)}
             
-            newHist.forEach { his in
-                let hist = his as! HistoryNSObject
-                
-                if ((profilens.histories!.contains(hist))) {
-                    profilens.addToHistories(hist)
-                }
-            }
-            
-            (profilens.plan?.allObjects as! [YogaPlanNSObject]).forEach { ygp in
-                profilens.removeFromPlan(ygp)
-                
-                context.delete(ygp)
-                try? context.save()
-            }
-            profile.plan.map{$0.intoNSObject(context: context, parentProfileNSObject: profilens)}.forEach{ obj in
-                profilens.addToPlan( obj as! YogaPlanNSObject)
-            }
             
             // MARK: Adding others self Field (Non Relation)
             profilens.setValue(profile.name, forKey: "name")
