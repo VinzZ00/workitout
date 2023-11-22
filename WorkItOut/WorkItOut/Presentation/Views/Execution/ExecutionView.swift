@@ -224,13 +224,6 @@ struct ExecutionView: View {
                             path.append(1)
                         }
                     }
-                    .onChange(of: vm.showTips) { _, valueIsTrue in
-                        if !valueIsTrue {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-                                vm.textSwitch.toggle()
-                            }
-                        }
-                    }
                     .onReceive(timerVm.timer) { _ in
                         timerVm.updateCurrentTime()
                         if Int(timerVm.timeRemaining) == vm.poses[vm.index].seconds {
