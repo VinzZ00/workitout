@@ -131,6 +131,7 @@
 		D868F2D32B09F61400CFCF93 /* VideoURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */; };
 		D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */; };
 		D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E322AF21E070050D9E1 /* ProfileTests.swift */; };
+		D88A57CD2B0DDCD1005B3E30 /* PoseHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */; };
 		D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */; };
 		D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B57DF42AF3958900AD9842 /* HistorySheet.swift */; };
 		D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */; };
@@ -291,6 +292,7 @@
 		D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoURLManager.swift; sourceTree = "<group>"; };
 		D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentWrapperView.swift; sourceTree = "<group>"; };
 		D88A3E322AF21E070050D9E1 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseHistory.swift; sourceTree = "<group>"; };
 		D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionCompleteView.swift; sourceTree = "<group>"; };
 		D8B57DF42AF3958900AD9842 /* HistorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySheet.swift; sourceTree = "<group>"; };
 		D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseConstant.swift; sourceTree = "<group>"; };
@@ -594,14 +596,13 @@
 		AC5A9A612AE41138003B0C1F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D88A57CE2B0DDCE6005B3E30 /* History */,
 				AC5A9A622AE41138003B0C1F /* Yoga.swift */,
 				AC5A9A632AE41138003B0C1F /* Pose.swift */,
 				6C8D5CFB2AE660B200A2986D /* YogaPlan.swift */,
 				6C3FD7752AEF558700C84D2A /* Profile.swift */,
-				6C3FD7772AEF560A00C84D2A /* History.swift */,
 				ACD49E802AEFA47000793872 /* Helper.swift */,
 				D8207AEF2AF0E0F6005DBD3C /* RequestYogaPose.swift */,
-				AC0565932B0D108500685C2E /* YogaHistory.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -793,6 +794,7 @@
 		ACFED3812AE2B5B60018CD03 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6C8D5D0A2AE6617500A2986D /* Data */,
 				AC71EEC62AEA751500C8ED8A /* Extensions */,
 				D8FBED4C2AE906980062CC00 /* Utilities */,
 				AC5A9A642AE41138003B0C1F /* Constant */,
@@ -899,6 +901,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D88A57CE2B0DDCE6005B3E30 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				6C3FD7772AEF560A00C84D2A /* History.swift */,
+				AC0565932B0D108500685C2E /* YogaHistory.swift */,
+				D88A57CC2B0DDCD1005B3E30 /* PoseHistory.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		D8BC2BE52AE8002200E61487 /* CreateWorkout */ = {
 			isa = PBXGroup;
 			children = (
@@ -970,7 +982,6 @@
 		D8FBED4C2AE906980062CC00 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6C8D5D0A2AE6617500A2986D /* Data */,
 				D8FBED4D2AE906FE0062CC00 /* ButtonStyles.swift */,
 				6CC43D142AFA3E0300FEE93A /* PoseManager.swift */,
 				D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */,
@@ -1175,6 +1186,7 @@
 				6C3FD7762AEF558700C84D2A /* Profile.swift in Sources */,
 				6CB5F80E2AF60C170019539C /* HomeCurrentYogaView.swift in Sources */,
 				ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */,
+				D88A57CD2B0DDCD1005B3E30 /* PoseHistory.swift in Sources */,
 				ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */,
 				6C732A3C2AF1098D00E17FDB /* DayButtonView.swift in Sources */,
 				56D1BCA02AEA566D002DBDA0 /* TimerViewModel.swift in Sources */,

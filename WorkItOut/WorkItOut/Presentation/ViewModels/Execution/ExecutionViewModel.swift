@@ -66,6 +66,8 @@ class ExecutionViewModel: ObservableObject {
         poseChecker(pose: poses[index], skipped: skipped)
         if index + 1 < poses.count {
             index += 1
+            loadVideo(videoID: poses[index].video ?? "")
+            videoIsLoading = true
             self.objectWillChange.send()
         }else{
             end = true
@@ -74,8 +76,11 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func previousPose(){
-        if index > 0 {
+        if index >= 0 {
             index -= 1
+            loadVideo(videoID: poses[index].video ?? "")
+            videoIsLoading = true
+            print("Previous Pose \(poses[index].name)")
             self.objectWillChange.send()
         }else{
             end = true

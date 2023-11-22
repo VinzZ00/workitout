@@ -26,7 +26,7 @@ struct HistorySheet: View {
             .padding(.bottom, 10)
             ScrollView{
                 LazyVStack{
-                    ForEach(history.yogaDone.poses.map{$0.toPose()}, id: \.id){ pose in
+                    ForEach(history.yogaDone.poses, id: \.id){ pose in
                         PoseCard(pose: pose)
                     }
                 }
