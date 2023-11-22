@@ -20,6 +20,12 @@ struct AddHistoryUseCase {
             
             let nsHistory = history.intoNSObject(context: context, parentProfileNS: profile) as! HistoryNSObject
             
+            nsHistory.yogaDone = (history.yogaDone.intoNSObject(context: context, parentHistoryNS: nsHistory) as! YogaHistoryNSObject)
+            
+            history.yogaDone.poses.forEach { hpose in
+                nsHistory.yogaDone?.addToHistoryofPoses(hpose.intoNSObject(context: context, parentYogaHistoryNS: nsHistory.yogaDone!) as! PoseHistoryNSObject)
+            }
+            
             try await repo.coreData.saveToCoreData(entity: nsHistory, context: context)
             
             switch try await repo.coreData.fetchFromCoreData(context: context, entity: YogaNSObject.self) {
