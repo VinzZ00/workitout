@@ -37,6 +37,4 @@ struct UpdateProfileUseCase {
             fatalError("Error Update, tidak berhasil melakukan fetch didalam updateUsecase with err : \(err.localizedDescription)")
         }
     }
-    
-    
 }
