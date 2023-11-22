@@ -55,10 +55,7 @@ class HomeViewModel: ObservableObject {
                 }
             }
         }
-        
         self.profile.currentPregnancyWeek = Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1
-        
-        print("profile current pregnancyWeek = \(Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1)")
     }
 
     func loadProfile(moc : NSManagedObjectContext) async throws {
