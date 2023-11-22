@@ -112,6 +112,8 @@
 		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
 		ACBFBD9F2AE6775A00109D94 /* FetchProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */; };
 		ACBFBDA42AE67CEE00109D94 /* UpdateProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */; };
+		ACC406AF2B0DDD4F00D20472 /* LocalizationNexusAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC406AE2B0DDD4F00D20472 /* LocalizationNexusAPI.swift */; };
+		ACC406B22B0DF0CE00D20472 /* LocalizePoseInstructionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC406B12B0DF0CE00D20472 /* LocalizePoseInstructionUseCase.swift */; };
 		ACD49E812AEFA47000793872 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E802AEFA47000793872 /* Helper.swift */; };
 		ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */; };
 		ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */; };
@@ -270,6 +272,8 @@
 		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
 		ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProfileUseCase.swift; sourceTree = "<group>"; };
 		ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileUseCase.swift; sourceTree = "<group>"; };
+		ACC406AE2B0DDD4F00D20472 /* LocalizationNexusAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationNexusAPI.swift; sourceTree = "<group>"; };
+		ACC406B12B0DF0CE00D20472 /* LocalizePoseInstructionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizePoseInstructionUseCase.swift; sourceTree = "<group>"; };
 		ACD49E802AEFA47000793872 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfileUseCase.swift; sourceTree = "<group>"; };
 		ACD49E8A2AF0069900793872 /* MamasteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MamasteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -589,6 +593,7 @@
 		AC5A9A582AE3C09B003B0C1F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				ACC406B02B0DF03200D20472 /* NexusLocalization */,
 				AC6EC6C22B0A52CD00BE8FA8 /* UserDefault */,
 				AC7391AF2AE7BF1F0012BC1B /* CoreData */,
 				AC7391AE2AE7BF150012BC1B /* Firebase */,
@@ -754,6 +759,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */,
+				ACC406AE2B0DDD4F00D20472 /* LocalizationNexusAPI.swift */,
 			);
 			path = Datasource;
 			sourceTree = "<group>";
@@ -780,6 +786,14 @@
 				ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		ACC406B02B0DF03200D20472 /* NexusLocalization */ = {
+			isa = PBXGroup;
+			children = (
+				ACC406B12B0DF0CE00D20472 /* LocalizePoseInstructionUseCase.swift */,
+			);
+			path = NexusLocalization;
 			sourceTree = "<group>";
 		};
 		ACD49E8B2AF0069900793872 /* WorkItOutTests */ = {
@@ -1218,6 +1232,7 @@
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				D8BC2BEE2AE80F1800E61487 /* AssessmentViewModel.swift in Sources */,
 				6C53C7042B071F850044EC06 /* YogaCardView.swift in Sources */,
+				ACC406AF2B0DDD4F00D20472 /* LocalizationNexusAPI.swift in Sources */,
 				6C8D5D122AE6618E00A2986D /* WorkoutState.swift in Sources */,
 				6C1229142B047DD500DE2A46 /* HeaderTodayView.swift in Sources */,
 				6C53C7052B071F850044EC06 /* GeneratePlanYogaView.swift in Sources */,
@@ -1256,6 +1271,7 @@
 				D8FD5D652AF35371005F8D4E /* HistoryViewModel.swift in Sources */,
 				AC5A9A7A2AE52DA4003B0C1F /* CoreDataManager.swift in Sources */,
 				6CB5F8122AF612DD0019539C /* HomeOtherPlansView.swift in Sources */,
+				ACC406B22B0DF0CE00D20472 /* LocalizePoseInstructionUseCase.swift in Sources */,
 				6C3FD7702AEE40D800C84D2A /* YogaState.swift in Sources */,
 				D84CEC112AF4DF69008BEC1C /* ProfileViewModel.swift in Sources */,
 				6CA760C02B09C5F300A89B80 /* HomePlanView.swift in Sources */,

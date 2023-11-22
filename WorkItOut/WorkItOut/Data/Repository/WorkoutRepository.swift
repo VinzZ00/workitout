@@ -9,5 +9,9 @@ import Foundation
 
 struct Repository {
     let coreData : CoreDataDataSource = CoreDataDataSource()
+    let nexusAPI : NexusLocalizationAPIDataSource = NexusLocalizationAPIDataSource()
 }
+
+
+
 
