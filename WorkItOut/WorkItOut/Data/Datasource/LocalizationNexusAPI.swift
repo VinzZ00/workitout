@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NexusLocalizationAPIProtocol {
-    func getLangResource(lang : String, poseNames : [String]) async -> Result<[String : String], Error>
+    func getLangResource(poseNames : [String]) async -> Result<[String : String], Error>
 }
 
 class NexusLocalizationAPIDataSource : NexusLocalizationAPIProtocol {
@@ -16,13 +16,13 @@ class NexusLocalizationAPIDataSource : NexusLocalizationAPIProtocol {
 //    var nameSpace = "default.json"
 //    var param = ["api_key" : "0tiYnNwaoQHnoQcktDcqHw"]
     
-    init() throws {
-        self.APIService =  try RESTRequest(host: "api.i18nexus.com", endPoint: "/project_resources/translations/en/default.json", param: [
+    init(lang : String) throws {
+        self.APIService =  try RESTRequest(host: "api.i18nexus.com", endPoint: "/project_resources/translations/\(lang)/default.json", param: [
             "api_key" : "0tiYnNwaoQHnoQcktDcqHw"
         ])
     }
     
-    func getLangResource(lang : String, poseNames : [String]) async -> Result<[String : String], Error> {
+    func getLangResource(poseNames : [String]) async -> Result<[String : String], Error> {
 //        ?\(param)
 //        APIService.baseUrl = APIService.baseUrl.appending(path: "en/\(nameSpace)")
 //        

@@ -89,7 +89,10 @@ struct YogaDescriptionView: View {
                 Task {
                     do {
                         self.pose = try  await self.localizePoseIns.call(poses: [self.pose]).first!
-                    } catch {
+                    } catch let err {
+                        
+                        print("error : \(err.localizedDescription)")
+                        
                         alert = true
                     }
                 }

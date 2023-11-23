@@ -10,8 +10,11 @@ import Foundation
 struct Repository {
     let coreData : CoreDataDataSource = CoreDataDataSource()
     var nexusAPI : NexusLocalizationAPIDataSource {
+        
+        var lang =  Locale.current.language.languageCode!.identifier
+        
         do {
-            return try NexusLocalizationAPIDataSource()
+            return try NexusLocalizationAPIDataSource(lang: lang)
         } catch let err {
             fatalError("Error initiate nexus localization data source with error : \(err.localizedDescription)")
         }

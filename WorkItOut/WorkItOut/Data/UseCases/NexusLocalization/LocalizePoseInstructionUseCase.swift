@@ -15,7 +15,7 @@ class LocalizePoseInstructionUseCase {
         
         var systemLocalLang : String = Locale.current.language.languageCode!.identifier
         
-        switch await repository.nexusAPI.getLangResource(lang: systemLocalLang, poseNames: poses.map{$0.name}) {
+        switch await repository.nexusAPI.getLangResource(poseNames: poses.map{$0.name}) {
         case .success(let data):
             var localizedPoses : [Pose] = []
             
