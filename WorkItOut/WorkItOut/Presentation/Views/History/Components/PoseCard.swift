@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PoseCard: View {
-    var pose : Pose
+    var pose : PoseHistory
     var body: some View {
         HStack{
             if let _ = UIImage(named: pose.name){
@@ -51,9 +51,9 @@ struct PoseCard: View {
     VStack(spacing: 20){
         Text("Completed State")
             .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .completed))
+        PoseCard(pose : PoseHistory(id: UUID(), name: "Banana", altName: "Banana", category: .standingPose, difficulty: .beginner, description: "Banana", seconds: 60, state: .completed))
         Text("Skipped State")
             .bold()
-        PoseCard(pose : Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], image: nil, description: "Banana", seconds: 60, state: .skipped))
+        PoseCard(pose : PoseHistory(id: UUID(), name: "Banana", altName: "Banana", category: .standingPose, difficulty: .beginner, description: "Banana", seconds: 60, state: .completed))
     }
 }

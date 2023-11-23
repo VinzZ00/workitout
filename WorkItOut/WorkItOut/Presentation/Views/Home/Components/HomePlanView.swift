@@ -17,7 +17,7 @@ struct HomePlanView: View {
                     TestGradientRectangle(picker: $picker)
                 }
                 VStack {
-                    PlanHeaderView()
+                    PlanExploreHeaderView(title: "Plan")
                     PlanBodyView(picker: $picker)
                 }
             }

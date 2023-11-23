@@ -16,6 +16,7 @@ struct ProfileView: View {
     @State var alert : Bool = false;
     
     @State var load: Bool = false
+    var setUserDefaultCurrentDate = UserDefaultSaveUseCase()
     
     var body: some View {
         ZStack{
@@ -127,8 +128,17 @@ struct ProfileView: View {
                             vm.setProfile()
                             await dm.setUpProfile(moc: moc, profile: vm.profile)
                             vm.profile = dm.profile!
+                            
+                            try await vm.updateYogaPlan.call(profile: vm.profile, context: moc)
+                            
                             await vm.saveProfile(moc: moc)
                         }
+                        
+                        if setUserDefaultCurrentDate.saveToUserDefault(currentWeek: vm.profile.currentPregnancyWeek) {
+                            
+                            print(" new user default : \(UserDefaultGetUseCase().getpregnantDate())")
+                        }
+                        
                         self.presentationMode.wrappedValue.dismiss()
                     }
                 })
@@ -178,6 +188,7 @@ struct ProfileView: View {
                 .padding(.bottom, 20)
             }
         }
+        .interactiveDismissDisabled()
         .navigationTitle("My Assessment")
         .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden()

@@ -19,18 +19,8 @@ struct YogaDescriptionView: View {
                 
                 HStack {
                     VStack(alignment: .leading) {
-                        Button {
+                        IconButtonComponent(icon: "xmark") {
                             self.presentationMode.wrappedValue.dismiss()
-                        } label: {
-                            ZStack{
-                                Circle()
-                                    .tint(Color.neutral3.opacity(0.1))
-                                    .frame(width: 40)
-                                Image(systemName: "xmark")
-                                    .foregroundStyle(Color.neutral3)
-                                    .font(.system(size: 10))
-                                    .bold()
-                            }
                         }
                         Text(pose.name)
                             .font(.title.bold())
@@ -73,6 +63,7 @@ struct YogaDescriptionView: View {
                 .padding()
                 .background(Color.background)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
+                
                 VStack(alignment: .leading) {
                     Text("How to do this pose")
                         .bold()

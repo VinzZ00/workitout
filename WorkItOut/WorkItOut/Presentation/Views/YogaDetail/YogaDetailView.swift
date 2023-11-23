@@ -28,13 +28,15 @@ struct YogaDetailView: View {
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                if state == .relieveChoice {
-                    if showHeader {
+                if showHeader {
+                    VStack(alignment: .leading) {
                         Text(state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
                             .font(.largeTitle)
                             .bold()
                         state.getDescription(yoga: yvm.oldYoga)
                     }
+                }
+                if state == .relieveChoice {
                     VStack {
                         ScrollListenerViewBuilder(showContent: $showHeader) {
                             RelieveAssesmentView()
@@ -56,12 +58,6 @@ struct YogaDetailView: View {
                     
                 }
                 else {
-                    if showHeader {
-                        Text(state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
-                            .font(.largeTitle)
-                            .bold()
-                        state.getDescription(yoga: yvm.newYoga)
-                    }
                     ScrollListenerViewBuilder(showContent: $showHeader){
                         YogaPreviewView(oldYoga: yvm.oldYoga, newYoga: yvm.newYoga)
                     }
@@ -92,7 +88,6 @@ struct YogaDetailView: View {
             .navigationTitle(showHeader ? "" : state.getTitle(yoga: yvm.newYoga, yogaTitle: yogaTitle))
             .navigationBarTitleDisplayMode(.inline)
             .padding()
-//            .animation(.default, value: state)
             .animation(.default, value: showHeader)
             .toolbarBackground(.hidden)
             .toolbar {
@@ -105,7 +100,9 @@ struct YogaDetailView: View {
                             if yogaTitle != "" {
                                 self.presentationMode.wrappedValue.dismiss()
                             }
-                            state = .relieveChoice
+                            else {
+                                state = .relieveChoice
+                            }
                         }
                     }
                     .contentTransition(.symbolEffect(.automatic))
@@ -114,43 +111,43 @@ struct YogaDetailView: View {
             
         }
     }
+}
+
+enum YogaPreviewEnum: LocalizedStringResource {
+    case relieveChoice = "Next"
+    case yogaPreview = "Start Now"
     
-    enum YogaPreviewEnum: LocalizedStringResource {
-        case relieveChoice = "Next"
-        case yogaPreview = "Start Now"
-        
-        func getIcon() -> String {
-            switch self {
-            case .relieveChoice:
-                return "xmark"
-            case .yogaPreview:
-                return "chevron.left"
+    func getIcon() -> String {
+        switch self {
+        case .relieveChoice:
+            return "xmark"
+        case .yogaPreview:
+            return "chevron.left"
+        }
+    }
+    
+    func getTitle(yoga: Yoga, yogaTitle: String = "") -> String {
+        switch self {
+        case .relieveChoice:
+            return "What Are Your Current Conditions?"
+        case .yogaPreview:
+            if yogaTitle != "" {
+                return yogaTitle
+            }
+            else {
+                return yoga.name
             }
         }
-        
-        func getTitle(yoga: Yoga, yogaTitle: String = "") -> String {
-            switch self {
-            case .relieveChoice:
-                return "What Are Your Current Conditions?"
-            case .yogaPreview:
-                if yogaTitle != "" {
-                    return yogaTitle
-                }
-                else {
-                    return yoga.name
-                }
-            }
-        }
-        
-        @ViewBuilder
-        func getDescription(yoga: Yoga) -> some View {
-            switch self {
-            case .relieveChoice:
-                Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. ") + Text("(You can skip this part)").foregroundStyle(.purple)
-            case .yogaPreview:
-                Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
-                    .foregroundStyle(Color.neutral3)
-            }
+    }
+    
+    @ViewBuilder
+    func getDescription(yoga: Yoga) -> some View {
+        switch self {
+        case .relieveChoice:
+            Text("Select your physical conditions below, and we will help you find the perfect yoga poses to improve your conditions. ") + Text("(You can skip this part)").foregroundStyle(.purple)
+        case .yogaPreview:
+            Text("\(yoga.poses.count) Exercise (\(yoga.estimationDuration) Min)")
+                .foregroundStyle(Color.neutral3)
         }
     }
 }

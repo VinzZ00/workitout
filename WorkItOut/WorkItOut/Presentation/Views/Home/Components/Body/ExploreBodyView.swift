@@ -14,7 +14,7 @@ struct ExploreBodyView: View {
         VStack(alignment: .leading) {
             ScrollView(.horizontal) {
                 HStack {
-                    ForEach(Relieve.allCases, id: \.self) { relieve in
+                    ForEach(Relieve.getFunctionalRelieves(), id: \.self) { relieve in
                         HomeYogaCategoryView(relieve: relieve)
                     }
                 }
@@ -23,7 +23,7 @@ struct ExploreBodyView: View {
             .scrollIndicators(.hidden)
             ScrollView {
                 VStack {
-                    ForEach(Relieve.allCases, id: \.self) { relieve in
+                    ForEach(Relieve.getFunctionalRelieves(), id: \.self) { relieve in
                         VStack {
                             if vm.selectedRelieve == relieve {
                                 ForEach(0..<self.vm.getHandmadeYogaPlans(relieve: relieve).count, id: \.self) { i in

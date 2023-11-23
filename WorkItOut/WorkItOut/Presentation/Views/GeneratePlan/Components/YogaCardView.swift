@@ -22,7 +22,6 @@ struct YogaCardView: View {
     
     var body: some View {
         Button {
-//            showSheet.toggle()
             yvm.toggleSheet(pose: pose)
         } label: {
             HStack {

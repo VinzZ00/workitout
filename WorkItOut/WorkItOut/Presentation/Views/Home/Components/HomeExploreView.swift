@@ -17,7 +17,7 @@ struct HomeExploreView: View {
                 }
                 .ignoresSafeArea()
                 VStack {
-                    HeaderExploreView()
+                    PlanExploreHeaderView(title: "Explore")
                     ExploreBodyView()
                 }
             }

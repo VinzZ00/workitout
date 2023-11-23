@@ -34,6 +34,7 @@ struct ContentView: View {
                 }
             }
         }
+        .environment(\.colorScheme, .light)
         .onChange(of: dm.savedToCoreData, { _, valueIsTrue in
             if valueIsTrue {
                 dm.hasNoProfile = false

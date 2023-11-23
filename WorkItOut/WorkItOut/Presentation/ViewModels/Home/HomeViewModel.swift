@@ -43,8 +43,6 @@ class HomeViewModel: ObservableObject {
         self.days = profile.daysAvailable
         self.yogaPlans = profile.plan
         self.profile = profile
-        
-        
     }
     
     func loadPregnantDate() {
@@ -57,10 +55,7 @@ class HomeViewModel: ObservableObject {
                 }
             }
         }
-        
         self.profile.currentPregnancyWeek = Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1
-        
-        print("profile current pregnancyWeek = \(Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1)")
     }
 
     func loadProfile(moc : NSManagedObjectContext) async throws {
@@ -79,8 +74,6 @@ class HomeViewModel: ObservableObject {
             loadPregnantDate()
             
             self.profile.currentPregnancyWeek = Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1
-            
-            print("profile current pregnancyWeek = \(Calendar.current.dateComponents([.weekOfYear], from: self.PregnantDate!, to: Date()).weekOfYear ?? -1)")
             
             self.week = self.profile.currentPregnancyWeek
             
@@ -176,9 +169,9 @@ class HomeViewModel: ObservableObject {
     
     func initHandmadeYogaPlans() {
         if self.handmadeYogaPlans.isEmpty {
-            for relieve in Relieve.allCases {
+            for relieve in Relieve.getFunctionalRelieves() {
                 self.handmadeYogaPlans[relieve] = self.profile.plan
-                for i in 0..<Trimester.allCases.count {
+                for i in 0..<Trimester.getTrimesterExceptAll().count {
                     self.handmadeYogaPlans[relieve]?[i].name = YogaNames.yogaRelieveNames[relieve]?[i] ?? "Balancing and Grounding"
                     for j in 0..<self.handmadeYogaPlans[relieve]![i].yogas.count {
                         self.handmadeYogaPlans[relieve]?[i].yogas[j].name = YogaNames.yogaRelieveNames[relieve]?[i] ?? "Balancing and Grounding"

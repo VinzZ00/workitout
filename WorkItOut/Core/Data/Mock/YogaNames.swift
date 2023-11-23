@@ -71,6 +71,18 @@ struct YogaNames {
             "Soothing Sacrum Flow",
             "Unlock Your Pelvis",
             "Pelvic Floor Harmony"
+        ],
+        .sciatic :[
+            "Sciatic Practice"
+        ],
+        .ankle : [
+            "Ankle Practice"
+        ],
+        .foot : [
+            "Foot Practice"
+        ],
+        .knee : [
+            "Knee Practice"
         ]
     ]
     
@@ -136,7 +148,7 @@ struct YogaNames {
                 "Gradually bring feet closer to the groin and gently push thighs and knees towards the mat if comfortable.",
                 "Engage your core, focusing on the stretch in the groin, inner thighs, and back. Hold for a few slow, deep breaths, allowing yourself to relax into the stretch."
             ],
-            "Cat-Cow": [
+            "Cat - Cow": [
                 "Sit with a straight spine and legs wide apart.",
                 "Bend your knees, bringing your feet towards the groin, and join the soles together.",
                 "Securely clasp your feet or toes.",
