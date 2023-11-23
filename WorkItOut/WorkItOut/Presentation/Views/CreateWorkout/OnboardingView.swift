@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @State var getStarted: Bool = false
+    @StateObject var nvm : NotificationViewModel = NotificationViewModel()
     
     var body: some View {
         NavigationStack {
@@ -34,6 +35,9 @@ struct OnboardingView: View {
             .navigationDestination(isPresented: $getStarted) {
                 UserConsentView()
             }
+            .onAppear(perform: {
+                    nvm.requestAuthorization()
+            })
         }
     }
 }

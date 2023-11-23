@@ -15,11 +15,11 @@ enum TabBarEnum: LocalizedStringResource, CaseIterable {
     var icon: String {
         switch self {
         case .today:
-            return "rectangle"
+            return "doc.text.image"
         case .plan:
-            return "rectangle.grid.1x2"
+            return "tray.full"
         case .explore:
-            return "rectangle.grid.2x2"
+            return "rectangle.grid.1x2"
         }
     }
     
@@ -60,9 +60,8 @@ struct HomeView: View {
                         }
                     }
             }
-            
             .ignoresSafeArea(edges: .bottom)
-            .background(Color.background)
+            .background(Color.neutral6)
             .sheet(isPresented: $vm.showProfile, onDismiss: {
                 Task{
                     do{

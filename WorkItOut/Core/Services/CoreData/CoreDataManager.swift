@@ -16,7 +16,6 @@ class CoreDataManager : ObservableObject {
             if err != nil {
                 fatalError("Error Loading CoreData : \(err?.localizedDescription ?? "Error tidak diketahui")")
             }
-            print("Core Data Successfully Loaded")
         }
     }
 }

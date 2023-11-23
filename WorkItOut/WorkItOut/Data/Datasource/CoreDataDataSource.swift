@@ -9,6 +9,12 @@ import Foundation
 import SwiftUI
 import CoreData
 
+protocol CoreDataDataSourceDelegate {
+    func saveToCoreData<T : NSManagedObject>(entity : T, context : NSManagedObjectContext) async throws
+    func updateToCoreData<T : NSManagedObject> (entity : T, context : NSManagedObjectContext) async throws
+    func fetchFromCoreData(context : NSManagedObjectContext, entity : NSManagedObject.Type) async throws -> Result<[NSFetchRequestResult], Error>
+}
+
 struct CoreDataDataSource : CoreDataDataSourceDelegate {
     
     func fetchFromCoreData(context: NSManagedObjectContext, entity : NSManagedObject.Type) async throws -> Result<[NSFetchRequestResult], Error> {

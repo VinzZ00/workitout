@@ -66,6 +66,8 @@ class ExecutionViewModel: ObservableObject {
         poseChecker(pose: poses[index], skipped: skipped)
         if index + 1 < poses.count {
             index += 1
+            loadVideo(videoID: poses[index].video ?? "")
+            videoIsLoading = true
             self.objectWillChange.send()
         }else{
             end = true
@@ -74,8 +76,11 @@ class ExecutionViewModel: ObservableObject {
     }
     
     func previousPose(){
-        if index > 0 {
+        if index >= 0 {
             index -= 1
+            loadVideo(videoID: poses[index].video ?? "")
+            videoIsLoading = true
+            print("Previous Pose \(poses[index].name)")
             self.objectWillChange.send()
         }else{
             end = true
@@ -104,10 +109,15 @@ class ExecutionViewModel: ObservableObject {
         profile.plan[yogaPlanIndex].yogas[yogaIndex].poses = poses
         profile.plan[yogaPlanIndex].yogas[yogaIndex].yogaState = .completed
         
+        let poseHistories = createPoseHistories(poses: poses)
+        
         let yoga = profile.plan[yogaPlanIndex].yogas[yogaIndex]
         let yogaPlan = profile.plan[yogaPlanIndex]
-        let history = History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 5, rating: 5)
-        try await self.addHist.call(history: history, context: context, yoga: yoga, yogaPlan: yogaPlan)
+        
+        let yogaHistory = yoga.generateYogaHistory(poseHistory: poseHistories)
+        
+        let histories = History(id: UUID(), yogaDone: yogaHistory, executionDate: Date.now, duration: profile.preferredDuration.getDurationInMinutes(), rating: 5)
+        try await addHist.call(history: histories, context: context)
     }
     
     func loadVideo(videoID : String){
@@ -120,5 +130,13 @@ class ExecutionViewModel: ObservableObject {
     func accessUserDefault() -> Bool?{
         let defaults = UserDefaults.standard
         return defaults.object(forKey: "skipPregnancyTips") as? Bool
+    }
+    
+    func createPoseHistories(poses: [Pose]) -> [PoseHistory]{
+        var array : [PoseHistory] = []
+        poses.forEach { pose in
+            array.append(PoseHistory(id: pose.id, name: pose.name, altName: pose.altName, category: pose.category, difficulty: pose.difficulty, description: pose.description, seconds: pose.seconds, state: pose.state))
+        }
+        return array
     }
 }

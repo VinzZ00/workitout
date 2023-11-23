@@ -47,12 +47,12 @@ class DataManager: ObservableObject {
         if fetchRes.isEmpty{
             return false
         }
-        self.profile = fetchRes.first
+        self.profile = fetchRes.last
         savedToCoreData = true
         return true
     }
     
-    public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async {
+    public func setUpProfile(moc: NSManagedObjectContext, profile: Profile) async{
         self.profile = profile
         
         self.profile!.plan = []
