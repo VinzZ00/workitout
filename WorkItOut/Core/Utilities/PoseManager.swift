@@ -117,30 +117,14 @@ struct PoseManager {
     }
     
     static private func createPoses(poses: [Pose], duration: Duration, exceptions: [Exception], relieves: [Relieve]) -> [Pose] {
-        var poses = filterPosesByExceptions(poses: poses, exceptions: exceptions)
-        poses = filterPosesByRelieves(poses: poses, relieves: relieves)
+//        var poses = filterPosesByExceptions(poses: poses, exceptions: exceptions)
+//        poses = filterPosesByRelieves(poses: poses, relieves: relieves)
         var newPoses: [Pose] = []
         
         if !poses.isEmpty {
-            newPoses.append(poseByCategory(poses: poses, category: .warmUp))
-            for _ in 0 ..< Int.random(in: 6...8) {
-                var newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
-                
-                var i = 0
-                while newPoses.contains(where: {$0.name == newPose.name}) &&
-                    (poses.count > newPoses.count) &&
-                    !(poses.contains(newPoses)) {
-                    newPose = poseByCategory(poses: poses, category: Category.getMainCategories().randomElement() ?? .standingPose)
-                    i += 1
-                    if i == 100 {
-                        print("loop")
-                        break
-                    }
-                }
-                
-                newPoses.append(newPose)
-            }
-            newPoses.append(poseByCategory(poses: poses, category: .coolingDown))
+            newPoses.append(poses.first(where: {$0.name == "Banana"})!)
+            newPoses.append(poses.first(where: {$0.name == "Star"})!)
+            newPoses.append(poses.first(where: {$0.name == "Mountain"})!)
         }
         
         newPoses.sort(by: {$0.category.getOrder() > $1.category.getOrder()})
