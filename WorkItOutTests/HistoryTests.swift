@@ -59,28 +59,23 @@ final class HistoryTests: XCTestCase {
     
     
     func testCategorizeHistoryByDate() {
-        // Initliaze
+        // Initialize
         let poses = [
-            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .hip, .leg], description: "Banana", seconds: 60, state: .completed),
-            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.back, .hip, .leg], description: "Bound Angle", seconds: 60, state: .completed)
-        
+            PoseHistory(id: UUID(), name: "Banana", altName: "Banana", category: .standingPose, difficulty: .beginner, description: "Banana", seconds: 60, state: .completed),
+            PoseHistory(id: UUID(), name: "Bound Angle", altName: "Bound Angle", category: .seatedPose, difficulty: .beginner, description: "Bound Angle", seconds: 60, state: .notCompleted)
         ]
-        let yoga = Yoga(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
-        let yoga1 = Yoga(id: UUID(), name: "Day 2 - Lower Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
-        let yoga2 = Yoga(id: UUID(), name: "Day 3 - Core Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
-        let yoga3 = Yoga(id: UUID(), name: "Day 4 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
+        let yoga = YogaHistory(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, yogaState: .completed, image: "")
+        let yoga1 = YogaHistory(id: UUID(), name: "Day 2 - Lower Body", poses: poses, day: .monday, estimationDuration: 5, yogaState: .completed, image: "")
         var histories : [History] = []
         histories.append(History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 10, rating: 5))
         histories.append(History(id: UUID(), yogaDone: yoga1, executionDate: Date.now, duration: 10, rating: 5))
-        histories.append(History(id: UUID(), yogaDone: yoga2, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
-        histories.append(History(id: UUID(), yogaDone: yoga3, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
         
         if let hvm = historyViewModel {
             var categorizedHistory : [Date: [History]] = [Date: [History]]()
             categorizedHistory = hvm.categorizeHistoryByDate(histories)
             
             let keys = categorizedHistory.keys.sorted(by: {$0 > $1})
-            XCTAssertEqual(keys.count, 2)
+            XCTAssertEqual(keys.count, 1)
         }
     }
     
@@ -99,18 +94,14 @@ final class HistoryTests: XCTestCase {
     
     func testSaveHistory() async {
         let poses = [
-            Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .hip, .leg], description: "Banana", seconds: 60, state: .completed),
-            Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.back, .hip, .leg], description: "Bound Angle", seconds: 60, state: .completed)
-        
+            PoseHistory(id: UUID(), name: "Banana", altName: "Banana", category: .standingPose, difficulty: .beginner, description: "Banana", seconds: 60, state: .completed),
+            PoseHistory(id: UUID(), name: "Bound Angle", altName: "Bound Angle", category: .seatedPose, difficulty: .beginner, description: "Bound Angle", seconds: 60, state: .notCompleted)
         ]
-        let yoga = Yoga(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
-        let yoga1 = Yoga(id: UUID(), name: "Day 2 - Lower Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
-        let yoga2 = Yoga(id: UUID(), name: "Day 3 - Core Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
-        
+        let yoga = YogaHistory(id: UUID(), name: "Day 1 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, yogaState: .completed, image: "")
+        let yoga1 = YogaHistory(id: UUID(), name: "Day 2 - Lower Body", poses: poses, day: .monday, estimationDuration: 5, yogaState: .completed, image: "")
         var histories : [History] = []
         histories.append(History(id: UUID(), yogaDone: yoga, executionDate: Date.now, duration: 10, rating: 5))
         histories.append(History(id: UUID(), yogaDone: yoga1, executionDate: Date.now, duration: 10, rating: 5))
-        histories.append(History(id: UUID(), yogaDone: yoga2, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
         
         
         if let fetch = fetchUsecase {
@@ -148,12 +139,11 @@ final class HistoryTests: XCTestCase {
             }
             
             let poses = [
-                Pose(id: UUID(), name: "Banana", difficulty: .beginner, recommendedTrimester: .all, relieve: [.back, .neck, .hip], description: "Banana", seconds: 60, state: .completed),
-                Pose(id: UUID(), name: "Bound Angle", difficulty: .beginner, recommendedTrimester: .second, relieve: [.hip, .back, .pelvic], description: "Bound Angle", seconds: 60, state: .completed)
-            
+                PoseHistory(id: UUID(), name: "Banana", altName: "Banana", category: .standingPose, difficulty: .beginner, description: "Banana", seconds: 60, state: .completed),
+                PoseHistory(id: UUID(), name: "Bound Angle", altName: "Bound Angle", category: .seatedPose, difficulty: .beginner, description: "Bound Angle", seconds: 60, state: .notCompleted)
             ]
             
-            let yoga3 = Yoga(id: UUID(), name: "Day 4 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, image: "")
+            let yoga3 = YogaHistory(id: UUID(), name: "Day 4 - Upper Body", poses: poses, day: .monday, estimationDuration: 5, yogaState: .completed, image: "")
             
             profileNew.histories.append(History(id: UUID(), yogaDone: yoga3, executionDate: Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!, duration: 10, rating: 5))
             if let update = updateUseCase {

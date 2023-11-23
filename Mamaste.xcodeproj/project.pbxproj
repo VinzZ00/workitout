@@ -113,7 +113,6 @@
 		ACBFBD9F2AE6775A00109D94 /* FetchProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9E2AE6775A00109D94 /* FetchProfileUseCase.swift */; };
 		ACBFBDA42AE67CEE00109D94 /* UpdateProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBDA32AE67CEE00109D94 /* UpdateProfileUseCase.swift */; };
 		ACD49E842AEFA62600793872 /* AddProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E822AEFA62600793872 /* AddProfileUseCase.swift */; };
-		ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */; };
 		ACFED3882AE2B6100018CD03 /* PersistentStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACFED3862AE2B6100018CD03 /* PersistentStorage.xcdatamodeld */; };
 		D8065A292AF0EFD100333CB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A282AF0EFD100333CB6 /* ProfileView.swift */; };
 		D8065A2F2AF0F33800333CB6 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8065A2E2AF0F33800333CB6 /* ProfileCard.swift */; };
@@ -129,6 +128,7 @@
 		D868F2D32B09F61400CFCF93 /* VideoURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868F2D22B09F61400CFCF93 /* VideoURLManager.swift */; };
 		D88A3E312AF20B480050D9E1 /* AssessmentWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E302AF20B480050D9E1 /* AssessmentWrapperView.swift */; };
 		D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A3E322AF21E070050D9E1 /* ProfileTests.swift */; };
+		D8B0DD152B0F3B5F00F8D66E /* WorkItOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD49E8C2AF0069900793872 /* WorkItOutTests.swift */; };
 		D8B5579E2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5579D2AF4FC8D00FDBF89 /* ExecutionCompleteView.swift */; };
 		D8B57DF52AF3958900AD9842 /* HistorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B57DF42AF3958900AD9842 /* HistorySheet.swift */; };
 		D8BA73C12AFCC4FC004A795A /* PoseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA73C02AFCC4FC004A795A /* PoseConstant.swift */; };
@@ -1101,9 +1101,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD49E8D2AF0069900793872 /* WorkItOutTests.swift in Sources */,
 				D88A3E332AF21E070050D9E1 /* ProfileTests.swift in Sources */,
 				D84CEC0F2AF4C76E008BEC1C /* HistoryTests.swift in Sources */,
+				D8B0DD152B0F3B5F00F8D66E /* WorkItOutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1349,6 +1349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -1406,6 +1407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
