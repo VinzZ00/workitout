@@ -370,9 +370,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "call(profile:context:)"
-            landmarkType = "7">
+            endingLineNumber = "84">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1146,6 +1144,21 @@
                   endingLineNumber = "42"
                   offsetFromSymbolStart = "2564">
                </Location>
+               <Location
+                  uuid = "49C92955-BA2A-42BC-BBA1-5F5FAFF93D69 - 336f479321eac29e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "2616">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1163,6 +1176,38 @@
             endingLineNumber = "52"
             landmarkName = "call(profile:context:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "573C19A4-22F6-4110-919A-5DA46983A462 - 336f479321eac12b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "573C19A4-22F6-4110-919A-5DA46983A462 - 336f479321eac12b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.UpdateProfileUseCase.call(profile: Mamaste.Profile, context: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/CoreData/UpdateProfileUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "540">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2368,6 +2413,38 @@
             endingLineNumber = "79"
             landmarkName = "loadProfile(moc:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FE358F78-D43F-4B67-9CD0-7AA061FFA8A8 - 826a1d5ff368045e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.HomeViewModel.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Presentation/ViewModels/Home/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "1760">
+               </Location>
+               <Location
+                  uuid = "FE358F78-D43F-4B67-9CD0-7AA061FFA8A8 - 826a1d5ff368045e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.HomeViewModel.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Presentation/ViewModels/Home/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "1740">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2384,6 +2461,38 @@
             endingLineNumber = "81"
             landmarkName = "loadProfile(moc:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E154723F-5E14-4CC6-9D45-1F146B63441A - 826a1d5ff368041c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.HomeViewModel.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Presentation/ViewModels/Home/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1780">
+               </Location>
+               <Location
+                  uuid = "E154723F-5E14-4CC6-9D45-1F146B63441A - 826a1d5ff368041c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.HomeViewModel.loadProfile(moc: __C.NSManagedObjectContext) async throws -&gt; ()"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Presentation/ViewModels/Home/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1760">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2543,6 +2652,418 @@
             endingLineNumber = "17"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "238F7288-6E85-46BB-A3C5-82015EBB4728"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/Datasource/LocalizationNexusAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getLangResource(lang:poseNames:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "314915E9-8C14-4EDC-AB60-96A985483838"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/Datasource/LocalizationNexusAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getLangResource(lang:poseNames:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "314915E9-8C14-4EDC-AB60-96A985483838 - 41b5b9bd3559dce0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.NexusLocalizationAPIDataSource.getLangResource(lang: Swift.String, poseNames: Swift.Array&lt;Swift.String&gt;) async -&gt; Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;, Swift.Error&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/Datasource/LocalizationNexusAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "314915E9-8C14-4EDC-AB60-96A985483838 - 41b5b9bd3559dce0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.NexusLocalizationAPIDataSource.getLangResource(lang: Swift.String, poseNames: Swift.Array&lt;Swift.String&gt;) async -&gt; Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;, Swift.Error&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/Datasource/LocalizationNexusAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5406D291-6C3D-4449-BBA0-1B2E77B49E96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/Datasource/LocalizationNexusAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getLangResource(lang:poseNames:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5406D291-6C3D-4449-BBA0-1B2E77B49E96 - 41b5b9bd3559dcc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.NexusLocalizationAPIDataSource.getLangResource(lang: Swift.String, poseNames: Swift.Array&lt;Swift.String&gt;) async -&gt; Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;, Swift.Error&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/Datasource/LocalizationNexusAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "5406D291-6C3D-4449-BBA0-1B2E77B49E96 - a9f814d3f5868b70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((key: Swift.String, value: Swift.String)) -&gt; Swift.Bool in Mamaste.NexusLocalizationAPIDataSource.getLangResource(lang: Swift.String, poseNames: Swift.Array&lt;Swift.String&gt;) async -&gt; Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;, Swift.Error&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/Datasource/LocalizationNexusAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A61B537-9CBB-4919-B674-6331B3CE33C5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/NexusLocalization/LocalizePoseInstructionUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "call(poses:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A86EDE56-5C8D-4D5D-A43C-B117D3B9ABF4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MamasteTests - English/MamasteTests___English.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAA7B4C4-3369-4723-A718-96A453A29C42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MamasteTests - English/MamasteTests___English.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "593BC8B3-1323-4B43-891F-1788935E499D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MamasteTests - English/MamasteTests___English.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D619B865-38D3-4060-AB08-77E90829BD21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MamasteTests - English/MamasteTests___English.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D619B865-38D3-4060-AB08-77E90829BD21 - e775982cba6c64d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for MamasteTests___English.HittingAPITesting.testExample() async throws -&gt; ()"
+                  moduleName = "MamasteTests - English"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/MamasteTests%20-%20English/MamasteTests___English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "D619B865-38D3-4060-AB08-77E90829BD21 - 6dec71f2fd3514ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for MamasteTests___English.HittingAPITesting.testExample() async throws -&gt; ()"
+                  moduleName = "MamasteTests - English"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/MamasteTests%20-%20English/MamasteTests___English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "D619B865-38D3-4060-AB08-77E90829BD21 - 88c5289f89b138d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MamasteTests___English.HittingAPITesting.testExample() async throws -&gt; ()"
+                  moduleName = "MamasteTests - English"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/MamasteTests%20-%20English/MamasteTests___English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "D619B865-38D3-4060-AB08-77E90829BD21 - 981d00c7feac5ed2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MamasteTests___English.HittingAPITesting.testExample() async throws -&gt; ()"
+                  moduleName = "MamasteTests - English"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/MamasteTests%20-%20English/MamasteTests___English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "D619B865-38D3-4060-AB08-77E90829BD21 - 981d00c7feac5ed2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MamasteTests___English.HittingAPITesting.testExample() async throws -&gt; ()"
+                  moduleName = "MamasteTests - English"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/MamasteTests%20-%20English/MamasteTests___English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0E6D013-8099-4B23-9D9C-2A4B4D6098AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MamasteTests - English/MamasteTests___English.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A4B6040-0704-4A58-A791-44F319FBA839"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MamasteTests - English/MamasteTests___English.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3A4B6040-0704-4A58-A791-44F319FBA839 - 88c5289f89b1389b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MamasteTests___English.HittingAPITesting.testExample() async throws -&gt; ()"
+                  moduleName = "MamasteTests - English"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/MamasteTests%20-%20English/MamasteTests___English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "3A4B6040-0704-4A58-A791-44F319FBA839 - 70797802fafe2ae9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in MamasteTests___English.HittingAPITesting.testExample() async throws -&gt; ()"
+                  moduleName = "MamasteTests - English"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/MamasteTests%20-%20English/MamasteTests___English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10FAE21D-9385-4254-AE26-21C7CC3B260B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/NexusLocalization/LocalizePoseInstructionUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "call(poses:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BD0C10D-17E9-4B79-AECB-162725A151F4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkItOut/WorkItOut/Data/UseCases/NexusLocalization/LocalizePoseInstructionUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "call(poses:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6BD0C10D-17E9-4B79-AECB-162725A151F4 - b368968166887168"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Mamaste.LocalizePoseInstructionUseCase.call(poses: Swift.Array&lt;Mamaste.Pose&gt;) async throws -&gt; Swift.Array&lt;Mamaste.Pose&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/NexusLocalization/LocalizePoseInstructionUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "6BD0C10D-17E9-4B79-AECB-162725A151F4 - 7acde45d6e6dc2f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Mamaste.Pose) -&gt; () in Mamaste.LocalizePoseInstructionUseCase.call(poses: Swift.Array&lt;Mamaste.Pose&gt;) async throws -&gt; Swift.Array&lt;Mamaste.Pose&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/NexusLocalization/LocalizePoseInstructionUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "6BD0C10D-17E9-4B79-AECB-162725A151F4 - 7acde45d6e6dc2f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Mamaste.Pose) -&gt; () in Mamaste.LocalizePoseInstructionUseCase.call(poses: Swift.Array&lt;Mamaste.Pose&gt;) async throws -&gt; Swift.Array&lt;Mamaste.Pose&gt;"
+                  moduleName = "Mamaste"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinz/Desktop/Mamaste/mamaste/WorkItOut/WorkItOut/Data/UseCases/NexusLocalization/LocalizePoseInstructionUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

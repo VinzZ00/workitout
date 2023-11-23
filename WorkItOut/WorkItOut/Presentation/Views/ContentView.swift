@@ -15,6 +15,10 @@ struct ContentView: View {
     @State private var isLoading = true
     @State var alert = false
     
+    var fetchlocalizedInstruction = LocalizePoseInstructionUseCase()
+    
+    var langId = Locale.current.language.languageCode!.identifier
+    
     var body: some View {
         ZStack{
             if dm.hasNoProfile {
@@ -24,6 +28,7 @@ struct ContentView: View {
                 EmptyView()
             }else{
                 if !dm.hasNoProfile{
+                    
                     HomeView()
                         .environmentObject(dm);
                 }
@@ -38,6 +43,9 @@ struct ContentView: View {
             Task{
                 do {
                     dm.hasNoProfile = try await !dm.loadProfile(moc: moc)
+                    
+                    
+                    
                 } catch {
                     dm.hasNoProfile = false
                 }

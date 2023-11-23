@@ -9,7 +9,13 @@ import Foundation
 
 struct Repository {
     let coreData : CoreDataDataSource = CoreDataDataSource()
-    let nexusAPI : NexusLocalizationAPIDataSource = NexusLocalizationAPIDataSource()
+    var nexusAPI : NexusLocalizationAPIDataSource {
+        do {
+            return try NexusLocalizationAPIDataSource()
+        } catch let err {
+            fatalError("Error initiate nexus localization data source with error : \(err.localizedDescription)")
+        }
+    }
 }
 
 

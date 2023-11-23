@@ -9,8 +9,9 @@ import SwiftUI
 
 struct YogaDescriptionView: View {
     @State var pose: Pose
-    
+    var localizePoseIns = LocalizePoseInstructionUseCase()
     @Environment(\.presentationMode) var presentationMode
+    @State var alert : Bool = false;
     
     var body: some View {
         ScrollView {
@@ -90,6 +91,20 @@ struct YogaDescriptionView: View {
                     }
                 }
                 
+                
+                
+            }
+            .onAppear{
+                Task {
+                    do {
+                        self.pose = try  await self.localizePoseIns.call(poses: [self.pose]).first!
+                    } catch {
+                        alert = true
+                    }
+                }
+            }
+            .alert(isPresented: self.$alert){
+                Alert(title: Text("Error"), message: Text("Sorry, There are problem when adjust the pose instruction. please try again"))
             }
             .padding()
         }

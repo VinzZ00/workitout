@@ -40,6 +40,17 @@
                ReferencedContainer = "container:Mamaste.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AC9E84DB2B0F2A7500C1E8D9"
+               BuildableName = "MamasteTests - English.xctest"
+               BlueprintName = "MamasteTests - English"
+               ReferencedContainer = "container:Mamaste.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -107,6 +107,7 @@
 		AC71EEC32AEA656600C8ED8A /* BodyPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */; };
 		AC71EEC82AEA751500C8ED8A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71EEC72AEA751500C8ED8A /* Array.swift */; };
 		AC7B06ED2B074DE1006F9940 /* AddHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */; };
+		AC9E84DF2B0F2A7500C1E8D9 /* MamasteTests___English.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E84DE2B0F2A7500C1E8D9 /* MamasteTests___English.swift */; };
 		ACB8642E2AE652C7005DF0D1 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */; };
 		ACBFBD992AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */; };
 		ACBFBD9D2AE676D600109D94 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */; };
@@ -157,6 +158,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AC9E84E02B0F2A7500C1E8D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D862DB5B2AE28E5A0014F2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D862DB622AE28E5A0014F2FC;
+			remoteInfo = Mamaste;
+		};
 		ACD49E8E2AF0069900793872 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D862DB5B2AE28E5A0014F2FC /* Project object */;
@@ -267,6 +275,8 @@
 		AC71EEC22AEA656600C8ED8A /* BodyPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPoint.swift; sourceTree = "<group>"; };
 		AC71EEC72AEA751500C8ED8A /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		AC7B06EC2B074DE1006F9940 /* AddHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHistoryUseCase.swift; sourceTree = "<group>"; };
+		AC9E84DC2B0F2A7500C1E8D9 /* MamasteTests - English.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MamasteTests - English.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9E84DE2B0F2A7500C1E8D9 /* MamasteTests___English.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MamasteTests___English.swift"; sourceTree = "<group>"; };
 		ACB8642D2AE652C7005DF0D1 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 		ACBFBD982AE66DDF00109D94 /* CoreDataDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDataSourceDelegate.swift; sourceTree = "<group>"; };
 		ACBFBD9C2AE676D600109D94 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
@@ -320,6 +330,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AC9E84D92B0F2A7500C1E8D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACD49E872AF0069900793872 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -755,6 +772,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		AC9E84DD2B0F2A7500C1E8D9 /* MamasteTests - English */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E84DE2B0F2A7500C1E8D9 /* MamasteTests___English.swift */,
+			);
+			path = "MamasteTests - English";
+			sourceTree = "<group>";
+		};
 		ACB8642C2AE65282005DF0D1 /* Datasource */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +908,7 @@
 				D82951592B00D51800F3425B /* Mamaste-Info.plist */,
 				D862DB652AE28E5A0014F2FC /* WorkItOut */,
 				ACD49E8B2AF0069900793872 /* WorkItOutTests */,
+				AC9E84DD2B0F2A7500C1E8D9 /* MamasteTests - English */,
 				D862DB642AE28E5A0014F2FC /* Products */,
 				AC5A9A4E2AE3AC5E003B0C1F /* Frameworks */,
 				56D1BC9B2AEA51BE002DBDA0 /* Recovered References */,
@@ -894,6 +920,7 @@
 			children = (
 				D862DB632AE28E5A0014F2FC /* Mamaste.app */,
 				ACD49E8A2AF0069900793872 /* MamasteTests.xctest */,
+				AC9E84DC2B0F2A7500C1E8D9 /* MamasteTests - English.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1026,6 +1053,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AC9E84DB2B0F2A7500C1E8D9 /* MamasteTests - English */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC9E84E22B0F2A7500C1E8D9 /* Build configuration list for PBXNativeTarget "MamasteTests - English" */;
+			buildPhases = (
+				AC9E84D82B0F2A7500C1E8D9 /* Sources */,
+				AC9E84D92B0F2A7500C1E8D9 /* Frameworks */,
+				AC9E84DA2B0F2A7500C1E8D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC9E84E12B0F2A7500C1E8D9 /* PBXTargetDependency */,
+			);
+			name = "MamasteTests - English";
+			productName = "MamasteTests - English";
+			productReference = AC9E84DC2B0F2A7500C1E8D9 /* MamasteTests - English.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ACD49E892AF0069900793872 /* MamasteTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACD49E902AF0069900793872 /* Build configuration list for PBXNativeTarget "MamasteTests" */;
@@ -1075,6 +1120,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					AC9E84DB2B0F2A7500C1E8D9 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = D862DB622AE28E5A0014F2FC;
+					};
 					ACD49E892AF0069900793872 = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = D862DB622AE28E5A0014F2FC;
@@ -1102,11 +1151,19 @@
 			targets = (
 				D862DB622AE28E5A0014F2FC /* Mamaste */,
 				ACD49E892AF0069900793872 /* MamasteTests */,
+				AC9E84DB2B0F2A7500C1E8D9 /* MamasteTests - English */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AC9E84DA2B0F2A7500C1E8D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACD49E882AF0069900793872 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1128,6 +1185,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AC9E84D82B0F2A7500C1E8D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9E84DF2B0F2A7500C1E8D9 /* MamasteTests___English.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACD49E862AF0069900793872 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1289,6 +1354,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AC9E84E12B0F2A7500C1E8D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D862DB622AE28E5A0014F2FC /* Mamaste */;
+			targetProxy = AC9E84E02B0F2A7500C1E8D9 /* PBXContainerItemProxy */;
+		};
 		ACD49E8F2AF0069900793872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D862DB622AE28E5A0014F2FC /* Mamaste */;
@@ -1297,6 +1367,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		AC9E84E32B0F2A7500C1E8D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AA.MamasteTests---English";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mamaste.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mamaste";
+			};
+			name = Debug;
+		};
+		AC9E84E42B0F2A7500C1E8D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 382VG5FRJK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AA.MamasteTests---English";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mamaste.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mamaste";
+			};
+			name = Release;
+		};
 		ACD49E912AF0069900793872 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1324,12 +1430,14 @@
 				DEVELOPMENT_TEAM = 382VG5FRJK;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AA.WorkItOutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mamaste.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mamaste";
+				"_INFOPLIST_FILE[arch=*]" = "";
 			};
 			name = Release;
 		};
@@ -1527,6 +1635,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AC9E84E22B0F2A7500C1E8D9 /* Build configuration list for PBXNativeTarget "MamasteTests - English" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC9E84E32B0F2A7500C1E8D9 /* Debug */,
+				AC9E84E42B0F2A7500C1E8D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ACD49E902AF0069900793872 /* Build configuration list for PBXNativeTarget "MamasteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

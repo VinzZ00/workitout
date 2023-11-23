@@ -26,16 +26,28 @@ enum HttpError : Error {
 class RESTRequest {
     var baseUrl : URL
     
-    init(baseUrl : URL) {
-        self.baseUrl = baseUrl
+    init(host : String, endPoint : String, param : [String : String]) throws {
+        var urlComponent = URLComponents()
+        
+        urlComponent.scheme = "https"
+        urlComponent.host = host
+        urlComponent.path = endPoint
+        urlComponent.queryItems =
+            param.map{ URLQueryItem(name: $0.key, value: $0.value)}
+        
+        if let url = urlComponent.url {
+            self.baseUrl = url
+        } else {
+            throw NSError(domain: "url not valid", code: -101)
+        }
     }
     
-    func httpGet(endPoint : String) async -> Result<[String : String], Error> {
-        let endpointURL = self.baseUrl.appending(path: endPoint);
+    func httpGet() async -> Result<[String : String], Error> {
+        
         var (data, resp) : (Data, URLResponse);
         
         do {
-            (data, resp) = try await URLSession.shared.data(from: endpointURL)
+            (data, resp) = try await URLSession.shared.data(from: baseUrl)
         } catch let err {
             return .failure(NSError(domain: "Error in hitting url endpoint with error : \(err.localizedDescription)", code: -100))
         }

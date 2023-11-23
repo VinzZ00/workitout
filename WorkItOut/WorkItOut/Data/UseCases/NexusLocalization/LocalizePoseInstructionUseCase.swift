@@ -12,7 +12,10 @@ class LocalizePoseInstructionUseCase {
     let repository = Repository()
     
     func call(poses : [Pose]) async throws -> [Pose] {
-        switch await repository.nexusAPI.getLangResource(lang: "id", poseNames: poses.map{$0.name}) {
+        
+        var systemLocalLang : String = Locale.current.language.languageCode!.identifier
+        
+        switch await repository.nexusAPI.getLangResource(lang: systemLocalLang, poseNames: poses.map{$0.name}) {
         case .success(let data):
             var localizedPoses : [Pose] = []
             
@@ -20,8 +23,11 @@ class LocalizePoseInstructionUseCase {
                 var instructionString = data[p.name];
                 
                 var locPose = p
+                locPose.instructions = []
                 
-                locPose.instructions = instructionString!.split(separator: "# ") as? [String] ?? []
+                instructionString!.split(separator: "# ").forEach { ins in
+                    locPose.instructions.append(String(ins))
+                }
                 
                 localizedPoses.append(locPose);
             }
