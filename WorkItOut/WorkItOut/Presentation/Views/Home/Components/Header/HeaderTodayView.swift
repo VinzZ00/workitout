@@ -11,7 +11,6 @@ struct HeaderTodayView: View {
     @EnvironmentObject var vm: HomeViewModel
     @EnvironmentObject var dm : DataManager
     
-//    @Binding var scrollPosition: Day?
     @State var weekScrollPosition: Int?
     
     var body: some View {
@@ -19,34 +18,10 @@ struct HeaderTodayView: View {
             ZStack {
                 VStack {
                     Image(.todayBackground)
-//                    Spacer()
                 }
                 .ignoresSafeArea()
                 VStack {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Week \(vm.week) - \(vm.month)")
-                                .font(.title2.bold())
-                                .contentTransition(.numericText(value: Double(vm.week)))
-                                .animation(.easeInOut, value: vm.week)
-                            Text("(\(vm.getTrimesterRoman()))")
-                                .foregroundStyle(Color.neutral3)
-                                .font(.caption)
-                        }
-                        Spacer()
-                        NavigationLink {
-                            HistoryView(vm: HistoryViewModel(histories: vm.profile.histories))
-                        } label: {
-                            HomeButtonView(icon: "clock.arrow.circlepath")
-                        }
-                        Button {
-                            vm.showProfile = true
-                        } label: {
-                            HomeButtonView(icon: "person")
-                        }
-                        
-                    }
-                    .padding(.horizontal)
+                    HomeWeekIndicatorView()
                     VStack(spacing: 0) {
                         ScrollView(.horizontal) {
                             LazyHStack {
@@ -64,23 +39,16 @@ struct HeaderTodayView: View {
                             }
                             .frame(height: 84)
                             .scrollTargetLayout()
-    //                        .ignoresSafeArea()
                             
                         }
-    //                    .ignoresSafeArea()
                         .scrollIndicators(.hidden)
                         .scrollTargetBehavior(.viewAligned)
                         .scrollPosition(id: $weekScrollPosition)
                     }
-                    
-//                    Spacer()
                 }
                 
             }
-//            Spacer()
         }
-//        .ignoresSafeArea()
-//        .padding(.bottom)
         .onAppear{
             vm.initMonth()
             weekScrollPosition = vm.week

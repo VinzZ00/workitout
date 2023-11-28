@@ -63,18 +63,45 @@ extension YogaPlanNSObject {
     }
 }
 
+extension PoseHistoryNSObject {
+    func intoObject() -> PoseHistory {
+        return PoseHistory(id: self.uuid!,
+                           name: self.name!,
+                           altName: self.altName!,
+                           category: Category(rawValue: self.category!)!,
+                           difficulty: Difficulty(rawValue: self.difficulty!)!,
+                           description: self.description,
+                           seconds: Int(self.seconds),
+                           state: YogaState(rawValue: self.state!)!)
+    }
+}
+
+
+extension YogaHistoryNSObject {
+    func intoObject() -> YogaHistory {
+        return YogaHistory(id: self.uuid!,
+                           name: self.name!,
+                           poses: (self.historyofPoses!.allObjects as? [PoseHistoryNSObject] ?? []).map{$0.intoObject()},
+                           day: Day(rawValue: self.day!)!,
+                           estimationDuration: Int(self.estimationDuration),
+                           yogaState: YogaState(rawValue: self.yogaState!)!,
+                           image: self.image!
+        )
+    }
+}
+
 extension HistoryNSObject {
     
     // MARK: Update Elvin 4 Nov
-    func addingYogaHist(yogaNS : YogaNSObject) {
-        self.yogaDone = yogaNS
-    }
+//    func addingYogaHist(yogaNS : YogaNSObject) {
+//        self.yogaDone = yogaNS
+//    }
     
     func intoObject() -> History {
         let history = History(
             id: self.uuid!,
             // MARK: Change by Elvin 4 Nov, untuk meganti History menjadi HistoryNSObject
-            yogaDone: (self.yogaDone?.intoObject())!,
+            yogaDone: self.yogaDone!.intoObject(),
             executionDate: self.executionDate!,
             duration: Int(self.duration),
             rating: Int(self.rating)

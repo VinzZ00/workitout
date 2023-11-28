@@ -71,6 +71,18 @@ struct YogaNames {
             "Soothing Sacrum Flow",
             "Unlock Your Pelvis",
             "Pelvic Floor Harmony"
+        ],
+        .sciatic :[
+            "Sciatic Practice"
+        ],
+        .ankle : [
+            "Ankle Practice"
+        ],
+        .foot : [
+            "Foot Practice"
+        ],
+        .knee : [
+            "Knee Practice"
         ]
     ]
     
@@ -112,7 +124,13 @@ struct YogaNames {
     ]
     
     static let poseInstructions: [String: [LocalizedStringResource]] = [
-        "Banana Pose": [
+        
+        /* yang belom ada*/
+        "Downward Dog" : [],
+        "Gate" : [],
+        
+        /* dari remon alias udh ada instruction*/
+        "Banana" /* dari banana pose */ : [
                 "Lie on your back with legs straight and together on the floor.",
                 "Extend your arms overhead, clasping hands or elbows.",
                 "While keeping your buttocks firmly on the ground, shift your feet and upper body to the right, creating a banana-like arch.",
@@ -130,7 +148,7 @@ struct YogaNames {
                 "Gradually bring feet closer to the groin and gently push thighs and knees towards the mat if comfortable.",
                 "Engage your core, focusing on the stretch in the groin, inner thighs, and back. Hold for a few slow, deep breaths, allowing yourself to relax into the stretch."
             ],
-            "Cat-Cow Pose": [
+            "Cat - Cow": [
                 "Sit with a straight spine and legs wide apart.",
                 "Bend your knees, bringing your feet towards the groin, and join the soles together.",
                 "Securely clasp your feet or toes.",
@@ -139,7 +157,7 @@ struct YogaNames {
                 "Engage your core, focusing on the stretch in the groin, inner thighs, and back.",
                 "Hold the posture for a few slow, deep breaths, allowing yourself to relax into the stretch."
             ],
-            "Chair pose": [
+            "Chair" /* from chair pose*/: [
                 "Stand with feet hip-width apart and a straight spine.",
                 "Inhale, raise your arms overhead or in prayer position.",
                 "Exhale, gently bend your knees, lowering hips as if sitting in an imaginary chair.",
@@ -175,7 +193,7 @@ struct YogaNames {
                 "Engage your core, relax your neck, and focus on deep breaths.",
                 "Hold the pose, lengthening your spine, and gently lower knees to release."
             ],
-            "Easy Pose": [
+            "Easy": [
                 "Sit on the floor with your legs extended in front of you.",
                 "Cross your legs at the shins, bringing each foot under the opposite knee.",
                 "Place your hands on your knees, palms down.",
@@ -184,7 +202,7 @@ struct YogaNames {
                 "Find a comfortable position for your hands and sit with a tall, relaxed posture.",
                 "Breathe deeply and hold the pose, promoting a sense of ease and grounding."
             ],
-            "Fire Log Pose": [
+            "Fire Log": [
                 "Start in a seated position with your legs extended in front of you.",
                 "Bend your right knee and place the outer edge of your right ankle on top of the left knee.",
                 "Flex your right foot, bringing the shin parallel to the front of your mat.",
@@ -320,7 +338,7 @@ struct YogaNames {
                 "Engage your core, lengthen your spine, and gaze forward.",
                 "Hold the pose, feeling the stretch through your hip flexors and thighs. Repeat on the other side by stepping the left foot back."
             ],
-            "Bridge Pose": [
+            "Bridge": [
                 "Lie on your back with your knees bent and feet hip-width apart, flat on the mat.",
                 "Place your arms alongside your body, with palms facing down.",
                 "Press through your feet, engaging your glutes and lifting your hips toward the ceiling.",
@@ -338,7 +356,7 @@ struct YogaNames {
                 "Keep both feet grounded and your legs strong.",
                 "Hold the pose, breathing deeply, and then return to the center before repeating on the other side."
             ],
-            "Dolphin Pose": [
+            "Dolphin" /* from dolphin pose */: [
                 "Start on your hands and knees in a tabletop position.",
                 "Lower your forearms to the mat, ensuring they are parallel to each other.",
                 "Tuck your toes, lift your hips toward the ceiling, and straighten your legs.",
@@ -347,7 +365,7 @@ struct YogaNames {
                 "Engage your core to maintain a straight line from your head to your heels.",
                 "Hold the pose, feeling a stretch in your shoulders and the lengthening of your spine. Breathe deeply."
             ],
-            "Lizard Pose": [
+            "Lizard": [
                 "Begin in a plank position with your shoulders directly over your wrists.",
                 "Step your right foot to the outside of your right hand, placing it on the mat.",
                 "Lower your back knee to the ground, untucking the toes.",

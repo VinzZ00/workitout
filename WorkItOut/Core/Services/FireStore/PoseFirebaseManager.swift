@@ -28,8 +28,13 @@ class PoseFirebaseManager: ObservableObject {
                 if let videoURL = firebasePose.videoURL {
                     pose.video = videoURL
                 }
+                
+//                pose.instructions = YogaNames.poseInstructions[pose.name]!.map {$0.stringValue()}
+                
                 self.poses.append(pose)
             }
+            
+            
         }
         
         self.objectWillChange.send()

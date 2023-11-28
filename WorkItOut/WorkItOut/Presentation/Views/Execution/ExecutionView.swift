@@ -146,7 +146,6 @@ struct ExecutionView: View {
                             vm.previousPose()
                             if !(vm.index == 0){
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index-1].seconds + 2))
-                                vm.loadVideo(videoID: vm.poses[vm.index].video ?? "")
                                 vm.videoIsLoading = true
                             }
                         }label: {
@@ -183,7 +182,6 @@ struct ExecutionView: View {
                             vm.nextPose(skipped: true)
                             if !(vm.index + 1 >= vm.poses.count) {
                                 timerVm.resetTimer(time: Double(vm.poses[vm.index+1].seconds + 2))
-                                vm.loadVideo(videoID: vm.poses[vm.index].video ?? "")
                                 vm.videoIsLoading = true
                             }
                         }label: {
@@ -224,13 +222,6 @@ struct ExecutionView: View {
                     .onChange(of: vm.end) { _, valueIsTrue in
                         if valueIsTrue {
                             path.append(1)
-                        }
-                    }
-                    .onChange(of: vm.showTips) { _, valueIsTrue in
-                        if !valueIsTrue {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-                                vm.textSwitch.toggle()
-                            }
                         }
                     }
                     .onReceive(timerVm.timer) { _ in

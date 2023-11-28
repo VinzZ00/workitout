@@ -60,9 +60,7 @@ struct AssessmentView: View {
                 }
             })
             .navigationDestination(isPresented: $avm.finishCreateYogaPlan) {
-//                GeneratePlanView()
-//                    .environmentObject(avm)
-                GenerateViewPlanV2()
+                GenerateViewPlan()
                     .environmentObject(avm)
             }
             .toolbar {
