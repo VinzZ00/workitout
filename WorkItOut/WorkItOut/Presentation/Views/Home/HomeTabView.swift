@@ -28,10 +28,9 @@ struct HomeTabView: View {
                     })
                     .frame(maxWidth: 72)
                     .padding(.horizontal, 32)
-                    
                 }
             }
-            .padding(.bottom, 32)
+            .padding(.bottom, 10)
             .frame(maxWidth: .infinity)
             .background(.white)
         }
