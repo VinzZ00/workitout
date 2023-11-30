@@ -60,7 +60,6 @@ struct HomeView: View {
                         }
                     }
             }
-            .ignoresSafeArea(edges: .bottom)
             .background(Color.neutral6)
             .sheet(isPresented: $vm.showProfile, onDismiss: {
                 Task{

@@ -21,63 +21,69 @@ struct HomeCurrentYogaView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            if let yogaData = yoga {
-                ZStack(alignment: .bottom) {
-                    Image("YogaPlanImage")
-                    VStack(alignment: .leading) {
-                        Text("\(df.string(from: date))")
-                            .font(.title3)
-                            .bold()
-                        Text(yogaData.name)
-                            .font(.largeTitle)
-                            .bold()
-                        Text("\(yogaData.poses.count) Exercise (\(yogaData.totalDurationMinute()) Min)")
-                            .font(.body)
-                        if vm.week > vm.profile.currentPregnancyWeek {
-                            ButtonComponent(title: "Scheduled", color: Color.black.opacity(0.1), textColor: Color.yellow) {}
-
-                        }
-                        else if vm.week < vm.profile.currentPregnancyWeek {
+            GeometryReader{ proxy in
+                if let yogaData = yoga {
+                    ZStack(alignment: .bottom) {
+                        Image("YogaPlanImage")
+                            .resizable()
+                            .cornerRadius(12)
+                            .frame(width: proxy.size.width * 0.9, height: proxy.size.height)
                             
-                        }
-                        else if yogaData.yogaState == .completed {
-                            ButtonComponent(title: "Completed", color: Color.black.opacity(0.1), textColor: Color.green) {}
-                        }
-                        else {
-                            ButtonComponent(title: "Start Exercise") {
-                                vm.toggleSheet(yoga: yogaData)
+                        VStack(alignment: .leading) {
+                            Text("\(df.string(from: date))")
+                                .font(.title3)
+                                .bold()
+                            Text(yogaData.name)
+                                .font(.largeTitle)
+                                .bold()
+                            Text("\(yogaData.poses.count) Exercise (\(yogaData.totalDurationMinute()) Min)")
+                                .font(.body)
+                            if vm.week > vm.profile.currentPregnancyWeek {
+                                ButtonComponent(title: "Scheduled", color: Color.black.opacity(0.1), textColor: Color.yellow) {}
+                            }
+                            else if vm.week < vm.profile.currentPregnancyWeek {
+                                
+                            }
+                            else if yogaData.yogaState == .completed {
+                                ButtonComponent(title: "Completed", color: Color.black.opacity(0.1), textColor: Color.green) {}
+                            }
+                            else {
+                                ButtonComponent(title: "Start Exercise") {
+                                    vm.toggleSheet(yoga: yogaData)
+                                }
                             }
                         }
+                        .padding()
+                        .background(.black.opacity(0.75).gradient)
+                        .frame(width: proxy.size.width * 0.85)
+                        .foregroundStyle(.white)
+                        .borderedCorner()
                     }
-                    .frame(width: 300)
-                    .foregroundStyle(.white)
-                    .padding()
-                    .background(.black.opacity(0.75).gradient)
-                    .borderedCorner()
-                    .padding(.bottom)
+                    .frame(width: proxy.size.width)
                 }
-                .borderedCorner()
-            }
-            else{
-                ZStack(alignment: .bottom) {
-                    Image("NoYoga")
-                    VStack(alignment: .leading) {
-                        Text("\(df.string(from: date))")
-                            .font(.title3)
-                            .bold()
-                        Text("Take a break, Enjoy Your day!")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding(.vertical)
+                else{
+                    ZStack(alignment: .bottom) {
+                        Image("Empty")
+                            .resizable()
+                            .cornerRadius(12)
+                            .frame(width: proxy.size.width * 0.9, height: proxy.size.height)
+                        VStack(alignment: .leading) {
+                            Text("\(df.string(from: date))")
+                                .font(.title3)
+                                .bold()
+                            Text("Take a break, Enjoy Your day!")
+                                .font(.largeTitle)
+                                .bold()
+                                .padding(.vertical)
+                        }
+                        .padding()
+                        .background(.black.opacity(0.75).gradient)
+                        .cornerRadius(12)
+                        .frame(width: proxy.size.width * 0.85)
+                        .foregroundStyle(.white)
                     }
-                    .frame(width: 300)
-                    .foregroundStyle(.white)
-                    .padding()
-                    .background(.black.opacity(0.85))
-                    .borderedCorner()
-                    .padding(.bottom)
+                    .frame(width: proxy.size.width)
                 }
-                .borderedCorner()
             }
         }
         .animation(.easeInOut, value: vm.yoga)
